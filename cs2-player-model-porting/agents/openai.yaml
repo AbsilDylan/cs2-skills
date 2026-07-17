@@ -1,0 +1,4 @@
+interface:
+  display_name: "CS2 Player Model Porting"
+  short_description: "Port and validate CS2 AnimGraph2 player models"
+  default_prompt: "Use $cs2-player-model-porting to port and validate this custom player model for CS2 AnimGraph2."
