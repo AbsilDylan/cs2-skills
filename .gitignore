@@ -1,0 +1,24 @@
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
+
+# Generated output
+dist/
+tmp/
+*.log
+.local/
+*.blend
+*.blend[0-9]
+
+# Never commit compiled/native CS2 or server binaries
+*_c
+*.vpk
+*.dll
+*.so
+*.dylib
+*.exe
+*.pdb

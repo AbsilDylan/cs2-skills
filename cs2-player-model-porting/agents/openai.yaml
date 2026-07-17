@@ -1,4 +1,4 @@
 interface:
   display_name: "CS2 Player Model Porting"
-  short_description: "Port and validate CS2 AnimGraph2 player models"
-  default_prompt: "Use $cs2-player-model-porting to port and validate this custom player model for CS2 AnimGraph2."
+  short_description: "Port, diagnose, and repair complete CS2 player assets"
+  default_prompt: "Use $cs2-player-model-porting to port or repair this character against the current CS2 player contract and validate geometry, hitboxes, ragdoll, and clean-client delivery."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CS2 AG2 NPC Runtime"
+  short_description: "Diagnose existing server-driven CS2 AG2 NPCs"
+  default_prompt: "Use $cs2-ag2-npc-runtime to inspect this existing model's compiled graph contract and diagnose its server-controlled NPC animation runtime."

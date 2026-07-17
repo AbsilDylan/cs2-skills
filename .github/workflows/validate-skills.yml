@@ -1,0 +1,31 @@
+name: Validate skills
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: python tools/validate_skills.py
+      - run: python -m unittest discover -s tools/tests -v
+      - run: python -m unittest discover -s cs2-ag2-npc-runtime/tests -v
+      - run: python -m unittest discover -s cs2-animgraph2-authoring/tests -v
+      - run: python tools/validate_skills.py
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - run: >-
+          npx --yes --package=@anthropic-ai/claude-code@2.1.197 --
+          claude plugin validate . --strict

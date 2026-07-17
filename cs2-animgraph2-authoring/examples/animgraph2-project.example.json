@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "example-item",
+    "addon": "my_anim_addon",
+    "namespaces": [
+      "models/animgraph2/example/w/example_item",
+      "animation/example/example_item"
+    ],
+    "artifact_policy": {
+      "status": "blocked",
+      "basis": "example outputs derive from locally extracted stock templates",
+      "template_derivative_basis": "redistribution rights for preserved stock template fields are not established"
+    }
+  },
+  "sets": [
+    {
+      "id": "viewmodel",
+      "armature": "CS2_VIEWMODEL_RIG",
+      "fps": 30,
+      "blender_units_per_source_unit": 0.08,
+      "translation_mode": "absolute",
+      "max_abs_source_position": 1000,
+      "primary_skeleton": "animation/skeletons/characters/viewmodel.vnmskel",
+      "secondary_skeletons": [
+        "animation/skeletons/weapons/fiveseven.vnmskel"
+      ],
+      "preroll_seconds": [
+        -0.1,
+        -0.05
+      ],
+      "actions": [
+        {
+          "id": "draw",
+          "blender_action": "EDIT_1P_draw_example_item",
+          "reference_resource": "animation/anims/viewmodel/pistol/pistol_fiveseven/draw_fiveseven.vnmclip_c",
+          "output_dmx": "models/animgraph2/example/w/example_item/source/viewmodel/draw_example_item.dmx",
+          "output_vnmclip": "models/animgraph2/example/w/example_item/clips/viewmodel/draw_example_item.vnmclip",
+          "event_policy": "clear"
+        },
+        {
+          "id": "idle",
+          "blender_action": "EDIT_1P_idle_example_item",
+          "minimum_frames": 31,
+          "reference_resource": "animation/anims/viewmodel/pistol/pistol_fiveseven/idle_fiveseven.vnmclip_c",
+          "output_dmx": "models/animgraph2/example/w/example_item/source/viewmodel/idle_example_item.dmx",
+          "output_vnmclip": "models/animgraph2/example/w/example_item/clips/viewmodel/idle_example_item.vnmclip",
+          "event_policy": "clear"
+        },
+        {
+          "id": "primary-action",
+          "blender_action": "EDIT_1P_primary_action_example_item",
+          "reference_resource": "animation/anims/viewmodel/pistol/pistol_fiveseven/shoot1_fiveseven.vnmclip_c",
+          "output_dmx": "models/animgraph2/example/w/example_item/source/viewmodel/primary_action_example_item.dmx",
+          "output_vnmclip": "models/animgraph2/example/w/example_item/clips/viewmodel/primary_action_example_item.vnmclip",
+          "event_policy": "clear"
+        }
+      ],
+      "continuity": []
+    },
+    {
+      "id": "worldmodel",
+      "armature": "CS2_WORLDMODEL_RIG",
+      "fps": 30,
+      "blender_units_per_source_unit": 0.08,
+      "translation_mode": "bind-pose-delta",
+      "max_abs_source_position": 1000,
+      "primary_skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+      "secondary_skeletons": [],
+      "preroll_seconds": [
+        -0.1,
+        -0.05
+      ],
+      "actions": [
+        {
+          "id": "draw",
+          "blender_action": "EDIT_3P_draw_example_item",
+          "reference_resource": "animation/anims/world/pistol/pistol_fiveseven/draw_fiveseven.vnmclip_c",
+          "output_dmx": "models/animgraph2/example/w/example_item/source/worldmodel/draw_example_item_world.dmx",
+          "output_vnmclip": "models/animgraph2/example/w/example_item/clips/worldmodel/draw_example_item_world.vnmclip",
+          "event_policy": "clear"
+        },
+        {
+          "id": "idle",
+          "blender_action": "EDIT_3P_idle_example_item",
+          "minimum_frames": 31,
+          "reference_resource": "animation/anims/world/pistol/pistol_fiveseven/idle_fiveseven.vnmclip_c",
+          "output_dmx": "models/animgraph2/example/w/example_item/source/worldmodel/idle_example_item_world.dmx",
+          "output_vnmclip": "models/animgraph2/example/w/example_item/clips/worldmodel/idle_example_item_world.vnmclip",
+          "event_policy": "clear"
+        },
+        {
+          "id": "primary-action",
+          "blender_action": "EDIT_3P_primary_action_example_item",
+          "reference_resource": "animation/anims/world/pistol/pistol_fiveseven/shoot_fiveseven.vnmclip_c",
+          "output_dmx": "models/animgraph2/example/w/example_item/source/worldmodel/primary_action_example_item_world.dmx",
+          "output_vnmclip": "models/animgraph2/example/w/example_item/clips/worldmodel/primary_action_example_item_world.vnmclip",
+          "event_policy": "clear"
+        }
+      ],
+      "continuity": []
+    }
+  ],
+  "stock_dependencies": [
+    {
+      "resource": "animation/skeletons/weapons/fiveseven.vnmskel_c",
+      "outputs": [
+        "animation/skeletons/weapons/fiveseven.vnmskel",
+        "animation/skeletons/weapons/fiveseven.dmx"
+      ],
+      "compile": "animation/skeletons/weapons/fiveseven.vnmskel",
+      "package": false
+    },
+    {
+      "resource": "animation/skeletons/characters/viewmodel.vnmskel_c",
+      "outputs": [
+        "animation/skeletons/characters/viewmodel.vnmskel",
+        "animation/skeletons/characters/viewmodel.dmx"
+      ],
+      "compile": "animation/skeletons/characters/viewmodel.vnmskel",
+      "package": false
+    },
+    {
+      "resource": "animation/skeletons/characters/worldmodel.vnmskel_c",
+      "outputs": [
+        "animation/skeletons/characters/worldmodel.vnmskel",
+        "animation/skeletons/characters/worldmodel.dmx"
+      ],
+      "compile": "animation/skeletons/characters/worldmodel.vnmskel",
+      "package": false
+    }
+  ],
+  "stage_sources": [],
+  "compile_resources": [
+    "models/animgraph2/example/w/example_item/clips/viewmodel/draw_example_item.vnmclip",
+    "models/animgraph2/example/w/example_item/clips/viewmodel/idle_example_item.vnmclip",
+    "models/animgraph2/example/w/example_item/clips/viewmodel/primary_action_example_item.vnmclip",
+    "models/animgraph2/example/w/example_item/clips/worldmodel/draw_example_item_world.vnmclip",
+    "models/animgraph2/example/w/example_item/clips/worldmodel/idle_example_item_world.vnmclip",
+    "models/animgraph2/example/w/example_item/clips/worldmodel/primary_action_example_item_world.vnmclip"
+  ]
+}
