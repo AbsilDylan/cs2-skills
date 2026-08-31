@@ -3,19 +3,49 @@
 Thumbs.db
 .idea/
 .vscode/
+.vs/
+*.suo
+*.user
+*~
+*.swp
+
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+.venv/
+venv/
+.local/
+.secrets/
+
+# Language and test caches
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+coverage.xml
+htmlcov/
+node_modules/
 
 # Generated output
 dist/
 tmp/
 *.log
-.local/
-*.blend
-*.blend[0-9]
+*.blend[0-9]*
+
+# Generated .NET output from the bundled NPC runtime examples
+/cs2-server-npc-runtime/examples/[Bb]in/
+/cs2-server-npc-runtime/examples/[Oo]bj/
+/cs2-server-npc-runtime/tests/[Bb]in/
+/cs2-server-npc-runtime/tests/[Oo]bj/
 
 # Never commit compiled/native CS2 or server binaries
 *_c
+!*_c/
 *.vpk
 *.dll
 *.so

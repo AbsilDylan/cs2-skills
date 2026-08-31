@@ -213,9 +213,48 @@ shoulder panels, or long nails.
 A weight threshold alone is insufficient. Shoulder or torso panels can be
 fully weighted to clavicles and still appear in front of the camera.
 
+Treat hand-bound accessories and effects as explicit first-person components.
+A world-model sphere, aura, rope end, weapon-adjacent prop, or rigid claw does
+not automatically enter the dedicated first-person mesh merely because it is
+weighted to a hand or finger. Add every intended source object and material
+slot to the first-person export/bodygroup allowlist, then assert the expected
+component count in the editable and compiled model. Preserve its validated
+hand/finger binding, but exclude the accessory objects from anatomical wrist
+weight envelopes or other body-only smoothing passes. Otherwise an effect can
+be absent in first person, or become distorted while the arm repair itself is
+correct. Validate attachment position and translucency separately because an
+opaque DCC viewport does not prove the compiled in-game material result.
+
 To identify a floating first-person fragment, move the camera through another
 instance of the world model. If the same fragment remains visible, repair the
 world geometry or proximity behavior rather than only the first-person mesh.
+
+### Repair wrist twist in a compact first-person skeleton
+
+A wrist can look correct in third person but collapse in knife or pistol view
+when the first-person duplicate has an abrupt `arm_lower_*` to `hand_*` weight
+boundary. Audit the skeleton before blaming missing twist bones. Some valid AG2
+player contracts use a compact skeleton that intentionally has no
+`arm_lower_*_TWIST` bones. Do not invent those bones unless the active skeleton
+and animation clips both contain them.
+
+For a compact skeleton:
+
+1. measure weights along the segment from the lower-arm pivot to the hand pivot;
+2. count rigid lower-arm, rigid hand, and blended vertices near the wrist;
+3. duplicate the already validated world mesh for first person;
+4. preserve finger-weighted vertices and unrelated influences;
+5. redistribute only the combined lower-arm/hand weight through a smoothstep
+   envelope around the wrist;
+6. normalize, enforce the influence cap, and record changed vertex counts;
+7. validate both sides under asymmetric knife, pistol, reload, and inspect poses.
+
+A useful normalized coordinate is `t = dot(vertex - lower_arm_head, axis) /
+segment_length`, where `t=1` is the hand pivot. Start the blend before the
+visible wrist and finish slightly beyond the pivot. Keep the correction on the
+first-person duplicate when the world model is already validated. The exact
+interval is model-specific and must be derived from weight histograms and pose
+renders rather than copied blindly.
 
 Continue with
 [materials-modeldoc-and-physics.md](materials-modeldoc-and-physics.md) after

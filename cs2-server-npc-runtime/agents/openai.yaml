@@ -1,0 +1,5 @@
+interface:
+  display_name: "CS2 Server NPC Runtime"
+  short_description: "Build reliable server-authoritative CS2 NPC gameplay"
+  default_prompt: "Use $cs2-server-npc-runtime to design, audit, or debug this CS2 server NPC runtime."
+

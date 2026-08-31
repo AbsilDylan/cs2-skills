@@ -25,12 +25,14 @@ Selecting current existing world/UI/view graph resources in ModelDoc is model
 wiring and remains in scope. Creating or patching VNMClip/VNMGraph resources,
 private item graph roots, weapon/item variations, proxy prediction, or item
 runtime routing belongs to `$cs2-animgraph2-authoring`. Server-controlled model
-entities and `CBaseAnimGraphController` parameters belong to
-`$cs2-ag2-npc-runtime`.
+entity ownership, AI, navigation, combat, and cleanup belong to
+`$cs2-server-npc-runtime`; materializing or driving an existing NPC
+`CBaseAnimGraphController` belongs to `$cs2-ag2-npc-runtime`.
 
-When both skills are needed, complete and validate the player-character port
-first, then hand its compiled model and ModelDoc graph slots to
-`$cs2-animgraph2-authoring`.
+When several skills are needed, complete and validate the player-character
+asset first. Hand its compiled model and ModelDoc item graph slots to
+`$cs2-animgraph2-authoring`, or hand the body to `$cs2-server-npc-runtime` and
+add `$cs2-ag2-npc-runtime` only for NPC animation presentation.
 
 ## Load The Relevant References
 

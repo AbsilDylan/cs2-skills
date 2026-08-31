@@ -1,28 +1,35 @@
 ---
 name: cs2-animgraph2-authoring
-description: "Author, debug, and package CS2 weapon/item AnimGraph2: clips, private 1P/3P roots, stock-pose or missing-arms routing, proxy prediction, and Workshop delivery. Excludes NPCs and player meshes."
+description: "Author, compile, debug, and package original CS2 AnimGraph2 graphs and clips for server-owned NPCs, weapons, and items, including CNmGraphDocument, private roots, routing, and Workshop delivery."
 ---
 
 # CS2 AnimGraph2 Authoring
 
-Build reproducible weapon/item presentation against the current installed CS2
-toolchain. Treat clip authoring, graph selection, client identity, player graph
-ownership, Workshop delivery, prediction, and server gameplay as separate
-contracts. Compilation is evidence of syntax acceptance, not runtime success.
+Build reproducible AnimGraph2 resources for server-owned NPCs and weapon/item
+presentation against the current installed CS2 toolchain. Treat source-document
+and clip authoring, graph selection,
+entity/controller ownership, client identity, player graph ownership, Workshop
+delivery, prediction, and server gameplay as separate contracts. Compilation is
+evidence of syntax acceptance, not runtime success.
 
-This skill owns weapon/item VNMClip and VNMGraph resources, private first- and
-third-person graph roots, owner/world item models, client-visible proxy routing,
-prediction-aware server integration, and item resource closure. It does not own:
+This skill owns original text `CNmGraphDocument` sources, weapon/item and
+server-owned NPC VNMClip/VNMGraph resources, private first- and third-person
+graph roots, owner/world item models, client-visible proxy routing,
+prediction-aware server integration, and resource closure. It does not own:
 
 - player mesh, rig, skin weights, first-person body geometry, hitboxes, or
   ragdolls; use `$cs2-player-model-porting`;
 - `CBaseAnimGraphController` materialization or server-driven model-entity NPC
   parameters; use `$cs2-ag2-npc-runtime`;
-- brand-new non-weapon NPC graph design without an existing graph contract;
-  treat that as unsupported until a dedicated authoring workflow is selected.
+- NPC behavior, navigation, combat, spawning, or lifecycle orchestration; use
+  `$cs2-server-npc-runtime` when that skill is available.
 
 ## Select The Relevant Reference
 
+- Read [source-graph-authoring.md](references/source-graph-authoring.md) for
+  original `CNmGraphDocument` generation, deterministic graph IR, current-build
+  compiler profiling, the minimal original L0 fixture, typed controls, and
+  validation gates.
 - Read [portable-tooling.md](references/portable-tooling.md) for the bundled
   manifest, stock-reference extraction, Blender scene, DMX/VNMClip generation,
   safe staging, compilation, and receipts.
@@ -37,7 +44,9 @@ prediction-aware server integration, and item resource closure. It does not own:
   server integration, overlays, and runtime diagnosis.
 
 Load only the references needed for the current failure. For an end-to-end new
-item, read all four in the order above.
+item, read all five in the order above. For a server-owned NPC, begin with
+`source-graph-authoring.md`, then route runtime ownership to
+`$cs2-ag2-npc-runtime` and behavior to `$cs2-server-npc-runtime`.
 
 ## Non-Negotiable Rules
 
@@ -49,10 +58,11 @@ item, read all four in the order above.
    shadow Valve graph/model paths or write loose test files to base `game/csgo`.
 4. Keep first- and third-person skeletons, clips, graph instances, object
    models, and validation views distinct.
-5. Route the `weapon_type` and variation the client actually resolves. A
-   server-only VData pointer or entity marker does not register client identity.
-6. Preserve required player attachments and final hand-IK topology unless a
-   measured current-build replacement is proven.
+5. For a weapon/item, route the `weapon_type` and variation the client actually
+   resolves. A server-only VData pointer or entity marker does not register
+   client identity.
+6. For player-owned graphs, preserve required attachments and final hand-IK
+   topology unless a measured current-build replacement is proven.
 7. Prefer editable source compilation. Limit binary graph work to offline,
    hash-gated private copies; never patch a DLL, process memory, anti-cheat, or
    network trust boundary.
@@ -61,9 +71,14 @@ item, read all four in the order above.
    backup, exact diff, and restoration plan.
 9. Inspect compiled resources and the downloaded Workshop VPK. A local output
    file does not prove packaging, mounting, routing, or animation playback.
-10. Keep gameplay server-authoritative without continuously fighting native
-    prediction. Model actions as idempotent transactions with explicit cancel,
-    completion, restoration, and stale-callback protection.
+10. Keep gameplay server-authoritative. For predicted items, do not continuously
+    fight native prediction; for NPCs, project behavior state into presentation.
+    Model actions with explicit cancel, completion, restoration, and
+    stale-callback protection.
+11. Treat every Nm compiler registration and node schema as build-profiled.
+    Never modify the installed Valve asset registry implicitly, redistribute a
+    Valve tool or registry, or promote a compiled graph across compiler
+    fingerprints.
 
 Use evidence labels precisely:
 
@@ -83,6 +98,8 @@ none is an alias for another stage.
 Never infer a later label from an earlier one.
 
 ## Runtime Architecture
+
+For a client-predicted weapon or item:
 
 ```text
 server plugin
@@ -105,7 +122,30 @@ Workshop VPK
 The held object and player pose are independent. A custom owner/world VMDL does
 not prove the HUD-arms or third-person player graph changed.
 
-## End-To-End Workflow
+For a server-owned NPC:
+
+```text
+server plugin
+  model set before spawn + use_animgraph + AnimateOnServer
+
+CModel graph table
+  -> controller -> definition -> instance
+  -> typed controls -> graph resources and clips
+
+Workshop VPK
+  private model, graph, skeleton, clip, material, and texture closure
+```
+
+This skill authors the resources. Route controller materialization and typed
+parameter writes to `$cs2-ag2-npc-runtime`, and AI/navigation/combat to
+`$cs2-server-npc-runtime`. A pure server-owned NPC has no proxy, `weapon_type`,
+HUD-model, or first-person validation requirement.
+
+## Weapon And Item End-To-End Workflow
+
+For a greenfield server-owned NPC graph, follow
+`source-graph-authoring.md`'s promotion ladder instead of applying the
+predicted-proxy steps below.
 
 ### 1. Inventory and choose a baseline
 
@@ -163,7 +203,7 @@ prediction, cancellation, reconnect, and another observing clean client.
 
 ## Completion Contract
 
-Declare the item complete only when:
+Declare the authored integration complete only when:
 
 - the build reproduces from untouched authorized project sources;
 - every generated project path is inside one declared private namespace;
@@ -171,11 +211,14 @@ Declare the item complete only when:
 - template and transitive-input provenance permits every artifact byte to be
   redistributed, with the exact basis recorded;
 - source/reference/tool/compiled/VPK hashes are recorded and mutually linked;
-- the client-selected identity and every required action route are observed;
-- first-person and third-person results both pass clean-client validation;
+- every applicable graph identity, variation, control, and action route is
+  observed;
+- a weapon/item passes both first- and third-person clean-client validation;
+- a pure server-owned NPC passes local and remote-observer clean-client
+  validation; first-person proxy requirements are not applicable;
 - the server lifecycle does not leak native gameplay or restart/cancel visuals;
-- same-proxy stock and unrelated actors pass negative controls, or enforced
-  proxy exclusivity is documented;
+- applicable stock/proxy and unrelated actors pass negative controls, or the
+  enforced exclusivity boundary is documented;
 - limitations and pending validation layers are explicit.
 
 If only source generation or compilation passed, report that exact state. Do

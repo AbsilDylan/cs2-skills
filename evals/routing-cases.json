@@ -3,102 +3,132 @@
     "id": "animgraph-first-person-stock-fallback",
     "prompt": "My custom CS2 weapon model loads, but the first-person hands still use the stock Five-SeveN draw and idle animations. Diagnose the VNMGraph route.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   },
   {
     "id": "animgraph-workshop-missing-clips",
     "prompt": "The VNMClip compiles locally but is missing from the downloaded Workshop VPK. Build a clean packaging and runtime-debug plan.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   },
   {
     "id": "animgraph-long-action",
     "prompt": "Create a cancellable two-second custom item action without letting the native proxy prediction restart the animation every tick.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   },
   {
     "id": "animgraph-portable-stock-export",
     "prompt": "Extract current CS2 stock animations for an arbitrary weapon, create exact Blender first- and third-person rigs, export complete DMX files, generate VNMClips, and compile them reproducibly.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   },
   {
     "id": "player-source1-port",
     "prompt": "Port this Source 1 player MDL to the current CS2 skeleton, preserving weights and creating hitboxes and a real ragdoll.",
     "expected_skills": ["cs2-player-model-porting"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   },
   {
     "id": "player-skinning-repair",
     "prompt": "My custom CS2 character's neck seam opens and its wrist twists under reload. Audit bind retargeting, weights, and topology.",
     "expected_skills": ["cs2-player-model-porting"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   },
   {
     "id": "player-first-person-geometry",
     "prompt": "The third-person character is correct but cape and shoulder fragments appear in the first-person camera. Repair the player-body geometry.",
     "expected_skills": ["cs2-player-model-porting"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   },
   {
     "id": "combined-private-player-roots",
     "prompt": "Port a custom player character and then give it private first- and third-person AnimGraph2 roots for a custom Workshop item.",
     "expected_skills": ["cs2-player-model-porting", "cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   },
   {
     "id": "npc-ag2-static-controller",
     "prompt": "My prop_dynamic_override NPC model is visible but frozen. The graph and clips are Resident while primary, definition, and instance remain zero. Diagnose the CModel and AnimGraph2 controller path.",
     "expected_skills": ["cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
   },
   {
     "id": "npc-ag2-read-compiled-graph",
     "prompt": "Read this compiled NPC VNMGraph, recover every Bool, Float, ID, Vector, and Target control plus valid ID values, transitions, loop flags, and clips; map them to server AI states and distinguish writable controls from diagnostic-only types.",
     "expected_skills": ["cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
   },
   {
     "id": "npc-ag2-linux-signature-update",
     "prompt": "A CS2 Linux update broke the byte patterns for our server-side AG2 parameter setters. Recover and validate the Bool, Float, and ID functions without patching libserver.so or hardcoding RVAs.",
     "expected_skills": ["cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
   },
   {
     "id": "npc-ag2-workshop-clean-client",
     "prompt": "This custom NPC animates locally but is static for clean clients using only the Workshop addon. Verify that gameinfo.gi publishes its animation directory and that the downloaded VPK contains the complete model, graph, skeleton, and clip closure.",
     "expected_skills": ["cs2-ag2-npc-runtime"],
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
+  },
+  {
+    "id": "npc-navigation-collision-runtime",
+    "prompt": "Design a server NPC that follows an extracted CS2 NAV corridor, uses capsule sweeps for stairs and walls, and reports unreachable or unsupported traversal without teleport fallback.",
+    "expected_skills": ["cs2-server-npc-runtime"],
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+  },
+  {
+    "id": "npc-combat-lifecycle-runtime",
+    "prompt": "Implement server-authoritative monster melee with windup, impact revalidation, recovery, custom health, death cleanup, and safe map-change cancellation.",
+    "expected_skills": ["cs2-server-npc-runtime"],
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+  },
+  {
+    "id": "npc-hot-reload-crowd-runtime",
+    "prompt": "Audit my CS2 NPC host for entity-index reuse, stale async path results, hot reload, synchronized AI spikes, unbounded spawn counts, and all-pairs crowd cost.",
+    "expected_skills": ["cs2-server-npc-runtime"],
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+  },
+  {
+    "id": "npc-gameplay-with-ag2-presentation",
+    "prompt": "Build a server-authoritative monster with target selection, NAV/collision movement and windup combat, then project its state into an existing AG2 model using graph-proven typed parameters.",
+    "expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime"],
     "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting"]
   },
   {
     "id": "ambiguous-vnmgraph-needs-context",
     "prompt": "I have a CS2 VNMGraph that does not work. Fix it.",
     "expected_skills": [],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
   },
   {
     "id": "player-model-used-as-npc",
-    "prompt": "Port this humanoid mesh to the current CS2 player skeleton, then drive the compiled model as a server-authoritative prop_dynamic_override NPC.",
-    "expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring"]
+    "prompt": "Port this humanoid mesh to the current CS2 player skeleton, then use the compiled model as the body of a server-authoritative prop_dynamic_override NPC with safe lifecycle and collision movement.",
+    "expected_skills": ["cs2-player-model-porting", "cs2-server-npc-runtime"],
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime"]
   },
   {
     "id": "npc-wields-custom-item",
-    "prompt": "Make this server-controlled NPC wield a custom Workshop item with private first- and third-person item graphs.",
-    "expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring"],
+    "prompt": "Make this server-controlled AG2 NPC carry a custom Workshop item whose third-person model and graph animate with the NPC; there is no owner-view first-person presentation.",
+    "expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring"],
     "not_expected_skills": ["cs2-player-model-porting"]
   },
   {
     "id": "player-missing-first-person-mesh",
     "prompt": "Every stock weapon animation is correct, but my custom character has no first-person sleeves or arm body geometry.",
     "expected_skills": ["cs2-player-model-porting"],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-server-npc-runtime"]
+  },
+  {
+    "id": "npc-aseq-without-ag2",
+    "prompt": "Build a complete CS2 monster gameplay runtime whose existing model uses verified baked sequence labels through a named entity input instead of AnimGraph2 parameters.",
+    "expected_skills": ["cs2-server-npc-runtime"],
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
   },
   {
     "id": "unsupported-new-npc-graph-authoring",
     "prompt": "Create a completely new non-weapon NPC VNMGraph and VNMClip state machine from scratch, without an existing compiled graph contract.",
     "expected_skills": [],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
   }
 ]

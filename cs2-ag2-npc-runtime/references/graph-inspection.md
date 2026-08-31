@@ -9,7 +9,6 @@
 - [Follow Conditions And Transitions](#follow-conditions-and-transitions)
 - [Map Clips And Timing](#map-clips-and-timing)
 - [Build A Parameter Contract](#build-a-parameter-contract)
-- [Trooper Case Study](#trooper-case-study)
 - [Common Analysis Errors](#common-analysis-errors)
 
 ## Goal
@@ -173,47 +172,6 @@ Also create an action table:
 | Start moving | local speed parameters | velocity returns to zero | immediate |
 | Shoot | target data, then action pulse | next update or acknowledged transition | muzzle event/offset |
 | Die | health/death action | never return to locomotion | remove after death clip |
-
-## Unverified Trooper-Shaped Example
-
-The following list came from an unversioned historical note. No model path,
-game build, resource hash, or decompiler receipt is bundled, so its evidence
-label is **unverified**. Use it only to illustrate the extraction table shape;
-never use it as an NPC runtime contract or a universal CS2 schema:
-
-| Index | Name | Type | Typical role |
-|---:|---|---|---|
-| 0 | `in_air` | Bool | airborne selector |
-| 1 | `has_target` | Bool | aimed vs unaimed branches |
-| 2 | `action_melee` | Bool | melee action pulse |
-| 3 | `look_heading` | Float | horizontal aim offset |
-| 4 | `look_pitch` | Float | vertical aim offset |
-| 5 | `action_shoot` | Bool | ranged action pulse |
-| 6 | `time_scale` | Float | root playback scale |
-| 7 | `health_percent` | Float | health-dependent branches |
-| 8 | `strafe_speed` | Float | local right-axis velocity |
-| 9 | `move_speed` | Float | horizontal speed magnitude |
-| 10 | `random_seed` | Float | deterministic variation input |
-| 11 | `pivot_turn` | ID | turn direction/angle selector |
-| 12 | `forward_speed` | Float | local forward-axis velocity |
-| 13 | `explosion_react` | Bool | explosion reaction pulse |
-| 14 | `explosion_react_random_time_scale` | Float | reaction variation |
-| 15 | `flinch` | ID | directional flinch selector |
-| 16 | `action_kill` | Bool | kill action pulse |
-| 17 | `action_heal` | Bool | heal action pulse |
-| 18 | `random_variant` | Float | clip variation |
-| 19 | `vertical_speed` | Float | vertical locomotion input |
-| 20 | `base_action` | ID | broad action selector |
-
-The same note listed `e_Turn_left_90`, `e_Turn_right_90`, `back`, `right`,
-`left`, and `ground_jump`, but did not bind those values to `pivot_turn`,
-`flinch`, or `base_action`. Treat every value-to-parameter association as
-unknown until recovered from the actual graph being integrated.
-
-The note also described target/no-target directional run families, turns,
-jump/land states, hit reactions, melee, shoot, flinch, and aim behavior. This
-illustrates why packaging only guessed `idle`, `run`, and `attack` clips can be
-incomplete; it is not evidence that a new graph contains those families.
 
 ## Common Analysis Errors
 

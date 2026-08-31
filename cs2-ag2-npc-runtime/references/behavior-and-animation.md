@@ -3,6 +3,7 @@
 ## Contents
 
 - [Separate Gameplay From Presentation](#separate-gameplay-from-presentation)
+- [Choose One Presentation Backend](#choose-one-presentation-backend)
 - [Define Explicit States](#define-explicit-states)
 - [Derive Locomotion Parameters](#derive-locomotion-parameters)
 - [Drive Aim And Turns](#drive-aim-and-turns)
@@ -29,7 +30,30 @@ Maintain these layers separately:
 - **Animation adapter:** parameter values, action pulses, ID selectors, one-shot timing.
 - **Effects/audio:** attachments, graph event timing, particles, sounds.
 
-This avoids using a clip name as the NPC's actual state and prevents animation corrections from changing gameplay rules.
+This avoids using a clip name as the NPC's actual state and prevents animation corrections from changing gameplay rules. General entity ownership, perception, planning, navigation, collision movement, combat, damage, scaling, and cleanup belong to `cs2-server-npc-runtime`; this skill consumes its authoritative presentation snapshot.
+
+## Choose One Presentation Backend
+
+Within an AG2 integration or a fallback selected after its diagnosis, use one
+backend per entity and report the selection in diagnostics. A deliberately
+named-sequence-only NPC that has no AG2 question remains in `cs2-server-npc-runtime`.
+
+1. **Typed AG2:** require a materialized graph instance, a compiled graph
+   contract, and exact typed setters proven for the current binary.
+2. **Baked named sequence:** use only exact sequence labels actually published
+   by the model. `AcceptInput` is the generic entity-I/O dispatcher; invoke only
+   a verified animation input such as `SetAnimation`. Its value is a baked
+   sequence label, never a `.vnmclip` path, graph-node path, hash, ASEQ resource
+   name, presumed activity, or AG2 state name. Verify loop
+   flags, one-shot duration, and the return transition. Select loops on state
+   changes, and trigger attack/reaction/death once on entry.
+3. **Static degraded mode:** when neither backend is proven, perform no native
+   memory fallback. Disable animation-dependent gameplay or advertise the
+   static representation explicitly.
+
+Do not run AG2 and named-sequence writers simultaneously on one body. A successful named
+animation input proves only that input path; it does not prove controller
+materialization or typed AG2 control.
 
 ## Define Explicit States
 

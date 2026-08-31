@@ -15,6 +15,7 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[1]
 NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 MARKDOWN_LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+MARKDOWN_HEADING_RE = re.compile(r"^#{1,6}\s+(.+?)\s*#*\s*$")
 OPENAI_FIELDS = {"display_name", "short_description", "default_prompt"}
 URL_RE = re.compile(r"^[a-z][a-z0-9+.-]*:", re.IGNORECASE)
 FORBIDDEN_FILE_SUFFIXES = {
@@ -106,6 +107,30 @@ def local_link_target(raw: str) -> str | None:
     return unquote(target.split("#", 1)[0])
 
 
+def markdown_heading_anchors(path: Path) -> set[str]:
+    """Approximate GitHub/CommonMark heading IDs for local fragment checks."""
+    anchors: set[str] = set()
+    counts: Counter[str] = Counter()
+    in_fence = False
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.lstrip().startswith(("```", "~~~")):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        match = MARKDOWN_HEADING_RE.match(line)
+        if not match:
+            continue
+        heading = re.sub(r"<[^>]+>", "", match.group(1))
+        heading = re.sub(r"[`*_~]", "", heading).lower()
+        base = re.sub(r"[^\w\- ]", "", heading, flags=re.UNICODE)
+        base = re.sub(r"\s+", "-", base.strip())
+        index = counts[base]
+        counts[base] += 1
+        anchors.add(base if index == 0 else f"{base}-{index}")
+    return anchors
+
+
 def validate_markdown_links(
     markdown_root: Path,
     containment_root: Path,
@@ -120,14 +145,26 @@ def validate_markdown_links(
     for markdown in markdown_files:
         text = markdown.read_text(encoding="utf-8")
         for raw in MARKDOWN_LINK_RE.findall(text):
-            target = local_link_target(raw)
-            if target is None:
+            normalized = raw.strip()
+            if normalized.startswith("<") and ">" in normalized:
+                normalized = normalized[1 : normalized.index(">")]
+            else:
+                normalized = normalized.split(maxsplit=1)[0]
+            if URL_RE.match(normalized):
                 continue
-            resolved = (markdown.parent / target).resolve()
+            local_path, separator, fragment = normalized.partition("#")
+            target = local_link_target(raw)
+            if target is None and not (separator and not local_path):
+                continue
+            resolved = markdown.resolve() if not local_path else (markdown.parent / unquote(local_path)).resolve()
             if resolved != root and root not in resolved.parents:
-                fail(errors, markdown, f"local link escapes the skill: {target}")
+                fail(errors, markdown, f"local link escapes the skill: {local_path}")
             elif not resolved.exists():
-                fail(errors, markdown, f"missing local link target: {target}")
+                fail(errors, markdown, f"missing local link target: {local_path}")
+            elif separator and fragment and resolved.suffix.lower() == ".md":
+                anchor = unquote(fragment).lower()
+                if anchor not in markdown_heading_anchors(resolved):
+                    fail(errors, markdown, f"missing Markdown anchor: {normalized}")
 
 
 def validate_openai_yaml(skill_dir: Path, skill_name: str, errors: list[str]) -> None:

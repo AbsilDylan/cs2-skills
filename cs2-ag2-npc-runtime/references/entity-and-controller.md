@@ -4,10 +4,12 @@
 
 - [Runtime Pipeline](#runtime-pipeline)
 - [Choose The Animated Entity](#choose-the-animated-entity)
+- [Resolve The Named Schema Ladder](#resolve-the-named-schema-ladder)
 - [Understand The CModel Lookup](#understand-the-cmodel-lookup)
 - [Use The Materialization Ladder](#use-the-materialization-ladder)
 - [Build Safe Diagnostics](#build-safe-diagnostics)
 - [Compare A Positive Control](#compare-a-positive-control)
+- [Use A Minimal Framework-Agnostic Shape](#use-a-minimal-framework-agnostic-shape)
 - [Avoid Crash-Prone Probes](#avoid-crash-prone-probes)
 
 ## Runtime Pipeline
@@ -39,7 +41,17 @@ classname=prop_dynamic_override
 model=<compiled model resource>
 use_animgraph=1
 AnimateOnServer=1
+animgraph2_identifier=<exact ModelDoc-authored identifier, when required>
 ```
+
+Set graph-related keyvalues before spawn. Omit `animgraph2_identifier` only
+when the model contract and a positive control prove that its empty/default
+identifier resolves correctly; never invent `worldmodel` or another key. Read
+back the controller's actual identifier during the materialization diagnostic.
+
+Dispatch exactly once. In particular, verify whether the framework's
+synchronous spawn helper already dispatches before calling a separate
+`DispatchSpawn` function.
 
 Do not add the legacy Source 1 `animate_every_frame` key: current CS2 FGD
 metadata does not define it, so treating it as a required Source 2 control can
@@ -50,6 +62,37 @@ Then set collision, solidity, scale, origin, angles, health, team, ownership, an
 Do not use `info_target` as the visual animated body. It can be a helper for destinations, camera targets, effects, or aim points, but it does not replace a model entity with a skeleton instance and animation controller.
 
 Do not conclude that an entity class is wrong merely because a custom model is static. Prove the same class works with a known native AG2 model first.
+
+## Resolve The Named Schema Ladder
+
+Resolve every materialization hop from the exact current-build schema first.
+Record the declaring class, field name, field type, schema/build provenance,
+and observed value. Current evidence exposes two alternative controller access
+paths; do not splice them into one chain:
+
+```text
+model-body path:
+CBaseEntity::m_CBodyComponent
+  -> CBodyComponentBaseAnimGraph::m_animationController
+     (inline CBaseAnimGraphController)
+
+CBaseAnimGraph entity path:
+CBaseAnimGraph::m_pMainGraphController
+  -> CAnimGraphControllerPtr::m_pController
+     (CAnimGraphControllerBase*; require a runtime-proven dynamic type/downcast)
+
+either verified controller ->
+  CBaseAnimGraphController::m_sAnimGraph2Identifier
+  -> CBaseAnimGraphController::m_primaryGraphId
+  -> CBaseAnimGraphController::m_hGraphDefinitionAG2
+  -> CBaseAnimGraphController::m_pGraphInstanceAG2
+```
+
+Class names and ownership can evolve. Resolve the exact owner plus field name
+and verify the runtime type instead of copying numeric offsets from this or any
+other build. If a required named field is unavailable, report
+`schema-unavailable` and stop. Never substitute a historical offset or a
+pointer scan.
 
 ## Understand The CModel Lookup
 
@@ -64,8 +107,6 @@ if primary == 0:
     stop before graph definition creation
 ```
 
-In one investigated Linux build, the relevant CModel table appeared as a count near `CModel + 0x418`, an entries pointer near `CModel + 0x420`, and approximately 16-byte key/value records. Treat those offsets as **historical reverse-engineering evidence**, not an API. Reconfirm the live build before using them in a diagnostic, and never use them for production writes.
-
 Recover the exact CModel pointer through the model entity's normal body/skeleton/model-state path when the framework exposes it. If reverse engineering is necessary, prove every hop against a native positive control and executable/schema evidence:
 
 ```text
@@ -76,7 +117,10 @@ entity
   -> AG2 lookup table
 ```
 
-Do not scan arbitrary pointer candidates until one looks nonzero. That produces persuasive-looking garbage and is unsafe in a live server process.
+Do not scan arbitrary pointer candidates until one looks nonzero. Never perform
+a breadth-first or depth-first scan from a controller, definition, graph
+instance, or model. Readable memory and a plausible vtable do not establish
+ownership, type, lifetime, or semantics.
 
 Classify a table probe as one of:
 
@@ -109,9 +153,9 @@ Prefer a server-console diagnostic with bounded, defensive reads. First run deep
 
 ```text
 build identifier and module hash
-entity index, class, schema class, pointer
+entity full identity, class, and schema class
 model resource path
-body/skeleton/controller pointers obtained through verified accessors
+named-schema body/controller chain obtained through verified accessors
 controller graph identifier key
 primary graph ResourceId_t
 definition handle/pointer
@@ -131,6 +175,9 @@ Apply these safety rules:
 8. Run deep probes from an explicit server-console command, not ordinary chat or per-tick code.
 9. Rate-limit probes and keep a watchdog/restart path outside the game process; managed exceptions do not reliably contain native access violations.
 10. Remove or disable reverse-engineering probes after the contract is proven.
+11. Never write graph-instance, node, controller, or CModel memory. A value
+    reading back proves only that memory changed, not that a parameter, state,
+    clip, or pose was selected.
 
 Use lifecycle snapshots such as:
 
@@ -158,6 +205,44 @@ Use the same creation path for both models:
 
 If the positive control materializes AG2, the general entity path is valid. Focus on model runtime metadata and resource closure.
 
+## Use A Minimal Framework-Agnostic Shape
+
+Keep public examples schematic and require a user-owned presentation contract:
+
+```csharp
+var spec = LoadPresentationContract("<user-owned config>");
+var body = CreateModelEntity("prop_dynamic_override");
+
+SetModel(body, spec.ModelPath);
+SetKeyValue(body, "use_animgraph", spec.Mode == Ag2 ? "1" : "0");
+SetKeyValue(body, "AnimateOnServer", "1");
+
+if (spec.Mode == Ag2 && spec.Identifier is not null)
+    SetKeyValue(body, "animgraph2_identifier", spec.Identifier);
+
+SpawnExactlyOnce(body);
+var identity = CaptureFullEntityIdentity(body);
+
+DeferOnGameThread(identity, TimeSpan.FromMilliseconds(250), current =>
+{
+    var ladder = ReadNamedSchemaMaterialization(current);
+    presentation = SelectValidatedAg2AseqOrDisabled(spec, ladder);
+});
+```
+
+Then keep one adapter active:
+
+```text
+AG2      -> typed writes from the authoritative gameplay snapshot
+sequence -> verified animation input with exact baked label, only on legal state entry/change
+Disabled -> no native-memory fallback
+```
+
+These names describe responsibilities, not a guaranteed ModSharp API. Verify
+the exact framework version before implementing creation, keyvalue, dispatch,
+and deferred game-thread calls. Do not attach a real model path, extracted
+asset, RVA, or signature profile to this public example.
+
 ## Avoid Crash-Prone Probes
 
 Past failures in this class of work came from deep unmanaged pointer walking, especially formatting internal definition handles and resolver state from chat commands. Avoid:
@@ -167,8 +252,15 @@ Past failures in this class of work came from deep unmanaged pointer walking, es
 - exposing heavy lifecycle probes through commonly used chat commands;
 - running deep diagnostics for every NPC every tick;
 - preserving obsolete offsets after a game update;
-- writing directly into CModel/controller tables.
+- breadth-first/depth-first walking of readable process memory;
+- deriving parameter names/types/indexes from address or allocation order;
+- writing directly into graph nodes, instances, controllers, or CModel tables;
 - queuing raw entity/controller pointers into timers or worker jobs;
 - assuming `try/catch` can recover from an invalid native dereference.
 
 The production runtime should only retain the smallest validated operations it needs: normal entity APIs, bounded status data, signature-resolved game-thread engine calls, generation-aware lifetime checks, and a fail-closed health check.
+
+Every conclusion must include its evidence label plus build, platform, entity
+class, model/resource hash, and lifecycle snapshot. A memory read-back is not
+animation proof. A visual or bone delta proves a pose changed, not which graph
+state or clip produced it, unless independently correlated.
