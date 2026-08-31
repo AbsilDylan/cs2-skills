@@ -181,6 +181,8 @@ Unknown or incompatible redistribution rights must set distribution status to
 | Entire model looks ghostlike | global translucent/blend material | wrong alpha mode | use opaque or alpha test as appropriate |
 | Emissive color is missing | source VMAT text looks correct | shader/compiler dropped emissive input | inspect compiled material and use compatible shader |
 | Floating piece in first person | component follows arm/clavicle | incomplete first-person filtering | inspect connected components, not weights alone |
+| Hand effect exists in third person but not first person | compiled FP mesh/bodygroup omits its components | FP export allowlist assumed weights were sufficient | explicitly include effect objects and materials in FP, exclude them from body-only wrist smoothing, and audit the compiled component count |
+| Wrist twists only in first person | abrupt lower-arm/hand weights under asymmetric pose | rigid wrist boundary in dedicated FP mesh | audit the active skeleton; smooth the FP lower-arm/hand envelope without inventing absent twist bones |
 | Fix removes a finger | whole component deleted | symptom hidden by geometry removal | restore component, shorten/reweight it |
 | Bullets pass through | compiled hitbox set missing | physics shapes mistaken for hitboxes | add and audit official hitbox contract |
 | Player stays standing after death | masses zero or joints absent | incomplete compiled PHYS | author/recompile a compatible physics contract from a current reference; never redistribute a donor PHYS payload |

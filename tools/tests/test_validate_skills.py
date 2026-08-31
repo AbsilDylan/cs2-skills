@@ -75,6 +75,22 @@ class MarkdownLinkTests(unittest.TestCase):
             self.assertEqual(1, len(errors))
             self.assertIn("missing local link target", errors[0])
 
+    def test_checks_same_file_and_cross_file_anchors(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            readme = root / "README.md"
+            reference = root / "reference.md"
+            readme.write_text(
+                "# Root\n[good](#root) [cross](reference.md#known-heading) "
+                "[bad](#missing)\n",
+                encoding="utf-8",
+            )
+            reference.write_text("## Known Heading\n", encoding="utf-8")
+            errors: list[str] = []
+            VALIDATOR.validate_markdown_links(readme, root, errors)
+            self.assertEqual(1, len(errors))
+            self.assertIn("missing Markdown anchor", errors[0])
+
 
 class RoutingFixtureTests(unittest.TestCase):
     def test_empty_expected_list_is_valid_when_classification_is_exhaustive(self) -> None:

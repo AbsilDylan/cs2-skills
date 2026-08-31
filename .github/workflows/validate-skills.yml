@@ -23,6 +23,14 @@ jobs:
       - run: python -m unittest discover -s cs2-ag2-npc-runtime/tests -v
       - run: python -m unittest discover -s cs2-animgraph2-authoring/tests -v
       - run: python tools/validate_skills.py
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: "8.0.x"
+      - run: >-
+          dotnet run --project cs2-server-npc-runtime/tests/ServerNpcRuntimeSkeleton.Tests.csproj
+          --configuration Release
+          --artifacts-path "${{ runner.temp }}/cs2-server-npc-example"
+          --disable-build-servers
       - uses: actions/setup-node@v6
         with:
           node-version: "22"

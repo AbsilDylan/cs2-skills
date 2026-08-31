@@ -9,8 +9,8 @@ So enjoy if it works for you !
 
 # CS2 Agent Skills
 
-AI-agent skill packages for current Counter-Strike 2 community-server asset
-research and authoring.
+AI-agent skill packages for current Counter-Strike 2 community-server runtime,
+asset research, and authoring.
 
 This is an unofficial community project. It is not affiliated with or endorsed
 by Valve. The repository contains original documentation and source tooling,
@@ -21,14 +21,32 @@ resources, compiled game assets, or third-party work without permission.
 
 | Skill | Scope |
 |---|---|
-| `cs2-ag2-npc-runtime` | Existing model-entity NPC runtimes: compiled graph inspection, controller materialization, typed parameters, behavior projection, Linux signature recovery, and NPC Workshop closure |
+| `cs2-server-npc-runtime` | Server-authoritative NPC gameplay with or without AG2: identity, lifecycle, AI, navigation, collision movement, combat, cleanup, scheduling, hot reload, and validation |
+| `cs2-ag2-npc-runtime` | Existing AG2 NPC presentation: compiled graph inspection, controller materialization, typed parameters, fallback classification, Linux signature recovery, and Workshop closure |
 | `cs2-animgraph2-authoring` | Weapon/item presentation: VNMClip/VNMGraph authoring, private first/third-person roots, proxy routing, prediction, and item Workshop delivery |
 | `cs2-player-model-porting` | Player-character assets: skeleton retargeting, skinning, geometry, materials, ModelDoc, first-person body geometry, hitboxes, ragdolls, and player-model Workshop closure |
 
-Use `cs2-ag2-npc-runtime` for model entities such as `prop_dynamic_override`
-that need server-driven NPC behavior. Use `cs2-animgraph2-authoring` for weapon
-or item first/third-person graph roots. Use `cs2-player-model-porting` for the
-geometry, rig, and physics of a player character.
+Use `cs2-server-npc-runtime` for NPC gameplay and lifecycle independently of
+its animation backend. Add `cs2-ag2-npc-runtime` when an existing model entity
+such as `prop_dynamic_override` needs AG2 materialization or typed animation
+control. Use `cs2-animgraph2-authoring` for weapon or item first/third-person
+graph roots, and `cs2-player-model-porting` for player geometry, rigs, and
+physics.
+
+## Bundled NPC Runtime Blueprint
+
+`cs2-server-npc-runtime/examples/ServerNpcRuntimeSkeleton.cs` is a compilable,
+framework-neutral, asset-free C# design scaffold—not an operational ModSharp
+plugin. It demonstrates full
+entity identity, bounded state transitions, impact latching, fail-isolated
+ports, active cleanup, world-forget semantics, and a presentation snapshot. It
+contains no ModSharp API guesses, model paths, signatures, or game assets.
+
+The companion references explain how to adapt the ports to the exact framework
+version and hand only the presentation snapshot to an AG2 or verified named-sequence
+adapter. Public examples must use placeholders or user-owned/permitted assets;
+native CS2/Deadlock models are local positive controls, not redistributable
+sample content.
 
 ## Bundled AnimGraph2 Tooling
 
@@ -60,15 +78,17 @@ for commands and the example manifest.
 
 ## Installation Notice
 
-Until an explicit repository license is added, the installation commands are
-operational examples for the owner and explicitly authorized evaluators; they
-do not grant permission to copy or redistribute the repository.
+This repository is distributed under the Apache License 2.0. Installation does
+not change the provenance or licensing requirements of third-party inputs or
+locally extracted Valve-derived references, which are not relicensed by this
+repository.
 
 ## Install With Codex
 
 Ask Codex to install a GitHub skill path with `$skill-installer`:
 
 ```text
+$skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/cs2-server-npc-runtime
 $skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/cs2-ag2-npc-runtime
 $skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/cs2-animgraph2-authoring
 $skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/cs2-player-model-porting
@@ -95,6 +115,7 @@ Install the repository as a Claude Code marketplace:
 Claude Code namespaces plugin skills. They can be invoked explicitly as:
 
 ```text
+/cs2-skills:cs2-server-npc-runtime
 /cs2-skills:cs2-ag2-npc-runtime
 /cs2-skills:cs2-animgraph2-authoring
 /cs2-skills:cs2-player-model-porting
@@ -116,6 +137,7 @@ python -B -m unittest discover -s tools/tests -v
 python -B -m unittest discover -s cs2-ag2-npc-runtime/tests -v
 python -B -m unittest discover -s cs2-animgraph2-authoring/tests -v
 python -B tools/validate_skills.py
+dotnet run --project cs2-server-npc-runtime/tests/ServerNpcRuntimeSkeleton.Tests.csproj -c Release --artifacts-path <temporary-directory-outside-this-repository> --disable-build-servers
 npx --yes --package=@anthropic-ai/claude-code@2.1.197 -- claude plugin validate . --strict
 ```
 
@@ -132,7 +154,8 @@ are build-scoped evidence rather than permanent APIs.
 
 | Area | Recorded evidence | Portability status |
 |---|---|---|
-| NPC Linux typed bridge | Historical exact build/hash profile in [`linux-parameter-bridge.md`](cs2-ag2-npc-runtime/references/linux-parameter-bridge.md); no bundled runtime receipt | Bool/Float/ID require local reproduction; Vector/Target are diagnostic-only and not writable |
+| Server NPC navigation/runtime | Managed architecture, framework-neutral scaffold, and offline NAV-artifact contract; no current native `CNavMesh` ABI, signature profile, or runtime receipt is bundled | Prefer offline NAV artifacts; any native NAV read bridge requires exact binary provenance, bounded reads, isolated canary validation, and fail-closed behavior |
+| NPC Linux typed bridge | Public recovery procedure and local profile schema in [`linux-parameter-bridge.md`](cs2-ag2-npc-runtime/references/linux-parameter-bridge.md); no callable pattern/RVA or runtime receipt is bundled | Bool/Float/ID require exact-binary local recovery and staging validation; Vector/Target are diagnostic-only and not writable |
 | AnimGraph2 clip tooling | Blender 4.1.1 and the dated CS2 tools profile in [`portable-tooling.md`](cs2-animgraph2-authoring/references/portable-tooling.md) | Windows CS2 toolchain; other Blender/tool versions unverified |
 | Player-model porting | Contract-driven guidance without a bundled dated runtime receipt | Must derive and record a current official target before each port |
 
@@ -142,7 +165,7 @@ validation layer.
 
 ## Licensing
 
-No repository license has been selected yet. Do not assume permission to copy,
-modify, or redistribute this repository until the owner adds an explicit
-license. Each input processed by a skill also retains its own provenance and
-license requirements.
+Unless otherwise noted, the repository-authored content is licensed under the
+[Apache License 2.0](LICENSE). This grant applies only to material the copyright
+holder is entitled to license. Every third-party input processed or referenced
+by a skill retains its own provenance, copyright, and redistribution terms.

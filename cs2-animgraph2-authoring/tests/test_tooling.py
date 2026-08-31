@@ -1373,7 +1373,7 @@ class PipelineTests(unittest.TestCase):
             )
 
     def test_tool_scripts_are_weapon_and_project_agnostic(self) -> None:
-        forbidden = ("fiveseven", "lasermine", "ogc_beta")
+        forbidden = ("fiveseven", "minimal_l0", "example_addon")
         for script in SCRIPTS.glob("*.py"):
             source = script.read_text(encoding="utf-8")
             ast.parse(source, filename=str(script))

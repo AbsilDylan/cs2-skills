@@ -1,20 +1,20 @@
 ---
 name: cs2-ag2-npc-runtime
-description: "Diagnose CS2 AnimGraph2 NPCs: compiled contracts, controllers, typed parameters, Linux signatures, and Workshop delivery. Requires an existing model/graph; excludes graph authoring and mesh porting."
+description: "Diagnose and drive CS2 AnimGraph2 NPC presentation: graph contracts, controllers, typed parameters, Linux signatures, and Workshop delivery. Excludes gameplay AI/nav/combat and asset authoring."
 ---
 
 # CS2 AnimGraph2 NPC Runtime
 
 Operate a server-authoritative NPC around an existing AnimGraph2 model, discover the graph's real control contract, drive its supported parameters, and validate it on a clean Counter-Strike 2 client.
 
-Use this skill for NPCs represented by `prop_dynamic_override` or another model entity with a `CBaseAnimGraphController`. It does not port meshes/rigs or author new graph assets. Use `cs2-player-model-porting` for character asset porting and `cs2-animgraph2-authoring` for first-person/third-person weapon or item graph authoring. Combine skills only when the request genuinely spans their boundaries.
+Use this skill for NPCs represented by `prop_dynamic_override` or another model entity with a `CBaseAnimGraphController`. It owns animation presentation, not general NPC gameplay. Use `cs2-server-npc-runtime` for entity ownership, targeting, AI, navigation, collision movement, combat, scaling, and cleanup; use `cs2-player-model-porting` for character asset porting; and use `cs2-animgraph2-authoring` for first-person/third-person weapon or item graph authoring. Combine skills only when the request genuinely spans their boundaries.
 
 ## Non-Negotiable Rules
 
 1. Inspect the compiled graph before inventing parameter names or animation states.
 2. Separate resource visibility from runtime materialization. `Resident` does not prove that a graph definition or graph instance exists.
 3. Diagnose `primary`, `definition`, and `instance` in that order.
-4. Write parameters through engine functions with the exact discovered type. Do not write guessed controller offsets in production.
+4. Write parameters through engine functions with the exact discovered type. Never write graph, node, controller, or CModel memory directly, including in staging.
 5. Keep behavior state server-authoritative and make animation a deterministic projection of that state.
 6. Resolve signatures per build and fail closed after an update. Never patch `libserver.so`.
 7. Validate from the downloaded Workshop addon on a clean client. Loose files are only an explicit A/B test.
@@ -23,6 +23,11 @@ Use this skill for NPCs represented by `prop_dynamic_override` or another model 
 10. Validate native probes first on an isolated, non-player staging server with a watchdog and an independently reachable restart path.
 11. Bind deferred work to an entity identity plus generation/serial. Revalidate lifetime immediately before every native call.
 12. Treat addon configuration edits as explicit operations: obtain approval, back up and hash the original, show the diff, and provide a tested restoration path.
+13. Never breadth-first/depth-first scan arbitrary process pointers or infer parameters from allocation order, addresses, vtable proximity, or readable pages.
+14. `AcceptInput` is generic entity-I/O dispatch, not an animation backend. A verified animation input such as `SetAnimation` with an exact model-published sequence label is a separate fallback; it does not materialize or drive missing AG2 parameters.
+15. Reacquire named schema fields, controller, definition, and graph instance at use time. Never retain a raw graph/node pointer across frames or controller rematerialization.
+16. Keep reverse-engineering commands outside the distributed production plugin and disabled by default.
+17. Do not publish extracted Valve or third-party models as examples. Use placeholders or user-owned/permitted assets and keep native assets as local controls only.
 
 ## Choose The Investigation Branch
 
@@ -37,6 +42,7 @@ Classify the current failure before changing code:
 | Instance exists but states are wrong or static | Parameter type/value/state-machine issue | [behavior-and-animation.md](references/behavior-and-animation.md) |
 | Managed API cannot set AG2 parameters on Linux | A small native call bridge may be required | [linux-parameter-bridge.md](references/linux-parameter-bridge.md) |
 | Works locally but fails for a clean Workshop client | Missing published root or incomplete resource closure | [packaging-and-validation.md](references/packaging-and-validation.md) |
+| Need targeting, planning, navmesh, collision movement, combat, damage, lifecycle, or crowd scaling | This is general NPC gameplay | Use `cs2-server-npc-runtime` |
 
 ## End-To-End Workflow
 
@@ -54,7 +60,7 @@ Classify the current failure before changing code:
 - Produce a graph contract table before implementing AI.
 - Use `scripts/summarize_vnmgraph.py` as a first-pass report generator, then verify important transitions by hand.
 
-Read [graph-inspection.md](references/graph-inspection.md) for the exact fields and a real trooper case study.
+Read [graph-inspection.md](references/graph-inspection.md) for the exact fields and an explicitly unverified table-shape example.
 
 ### 3. Build and package the complete resource closure
 
@@ -68,7 +74,7 @@ Read [graph-inspection.md](references/graph-inspection.md) for the exact fields 
 
 Use `prop_dynamic_override` when it satisfies collision and networking
 requirements. Follow [entity-and-controller.md](references/entity-and-controller.md)
-for the exact model, AnimGraph, server-animation, and per-frame configuration.
+for the exact model, graph identifier, server-animation, and spawn configuration.
 Set scale, collision, transform, team, health, and ownership through normal
 entity APIs. Do not use `info_target` as the animated body; it can remain a
 helper target.
@@ -80,7 +86,7 @@ After creation and again after a short deferred interval, log:
 ```text
 entity class and pointer
 model path and graph identifier key
-controller pointer
+named-schema body/controller path
 primary graph resource ID
 graph definition handle/pointer
 graph instance pointer
@@ -92,9 +98,9 @@ Use defensive accessors and stop at the first invalid layer. Never dereference a
 
 - Reuse a framework-provided typed AnimGraph setter when one exists and is verified for AG2.
 - Otherwise resolve the engine type getter plus Bool, Float, and ID setters by
-  signatures, but enable them only when the exact binary profile and a local
-  runtime validation receipt match. The bundled historical profile is not
-  proof for the current server.
+  signatures, but enable them only when the exact local binary profile and a
+  runtime validation receipt match. This repository deliberately ships no
+  callable signature/RVA profile as proof for the current server.
 - Detect Vector and Target controls in the graph contract and runtime type getter, but report them as `diagnostic-only` until a setter and calling convention are independently proven for the exact build. Never coerce them through the three scalar setters.
 - Convert parameter names and ID values through the engine symbol/string-token facility expected by those functions.
 - Cache resolved functions only after structural and runtime validation.
@@ -147,8 +153,8 @@ Produce these artifacts for a complete NPC integration:
 
 ## Reference Map
 
-- [graph-inspection.md](references/graph-inspection.md): decompile and read VNMGraph parameters, conditions, clips, events, and trooper controls.
+- [graph-inspection.md](references/graph-inspection.md): decompile and read VNMGraph parameters, conditions, clips, and events; its historical parameter table is an unverified shape example only.
 - [entity-and-controller.md](references/entity-and-controller.md): entity choice, CModel lookup, controller materialization, and safe diagnostics.
 - [behavior-and-animation.md](references/behavior-and-animation.md): convert AI state, velocity, targeting, and one-shots into graph inputs.
-- [linux-parameter-bridge.md](references/linux-parameter-bridge.md): one build-scoped Linux x86-64 signature record, partial call contract, validation, and recovery after updates.
+- [linux-parameter-bridge.md](references/linux-parameter-bridge.md): local build-profile schema, partial call contract, signature recovery, validation, and fail-closed update policy.
 - [packaging-and-validation.md](references/packaging-and-validation.md): compile closure, addon roots, Workshop delivery, clean-client tests, and failure matrix.

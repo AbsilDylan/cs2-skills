@@ -38,6 +38,12 @@ Validate:
 - backface policy;
 - all material remaps in the compiled model.
 
+For genuinely translucent effects, treat opacity edits as numeric contracts.
+If the requested result is half the current opacity, multiply the existing
+opacity scale by `0.5`; do not replace it with an arbitrary absolute value.
+After compilation, inspect the compiled VMAT and confirm the shader and exact
+opacity parameter survived the resource compiler.
+
 A local transparent-looking hole may be separated topology, inverted normals,
 or divergent seam weights even when the material is fully opaque.
 

@@ -4,7 +4,7 @@
 
 - [When To Use This Bridge](#when-to-use-this-bridge)
 - [Call Contract](#call-contract)
-- [One Historical Linux Build Profile](#one-historical-linux-build-profile)
+- [Keep The Runtime Profile Local](#keep-the-runtime-profile-local)
 - [Store Signatures As Build Data](#store-signatures-as-build-data)
 - [Resolve And Classify Safely](#resolve-and-classify-safely)
 - [Recover Signatures After A CS2 Update](#recover-signatures-after-a-cs2-update)
@@ -74,64 +74,35 @@ Before every getter or setter call:
 
 Do not assume a managed exception can recover from a bad native dereference; an access violation can terminate the process before managed recovery runs.
 
-## One Historical Linux Build Profile
+## Keep The Runtime Profile Local
 
-The following is a **historically reported, build-scoped profile**, not a
-timeless API or a bundled proof. The repository does not include the copied
-ELF, invocation log, crash-isolated staging trace, or machine-readable runtime
-receipt. Treat every address, pattern, marker, and setter as unverified until
-reproduced against the exact binary and recorded locally.
+This public skill deliberately contains no callable byte pattern, RVA, copied
+ELF, or claim that a historical setter still matches the current game. Put the
+recovered profile under an ignored local evidence directory and promote only
+its schema and recovery method to a public repository.
 
-```text
-Observed:        2026-07-17
-Platform:        Linux x86-64 dedicated server
-CS2 patch:       1.41.7.1
-Steam build ID:  24248951
-ELF Build ID:    647cc4e3761268f60104b5fd42d31b35db4b59de
-libserver SHA256:70cda71a8904f6fe84cd2a374c6ab1d85b57fc20ae9521883e3a621b428ab0bf
-```
-
-Diagnostic RVAs observed in that exact ELF:
+A complete local profile records every part of the call contract, not only the
+scanner patterns:
 
 ```text
-type getter: 0x15d42c0
-Bool setter: 0x15d4400
-Float setter:0x15d4580
-ID setter:   0x15d4a60
+observed date and operator/tool versions
+platform and Steam build ID
+ELF Build ID and module SHA-256
+getter and setter-candidate patterns
+structural classification markers
+expected raw and classified match counts
+calling convention and exact getter/setter prototype shapes
+runtime type-code mapping
+parameter-symbol conversion, size, and alignment
+Bool/Float/ID payload size and alignment
+resolved module-relative addresses for diagnosis only
+graph/model hashes used by the positive control
+runtime probe results and receipt hash
 ```
 
-Never call these RVAs directly in production. ASLR changes absolute addresses, and game updates change RVAs. They are useful only for confirming that a signature resolver found the expected functions in this exact build.
-
-Historically observed getter candidate pattern:
-
-```text
-55 48 89 E5 53 48 89 F3 48 83 EC 08 48 8B BF 28 05 00 00 48 8B 07 FF 50 68 48 85 C0 0F 84 ? ? ? ? 48 8B 80 D0 03 00 00 4C 8B 98 10 04 00 00
-```
-
-Historically observed shared setter-candidate pattern:
-
-```text
-55 48 89 E5 41 55 49 89 F5 41 54 53 48 89 D3 48 83 EC 08 48 8B BF 28 05 00 00 48 8B 07 FF 50 68 48 85 C0 0F 84 ? ? ? ? 48 8B 80 D0 03 00 00 4C 8B A0 10 04 00 00
-```
-
-The setter prologue intentionally matches multiple typed functions. Classify each candidate by bounded markers in its body:
-
-```text
-Bool:  3C 01 ... 88 50 18
-ID:    3C 02 ... 48 89 50 18
-Float: 3C 03 ... F3 0F 11 40 18
-```
-
-Additional structural markers for this build:
-
-```text
-entity/body path:    48 8B BF 28 05 00 00
-getter graph load:   4C 8B 98 10 04 00 00
-setter graph load:   4C 8B A0 10 04 00 00
-getter tail:         C9 FF E0
-```
-
-The graph load changed from `+0x408` in an older observed build to `+0x410` here. This is exactly why signatures must carry build evidence and structural validation.
+Never call an RVA directly. ASLR changes absolute addresses, game updates move
+functions, and a matching prologue does not prove semantics. Recover patterns
+from the exact target binary using the procedure below.
 
 ## Store Signatures As Build Data
 
@@ -140,19 +111,47 @@ Prefer a versioned JSON/TOML configuration loaded at startup. A useful schema is
 ```json
 {
   "platform": "linux-x64",
-  "observedDate": "2026-07-17",
-  "steamBuildId": "24248951",
-  "elfBuildId": "647cc4e3761268f60104b5fd42d31b35db4b59de",
-  "moduleSha256": "70cda71a8904f6fe84cd2a374c6ab1d85b57fc20ae9521883e3a621b428ab0bf",
-  "typeGetterPattern": "<pattern>",
-  "setterCandidatePattern": "<pattern>",
+  "observedDate": "<UTC date>",
+  "steamBuildId": "<exact build>",
+  "elfBuildId": "<exact ELF build ID>",
+  "moduleSha256": "<exact SHA-256>",
+  "typeGetterPattern": "<locally recovered pattern>",
+  "setterCandidatePattern": "<locally recovered pattern>",
   "candidateWindowBytes": 384,
+  "expectedMatches": {
+    "getterRaw": 1,
+    "setterCandidatesRaw": "<exact count>",
+    "boolClassified": 1,
+    "idClassified": 1,
+    "floatClassified": 1
+  },
+  "abi": {
+    "callingConvention": "<exact current module ABI>",
+    "getterPrototype": "<verified shape>",
+    "setterPrototype": "<verified shape>",
+    "parameterSymbol": {
+      "conversion": "<verified engine facility>",
+      "size": "<bytes>",
+      "alignment": "<bytes>"
+    },
+    "payloads": {
+      "bool": { "size": "<bytes>", "alignment": "<bytes>" },
+      "float": { "size": "<bytes>", "alignment": "<bytes>" },
+      "id": { "size": "<bytes>", "alignment": "<bytes>" }
+    }
+  },
   "typeCodes": { "bool": 1, "id": 2, "float": 3, "vector": 4, "target": 5 },
-  "writeSupport": [ "bool", "id", "float" ]
+  "writeSupport": [ "bool", "id", "float" ],
+  "runtimeReceiptSha256": "<receipt hash>"
 }
 ```
 
-Add comments in the implementation that point to this recovery procedure. Keep only stable calling conventions and validation logic in code.
+Keep this populated file local unless its binary provenance can legally and
+reproducibly accompany the evidence. Add comments in the implementation that
+point to this recovery procedure. Keep only recovery and validation logic in
+public code. Calling convention, prototypes, type codes, symbol conversion,
+and payload width/alignment are exact-module evidence and must match the local
+profile plus runtime receipt before any call is enabled.
 
 ## Resolve And Classify Safely
 

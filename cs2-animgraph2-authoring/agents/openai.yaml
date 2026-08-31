@@ -1,4 +1,4 @@
 interface:
-  display_name: "CS2 Item AnimGraph2 Authoring"
-  short_description: "Author and diagnose CS2 item AnimGraph2 pipelines"
-  default_prompt: "Use $cs2-animgraph2-authoring to build or diagnose the private first- and third-person AnimGraph2 pipeline for this CS2 weapon or item."
+  display_name: "CS2 AnimGraph2 Authoring"
+  short_description: "Author original CS2 NPC, weapon, and item AnimGraph2"
+  default_prompt: "Use $cs2-animgraph2-authoring to author or diagnose original CNmGraphDocument graphs, clips, private roots, routing, compilation, and Workshop closure for this CS2 NPC, weapon, or item."
