@@ -91,7 +91,7 @@ class SummarizeVnmGraphTests(unittest.TestCase):
         self.assertEqual(summary["controls"][2]["type"], "Vector")
         self.assertEqual(
             summary["controls"][0]["bridge_write_support"],
-            "requires-build-profile",
+            "requires-verified-bridge",
         )
         self.assertEqual(
             summary["controls"][2]["bridge_write_support"], "diagnostic-only"
@@ -108,10 +108,10 @@ class SummarizeVnmGraphTests(unittest.TestCase):
     def test_markdown_contains_contract_table(self) -> None:
         rendered = MODULE.render_markdown(MODULE.summarize_text(FIXTURE))
         self.assertIn(
-            "| 0 | `move_speed` | Float | requires-build-profile |", rendered
+            "| 0 | `move_speed` | Float | requires-verified-bridge |", rendered
         )
         self.assertIn(
-            "| 1 | `base_action` | ID | requires-build-profile | ground_jump |",
+            "| 1 | `base_action` | ID | requires-verified-bridge | ground_jump |",
             rendered,
         )
         self.assertIn("| 2 | `aim_vector` | Vector | diagnostic-only |", rendered)

@@ -26,9 +26,9 @@ CONTROL_TYPES = {
 }
 
 BRIDGE_WRITE_SUPPORT = {
-    "Bool": "requires-build-profile",
-    "Float": "requires-build-profile",
-    "ID": "requires-build-profile",
+    "Bool": "requires-verified-bridge",
+    "Float": "requires-verified-bridge",
+    "ID": "requires-verified-bridge",
     "Vector": "diagnostic-only",
     "Target": "diagnostic-only",
 }
@@ -756,7 +756,7 @@ def summarize_text(text: str, source: str = "<memory>") -> dict[str, Any]:
     warnings: list[str] = []
     warnings.append(
         "graph structure cannot verify a native bridge; Bool/Float/ID writes "
-        "require an exact matching binary profile and runtime validation receipt"
+        "require strict current-build resolution and a live typed probe"
     )
     unsupported = [
         control["name"]

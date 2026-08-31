@@ -16,7 +16,7 @@ Use this skill for NPCs represented by `prop_dynamic_override` or another model 
 3. Diagnose `primary`, `definition`, and `instance` in that order.
 4. Write parameters through engine functions with the exact discovered type. Never write graph, node, controller, or CModel memory directly, including in staging.
 5. Keep behavior state server-authoritative and make animation a deterministic projection of that state.
-6. Resolve signatures per build and fail closed after an update. Never patch `libserver.so`.
+6. Resolve signatures through the selected framework's strict module/gamedata API, revalidate after every CS2 update, and fail closed. Never patch `libserver.so`.
 7. Validate from the downloaded Workshop addon on a clean client. Loose files are only an explicit A/B test.
 8. Do not redistribute extracted Valve or third-party compiled assets. Keep decompilation outputs local.
 9. Run every native graph getter/setter on the server game thread. Never call entity-native functions from timers, networking callbacks, or worker threads directly.
@@ -27,7 +27,7 @@ Use this skill for NPCs represented by `prop_dynamic_override` or another model 
 14. `AcceptInput` is generic entity-I/O dispatch, not an animation backend. A verified animation input such as `SetAnimation` with an exact model-published sequence label is a separate fallback; it does not materialize or drive missing AG2 parameters.
 15. Reacquire named schema fields, controller, definition, and graph instance at use time. Never retain a raw graph/node pointer across frames or controller rematerialization.
 16. Keep reverse-engineering commands outside the distributed production plugin and disabled by default.
-17. Do not publish extracted Valve or third-party models as examples. Use placeholders or user-owned/permitted assets and keep native assets as local controls only.
+17. Do not bundle extracted Valve or third-party models. A path-only native-model control is acceptable only when the example clearly states that no assets are distributed and users must supply a lawful complete resource closure.
 
 ## Choose The Investigation Branch
 
@@ -43,6 +43,16 @@ Classify the current failure before changing code:
 | Managed API cannot set AG2 parameters on Linux | A small native call bridge may be required | [linux-parameter-bridge.md](references/linux-parameter-bridge.md) |
 | Works locally but fails for a clean Workshop client | Missing published root or incomplete resource closure | [packaging-and-validation.md](references/packaging-and-validation.md) |
 | Need targeting, planning, navmesh, collision movement, combat, damage, lifecycle, or crowd scaling | This is general NPC gameplay | Use `cs2-server-npc-runtime` |
+
+## Choose The Framework Integration
+
+- **ModSharp:** use the maintained [ModSharp AG2 NPC example](examples/modsharp-ag2-npc-example/) and read [linux-parameter-bridge.md](references/linux-parameter-bridge.md). Prefer `IGameData.Register/GetAddress/Unregister`, ModSharp entity wrappers, and its game-frame hooks. Do not replace those APIs with framework-neutral pseudocode.
+- **Another framework:** preserve the engine ABI, typed-parameter checks, game-thread rule, entity-lifetime guards, strict uniqueness, and fail-closed behavior, but translate them to that framework's documented module scanner, gamedata, entity, and scheduling APIs. Do not pretend ModSharp types are portable.
+- **Unknown framework:** provide the engine-level contract and ask for the exact framework/version before producing callable integration code. Never invent EKV, spawning, timer, signature, or native-call APIs.
+
+The bundled example is the concrete reference implementation for this skill,
+not a requirement that every user adopt ModSharp. Its gamedata names are
+private readable aliases, not claimed Valve C++ symbols.
 
 ## End-To-End Workflow
 
@@ -97,13 +107,14 @@ Use defensive accessors and stop at the first invalid layer. Never dereference a
 ### 6. Add the typed parameter bridge only if needed
 
 - Reuse a framework-provided typed AnimGraph setter when one exists and is verified for AG2.
-- Otherwise resolve the engine type getter plus Bool, Float, and ID setters by
-  signatures, but enable them only when the exact local binary profile and a
-  runtime validation receipt match. This repository deliberately ships no
-  callable signature/RVA profile as proof for the current server.
+- On ModSharp, start from the bundled example rather than recreating a custom
+  profile loader or signature scanner. Its gamedata contains one strict Linux
+  signature for the type getter and each Bool, Float, and ID setter.
+- On another framework, adapt the same engine call contract to that framework's
+  supported resolver. Do not copy ModSharp registration or entity APIs.
 - Detect Vector and Target controls in the graph contract and runtime type getter, but report them as `diagnostic-only` until a setter and calling convention are independently proven for the exact build. Never coerce them through the three scalar setters.
 - Convert parameter names and ID values through the engine symbol/string-token facility expected by those functions.
-- Cache resolved functions only after structural and runtime validation.
+- Cache resolved functions only after strict signature resolution, function-entry validation, and a live typed probe.
 - Disable native animation writes when any signature is missing or ambiguous.
 - Marshal all calls onto the game thread and revalidate entity identity, generation/serial, native pointer, controller, and graph instance at call time.
 
@@ -148,7 +159,8 @@ Produce these artifacts for a complete NPC integration:
 - a behavior-to-parameter mapping;
 - a resource closure and Workshop verification report;
 - a runtime diagnostic showing the `primary -> definition -> instance` ladder;
-- build-scoped native signature metadata with recovery notes when a bridge is necessary;
+- framework-native gamedata/signature metadata with its observation date,
+  recovery notes, uniqueness result, and runtime validation status;
 - a clean-client validation log and known limitations.
 
 ## Reference Map
@@ -156,5 +168,5 @@ Produce these artifacts for a complete NPC integration:
 - [graph-inspection.md](references/graph-inspection.md): decompile and read VNMGraph parameters, conditions, clips, and events; its historical parameter table is an unverified shape example only.
 - [entity-and-controller.md](references/entity-and-controller.md): entity choice, CModel lookup, controller materialization, and safe diagnostics.
 - [behavior-and-animation.md](references/behavior-and-animation.md): convert AI state, velocity, targeting, and one-shots into graph inputs.
-- [linux-parameter-bridge.md](references/linux-parameter-bridge.md): local build-profile schema, partial call contract, signature recovery, validation, and fail-closed update policy.
+- [linux-parameter-bridge.md](references/linux-parameter-bridge.md): maintained ModSharp example, engine ABI, gamedata/factory semantics, other-framework adaptation, signature recovery, and fail-closed update policy.
 - [packaging-and-validation.md](references/packaging-and-validation.md): compile closure, addon roots, Workshop delivery, clean-client tests, and failure matrix.
