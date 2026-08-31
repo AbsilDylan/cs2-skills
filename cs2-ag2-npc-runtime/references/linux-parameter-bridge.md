@@ -2,41 +2,32 @@
 
 ## Contents
 
-- [When To Use This Bridge](#when-to-use-this-bridge)
-- [Call Contract](#call-contract)
-- [Keep The Runtime Profile Local](#keep-the-runtime-profile-local)
-- [Store Signatures As Build Data](#store-signatures-as-build-data)
-- [Resolve And Classify Safely](#resolve-and-classify-safely)
-- [Recover Signatures After A CS2 Update](#recover-signatures-after-a-cs2-update)
-- [Validate At Runtime](#validate-at-runtime)
+- [Choose The Framework Path](#choose-the-framework-path)
+- [Engine Call Contract](#engine-call-contract)
+- [Bundled ModSharp Example](#bundled-modsharp-example)
+- [ModSharp Gamedata And Factory](#modsharp-gamedata-and-factory)
+- [Runtime Lifecycle And Safety](#runtime-lifecycle-and-safety)
+- [Adapt Another Framework](#adapt-another-framework)
+- [Recover After A CS2 Update](#recover-after-a-cs2-update)
 - [Failure Policy](#failure-policy)
 
-## When To Use This Bridge
+## Choose The Framework Path
 
-Use a native bridge only when the server framework has no verified public API for setting AG2 control parameters. The bridge should call existing engine functions; it should not patch code, alter `libserver.so`, or write guessed graph/controller fields.
+Use a native bridge only when the selected server framework has no verified
+public API for setting AG2 control parameters. Call existing engine functions;
+never patch `libserver.so` or write guessed graph/controller memory.
 
-Keep the bridge narrow:
+- For ModSharp, use the bundled concrete project. Do not create a second JSON
+  schema, identity-profile loader, manual executable scanner, or fictional EKV
+  abstraction.
+- For another framework, reuse only the engine-level call contract and safety
+  invariants. Translate integration through that framework's documented APIs.
+- When the framework/version is unknown, stop at the engine contract instead
+  of presenting pseudocode as callable code.
 
-```text
-parameter name -> global engine symbol
-entity + parameter symbol -> runtime parameter type
-Bool/Float/ID value -> matching engine setter
-```
+## Engine Call Contract
 
-Everything else remains normal managed plugin logic.
-
-The documented bridge is deliberately partial: it recognizes the graph's Bool,
-ID, Float, Vector, and Target type codes. A historical external investigation
-reported Bool, ID, and Float setters, but this repository does not bundle the
-raw runtime receipt needed to call them proven. Vector and Target remain
-unsupported until their payload ABI, lifetime rules, and setters are
-independently recovered for the exact build.
-
-Resolve against the loaded Linux module at startup. Treat signatures and structural markers as build-scoped data in configuration, not constants scattered through code.
-
-## Call Contract
-
-The historically reported unmanaged shapes are equivalent to:
+The verified Linux x86-64 shapes used by the example are equivalent to:
 
 ```csharp
 delegate* unmanaged<nint, nint, byte> getParameterType;
@@ -50,231 +41,166 @@ getParameterType(entityPointer, addressOfParameterSymbol)
 setParameter(entityPointer, addressOfParameterSymbol, addressOfTypedValue, 0)
 ```
 
-Observed type codes in the historical profile:
+Observed scalar type codes:
 
 ```text
 1 -> Bool
 2 -> ID
 3 -> Float
-4 -> Vector (getter/diagnostic only)
-5 -> Target (getter/diagnostic only)
 ```
 
-Convert both parameter names and ID values through the same engine global-symbol/string-token facility expected by these functions. Do not pass a managed string pointer, hash guessed from another subsystem, or enum ordinal.
+Vector and Target may appear in graph contracts, but this bridge does not
+claim writable setters for them. Never coerce either through a scalar setter.
 
-Before every getter or setter call:
+Convert parameter names and ID values through the engine global-symbol
+facility used by these functions. In the ModSharp example that export is
+`MakeGlobalSymbol` from `tier0`. A managed string pointer, unrelated hash, or
+enum ordinal is not a substitute.
 
-1. Marshal execution onto the server game thread.
-2. Validate entity index plus generation/serial, lifetime, and native pointer at call time.
-3. Revalidate the controller/graph instance used by the call.
-4. Resolve the parameter-name symbol.
-5. Ask the engine for the runtime parameter type.
-6. Compare that type with the intended setter and reject Vector/Target writes in this bridge.
-7. Pass a correctly sized local typed value by address.
+## Bundled ModSharp Example
 
-Do not assume a managed exception can recover from a bad native dereference; an access violation can terminate the process before managed recovery runs.
+Use [examples/modsharp-ag2-npc-example](../examples/modsharp-ag2-npc-example/)
+as the maintained ModSharp implementation. Important files are:
 
-## Keep The Runtime Profile Local
+| File | Role |
+| --- | --- |
+| `src/Ag2NpcExampleModule.cs` | module lifecycle, gamedata registration, command, hooks |
+| `src/Animation/Ag2NativeResolver.cs` | resolved-address and function-entry checks |
+| `src/Animation/Ag2ParameterWriter.cs` | symbol conversion, type probe, typed calls |
+| `gamedata/modsharp-ag2-npc-example.games.jsonc` | four strict Linux signatures |
+| `src/Npc/DirectChaseNpcRuntime.cs` | deliberately limited spawn/materialization demonstration |
 
-This public skill deliberately contains no callable byte pattern, RVA, copied
-ELF, or claim that a historical setter still matches the current game. Put the
-recovered profile under an ignored local evidence directory and promote only
-its schema and recovery method to a public repository.
+It uses real ModSharp APIs for `IGameData`, synchronous entity spawning, EKV,
+resource precache, frame hooks, entity guards, and cleanup. Its flat direct
+chase is only enough to demonstrate locomotion parameters; it is not NAV,
+collision movement, or reusable NPC gameplay. Route those concerns to
+`cs2-server-npc-runtime`.
 
-A complete local profile records every part of the call contract, not only the
-scanner patterns:
+No model, graph, skeleton, clip, material, texture, particle, or sound asset is
+bundled. The path-only Deadlock controls require a separately lawful and
+complete client/server resource closure. Replace them when publishing a module
+that does not have that asset basis.
+
+Install the example's gamedata separately from the module DLL:
 
 ```text
-observed date and operator/tool versions
-platform and Steam build ID
-ELF Build ID and module SHA-256
-getter and setter-candidate patterns
-structural classification markers
-expected raw and classified match counts
-calling convention and exact getter/setter prototype shapes
-runtime type-code mapping
-parameter-symbol conversion, size, and alignment
-Bool/Float/ID payload size and alignment
-resolved module-relative addresses for diagnosis only
-graph/model hashes used by the positive control
-runtime probe results and receipt hash
+{CS2}/game/sharp/gamedata/modsharp-ag2-npc-example.games.jsonc
 ```
 
-Never call an RVA directly. ASLR changes absolute addresses, game updates move
-functions, and a matching prologue does not prove semantics. Recover patterns
-from the exact target binary using the procedure below.
+## ModSharp Gamedata And Factory
 
-## Store Signatures As Build Data
+ModSharp loads the file through:
 
-Prefer a versioned JSON/TOML configuration loaded at startup. A useful schema is:
+```csharp
+gameData.Register("modsharp-ag2-npc-example.games.jsonc");
+gameData.GetAddress("Ag2NpcExample::Parameters::GetType", out var address);
+```
+
+The `Addresses` keys are private registry aliases. They are deliberately
+readable and collision-resistant, but they are not recovered Valve C++ names.
+Renaming one is safe only when the C# lookup changes with it.
+
+ModSharp resolves each signature with strict matching: zero matches and more
+than one match both fail registration. The shared setter prologue is therefore
+not usable directly because it matches multiple functions.
+
+The example instead signs a type-specific instruction sequence inside each
+setter. On the observed 2026-08-31 Linux binary, that sequence begins 303
+decimal bytes after the function entry. ModSharp's post-resolution operation:
 
 ```json
-{
-  "platform": "linux-x64",
-  "observedDate": "<UTC date>",
-  "steamBuildId": "<exact build>",
-  "elfBuildId": "<exact ELF build ID>",
-  "moduleSha256": "<exact SHA-256>",
-  "typeGetterPattern": "<locally recovered pattern>",
-  "setterCandidatePattern": "<locally recovered pattern>",
-  "candidateWindowBytes": 384,
-  "expectedMatches": {
-    "getterRaw": 1,
-    "setterCandidatesRaw": "<exact count>",
-    "boolClassified": 1,
-    "idClassified": 1,
-    "floatClassified": 1
-  },
-  "abi": {
-    "callingConvention": "<exact current module ABI>",
-    "getterPrototype": "<verified shape>",
-    "setterPrototype": "<verified shape>",
-    "parameterSymbol": {
-      "conversion": "<verified engine facility>",
-      "size": "<bytes>",
-      "alignment": "<bytes>"
-    },
-    "payloads": {
-      "bool": { "size": "<bytes>", "alignment": "<bytes>" },
-      "float": { "size": "<bytes>", "alignment": "<bytes>" },
-      "id": { "size": "<bytes>", "alignment": "<bytes>" }
-    }
-  },
-  "typeCodes": { "bool": 1, "id": 2, "float": 3, "vector": 4, "target": 5 },
-  "writeSupport": [ "bool", "id", "float" ],
-  "runtimeReceiptSha256": "<receipt hash>"
-}
+"factory": "-303"
 ```
 
-Keep this populated file local unless its binary provenance can legally and
-reproducibly accompany the evidence. Add comments in the implementation that
-point to this recovery procedure. Keep only recovery and validation logic in
-public code. Calling convention, prototypes, type codes, symbol conversion,
-and payload width/alignment are exact-module evidence and must match the local
-profile plus runtime receipt before any call is enabled.
+subtracts that distance from the signature match and returns the callable
+function entry. `factory` is an address-transformation pipeline, not an object
+factory. ModSharp also supports relative resolution and dereference operations,
+but this example needs only subtraction.
 
-## Resolve And Classify Safely
+Because an update could move the internal sequence while preserving some
+bytes, the resolver additionally calls `GetFunctionRange` and requires the
+factory result to equal the function start. It also requires all four resolved
+addresses to be distinct.
 
-Use the framework's module scanner, such as a `FindPatternMulti` equivalent, rather than hand-walking executable memory.
+The gamedata intentionally contains no RVA, module hash, ELF Build ID, Steam
+Build ID, or multi-profile selector. This keeps it native to ModSharp and easy
+to maintain. The tradeoff is explicit: it proves strict uniqueness on the
+loaded module, not cryptographic identity with an earlier build. Revalidate
+after every CS2 update.
 
-At startup:
+## Runtime Lifecycle And Safety
 
-1. Identify the loaded `libserver.so` module and executable ranges.
-2. Scan the getter pattern and require exactly one structurally valid match.
-3. Scan the shared setter pattern and collect all matches.
-4. Inspect only a bounded byte window inside each candidate's executable mapping.
-5. Classify candidates by the type compare and typed store markers.
-6. Require exactly one Bool, one Float, and one ID setter.
-7. Confirm all resolved addresses lie inside the expected module executable range.
-8. Log module identity, relative addresses, candidate counts, and classification.
-9. Mark the candidate set structurally resolved only when every invariant
-   succeeds, but keep all writes disabled. Activate writes only after the exact
-   binary passes the isolated runtime validation below and its receipt is
-   recorded.
+The example follows this activation ladder:
 
-Perform resolution at startup, but invoke resolved entity/graph functions only on the server game thread. A worker may analyze immutable copied bytes offline; it must not retain or dereference live entity/controller pointers.
+1. Register gamedata during module initialization.
+2. Read all four addresses and reject zero, aliases, or non-function entries.
+3. Resolve `MakeGlobalSymbol` by its exported `tier0` name.
+4. Spawn the model entity exactly once through ModSharp.
+5. Remain on the server game thread and revalidate entity lifetime.
+6. Probe graph-proven Bool, Float, and ID parameters with the type getter.
+7. Enable writes only when all three returned types match.
+8. Unregister gamedata during shutdown.
 
-Do not select candidates by scan order alone. Function layout can reorder between builds.
+Before every getter or setter call, validate game-thread ownership, managed
+wrapper validity, deletion state, native entity pointer, parameter symbol, and
+runtime parameter type. A managed `try/catch` is not a native crash boundary.
 
-Wildcard only unstable data such as branch displacements. Keep invariant opcodes, member-displacement bytes, virtual call shape, type comparison, and typed store as verification anchors. A pattern made mostly of wildcards is not update-resilient; it is ambiguity hidden as flexibility.
+## Adapt Another Framework
 
-## Recover Signatures After A CS2 Update
+Do not copy ModSharp class names into another library. Map these operations to
+the exact framework version instead:
 
-Perform recovery offline against a copied binary from the exact target server build. Do not reverse engineer or probe the live production process.
+| Required operation | ModSharp example | Other framework requirement |
+| --- | --- | --- |
+| Load signatures | `IGameData.Register` | documented gamedata/module scanner |
+| Require uniqueness | ModSharp strict address resolution | explicit zero-or-one check |
+| Transform inner match | gamedata `factory` | supported offset transform or verified function-start signature |
+| Validate function entry | `ILibraryModule.GetFunctionRange` | executable/function-boundary equivalent |
+| Spawn body | `SpawnEntitySync<IBaseAnimGraph>` | one create/precache/dispatch owner |
+| Schedule writes | game-frame hook | verified server game-thread dispatcher |
+| Validate entity | ModSharp entity wrapper and native pointer | full handle/serial plus lifetime guard |
 
-### 1. Record binary identity
+If the framework cannot transform an inner-function signature, either recover
+a unique function-entry pattern or perform a bounded, validated adjustment in
+code. Never call the inner match itself.
 
-```bash
-readelf -n libserver.so
-sha256sum libserver.so
-```
+## Recover After A CS2 Update
 
-Record the Steam app build ID and CS2 patch beside the ELF Build ID and hash.
+Work offline against a copied `libserver.so` from the exact target build. Do
+not probe production entity pointers while recovering signatures.
 
-### 2. Find semantic string anchors
+1. Disassemble the four previously identified functions and confirm their
+   controller lookup, parameter type check, and typed store behavior.
+2. Rebuild each signature using invariant opcodes and wildcard only branch,
+   call, or relocation displacements.
+3. Require exactly one match for the getter and every typed setter tail.
+4. Recalculate the distance from each setter match to its function entry; do
+   not assume `303` survived the update.
+5. Update the gamedata and record the observation date and resolved relative
+   addresses in a validation note, not as runtime RVAs.
+6. Test a deliberately invalid signature and require clean module degradation.
+7. On an isolated non-player server, probe one graph-proven Bool, Float, and ID
+   before permitting a harmless write of each type.
+8. Confirm a remote clean client observes the expected animation and that map
+   teardown/hot reload do not retain stale wrappers.
 
-Search for animation-parameter diagnostics:
-
-```bash
-strings -tx libserver.so | grep -Ei \
-  'Failed to set animgraph param|Unable to find.*graph parameter|Setting an animgraph parameter via Pulse'
-```
-
-Wording changes are possible. Also search shorter fragments such as `animgraph param`, `graph parameter`, and `Pulse`.
-
-### 3. Follow xrefs and direct calls
-
-Open the ELF in Ghidra/IDA/Binary Ninja, or use `objdump` around candidate xrefs. Find wrappers that:
-
-- accept a model entity and parameter symbol;
-- obtain the body/animation controller through a virtual call;
-- obtain the graph instance/controller data;
-- test a parameter type;
-- write a typed value through a small direct callee.
-
-The semantic string usually identifies a higher-level wrapper. Follow its direct calls to the small getter/setter functions rather than signing the large wrapper.
-
-### 4. Classify functions by behavior
-
-Confirm the getter returns a small type code. Confirm setters compare that code and store the intended width:
-
-- Bool: one-byte store;
-- Float: scalar single-precision store;
-- ID: pointer/token-sized store.
-
-Reject candidates that merely share a prologue.
-
-### 5. Build new patterns
-
-Choose a window containing:
-
-- the function prologue;
-- verified controller/graph acquisition structure;
-- type compare and/or typed store;
-- no absolute address or relocation bytes;
-- wildcards for relative branch/call displacements.
-
-Test uniqueness on the exact binary and at least one nearby archived build when available.
-
-### 6. Update evidence and comments
-
-Store the new patterns, build IDs, hash, observed RVAs, marker changes, analysis tool, and validation result. Preserve old build records for diagnosis; do not silently overwrite their provenance.
-
-## Validate At Runtime
-
-Use one known-good AG2 NPC and one invalid parameter on an isolated non-player staging server:
-
-1. Ensure a watchdog and an independently reachable out-of-process restart path are active.
-2. Resolve functions at startup with writes disabled.
-3. Ask the getter for graph-proven Bool, Float, ID, Vector, and Target parameters from the game thread.
-4. Confirm returned types match the static graph contract; mark Vector/Target as diagnostic-only.
-5. Enable Bool/Float/ID writes for the positive control only.
-6. Set one harmless continuous Float and observe the expected animation change.
-7. Pulse one Bool exactly once.
-8. Set one valid ID symbol.
-9. Query a nonexistent parameter and require a clean failure.
-10. Despawn/reuse an entity index and prove a stale generation/serial is rejected before a native call.
-11. Verify a remote client sees the result.
-12. Record the exact module identity, graph contract, resolved relative
-    addresses, typed probe results, observer result, and receipt hash. Only that
-    matching binary profile may subsequently enable production writes.
-
-Log counters such as attempted writes, accepted type matches, missing parameters, type mismatches, and disabled-bridge calls. Do not log every successful write indefinitely.
+Use semantic strings and xrefs only as discovery anchors. Classification still
+comes from the function's controller path, type comparison, and typed store.
 
 ## Failure Policy
 
-Fail closed when:
+Disable native animation writes when:
 
-- the module identity is unknown after an update;
-- a pattern has zero or multiple unclassified matches;
-- typed setters cannot be classified uniquely;
-- an address lies outside the module executable range;
-- the getter disagrees with the decompiled graph contract;
-- the known-good runtime probe fails.
+- gamedata is missing or registration fails;
+- any signature has zero or multiple matches;
+- a factory result is not a function entry;
+- resolved addresses alias one another;
+- `MakeGlobalSymbol` is unavailable;
 - execution is not on the server game thread;
-- entity generation/serial, controller, or graph-instance lifetime cannot be proven;
-- a caller requests Vector or Target through this partial bridge.
+- entity lifetime or native pointer cannot be proven;
+- the getter disagrees with the decompiled graph contract;
+- a caller requests an unsupported parameter type.
 
-Keep gameplay running with static or legacy animation fallback when possible. Print one actionable startup error containing the build identity and missing resolver stage. Never fall back to old RVAs or direct memory writes.
-
-Keep native writes disabled by default on production until the exact binary identity has passed staging. Rate-limit bridge failures, expose a health status, and let the watchdog restart the process after a native crash; do not treat `try/catch` as a crash boundary.
+Keep gameplay running with a static or separately verified named-sequence
+fallback where possible. Expose one actionable health status and never fall
+back to an old RVA, scan order, guessed pointer, or direct graph-memory write.

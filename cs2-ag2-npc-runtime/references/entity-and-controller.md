@@ -9,7 +9,7 @@
 - [Use The Materialization Ladder](#use-the-materialization-ladder)
 - [Build Safe Diagnostics](#build-safe-diagnostics)
 - [Compare A Positive Control](#compare-a-positive-control)
-- [Use A Minimal Framework-Agnostic Shape](#use-a-minimal-framework-agnostic-shape)
+- [Use A Framework-Specific Implementation](#use-a-framework-specific-implementation)
 - [Avoid Crash-Prone Probes](#avoid-crash-prone-probes)
 
 ## Runtime Pipeline
@@ -205,43 +205,30 @@ Use the same creation path for both models:
 
 If the positive control materializes AG2, the general entity path is valid. Focus on model runtime metadata and resource closure.
 
-## Use A Minimal Framework-Agnostic Shape
+## Use A Framework-Specific Implementation
 
-Keep public examples schematic and require a user-owned presentation contract:
+For ModSharp, use the concrete
+[modsharp-ag2-npc-example](../examples/modsharp-ag2-npc-example/) rather than
+turning conceptual responsibilities into C#-looking pseudocode. It demonstrates
+the real synchronous spawn/EKV contract, exact-once dispatch ownership,
+gamedata lifecycle, game-frame scheduling, and entity checks for its pinned
+ModSharp version.
 
-```csharp
-var spec = LoadPresentationContract("<user-owned config>");
-var body = CreateModelEntity("prop_dynamic_override");
-
-SetModel(body, spec.ModelPath);
-SetKeyValue(body, "use_animgraph", spec.Mode == Ag2 ? "1" : "0");
-SetKeyValue(body, "AnimateOnServer", "1");
-
-if (spec.Mode == Ag2 && spec.Identifier is not null)
-    SetKeyValue(body, "animgraph2_identifier", spec.Identifier);
-
-SpawnExactlyOnce(body);
-var identity = CaptureFullEntityIdentity(body);
-
-DeferOnGameThread(identity, TimeSpan.FromMilliseconds(250), current =>
-{
-    var ladder = ReadNamedSchemaMaterialization(current);
-    presentation = SelectValidatedAg2AseqOrDisabled(spec, ladder);
-});
-```
-
-Then keep one adapter active:
+For another framework, first record its exact name and version. Then map the
+following responsibilities to documented APIs:
 
 ```text
-AG2      -> typed writes from the authoritative gameplay snapshot
-sequence -> verified animation input with exact baked label, only on legal state entry/change
-Disabled -> no native-memory fallback
+create/precache/dispatch exactly once
+set model and server-AG2 keyvalues before spawn
+capture full entity identity and lifetime
+defer or tick on the server game thread
+read controller materialization through named schema/accessors
+select typed AG2, verified named sequence, or disabled presentation
 ```
 
-These names describe responsibilities, not a guaranteed ModSharp API. Verify
-the exact framework version before implementing creation, keyvalue, dispatch,
-and deferred game-thread calls. Do not attach a real model path, extracted
-asset, RVA, or signature profile to this public example.
+Do not publish invented method names as usable integration code. If the
+framework surface is unavailable, provide this contract as prose and request
+the missing API evidence.
 
 ## Avoid Crash-Prone Probes
 

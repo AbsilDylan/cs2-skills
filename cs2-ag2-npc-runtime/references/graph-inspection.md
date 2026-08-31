@@ -160,9 +160,9 @@ Create a table before coding:
 
 | Name | Type | Valid values/range | Semantic | Write cadence | Bridge support | Evidence |
 |---|---|---|---|---|---|---|
-| `move_speed` | Float | `>= 0` | horizontal speed gate | continuous | requires matching build profile and receipt | graph comparison |
-| `action_shoot` | Bool | pulse | enter shoot action | state entry | requires matching build profile and receipt | direct condition |
-| `pivot_turn` | ID | graph-defined IDs | turn selector | on change | requires matching build profile and receipt | ID comparison |
+| `move_speed` | Float | `>= 0` | horizontal speed gate | continuous | requires verified typed bridge and live type probe | graph comparison |
+| `action_shoot` | Bool | pulse | enter shoot action | state entry | requires verified typed bridge and live type probe | direct condition |
+| `pivot_turn` | ID | graph-defined IDs | turn selector | on change | requires verified typed bridge and live type probe | ID comparison |
 | `target` | Target | graph-defined target payload | aim/IK target | continuous | diagnostic-only; writes unsupported until independently proven | control node class |
 
 Also create an action table:

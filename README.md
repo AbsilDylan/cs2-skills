@@ -43,10 +43,27 @@ ports, active cleanup, world-forget semantics, and a presentation snapshot. It
 contains no ModSharp API guesses, model paths, signatures, or game assets.
 
 The companion references explain how to adapt the ports to the exact framework
-version and hand only the presentation snapshot to an AG2 or verified named-sequence
-adapter. Public examples must use placeholders or user-owned/permitted assets;
-native CS2/Deadlock models are local positive controls, not redistributable
-sample content.
+version and hand only the presentation snapshot to an AG2 or verified
+named-sequence adapter. No example bundles native CS2/Deadlock assets. A
+path-only native control still requires the user to supply a lawful complete
+resource closure and does not grant redistribution rights.
+
+## Bundled ModSharp AG2 Example
+
+[`cs2-ag2-npc-runtime/examples/modsharp-ag2-npc-example`](cs2-ag2-npc-runtime/examples/modsharp-ag2-npc-example/)
+is the concrete framework example for spawning an AG2 model entity, registering
+Linux signatures through ModSharp gamedata, probing Bool/Float/ID parameter
+types, and applying typed values on the game thread.
+
+Use that project when the target framework is ModSharp instead of generating a
+framework-neutral approximation of its EKV, spawn, hook, gamedata, or entity
+APIs. Other frameworks should adapt the documented engine ABI and safety
+contract to their own public interfaces rather than copying ModSharp types.
+
+The example contains no compiled game resources. Its native model paths are
+local positive controls only. The example module source is separately
+MIT-licensed, as permitted by ModSharp's third-party module exception;
+ModSharp itself retains its own license.
 
 ## Bundled AnimGraph2 Tooling
 
@@ -155,7 +172,7 @@ are build-scoped evidence rather than permanent APIs.
 | Area | Recorded evidence | Portability status |
 |---|---|---|
 | Server NPC navigation/runtime | Managed architecture, framework-neutral scaffold, and offline NAV-artifact contract; no current native `CNavMesh` ABI, signature profile, or runtime receipt is bundled | Prefer offline NAV artifacts; any native NAV read bridge requires exact binary provenance, bounded reads, isolated canary validation, and fail-closed behavior |
-| NPC Linux typed bridge | Public recovery procedure and local profile schema in [`linux-parameter-bridge.md`](cs2-ag2-npc-runtime/references/linux-parameter-bridge.md); no callable pattern/RVA or runtime receipt is bundled | Bool/Float/ID require exact-binary local recovery and staging validation; Vector/Target are diagnostic-only and not writable |
+| NPC Linux typed bridge | ModSharp gamedata example plus recovery procedure in [`linux-parameter-bridge.md`](cs2-ag2-npc-runtime/references/linux-parameter-bridge.md); signatures were observed on 2026-08-31 and no raw RVA is used | Revalidate strict uniqueness, factory distances, function entries, and live Bool/Float/ID probes after every CS2 update; Vector/Target remain unsupported |
 | AnimGraph2 clip tooling | Blender 4.1.1 and the dated CS2 tools profile in [`portable-tooling.md`](cs2-animgraph2-authoring/references/portable-tooling.md) | Windows CS2 toolchain; other Blender/tool versions unverified |
 | Player-model porting | Contract-driven guidance without a bundled dated runtime receipt | Must derive and record a current official target before each port |
 
