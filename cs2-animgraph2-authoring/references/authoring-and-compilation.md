@@ -331,6 +331,80 @@ vnmskel  -> CompileNmSkeleton
 vnmclip  -> CompileNmClip
 ```
 
+`assettypes_common.txt` is the extension-to-compiler dispatch table. Finding
+`CompileNmGraph`, `CompileNmSkeleton`, and `CompileNmClip` in
+`resourcecompiler.dll` while the mappings above are absent proves that the
+implementations exist but are not selectable by file extension; the resulting
+`no compiler for this file` error is not evidence that Nm compilation is
+impossible.
+
+The following `CResourceAssetTypeInfo` shape was independently compile-proven
+on the toolchain profile recorded in
+[source-graph-authoring.md](source-graph-authoring.md). It is historical
+evidence, not a build-independent patch:
+
+```text
+animgraph2_graph =
+{
+    _class = "CResourceAssetTypeInfo"
+    m_FriendlyName = "AnimGraph2 Graph"
+    m_Ext = "vnmgraph"
+    m_CompilerIdentifier = "CompileNmGraph"
+    m_bContentFileIsText = true
+}
+
+animgraph2_skeleton =
+{
+    _class = "CResourceAssetTypeInfo"
+    m_FriendlyName = "AnimGraph2 Skeleton"
+    m_Ext = "vnmskel"
+    m_CompilerIdentifier = "CompileNmSkeleton"
+    m_bContentFileIsText = true
+}
+
+animgraph2_clip =
+{
+    _class = "CResourceAssetTypeInfo"
+    m_FriendlyName = "AnimGraph2 Clip"
+    m_Ext = "vnmclip"
+    m_CompilerIdentifier = "CompileNmClip"
+    m_bContentFileIsText = true
+}
+```
+
+Add only missing entries inside the existing top-level `assettypes = { ... }`
+block. Do not append them outside that block, add them to the Workshop addon,
+or place them in a `.vnmgraph` source. Prefer augmenting a copied, isolated
+toolchain registry for research. If the user explicitly authorizes repairing
+the installed Workshop Tools registry, edit only:
+
+```text
+<CS2>/game/bin/assettypes_common.txt
+```
+
+Close CS2 and Workshop Tools before changing the selected registry and restart
+the tools afterwards. Put the probe source below a content addon and pass the
+base game root to ResourceCompiler:
+
+```powershell
+& "<CS2>\game\bin\win64\resourcecompiler.exe" `
+  -game "<CS2>\game\csgo" `
+  -i "<CS2>\content\csgo_addons\<addon>\animation\probe.vnmgraph" `
+  -f
+```
+
+The expected output is:
+
+```text
+<CS2>/game/csgo_addons/<addon>/animation/probe.vnmgraph_c
+```
+
+Use the same invocation shape for `.vnmskel` and `.vnmclip`, compiling in
+dependency order: skeletons, clips, referenced/variation graphs, then parent
+and root graphs. Require a successful compiler exit, the expected new output,
+and independent inspection as `NmSkeleton`, `NmClip`, or `NmGraph`; file
+existence alone is insufficient.
+
 This is a version-sensitive local toolchain repair, not an addon asset. Do not
 perform it merely because a guide mentions it: first reproduce the missing
 compiler error and obtain the user's explicit approval to edit the installed
