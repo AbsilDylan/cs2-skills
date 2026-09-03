@@ -108,6 +108,19 @@ If any step fails, route the stock proxy symbol in the private graph instead.
 Do not confuse `m_szAnimClass`, `_class`, a VData key, and `weapon_type`.
 Inspect current resources and observe runtime values.
 
+Measured on build 2000899 in the shared weapon graph controller code
+(`ReflectWeaponState`, read from the server binary): `weapon_type` equals
+the VData `m_szAnimClass` when it is set, otherwise the VData `m_szName`;
+`weapon_category` comes from `m_WeaponType`. A subclass that inherits from an
+item definition therefore reports the stock `weapon_type` unless it declares
+its own anim class, and a declared anim class must be routed by a private
+root because the stock roots have no variation for it. The subclass travels
+to the client as the networked subclass id and is resolved in the client's
+own (addon-shadowed) `weapons.vdata`; keep the full stock file plus your
+additions and rebuild it after every game update. Player pawn and HUD-arms
+graph parameters are recomputed on the client from networked state; server
+AnimGraph2 parameter writes only drive server-owned entities (NPCs, props).
+
 ## 3. Private Graph Families
 
 Never publish replacements at Valve's shared graph paths. Create a unique root
@@ -154,6 +167,20 @@ actions:
   primary: models/<namespace>/<item>/clips/primary_<item>.vnmclip
 ```
 
+### Variations live in the parent document
+
+A `+<variation>` graph is not a separate source file. The parent document
+declares its variations in `m_variationHierarchy.m_variations` (id, parent
+id, skeleton) and every clip or referenced-graph node carries per-variation
+`m_overrides` (`m_variationID` + the node data with the clip or graph path).
+Compiling the parent emits `<parent>.vnmgraph+<id>.vnmgraph_c` for each
+declared variation, so a private parent copy that adds one variation also
+emits every stock variation; delete those from the package. To add an item:
+clone the overrides of the closest stock variation, map each resource to the
+private clip set, add the variation entry, and extend the root's ID
+comparison lists (`m_values` of the `CNmGraphDocIDComparisonNode`) with the
+new `weapon_type`; several ids can share one state.
+
 ## 4. First-Person Graph Contract
 
 The graph instance to inspect is the local HUD-arms entity, commonly named
@@ -171,6 +198,26 @@ still use stock hand poses.
 The variation comparison must match the client-observed `weapon_type`. In proxy
 mode, retaining the stock variation name is normally correct even when the mesh
 and gameplay are custom.
+
+### Server-driven action triggers
+
+The client only reacts to networked state, so a "spell" or custom action is a
+normal weapon or pawn state change that the private graph reinterprets:
+
+| server writes | client parameter | stock meaning | custom use |
+|---|---|---|---|
+| a subclass weapon with its own `m_szAnimClass` | `weapon_type`, `weapon_category` | weapon family | a spell weapon whose idle/draw/attack states are the spell |
+| `m_bInReload` + `m_flNextPrimaryAttack` on a weapon that cannot reload | `action = action_reload`, `reload_stage` | reload | a cast clip in the private Reload state, ends by itself, no prediction fight |
+| `m_bSilencerOn` toggle (weapons with a silencer type) | `action_silencer_attach/detach` | silencer | a second distinct action slot |
+| pawn `m_bIsDefusing` | `is_defusing` (third person) | kneel on bomb | rooted channelled pose |
+| hit-reaction netvars | flinch layers | flinch | additive impact layers (noisy) |
+
+Native grenade flow is a good example of "nothing to send": pressing attack
+enters Charge (pull pin), holding blends the throw-charge poses by
+`attack_throw_strength`, releasing enters Throw (`attack_type` picks overhand
+or underhand). A private variation that replaces those clips needs no server
+change at all; only the weapon model and, if wanted, the subclass identity are
+server decisions.
 
 ## 5. Third-Person Graph Contract
 
@@ -231,6 +278,32 @@ once the current build has the required asset-type registrations.
 
 Do not assume a graph recompiles correctly because its source editor can open
 it. Inspect the resulting `.vnmgraph_c` and runtime selection.
+
+### Worked example: the stock grenade family (build 2000899)
+
+`viewmodel_grenade.vnmgraph` is one parent with the variations `decoy`,
+`flash`, `he`, `incendiary`, `molotov`, `smoke`. Its state machine:
+
+```text
+Deploying                      clip node "deploy" (draw)
+Idle                           clip node "idle" (looping), WPN_STATE_IDLE
+Attack
+  Charge                       clip node "pull_pin"; leaves on WPN_ACTION_COMPLETE
+                               (time remaining <= 0.2 s)
+  ReadyToThrow                 Blend 1D on attack_throw_strength between three
+                               AnimationPoseNodes (throwcharge low / mid / high,
+                               single-frame clips)
+  Throw -> Overhand/Underhand  clip nodes chosen by attack_type
+Inspect                        referenced graph viewmodel_inspects.vnmgraph+<id>_grenade
+```
+
+Clip events carry the gameplay sync points: `WPN_GRENADE_PULL_PIN` on frame
+index 12 of the pull-pin clip, `WPN_GRENADE_THROW` on index 13 (overhand)
+and 12 (underhand) of the throw clips, plus client-only sound events. A
+replacement clip set keeps the same event indices and durations so the
+native throw timing still matches what the player sees. During the throw the
+stock clips park `wpn` behind the camera; the visible grenade position comes
+from the weapon skeleton's secondary animation until the release.
 
 ## 7. Compiled Graph Patching
 

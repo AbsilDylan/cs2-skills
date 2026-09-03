@@ -83,7 +83,10 @@ The example uses Five-SeveN references only to demonstrate the schema and is a
 clip-tool smoke test, not a complete item diagnostic suite. Paths, skeletons,
 translation contracts, actions, output namespaces, and compile order are all
 manifest data. Local Valve-derived references stay under `.local/` and are
-never part of the repository or compiled handoff. The example's artifact
+never part of the repository or compiled handoff. Since 2026-09-03 the
+exporter converts clips to the compiler frame (raw VRF 19.1 references
+otherwise render off-screen) and can carry a weapon skeleton's joints as the
+clip's secondary animation (`secondary_skeleton_dmx`). The example's artifact
 policy is deliberately `blocked`: compilation can be tested locally, but an
 artifact handoff is allowed only after a concrete redistribution basis covers
 every generated and transitive input and a separate basis covers preserved
@@ -174,6 +177,9 @@ are build-scoped evidence rather than permanent APIs.
 | Server NPC navigation/runtime | Managed architecture, framework-neutral scaffold, and offline NAV-artifact contract; no current native `CNavMesh` ABI, signature profile, or runtime receipt is bundled | Prefer offline NAV artifacts; any native NAV read bridge requires exact binary provenance, bounded reads, isolated canary validation, and fail-closed behavior |
 | NPC Linux typed bridge | ModSharp gamedata example plus recovery procedure in [`linux-parameter-bridge.md`](cs2-ag2-npc-runtime/references/linux-parameter-bridge.md); signatures were observed on 2026-08-31 and no raw RVA is used | Revalidate strict uniqueness, factory distances, function entries, and live Bool/Float/ID probes after every CS2 update; Vector/Target remain unsupported |
 | AnimGraph2 clip tooling | Blender 4.1.1 and the dated CS2 tools profile in [`portable-tooling.md`](cs2-animgraph2-authoring/references/portable-tooling.md) | Windows CS2 toolchain; other Blender/tool versions unverified |
+| Clip DMX frame | Compiler frame rule (root-level bones permuted and rotated versus raw VRF 19.1 axes) observed in game on build 2000899, 2026-09-03; exporter converts by default (`reference_dmx_frame`) | Proven for first-person clips with a static root bone; third-person locomotion untested |
+| Secondary weapon animation | Stock clips carry `m_secondaryAnimations` for the weapon skeleton; a custom weapon skeleton compiled with 56 + 28 tracks (build 2000899, 2026-09-03) | Compile-proven; custom-skeleton in-game playback still pending |
+| Weapon identity | `weapon_type` = VData `m_szAnimClass` else `m_szName` (shared graph controller code, build 2000899) | Subclass resolution on a clean client still to be observed |
 | Player-model porting | Contract-driven guidance without a bundled dated runtime receipt | Must derive and record a current official target before each port |
 
 Do not label an output `current`, `packaged`, or `runtime-proven` unless its

@@ -489,6 +489,25 @@ def validate_manifest(data: dict[str, Any]) -> dict[str, Any]:
                 f"{field}.translation_mode must be absolute or bind-pose-delta"
             )
         animation_set["translation_mode"] = translation_mode
+        # DMX frame of the decompiled references: the pinned VRF 19.1 CLI writes raw
+        # Source axes ("source-axes", converted to the compiler frame on export);
+        # Source 2 Viewer >= 19.2 already writes the compiler frame ("compiler").
+        reference_dmx_frame = animation_set.get("reference_dmx_frame", "source-axes")
+        if reference_dmx_frame not in {"source-axes", "compiler"}:
+            raise ManifestError(
+                f"{field}.reference_dmx_frame must be source-axes or compiler"
+            )
+        animation_set["reference_dmx_frame"] = reference_dmx_frame
+        secondary_skeleton_dmx = animation_set.get("secondary_skeleton_dmx")
+        if secondary_skeleton_dmx is not None:
+            animation_set["secondary_skeleton_dmx"] = normalize_resource_path(
+                _require_string(secondary_skeleton_dmx, f"{field}.secondary_skeleton_dmx"),
+                field=f"{field}.secondary_skeleton_dmx",
+            )
+        animation_set["secondary_attach_bone"] = _require_string(
+            animation_set.get("secondary_attach_bone", "wpn"),
+            f"{field}.secondary_attach_bone",
+        )
         animation_set["max_abs_source_position"] = _require_positive_number(
             animation_set.get("max_abs_source_position", 1000.0),
             f"{field}.max_abs_source_position",
@@ -780,6 +799,24 @@ def validate_manifest(data: dict[str, Any]) -> dict[str, Any]:
 
     canonical["stock_dependencies"] = stock_dependencies
     return canonical
+
+
+def resolve_secondary_skeleton_dmx(
+    manifest_path: Path, reference_root: Path, value: str
+) -> Path:
+    """Locate a set's `secondary_skeleton_dmx`: a decompiled stock skeleton under
+    the reference root (e.g. animation/skeletons/weapons/<proxy>.dmx) or a
+    project-relative custom skeleton DMX."""
+
+    candidate = reference_root.joinpath(*PurePosixPath(value).parts)
+    if candidate.is_file():
+        return candidate
+    project_candidate = project_path(manifest_path, value, field="secondary_skeleton_dmx")
+    if project_candidate.is_file():
+        return project_candidate
+    raise ManifestError(
+        f"secondary_skeleton_dmx not found under the reference root or the project: {value}"
+    )
 
 
 def load_manifest(path: str | Path) -> tuple[Path, dict[str, Any]]:

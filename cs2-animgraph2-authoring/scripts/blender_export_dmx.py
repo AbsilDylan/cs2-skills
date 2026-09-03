@@ -35,6 +35,7 @@ from animgraph2_manifest import (  # noqa: E402
     project_path,
     reference_dmx_relative,
     resolve_cs2_root,
+    resolve_secondary_skeleton_dmx,
     resolve_tool,
     selected_sets,
     sha256_file,
@@ -49,6 +50,7 @@ from blender_dmx import (  # noqa: E402
     patch_template,
     pose_error,
     pose_for_action,
+    secondary_joints_from_dmx,
 )
 from extract_stock_references import verify_reference_cache  # noqa: E402
 
@@ -951,6 +953,17 @@ def _main_locked(
             validate_armature(armature, animation_set)
             action_entries = selected_actions(animation_set, args.actions)
             actions_by_id: dict[str, bpy.types.Action] = {}
+            secondary_joints: list[dict[str, Any]] | None = None
+            secondary_skeleton_value = animation_set.get("secondary_skeleton_dmx")
+            if secondary_skeleton_value:
+                secondary_skeleton_dmx = resolve_secondary_skeleton_dmx(
+                    manifest_path, reference_root, secondary_skeleton_value
+                )
+                secondary_kv2 = temp_root / animation_set["id"] / "secondary_skeleton.dmx.kv2"
+                convert_to_kv2(dmxconvert, secondary_skeleton_dmx, secondary_kv2)
+                secondary_joints = secondary_joints_from_dmx(
+                    secondary_kv2.read_text(encoding="utf-8")
+                )
             set_report: dict[str, Any] = {
                 "id": animation_set["id"],
                 "armature": armature.name,
@@ -1023,6 +1036,13 @@ def _main_locked(
                     ),
                     max_abs_source_position=float(
                         animation_set.get("max_abs_source_position", 1000.0)
+                    ),
+                    reference_dmx_frame=animation_set.get(
+                        "reference_dmx_frame", "source-axes"
+                    ),
+                    secondary_joints=secondary_joints,
+                    secondary_attach_bone=animation_set.get(
+                        "secondary_attach_bone", "wpn"
                     ),
                 )
                 patched_kv2 = work / "generated.dmx.kv2"

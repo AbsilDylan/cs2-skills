@@ -7,7 +7,7 @@ description: "Diagnose and drive CS2 AnimGraph2 NPC presentation: graph contract
 
 Operate a server-authoritative NPC around an existing AnimGraph2 model, discover the graph's real control contract, drive its supported parameters, and validate it on a clean Counter-Strike 2 client.
 
-Use this skill for NPCs represented by `prop_dynamic_override` or another model entity with a `CBaseAnimGraphController`. It owns animation presentation, not general NPC gameplay. Use `cs2-server-npc-runtime` for entity ownership, targeting, AI, navigation, collision movement, combat, scaling, and cleanup; use `cs2-player-model-porting` for character asset porting; and use `cs2-animgraph2-authoring` for first-person/third-person weapon or item graph authoring. Combine skills only when the request genuinely spans their boundaries.
+Use this skill for NPCs represented by `prop_dynamic_override` or another model entity with a `CBaseAnimGraphController`. Server-side AnimGraph2 parameter writes only reach server-owned entities like these: player pawn and first-person HUD-arms graphs recompute their parameters on the client from networked state, so weapon or item presentation goes through `cs2-animgraph2-authoring` instead. It owns animation presentation, not general NPC gameplay. Use `cs2-server-npc-runtime` for entity ownership, targeting, AI, navigation, collision movement, combat, scaling, and cleanup; use `cs2-player-model-porting` for character asset porting; and use `cs2-animgraph2-authoring` for first-person/third-person weapon or item graph authoring. Combine skills only when the request genuinely spans their boundaries.
 
 ## Non-Negotiable Rules
 
