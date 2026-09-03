@@ -220,6 +220,17 @@ behavior; do not make an old offset part of the generic skill.
 
 ## 6. VData And Client Identity
 
+A custom subclass is a VData block that inherits from the stock item
+definition key and overrides presentation fields (`m_szWorldModel`,
+`m_szAnimSkeleton`, `m_szAnimClass`, ammo/cycle fields). Giving the subclass
+name to the server's item creation sets the networked subclass id; the client
+resolves it in its own `weapons.vdata_c`, which the addon must ship as the
+complete stock file plus the additions (rebuild after every game update, and
+verify the native blocks did not change). Compile the document with
+`-fshallow` like any script resource. Until a clean client has been observed
+resolving the subclass, route the stock proxy symbol in the private root as
+the fallback.
+
 Start from the current installed `weapons.vdata_c` reference when authoring a
 profile. An old full-file copy can lose fields added by updates or override
 current stock definitions. Prefer a minimal addon profile if the format and
@@ -474,6 +485,24 @@ Keep an evidence matrix instead of merging independent claims:
 | Custom `weapon_type` never appears | Client VData registration | Only server VData was changed |
 | Local loose test works, Workshop does not | Clean client and downloaded VPK | Missing package dependency hidden by base-tree files |
 | ResourceCompiler has no Nm compiler | Current asset-type registrations | Steam/tool repair removed hidden registration |
+
+Additional symptoms recorded on build 2000899:
+
+```text
+arms and weapon absent, camera looks at nothing, clip compiled without warning
+  -> the clip DMX is in raw Source axes (VRF <= 19.1 decompile) instead of
+     the compiler frame; re-export with the conversion (authoring reference,
+     "DMX frame")
+
+custom arms play but the weapon's own parts (slide, pin, inner object) stay
+  -> the clip has no secondary animation for the weapon skeleton; add the
+     weapon joints under wpn on export and list the skeleton in the document
+
+three custom items on one native proxy all show the same clips
+  -> the client reports the stock weapon_type; only a subclass with its own
+     m_szAnimClass, resolved by the client's weapons.vdata, can distinguish
+     them (or use one private root per player model)
+```
 
 ## 11. Test Protocol
 

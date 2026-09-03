@@ -31,6 +31,7 @@ from animgraph2_manifest import (  # noqa: E402
     resolve_tool,
     selected_sets,
     sha256_file,
+    resolve_secondary_skeleton_dmx,
 )
 from blender_dmx import (  # noqa: E402
     armature_rest_signature,
@@ -40,6 +41,8 @@ from blender_dmx import (  # noqa: E402
     create_exact_armature,
     parse_channels,
     parse_dmx_skeleton,
+    append_secondary_joints,
+    secondary_joints_from_dmx,
 )
 from extract_stock_references import verify_reference_cache  # noqa: E402
 
@@ -237,6 +240,31 @@ def _main_locked(
                         source_scale=scale,
                         skeleton_resource=animation_set["primary_skeleton"],
                     )
+                    secondary_skeleton_value = animation_set.get("secondary_skeleton_dmx")
+                    if secondary_skeleton_value:
+                        # weapon skeleton under the attach bone: exported as the
+                        # clip's secondary animation (see portable-tooling.md 5/7)
+                        secondary_skeleton_dmx = resolve_secondary_skeleton_dmx(
+                            manifest_path, reference_root, secondary_skeleton_value
+                        )
+                        secondary_kv2 = (
+                            temp_root / animation_set["id"] / "secondary_skeleton.dmx.kv2"
+                        )
+                        convert_to_kv2(dmxconvert, secondary_skeleton_dmx, secondary_kv2)
+                        secondary_joints = secondary_joints_from_dmx(
+                            secondary_kv2.read_text(encoding="utf-8")
+                        )
+                        added_bones = append_secondary_joints(
+                            armature,
+                            secondary_joints,
+                            animation_set.get("secondary_attach_bone", "wpn"),
+                            scale,
+                        )
+                        armature["cs2_secondary_skeleton_dmx"] = str(secondary_skeleton_dmx)
+                        armature["cs2_secondary_skeleton_sha256"] = sha256_file(
+                            secondary_skeleton_dmx
+                        )
+                        armature["cs2_secondary_bones"] = added_bones
                     armature["cs2_animation_set"] = animation_set["id"]
                     armature["cs2_manifest"] = str(manifest_path)
                     armature["cs2_manifest_sha256"] = sha256_file(manifest_path)

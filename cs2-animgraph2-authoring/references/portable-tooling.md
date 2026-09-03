@@ -145,9 +145,25 @@ max_abs_source_position           corruption guard in Source units
 primary_skeleton                  character skeleton used by VNMClip
 secondary_skeletons               optional weapon/object skeletons
 preroll_seconds                   negative DMX samples required by the format
+reference_dmx_frame               source-axes (VRF <= 19.1 references, default,
+                                  converted on export) or compiler (VRF >= 19.2)
+secondary_skeleton_dmx            optional weapon skeleton DMX (stock decompiled
+                                  skeleton under the reference root, or a
+                                  project-relative custom skeleton DMX)
+secondary_attach_bone             bone the weapon skeleton hangs from (default wpn)
 actions                           canonical action definitions
 continuity                        optional endpoint assertions
 ```
+
+`reference_dmx_frame` is the second data contract that decides whether the
+clip renders at all: ResourceCompiler expects the frame Source 2 Viewer
+>= 19.2 writes, and the pinned 19.1 CLI writes raw Source axes. Leave the
+default when the references come from that CLI; set `compiler` only for a
+cache produced by a >= 19.2 release. `secondary_skeleton_dmx` adds the
+weapon skeleton's joints under `secondary_attach_bone` in the authoring
+scene and exports them as the clip's secondary animation (what moves a
+slide, a pin or an object inside a held model); list the matching
+`.vnmskel` in `secondary_skeletons` so the document declares it.
 
 `translation_mode` is a data contract, not an aesthetic choice. In the
 current tested build, viewmodel position channels were local absolute values,
@@ -239,6 +255,9 @@ The script:
 - creates one exact armature per selected set;
 - imports every stock clip as `REF_<set>_<action>`;
 - duplicates it to the manifest's editable action name;
+- appends the set's `secondary_skeleton_dmx` joints under the attach bone
+  (with `cs2_source_rest_position` set for bind-delta sets) and records them
+  in the armature (`cs2_secondary_bones`);
 - keys the complete rig, including hands and fingers;
 - preserves quaternion sign continuity;
 - stores manifest, skeleton, scale, source hashes, and a canonical
@@ -292,6 +311,11 @@ Select a subset with repeated `--set` or `--action` options. The exporter:
 - rejects mirrored/non-identity armature transforms and bone scaling;
 - rejects changed bone names, parenting, or edit-bone rest matrices;
 - samples all pose channels with quaternion sign continuity;
+- converts the root-level bones from raw Source axes to the compiler frame
+  unless the set declares `reference_dmx_frame: compiler` (see section 3);
+- inserts the weapon joints and channels of `secondary_skeleton_dmx` into the
+  stock template before filling it, so the compiled clip carries a secondary
+  animation for that skeleton;
 - applies the set's absolute or bind-delta translation contract;
 - patches the exact current stock DMX structure;
 - fixes duration and finite `frameRate`, including zero-duration stock idles;
@@ -565,6 +589,22 @@ Compiled clip is correct but runtime remains stock:
 The remaining problem is graph routing, player private roots, client-visible
 weapon_type, Workshop mounting, prediction, or server proxy behavior. Continue
 with graph-routing-and-patching.md and workshop-runtime-and-debugging.md.
+```
+
+Arms and weapon absent in game although the clip compiled cleanly:
+
+```text
+The DMX is in raw Source axes. Check the set's reference_dmx_frame against
+the Source 2 Viewer release that produced the reference cache (<= 19.1 CLI:
+source-axes, >= 19.2: compiler) and re-export.
+```
+
+The weapon's own parts stay still while the arms animate:
+
+```text
+The clip has no secondary animation for the weapon skeleton. Declare
+secondary_skeleton_dmx (and the matching secondary_skeletons entry), recreate
+the scene so the joints exist under the attach bone, and re-export.
 ```
 
 ## 13. Reproducibility And Licensing

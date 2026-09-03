@@ -97,6 +97,11 @@ latest upstream release. Reinspect with a pinned current VRF build as an
 additional result; do not silently replace the historical oracle in the
 receipt.
 
+Note that VRF releases from 19.2 onward decompile clip DMX in the
+compiler's coordinate frame while 19.1 writes raw Source axes (see the
+authoring reference, "DMX frame"). A graph receipt is unaffected, but a clip
+reference cache is only comparable with the release that produced it.
+
 The receipt fixture references a placeholder clip path under a neutral example
 namespace and the installed Valve viewmodel skeleton path; it redistributes
 neither dependency. Copy it into a private namespace and replace both paths

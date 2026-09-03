@@ -57,6 +57,23 @@ action names, frame rates, durations, and events
 Treat the native classname, VData name, anim class, `weapon_type`, and graph
 variation suffix as distinct until runtime evidence proves otherwise.
 
+### Decompiler versions and the DMX frame
+
+Source 2 Viewer releases differ in what they write for the same resource:
+
+```text
+CLI <= 19.1   clip DMX in raw Source axes (+X forward, +Y left, +Z up);
+              mesh DMX without the DmeJoint skeleton (no skin weights)
+GUI/CLI >= 19.2  clip DMX in the compiler frame (see "DMX frame" under section 4);
+              mesh DMX with the DmeJoint skeleton
+```
+
+Both are valid inputs as long as the pipeline knows which frame it holds:
+author against the raw axes if you like (they match the engine's world
+axes), but convert on export. Record the decompiler version with every
+reference cache; a cache written by a different release is a different
+reference, not a refresh.
+
 ## 2. Canonical Addon Layout
 
 Keep authored sources under the Workshop addon content tree:
@@ -99,6 +116,28 @@ Workshop-only test is required before calling distribution successful.
 ## 3. Model Contracts
 
 ### Owner object model
+
+Current stock weapons are "unified" models: one VMDL serves the first-person
+composite and the world/dropped entity. The contract observed on the current
+build is:
+
+```text
+weapon_metadata game data      is_unified_model = true, holster attachments
+AnimIncludeModel               the stock proxy weapon model (inherits its animation set)
+SkeletonFile / RenderMeshFile  the SMD or FBX of the custom object, bound to the
+                               weapon skeleton's bones (weapon -> weapon_offset -> ...)
+NmSkeletonReference            the AnimGraph2 weapon skeleton the model uses
+                               (animation/skeletons/weapons/<proxy>.vnmskel or a
+                               custom .vnmskel compiled from your own skeleton DMX)
+MaterialGroupList              remaps from the SMD material names to vmat paths
+```
+
+Weapon models carry no AnimGraph2 graph of their own (`m_animGraph2Refs` is
+empty on stock pistols and grenades). Their moving parts are driven by the
+character clips as a secondary animation (section 5). VData mirrors the
+model side: `m_szWorldModel` (the model), `m_szAnimSkeleton` (the weapon
+skeleton the client attaches under the arms' `wpn`), `m_szAnimClass` (the
+identity the graphs compare, see the routing reference).
 
 The owner object is the item seen by the local player. Its origin, orientation,
 attachments, and skeleton must match the animation and proxy conventions used
@@ -181,6 +220,32 @@ build.
    game camera, not only an orbiting Blender view.
 10. Export one deterministic action at a time and record frame range and FPS.
 
+Measured anatomy rules (2026-09-03, viewmodel skeleton, verified against
+Valve's own C4 and grenade clips):
+
+- The kinematic chain of the first-person rig is `armUpperShoulder_R ->
+  arm_lower_R -> hand_R` (pivot to elbow about 11.8 units, forearm 11.1);
+  `arm_upper_R` is a decorative child of the forearm. Solve IK on the real
+  chain and aim the decorative bone at a virtual shoulder below-behind the
+  camera whenever the elbow can enter the frame.
+- Keep the elbow a hinge: the forearm never twists relative to the humerus in
+  Valve's clips; pronation lives in the wrist.
+- Budget from the stock clips: wrist bend <= 35 deg, sideways deviation
+  <= 20 deg, no segment stretch. Measure every key, not just the extremes.
+- Preview at the game's field of view: `viewmodel_fov 68` is a 4:3 value,
+  about 84 deg horizontal at 16:9. A 60 deg preview crops more than the
+  game and hides poses that enter the frame.
+- Design hand-first: pick the hand position and orientation, derive the
+  object from the grip. A rigid fist cannot follow an object that tips by
+  100 deg; open the hand and re-grip instead.
+- For a held object carried through a large arm move (a throw), define the
+  grip once, then reach each new hand position with the wrist locked to the
+  forearm and carry the object rigidly with the hand. Posing the hand
+  orientation per key gave 60-85 deg wrists; the locked wrist keeps the
+  grip's 3 deg.
+- Keep `wpnHand_L/R` coincident with `hand_L/R` at every key (post-op snap);
+  the stock graphs apply their final IK on those helpers.
+
 Keying a parent does not automatically key every child. Select the complete
 required pose-bone set before inserting transforms, or use a deterministic
 export script that samples every expected channel per frame.
@@ -189,6 +254,22 @@ Do not hardcode a historical bone or channel count. Some observed viewmodel
 builds used 56 bones and 112 position/orientation channels, but the current
 installed skeleton is the authority. Derive the expected set and fail the build
 when exported names or counts differ.
+
+### DMX frame
+
+ResourceCompiler reads clip DMX in the convention Source 2 Viewer >= 19.2
+decompiles to, not in the raw Source axes of older CLI decompiles. Compared
+with the raw axes, the direct children of the root bone (`wpn`, the shoulder
+bones, ... under `root_motion`) have their positions permuted
+`(x, y, z) -> (y, z, x)` and their orientations pre-multiplied by a
+-120 deg rotation about `(1, 1, 1)`; the root bone and every deeper
+parent-local transform are unchanged. Observed on build 2000899: a clip
+written in the raw axes compiles without a warning and renders off-screen
+(no arms, no weapon); the same samples converted render correctly. The rule
+is proven for first-person clips whose root bone stays at identity; a moving
+root (third-person locomotion) is untested. The bundled exporter applies the
+conversion when the set declares `reference_dmx_frame: source-axes` (the
+default for the pinned 19.1 CLI references).
 
 ### DMX validation
 
@@ -248,6 +329,37 @@ skeleton or vice versa.
 Events are part of behavior. Preserve or author required events deliberately;
 do not copy stock muzzle, ammo, reload, or fire-complete events into a non-gun
 action without understanding their runtime effect.
+
+### Secondary (weapon) animation
+
+The compiled stock first-person clips carry `m_secondaryAnimations`: one
+animation per weapon skeleton (`fiveseven.vnmskel` for the pistol clips,
+`hegrenade.vnmskel` for the grenade clips) with its own track set. This is
+how slides and pins move in first person: the arms clip drives the weapon
+skeleton attached at `wpn`. Facts measured on build 2000899:
+
+- The `.vnmclip` document declares the skeletons in
+  `m_secondaryAnimationSkeletonNames`; the source DMX carries the weapon
+  joints (`weapon -> weapon_offset -> ...`) under the attach bone `wpn`
+  with their channels. KV2 separates inline array elements with `},`.
+- VRF decompiles (19.1 and 19.2) drop these channels: a template-based
+  export loses the weapon's own motion unless it re-adds the joints. The
+  bundled tooling does that from the set's `secondary_skeleton_dmx`.
+- A custom weapon skeleton works the same way: write a skeleton DMX
+  (`format model 22`, `DmeModel` + `DmeJoint` hierarchy, identity rest
+  rotations keep SMD and DMX rest poses trivially consistent), compile a
+  `.vnmskel` document pointing at it (`m_bIsAttachableProp = true`), reference
+  it from the model's `NmSkeletonReference` and the VData `m_szAnimSkeleton`,
+  and export the clips with those joints. A 28-bone custom skeleton compiled
+  and its clips carried 56 + 28 tracks with a `m_secondaryAnimations` entry,
+  without the compiler's "Missing Bones in animation" warning. In-game proof
+  is still pending for that custom skeleton; the stock mechanism is what
+  ships with the game.
+- The character skeleton (`viewmodel.vnmskel`) lists the stock weapon
+  skeletons in `m_secondarySkeletons`, all attached to `wpn`; the compile of
+  a custom weapon skeleton did not require editing it.
+- Single-frame pose clips (`m_flDuration = 0`) are valid inputs for graph
+  pose nodes (the grenade throw-charge poses are such clips).
 
 ### Loop ownership
 

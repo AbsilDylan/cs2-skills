@@ -73,6 +73,7 @@ def load_blender_only_module(filename: str):
         "patch_template",
         "pose_error",
         "pose_for_action",
+        "secondary_joints_from_dmx",
     ):
         setattr(blender_dmx_stub, name, lambda *args, **kwargs: None)
     spec = importlib.util.spec_from_file_location(module_name, module_path)

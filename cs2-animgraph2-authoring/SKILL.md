@@ -75,7 +75,11 @@ item, read all five in the order above. For a server-owned NPC, begin with
     fight native prediction; for NPCs, project behavior state into presentation.
     Model actions with explicit cancel, completion, restoration, and
     stale-callback protection.
-11. Treat every Nm compiler registration and node schema as build-profiled.
+11. Export clip DMX in the compiler frame (Source 2 Viewer >= 19.2
+    convention). A clip written in the raw axes of an older decompile compiles
+    cleanly and renders nothing; the bundled exporter converts root-level
+    bones by default.
+12. Treat every Nm compiler registration and node schema as build-profiled.
     Never modify the installed Valve asset registry implicitly, redistribute a
     Valve tool or registry, or promote a compiled graph across compiler
     fingerprints.
@@ -162,6 +166,12 @@ allowlist, and expected reports.
 Run preflight validation before extraction, staging, or compilation.
 
 ### 3. Author and inspect clips
+
+Weapon parts (slides, pins, anything inside a held model) move through the
+character clip's secondary animation on the weapon skeleton attached at
+`wpn`, not through a graph on the weapon model. Declare that skeleton in the
+manifest so the exporter writes its joints, and keep the measured wrist and
+elbow budgets of the authoring reference.
 
 Build against the exact current skeleton hierarchy/rest transforms. Export
 complete finite channels, generate one VNMClip per canonical action, compile in
