@@ -99,7 +99,8 @@ authoring. Keep normal authored and compiled assets in the addon's `content` and
 
 ## 3. VPK Inspection
 
-Inspect three artifacts when available:
+For initial integration or relevant packaging/mounting debugging, inspect
+three artifacts when available:
 
 ```text
 local compiled addon output
@@ -143,6 +144,23 @@ artifact policy with a non-empty evidence basis that covers authored,
 template-derived, and transitive inputs. A successful local compile does not
 establish redistribution permission.
 
+### Routine publication and source selection
+
+When the user has already confirmed publication and agreed a deployment fast
+path, do not require a new VPK asset audit on every iteration. Use the nominated
+publication output, transfer it with transport integrity/revision evidence,
+follow the instance's restart/rollback procedure and check runtime health.
+Retain the existing asset-validation limits and inspect contents again when a
+new symptom calls for it. This is a project/user agreement, not a global rule
+that all publication confirmations authorize deployment.
+
+Distinguish the publisher's output (observed under
+`game/csgo_addons/vpks/<item-id>`) from a subscribed cache under
+`steamapps/workshop/content/730/<item-id>`. They can contain different revisions.
+Resolve the actual source from the publication receipt; file presence or an
+older subscribed copy is not proof of the just-published upload. Manual client
+base-game placement remains a separate, explicitly authorized action.
+
 ## 4. Server Mounting
 
 The server and every client must mount the same Workshop item revision. The
@@ -150,6 +168,14 @@ exact launch option or framework API is server-stack-specific. Some community
 setups use addon launch arguments such as `-dual_addon`; others use a Workshop
 collection or plugin-managed mount. Verify the mechanism used by the current
 server rather than copying an option from another stack.
+
+During mounting diagnosis, test opening the exact resource through the
+server's `GAME` search path using a supported read-only filesystem API and
+close the handle. Precache success, `Resident`, or a mount log alone does not
+prove this access. Confirm framework bindings against their actual native
+operation if the results conflict. A client copy does not update the dedicated
+cache. When both module and Workshop resource names change, activate their
+matching revisions together after the affected instance is safe to restart.
 
 For deployment:
 
@@ -241,6 +267,14 @@ current clean-client merge test proves otherwise. VPK presence or resource
 residency does not prove a new key was registered. In proxy mode, do not replace
 stock numeric records merely to manufacture a custom identity.
 
+An intentional native-proxy presentation override is a different operation.
+The measured M249 case changed model/AG2-model/skeleton fields under both `14`
+and `weapon_m249`, preserving current gameplay fields and other stock records.
+Its scope is addon-wide, not per marked server entity. The owner-view muzzle
+vectors may also require a measured presentation update after reframing. See
+[weapon-presentation-contracts.md](weapon-presentation-contracts.md) for those
+contracts; none proves registration of a brand-new subclass.
+
 Separate these concepts:
 
 ```text
@@ -322,6 +356,12 @@ cancellation.
 The custom player model may be required because it carries private `hudmodel`
 and `worldmodel` roots. Apply it to the networked player pawn through the
 current supported server API.
+
+Resolve the final appearance after role and inventory/cosmetic selection. A
+later cosmetic assignment can replace an earlier private-graph fallback. Use a
+shared, exact role/model mapping to the graph-only variant, preserving cosmetic
+identity and mesh/physics, and inspect the actual pawn path after all writers
+have run. Do not repeatedly force the model to fight the appearance system.
 
 Account for:
 
@@ -503,6 +543,12 @@ three custom items on one native proxy all show the same clips
      m_szAnimClass, resolved by the client's weapons.vdata, can distinguish
      them (or use one private root per player model)
 ```
+
+For a correctly loaded model with a misplaced muzzle, missing charge, rotor
+snap or silent/duplicated motor audio, use
+[weapon-presentation-contracts.md](weapon-presentation-contracts.md). Sound-bank
+string paths may need explicit raw-sound package/precache roots, and missing
+projectile attachments require model changes rather than another precache call.
 
 ## 11. Test Protocol
 

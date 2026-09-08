@@ -43,8 +43,13 @@ prediction-aware server integration, and resource closure. It does not own:
   for packer roots, clean-client delivery, VData identity, prediction-safe
   server integration, overlays, and runtime diagnosis.
 
+- Read [weapon-presentation-contracts.md](references/weapon-presentation-contracts.md)
+  for visible-but-misaligned weapons, agent appearance overrides, secondary-root
+  transforms, hand fitting, charge/rotation, muzzle positions and sound ownership.
+
 Load only the references needed for the current failure. For an end-to-end new
-item, read all five in the order above. For a server-owned NPC, begin with
+item, follow the tooling, authoring, routing and delivery references as needed;
+load the presentation reference when integrating those surfaces. For a server-owned NPC, begin with
 `source-graph-authoring.md`, then route runtime ownership to
 `$cs2-ag2-npc-runtime` and behavior to `$cs2-server-npc-runtime`.
 
@@ -69,8 +74,11 @@ item, read all five in the order above. For a server-owned NPC, begin with
 8. Refuse destructive staging or configuration edits by default. Installed
    CS2/Workshop configuration changes require explicit approval, preimage hash,
    backup, exact diff, and restoration plan.
-9. Inspect compiled resources and the downloaded Workshop VPK. A local output
-   file does not prove packaging, mounting, routing, or animation playback.
+9. Establish compiled-resource and downloaded-VPK evidence for initial
+   integration and relevant delivery debugging. For routine publication under
+   an agreed deployment fast path, reuse existing asset evidence and perform
+   transport/revision and runtime health checks without repeating a full asset
+   audit. Neither a local file nor a transfer proves client rendering.
 10. Keep gameplay server-authoritative. For predicted items, do not continuously
     fight native prediction; for NPCs, project behavior state into presentation.
     Model actions with explicit cancel, completion, restoration, and
@@ -167,11 +175,13 @@ Run preflight validation before extraction, staging, or compilation.
 
 ### 3. Author and inspect clips
 
-Weapon parts (slides, pins, anything inside a held model) move through the
-character clip's secondary animation on the weapon skeleton attached at
-`wpn`, not through a graph on the weapon model. Declare that skeleton in the
-manifest so the exporter writes its joints, and keep the measured wrist and
-elbow budgets of the authoring reference.
+On the measured player-owned weapon path, moving parts use the character
+clip's secondary weapon animation. Declare the matching skeleton and its joints.
+Keep the Blender parent, DMX export parent and runtime attachment distinct:
+`wpn` as a runtime attachment does not require DMX parenting under `wpn`.
+Compare compiled secondary-root transforms with the stock control as described
+in [weapon-presentation-contracts.md](references/weapon-presentation-contracts.md).
+Preserve measured wrist, finger and elbow constraints when fitting the grip.
 
 Build against the exact current skeleton hierarchy/rest transforms. Export
 complete finite channels, generate one VNMClip per canonical action, compile in
@@ -195,8 +205,10 @@ controls, before judging animation quality.
 Build/package from an isolated, manifest-owned tree. Exclude local stock
 compiler dependencies and template-derived outputs whose redistribution status
 is blocked. An artifact policy is an explicit provenance assertion, not a way
-to manufacture rights. Inspect staged and downloaded VPK contents and compare
-hashes before runtime testing.
+to manufacture rights. Establish staged and downloaded VPK closure for the
+initial integration or a relevant delivery failure. For routine deployment,
+use the agreed verification scope described in
+[workshop-runtime-and-debugging.md](references/workshop-runtime-and-debugging.md).
 
 ### 7. Integrate the server proxy
 

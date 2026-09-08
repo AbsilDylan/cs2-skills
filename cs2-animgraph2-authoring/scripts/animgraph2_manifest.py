@@ -508,6 +508,15 @@ def validate_manifest(data: dict[str, Any]) -> dict[str, Any]:
             animation_set.get("secondary_attach_bone", "wpn"),
             f"{field}.secondary_attach_bone",
         )
+        # Scene parenting controls pose sampling; the DMX parent controls how
+        # ResourceCompiler extracts the secondary skeleton. Keep legacy exports
+        # unchanged unless a project has measured a different compiler contract.
+        animation_set["secondary_export_attach_bone"] = _require_string(
+            animation_set.get(
+                "secondary_export_attach_bone", animation_set["secondary_attach_bone"]
+            ),
+            f"{field}.secondary_export_attach_bone",
+        )
         animation_set["max_abs_source_position"] = _require_positive_number(
             animation_set.get("max_abs_source_position", 1000.0),
             f"{field}.max_abs_source_position",

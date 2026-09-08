@@ -16,6 +16,22 @@ for the current input and game build.
 4. Handle accessories and unusual anatomy
 5. Author first-person player geometry
 
+## Diagnose a custom grip before retargeting
+
+If the approved agent is correct with stock items and deforms only with a new
+weapon pose, first compare final IK/helper transforms and local hand/finger
+channels using `$cs2-animgraph2-authoring`. Solve after applicable motion layers
+and preserve bone lengths, scales and phalanx translations. A long thumb can
+come from a misplaced target or changed local translation, not defective mesh
+proportions. Do not stretch or delete anatomy to make a grip reach.
+
+Render the actual agent/gloves beside the reference-hand diagnostic. A stock
+hand that fits does not prove a bulky custom glove fits. Conversely, a failed
+preview reconstructed with different twist/bind frames does not prove the
+original compiled agent is defective. Zero unmapped weights measures mapping
+coverage, not skinning fidelity. Preserve original skinning until a stock/custom
+pose comparison isolates a mesh or bind defect.
+
 ## Phase 6: retarget bind geometry
 
 ### Full-matrix retargeting

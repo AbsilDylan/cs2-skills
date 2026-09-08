@@ -399,6 +399,26 @@ def _validate_node_fields(block: str) -> None:
             r"(?:Duration|TimeValueSeconds|EventOffset|Percentage|Percent)$",
             field,
         ):
+            if raw == "" and field.endswith("Percentage"):
+                # Current builds decompile transition percentages as a one-field
+                # struct on the following lines: `m_boneMaskBlendInTimePercentage =
+                # { m_flValue = 0.33 }`. Accept exactly that shape and validate the
+                # inner scalar like a bare number.
+                wrapped = re.search(
+                    re.escape(field)
+                    + r"[ \t]*=[ \t\r\n]*\{[ \t\r\n]*m_flValue[ \t]*=[ \t]*("
+                    + NUMBER_PATTERN
+                    + r")[ \t\r\n]*\}",
+                    block,
+                )
+                if not wrapped:
+                    raise ValueError(
+                        f"{field} must be one complete finite decimal number "
+                        f"or a {{ m_flValue = <number> }} struct, got {raw!r}"
+                    )
+                if not math.isfinite(float(wrapped.group(1))):
+                    raise ValueError(f"{field} must be finite, got {wrapped.group(1)!r}")
+                continue
             if not re.fullmatch(NUMBER_PATTERN, raw):
                 raise ValueError(
                     f"{field} must be one complete finite decimal number, got {raw!r}"

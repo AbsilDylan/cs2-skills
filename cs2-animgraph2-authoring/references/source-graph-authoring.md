@@ -25,6 +25,7 @@ only the outer container can create a parsable but invalid or crashing graph.
 - [Deterministic IR And UUIDs](#deterministic-ir-and-uuids)
 - [Controls And Runtime Ownership](#controls-and-runtime-ownership)
 - [Topology Promotion Ladder](#topology-promotion-ladder)
+- [Compiled Evidence: A Greenfield NPC Graph](#compiled-evidence-a-greenfield-npc-graph)
 - [Toolchain And Compiler Profile](#toolchain-and-compiler-profile)
 - [Validation Gates](#validation-gates)
 - [Redistribution Boundary](#redistribution-boundary)
@@ -367,6 +368,72 @@ VRF is a decompiler/schema oracle, not the Source 2 evaluator. Its viewer plays
 selected clips but does not execute state machines, IK, or constraints, and its
 generic resource serializer is not production-ready. A VRF parse or semantic
 round-trip therefore never replaces the runtime canary.
+
+## Compiled Evidence: A Greenfield NPC Graph
+
+A second receipt (2026-09-04, Steam build `2000899`, the same installed
+`resourcecompiler.exe` with the three Nm registrations) compiled a complete
+original NPC document generated from an IR with UUIDv5 identities: 108 KB of
+text KV3, 334 UUIDs, `0 failed`, no warnings, and Source2Viewer 19.1 read the
+expected definitions back (6 control parameters, 8 states, 11 transitions, 8
+pose nodes, 4 clip nodes, a layer blend, a Blend1D, a float math node, 2 bone
+masks, 2 state-completed conditions). This is `generated`, `compiled` and
+`inspected` evidence for the node set below, on a private skeleton and
+private clips; it is **not** runtime evidence (no canary yet). Field shapes
+were copied from the installed build's own graph sources, never invented.
+
+Nodes that compiled together in one document:
+
+```text
+root BlendTree      Bool/Float control parameters, StateMachineNode x2,
+                    StateMachineLayerNode (m_blendMode Overlay) -> LayerBlendNode
+                    (Base Node / Layer 0 pins, m_onlySampleBaseRootMotion), PoseResult
+state machine       StateNode (BlendTreeState) with a ValueTree secondary graph holding one
+                    StateLayerDataNode; TransitionConduitNode (m_startStateID/m_endStateID
+                    before m_pSecondaryGraph) whose TransitionConduit graph holds one
+                    TransitionNode + its condition tree; EntryStateOverrideConduitNode with
+                    one dynamic Bool pin per state and m_pinToStateMapping in the same order
+                    (pins left unconnected); GlobalTransitionConduitNode with an empty graph
+conditions          BoolParameterReferenceNode, NotNode, StateCompletedConditionNode
+pose sources        ClipNode (default variation data only, m_overrides empty),
+                    AnimationPoseNode with the Time pin driven by FloatMathNode
+                    (m_operator Sub, m_flValueB) and m_useFramesAsInput = true,
+                    Blend1DNode with five dynamic pose pins and matching m_blendSpace points
+layer state         StateLayerDataNode.Layer Mask <- BoneMaskNode (m_maskID) where the mask is
+                    declared in the private .vnmskel m_boneMaskSetDefinitions with every bone
+                    listed and an explicit 0/1 weight (m_secondaryWeightLists empty)
+```
+
+Rules that held for that compile and are worth keeping until a canary says
+otherwise:
+
+- every StateMachineGraph carried both an EntryStateOverrideConduitNode and a
+  GlobalTransitionConduitNode, exactly like the stock graphs, even when their
+  graphs were empty;
+- every StateNode carried the full tail (`m_type`, `m_cloneSourceStateID`,
+  the nine event arrays, `m_bUseActualElapsedTimeInStateForTimedEvents`) and
+  a secondary ValueTree with a StateLayerDataNode, layered or not;
+- state-context conditions (`State Completed`) lived only in local transition
+  conduits, as the promotion ladder above requires;
+- `m_inputTimeRemapRange` used the literal
+  `340282346638528859811704183484516925440.0` / negative pair the stock
+  sources print for an unset range;
+- `m_pUserData = null` on the variation, `m_debugParameterSets` and
+  `m_dictionaryIDSetIDs` empty.
+
+The decompiled definitions of the current build wrap
+`m_boneMaskBlendInTimePercentage` in a struct (`{ m_flValue = 0.33 }`) on
+every transition; a summarizer that expects a bare number must accept that
+shape (the `cs2-ag2-npc-runtime` helper was updated the same day).
+
+Clip side of the same receipt: clip DMX written directly from Python (KV2
+`format model 22`, one position and one orientation channel per bone, two
+padding samples at -0.1/-0.05 s, converted to binary with `dmxconvert -of
+model`) compiled for a 28-bone private skeleton whose own DMX was written raw;
+the direct child of the root bone was converted to the compiler frame as the
+authoring reference describes for the arms clips. The compiled clips report
+the authored frame counts and durations. Whether that frame rule is right for
+a non-arms skeleton is still `unverified` in game.
 
 ## Redistribution Boundary
 
