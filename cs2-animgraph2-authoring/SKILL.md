@@ -42,15 +42,14 @@ prediction-aware server integration, and resource closure. It does not own:
 - Read [workshop-runtime-and-debugging.md](references/workshop-runtime-and-debugging.md)
   for packer roots, clean-client delivery, VData identity, prediction-safe
   server integration, overlays, and runtime diagnosis.
-
 - Read [weapon-presentation-contracts.md](references/weapon-presentation-contracts.md)
   for visible-but-misaligned weapons, agent appearance overrides, secondary-root
   transforms, hand fitting, charge/rotation, muzzle positions and sound ownership.
 
 Load only the references needed for the current failure. For an end-to-end new
 item, follow the tooling, authoring, routing and delivery references as needed;
-load the presentation reference when integrating those surfaces. For a server-owned NPC, begin with
-`source-graph-authoring.md`, then route runtime ownership to
+load the presentation reference when integrating those surfaces. For a
+server-owned NPC, begin with `source-graph-authoring.md`, then route runtime ownership to
 `$cs2-ag2-npc-runtime` and behavior to `$cs2-server-npc-runtime`.
 
 ## Non-Negotiable Rules
@@ -59,8 +58,11 @@ load the presentation reference when integrating those surfaces. For a server-ow
    paths, tool hashes, source hashes, commands, warnings, and evidence level.
 2. Preserve untouched inputs. Keep locally extracted Valve material outside
    version control and public artifacts.
-3. Generate project resources only under declared private namespaces. Never
-   shadow Valve graph/model paths or write loose test files to base `game/csgo`.
+3. Generate graphs, clips and models only under declared private namespaces.
+   Never shadow Valve graph/model paths or write loose test files to base
+   `game/csgo`. An intentional canonical VData integration is a separate,
+   authorized operation described in the presentation reference; the bundled
+   private-resource stager does not permit global-path outputs.
 4. Keep first- and third-person skeletons, clips, graph instances, object
    models, and validation views distinct.
 5. For a weapon/item, route the `weapon_type` and variation the client actually
@@ -228,7 +230,8 @@ prediction, cancellation, reconnect, and another observing clean client.
 Declare the authored integration complete only when:
 
 - the build reproduces from untouched authorized project sources;
-- every generated project path is inside one declared private namespace;
+- generated graph/clip/model paths are private, and any canonical VData
+  override has an explicit scope and separately controlled integration;
 - stock/decompiled compiler dependencies are absent from the public artifact;
 - template and transitive-input provenance permits every artifact byte to be
   redistributed, with the exact basis recorded;

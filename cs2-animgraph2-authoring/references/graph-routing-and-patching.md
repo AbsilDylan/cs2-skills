@@ -94,8 +94,12 @@ client discriminator: use another value only after observing it in the graph
 
 ### Custom VData mode
 
-Use a custom VData profile only when all of the following are proven on the
-client:
+For a new custom VData identity, require all of the following on the client
+before relying on its new graph symbol. A native-record presentation override
+retains the proxy symbol and follows the separate contract in
+[weapon-presentation-contracts.md](weapon-presentation-contracts.md).
+
+For a new identity:
 
 1. the downloaded Workshop VPK contains the current `weapons.vdata_c`;
 2. the addon mount makes the profile discoverable;

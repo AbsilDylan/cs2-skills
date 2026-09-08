@@ -202,7 +202,8 @@ mark that exact entity instance as the custom item
 assign the world-object model; assign owner presentation only through a
 verified current owner-composition contract
 assign a player model whose private roots own 1P and 3P graphs
-apply a custom VData profile only when client registration is proven
+apply native presentation data through the proven client lookup contract;
+use a new subclass identity only when its client registration is proven
 manage charges/ammo and gameplay state
 intercept or reinterpret native input safely
 restore models/state on unequip, death, disconnect, map change, and unload
@@ -535,8 +536,9 @@ arms and weapon absent, camera looks at nothing, clip compiled without warning
      "DMX frame")
 
 custom arms play but the weapon's own parts (slide, pin, inner object) stay
-  -> the clip has no secondary animation for the weapon skeleton; add the
-     weapon joints under wpn on export and list the skeleton in the document
+  -> inspect the compiled secondary animation and skeleton match; if absent,
+     add weapon joints/channels under the measured DMX export parent and list
+     the skeleton in the document; runtime wpn does not dictate DMX parenting
 
 three custom items on one native proxy all show the same clips
   -> the client reports the stock weapon_type; only a subclass with its own
