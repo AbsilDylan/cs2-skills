@@ -29,8 +29,14 @@ entity ownership, AI, navigation, combat, and cleanup belong to
 `$cs2-server-npc-runtime`; materializing or driving an existing NPC
 `CBaseAnimGraphController` belongs to `$cs2-ag2-npc-runtime`.
 
-When several skills are needed, complete and validate the player-character
-asset first. Hand its compiled model and ModelDoc item graph slots to
+A graph-only variant of an already validated agent is not a new character
+port. Preserve its mesh, skinning, materials and physics; route private-root
+selection and appearance overrides to `$cs2-animgraph2-authoring`. For a hand
+that deforms only with a custom item, compare the pose, IK helpers and bind
+frames before rebuilding the player asset.
+
+When a character port is actually required alongside other skills, complete
+and validate that asset first. Hand its model and ModelDoc item graph slots to
 `$cs2-animgraph2-authoring`, or hand the body to `$cs2-server-npc-runtime` and
 add `$cs2-ag2-npc-runtime` only for NPC animation presentation.
 

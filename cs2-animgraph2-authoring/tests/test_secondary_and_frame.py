@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import json
 import math
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -238,6 +239,38 @@ class SecondarySkeletonTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "already present"):
             module.add_secondary_joints(patched, joints, "wpn")
 
+    def test_neutral_export_parent_preserves_primary_pose_and_channels(self) -> None:
+        module = load_blender_only_module("blender_dmx.py")
+        joints = module.secondary_joints_from_dmx(WEAPON_SKELETON)
+
+        def named_blocks(text, kind):
+            return {
+                re.search(r'"name"\s+"string"\s+"([^"]+)"', block).group(1): block
+                for block in module.scan_blocks(text, f'"{kind}"')
+            }
+
+        for parent in ("wpn", "root_motion"):
+            with self.subTest(parent=parent):
+                patched = module.add_secondary_joints(SYNTHETIC_TEMPLATE, joints, parent)
+                bones = named_blocks(patched, "DmeJoint")
+                weapon_id = re.search(
+                    r'"id"\s+"elementid"\s+"([^"]+)"', bones["weapon"]
+                ).group(1)
+                self.assertIn(f'"element" "{weapon_id}"', bones[parent])
+                other_parent = "root_motion" if parent == "wpn" else "wpn"
+                self.assertNotIn(f'"element" "{weapon_id}"', bones[other_parent])
+                # A nonzero grip transform must not be rewritten to hide the
+                # compiler's accumulated secondary root. Only hierarchy changes.
+                self.assertEqual(
+                    named_blocks(patched, "DmeTransform")["wpn"],
+                    named_blocks(SYNTHETIC_TEMPLATE, "DmeTransform")["wpn"],
+                )
+                self.assertEqual(
+                    named_blocks(patched, "DmeChannel")["wpn_p"],
+                    named_blocks(SYNTHETIC_TEMPLATE, "DmeChannel")["wpn_p"],
+                )
+                self.assertEqual(len(module.channel_names(patched)), 1 + 2 * len(joints))
+
     def test_custom_skeleton_text_round_trips(self) -> None:
         module = load_blender_only_module("blender_dmx.py")
         joints = [
@@ -255,11 +288,32 @@ class SecondarySkeletonTests(unittest.TestCase):
 
 
 class ManifestFrameFieldsTests(unittest.TestCase):
+    def test_export_parent_is_independent_and_defaults_to_scene_parent(self) -> None:
+        manifest = json.loads(EXAMPLE.read_text(encoding="utf-8"))
+        manifest["sets"][0]["secondary_attach_bone"] = "custom_grip"
+        validated = validate_manifest(copy.deepcopy(manifest))
+        self.assertEqual(validated["sets"][0]["secondary_export_attach_bone"], "custom_grip")
+        manifest["sets"][0]["secondary_attach_bone"] = "wpn"
+        manifest["sets"][0]["secondary_export_attach_bone"] = "root_motion"
+        validated = validate_manifest(copy.deepcopy(manifest))
+        self.assertEqual(validated["sets"][0]["secondary_attach_bone"], "wpn")
+        self.assertEqual(validated["sets"][0]["secondary_export_attach_bone"], "root_motion")
+
+    def test_export_parent_rejects_empty_and_nonstring_values(self) -> None:
+        manifest = json.loads(EXAMPLE.read_text(encoding="utf-8"))
+        for value in (None, "", "  ", 0, False, []):
+            with self.subTest(value=value):
+                candidate = copy.deepcopy(manifest)
+                candidate["sets"][0]["secondary_export_attach_bone"] = value
+                with self.assertRaisesRegex(ManifestError, "secondary_export_attach_bone"):
+                    validate_manifest(candidate)
+
     def test_defaults_and_rejections(self) -> None:
         manifest = json.loads(EXAMPLE.read_text(encoding="utf-8"))
         validated = validate_manifest(copy.deepcopy(manifest))
         self.assertEqual(validated["sets"][0]["reference_dmx_frame"], "source-axes")
         self.assertEqual(validated["sets"][0]["secondary_attach_bone"], "wpn")
+        self.assertEqual(validated["sets"][0]["secondary_export_attach_bone"], "wpn")
         self.assertNotIn("secondary_skeleton_dmx", validated["sets"][0])
         manifest["sets"][0]["reference_dmx_frame"] = "compiler"
         manifest["sets"][0]["secondary_skeleton_dmx"] = "animation\\skeletons\\weapons\\fiveseven.dmx"

@@ -968,6 +968,12 @@ def _main_locked(
                 "id": animation_set["id"],
                 "armature": armature.name,
                 "bone_count": len(armature.pose.bones),
+                "secondary_scene_attach_bone": (
+                    animation_set["secondary_attach_bone"] if secondary_joints else None
+                ),
+                "secondary_export_attach_bone": (
+                    animation_set["secondary_export_attach_bone"] if secondary_joints else None
+                ),
                 "actions": [],
             }
 
@@ -1041,9 +1047,7 @@ def _main_locked(
                         "reference_dmx_frame", "source-axes"
                     ),
                     secondary_joints=secondary_joints,
-                    secondary_attach_bone=animation_set.get(
-                        "secondary_attach_bone", "wpn"
-                    ),
+                    secondary_attach_bone=animation_set["secondary_export_attach_bone"],
                 )
                 patched_kv2 = work / "generated.dmx.kv2"
                 patched_kv2.parent.mkdir(parents=True, exist_ok=True)

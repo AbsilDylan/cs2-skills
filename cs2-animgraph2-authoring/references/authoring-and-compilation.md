@@ -339,9 +339,11 @@ how slides and pins move in first person: the arms clip drives the weapon
 skeleton attached at `wpn`. Facts measured on build 2000899:
 
 - The `.vnmclip` document declares the skeletons in
-  `m_secondaryAnimationSkeletonNames`; the source DMX carries the weapon
-  joints (`weapon -> weapon_offset -> ...`) under the attach bone `wpn`
-  with their channels. KV2 separates inline array elements with `},`.
+  `m_secondaryAnimationSkeletonNames`; the source DMX must carry the weapon
+  joints (`weapon -> weapon_offset -> ...`) and their channels. The source
+  parent is a compiler contract, separate from runtime attachment at `wpn`.
+  Compare compiled secondary roots before choosing it. KV2 separates inline
+  array elements with `},`.
 - VRF decompiles (19.1 and 19.2) drop these channels: a template-based
   export loses the weapon's own motion unless it re-adds the joints. The
   bundled tooling does that from the set's `secondary_skeleton_dmx`.
@@ -353,13 +355,21 @@ skeleton attached at `wpn`. Facts measured on build 2000899:
   and export the clips with those joints. A 28-bone custom skeleton compiled
   and its clips carried 56 + 28 tracks with a `m_secondaryAnimations` entry,
   without the compiler's "Missing Bones in animation" warning. In-game proof
-  is still pending for that custom skeleton; the stock mechanism is what
-  ships with the game.
+  is still pending for that original sample. A later M134 integration received
+  owner acceptance after separate secondary-root and world-model repairs; its
+  evidence does not upgrade this earlier sample.
 - The character skeleton (`viewmodel.vnmskel`) lists the stock weapon
   skeletons in `m_secondarySkeletons`, all attached to `wpn`; the compile of
   a custom weapon skeleton did not require editing it.
 - Single-frame pose clips (`m_flDuration = 0`) are valid inputs for graph
   pose nodes (the grenade throw-charge poses are such clips).
+
+The later case required a neutral compiled secondary root while the Blender
+weapon stayed under `wpn`; the DMX export parent was `root_motion`. Its separate
+unified-world-model defect required an actual convex hull, not a capsule named
+as a hull. These are measured weapon-path contracts, not generic player physics
+rules. Read [weapon-presentation-contracts.md](weapon-presentation-contracts.md)
+before compensating with pose offsets or changing entity parenting.
 
 ### Loop ownership
 

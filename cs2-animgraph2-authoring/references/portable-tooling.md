@@ -150,7 +150,8 @@ reference_dmx_frame               source-axes (VRF <= 19.1 references, default,
 secondary_skeleton_dmx            optional weapon skeleton DMX (stock decompiled
                                   skeleton under the reference root, or a
                                   project-relative custom skeleton DMX)
-secondary_attach_bone             bone the weapon skeleton hangs from (default wpn)
+secondary_attach_bone             Blender scene parent (default wpn)
+secondary_export_attach_bone      DMX insertion parent (defaults to the scene parent)
 actions                           canonical action definitions
 continuity                        optional endpoint assertions
 ```
@@ -164,6 +165,17 @@ weapon skeleton's joints under `secondary_attach_bone` in the authoring
 scene and exports them as the clip's secondary animation (what moves a
 slide, a pin or an object inside a held model); list the matching
 `.vnmskel` in `secondary_skeletons` so the document declares it.
+
+`secondary_export_attach_bone` controls only the DMX insertion hierarchy. It
+leaves Blender parenting and pose sampling unchanged, and defaults to
+`secondary_attach_bone` for existing manifests. In a measured M134 case,
+`wpn` in Blender plus `root_motion` in DMX yielded the required neutral compiled
+secondary root. Do not use that override without comparing the current stock
+and custom compiled-root contract; see
+[weapon-presentation-contracts.md](weapon-presentation-contracts.md).
+The export report records both scene and export parents. Portable unit tests
+cover defaults, validation and hierarchy/channel preservation; they do not
+constitute a Blender/ResourceCompiler or in-game run for a new project.
 
 `translation_mode` is a data contract, not an aesthetic choice. In the
 current tested build, viewmodel position channels were local absolute values,
@@ -313,9 +325,9 @@ Select a subset with repeated `--set` or `--action` options. The exporter:
 - samples all pose channels with quaternion sign continuity;
 - converts the root-level bones from raw Source axes to the compiler frame
   unless the set declares `reference_dmx_frame: compiler` (see section 3);
-- inserts the weapon joints and channels of `secondary_skeleton_dmx` into the
-  stock template before filling it, so the compiled clip carries a secondary
-  animation for that skeleton;
+- inserts the weapon joints and channels of `secondary_skeleton_dmx` under
+  `secondary_export_attach_bone` in the stock template before filling it, so the
+  compiled clip carries a secondary animation for that skeleton;
 - applies the set's absolute or bind-delta translation contract;
 - patches the exact current stock DMX structure;
 - fixes duration and finite `frameRate`, including zero-duration stock idles;

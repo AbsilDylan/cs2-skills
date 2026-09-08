@@ -94,8 +94,12 @@ client discriminator: use another value only after observing it in the graph
 
 ### Custom VData mode
 
-Use a custom VData profile only when all of the following are proven on the
-client:
+For a new custom VData identity, require all of the following on the client
+before relying on its new graph symbol. A native-record presentation override
+retains the proxy symbol and follows the separate contract in
+[weapon-presentation-contracts.md](weapon-presentation-contracts.md).
+
+For a new identity:
 
 1. the downloaded Workshop VPK contains the current `weapons.vdata_c`;
 2. the addon mount makes the profile discoverable;
@@ -207,10 +211,18 @@ normal weapon or pawn state change that the private graph reinterprets:
 | server writes | client parameter | stock meaning | custom use |
 |---|---|---|---|
 | a subclass weapon with its own `m_szAnimClass` | `weapon_type`, `weapon_category` | weapon family | a spell weapon whose idle/draw/attack states are the spell |
-| `m_bInReload` + `m_flNextPrimaryAttack` on a weapon that cannot reload | `action = action_reload`, `reload_stage` | reload | a cast clip in the private Reload state, ends by itself, no prediction fight |
+| current-build weapon gameplay animation state plus fixed phase-start timestamp | native action dispatch into the private Reload branch | reload presentation token | charge/cast clip where the native reader and proxy contract are proven; gate attacks separately |
 | `m_bSilencerOn` toggle (weapons with a silencer type) | `action_silencer_attach/detach` | silencer | a second distinct action slot |
 | pawn `m_bIsDefusing` | `is_defusing` (third person) | kneel on bomb | rooted channelled pose |
 | hit-reaction netvars | flinch layers | flinch | additive impact layers (noisy) |
+
+On the inspected M249 client (2000905), `m_bInReload` plus an attack delay
+alone did not establish the Reload animation action. The server used the
+framework's named gameplay-animation state and a fixed timestamp while keeping
+ammo-reload state separate. Prediction, completion and cancellation still need
+runtime checks; do not infer them from the existence of a network field. See
+[weapon-presentation-contracts.md](weapon-presentation-contracts.md) for that
+build-scoped case, agent selection, grip fitting and secondary-root diagnostics.
 
 Native grenade flow is a good example of "nothing to send": pressing attack
 enters Charge (pull pin), holding blends the throw-charge poses by

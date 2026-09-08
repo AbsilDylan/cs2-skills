@@ -219,6 +219,33 @@ class SummarizeVnmGraphTests(unittest.TestCase):
             with self.subTest(malformed=malformed[:80]), self.assertRaises(ValueError):
                 MODULE.summarize_text(malformed)
 
+    def test_accepts_struct_wrapped_transition_percentage(self) -> None:
+        # Current-build decompiles wrap the transition percentage in a struct.
+        wrapped = FIXTURE.replace(
+            "m_flSpeedMultiplier = 1.0",
+            "m_flSpeedMultiplier = 1.0\n"
+            "            m_boneMaskBlendInTimePercentage = \n"
+            "            {\n"
+            "                m_flValue = 0.33\n"
+            "            }",
+            1,
+        )
+        MODULE.summarize_text(wrapped)
+
+        bad_values = ("m_flValue = 1e9999", "m_flValue = abc", 'm_flValue = "0.33"')
+        for bad in bad_values:
+            broken = wrapped.replace("m_flValue = 0.33", bad, 1)
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                MODULE.summarize_text(broken)
+
+        bare_empty = FIXTURE.replace(
+            "m_flSpeedMultiplier = 1.0",
+            "m_flSpeedMultiplier = 1.0\n            m_flBoneMaskBlendInTimePercentage = ",
+            1,
+        )
+        with self.assertRaises(ValueError):
+            MODULE.summarize_text(bare_empty)
+
     def test_rejects_duplicate_direct_node_fields(self) -> None:
         duplicate_index = FIXTURE.replace(
             "m_nNodeIdx = 0", "m_nNodeIdx = 0\n            m_nNodeIdx = 1", 1

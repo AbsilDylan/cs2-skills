@@ -130,5 +130,41 @@
     "prompt": "Create a completely new non-weapon NPC VNMGraph and VNMClip state machine from scratch, without an existing compiled graph contract.",
     "expected_skills": [],
     "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
+  },
+  {
+    "id": "weapon-charge-without-spinup",
+    "prompt": "My custom M249 proxy has an attack delay and InReload set, but its private first-person spin-up clip never starts. Diagnose the animation trigger and phase timestamp without changing the gameplay delay.",
+    "expected_skills": ["cs2-animgraph2-authoring"],
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+  },
+  {
+    "id": "weapon-body-anchor-when-active",
+    "prompt": "My custom unified weapon stays at the same body anchor when active and when holstered. Compare its compiled model and secondary animation with the stock proxy before adding a server attachment offset.",
+    "expected_skills": ["cs2-animgraph2-authoring"],
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+  },
+  {
+    "id": "weapon-muzzle-after-reframing",
+    "prompt": "After lowering our first-person custom weapon, its muzzle flash remains above the barrel although the ModelDoc attachment moved. World VIP tracers also look different from the viewmodel flash. Diagnose the two origins.",
+    "expected_skills": ["cs2-animgraph2-authoring"],
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+  },
+  {
+    "id": "agent-cosmetic-overwrites-private-roots",
+    "prompt": "Our already validated agent has a graph-only variant for a custom weapon. The pose works until the inventory applies the selected cosmetic model, then stock poses return. Fix selection while preserving the mesh and cosmetic identity.",
+    "expected_skills": ["cs2-animgraph2-authoring"],
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+  },
+  {
+    "id": "weapon-loop-audio-and-rotor-snap",
+    "prompt": "Use my four authorized spin-up, motor-loop, slowdown and shot WAVs for a Workshop weapon. Stop duplicate playback and inspect the rotor snapping back to idle after slowdown.",
+    "expected_skills": ["cs2-animgraph2-authoring"],
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+  },
+  {
+    "id": "custom-grip-thumb-diagnostic",
+    "prompt": "The original player skinning and all stock grips look correct, but the thumb stretches with our custom two-handle weapon animation. Inspect the final pose and helper transforms before deciding to change the mesh.",
+    "expected_skills": ["cs2-animgraph2-authoring"],
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
   }
 ]
