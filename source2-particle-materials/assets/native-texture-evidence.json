@@ -1,0 +1,190 @@
+{
+  "schema": "source2.owned-texture-native-evidence.v1",
+  "performedUtc": "2026-10-15T17:23:37.6448501Z",
+  "game": {
+    "steamAppId": 730,
+    "steamBuildId": "25640462",
+    "patchVersion": "1.41.8.8",
+    "sourceRevision": "11064488",
+    "versionDate": "2026-09-30"
+  },
+  "compilerSha256": "00db3daca0e733601bf3fcc1d1bf9df1b2ade805629098c48bd6c51af3d96f51",
+  "arguments": [
+    "-i",
+    "<new-addon-source>.vtex",
+    "-game",
+    "<cs2>/game/csgo",
+    "-nop4",
+    "-fshallow"
+  ],
+  "attempt": 1,
+  "sourceReportSha256": "17fd397a38b894a5552a7ff8b1acf1cb352afa141d8684515894611c410209bf",
+  "qualification": "Owned procedural artwork and owned VTEX source only; native compile/readback, no native pixels or Deadlock compatibility proof.",
+  "template": "linear-rgba-test.vtex",
+  "outputs": [
+    {
+      "kind": "sprite",
+      "sourceSha256": "1f4033d07f02c8b9596c7cfc9c653993ee433878d4c2b76c51928185083d31ff",
+      "compiledSha256": "e41712ab74d1d7c7125a9973788646bd2e1113bc10e00cf2480c603144b8d87d",
+      "compiledBytes": 18560,
+      "exitCode": 0,
+      "decoded": true,
+      "diagnostics": [
+        {
+          "code": "invalid-block",
+          "message": "declared non-streaming size 2176 differs from input length 18560",
+          "severity": "warning",
+          "offset": 0
+        },
+        {
+          "code": "unknown-section",
+          "message": "Preserved unrecognized Resource2 section RED2.",
+          "severity": "info",
+          "offset": 48
+        }
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 1,
+        "nonzero": 2828,
+        "nonopaque": 4092
+      },
+      "nativeRendered": false,
+      "inputs": [
+        {
+          "path": "sprite.tga",
+          "bytes": 16402,
+          "sha256": "222e8938f8ff1a8c387d7246771e6d49060b432f37248a84c17787773536eb01"
+        },
+        {
+          "path": "sprite.vtex",
+          "bytes": 718,
+          "sha256": "1f4033d07f02c8b9596c7cfc9c653993ee433878d4c2b76c51928185083d31ff"
+        }
+      ],
+      "metadata": {
+        "width": 64,
+        "height": 64,
+        "format": "RGBA8888",
+        "mipCount": 1,
+        "colorSpace": "unknown",
+        "alphaMode": "straight"
+      },
+      "sourceTexelComparison": {
+        "changedComponents": 0,
+        "maxAbsoluteDifference": 0
+      }
+    },
+    {
+      "kind": "flipbook",
+      "sourceSha256": "8437ea027dae5ea8bf665568f0c3355c944d5ec0671aa1d86ae0c76132b028ef",
+      "compiledSha256": "1343c01bd704fef8deefdf7adaf7249b8963062ab9040eaac95d3546a096a674",
+      "compiledBytes": 8495,
+      "exitCode": 0,
+      "decoded": true,
+      "diagnostics": [
+        {
+          "code": "invalid-block",
+          "message": "declared non-streaming size 2744 differs from input length 8495",
+          "severity": "warning",
+          "offset": 0
+        },
+        {
+          "code": "unknown-section",
+          "message": "Preserved unrecognized Resource2 section RED2.",
+          "severity": "info",
+          "offset": 48
+        }
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 0.9725490196078431,
+        "nonzero": 4900,
+        "nonopaque": 32768
+      },
+      "nativeRendered": false,
+      "inputs": [
+        {
+          "path": "flipbook.mks",
+          "bytes": 272,
+          "sha256": "ebd892fd8a6df665fad5cf8f5aef092ecbe78c808e78bc0249a65b61b7680b47"
+        },
+        {
+          "path": "flipbook.vtex",
+          "bytes": 722,
+          "sha256": "8437ea027dae5ea8bf665568f0c3355c944d5ec0671aa1d86ae0c76132b028ef"
+        },
+        {
+          "path": "frame_000.tga",
+          "bytes": 16402,
+          "sha256": "d4c7e64ecdbb2c444790a478e7a2ec1b21478fee94cec8eaafd2b721f28a631f"
+        },
+        {
+          "path": "frame_001.tga",
+          "bytes": 16402,
+          "sha256": "6000ccf9f867d83f50e3196357f73654c8c808f199dcbc93080656094be02990"
+        },
+        {
+          "path": "frame_002.tga",
+          "bytes": 16402,
+          "sha256": "d843d91ca18b276925e94f469ff889ed4f93b096db036e45166f99eb57823fa5"
+        },
+        {
+          "path": "frame_003.tga",
+          "bytes": 16402,
+          "sha256": "9e3729eac536526e3bb3ea3fce8b8a9e70dc07fd7746539759b8595115485f86"
+        },
+        {
+          "path": "frame_004.tga",
+          "bytes": 16402,
+          "sha256": "9ba257bfefff83cdbd488bcaa6464e6e92947a1b8a9f7ca9daf895a79a00d38c"
+        },
+        {
+          "path": "frame_005.tga",
+          "bytes": 16402,
+          "sha256": "88a376d9209cfcbfc426aef72e2d2e3a7d30bb087fee841746ad90c0a1e07e83"
+        },
+        {
+          "path": "frame_006.tga",
+          "bytes": 16402,
+          "sha256": "c9ae56ecd5960dedfd9e550b19ed60247dbe6c7c530b2ebacff019384da71618"
+        },
+        {
+          "path": "frame_007.tga",
+          "bytes": 16402,
+          "sha256": "fa7dbbee24cf1307c4ddcec38e3a667646250fa2d27fa79c28a15628a7b0578c"
+        }
+      ],
+      "metadata": {
+        "width": 256,
+        "height": 128,
+        "format": "RGBA8888",
+        "mipCount": 1,
+        "colorSpace": "unknown",
+        "alphaMode": "straight"
+      },
+      "sheet": {
+        "version": 8,
+        "sequences": [
+          {
+            "id": 0,
+            "clamp": false,
+            "frames": 8,
+            "frameDisplayTimes": [
+              0.0416666679084301,
+              0.0416666679084301,
+              0.0416666679084301,
+              0.0416666679084301,
+              0.0416666679084301,
+              0.0416666679084301,
+              0.0416666679084301,
+              0.0416666679084301
+            ],
+            "rawTotalTimeField": 0.3333333134651184,
+            "rawTotalTimeQualification": "Decoder property was named framesPerSecond, but VRF writes this field as m_flTotalTime; not native playback measurement."
+          }
+        ]
+      }
+    }
+  ]
+}

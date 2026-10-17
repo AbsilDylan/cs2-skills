@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source 2 Particle Control Points"
+  short_description: "Design particle CP inputs, transforms and bindings"
+  default_prompt: "Use $source2-particle-control-points to define and verify this CS2 effect’s control points, transforms, providers and child bindings."

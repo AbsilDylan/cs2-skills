@@ -3,168 +3,324 @@
     "id": "animgraph-first-person-stock-fallback",
     "prompt": "My custom CS2 weapon model loads, but the first-person hands still use the stock Five-SeveN draw and idle animations. Diagnose the VNMGraph route.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "animgraph-workshop-missing-clips",
     "prompt": "The VNMClip compiles locally but is missing from the downloaded Workshop VPK. Build a clean packaging and runtime-debug plan.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "animgraph-long-action",
     "prompt": "Create a cancellable two-second custom item action without letting the native proxy prediction restart the animation every tick.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "animgraph-portable-stock-export",
     "prompt": "Extract current CS2 stock animations for an arbitrary weapon, create exact Blender first- and third-person rigs, export complete DMX files, generate VNMClips, and compile them reproducibly.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "player-source1-port",
     "prompt": "Port this Source 1 player MDL to the current CS2 skeleton, preserving weights and creating hitboxes and a real ragdoll.",
     "expected_skills": ["cs2-player-model-porting"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "player-skinning-repair",
     "prompt": "My custom CS2 character's neck seam opens and its wrist twists under reload. Audit bind retargeting, weights, and topology.",
     "expected_skills": ["cs2-player-model-porting"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "player-first-person-geometry",
     "prompt": "The third-person character is correct but cape and shoulder fragments appear in the first-person camera. Repair the player-body geometry.",
     "expected_skills": ["cs2-player-model-porting"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "combined-private-player-roots",
     "prompt": "Port a custom player character and then give it private first- and third-person AnimGraph2 roots for a custom Workshop item.",
     "expected_skills": ["cs2-player-model-porting", "cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-ag2-static-controller",
     "prompt": "My prop_dynamic_override NPC model is visible but frozen. The graph and clips are Resident while primary, definition, and instance remain zero. Diagnose the CModel and AnimGraph2 controller path.",
     "expected_skills": ["cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-ag2-read-compiled-graph",
     "prompt": "Read this compiled NPC VNMGraph, recover every Bool, Float, ID, Vector, and Target control plus valid ID values, transitions, loop flags, and clips; map them to server AI states and distinguish writable controls from diagnostic-only types.",
     "expected_skills": ["cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-ag2-linux-signature-update",
     "prompt": "A CS2 Linux update broke the byte patterns for our server-side AG2 parameter setters. Recover and validate the Bool, Float, and ID functions without patching libserver.so or hardcoding RVAs.",
     "expected_skills": ["cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-ag2-workshop-clean-client",
     "prompt": "This custom NPC animates locally but is static for clean clients using only the Workshop addon. Verify that gameinfo.gi publishes its animation directory and that the downloaded VPK contains the complete model, graph, skeleton, and clip closure.",
     "expected_skills": ["cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-navigation-collision-runtime",
     "prompt": "Design a server NPC that follows an extracted CS2 NAV corridor, uses capsule sweeps for stairs and walls, and reports unreachable or unsupported traversal without teleport fallback.",
     "expected_skills": ["cs2-server-npc-runtime"],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-combat-lifecycle-runtime",
     "prompt": "Implement server-authoritative monster melee with windup, impact revalidation, recovery, custom health, death cleanup, and safe map-change cancellation.",
     "expected_skills": ["cs2-server-npc-runtime"],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-hot-reload-crowd-runtime",
     "prompt": "Audit my CS2 NPC host for entity-index reuse, stale async path results, hot reload, synchronized AI spikes, unbounded spawn counts, and all-pairs crowd cost.",
     "expected_skills": ["cs2-server-npc-runtime"],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-gameplay-with-ag2-presentation",
     "prompt": "Build a server-authoritative monster with target selection, NAV/collision movement and windup combat, then project its state into an existing AG2 model using graph-proven typed parameters.",
     "expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "ambiguous-vnmgraph-needs-context",
     "prompt": "I have a CS2 VNMGraph that does not work. Fix it.",
     "expected_skills": [],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "player-model-used-as-npc",
     "prompt": "Port this humanoid mesh to the current CS2 player skeleton, then use the compiled model as the body of a server-authoritative prop_dynamic_override NPC with safe lifecycle and collision movement.",
     "expected_skills": ["cs2-player-model-porting", "cs2-server-npc-runtime"],
-    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime"]
+    "not_expected_skills": ["cs2-animgraph2-authoring", "cs2-ag2-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-wields-custom-item",
     "prompt": "Make this server-controlled AG2 NPC carry a custom Workshop item whose third-person model and graph animate with the NPC; there is no owner-view first-person presentation.",
     "expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "player-missing-first-person-mesh",
     "prompt": "Every stock weapon animation is correct, but my custom character has no first-person sleeves or arm body geometry.",
     "expected_skills": ["cs2-player-model-porting"],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "npc-aseq-without-ag2",
     "prompt": "Build a complete CS2 monster gameplay runtime whose existing model uses verified baked sequence labels through a named entity input instead of AnimGraph2 parameters.",
     "expected_skills": ["cs2-server-npc-runtime"],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "unsupported-new-npc-graph-authoring",
     "prompt": "Create a completely new non-weapon NPC VNMGraph and VNMClip state machine from scratch, without an existing compiled graph contract.",
     "expected_skills": [],
-    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "weapon-charge-without-spinup",
     "prompt": "My custom M249 proxy has an attack delay and InReload set, but its private first-person spin-up clip never starts. Diagnose the animation trigger and phase timestamp without changing the gameplay delay.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "weapon-body-anchor-when-active",
     "prompt": "My custom unified weapon stays at the same body anchor when active and when holstered. Compare its compiled model and secondary animation with the stock proxy before adding a server attachment offset.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "weapon-muzzle-after-reframing",
     "prompt": "After lowering our first-person custom weapon, its muzzle flash remains above the barrel although the ModelDoc attachment moved. World VIP tracers also look different from the viewmodel flash. Diagnose the two origins.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "agent-cosmetic-overwrites-private-roots",
     "prompt": "Our already validated agent has a graph-only variant for a custom weapon. The pose works until the inventory applies the selected cosmetic model, then stock poses return. Fix selection while preserving the mesh and cosmetic identity.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "weapon-loop-audio-and-rotor-snap",
     "prompt": "Use my four authorized spin-up, motor-loop, slowdown and shot WAVs for a Workshop weapon. Stop duplicate playback and inspect the rotor snapping back to idle after slowdown.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   },
   {
     "id": "custom-grip-thumb-diagnostic",
     "prompt": "The original player skinning and all stock grips look correct, but the thumb stretches with our custom two-handle weapon animation. Inspect the final pose and helper transforms before deciding to change the mesh.",
     "expected_skills": ["cs2-animgraph2-authoring"],
-    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime"]
+    "not_expected_skills": ["cs2-player-model-porting", "cs2-ag2-npc-runtime", "cs2-server-npc-runtime", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-authoring-layered-impact",
+    "prompt": "Create a native CS2 VPCF impact effect with a short bright core, outward sparks and a fading haze. The target class contracts and owned materials are supplied; choose and revise the layered composition.",
+    "expected_skills": ["source2-particle-authoring"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-authoring-loop-revision",
+    "prompt": "Revise this authored native CS2 ambient effect so its three supplied layers read as a quiet magical loop instead of a burst. Keep the supplied field contracts and material assets.",
+    "expected_skills": ["source2-particle-authoring"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-authoring-art-direction",
+    "prompt": "Turn this approved art brief into a native CS2 particle effect: a narrow blue ribbon with intermittent motes and a soft end fade. Use the supplied schema and materials, and propose an editable VPCF composition.",
+    "expected_skills": ["source2-particle-authoring"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-schema-inherited-field",
+    "prompt": "Look up C_OP_RenderSprites in the bundled particle schema and report the declaring class, exact type and inherited status of m_nSequenceOverride, together with snapshot provenance.",
+    "expected_skills": ["source2-particle-schema"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-schema-provider-types",
+    "prompt": "Query the reflected CParticleFloatInput and CParticleVecInput records, including their declared dependencies and defaults. Separate known metadata from opaque types without inferring runtime formulas.",
+    "expected_skills": ["source2-particle-schema"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-schema-serialization-metadata",
+    "prompt": "Inspect the particle schema for a proposed VPCF property and its enum choices. Explain which reflected metadata marks it internal or not saved, and why a reflected default alone does not establish an editable key.",
+    "expected_skills": ["source2-particle-schema"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-behavior-emission-time",
+    "prompt": "Explain how emission start time, finite duration and particle lifetime interact in a native Source 2 effect using the supplied typed contracts. Distinguish documented behavior from unmeasured engine formulas.",
+    "expected_skills": ["source2-particle-behavior"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-behavior-motion-lifetime",
+    "prompt": "Diagnose the conceptual interaction of initial velocity, movement operators, forces, radius interpolation and fade-and-kill in this particle stack. The field types are already known; identify ordering and lifetime hypotheses to test.",
+    "expected_skills": ["source2-particle-behavior"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-behavior-renderer-child",
+    "prompt": "Explain how child-system lifetime and renderer choices can change the visible duration of a native particle effect after parent emission stops. Use existing documented evidence and label unknown behavior.",
+    "expected_skills": ["source2-particle-behavior"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-cp-endpoint-contract",
+    "prompt": "For a CS2 endpoint beam, inspect the typed control-point contract for its start/end positions and attachment orientation. Specify the CP binding requirements and a native verification pattern.",
+    "expected_skills": ["source2-particle-control-points"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-cp-distance-scalar",
+    "prompt": "Look up C_OP_DistanceBetweenCPsToCP and verify its output CP field type. Diagnose a graph that treats its scalar distance output as a world-space position.",
+    "expected_skills": ["source2-particle-control-points"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-cp-child-attachment",
+    "prompt": "Audit the control-point mapping from a CS2 parent particle system to its child. The child beam follows the wrong attachment when the parent rotates; inspect inherited position/orientation and child bindings.",
+    "expected_skills": ["source2-particle-control-points"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-materials-flipbook-source",
+    "prompt": "Create an original eight-frame particle flipbook texture source with VTEX and MKS setup, and explain its material binding for a native CS2 particle. Use generated artwork without extracting a game texture.",
+    "expected_skills": ["source2-particle-materials"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-materials-trail-uv",
+    "prompt": "Diagnose a stretching particle trail texture and choose the owned source texture, wrapping and material settings for a smooth native Source 2 trail. The VPCF behavior is already supplied.",
+    "expected_skills": ["source2-particle-materials"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-materials-binding-closure",
+    "prompt": "Audit the texture, VTEX and VMAT resource paths used by this native particle sprite renderer, and produce an ordered source dependency closure for the appearance assets.",
+    "expected_skills": ["source2-particle-materials"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-validation-property-readback",
+    "prompt": "This native CS2 VPCF compiles, but a requested property is absent from compiled readback. Build a validation report that separates compiler acceptance, retained properties and untested visual behavior.",
+    "expected_skills": ["source2-particle-validation"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-validation-official-visual",
+    "prompt": "Evaluate the acceptance evidence for this authored CS2 particle: compiler output, official Particle Editor screenshots and a game capture disagree. Record exact tools/builds and identify the missing validation layer.",
+    "expected_skills": ["source2-particle-validation"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-validation-clean-dependencies",
+    "prompt": "Verify that this authored VPCF and its child systems, materials and textures have a complete compiled dependency closure. Do not treat a successful parent compile as proof that a clean client can render it.",
+    "expected_skills": ["source2-particle-validation"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-reference-bounded-inventory",
+    "prompt": "Inventory particle resources in my local CS2 VPK without extracting the full archive. Bound the results by extension, prefix and count, then select a few entries for inspection with recorded provenance.",
+    "expected_skills": ["source2-particle-reference-research"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation"]
+  },
+  {
+    "id": "particle-reference-game-comparison",
+    "prompt": "Compare occurrences of a renderer class in local CS2 and Deadlock particle observations. Keep the two game/build datasets separate and use bounded queries rather than assuming the formats are interchangeable.",
+    "expected_skills": ["source2-particle-reference-research"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation"]
+  },
+  {
+    "id": "particle-reference-targeted-inspection",
+    "prompt": "Inspect one user-selected VPCF entry from a local VPK with the installed VRF CLI. Preserve the resource identity and external references, capture tool provenance, and keep extraction targeted.",
+    "expected_skills": ["source2-particle-reference-research"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation"]
+  },
+  {
+    "id": "particle-combined-authoring-schema-behavior",
+    "prompt": "Create a layered native CS2 energy pulse from this brief, discover its exact provider and renderer fields in the bundled schema, and explain which motion and lifetime choices are supported by behavior evidence.",
+    "expected_skills": ["source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-combined-beam-acceptance",
+    "prompt": "Author a native CS2 beam from a moving muzzle attachment to a target CP, verify the typed endpoint and child bindings, then plan compiler/readback and official-tool visual acceptance.",
+    "expected_skills": ["source2-particle-authoring", "source2-particle-control-points", "source2-particle-validation"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-schema", "source2-particle-behavior", "source2-particle-materials", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-combined-texture-acceptance",
+    "prompt": "Generate an original particle flipbook with VTEX/MKS/VMAT sources, then verify native compilation, compiled texture bindings and visual playback for the appearance assets.",
+    "expected_skills": ["source2-particle-materials", "source2-particle-validation"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-reference-research"]
+  },
+  {
+    "id": "particle-combined-reference-schema",
+    "prompt": "Inspect a few local CS2 VPK particles using a specific operator, then compare their fields with the provenance-pinned schema. Distinguish observed serialized values from reflected types/defaults.",
+    "expected_skills": ["source2-particle-reference-research", "source2-particle-schema"],
+    "not_expected_skills": ["cs2-server-npc-runtime", "cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-authoring", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation"]
+  },
+  {
+    "id": "particle-combined-npc-effect",
+    "prompt": "Design a server-authoritative monster death transition with safe cleanup, and author an original native CS2 particle burst for its presentation using the supplied field contracts and material assets.",
+    "expected_skills": ["cs2-server-npc-runtime", "source2-particle-authoring"],
+    "not_expected_skills": ["cs2-ag2-npc-runtime", "cs2-animgraph2-authoring", "cs2-player-model-porting", "source2-particle-schema", "source2-particle-behavior", "source2-particle-control-points", "source2-particle-materials", "source2-particle-validation", "source2-particle-reference-research"]
   }
 ]

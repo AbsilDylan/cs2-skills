@@ -1,0 +1,631 @@
+{
+  "declaration": {
+    "alignment": 4,
+    "flags": [
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_bDotCPAngles": true,
+          "m_bDotCameraAngles": false,
+          "m_bRightEye": false,
+          "m_flAlphaScaleMax": 1.0,
+          "m_flAlphaScaleMin": 0.0,
+          "m_flCameraBias": 0.0,
+          "m_flDistanceInputMax": 0.0,
+          "m_flDistanceInputMin": 0.0,
+          "m_flDotInputMax": 0.0,
+          "m_flDotInputMin": 0.0,
+          "m_flInputMax": 1.0,
+          "m_flInputMin": 0.0,
+          "m_flInputPixelVisFade": 0.25,
+          "m_flNoPixelVisibilityFallback": 1.0,
+          "m_flProxyRadius": 1.0,
+          "m_flRadiusScaleFOVBase": 0.0,
+          "m_flRadiusScaleMax": 1.0,
+          "m_flRadiusScaleMin": 1.0,
+          "m_nCPin": -1
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "CParticleVisibilityInputs",
+    "size": 72
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_bDotCPAngles": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_bDotCameraAngles": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_bRightEye": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flAlphaScaleMax": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flAlphaScaleMin": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flCameraBias": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flDistanceInputMax": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flDistanceInputMin": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flDotInputMax": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flDotInputMin": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flInputMax": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flInputMin": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flInputPixelVisFade": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flNoPixelVisibilityFallback": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flProxyRadius": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flRadiusScaleFOVBase": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flRadiusScaleMax": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_flRadiusScaleMin": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "m_nCPin": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_bDotCPAngles": true,
+      "m_bDotCameraAngles": false,
+      "m_bRightEye": false,
+      "m_flAlphaScaleMax": 1.0,
+      "m_flAlphaScaleMin": 0.0,
+      "m_flCameraBias": 0.0,
+      "m_flDistanceInputMax": 0.0,
+      "m_flDistanceInputMin": 0.0,
+      "m_flDotInputMax": 0.0,
+      "m_flDotInputMin": 0.0,
+      "m_flInputMax": 1.0,
+      "m_flInputMin": 0.0,
+      "m_flInputPixelVisFade": 0.25,
+      "m_flNoPixelVisibilityFallback": 1.0,
+      "m_flProxyRadius": 1.0,
+      "m_flRadiusScaleFOVBase": 0.0,
+      "m_flRadiusScaleMax": 1.0,
+      "m_flRadiusScaleMin": 1.0,
+      "m_nCPin": -1
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"camera depth bias\""
+          }
+        ],
+        "name": "m_flCameraBias",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input control point number\""
+          }
+        ],
+        "name": "m_nCPin",
+        "offset": 4,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input proxy radius\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flProxyRadius",
+        "offset": 8,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input proxy pixel visibility minimum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flInputMin",
+        "offset": 12,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input proxy pixel visibility maximum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flInputMax",
+        "offset": 16,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input proxy pixel visibility fade out time\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flInputPixelVisFade",
+        "offset": 20,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input proxy unsupported hardware fallback value\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flNoPixelVisibilityFallback",
+        "offset": 24,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input distance minimum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flDistanceInputMin",
+        "offset": 28,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input distance maximum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flDistanceInputMax",
+        "offset": 32,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input dot minimum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flDotInputMin",
+        "offset": 36,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input dot maximum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flDotInputMax",
+        "offset": 40,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input dot use CP angles\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_bDotCPAngles",
+        "offset": 44,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input dot use Camera angles\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_bDotCameraAngles",
+        "offset": 45,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"output alpha scale minimum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flAlphaScaleMin",
+        "offset": 48,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"output alpha scale maximum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flAlphaScaleMax",
+        "offset": 52,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"output radius scale minimum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flRadiusScaleMin",
+        "offset": 56,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"output radius scale maximum\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flRadiusScaleMax",
+        "offset": 60,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"output radius FOV scale base\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nCPin == -1\""
+          }
+        ],
+        "name": "m_flRadiusScaleFOVBase",
+        "offset": 64,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleVisibilityInputs"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"vr camera right eye\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          }
+        ],
+        "name": "m_bRightEye",
+        "offset": 68,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "CParticleVisibilityInputs"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "06c6a2f0f494745c96ce5f22cb0374f4aee7ba75019e99c4725f1906dded7f55",
+    "json_pointer": "/classes/1724",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

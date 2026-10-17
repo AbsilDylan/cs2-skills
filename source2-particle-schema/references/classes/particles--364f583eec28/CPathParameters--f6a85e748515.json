@@ -1,0 +1,345 @@
+{
+  "declaration": {
+    "alignment": 16,
+    "flags": [
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_flBulge": 0.0,
+          "m_flMidPoint": 0.5,
+          "m_nBulgeControl": 0,
+          "m_nEndControlPointNumber": 0,
+          "m_nMidControlPointNumber": -1,
+          "m_nStartControlPointNumber": 0,
+          "m_vEndOffset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "m_vMidPointOffset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "m_vStartPointOffset": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "CPathParameters",
+    "size": 64
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "CPathParameters"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_flBulge": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "m_flMidPoint": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "m_nBulgeControl": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "m_nEndControlPointNumber": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "m_nMidControlPointNumber": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "m_nStartControlPointNumber": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "m_vEndOffset": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "m_vMidPointOffset": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "m_vStartPointOffset": {
+        "module": "particles",
+        "name": "CPathParameters"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_flBulge": 0.0,
+      "m_flMidPoint": 0.5,
+      "m_nBulgeControl": 0,
+      "m_nEndControlPointNumber": 0,
+      "m_nMidControlPointNumber": -1,
+      "m_nStartControlPointNumber": 0,
+      "m_vEndOffset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "m_vMidPointOffset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "m_vStartPointOffset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"start control point number\""
+          }
+        ],
+        "name": "m_nStartControlPointNumber",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"mid control point number\""
+          }
+        ],
+        "name": "m_nMidControlPointNumber",
+        "offset": 4,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"end control point number\""
+          }
+        ],
+        "name": "m_nEndControlPointNumber",
+        "offset": 8,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"bulge control 0=random 1=orientation of start pnt 2=orientation of end point\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nMidControlPointNumber != -1\""
+          }
+        ],
+        "name": "m_nBulgeControl",
+        "offset": 12,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"random bulge\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nMidControlPointNumber != -1\""
+          }
+        ],
+        "name": "m_flBulge",
+        "offset": 16,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"mid point position\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nMidControlPointNumber != -1\""
+          }
+        ],
+        "name": "m_flMidPoint",
+        "offset": 20,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Offset from curve start point for path start\""
+          },
+          {
+            "name": "MVectorIsCoordinate"
+          }
+        ],
+        "name": "m_vStartPointOffset",
+        "offset": 24,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Offset from curve midpoint for curve center\""
+          },
+          {
+            "name": "MVectorIsCoordinate"
+          }
+        ],
+        "name": "m_vMidPointOffset",
+        "offset": 36,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CPathParameters"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Offset from control point for path end\""
+          },
+          {
+            "name": "MVectorIsCoordinate"
+          }
+        ],
+        "name": "m_vEndOffset",
+        "offset": 48,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "CPathParameters"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "b7582866b9c9c8d0815dbd0563d9245fb77ea0e82fec41911c9dbd505f287a51",
+    "json_pointer": "/classes/1725",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

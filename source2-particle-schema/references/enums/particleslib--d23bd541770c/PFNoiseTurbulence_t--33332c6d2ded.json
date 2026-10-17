@@ -1,0 +1,45 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PF_NOISE_TURB_NONE",
+        "value": 0
+      },
+      {
+        "name": "PF_NOISE_TURB_HIGHLIGHT",
+        "value": 1
+      },
+      {
+        "name": "PF_NOISE_TURB_FEEDBACK",
+        "value": 2
+      },
+      {
+        "name": "PF_NOISE_TURB_LOOPY",
+        "value": 3
+      },
+      {
+        "name": "PF_NOISE_TURB_CONTRAST",
+        "value": 4
+      },
+      {
+        "name": "PF_NOISE_TURB_ALTERNATE",
+        "value": 5
+      }
+    ],
+    "module": "particleslib",
+    "name": "PFNoiseTurbulence_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "PFNoiseTurbulence_t"
+  },
+  "source": {
+    "canonical_record_sha256": "35939156ace0a8a08e649864b15357b4f3fafc6ff92bab426827697c680ad51b",
+    "json_pointer": "/enums/460",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

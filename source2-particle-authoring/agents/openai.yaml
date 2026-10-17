@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source 2 Particle Authoring"
+  short_description: "Create native CS2 particle effects from prompts"
+  default_prompt: "Use $source2-particle-authoring to author this effect as editable native CS2 sources, with its CP contract, dependencies and validation results."

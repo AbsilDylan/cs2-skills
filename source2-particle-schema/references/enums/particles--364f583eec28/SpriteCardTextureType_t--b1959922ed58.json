@@ -1,0 +1,141 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Diffuse Texture\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_DIFFUSE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Diffuse Infinite Zoom\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_ZOOM",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"1D Luminance to Color Lookup\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_1D_COLOR_LOOKUP",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"UV Distortion\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_UVDISTORTION",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"UV Distortion Infinite Zoom\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_UVDISTORTION_ZOOM",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Normal Map\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_NORMALMAP",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Animation Smoothing Motion Vector\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_ANIMMOTIONVEC",
+        "value": 6
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Spherical Harmonics A\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_A",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Spherical Harmonics B\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_B",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Spherical Harmonics C\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_C",
+        "value": 9
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Depth Filter Map\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_DEPTH",
+        "value": 10
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Illumination Gradient\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_ILLUMINATION_GRADIENT",
+        "value": 11
+      }
+    ],
+    "module": "particles",
+    "name": "SpriteCardTextureType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "SpriteCardTextureType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "91421d6fe0a0e550c4cdbbd17f715862b1ecd7413a71eff3805a1042d69b0f4b",
+    "json_pointer": "/enums/452",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

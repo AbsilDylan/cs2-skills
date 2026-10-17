@@ -1,0 +1,55 @@
+{
+  "declaration": {
+    "flags": [
+      "trivial_constructor",
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MResourceTypeForInfoType",
+        "value": "\"vmat\""
+      }
+    ],
+    "module": "resourcesystem",
+    "name": "InfoForResourceTypeIMaterial2",
+    "size": 1
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "resourcesystem",
+        "name": "InfoForResourceTypeIMaterial2"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "resourcesystem",
+          "name": "InfoForResourceTypeIMaterial2"
+        },
+        "code": "defaults-absent"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "resourcesystem",
+    "name": "InfoForResourceTypeIMaterial2"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "declared-type-or-parent-dependency",
+  "source": {
+    "canonical_record_sha256": "9bb78b9ba6db599e3aef3f9dbff4be28db9130167a9a4a781f058c9b461fd23e",
+    "json_pointer": "/classes/2467",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

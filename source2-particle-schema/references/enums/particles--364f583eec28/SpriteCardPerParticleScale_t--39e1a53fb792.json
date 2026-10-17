@@ -1,0 +1,161 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"None\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_NONE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Animation Time\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_AGE",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Animation Frame\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_ANIMATION_FRAME",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Shader Extra Data 1\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA1",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Shader Extra Data 2\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA2",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Alpha\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_ALPHA",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Radius\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_SHADER_RADIUS",
+        "value": 6
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Roll\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_ROLL",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Yaw\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_YAW",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Pitch\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_PITCH",
+        "value": 9
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Random 0 - 1 Value\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_RANDOM",
+        "value": 10
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Random -1 - 1 Value\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM",
+        "value": 11
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Random 0 - 1 x Time\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_RANDOM_TIME",
+        "value": 12
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Random -1 - 1 x Time\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM_TIME",
+        "value": 13
+      }
+    ],
+    "module": "particles",
+    "name": "SpriteCardPerParticleScale_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "SpriteCardPerParticleScale_t"
+  },
+  "source": {
+    "canonical_record_sha256": "d976c622e1156e95c731ba34f39b26b21d9266b538721f1094fed497c2627d4c",
+    "json_pointer": "/enums/449",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

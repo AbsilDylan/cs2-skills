@@ -1,0 +1,116 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_flRelativeProbabilityOfSpawn": 1.0,
+          "m_model": ""
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "ModelReference_t",
+    "size": 16
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "ModelReference_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_flRelativeProbabilityOfSpawn": {
+        "module": "particles",
+        "name": "ModelReference_t"
+      },
+      "m_model": {
+        "module": "particles",
+        "name": "ModelReference_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_flRelativeProbabilityOfSpawn": 1.0,
+      "m_model": ""
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ModelReference_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"model\""
+          }
+        ],
+        "name": "m_model",
+        "offset": 0,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "resourcesystem",
+            "name": "InfoForResourceTypeCModel"
+          },
+          "name": "CStrongHandle",
+          "size": 8
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ModelReference_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Relative probability\""
+          }
+        ],
+        "name": "m_flRelativeProbabilityOfSpawn",
+        "offset": 8,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ModelReference_t"
+  },
+  "inheritance": [],
+  "references": [
+    {
+      "kind": "classes",
+      "module": "resourcesystem",
+      "name": "InfoForResourceTypeCModel",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "cbd75a3eb472f228f5176c60597f9033a91e9e737c80ca49e45ffcb4e4b0b08d",
+    "json_pointer": "/classes/2131",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

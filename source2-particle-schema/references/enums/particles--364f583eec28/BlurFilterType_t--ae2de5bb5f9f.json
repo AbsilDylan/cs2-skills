@@ -1,0 +1,41 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Gaussian\""
+          }
+        ],
+        "name": "BLURFILTER_GAUSSIAN",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Box\""
+          }
+        ],
+        "name": "BLURFILTER_BOX",
+        "value": 1
+      }
+    ],
+    "module": "particles",
+    "name": "BlurFilterType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "BlurFilterType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "fbf1b9cd604298e9cd3104c24673bf5154a0c35342e72770cdcbde3672cfdddb",
+    "json_pointer": "/enums/385",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

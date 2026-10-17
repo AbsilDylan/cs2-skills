@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Don't Set\""
+          }
+        ],
+        "name": "PARTICLE_ROTATION_LOCK_NONE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set Rotations\""
+          }
+        ],
+        "name": "PARTICLE_ROTATION_LOCK_ROTATIONS",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set Normal\""
+          }
+        ],
+        "name": "PARTICLE_ROTATION_LOCK_NORMAL",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleRotationLockType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleRotationLockType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "8ccb7a0815872a4c74d89991f59f0f62d7d08ea4b0ab19849dad20ebd8f89648",
+    "json_pointer": "/enums/432",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

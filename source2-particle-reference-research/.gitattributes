@@ -1,0 +1,2 @@
+# Preserve source, catalogue and evidence bytes after standalone installation.
+* -text whitespace=trailing-space,space-before-tab,cr-at-eol

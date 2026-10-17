@@ -1,0 +1,41 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Default\""
+          }
+        ],
+        "name": "SPRITECARD_SHADER_BASE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Custom\""
+          }
+        ],
+        "name": "SPRITECARD_SHADER_CUSTOM",
+        "value": 1
+      }
+    ],
+    "module": "particles",
+    "name": "SpriteCardShaderType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "SpriteCardShaderType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "2200e224baabeec6398ada16c828cd969d9c3d26906c4b8328943d7ab6aea434",
+    "json_pointer": "/enums/450",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

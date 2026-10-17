@@ -1,0 +1,37 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PF_RANDOM_MODE_INVALID",
+        "value": -1
+      },
+      {
+        "name": "PF_RANDOM_MODE_CONSTANT",
+        "value": 0
+      },
+      {
+        "name": "PF_RANDOM_MODE_VARYING",
+        "value": 1
+      },
+      {
+        "name": "PF_RANDOM_MODE_COUNT",
+        "value": 2
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleFloatRandomMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleFloatRandomMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "57bd8455f3a6983ab487e967811064d54696768de6c49ba8ddbe9bee5f21af4c",
+    "json_pointer": "/enums/468",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

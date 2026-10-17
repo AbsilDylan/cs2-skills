@@ -1,0 +1,108 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_variableName": "",
+          "m_variableType": "PVAL_VOID"
+        }
+      },
+      {
+        "name": "MPropertyCustomEditor",
+        "value": "\"ParticleVariableRef()\""
+      }
+    ],
+    "module": "particleslib",
+    "name": "CParticleVariableRef",
+    "size": 80
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "CParticleVariableRef"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_variableName": {
+        "module": "particleslib",
+        "name": "CParticleVariableRef"
+      },
+      "m_variableType": {
+        "module": "particleslib",
+        "name": "CParticleVariableRef"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_variableName": "",
+      "m_variableType": "PVAL_VOID"
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleVariableRef"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MFgdFromSchemaCompletelySkipField"
+          }
+        ],
+        "name": "m_variableName",
+        "offset": 0,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CKV3MemberNameWithStorage",
+          "size": 56
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleVariableRef"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MFgdFromSchemaCompletelySkipField"
+          }
+        ],
+        "name": "m_variableType",
+        "offset": 56,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CPulseValueFullType",
+          "size": 24
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "CParticleVariableRef"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "74f77c9732caff8dfe0c0770b3e85c3a7f98ccf055a583f529ebff96a1859bc4",
+    "json_pointer": "/classes/2157",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

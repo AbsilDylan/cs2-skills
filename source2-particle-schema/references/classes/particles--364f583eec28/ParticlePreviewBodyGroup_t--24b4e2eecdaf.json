@@ -1,0 +1,92 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_bodyGroupName": "",
+          "m_nValue": 0
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "ParticlePreviewBodyGroup_t",
+    "size": 16
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "ParticlePreviewBodyGroup_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_bodyGroupName": {
+        "module": "particles",
+        "name": "ParticlePreviewBodyGroup_t"
+      },
+      "m_nValue": {
+        "module": "particles",
+        "name": "ParticlePreviewBodyGroup_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_bodyGroupName": "",
+      "m_nValue": 0
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ParticlePreviewBodyGroup_t"
+      },
+      "field": {
+        "name": "m_bodyGroupName",
+        "offset": 0,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ParticlePreviewBodyGroup_t"
+      },
+      "field": {
+        "name": "m_nValue",
+        "offset": 8,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticlePreviewBodyGroup_t"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "2f7e385f8205eea49d16a44f8eee9e0e0dbfb36c8db5fcd9b6251b9454b66032",
+    "json_pointer": "/classes/2135",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

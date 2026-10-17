@@ -1,0 +1,93 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf63:version{a6e6a69e-52d3-4527-8b9c-ff3bb91aca3e} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nBehaviorVersion = 12
+	m_nMaxParticles = 24
+	m_flConstantLifespan = 2.0
+	m_flConstantRadius = 1.8
+	m_ConstantColor = [ 35, 220, 255 ]
+	m_BoundingBoxMin = [ -512, -512, -512 ]
+	m_BoundingBoxMax = [ 512, 512, 512 ]
+	m_Emitters = [
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 24
+			}
+			m_flStartTime = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0
+			}
+		},
+	]
+	m_Initializers = [
+		{
+			_class = "C_INIT_CreateSequentialPath"
+			m_flNumToAssign = 24
+			m_bLoop = false
+			m_PathParams = {
+				m_nStartControlPointNumber = 0
+				m_nEndControlPointNumber = 1
+				m_flBulge = 0
+				m_vStartPointOffset = [ 0, 0, 0 ]
+				m_vEndOffset = [ 0, 0, 0 ]
+			}
+		},
+	]
+	m_Operators = [
+		{
+			_class = "C_OP_MaintainSequentialPath"
+			m_bUseParticleCount = true
+			m_flNumToAssign = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 24
+			}
+			m_flCohesionStrength = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1
+			}
+			m_flTolerance = 0
+			m_bLoop = false
+			m_PathParams = {
+				m_nStartControlPointNumber = 0
+				m_nEndControlPointNumber = 1
+				m_flBulge = 0
+				m_vStartPointOffset = [ 0, 0, 0 ]
+				m_vEndOffset = [ 0, 0, 0 ]
+			}
+		},
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 1.0
+		},
+		{
+			_class = "C_OP_Decay"
+			m_bRopeDecay = true
+			m_bForcePreserveParticleOrder = true
+		},
+	]
+	m_Renderers = [
+		{
+			_class = "C_OP_RenderRopes"
+			m_vecTexturesInput = [
+				{
+					m_bEnabled = true
+					m_hTexture = resource:"materials/skill_eval/cyan_tether/beam.vtex"
+					m_nTextureType = "SPRITECARD_TEXTURE_DIFFUSE"
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+			m_flOverbrightFactor = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.5
+			}
+			m_bDisableZBuffering = false
+			m_bClosedLoop = false
+			m_bClampV = true
+			m_nMinTesselation = 1
+			m_nMaxTesselation = 8
+		},
+	]
+}

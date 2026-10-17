@@ -1,0 +1,121 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Uninitialized\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_UNINITIALIZED",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_ADD",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Subtract\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_SUBTRACT",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Multiply\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_MUL",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Divide\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_DIVIDE",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Input 1\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_INPUT_1",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Min\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_MIN",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Max\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_MAX",
+        "value": 6
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Cross Product\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_CROSSPRODUCT",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Lerp\""
+          }
+        ],
+        "name": "VECTOR_EXPRESSION_LERP",
+        "value": 8
+      }
+    ],
+    "module": "particles",
+    "name": "VectorExpressionType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "VectorExpressionType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "0b0f04611aaa1b0aefca87b286849dd6357336bfd3ec54f807a2566f85bc2212",
+    "json_pointer": "/enums/455",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

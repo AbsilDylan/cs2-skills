@@ -1,0 +1,80 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf63:version{a6e6a69e-52d3-4527-8b9c-ff3bb91aca3e} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nBehaviorVersion = 12
+	m_nMaxParticles = 1
+	m_flConstantLifespan = 2.0
+	m_flConstantRadius = 48
+	m_ConstantColor = [ 35, 220, 255 ]
+	m_BoundingBoxMin = [ -512, -512, -512 ]
+	m_BoundingBoxMax = [ 512, 512, 512 ]
+	m_Emitters = [
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1
+			}
+			m_flStartTime = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0
+			}
+		},
+	]
+	m_ConstantNormal = [ 0, 0, 1 ]
+	m_Initializers = [
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_TransformInput = {
+				m_nType = "PT_TYPE_CONTROL_POINT"
+				m_nControlPoint = 0
+				m_bUseOrientation = false
+			}
+			m_fRadiusMin = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0
+			}
+			m_fRadiusMax = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0
+			}
+			m_fSpeedMin = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0
+			}
+			m_fSpeedMax = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0
+			}
+		},
+	]
+	m_Operators = [
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 1.0
+		},
+		{
+			_class = "C_OP_Decay"
+		},
+	]
+	m_Renderers = [
+		{
+			_class = "C_OP_RenderSprites"
+			m_vecTexturesInput = [
+				{
+					m_bEnabled = true
+					m_hTexture = resource:"materials/skill_eval/cyan_tether/ring.vtex"
+					m_nTextureType = "SPRITECARD_TEXTURE_DIFFUSE"
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+			m_flOverbrightFactor = {
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.5
+			}
+			m_bDisableZBuffering = false
+			m_nOrientationType = "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+		},
+	]
+}

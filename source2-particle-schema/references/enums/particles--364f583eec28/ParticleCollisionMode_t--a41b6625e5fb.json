@@ -1,0 +1,71 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Per-Particle Trace\""
+          }
+        ],
+        "name": "COLLISION_MODE_PER_PARTICLE_TRACE",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Trace Caching\""
+          }
+        ],
+        "name": "COLLISION_MODE_USE_NEAREST_TRACE",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Per-Frame Planeset\""
+          }
+        ],
+        "name": "COLLISION_MODE_PER_FRAME_PLANESET",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Initial Trace Down\""
+          }
+        ],
+        "name": "COLLISION_MODE_INITIAL_TRACE_DOWN",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Collision Disabled\""
+          }
+        ],
+        "name": "COLLISION_MODE_DISABLED",
+        "value": -1
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleCollisionMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleCollisionMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "a84189d021be43ebe9a38ffe40f852080ff3dfa5b98c7a7b612c7182703419a0",
+    "json_pointer": "/enums/400",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

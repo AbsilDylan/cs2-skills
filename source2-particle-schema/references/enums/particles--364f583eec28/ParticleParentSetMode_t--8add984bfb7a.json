@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set Self and Children\""
+          }
+        ],
+        "name": "PARTICLE_SET_PARENT_NO",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set Immediate Parent, Self, and Children\""
+          }
+        ],
+        "name": "PARTICLE_SET_PARENT_IMMEDIATE",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set Root of Particle System Downward\""
+          }
+        ],
+        "name": "PARTICLE_SET_PARENT_ROOT",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleParentSetMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleParentSetMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "a61d8a175c9a5c62d29543a4d0aec11bcf3418d60041c847bbcd7a0b914c1403",
+    "json_pointer": "/enums/429",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

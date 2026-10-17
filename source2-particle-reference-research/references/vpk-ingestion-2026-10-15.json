@@ -1,0 +1,90 @@
+{
+  "format": "source2-vpk-ingestion-evidence",
+  "version": 1,
+  "date": "2026-10-15",
+  "scope": "Directory inventory and one CRC-checked extraction per game; no native visual or property-behavior assertion",
+  "payloadsIncluded": false,
+  "games": [
+    {
+      "game": "Counter-Strike 2",
+      "steamAppId": 730,
+      "observedInstalledBuildId": "25640462",
+      "steamManifest": "appmanifest_730.acf",
+      "archive": {
+        "directoryFile": "pak01_dir.vpk",
+        "version": 2,
+        "directoryFileBytes": 7698168,
+        "directoryIndexBytes": 6267162,
+        "directoryIndexSha256": "0211aadcf8875d4fb9d548aaf2556a30590687a9dcda76e7c0a75292c9d3c0d7",
+        "hashScope": "header and directory tree; excludes payload and checksum/signature sections",
+        "entryCount": 137440,
+        "signatureVerified": false
+      },
+      "extensionCounts": { "vpcf_c": 2622, "vmat_c": 22008, "vtex_c": 71714 },
+      "sample": {
+        "path": "particles/ambient/ambient_water_stream.vpcf_c",
+        "crc32": "4d4a5a32",
+        "archiveIndex": 187,
+        "offset": 52132144,
+        "archiveBytes": 4016,
+        "preloadBytes": 0,
+        "totalBytes": 4016,
+        "sha256": "ccdf38955316e83c9a48ec6f23b821b75485d07c9a486a7aa74b4f0f6e0b835b",
+        "crc32Verified": true,
+        "vrfInspection": {
+          "resourceType": "Particle",
+          "resourceVersion": 1,
+          "resourceHeaderVersion": 12,
+          "dataFormat": "vpcf54",
+          "externalReferenceCount": 6,
+          "externalReferenceKinds": { "texture": 1, "particle": 5 },
+          "rendererClasses": [ "C_OP_RenderTrails" ]
+        }
+      }
+    },
+    {
+      "game": "Deadlock",
+      "steamAppId": 1422450,
+      "observedInstalledBuildId": "25660886",
+      "steamManifest": "appmanifest_1422450.acf",
+      "archive": {
+        "directoryFile": "pak01_dir.vpk",
+        "version": 2,
+        "directoryFileBytes": 7426877,
+        "directoryIndexBytes": 6508635,
+        "directoryIndexSha256": "a205cd25bd124bf810a501d2bc5663a7246a7547f1a445bc07d6e6d3b5769d2d",
+        "hashScope": "header and directory tree; excludes payload and checksum/signature sections",
+        "entryCount": 137966,
+        "signatureVerified": false
+      },
+      "extensionCounts": { "vpcf_c": 16310, "vmat_c": 4412, "vtex_c": 14191 },
+      "sample": {
+        "path": "materials/dev/steam_test.vpcf_c",
+        "crc32": "b0abd3e3",
+        "archiveIndex": 173,
+        "offset": 58040288,
+        "archiveBytes": 3207,
+        "preloadBytes": 0,
+        "totalBytes": 3207,
+        "sha256": "dcb4fbda9f6708c0913c1052c7a6826e01ec616028b2abd3b5637186f647227e",
+        "crc32Verified": true,
+        "vrfInspection": {
+          "resourceType": "Particle",
+          "resourceVersion": 1,
+          "resourceHeaderVersion": 12,
+          "dataFormat": "vpcf61",
+          "externalReferenceCount": 1,
+          "externalReferenceKinds": { "texture": 1 },
+          "rendererClasses": [ "C_OP_RenderSprites" ]
+        }
+      }
+    }
+  ],
+  "optionalDecoder": {
+    "name": "ValveResourceFormat / Source2Viewer-CLI",
+    "version": "19.2.0+f86ea981fc37b9f8f23c4eb84e058de2083b6761",
+    "managedAssemblySha256": "a474668e8443f314dfa24a04c2a81902047b82bfc83544aaf4fd1882294dc7f9",
+    "commandsVerified": [ "--help", "--version", "--input SELECTED_EXTRACTED_FILE --block DATA" ],
+    "source": "https://github.com/ValveResourceFormat/ValveResourceFormat"
+  }
+}

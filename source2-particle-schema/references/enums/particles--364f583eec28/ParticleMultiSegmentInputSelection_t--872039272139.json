@@ -1,0 +1,41 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Float Input\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SELECTION_FLOAT",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Text Input\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SELECTION_STRING",
+        "value": 1
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleMultiSegmentInputSelection_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleMultiSegmentInputSelection_t"
+  },
+  "source": {
+    "canonical_record_sha256": "23d6ec3213763695eb68274d91476c91a11f5397dc905e13b04c58d72b799616",
+    "json_pointer": "/enums/421",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

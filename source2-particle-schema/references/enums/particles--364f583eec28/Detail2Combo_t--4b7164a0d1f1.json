@@ -1,0 +1,91 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Uninitialized\""
+          }
+        ],
+        "name": "DETAIL_2_COMBO_UNINITIALIZED",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Off\""
+          }
+        ],
+        "name": "DETAIL_2_COMBO_OFF",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add\""
+          }
+        ],
+        "name": "DETAIL_2_COMBO_ADD",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add + Self Illum\""
+          }
+        ],
+        "name": "DETAIL_2_COMBO_ADD_SELF_ILLUM",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mod2X\""
+          }
+        ],
+        "name": "DETAIL_2_COMBO_MOD2X",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Multiply\""
+          }
+        ],
+        "name": "DETAIL_2_COMBO_MUL",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Crossfade\""
+          }
+        ],
+        "name": "DETAIL_2_COMBO_CROSSFADE",
+        "value": 5
+      }
+    ],
+    "module": "particles",
+    "name": "Detail2Combo_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "Detail2Combo_t"
+  },
+  "source": {
+    "canonical_record_sha256": "cd01174f95629d62850628eaf50651eda0030b442f14ffc82989915fd0f698e8",
+    "json_pointer": "/enums/387",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

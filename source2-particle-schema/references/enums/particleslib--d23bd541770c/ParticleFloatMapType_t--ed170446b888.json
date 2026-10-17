@@ -1,0 +1,69 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PF_MAP_TYPE_INVALID",
+        "value": -1
+      },
+      {
+        "name": "PF_MAP_TYPE_DIRECT",
+        "value": 0
+      },
+      {
+        "name": "PF_MAP_TYPE_MULT",
+        "value": 1
+      },
+      {
+        "name": "PF_MAP_TYPE_REMAP",
+        "value": 2
+      },
+      {
+        "name": "PF_MAP_TYPE_REMAP_BIASED",
+        "value": 3
+      },
+      {
+        "name": "PF_MAP_TYPE_CURVE",
+        "value": 4
+      },
+      {
+        "name": "PF_MAP_TYPE_NOTCHED",
+        "value": 5
+      },
+      {
+        "name": "PF_MAP_TYPE_ROUND",
+        "value": 6
+      },
+      {
+        "name": "PF_MAP_TYPE_MIN",
+        "value": 7
+      },
+      {
+        "name": "PF_MAP_TYPE_MAX",
+        "value": 8
+      },
+      {
+        "name": "PF_MAP_TYPE_MOD",
+        "value": 9
+      },
+      {
+        "name": "PF_MAP_TYPE_COUNT",
+        "value": 10
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleFloatMapType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleFloatMapType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "bf48fc64319649da420e552a513aefe9a3a4e0f61b1b1ede409f97986fd0aed4",
+    "json_pointer": "/enums/467",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

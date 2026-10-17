@@ -1,0 +1,81 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set Value\""
+          }
+        ],
+        "name": "PARTICLE_SET_REPLACE_VALUE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Scale Initial Value\""
+          }
+        ],
+        "name": "PARTICLE_SET_SCALE_INITIAL_VALUE",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add to Initial Value\""
+          }
+        ],
+        "name": "PARTICLE_SET_ADD_TO_INITIAL_VALUE",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Ramp Current Value at Input Rate Per Second\""
+          }
+        ],
+        "name": "PARTICLE_SET_RAMP_CURRENT_VALUE",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Scale Current Value Raw\""
+          }
+        ],
+        "name": "PARTICLE_SET_SCALE_CURRENT_VALUE",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add to Current Value Raw\""
+          }
+        ],
+        "name": "PARTICLE_SET_ADD_TO_CURRENT_VALUE",
+        "value": 5
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleSetMethod_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleSetMethod_t"
+  },
+  "source": {
+    "canonical_record_sha256": "42738a88d7c6ce305d98e8c75601354069cdcc2a545a9431586c79b7e21a8d80",
+    "json_pointer": "/enums/472",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

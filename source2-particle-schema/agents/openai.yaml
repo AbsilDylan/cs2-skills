@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source 2 Particle Schema"
+  short_description: "Native particle properties, defaults and enums"
+  default_prompt: "Use $source2-particle-schema to look up the exact native particle properties and their snapshot provenance."

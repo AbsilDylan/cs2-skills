@@ -1,0 +1,989 @@
+{
+  "format": "source2-control-point-vocabulary/1",
+  "game": "deadlock",
+  "scope": "All compiled particle entries in the explicitly selected pak01_dir.vpk; no siblings, addons or authored loose files",
+  "directorySha256": "cc77bd7b65752d6d206e623be0db0b31508613b1752f3d2dd1e345077737b48c",
+  "resourcePlanSha256": "4abb08af3fbade7efe24f4a84281f70712e8c49c8e4cce652e6bf426874ab765",
+  "resources": 16310,
+  "decoded": 16309,
+  "failed": 1,
+  "failures": {
+    "kv3-non-finite-number": 4
+  },
+  "classes": {
+    "C_INIT_CreateAlongPath": {
+      "instances": 87,
+      "effects": 87,
+      "fields": {
+        "m_bSaveOffset": 3,
+        "m_bUseRandomCPs": 1,
+        "m_fMaxDistance": 1,
+        "m_PathParams": 87
+      },
+      "example": {
+        "resource": "particles/abilities/chargedsnipe_shottinker_laser_g.vpcf_c",
+        "stage": "initializer",
+        "fields": {}
+      }
+    },
+    "C_INIT_CreateOnModel": {
+      "instances": 831,
+      "effects": 831,
+      "fields": {
+        "m_bLocalCoords": 30,
+        "m_bUseBones": 6,
+        "m_HitboxSetName": 14,
+        "m_modelInput": 115,
+        "m_nDesiredHitbox": 24,
+        "m_nForceInModel": 99,
+        "m_transformInput": 77,
+        "m_vecDirectionBias": 603,
+        "m_vecHitBoxScale": 543
+      },
+      "example": {
+        "resource": "particles/abilities/banish_cast_impact.vpcf_c",
+        "stage": "initializer",
+        "fields": {
+          "m_vecDirectionBias": [
+            0,
+            0,
+            0.5
+          ]
+        }
+      }
+    },
+    "C_INIT_CreateWithinBox": {
+      "instances": 465,
+      "effects": 465,
+      "fields": {
+        "m_bLocalSpace": 113,
+        "m_nControlPointNumber": 111,
+        "m_randomnessParameters": 2,
+        "m_vecMax": 309,
+        "m_vecMin": 302
+      },
+      "example": {
+        "resource": "materials/dev/steam_test_2.vpcf_c",
+        "stage": "initializer",
+        "fields": {}
+      }
+    },
+    "C_INIT_PositionWarp": {
+      "instances": 71,
+      "effects": 64,
+      "fields": {
+        "m_bUseCount": 12,
+        "m_flOpEndFadeOutTime": 5,
+        "m_flOpStartFadeOutTime": 1,
+        "m_flOpTimeOffsetMax": 5,
+        "m_flWarpStartTime": 24,
+        "m_flWarpTime": 67,
+        "m_nControlPointNumber": 6,
+        "m_nScaleControlPointNumber": 4,
+        "m_vecWarpMax": 43,
+        "m_vecWarpMin": 53
+      },
+      "example": {
+        "resource": "particles/abilities/bull_stomp_cast_debris_large.vpcf_c",
+        "stage": "initializer",
+        "fields": {
+          "m_vecWarpMin": [
+            0.25,
+            0.25,
+            2
+          ],
+          "m_flWarpTime": 0.25
+        }
+      }
+    },
+    "C_INIT_RemapTransformOrientationToRotations": {
+      "instances": 232,
+      "effects": 232,
+      "fields": {
+        "m_bUseQuat": 114,
+        "m_bWriteNormal": 43,
+        "m_TransformInput": 51,
+        "m_vecRotation": 146
+      },
+      "example": {
+        "resource": "particles/abilities/project_mind_trail_model.vpcf_c",
+        "stage": "initializer",
+        "fields": {
+          "m_bUseQuat": true,
+          "m_vecRotation": [
+            0,
+            0,
+            90
+          ]
+        }
+      }
+    },
+    "C_OP_AttractToControlPoint": {
+      "instances": 305,
+      "effects": 300,
+      "fields": {
+        "m_bApplyMinForce": 11,
+        "m_fFalloffPower": 305,
+        "m_fForceAmount": 290,
+        "m_fForceAmountMin": 21,
+        "m_flOpEndFadeInTime": 6,
+        "m_flOpEndFadeOutTime": 3,
+        "m_flOpStartFadeInTime": 6,
+        "m_flOpStrength": 3,
+        "m_flOpTimeOffsetMax": 2,
+        "m_nOpEndCapState": 43,
+        "m_TransformInput": 141,
+        "m_vecComponentScale": 53
+      },
+      "example": {
+        "resource": "particles/impact_armor_ricochet_sparks.vpcf_c",
+        "stage": "force",
+        "fields": {
+          "m_fFalloffPower": 0
+        }
+      }
+    },
+    "C_OP_ControlpointLight": {
+      "instances": 2,
+      "effects": 2,
+      "fields": {
+        "m_bUseNormal": 2,
+        "m_LightColor1": 2,
+        "m_LightFiftyDist1": 2,
+        "m_LightZeroDist1": 2,
+        "m_vecCPOffset1": 2
+      },
+      "example": {
+        "resource": "particles/abilities/nuke_orange_smoke.vpcf_c",
+        "stage": "operator",
+        "fields": {
+          "m_bUseNormal": true,
+          "m_LightZeroDist1": 2000,
+          "m_LightFiftyDist1": 700,
+          "m_LightColor1": [
+            111,
+            132,
+            200,
+            255
+          ],
+          "m_vecCPOffset1": [
+            0,
+            0,
+            300
+          ]
+        }
+      }
+    },
+    "C_OP_DistanceBetweenCPsToCP": {
+      "instances": 25,
+      "effects": 22,
+      "fields": {
+        "m_flInputMax": 25,
+        "m_flInputMin": 1,
+        "m_flOutputMax": 11,
+        "m_flOutputMin": 4,
+        "m_nEndCP": 4,
+        "m_nOutputCP": 16,
+        "m_nStartCP": 4
+      },
+      "example": {
+        "resource": "particles/abilities/teleport_end_plasma.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_flInputMax": 1600,
+          "m_nOutputCP": 5,
+          "m_flOutputMax": 10,
+          "m_nStartCP": 3,
+          "m_nEndCP": 4,
+          "m_flInputMin": 50
+        }
+      }
+    },
+    "C_OP_MaintainEmitter": {
+      "instances": 28,
+      "effects": 28,
+      "fields": {
+        "m_flEmissionRate": 2,
+        "m_nParticlesToMaintain": 27
+      },
+      "example": {
+        "resource": "particles/abilities/cadence/cadence_gun_stacks_spikes.vpcf_c",
+        "stage": "emitter",
+        "fields": {}
+      }
+    },
+    "C_OP_RemapControlPointDirectionToVector": {
+      "instances": 1,
+      "effects": 1,
+      "fields": {},
+      "example": {
+        "resource": "particles/abilities/spectre/spectral_proj.vpcf_c",
+        "stage": "operator",
+        "fields": {}
+      }
+    },
+    "C_OP_RemapCPtoScalar": {
+      "instances": 76,
+      "effects": 70,
+      "fields": {
+        "m_flInputMax": 56,
+        "m_flInputMin": 3,
+        "m_flOutputMax": 59,
+        "m_flOutputMin": 2,
+        "m_nCPInput": 76,
+        "m_nField": 12,
+        "m_nFieldOutput": 26,
+        "m_nSetMethod": 20
+      },
+      "example": {
+        "resource": "particles/abilities/area_leash_aoe.vpcf_c",
+        "stage": "operator",
+        "fields": {
+          "m_flOutputMax": 5000,
+          "m_flInputMax": 5000,
+          "m_nCPInput": 1
+        }
+      }
+    },
+    "C_OP_RemapCPtoVector": {
+      "instances": 32,
+      "effects": 30,
+      "fields": {
+        "m_flOpStrength": 23,
+        "m_nCPInput": 32,
+        "m_nFieldOutput": 32,
+        "m_vInputMax": 32,
+        "m_vInputMin": 3,
+        "m_vOutputMax": 32,
+        "m_vOutputMin": 3
+      },
+      "example": {
+        "resource": "particles/abilities/area_leash.vpcf_c",
+        "stage": "operator",
+        "fields": {
+          "m_nCPInput": 62,
+          "m_nFieldOutput": 6,
+          "m_vInputMax": [
+            255,
+            255,
+            255
+          ],
+          "m_vOutputMax": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "C_OP_RenderRopes": {
+      "instances": 3935,
+      "effects": 3050,
+      "fields": {
+        "m_bCannotBeRefracted": 1,
+        "m_bClampV": 5,
+        "m_bClosedLoop": 85,
+        "m_bDisableZBuffering": 18,
+        "m_bEnableFadingAndClamping": 329,
+        "m_bGammaCorrectVertexColors": 26,
+        "m_bGenerateNormals": 127,
+        "m_bOnlyRenderInEffectsBloomPass": 51,
+        "m_bRefract": 42,
+        "m_bReverseOrder": 21,
+        "m_bReverseZBuffering": 3,
+        "m_bSaturateColorPreAlphaBlend": 1702,
+        "m_bSortBySegmentID": 8,
+        "m_bUseScalarForTextureCoordinate": 1339,
+        "m_flAddSelfAmount": 1604,
+        "m_flAlphaReferenceSoftness": 32,
+        "m_flAlphaScale": 348,
+        "m_flAnimationRate": 20,
+        "m_flDepthBias": 494,
+        "m_flDesaturation": 77,
+        "m_flDiffuseAmount": 921,
+        "m_flEndFadeDot": 65,
+        "m_flEndFadeSize": 336,
+        "m_flFeatheringMaxDist": 141,
+        "m_flFeatheringMinDist": 166,
+        "m_flMaxSize": 26,
+        "m_flOpTimeOffsetMax": 6,
+        "m_flOverbrightFactor": 2263,
+        "m_flRadiusScale": 1300,
+        "m_flRadiusTaper": 4,
+        "m_flRefractAmount": 87,
+        "m_flScalarAttributeTextureCoordScale": 37,
+        "m_flScaleVOffsetByControlPointDistance": 2,
+        "m_flScaleVScrollByControlPointDistance": 5,
+        "m_flScaleVSizeByControlPointDistance": 30,
+        "m_flSelfIllumAmount": 2694,
+        "m_flSourceAlphaValueToMapToOne": 26,
+        "m_flSourceAlphaValueToMapToZero": 42,
+        "m_flStartFadeDot": 19,
+        "m_flStartFadeSize": 336,
+        "m_flTessScale": 10,
+        "m_flTextureVOffset": 115,
+        "m_flTextureVScrollRate": 1234,
+        "m_flTextureVWorldSize": 2689,
+        "m_nAlpha2Field": 97,
+        "m_nAlphaReferenceType": 37,
+        "m_nColorBlendType": 16,
+        "m_nFeatheringMode": 392,
+        "m_nHSVShiftControlPoint": 68,
+        "m_nMaxTesselation": 3241,
+        "m_nMinTesselation": 2507,
+        "m_nOpEndCapState": 3,
+        "m_nOrientationType": 1705,
+        "m_nOutputBlendMode": 1903,
+        "m_nPerParticleAlphaReference": 328,
+        "m_nPerParticleAlphaRefWindow": 1,
+        "m_nRefractBlurRadius": 2,
+        "m_nRefractBlurType": 38,
+        "m_nScalarFieldForTextureCoordinate": 1479,
+        "m_nScaleCP1": 193,
+        "m_nScaleCP2": 193,
+        "m_nSortMethod": 12,
+        "m_nTextureVParamsCP": 2,
+        "m_nVectorFieldForOrientation": 11,
+        "m_vecColorScale": 782,
+        "m_vecTexturesInput": 3935
+      },
+      "example": {
+        "resource": "models/heroes_wip/mcginnis/mcginnis_smoke.vpcf_c",
+        "stage": "renderer",
+        "fields": {
+          "m_nMaxTesselation": 16,
+          "m_nMinTesselation": 2,
+          "m_bGenerateNormals": true,
+          "m_bUseScalarForTextureCoordinate": true,
+          "m_nScalarFieldForTextureCoordinate": 26
+        }
+      }
+    },
+    "C_OP_SetControlPointOrientation": {
+      "instances": 292,
+      "effects": 271,
+      "fields": {
+        "m_bRandomize": 21,
+        "m_bRunOnce": 5,
+        "m_bSetOnce": 27,
+        "m_bUseWorldLocation": 87,
+        "m_nCP": 240,
+        "m_nHeadLocation": 57,
+        "m_nToolsState": 1,
+        "m_vecRotation": 88,
+        "m_vecRotationB": 86
+      },
+      "example": {
+        "resource": "particles/abilities/psychic_dagger_aoe_ring.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_bUseWorldLocation": true,
+          "m_nCP": 2
+        }
+      }
+    },
+    "C_OP_SetControlPointPositions": {
+      "instances": 160,
+      "effects": 108,
+      "fields": {
+        "m_bOrient": 19,
+        "m_bRunOnce": 1,
+        "m_bSetOnce": 3,
+        "m_bUseWorldLocation": 100,
+        "m_flOpEndFadeOutTime": 59,
+        "m_flOpStartFadeOutTime": 59,
+        "m_nCP1": 132,
+        "m_nCP2": 137,
+        "m_nCP3": 136,
+        "m_nCP4": 141,
+        "m_nHeadLocation": 18,
+        "m_vecCP1Pos": 157,
+        "m_vecCP2Pos": 145,
+        "m_vecCP3Pos": 143,
+        "m_vecCP4Pos": 130
+      },
+      "example": {
+        "resource": "particles/abilities/area_leash_tether.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_nHeadLocation": 1,
+          "m_nCP4": 3,
+          "m_nCP2": 3,
+          "m_vecCP1Pos": [
+            0,
+            0,
+            0
+          ],
+          "m_nCP1": 2
+        }
+      }
+    },
+    "C_OP_SetControlPointRotation": {
+      "instances": 94,
+      "effects": 93,
+      "fields": {
+        "m_flRotRate": 81,
+        "m_nCP": 94,
+        "m_nLocalCP": 24,
+        "m_vecRotAxis": 70
+      },
+      "example": {
+        "resource": "particles/abilities/area_leash_tether.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_nLocalCP": 1,
+          "m_flRotRate": 380,
+          "m_nCP": 2,
+          "m_vecRotAxis": [
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "C_OP_SetControlPointToCenter": {
+      "instances": 15,
+      "effects": 15,
+      "fields": {
+        "m_nCP1": 15,
+        "m_vecCP1Pos": 1
+      },
+      "example": {
+        "resource": "particles/abilities/banish_cast.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_nCP1": 4
+        }
+      }
+    },
+    "C_OP_SetControlPointToPlayer": {
+      "instances": 15,
+      "effects": 15,
+      "fields": {
+        "m_bOrientToEyes": 2,
+        "m_nCP1": 12
+      },
+      "example": {
+        "resource": "particles/impact_concrete.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_nCP1": 3
+        }
+      }
+    },
+    "C_OP_SetPerChildControlPoint": {
+      "instances": 198,
+      "effects": 198,
+      "fields": {
+        "m_bNumBasedOnParticleCount": 42,
+        "m_bSetOrientation": 93,
+        "m_nFirstControlPoint": 188,
+        "m_nFirstSourcePoint": 2,
+        "m_nNumControlPoints": 119,
+        "m_nOrientationField": 40
+      },
+      "example": {
+        "resource": "particles/impact_armor_ricochet_smokehead.vpcf_c",
+        "stage": "operator",
+        "fields": {
+          "m_nFirstControlPoint": 1,
+          "m_nNumControlPoints": 10
+        }
+      }
+    },
+    "C_OP_SetSingleControlPointPosition": {
+      "instances": 1550,
+      "effects": 1151,
+      "fields": {
+        "m_bRunOnce": 14,
+        "m_bSetOnce": 66,
+        "m_flOpEndFadeOutTime": 1,
+        "m_flOpStartFadeOutTime": 1,
+        "m_nCP1": 1364,
+        "m_nOpEndCapState": 2,
+        "m_Notes": 4,
+        "m_nToolsState": 1,
+        "m_transformInput": 650,
+        "m_vecCP1Pos": 1547
+      },
+      "example": {
+        "resource": "particles/impact_armor_ricochet_sparks.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_bSetOnce": true,
+          "m_nCP1": 2,
+          "m_vecCP1Pos": [
+            30,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "providers": {
+    "PF_TYPE_CONTROL_POINT_CHANGE_AGE": {
+      "occurrences": 14,
+      "fields": {
+        "m_bHasRandomSignFlip": 14,
+        "m_bNoiseImgPreviewLive": 14,
+        "m_bReverseOrder": 9,
+        "m_bUseBoundsCenter": 14,
+        "m_Curve": 14,
+        "m_flBiasParameter": 14,
+        "m_flCompareValue": 9,
+        "m_flInput0": 14,
+        "m_flInput1": 14,
+        "m_flLiteralValue": 14,
+        "m_flLOD0": 14,
+        "m_flLOD1": 14,
+        "m_flLOD2": 14,
+        "m_flLOD3": 14,
+        "m_flMultFactor": 14,
+        "m_flNoCameraFallback": 14,
+        "m_flNoiseImgPreviewScale": 14,
+        "m_flNoiseOffset": 14,
+        "m_flNoiseOutputMax": 14,
+        "m_flNoiseOutputMin": 14,
+        "m_flNoiseScale": 14,
+        "m_flNoiseTurbulenceMix": 14,
+        "m_flNoiseTurbulenceScale": 14,
+        "m_flNotchedOutputInside": 14,
+        "m_flNotchedOutputOutside": 14,
+        "m_flNotchedRangeMax": 14,
+        "m_flNotchedRangeMin": 14,
+        "m_flOutput0": 14,
+        "m_flOutput1": 14,
+        "m_flRandomMax": 14,
+        "m_flRandomMin": 14,
+        "m_NamedValue": 14,
+        "m_nBiasType": 14,
+        "m_nControlPoint": 14,
+        "m_nInputMode": 14,
+        "m_nMapType": 14,
+        "m_nNoiseInputVectorAttribute": 14,
+        "m_nNoiseModifier": 14,
+        "m_nNoiseOctaves": 14,
+        "m_nNoiseTurbulence": 14,
+        "m_nNoiseType": 14,
+        "m_nRandomMode": 14,
+        "m_nRandomSeed": 14,
+        "m_nRoundType": 14,
+        "m_nScalarAttribute": 14,
+        "m_nType": 14,
+        "m_nVectorAttribute": 14,
+        "m_nVectorComponent": 14,
+        "m_strSnapshotSubset": 9,
+        "m_vecNoiseOffsetRate": 14
+      },
+      "example": {
+        "resource": "particles/environment/plaza_fog_01_.vpcf_c",
+        "property": "$.m_Renderers[].m_vecTexturesInput[].m_TextureControls.m_flFinalTextureUVRotation",
+        "fields": {
+          "m_nType": "PF_TYPE_CONTROL_POINT_CHANGE_AGE",
+          "m_nMapType": "PF_MAP_TYPE_DIRECT",
+          "m_flLiteralValue": 0,
+          "m_NamedValue": "",
+          "m_nControlPoint": 0,
+          "m_nScalarAttribute": 3,
+          "m_nVectorAttribute": 6,
+          "m_nVectorComponent": 0,
+          "m_bReverseOrder": false,
+          "m_flRandomMin": 0,
+          "m_flRandomMax": 1,
+          "m_bHasRandomSignFlip": false
+        }
+      }
+    },
+    "PF_TYPE_CONTROL_POINT_COMPONENT": {
+      "occurrences": 7486,
+      "fields": {
+        "m_bHasRandomSignFlip": 4810,
+        "m_bNoiseImgPreviewLive": 5730,
+        "m_bReverseOrder": 1283,
+        "m_bUseBoundsCenter": 4163,
+        "m_Curve": 5780,
+        "m_flBiasParameter": 5780,
+        "m_flCompareValue": 254,
+        "m_flInput0": 6018,
+        "m_flInput1": 6018,
+        "m_flLiteralValue": 5780,
+        "m_flLOD0": 5748,
+        "m_flLOD1": 5748,
+        "m_flLOD2": 5748,
+        "m_flLOD3": 5748,
+        "m_flMultFactor": 7242,
+        "m_flNoCameraFallback": 4077,
+        "m_flNoiseImgPreviewScale": 5730,
+        "m_flNoiseOffset": 5730,
+        "m_flNoiseOutputMax": 5730,
+        "m_flNoiseOutputMin": 5730,
+        "m_flNoiseScale": 5730,
+        "m_flNoiseTurbulenceMix": 5730,
+        "m_flNoiseTurbulenceScale": 5730,
+        "m_flNotchedOutputInside": 4784,
+        "m_flNotchedOutputOutside": 4784,
+        "m_flNotchedRangeMax": 4784,
+        "m_flNotchedRangeMin": 4784,
+        "m_flOutput0": 6018,
+        "m_flOutput1": 6018,
+        "m_flRandomMax": 5780,
+        "m_flRandomMin": 5780,
+        "m_NamedValue": 4635,
+        "m_nBiasType": 5780,
+        "m_nControlPoint": 7486,
+        "m_nInputMode": 5765,
+        "m_nMapType": 7480,
+        "m_nNoiseInputVectorAttribute": 4589,
+        "m_nNoiseModifier": 5730,
+        "m_nNoiseOctaves": 5730,
+        "m_nNoiseTurbulence": 5730,
+        "m_nNoiseType": 5730,
+        "m_nRandomMode": 5780,
+        "m_nRandomSeed": 3780,
+        "m_nRoundType": 2527,
+        "m_nScalarAttribute": 5780,
+        "m_nType": 7486,
+        "m_nVectorAttribute": 5780,
+        "m_nVectorComponent": 7486,
+        "m_strSnapshotSubset": 1210,
+        "m_vecNoiseOffsetRate": 5730
+      },
+      "example": {
+        "resource": "particles/cast_range_indicator.vpcf_c",
+        "property": "$.m_Initializers[].m_flInitialRadius",
+        "fields": {
+          "m_nType": "PF_TYPE_CONTROL_POINT_COMPONENT",
+          "m_nControlPoint": 1,
+          "m_nVectorComponent": 0,
+          "m_nMapType": "PF_MAP_TYPE_MULT",
+          "m_flMultFactor": 1
+        }
+      }
+    },
+    "PM_TYPE_CONTROL_POINT": {
+      "occurrences": 219,
+      "fields": {
+        "m_nControlPoint": 219,
+        "m_nType": 219
+      },
+      "example": {
+        "resource": "particles/abilities/banish_cast_impact.vpcf_c",
+        "property": "$.m_Operators[].m_modelInput",
+        "fields": {
+          "m_nType": "PM_TYPE_CONTROL_POINT",
+          "m_nControlPoint": 1
+        }
+      }
+    },
+    "PT_TYPE_CONTROL_POINT": {
+      "occurrences": 141,
+      "fields": {
+        "m_bFollowNamedValue": 112,
+        "m_bSupportsDisabled": 112,
+        "m_bUseOrientation": 112,
+        "m_flEndCPGrowthTime": 112,
+        "m_NamedValue": 112,
+        "m_nControlPoint": 141,
+        "m_nControlPointRangeMax": 122,
+        "m_nType": 141
+      },
+      "example": {
+        "resource": "particles/abilities/chargedsnipe_shotlaser_cutter_sparks_c.vpcf_c",
+        "property": "$.m_Operators[].m_TransformInput",
+        "fields": {
+          "m_nType": "PT_TYPE_CONTROL_POINT",
+          "m_nControlPoint": 1
+        }
+      }
+    },
+    "PT_TYPE_CONTROL_POINT_RANGE": {
+      "occurrences": 4,
+      "fields": {
+        "m_nType": 4
+      },
+      "example": {
+        "resource": "particles/impact_fx/impact_caldera_base_glass.vpcf_c",
+        "property": "$.m_Initializers[].m_TransformInput",
+        "fields": {
+          "m_nType": "PT_TYPE_CONTROL_POINT_RANGE"
+        }
+      }
+    },
+    "PVEC_TYPE_CP_DELTA": {
+      "occurrences": 4,
+      "fields": {
+        "m_nControlPoint": 4,
+        "m_nDeltaControlPoint": 4,
+        "m_nType": 4
+      },
+      "example": {
+        "resource": "particles/abilities/psychic_drain_impact_in.vpcf_c",
+        "property": "$.m_Initializers[].m_velocityInput",
+        "fields": {
+          "m_nType": "PVEC_TYPE_CP_DELTA",
+          "m_nControlPoint": 1,
+          "m_nDeltaControlPoint": 0
+        }
+      }
+    },
+    "PVEC_TYPE_CP_RELATIVE_DIR": {
+      "occurrences": 71,
+      "fields": {
+        "m_bFollowNamedValue": 4,
+        "m_flInterpInput0": 71,
+        "m_flInterpInput1": 71,
+        "m_FloatComponentX": 71,
+        "m_FloatComponentY": 71,
+        "m_FloatComponentZ": 71,
+        "m_FloatInterp": 71,
+        "m_Gradient": 71,
+        "m_LiteralColor": 71,
+        "m_NamedValue": 4,
+        "m_nControlPoint": 71,
+        "m_nDeltaControlPoint": 4,
+        "m_nType": 71,
+        "m_nVectorAttribute": 71,
+        "m_vCPRelativeDir": 71,
+        "m_vCPRelativePosition": 71,
+        "m_vCPValueScale": 71,
+        "m_vInterpOutput0": 71,
+        "m_vInterpOutput1": 71,
+        "m_vLiteralValue": 71,
+        "m_vRandomMax": 4,
+        "m_vRandomMin": 4,
+        "m_vVectorAttributeScale": 71
+      },
+      "example": {
+        "resource": "particles/abilities/akimbo/akimbo_charged_shot_trail.vpcf_c",
+        "property": "$.m_Operators[].m_InputVec1",
+        "fields": {
+          "m_nType": "PVEC_TYPE_CP_RELATIVE_DIR",
+          "m_vLiteralValue": [
+            0,
+            0,
+            0
+          ],
+          "m_LiteralColor": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "m_nVectorAttribute": 6,
+          "m_vVectorAttributeScale": [
+            1,
+            1,
+            1
+          ],
+          "m_nControlPoint": 0,
+          "m_vCPValueScale": [
+            1,
+            1,
+            1
+          ],
+          "m_vCPRelativePosition": [
+            0,
+            0,
+            0
+          ],
+          "m_vCPRelativeDir": [
+            1,
+            0,
+            0
+          ],
+          "m_flInterpInput0": 0,
+          "m_flInterpInput1": 1,
+          "m_vInterpOutput0": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "PVEC_TYPE_CP_RELATIVE_POSITION": {
+      "occurrences": 27,
+      "fields": {
+        "m_bFollowNamedValue": 10,
+        "m_flInterpInput0": 27,
+        "m_flInterpInput1": 27,
+        "m_FloatComponentX": 27,
+        "m_FloatComponentY": 27,
+        "m_FloatComponentZ": 27,
+        "m_FloatInterp": 27,
+        "m_Gradient": 27,
+        "m_LiteralColor": 27,
+        "m_NamedValue": 21,
+        "m_nControlPoint": 27,
+        "m_nDeltaControlPoint": 10,
+        "m_nType": 27,
+        "m_nVectorAttribute": 27,
+        "m_vCPRelativeDir": 27,
+        "m_vCPRelativePosition": 27,
+        "m_vCPValueScale": 27,
+        "m_vInterpOutput0": 27,
+        "m_vInterpOutput1": 27,
+        "m_vLiteralValue": 27,
+        "m_vRandomMax": 21,
+        "m_vRandomMin": 21,
+        "m_vVectorAttributeScale": 27
+      },
+      "example": {
+        "resource": "particles/abilities/archer/archer_immobilize_root.vpcf_c",
+        "property": "$.m_Initializers[].m_InputValue",
+        "fields": {
+          "m_nType": "PVEC_TYPE_CP_RELATIVE_POSITION",
+          "m_vLiteralValue": [
+            0,
+            0,
+            0
+          ],
+          "m_LiteralColor": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "m_nVectorAttribute": 6,
+          "m_vVectorAttributeScale": [
+            1,
+            1,
+            1
+          ],
+          "m_nControlPoint": 0,
+          "m_vCPValueScale": [
+            1,
+            1,
+            1
+          ],
+          "m_vCPRelativePosition": [
+            0,
+            0,
+            50
+          ],
+          "m_vCPRelativeDir": [
+            1,
+            0,
+            0
+          ],
+          "m_flInterpInput0": 0,
+          "m_flInterpInput1": 1,
+          "m_vInterpOutput0": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "PVEC_TYPE_CP_VALUE": {
+      "occurrences": 500,
+      "fields": {
+        "m_bFollowNamedValue": 335,
+        "m_flInterpInput0": 473,
+        "m_flInterpInput1": 473,
+        "m_FloatComponentX": 473,
+        "m_FloatComponentY": 473,
+        "m_FloatComponentZ": 473,
+        "m_FloatInterp": 473,
+        "m_Gradient": 473,
+        "m_LiteralColor": 473,
+        "m_NamedValue": 342,
+        "m_nControlPoint": 500,
+        "m_nDeltaControlPoint": 327,
+        "m_nType": 500,
+        "m_nVectorAttribute": 473,
+        "m_vCPRelativeDir": 473,
+        "m_vCPRelativePosition": 473,
+        "m_vCPValueScale": 475,
+        "m_vInterpOutput0": 473,
+        "m_vInterpOutput1": 473,
+        "m_vLiteralValue": 473,
+        "m_vRandomMax": 346,
+        "m_vRandomMin": 346,
+        "m_vVectorAttributeScale": 473
+      },
+      "example": {
+        "resource": "particles/abilities/abrams/abrams_siphon_life_buff_aoe_cone.vpcf_c",
+        "property": "$.m_PreEmissionOperators[].m_vecCP1Pos",
+        "fields": {
+          "m_nType": "PVEC_TYPE_CP_VALUE",
+          "m_vLiteralValue": [
+            0,
+            0,
+            0
+          ],
+          "m_LiteralColor": [
+            0,
+            0,
+            0
+          ],
+          "m_NamedValue": "",
+          "m_bFollowNamedValue": false,
+          "m_nVectorAttribute": 6,
+          "m_vVectorAttributeScale": [
+            1,
+            1,
+            1
+          ],
+          "m_nControlPoint": 1,
+          "m_nDeltaControlPoint": 0,
+          "m_vCPValueScale": [
+            1,
+            1,
+            1
+          ],
+          "m_vCPRelativePosition": [
+            0,
+            0,
+            0
+          ],
+          "m_vCPRelativeDir": [
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "children": {
+    "effects": 3768,
+    "instances": 12703,
+    "fields": {
+      "m_bEndCap": 279,
+      "m_ChildRef": 12703,
+      "m_flDelay": 289
+    }
+  },
+  "rootCPFields": {
+    "m_controlPointConfigurations": 16048,
+    "m_nCullControlPoint": 1,
+    "m_nMinCPULevel": 3,
+    "m_nSkipRenderControlPoint": 9,
+    "m_nSnapshotControlPoint": 207
+  },
+  "limitations": [
+    "Deadlock observations never establish a CS2 schema",
+    "Examples contain bounded primitive field fragments, not complete assets",
+    "Serialized field occurrences are not a complete schema. A field absent from examples can still be declared by the target-game schema.",
+    "These historical frequencies use a finite-number-only projection. Deadlock excludes one otherwise decoded resource containing four NaN scalars."
+  ],
+  "independentProjectionFailureDetail": {
+    "resource": "particles/npc/neutrals/neutral_mushroom/neutral_attack_spore_warmup.vpcf_c",
+    "schemaPath": "m_controlPointConfigurations[].m_drivers[].m_vecOffset[]",
+    "nonFiniteStoredScalars": 4,
+    "valueKind": "NaN",
+    "source": "Independent native VPK schema IR inspection on the same local installation"
+  },
+  "provenance": {
+    "observedOn": "2026-10-15",
+    "steamAppId": "1422450",
+    "steamBuildId": "25660886",
+    "steamManifestSha256": "c0632c4d9e4535bf7293ae6e1bde19321433a09edb10a2d1c5c3db86b3101b2a",
+    "identityCaveat": "Local manifest metadata is not cryptographically bound to the inspected package bytes.",
+    "method": "CRC-checked resource ranges; Binary KV3 decoding followed by a finite-number-only projection for these historical CP frequencies."
+  }
+}

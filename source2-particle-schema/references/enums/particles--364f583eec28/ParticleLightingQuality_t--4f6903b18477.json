@@ -1,0 +1,81 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Per-Particle Lighting\""
+          }
+        ],
+        "name": "PARTICLE_LIGHTING_PER_PARTICLE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Per-Vertex Lighting\""
+          }
+        ],
+        "name": "PARTICLE_LIGHTING_PER_VERTEX",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Per-Pixel Lighting\""
+          }
+        ],
+        "name": "PARTICLE_LIGHTING_PER_PIXEL",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Override Position\""
+          }
+        ],
+        "name": "PARTICLE_LIGHTING_OVERRIDE_POSITION",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Override Color\""
+          }
+        ],
+        "name": "PARTICLE_LIGHTING_OVERRIDE_COLOR",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add Extra Lighting Color\""
+          }
+        ],
+        "name": "PARTICLE_LIGHTING_ADD_EXTRA_LIGHT",
+        "value": 4
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleLightingQuality_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleLightingQuality_t"
+  },
+  "source": {
+    "canonical_record_sha256": "8aabeb5a76baca3f3077e95a6bcb9fcf6264282612abcafdd682e5319a9e19da",
+    "json_pointer": "/enums/416",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

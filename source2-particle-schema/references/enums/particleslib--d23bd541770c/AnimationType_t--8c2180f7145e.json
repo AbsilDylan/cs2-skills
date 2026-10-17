@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Fixed Rate\""
+          }
+        ],
+        "name": "ANIMATION_TYPE_FIXED_RATE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Fit Lifetime\""
+          }
+        ],
+        "name": "ANIMATION_TYPE_FIT_LIFETIME",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set Frames Manually\""
+          }
+        ],
+        "name": "ANIMATION_TYPE_MANUAL_FRAMES",
+        "value": 2
+      }
+    ],
+    "module": "particleslib",
+    "name": "AnimationType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "AnimationType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "cb4f9ec7b8c93ccf39f998e97ce362129e49933ed87fc180b4f388547c0443c1",
+    "json_pointer": "/enums/457",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

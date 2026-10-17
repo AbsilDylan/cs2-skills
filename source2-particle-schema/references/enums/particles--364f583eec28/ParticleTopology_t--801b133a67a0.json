@@ -1,0 +1,71 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Points\""
+          }
+        ],
+        "name": "PARTICLE_TOPOLOGY_POINTS",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Line segments\""
+          }
+        ],
+        "name": "PARTICLE_TOPOLOGY_LINES",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Triangles\""
+          }
+        ],
+        "name": "PARTICLE_TOPOLOGY_TRIS",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Quadrilaterals\""
+          }
+        ],
+        "name": "PARTICLE_TOPOLOGY_QUADS",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Cubes\""
+          }
+        ],
+        "name": "PARTICLE_TOPOLOGY_CUBES",
+        "value": 4
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleTopology_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleTopology_t"
+  },
+  "source": {
+    "canonical_record_sha256": "9055a0accbdbbe8a9fc684699b08fa29dc1ddfd9375ac9279d3248c4f5ba0731",
+    "json_pointer": "/enums/438",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

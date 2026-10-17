@@ -1,0 +1,144 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_NamedValue": "",
+          "m_nControlPoint": -1,
+          "m_nType": "PM_TYPE_INVALID"
+        }
+      },
+      {
+        "name": "MPropertyCustomEditor",
+        "value": "\"ModelInput()\""
+      },
+      {
+        "name": "MCustomFGDMetadata",
+        "value": "\"{ KV3DefaultTestFnName = 'CParticleModelInputDefaultTestFunc' }\""
+      }
+    ],
+    "module": "particleslib",
+    "name": "CParticleModelInput",
+    "parents": [
+      {
+        "module": "particleslib",
+        "name": "CParticleInput"
+      }
+    ],
+    "size": 96
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "CParticleInput"
+      },
+      {
+        "module": "particleslib",
+        "name": "CParticleModelInput"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_NamedValue": {
+        "module": "particleslib",
+        "name": "CParticleModelInput"
+      },
+      "m_nControlPoint": {
+        "module": "particleslib",
+        "name": "CParticleModelInput"
+      },
+      "m_nType": {
+        "module": "particleslib",
+        "name": "CParticleModelInput"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_NamedValue": "",
+      "m_nControlPoint": -1,
+      "m_nType": "PM_TYPE_INVALID"
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleModelInput"
+      },
+      "field": {
+        "name": "m_nType",
+        "offset": 16,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleModelType_t"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleModelInput"
+      },
+      "field": {
+        "name": "m_NamedValue",
+        "offset": 24,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CParticleNamedValueRef",
+          "size": 64
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleModelInput"
+      },
+      "field": {
+        "name": "m_nControlPoint",
+        "offset": 88,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "CParticleModelInput"
+  },
+  "inheritance": [
+    {
+      "module": "particleslib",
+      "name": "CParticleInput"
+    }
+  ],
+  "references": [
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleModelType_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "1559fa9204a8f3f8c94123ab77cb32b4bdc372f1ab3b03b1a6b16f044181ad63",
+    "json_pointer": "/classes/2153",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_flScale": 1.0,
+          "m_nVariableField": 18,
+          "m_strVariable": ""
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "MaterialVariable_t",
+    "size": 16
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "MaterialVariable_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_flScale": {
+        "module": "particles",
+        "name": "MaterialVariable_t"
+      },
+      "m_nVariableField": {
+        "module": "particles",
+        "name": "MaterialVariable_t"
+      },
+      "m_strVariable": {
+        "module": "particles",
+        "name": "MaterialVariable_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_flScale": 1.0,
+      "m_nVariableField": 18,
+      "m_strVariable": ""
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "MaterialVariable_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"material variable\""
+          }
+        ],
+        "name": "m_strVariable",
+        "offset": 0,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "MaterialVariable_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"particle field\""
+          },
+          {
+            "name": "MPropertyAttributeChoiceName",
+            "value": "\"particlefield\""
+          }
+        ],
+        "name": "m_nVariableField",
+        "offset": 8,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "MaterialVariable_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"scale\""
+          }
+        ],
+        "name": "m_flScale",
+        "offset": 12,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "MaterialVariable_t"
+  },
+  "inheritance": [],
+  "references": [
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "ParticleAttributeIndex_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "4cb6ea19a39405df302ad5f1374de3c11cd60098536d0d1302e0928aa0cf3570",
+    "json_pointer": "/classes/2130",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

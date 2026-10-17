@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source 2 Particle Validation"
+  short_description: "Compile and verify native CS2 particle effects"
+  default_prompt: "Use $source2-particle-validation to validate this CS2 particle package and report compilation, field retention, CP behavior and native appearance separately."

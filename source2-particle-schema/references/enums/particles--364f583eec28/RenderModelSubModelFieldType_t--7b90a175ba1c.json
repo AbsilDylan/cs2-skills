@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"BodyGroup SubModel\""
+          }
+        ],
+        "name": "SUBMODEL_AS_BODYGROUP_SUBMODEL",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"MeshGroup Index\""
+          }
+        ],
+        "name": "SUBMODEL_AS_MESHGROUP_INDEX",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"MeshGroup Mask\""
+          }
+        ],
+        "name": "SUBMODEL_AS_MESHGROUP_MASK",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Model Default MeshGroup Mask\""
+          }
+        ],
+        "name": "SUBMODEL_IGNORED_USE_MODEL_DEFAULT_MESHGROUP_MASK",
+        "value": 3
+      }
+    ],
+    "module": "particles",
+    "name": "RenderModelSubModelFieldType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "RenderModelSubModelFieldType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "2c8fac58286a810d9a95b215473c3aa2660f18c3003d4bd70fbb25c8946feb47",
+    "json_pointer": "/enums/445",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

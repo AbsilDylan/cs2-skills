@@ -1,0 +1,41 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance - Nearest\""
+          }
+        ],
+        "name": "PARTICLE_SORTING_NEAREST",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Age - Oldest\""
+          }
+        ],
+        "name": "PARTICLE_SORTING_CREATION_TIME",
+        "value": 1
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleSortingChoiceList_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleSortingChoiceList_t"
+  },
+  "source": {
+    "canonical_record_sha256": "a8a6a5c9690fb0717c681a9cc386cb19fff552199be9137ec5ec528b278445a9",
+    "json_pointer": "/enums/435",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

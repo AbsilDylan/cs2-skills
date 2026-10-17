@@ -1,0 +1,210 @@
+{
+  "catalogue": {
+    "generator_script": "scripts/schema_catalog.py",
+    "generator_sha256": "39bd3ed5f9004b6f93375ac7e3dfe5738b5aff11c28244cd0a2596f5834e185e",
+    "index_content_sha256": "63b0614d31ad6a26218e07ab765e0833155a412a4e9c29f1da5a90727a1aaf9d",
+    "index_file_bytes": 336508,
+    "index_file_sha256": "a8a2afdfbd7de37572e51f728f0d3ce36341dac028888220ea7ff25c9c8f7446",
+    "index_path": "references/catalog-index.json",
+    "records_tree_sha256": "10032d3a52bf48af7e238ac14f3e6e9aea0f8910e9890777e0cb3a5bdb3c68a1",
+    "verified_class_files": 464,
+    "verified_enum_files": 92
+  },
+  "content_aggregates": {
+    "all_fields_with_target_owner_and_inherited_flag": {
+      "catalogue": {
+        "canonical_payload_bytes": 4465038,
+        "records": 10921,
+        "sha256": "f1e289f130baa75f14d9c8295f253f9ceed53dd0f0c397055ab8b626b8908927"
+      },
+      "equal": true,
+      "source": {
+        "canonical_payload_bytes": 4465038,
+        "records": 10921,
+        "sha256": "f1e289f130baa75f14d9c8295f253f9ceed53dd0f0c397055ab8b626b8908927"
+      }
+    },
+    "class_declarations_without_fields": {
+      "catalogue": {
+        "canonical_payload_bytes": 2417091,
+        "records": 464,
+        "sha256": "59a444bb6abc8641d82fc944f2f62f1406dad12e72875b785cd3dd8743449a0a"
+      },
+      "equal": true,
+      "source": {
+        "canonical_payload_bytes": 2417091,
+        "records": 464,
+        "sha256": "59a444bb6abc8641d82fc944f2f62f1406dad12e72875b785cd3dd8743449a0a"
+      }
+    },
+    "declared_fields": {
+      "catalogue": {
+        "canonical_payload_bytes": 847790,
+        "records": 3001,
+        "sha256": "d588b1902e74d259c96e46cad4f761b50e79c681592258102ced84ae74c925cd"
+      },
+      "equal": true,
+      "source": {
+        "canonical_payload_bytes": 847790,
+        "records": 3001,
+        "sha256": "d588b1902e74d259c96e46cad4f761b50e79c681592258102ced84ae74c925cd"
+      }
+    },
+    "effective_defaults_with_sources_status_and_issues": {
+      "catalogue": {
+        "canonical_payload_bytes": 3430727,
+        "records": 464,
+        "sha256": "dafab2a2262b56986b52ab0f41f402e5fd5a9204766bf19b46f00f0eeb47b5f4"
+      },
+      "equal": true,
+      "source": {
+        "canonical_payload_bytes": 3430727,
+        "records": 464,
+        "sha256": "dafab2a2262b56986b52ab0f41f402e5fd5a9204766bf19b46f00f0eeb47b5f4"
+      }
+    },
+    "raw_class_records_reconstructed": {
+      "catalogue": {
+        "canonical_payload_bytes": 3045303,
+        "records": 464,
+        "sha256": "a5fda8336e115f1828bf75b8b41b506d6a51bb36bfc33ff8174f055bd87090f5"
+      },
+      "equal": true,
+      "source": {
+        "canonical_payload_bytes": 3045303,
+        "records": 464,
+        "sha256": "a5fda8336e115f1828bf75b8b41b506d6a51bb36bfc33ff8174f055bd87090f5"
+      }
+    },
+    "raw_default_layers": {
+      "catalogue": {
+        "canonical_payload_bytes": 2354960,
+        "records": 464,
+        "sha256": "40a6d5857b19ddb8fa214a31c377e56ba57f2fa99bd0944c77e5dd322099b8bf"
+      },
+      "equal": true,
+      "source": {
+        "canonical_payload_bytes": 2354960,
+        "records": 464,
+        "sha256": "40a6d5857b19ddb8fa214a31c377e56ba57f2fa99bd0944c77e5dd322099b8bf"
+      }
+    },
+    "raw_enum_records": {
+      "catalogue": {
+        "canonical_payload_bytes": 62268,
+        "records": 92,
+        "sha256": "d46ccd04c3002fcaa11137809ee5ab68188dcd7299ab506c10d48b5f24860203"
+      },
+      "equal": true,
+      "source": {
+        "canonical_payload_bytes": 62268,
+        "records": 92,
+        "sha256": "d46ccd04c3002fcaa11137809ee5ab68188dcd7299ab506c10d48b5f24860203"
+      }
+    }
+  },
+  "counts": {
+    "all_field_occurrences": 10921,
+    "classes": 464,
+    "declared_fields": 3001,
+    "effective_defaults_status": {
+      "available": 38,
+      "partial": 393,
+      "unavailable": 33
+    },
+    "enum_members": 512,
+    "enums": 92,
+    "inherited_field_occurrences": 7920,
+    "maximum_inheritance_depth": 4,
+    "raw_default_layers": {
+      "absent": 14,
+      "empty_object": 11,
+      "object": 431,
+      "unreadable": 19
+    },
+    "root_classes": 457,
+    "root_modules": [
+      "particles",
+      "particleslib"
+    ],
+    "unresolved_declared_references": 0
+  },
+  "format": "source2-particle-schema-independent-completeness/1",
+  "issues": [],
+  "method": {
+    "aggregate_framing": "sorted (module,name) identity iteration; each canonical JSON record prefixed by its unsigned 64-bit big-endian byte length; SHA-256 over concatenation",
+    "canonical_json": "UTF-8, ensure_ascii=false, sort_keys=true, separators=(comma,colon), allow_nan=false",
+    "default_layers": "raw class metadata retained exactly; first-parent chain top-level merge independently reconstructed with value-source, status and missing/unreadable issues",
+    "implementation": "independent Python 3 standard-library traversal; no imports or execution of schema_catalog.py, other skill helpers, application code, Node.js, game installation or network",
+    "inheritance": "independent recursive parent-first traversal with declaring-class deduplication; complete field JSON compared in original order with exact declaring identity and inherited flag",
+    "selection": "all classes and enums in particles/particleslib plus recursive declared_class/declared_enum field-type references and all parents; no guessed unscoped resolution",
+    "source_access": "read-only local gzip and generated JSON; sole published write is this proof"
+  },
+  "reflection_boundaries": {
+    "all_reflected_fields_retained": true,
+    "interpretation": "Reflection presence and editor visibility metadata do not establish KV3 serialization, writability, compilation acceptance or behavior; no such semantic eligibility was inferred.",
+    "kv3_editability_or_runtime_behavior_asserted": false,
+    "no_editability_filter_applied": true,
+    "selected_MNotSaved_field_metadata_occurrences": 0,
+    "selected_class_flags": {
+      "abstract": 22,
+      "trivial_constructor": 8,
+      "trivial_destructor": 17
+    },
+    "selected_class_metadata_occurrences": {
+      "MCustomFGDMetadata": 4,
+      "MGPUParticleFunction": 48,
+      "MGetKV3ClassDefaults": 450,
+      "MHasKV3TransferPolymorphicClassname": 412,
+      "MIsBoxedIntegerType": 1,
+      "MNetworkNoBase": 1,
+      "MObsoleteParticleFunction": 4,
+      "MParticleMaxVersion": 3,
+      "MParticleMinVersion": 3,
+      "MParticleReplacementOp": 3,
+      "MPropertyCustomEditor": 10,
+      "MResourceTypeForInfoType": 6
+    },
+    "selected_field_flags": {},
+    "selected_field_metadata_occurrences": {
+      "MFgdFromSchemaCompletelySkipField": 4,
+      "MParticleAdvancedField": 16,
+      "MParticleHelpField": 1,
+      "MParticleInputOptional": 7,
+      "MParticleMaxVersion": 2,
+      "MParticleMinVersion": 1,
+      "MParticleRequireDefaultArrayEntry": 4,
+      "MPropertyAttributeChoiceName": 247,
+      "MPropertyAttributeEditor": 40,
+      "MPropertyAttributeRange": 33,
+      "MPropertyAutoExpandSelf": 7,
+      "MPropertyAutoRebuildOnChange": 2,
+      "MPropertyColorPlusAlpha": 1,
+      "MPropertyDescription": 2,
+      "MPropertyEditContextOverrideKey": 1,
+      "MPropertyFriendlyName": 2802,
+      "MPropertySortPriority": 198,
+      "MPropertyStartGroup": 67,
+      "MPropertySuppressExpr": 272,
+      "MPropertySuppressField": 15,
+      "MVectorIsCoordinate": 102,
+      "MVectorIsSometimesCoordinate": 30
+    },
+    "whole_snapshot_MNotSaved_field_metadata_occurrences": 826
+  },
+  "source": {
+    "generator": "https://github.com/ValveResourceFormat/DumpSource2",
+    "input_bytes": 766991,
+    "input_name": "cs2-schema-11131657.json.gz",
+    "input_sha256": "740fc2c2b962f233a00534f19087207aca321af720314f1e68c17913734a3009",
+    "raw_json_bytes": 8247839,
+    "raw_json_sha256": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "revision": 11131657,
+    "snapshot_classes": 3753,
+    "snapshot_enums": 634,
+    "version_date": "Oct 14 2026",
+    "version_time": "16:57:53"
+  },
+  "status": "pass",
+  "verified_on": "2026-10-15"
+}

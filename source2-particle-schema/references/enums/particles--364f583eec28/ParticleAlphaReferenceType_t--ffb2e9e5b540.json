@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Texel Alpha & Particle Alpha & Alpha Reference\""
+          }
+        ],
+        "name": "PARTICLE_ALPHA_REFERENCE_ALPHA_ALPHA",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Particle Alpha & Alpha Reference\""
+          }
+        ],
+        "name": "PARTICLE_ALPHA_REFERENCE_OPAQUE_ALPHA",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Texel Alpha & Alpha Reference\""
+          }
+        ],
+        "name": "PARTICLE_ALPHA_REFERENCE_ALPHA_OPAQUE",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Alpha Reference\""
+          }
+        ],
+        "name": "PARTICLE_ALPHA_REFERENCE_OPAQUE_OPAQUE",
+        "value": 3
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleAlphaReferenceType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleAlphaReferenceType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "9bf60a311327d32d7f83e4b48e5e49e62eed87fd96ab1f6417bea732e0775998",
+    "json_pointer": "/enums/396",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

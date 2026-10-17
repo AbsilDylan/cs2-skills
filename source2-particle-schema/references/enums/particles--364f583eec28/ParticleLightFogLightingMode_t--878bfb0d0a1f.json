@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"None\""
+          }
+        ],
+        "name": "PARTICLE_LIGHT_FOG_LIGHTING_MODE_NONE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Dynamic Fog with Shadows\""
+          }
+        ],
+        "name": "PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Dynamic Fog No Shadows\""
+          }
+        ],
+        "name": "PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC_NOSHADOWS",
+        "value": 4
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleLightFogLightingMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleLightFogLightingMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "10dd3300b8ae0c58ae7f8b2392af4ed162ea2d2d24317a3221d211ef1ea8f35d",
+    "json_pointer": "/enums/413",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

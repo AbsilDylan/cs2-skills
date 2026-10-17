@@ -1,0 +1,73 @@
+{
+  "declaration": {
+    "alignment": 4,
+    "flags": [
+      "trivial_constructor",
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_nCollisionGroupNumber": -1
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "CollisionGroupContext_t",
+    "size": 4
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "CollisionGroupContext_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_nCollisionGroupNumber": {
+        "module": "particles",
+        "name": "CollisionGroupContext_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_nCollisionGroupNumber": -1
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CollisionGroupContext_t"
+      },
+      "field": {
+        "name": "m_nCollisionGroupNumber",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "CollisionGroupContext_t"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "f7a50281af7c05ce8060c8c87c58a041461d14d4515d34a17c0b5aede092b09d",
+    "json_pointer": "/classes/2125",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source 2 Particle Behavior"
+  short_description: "Diagnose emission, motion and particle rendering"
+  default_prompt: "Use $source2-particle-behavior to diagnose this native particle behavior using exact fields, documented meanings and focused engine observations."

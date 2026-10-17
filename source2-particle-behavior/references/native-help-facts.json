@@ -1,0 +1,271 @@
+{
+  "format": "source2-native-particle-help-facts/1",
+  "observedDate": "2026-10-15",
+  "source": {
+    "asset": "resource/toolhelp_particles_english.txt",
+    "bytes": 98264,
+    "sha256": "68e6c39f6fd7787952bbb1d2898dc259860a889f43b277895d9a183a565dc66e",
+    "crc32": "95a072d0",
+    "payloadVerifiedAgainstManifest": [
+      "length",
+      "sha256",
+      "crc32"
+    ],
+    "archive": {
+      "directoryFile": "pak01_dir.vpk",
+      "version": 2,
+      "directoryFileBytes": 83290,
+      "directoryIndexBytes": 64548,
+      "directoryIndexSha256": "4dcfa8143fe9b96ff76d839490e7e48ab44df07faa15aa402a29d9897088494d",
+      "hashScope": "header and directory tree; excludes payload and checksum/signature sections",
+      "entryCount": 1575,
+      "signatureVerified": false
+    },
+    "entry": {
+      "path": "resource/toolhelp_particles_english.txt",
+      "crc32": "95a072d0",
+      "archiveIndex": 5,
+      "offset": 88634656,
+      "archiveBytes": 98264,
+      "preloadBytes": 0,
+      "totalBytes": 98264,
+      "sha256": "68e6c39f6fd7787952bbb1d2898dc259860a889f43b277895d9a183a565dc66e",
+      "crc32Verified": true
+    }
+  },
+  "versionObservation": {
+    "sourceRevision": "11064488",
+    "versionDate": "2026-09-30",
+    "patchVersion": "1.41.8.8",
+    "versionFileSha256": "5948f4d63c2dbd64800149b04ea169d1f5196b33c37db2ba7dcc65d4ce6e4ea4",
+    "qualification": "Contemporaneous installed version metadata; not a cryptographic binding of that version to the VPK or help payload."
+  },
+  "qualifications": [
+    "Facts are concise original interpretations; the complete Valve help asset is not redistributed.",
+    "Exact case-sensitive tokens are retained. No historical class-name aliases are inferred.",
+    "Source text hashes and line spans identify the native help passages; requery the original asset to audit the full wording.",
+    "These facts do not establish compilation, retained KV3 properties, algorithms, runtime outputs or rendered pixels."
+  ],
+  "facts": [
+    {
+      "id": "continuous-start-seconds",
+      "level": "Documented",
+      "token": "Attribute.C_OP_ContinuousEmitter.m_flStartTime:help",
+      "sourceTextSha256": "98cf2dade1326f13175dcd2b97c2659f1e9705eeb960ffac36b0dc220055662c",
+      "line": 122,
+      "endLine": 122,
+      "interpretation": "Continuous-emission onset is documented in seconds.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "instant-start-seconds",
+      "level": "Documented",
+      "token": "Attribute.C_OP_InstantaneousEmitter.m_flStartTime:help",
+      "sourceTextSha256": "98cf2dade1326f13175dcd2b97c2659f1e9705eeb960ffac36b0dc220055662c",
+      "line": 115,
+      "endLine": 115,
+      "interpretation": "Burst onset is documented in seconds.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "continuous-rate",
+      "level": "Documented",
+      "token": "Attribute.C_OP_ContinuousEmitter.m_flEmitRate:help",
+      "sourceTextSha256": "146b98150b9fac1df81ff2fe4e241a20d2a87fc7e2619fe999f11596eb8b3e82",
+      "line": 125,
+      "endLine": 125,
+      "interpretation": "Continuous emission rate is documented as particle births per second.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "continuous-duration",
+      "level": "Documented",
+      "token": "Attribute.C_OP_ContinuousEmitter.m_flEmissionDuration:help",
+      "sourceTextSha256": "decdd8bac76ef0bedca35ab50d6df7e39705661cedc4b242a53443540725e319",
+      "line": 128,
+      "endLine": 128,
+      "interpretation": "Continuous emission duration is documented as an interval in seconds.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "continuous-zero-cap",
+      "level": "Documented",
+      "token": "Attribute.C_OP_ContinuousEmitter.m_nLimitPerUpdate:help",
+      "sourceTextSha256": "0397b8d1f7c79e27717d526ad962457115dbe8bf72a2db898d23e7127a6b6eca",
+      "line": 741,
+      "endLine": 741,
+      "interpretation": "The continuous update-cap documentation assigns zero the unlimited meaning.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "burst-once",
+      "level": "Documented",
+      "token": "Element.C_OP_InstantaneousEmitter:help",
+      "sourceTextSha256": "7c116a3365a00c467a5ae398c82d406060d7a27ea0e8866d868fc93eeec05537",
+      "line": 68,
+      "endLine": 68,
+      "interpretation": "The instantaneous emitter is documented as a nonrepeating burst.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "burst-cap",
+      "level": "Documented",
+      "token": "Attribute.C_OP_InstantaneousEmitter.m_nMaxEmittedPerFrame:help",
+      "sourceTextSha256": "21200d93e7335600945e970a6e6de45a780a3d4dae9a9bb0a617f0403fb495b2",
+      "line": 118,
+      "endLine": 119,
+      "interpretation": "The burst cap documentation distributes births over frames and warns about a common lifetime end; exact scheduling remains to be measured.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "population-ceiling",
+      "level": "Documented",
+      "token": "Attribute.CParticleSystemDefinition.m_nMaxParticles:help",
+      "sourceTextSha256": "4ef57e4b53e0bdedb80e8cd7e156b7543afa4bc0f3619bdeb06273ef8fb09708",
+      "line": 92,
+      "endLine": 94,
+      "interpretation": "The system limit applies to simultaneous particles; child effects have their own limits. Emission attempts beyond the limit are documented as failing.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "initial-particles",
+      "level": "Documented",
+      "token": "Attribute.CParticleSystemDefinition.m_nInitialParticles:help",
+      "sourceTextSha256": "c9230d0d14912bc950ff55a543990af58e55deab872320f783ce28f3be508e78",
+      "line": 98,
+      "endLine": 98,
+      "interpretation": "Initial particles are documented as additional births at effect creation, independent of emitter functions.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "lifespan-seconds",
+      "level": "Documented",
+      "token": "Attribute.CParticleSystemDefinition.m_flConstantLifespan:help",
+      "sourceTextSha256": "6325e71b29f930ba78d5f7f7e7dde6c190523e0a54cba797bb72ff8b3ed0d696",
+      "line": 96,
+      "endLine": 96,
+      "interpretation": "The constant particle lifespan is documented in seconds.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "simple-fade-in",
+      "level": "Documented",
+      "token": "Element.C_OP_FadeInSimple:help",
+      "sourceTextSha256": "3fb9ea2a668142f64e4a36000cdd43a38ac9ee0144113d5e3e217c141c90cdee",
+      "line": 83,
+      "endLine": 84,
+      "interpretation": "Simple fade-in timing is documented as a fraction of each particle lifespan.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "simple-fade-out",
+      "level": "Documented",
+      "token": "Element.C_OP_FadeOutSimple:help",
+      "sourceTextSha256": "5547df2bb3a7ae0ccf0cf2ef94394728b881b596619b036a3bbcd1fb9c36cdc1",
+      "line": 86,
+      "endLine": 87,
+      "interpretation": "Simple fade-out timing is documented as a fraction of each particle lifespan, applied at the end of that lifespan.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "radius-unit",
+      "level": "Documented",
+      "token": "Attribute.CParticleSystemDefinition.m_flConstantRadius:help",
+      "sourceTextSha256": "cbd52f1e63b6089918218538299ea41fad0be039211b1fd81cb1a439e7664fd0",
+      "line": 197,
+      "endLine": 197,
+      "interpretation": "The base particle radius is documented in world units.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "gravity",
+      "level": "Documented",
+      "token": "Attribute.C_OP_BasicMovement.m_Gravity:help",
+      "sourceTextSha256": "572dbab1a801dbd0cf2ff01fb4512e77416cc8b75378e7a56fe52d6610ea73f8",
+      "line": 6,
+      "endLine": 6,
+      "interpretation": "This field is documented as a gravitational influence on particles; no integrator formula is specified by this token.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "movement",
+      "level": "Documented",
+      "token": "Element.C_OP_BasicMovement:help",
+      "sourceTextSha256": "b39f0cec3a972977a14cc8aad17aa6393d83804b07510ca04c7f7613e773b1fb",
+      "line": 47,
+      "endLine": 48,
+      "interpretation": "Movement Basic is documented as enabling fundamental movement.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "attraction-sign",
+      "level": "Documented",
+      "token": "Element.C_OP_AttractToControlPoint:help",
+      "sourceTextSha256": "aefe12052884a5bcbcfa654fb1cae39b7bc55f106b27cefacae62ada9ec6c178",
+      "line": 89,
+      "endLine": 90,
+      "interpretation": "The attraction function is documented as pulling toward its CP and allowing repulsion with a negative force amount.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "shared-random-force",
+      "level": "Documented",
+      "token": "Element.C_OP_RandomForce:help",
+      "sourceTextSha256": "ea93f75d40f9fd7f57edb2e6ce44914cccc42b34a397378c247c7008bf901129",
+      "line": 237,
+      "endLine": 237,
+      "interpretation": "Random Force is documented as a common random influence over the effect; resampling details are not established by this fact.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "decay",
+      "level": "Documented",
+      "token": "Element.C_OP_Decay:help",
+      "sourceTextSha256": "09eb8d10bda65f3f69776a78e47358bce4771dffa56e50f60f20226c892d5c47",
+      "line": 41,
+      "endLine": 42,
+      "interpretation": "The decay function is documented as enabling particle removal; an alternative explicit removal mechanism may be used.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "sprite-sequences",
+      "level": "Documented",
+      "token": "Element.C_OP_RenderSprites:help",
+      "sourceTextSha256": "5d5c224c91ec5534cc26bdab5b6a418d10b46f3fd1ad1eac2f4941b62517c2e3",
+      "line": 50,
+      "endLine": 54,
+      "interpretation": "The sprite renderer is documented for single-frame and multiframe imagery, including animation and variation.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "trail-role",
+      "level": "Documented",
+      "token": "Element.C_OP_RenderTrails:help",
+      "sourceTextSha256": "d6ad75e3d8c268f889e797d0f83b5d3254dd73179551dca61907f4178abc901d",
+      "line": 56,
+      "endLine": 57,
+      "interpretation": "The trail renderer is documented as using motion-related stretching of sprite imagery.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "rope-role",
+      "level": "Documented",
+      "token": "Element.C_OP_RenderRopes:help",
+      "sourceTextSha256": "e5cda48166d997b6bc639791c46577fb886328f2fb6fae00091f2cd1057bf322",
+      "line": 59,
+      "endLine": 60,
+      "interpretation": "The rope renderer is documented as connecting points with sprite imagery and commonly tiled texture direction.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    },
+    {
+      "id": "normal-alignment",
+      "level": "Documented",
+      "token": "Attribute.CParticleSystemDefinition.m_ConstantNormal:help",
+      "sourceTextSha256": "5e4147ae701cf93ec5fe051c09d03ee23a08e0c0e5786dfe11baac0dc1010637",
+      "line": 100,
+      "endLine": 102,
+      "interpretation": "The normal input is documented for normal-aligned sprite orientations rather than all renderer modes.",
+      "scope": "Descriptive tool help, not a measured native runtime result."
+    }
+  ]
+}

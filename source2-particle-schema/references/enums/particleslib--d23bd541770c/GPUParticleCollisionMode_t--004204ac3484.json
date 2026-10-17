@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Raytracing TLAS\""
+          }
+        ],
+        "name": "PARTICLE_GPU_COLLISION_MODE_RT",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Primary View Depth Buffer\""
+          }
+        ],
+        "name": "PARTICLE_GPU_COLLISION_MODE_DEPTH",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Hybrid RT + Depth Buffer\""
+          }
+        ],
+        "name": "PARTICLE_GPU_COLLISION_MODE_HYBRID",
+        "value": 2
+      }
+    ],
+    "module": "particleslib",
+    "name": "GPUParticleCollisionMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "GPUParticleCollisionMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "a5a6bee0bde62601d5a200be87f06f95d412a1f4e10ca8506e187098d3fb9add",
+    "json_pointer": "/enums/458",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

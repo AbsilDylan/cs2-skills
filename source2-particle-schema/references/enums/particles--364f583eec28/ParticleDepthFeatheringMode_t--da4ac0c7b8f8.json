@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Off\""
+          }
+        ],
+        "name": "PARTICLE_DEPTH_FEATHERING_OFF",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"On (If Possible)\""
+          }
+        ],
+        "name": "PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"On (Required)\""
+          }
+        ],
+        "name": "PARTICLE_DEPTH_FEATHERING_ON_REQUIRED",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleDepthFeatheringMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleDepthFeatheringMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "284e6c9b65b895de1f8fb46c9ae0d4bd2c17c8433f6f055a8ba67c84e9dccfc3",
+    "json_pointer": "/enums/402",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

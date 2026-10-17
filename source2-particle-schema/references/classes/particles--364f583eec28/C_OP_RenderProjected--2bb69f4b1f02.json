@@ -1,0 +1,2729 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "VisibilityInputs": {
+            "m_bDotCPAngles": true,
+            "m_bDotCameraAngles": false,
+            "m_bRightEye": false,
+            "m_flAlphaScaleMax": 1.0,
+            "m_flAlphaScaleMin": 0.0,
+            "m_flCameraBias": 0.0,
+            "m_flDistanceInputMax": 0.0,
+            "m_flDistanceInputMin": 0.0,
+            "m_flDotInputMax": 0.0,
+            "m_flDotInputMin": 0.0,
+            "m_flInputMax": 1.0,
+            "m_flInputMin": 0.0,
+            "m_flInputPixelVisFade": 0.25,
+            "m_flNoPixelVisibilityFallback": 1.0,
+            "m_flProxyRadius": 1.0,
+            "m_flRadiusScaleFOVBase": 0.0,
+            "m_flRadiusScaleMax": 1.0,
+            "m_flRadiusScaleMin": 1.0,
+            "m_nCPin": -1
+          },
+          "m_MaterialVars": [],
+          "m_Notes": "",
+          "m_bCannotBeRefracted": true,
+          "m_bDisableOperator": false,
+          "m_bEnableProjectedDepthControls": false,
+          "m_bFlipHorizontal": false,
+          "m_bNormalizeToStopTime": false,
+          "m_bOrientToNormal": false,
+          "m_bProjectCharacter": false,
+          "m_bProjectWater": true,
+          "m_bProjectWorld": true,
+          "m_flAlphaScale": {
+            "m_Curve": {
+              "m_spline": [],
+              "m_tangents": [],
+              "m_vDomainMaxs": [
+                0.0,
+                0.0
+              ],
+              "m_vDomainMins": [
+                0.0,
+                0.0
+              ]
+            },
+            "m_NamedValue": "",
+            "m_bHasRandomSignFlip": false,
+            "m_bNoiseImgPreviewLive": true,
+            "m_bReverseOrder": false,
+            "m_bUseBoundsCenter": false,
+            "m_flBiasParameter": 0.0,
+            "m_flCompareValue": 0.0,
+            "m_flInput0": 0.0,
+            "m_flInput1": 1.0,
+            "m_flLOD0": 0.0,
+            "m_flLOD1": 0.0,
+            "m_flLOD2": 0.0,
+            "m_flLOD3": 0.0,
+            "m_flLiteralValue": 1.0,
+            "m_flMultFactor": 1.0,
+            "m_flNoCameraFallback": 0.0,
+            "m_flNoiseImgPreviewScale": 1.0,
+            "m_flNoiseOffset": 0.0,
+            "m_flNoiseOutputMax": 1.0,
+            "m_flNoiseOutputMin": 0.0,
+            "m_flNoiseScale": 0.1,
+            "m_flNoiseTurbulenceMix": 0.5,
+            "m_flNoiseTurbulenceScale": 1.0,
+            "m_flNotchedOutputInside": 1.0,
+            "m_flNotchedOutputOutside": 0.0,
+            "m_flNotchedRangeMax": 1.0,
+            "m_flNotchedRangeMin": 0.0,
+            "m_flOutput0": 0.0,
+            "m_flOutput1": 1.0,
+            "m_flRandomMax": 1.0,
+            "m_flRandomMin": 0.0,
+            "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+            "m_nControlPoint": 0,
+            "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+            "m_nMapType": "PF_MAP_TYPE_DIRECT",
+            "m_nNoiseInputVectorAttribute": 0,
+            "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+            "m_nNoiseOctaves": 1,
+            "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+            "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+            "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+            "m_nRandomSeed": 0,
+            "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+            "m_nScalarAttribute": 3,
+            "m_nType": "PF_TYPE_LITERAL",
+            "m_nVectorAttribute": 6,
+            "m_nVectorComponent": 0,
+            "m_strSnapshotSubset": "",
+            "m_vecNoiseOffsetRate": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "m_flAnimationTimeScale": 1.0,
+          "m_flMaterialSelection": {
+            "m_Curve": {
+              "m_spline": [],
+              "m_tangents": [],
+              "m_vDomainMaxs": [
+                0.0,
+                0.0
+              ],
+              "m_vDomainMins": [
+                0.0,
+                0.0
+              ]
+            },
+            "m_NamedValue": "",
+            "m_bHasRandomSignFlip": false,
+            "m_bNoiseImgPreviewLive": true,
+            "m_bReverseOrder": false,
+            "m_bUseBoundsCenter": false,
+            "m_flBiasParameter": 0.0,
+            "m_flCompareValue": 0.0,
+            "m_flInput0": 0.0,
+            "m_flInput1": 1.0,
+            "m_flLOD0": 0.0,
+            "m_flLOD1": 0.0,
+            "m_flLOD2": 0.0,
+            "m_flLOD3": 0.0,
+            "m_flLiteralValue": 0.0,
+            "m_flMultFactor": 1.0,
+            "m_flNoCameraFallback": 0.0,
+            "m_flNoiseImgPreviewScale": 1.0,
+            "m_flNoiseOffset": 0.0,
+            "m_flNoiseOutputMax": 1.0,
+            "m_flNoiseOutputMin": 0.0,
+            "m_flNoiseScale": 0.1,
+            "m_flNoiseTurbulenceMix": 0.5,
+            "m_flNoiseTurbulenceScale": 1.0,
+            "m_flNotchedOutputInside": 1.0,
+            "m_flNotchedOutputOutside": 0.0,
+            "m_flNotchedRangeMax": 1.0,
+            "m_flNotchedRangeMin": 0.0,
+            "m_flOutput0": 0.0,
+            "m_flOutput1": 1.0,
+            "m_flRandomMax": 1.0,
+            "m_flRandomMin": 0.0,
+            "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+            "m_nControlPoint": 0,
+            "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+            "m_nMapType": "PF_MAP_TYPE_DIRECT",
+            "m_nNoiseInputVectorAttribute": 0,
+            "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+            "m_nNoiseOctaves": 1,
+            "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+            "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+            "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+            "m_nRandomSeed": 0,
+            "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+            "m_nScalarAttribute": 3,
+            "m_nType": "PF_TYPE_LITERAL",
+            "m_nVectorAttribute": 6,
+            "m_nVectorComponent": 0,
+            "m_strSnapshotSubset": "",
+            "m_vecNoiseOffsetRate": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "m_flMaxProjectionDepth": 128.0,
+          "m_flMinProjectionDepth": -128.0,
+          "m_flOpEndFadeInTime": 0.0,
+          "m_flOpEndFadeOutTime": 0.0,
+          "m_flOpFadeOscillatePeriod": 0.0,
+          "m_flOpStartFadeInTime": 0.0,
+          "m_flOpStartFadeOutTime": 0.0,
+          "m_flOpStrength": {
+            "m_Curve": {
+              "m_spline": [],
+              "m_tangents": [],
+              "m_vDomainMaxs": [
+                0.0,
+                0.0
+              ],
+              "m_vDomainMins": [
+                0.0,
+                0.0
+              ]
+            },
+            "m_NamedValue": "",
+            "m_bHasRandomSignFlip": false,
+            "m_bNoiseImgPreviewLive": true,
+            "m_bReverseOrder": false,
+            "m_bUseBoundsCenter": false,
+            "m_flBiasParameter": 0.0,
+            "m_flCompareValue": 0.0,
+            "m_flInput0": 0.0,
+            "m_flInput1": 1.0,
+            "m_flLOD0": 0.0,
+            "m_flLOD1": 0.0,
+            "m_flLOD2": 0.0,
+            "m_flLOD3": 0.0,
+            "m_flLiteralValue": 1.0,
+            "m_flMultFactor": 1.0,
+            "m_flNoCameraFallback": 0.0,
+            "m_flNoiseImgPreviewScale": 1.0,
+            "m_flNoiseOffset": 0.0,
+            "m_flNoiseOutputMax": 1.0,
+            "m_flNoiseOutputMin": 0.0,
+            "m_flNoiseScale": 0.1,
+            "m_flNoiseTurbulenceMix": 0.5,
+            "m_flNoiseTurbulenceScale": 1.0,
+            "m_flNotchedOutputInside": 1.0,
+            "m_flNotchedOutputOutside": 0.0,
+            "m_flNotchedRangeMax": 1.0,
+            "m_flNotchedRangeMin": 0.0,
+            "m_flOutput0": 0.0,
+            "m_flOutput1": 1.0,
+            "m_flRandomMax": 1.0,
+            "m_flRandomMin": 0.0,
+            "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+            "m_nControlPoint": 0,
+            "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+            "m_nMapType": "PF_MAP_TYPE_DIRECT",
+            "m_nNoiseInputVectorAttribute": 0,
+            "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+            "m_nNoiseOctaves": 1,
+            "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+            "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+            "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+            "m_nRandomSeed": 0,
+            "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+            "m_nScalarAttribute": 3,
+            "m_nType": "PF_TYPE_LITERAL",
+            "m_nVectorAttribute": 6,
+            "m_nVectorComponent": 0,
+            "m_strSnapshotSubset": "",
+            "m_vecNoiseOffsetRate": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "m_flOpTimeOffsetMax": 0.0,
+          "m_flOpTimeOffsetMin": 0.0,
+          "m_flOpTimeScaleMax": 1.0,
+          "m_flOpTimeScaleMin": 1.0,
+          "m_flRadiusScale": {
+            "m_Curve": {
+              "m_spline": [],
+              "m_tangents": [],
+              "m_vDomainMaxs": [
+                0.0,
+                0.0
+              ],
+              "m_vDomainMins": [
+                0.0,
+                0.0
+              ]
+            },
+            "m_NamedValue": "",
+            "m_bHasRandomSignFlip": false,
+            "m_bNoiseImgPreviewLive": true,
+            "m_bReverseOrder": false,
+            "m_bUseBoundsCenter": false,
+            "m_flBiasParameter": 0.0,
+            "m_flCompareValue": 0.0,
+            "m_flInput0": 0.0,
+            "m_flInput1": 1.0,
+            "m_flLOD0": 0.0,
+            "m_flLOD1": 0.0,
+            "m_flLOD2": 0.0,
+            "m_flLOD3": 0.0,
+            "m_flLiteralValue": 1.0,
+            "m_flMultFactor": 1.0,
+            "m_flNoCameraFallback": 0.0,
+            "m_flNoiseImgPreviewScale": 1.0,
+            "m_flNoiseOffset": 0.0,
+            "m_flNoiseOutputMax": 1.0,
+            "m_flNoiseOutputMin": 0.0,
+            "m_flNoiseScale": 0.1,
+            "m_flNoiseTurbulenceMix": 0.5,
+            "m_flNoiseTurbulenceScale": 1.0,
+            "m_flNotchedOutputInside": 1.0,
+            "m_flNotchedOutputOutside": 0.0,
+            "m_flNotchedRangeMax": 1.0,
+            "m_flNotchedRangeMin": 0.0,
+            "m_flOutput0": 0.0,
+            "m_flOutput1": 1.0,
+            "m_flRandomMax": 1.0,
+            "m_flRandomMin": 0.0,
+            "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+            "m_nControlPoint": 0,
+            "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+            "m_nMapType": "PF_MAP_TYPE_DIRECT",
+            "m_nNoiseInputVectorAttribute": 0,
+            "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+            "m_nNoiseOctaves": 1,
+            "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+            "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+            "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+            "m_nRandomSeed": 0,
+            "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+            "m_nScalarAttribute": 3,
+            "m_nType": "PF_TYPE_LITERAL",
+            "m_nVectorAttribute": 6,
+            "m_nVectorComponent": 0,
+            "m_strSnapshotSubset": "",
+            "m_vecNoiseOffsetRate": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "m_flRollScale": {
+            "m_Curve": {
+              "m_spline": [],
+              "m_tangents": [],
+              "m_vDomainMaxs": [
+                0.0,
+                0.0
+              ],
+              "m_vDomainMins": [
+                0.0,
+                0.0
+              ]
+            },
+            "m_NamedValue": "",
+            "m_bHasRandomSignFlip": false,
+            "m_bNoiseImgPreviewLive": true,
+            "m_bReverseOrder": false,
+            "m_bUseBoundsCenter": false,
+            "m_flBiasParameter": 0.0,
+            "m_flCompareValue": 0.0,
+            "m_flInput0": 0.0,
+            "m_flInput1": 1.0,
+            "m_flLOD0": 0.0,
+            "m_flLOD1": 0.0,
+            "m_flLOD2": 0.0,
+            "m_flLOD3": 0.0,
+            "m_flLiteralValue": 1.0,
+            "m_flMultFactor": 1.0,
+            "m_flNoCameraFallback": 0.0,
+            "m_flNoiseImgPreviewScale": 1.0,
+            "m_flNoiseOffset": 0.0,
+            "m_flNoiseOutputMax": 1.0,
+            "m_flNoiseOutputMin": 0.0,
+            "m_flNoiseScale": 0.1,
+            "m_flNoiseTurbulenceMix": 0.5,
+            "m_flNoiseTurbulenceScale": 1.0,
+            "m_flNotchedOutputInside": 1.0,
+            "m_flNotchedOutputOutside": 0.0,
+            "m_flNotchedRangeMax": 1.0,
+            "m_flNotchedRangeMin": 0.0,
+            "m_flOutput0": 0.0,
+            "m_flOutput1": 1.0,
+            "m_flRandomMax": 1.0,
+            "m_flRandomMin": 0.0,
+            "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+            "m_nControlPoint": 0,
+            "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+            "m_nMapType": "PF_MAP_TYPE_DIRECT",
+            "m_nNoiseInputVectorAttribute": 0,
+            "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+            "m_nNoiseOctaves": 1,
+            "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+            "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+            "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+            "m_nRandomSeed": 0,
+            "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+            "m_nScalarAttribute": 3,
+            "m_nType": "PF_TYPE_LITERAL",
+            "m_nVectorAttribute": 6,
+            "m_nVectorComponent": 0,
+            "m_strSnapshotSubset": "",
+            "m_vecNoiseOffsetRate": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "m_nAlpha2Field": 16,
+          "m_nColorBlendType": "PARTICLE_COLOR_BLEND_MULTIPLY",
+          "m_nOpEndCapState": "PARTICLE_ENDCAP_ALWAYS_ON",
+          "m_nOpTimeOffsetSeed": 0,
+          "m_nOpTimeScaleSeed": 0,
+          "m_nToolsState": "PARTICLE_TOOLS_STATE_ALWAYS_ON",
+          "m_vecColorScale": {
+            "m_FloatComponentX": {
+              "m_Curve": {
+                "m_spline": [],
+                "m_tangents": [],
+                "m_vDomainMaxs": [
+                  0.0,
+                  0.0
+                ],
+                "m_vDomainMins": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "m_NamedValue": "",
+              "m_bHasRandomSignFlip": false,
+              "m_bNoiseImgPreviewLive": true,
+              "m_bReverseOrder": false,
+              "m_bUseBoundsCenter": false,
+              "m_flBiasParameter": 0.0,
+              "m_flCompareValue": 0.0,
+              "m_flInput0": 0.0,
+              "m_flInput1": 1.0,
+              "m_flLOD0": 0.0,
+              "m_flLOD1": 0.0,
+              "m_flLOD2": 0.0,
+              "m_flLOD3": 0.0,
+              "m_flLiteralValue": 0.0,
+              "m_flMultFactor": 1.0,
+              "m_flNoCameraFallback": 0.0,
+              "m_flNoiseImgPreviewScale": 1.0,
+              "m_flNoiseOffset": 0.0,
+              "m_flNoiseOutputMax": 1.0,
+              "m_flNoiseOutputMin": 0.0,
+              "m_flNoiseScale": 0.1,
+              "m_flNoiseTurbulenceMix": 0.5,
+              "m_flNoiseTurbulenceScale": 1.0,
+              "m_flNotchedOutputInside": 1.0,
+              "m_flNotchedOutputOutside": 0.0,
+              "m_flNotchedRangeMax": 1.0,
+              "m_flNotchedRangeMin": 0.0,
+              "m_flOutput0": 0.0,
+              "m_flOutput1": 1.0,
+              "m_flRandomMax": 1.0,
+              "m_flRandomMin": 0.0,
+              "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+              "m_nControlPoint": 0,
+              "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+              "m_nMapType": "PF_MAP_TYPE_DIRECT",
+              "m_nNoiseInputVectorAttribute": 0,
+              "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+              "m_nNoiseOctaves": 1,
+              "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+              "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+              "m_nRandomSeed": 0,
+              "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+              "m_nScalarAttribute": 3,
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_nVectorAttribute": 6,
+              "m_nVectorComponent": 0,
+              "m_strSnapshotSubset": "",
+              "m_vecNoiseOffsetRate": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "m_FloatComponentY": {
+              "m_Curve": {
+                "m_spline": [],
+                "m_tangents": [],
+                "m_vDomainMaxs": [
+                  0.0,
+                  0.0
+                ],
+                "m_vDomainMins": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "m_NamedValue": "",
+              "m_bHasRandomSignFlip": false,
+              "m_bNoiseImgPreviewLive": true,
+              "m_bReverseOrder": false,
+              "m_bUseBoundsCenter": false,
+              "m_flBiasParameter": 0.0,
+              "m_flCompareValue": 0.0,
+              "m_flInput0": 0.0,
+              "m_flInput1": 1.0,
+              "m_flLOD0": 0.0,
+              "m_flLOD1": 0.0,
+              "m_flLOD2": 0.0,
+              "m_flLOD3": 0.0,
+              "m_flLiteralValue": 0.0,
+              "m_flMultFactor": 1.0,
+              "m_flNoCameraFallback": 0.0,
+              "m_flNoiseImgPreviewScale": 1.0,
+              "m_flNoiseOffset": 0.0,
+              "m_flNoiseOutputMax": 1.0,
+              "m_flNoiseOutputMin": 0.0,
+              "m_flNoiseScale": 0.1,
+              "m_flNoiseTurbulenceMix": 0.5,
+              "m_flNoiseTurbulenceScale": 1.0,
+              "m_flNotchedOutputInside": 1.0,
+              "m_flNotchedOutputOutside": 0.0,
+              "m_flNotchedRangeMax": 1.0,
+              "m_flNotchedRangeMin": 0.0,
+              "m_flOutput0": 0.0,
+              "m_flOutput1": 1.0,
+              "m_flRandomMax": 1.0,
+              "m_flRandomMin": 0.0,
+              "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+              "m_nControlPoint": 0,
+              "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+              "m_nMapType": "PF_MAP_TYPE_DIRECT",
+              "m_nNoiseInputVectorAttribute": 0,
+              "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+              "m_nNoiseOctaves": 1,
+              "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+              "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+              "m_nRandomSeed": 0,
+              "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+              "m_nScalarAttribute": 3,
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_nVectorAttribute": 6,
+              "m_nVectorComponent": 0,
+              "m_strSnapshotSubset": "",
+              "m_vecNoiseOffsetRate": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "m_FloatComponentZ": {
+              "m_Curve": {
+                "m_spline": [],
+                "m_tangents": [],
+                "m_vDomainMaxs": [
+                  0.0,
+                  0.0
+                ],
+                "m_vDomainMins": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "m_NamedValue": "",
+              "m_bHasRandomSignFlip": false,
+              "m_bNoiseImgPreviewLive": true,
+              "m_bReverseOrder": false,
+              "m_bUseBoundsCenter": false,
+              "m_flBiasParameter": 0.0,
+              "m_flCompareValue": 0.0,
+              "m_flInput0": 0.0,
+              "m_flInput1": 1.0,
+              "m_flLOD0": 0.0,
+              "m_flLOD1": 0.0,
+              "m_flLOD2": 0.0,
+              "m_flLOD3": 0.0,
+              "m_flLiteralValue": 0.0,
+              "m_flMultFactor": 1.0,
+              "m_flNoCameraFallback": 0.0,
+              "m_flNoiseImgPreviewScale": 1.0,
+              "m_flNoiseOffset": 0.0,
+              "m_flNoiseOutputMax": 1.0,
+              "m_flNoiseOutputMin": 0.0,
+              "m_flNoiseScale": 0.1,
+              "m_flNoiseTurbulenceMix": 0.5,
+              "m_flNoiseTurbulenceScale": 1.0,
+              "m_flNotchedOutputInside": 1.0,
+              "m_flNotchedOutputOutside": 0.0,
+              "m_flNotchedRangeMax": 1.0,
+              "m_flNotchedRangeMin": 0.0,
+              "m_flOutput0": 0.0,
+              "m_flOutput1": 1.0,
+              "m_flRandomMax": 1.0,
+              "m_flRandomMin": 0.0,
+              "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+              "m_nControlPoint": 0,
+              "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+              "m_nMapType": "PF_MAP_TYPE_DIRECT",
+              "m_nNoiseInputVectorAttribute": 0,
+              "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+              "m_nNoiseOctaves": 1,
+              "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+              "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+              "m_nRandomSeed": 0,
+              "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+              "m_nScalarAttribute": 3,
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_nVectorAttribute": 6,
+              "m_nVectorComponent": 0,
+              "m_strSnapshotSubset": "",
+              "m_vecNoiseOffsetRate": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "m_FloatInterp": {
+              "m_Curve": {
+                "m_spline": [],
+                "m_tangents": [],
+                "m_vDomainMaxs": [
+                  0.0,
+                  0.0
+                ],
+                "m_vDomainMins": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "m_NamedValue": "",
+              "m_bHasRandomSignFlip": false,
+              "m_bNoiseImgPreviewLive": true,
+              "m_bReverseOrder": false,
+              "m_bUseBoundsCenter": false,
+              "m_flBiasParameter": 0.0,
+              "m_flCompareValue": 0.0,
+              "m_flInput0": 0.0,
+              "m_flInput1": 1.0,
+              "m_flLOD0": 0.0,
+              "m_flLOD1": 0.0,
+              "m_flLOD2": 0.0,
+              "m_flLOD3": 0.0,
+              "m_flLiteralValue": 0.0,
+              "m_flMultFactor": 1.0,
+              "m_flNoCameraFallback": 0.0,
+              "m_flNoiseImgPreviewScale": 1.0,
+              "m_flNoiseOffset": 0.0,
+              "m_flNoiseOutputMax": 1.0,
+              "m_flNoiseOutputMin": 0.0,
+              "m_flNoiseScale": 0.1,
+              "m_flNoiseTurbulenceMix": 0.5,
+              "m_flNoiseTurbulenceScale": 1.0,
+              "m_flNotchedOutputInside": 1.0,
+              "m_flNotchedOutputOutside": 0.0,
+              "m_flNotchedRangeMax": 1.0,
+              "m_flNotchedRangeMin": 0.0,
+              "m_flOutput0": 0.0,
+              "m_flOutput1": 1.0,
+              "m_flRandomMax": 1.0,
+              "m_flRandomMin": 0.0,
+              "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+              "m_nControlPoint": 0,
+              "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+              "m_nMapType": "PF_MAP_TYPE_DIRECT",
+              "m_nNoiseInputVectorAttribute": 0,
+              "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+              "m_nNoiseOctaves": 1,
+              "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+              "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+              "m_nRandomSeed": 0,
+              "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+              "m_nScalarAttribute": 3,
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_nVectorAttribute": 6,
+              "m_nVectorComponent": 0,
+              "m_strSnapshotSubset": "",
+              "m_vecNoiseOffsetRate": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "m_Gradient": {
+              "m_Stops": []
+            },
+            "m_LiteralColor": [
+              255,
+              255,
+              255
+            ],
+            "m_NamedValue": "",
+            "m_bFollowNamedValue": false,
+            "m_flInterpInput0": 0.0,
+            "m_flInterpInput1": 1.0,
+            "m_nControlPoint": 0,
+            "m_nDeltaControlPoint": 0,
+            "m_nType": "PVEC_TYPE_LITERAL_COLOR",
+            "m_nVectorAttribute": 6,
+            "m_vCPRelativeDir": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "m_vCPRelativePosition": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "m_vCPValueScale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "m_vInterpOutput0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "m_vInterpOutput1": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "m_vLiteralValue": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "m_vRandomMax": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "m_vRandomMin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "m_vVectorAttributeScale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "m_vecProjectedMaterials": []
+        }
+      },
+      {
+        "name": "MHasKV3TransferPolymorphicClassname"
+      }
+    ],
+    "module": "particles",
+    "name": "C_OP_RenderProjected",
+    "parents": [
+      {
+        "module": "particles",
+        "name": "CParticleFunctionRenderer"
+      }
+    ],
+    "size": 3928
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      {
+        "module": "particles",
+        "name": "CParticleFunctionRenderer"
+      },
+      {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "particles",
+          "name": "CParticleFunction"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      },
+      {
+        "class": {
+          "module": "particles",
+          "name": "CParticleFunctionRenderer"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "VisibilityInputs": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_MaterialVars": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_Notes": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bCannotBeRefracted": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bDisableOperator": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bEnableProjectedDepthControls": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bFlipHorizontal": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bNormalizeToStopTime": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bOrientToNormal": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bProjectCharacter": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bProjectWater": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_bProjectWorld": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flAlphaScale": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flAnimationTimeScale": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flMaterialSelection": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flMaxProjectionDepth": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flMinProjectionDepth": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpEndFadeInTime": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpEndFadeOutTime": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpFadeOscillatePeriod": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpStartFadeInTime": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpStartFadeOutTime": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpStrength": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpTimeOffsetMax": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpTimeOffsetMin": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpTimeScaleMax": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flOpTimeScaleMin": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flRadiusScale": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_flRollScale": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_nAlpha2Field": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_nColorBlendType": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_nOpEndCapState": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_nOpTimeOffsetSeed": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_nOpTimeScaleSeed": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_nToolsState": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_vecColorScale": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "m_vecProjectedMaterials": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      }
+    },
+    "status": "partial",
+    "values": {
+      "VisibilityInputs": {
+        "m_bDotCPAngles": true,
+        "m_bDotCameraAngles": false,
+        "m_bRightEye": false,
+        "m_flAlphaScaleMax": 1.0,
+        "m_flAlphaScaleMin": 0.0,
+        "m_flCameraBias": 0.0,
+        "m_flDistanceInputMax": 0.0,
+        "m_flDistanceInputMin": 0.0,
+        "m_flDotInputMax": 0.0,
+        "m_flDotInputMin": 0.0,
+        "m_flInputMax": 1.0,
+        "m_flInputMin": 0.0,
+        "m_flInputPixelVisFade": 0.25,
+        "m_flNoPixelVisibilityFallback": 1.0,
+        "m_flProxyRadius": 1.0,
+        "m_flRadiusScaleFOVBase": 0.0,
+        "m_flRadiusScaleMax": 1.0,
+        "m_flRadiusScaleMin": 1.0,
+        "m_nCPin": -1
+      },
+      "m_MaterialVars": [],
+      "m_Notes": "",
+      "m_bCannotBeRefracted": true,
+      "m_bDisableOperator": false,
+      "m_bEnableProjectedDepthControls": false,
+      "m_bFlipHorizontal": false,
+      "m_bNormalizeToStopTime": false,
+      "m_bOrientToNormal": false,
+      "m_bProjectCharacter": false,
+      "m_bProjectWater": true,
+      "m_bProjectWorld": true,
+      "m_flAlphaScale": {
+        "m_Curve": {
+          "m_spline": [],
+          "m_tangents": [],
+          "m_vDomainMaxs": [
+            0.0,
+            0.0
+          ],
+          "m_vDomainMins": [
+            0.0,
+            0.0
+          ]
+        },
+        "m_NamedValue": "",
+        "m_bHasRandomSignFlip": false,
+        "m_bNoiseImgPreviewLive": true,
+        "m_bReverseOrder": false,
+        "m_bUseBoundsCenter": false,
+        "m_flBiasParameter": 0.0,
+        "m_flCompareValue": 0.0,
+        "m_flInput0": 0.0,
+        "m_flInput1": 1.0,
+        "m_flLOD0": 0.0,
+        "m_flLOD1": 0.0,
+        "m_flLOD2": 0.0,
+        "m_flLOD3": 0.0,
+        "m_flLiteralValue": 1.0,
+        "m_flMultFactor": 1.0,
+        "m_flNoCameraFallback": 0.0,
+        "m_flNoiseImgPreviewScale": 1.0,
+        "m_flNoiseOffset": 0.0,
+        "m_flNoiseOutputMax": 1.0,
+        "m_flNoiseOutputMin": 0.0,
+        "m_flNoiseScale": 0.1,
+        "m_flNoiseTurbulenceMix": 0.5,
+        "m_flNoiseTurbulenceScale": 1.0,
+        "m_flNotchedOutputInside": 1.0,
+        "m_flNotchedOutputOutside": 0.0,
+        "m_flNotchedRangeMax": 1.0,
+        "m_flNotchedRangeMin": 0.0,
+        "m_flOutput0": 0.0,
+        "m_flOutput1": 1.0,
+        "m_flRandomMax": 1.0,
+        "m_flRandomMin": 0.0,
+        "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+        "m_nControlPoint": 0,
+        "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+        "m_nMapType": "PF_MAP_TYPE_DIRECT",
+        "m_nNoiseInputVectorAttribute": 0,
+        "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+        "m_nNoiseOctaves": 1,
+        "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+        "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+        "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+        "m_nRandomSeed": 0,
+        "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+        "m_nScalarAttribute": 3,
+        "m_nType": "PF_TYPE_LITERAL",
+        "m_nVectorAttribute": 6,
+        "m_nVectorComponent": 0,
+        "m_strSnapshotSubset": "",
+        "m_vecNoiseOffsetRate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "m_flAnimationTimeScale": 1.0,
+      "m_flMaterialSelection": {
+        "m_Curve": {
+          "m_spline": [],
+          "m_tangents": [],
+          "m_vDomainMaxs": [
+            0.0,
+            0.0
+          ],
+          "m_vDomainMins": [
+            0.0,
+            0.0
+          ]
+        },
+        "m_NamedValue": "",
+        "m_bHasRandomSignFlip": false,
+        "m_bNoiseImgPreviewLive": true,
+        "m_bReverseOrder": false,
+        "m_bUseBoundsCenter": false,
+        "m_flBiasParameter": 0.0,
+        "m_flCompareValue": 0.0,
+        "m_flInput0": 0.0,
+        "m_flInput1": 1.0,
+        "m_flLOD0": 0.0,
+        "m_flLOD1": 0.0,
+        "m_flLOD2": 0.0,
+        "m_flLOD3": 0.0,
+        "m_flLiteralValue": 0.0,
+        "m_flMultFactor": 1.0,
+        "m_flNoCameraFallback": 0.0,
+        "m_flNoiseImgPreviewScale": 1.0,
+        "m_flNoiseOffset": 0.0,
+        "m_flNoiseOutputMax": 1.0,
+        "m_flNoiseOutputMin": 0.0,
+        "m_flNoiseScale": 0.1,
+        "m_flNoiseTurbulenceMix": 0.5,
+        "m_flNoiseTurbulenceScale": 1.0,
+        "m_flNotchedOutputInside": 1.0,
+        "m_flNotchedOutputOutside": 0.0,
+        "m_flNotchedRangeMax": 1.0,
+        "m_flNotchedRangeMin": 0.0,
+        "m_flOutput0": 0.0,
+        "m_flOutput1": 1.0,
+        "m_flRandomMax": 1.0,
+        "m_flRandomMin": 0.0,
+        "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+        "m_nControlPoint": 0,
+        "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+        "m_nMapType": "PF_MAP_TYPE_DIRECT",
+        "m_nNoiseInputVectorAttribute": 0,
+        "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+        "m_nNoiseOctaves": 1,
+        "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+        "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+        "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+        "m_nRandomSeed": 0,
+        "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+        "m_nScalarAttribute": 3,
+        "m_nType": "PF_TYPE_LITERAL",
+        "m_nVectorAttribute": 6,
+        "m_nVectorComponent": 0,
+        "m_strSnapshotSubset": "",
+        "m_vecNoiseOffsetRate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "m_flMaxProjectionDepth": 128.0,
+      "m_flMinProjectionDepth": -128.0,
+      "m_flOpEndFadeInTime": 0.0,
+      "m_flOpEndFadeOutTime": 0.0,
+      "m_flOpFadeOscillatePeriod": 0.0,
+      "m_flOpStartFadeInTime": 0.0,
+      "m_flOpStartFadeOutTime": 0.0,
+      "m_flOpStrength": {
+        "m_Curve": {
+          "m_spline": [],
+          "m_tangents": [],
+          "m_vDomainMaxs": [
+            0.0,
+            0.0
+          ],
+          "m_vDomainMins": [
+            0.0,
+            0.0
+          ]
+        },
+        "m_NamedValue": "",
+        "m_bHasRandomSignFlip": false,
+        "m_bNoiseImgPreviewLive": true,
+        "m_bReverseOrder": false,
+        "m_bUseBoundsCenter": false,
+        "m_flBiasParameter": 0.0,
+        "m_flCompareValue": 0.0,
+        "m_flInput0": 0.0,
+        "m_flInput1": 1.0,
+        "m_flLOD0": 0.0,
+        "m_flLOD1": 0.0,
+        "m_flLOD2": 0.0,
+        "m_flLOD3": 0.0,
+        "m_flLiteralValue": 1.0,
+        "m_flMultFactor": 1.0,
+        "m_flNoCameraFallback": 0.0,
+        "m_flNoiseImgPreviewScale": 1.0,
+        "m_flNoiseOffset": 0.0,
+        "m_flNoiseOutputMax": 1.0,
+        "m_flNoiseOutputMin": 0.0,
+        "m_flNoiseScale": 0.1,
+        "m_flNoiseTurbulenceMix": 0.5,
+        "m_flNoiseTurbulenceScale": 1.0,
+        "m_flNotchedOutputInside": 1.0,
+        "m_flNotchedOutputOutside": 0.0,
+        "m_flNotchedRangeMax": 1.0,
+        "m_flNotchedRangeMin": 0.0,
+        "m_flOutput0": 0.0,
+        "m_flOutput1": 1.0,
+        "m_flRandomMax": 1.0,
+        "m_flRandomMin": 0.0,
+        "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+        "m_nControlPoint": 0,
+        "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+        "m_nMapType": "PF_MAP_TYPE_DIRECT",
+        "m_nNoiseInputVectorAttribute": 0,
+        "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+        "m_nNoiseOctaves": 1,
+        "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+        "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+        "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+        "m_nRandomSeed": 0,
+        "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+        "m_nScalarAttribute": 3,
+        "m_nType": "PF_TYPE_LITERAL",
+        "m_nVectorAttribute": 6,
+        "m_nVectorComponent": 0,
+        "m_strSnapshotSubset": "",
+        "m_vecNoiseOffsetRate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "m_flOpTimeOffsetMax": 0.0,
+      "m_flOpTimeOffsetMin": 0.0,
+      "m_flOpTimeScaleMax": 1.0,
+      "m_flOpTimeScaleMin": 1.0,
+      "m_flRadiusScale": {
+        "m_Curve": {
+          "m_spline": [],
+          "m_tangents": [],
+          "m_vDomainMaxs": [
+            0.0,
+            0.0
+          ],
+          "m_vDomainMins": [
+            0.0,
+            0.0
+          ]
+        },
+        "m_NamedValue": "",
+        "m_bHasRandomSignFlip": false,
+        "m_bNoiseImgPreviewLive": true,
+        "m_bReverseOrder": false,
+        "m_bUseBoundsCenter": false,
+        "m_flBiasParameter": 0.0,
+        "m_flCompareValue": 0.0,
+        "m_flInput0": 0.0,
+        "m_flInput1": 1.0,
+        "m_flLOD0": 0.0,
+        "m_flLOD1": 0.0,
+        "m_flLOD2": 0.0,
+        "m_flLOD3": 0.0,
+        "m_flLiteralValue": 1.0,
+        "m_flMultFactor": 1.0,
+        "m_flNoCameraFallback": 0.0,
+        "m_flNoiseImgPreviewScale": 1.0,
+        "m_flNoiseOffset": 0.0,
+        "m_flNoiseOutputMax": 1.0,
+        "m_flNoiseOutputMin": 0.0,
+        "m_flNoiseScale": 0.1,
+        "m_flNoiseTurbulenceMix": 0.5,
+        "m_flNoiseTurbulenceScale": 1.0,
+        "m_flNotchedOutputInside": 1.0,
+        "m_flNotchedOutputOutside": 0.0,
+        "m_flNotchedRangeMax": 1.0,
+        "m_flNotchedRangeMin": 0.0,
+        "m_flOutput0": 0.0,
+        "m_flOutput1": 1.0,
+        "m_flRandomMax": 1.0,
+        "m_flRandomMin": 0.0,
+        "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+        "m_nControlPoint": 0,
+        "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+        "m_nMapType": "PF_MAP_TYPE_DIRECT",
+        "m_nNoiseInputVectorAttribute": 0,
+        "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+        "m_nNoiseOctaves": 1,
+        "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+        "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+        "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+        "m_nRandomSeed": 0,
+        "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+        "m_nScalarAttribute": 3,
+        "m_nType": "PF_TYPE_LITERAL",
+        "m_nVectorAttribute": 6,
+        "m_nVectorComponent": 0,
+        "m_strSnapshotSubset": "",
+        "m_vecNoiseOffsetRate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "m_flRollScale": {
+        "m_Curve": {
+          "m_spline": [],
+          "m_tangents": [],
+          "m_vDomainMaxs": [
+            0.0,
+            0.0
+          ],
+          "m_vDomainMins": [
+            0.0,
+            0.0
+          ]
+        },
+        "m_NamedValue": "",
+        "m_bHasRandomSignFlip": false,
+        "m_bNoiseImgPreviewLive": true,
+        "m_bReverseOrder": false,
+        "m_bUseBoundsCenter": false,
+        "m_flBiasParameter": 0.0,
+        "m_flCompareValue": 0.0,
+        "m_flInput0": 0.0,
+        "m_flInput1": 1.0,
+        "m_flLOD0": 0.0,
+        "m_flLOD1": 0.0,
+        "m_flLOD2": 0.0,
+        "m_flLOD3": 0.0,
+        "m_flLiteralValue": 1.0,
+        "m_flMultFactor": 1.0,
+        "m_flNoCameraFallback": 0.0,
+        "m_flNoiseImgPreviewScale": 1.0,
+        "m_flNoiseOffset": 0.0,
+        "m_flNoiseOutputMax": 1.0,
+        "m_flNoiseOutputMin": 0.0,
+        "m_flNoiseScale": 0.1,
+        "m_flNoiseTurbulenceMix": 0.5,
+        "m_flNoiseTurbulenceScale": 1.0,
+        "m_flNotchedOutputInside": 1.0,
+        "m_flNotchedOutputOutside": 0.0,
+        "m_flNotchedRangeMax": 1.0,
+        "m_flNotchedRangeMin": 0.0,
+        "m_flOutput0": 0.0,
+        "m_flOutput1": 1.0,
+        "m_flRandomMax": 1.0,
+        "m_flRandomMin": 0.0,
+        "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+        "m_nControlPoint": 0,
+        "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+        "m_nMapType": "PF_MAP_TYPE_DIRECT",
+        "m_nNoiseInputVectorAttribute": 0,
+        "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+        "m_nNoiseOctaves": 1,
+        "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+        "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+        "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+        "m_nRandomSeed": 0,
+        "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+        "m_nScalarAttribute": 3,
+        "m_nType": "PF_TYPE_LITERAL",
+        "m_nVectorAttribute": 6,
+        "m_nVectorComponent": 0,
+        "m_strSnapshotSubset": "",
+        "m_vecNoiseOffsetRate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "m_nAlpha2Field": 16,
+      "m_nColorBlendType": "PARTICLE_COLOR_BLEND_MULTIPLY",
+      "m_nOpEndCapState": "PARTICLE_ENDCAP_ALWAYS_ON",
+      "m_nOpTimeOffsetSeed": 0,
+      "m_nOpTimeScaleSeed": 0,
+      "m_nToolsState": "PARTICLE_TOOLS_STATE_ALWAYS_ON",
+      "m_vecColorScale": {
+        "m_FloatComponentX": {
+          "m_Curve": {
+            "m_spline": [],
+            "m_tangents": [],
+            "m_vDomainMaxs": [
+              0.0,
+              0.0
+            ],
+            "m_vDomainMins": [
+              0.0,
+              0.0
+            ]
+          },
+          "m_NamedValue": "",
+          "m_bHasRandomSignFlip": false,
+          "m_bNoiseImgPreviewLive": true,
+          "m_bReverseOrder": false,
+          "m_bUseBoundsCenter": false,
+          "m_flBiasParameter": 0.0,
+          "m_flCompareValue": 0.0,
+          "m_flInput0": 0.0,
+          "m_flInput1": 1.0,
+          "m_flLOD0": 0.0,
+          "m_flLOD1": 0.0,
+          "m_flLOD2": 0.0,
+          "m_flLOD3": 0.0,
+          "m_flLiteralValue": 0.0,
+          "m_flMultFactor": 1.0,
+          "m_flNoCameraFallback": 0.0,
+          "m_flNoiseImgPreviewScale": 1.0,
+          "m_flNoiseOffset": 0.0,
+          "m_flNoiseOutputMax": 1.0,
+          "m_flNoiseOutputMin": 0.0,
+          "m_flNoiseScale": 0.1,
+          "m_flNoiseTurbulenceMix": 0.5,
+          "m_flNoiseTurbulenceScale": 1.0,
+          "m_flNotchedOutputInside": 1.0,
+          "m_flNotchedOutputOutside": 0.0,
+          "m_flNotchedRangeMax": 1.0,
+          "m_flNotchedRangeMin": 0.0,
+          "m_flOutput0": 0.0,
+          "m_flOutput1": 1.0,
+          "m_flRandomMax": 1.0,
+          "m_flRandomMin": 0.0,
+          "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+          "m_nControlPoint": 0,
+          "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+          "m_nMapType": "PF_MAP_TYPE_DIRECT",
+          "m_nNoiseInputVectorAttribute": 0,
+          "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+          "m_nNoiseOctaves": 1,
+          "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+          "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+          "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+          "m_nRandomSeed": 0,
+          "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+          "m_nScalarAttribute": 3,
+          "m_nType": "PF_TYPE_LITERAL",
+          "m_nVectorAttribute": 6,
+          "m_nVectorComponent": 0,
+          "m_strSnapshotSubset": "",
+          "m_vecNoiseOffsetRate": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "m_FloatComponentY": {
+          "m_Curve": {
+            "m_spline": [],
+            "m_tangents": [],
+            "m_vDomainMaxs": [
+              0.0,
+              0.0
+            ],
+            "m_vDomainMins": [
+              0.0,
+              0.0
+            ]
+          },
+          "m_NamedValue": "",
+          "m_bHasRandomSignFlip": false,
+          "m_bNoiseImgPreviewLive": true,
+          "m_bReverseOrder": false,
+          "m_bUseBoundsCenter": false,
+          "m_flBiasParameter": 0.0,
+          "m_flCompareValue": 0.0,
+          "m_flInput0": 0.0,
+          "m_flInput1": 1.0,
+          "m_flLOD0": 0.0,
+          "m_flLOD1": 0.0,
+          "m_flLOD2": 0.0,
+          "m_flLOD3": 0.0,
+          "m_flLiteralValue": 0.0,
+          "m_flMultFactor": 1.0,
+          "m_flNoCameraFallback": 0.0,
+          "m_flNoiseImgPreviewScale": 1.0,
+          "m_flNoiseOffset": 0.0,
+          "m_flNoiseOutputMax": 1.0,
+          "m_flNoiseOutputMin": 0.0,
+          "m_flNoiseScale": 0.1,
+          "m_flNoiseTurbulenceMix": 0.5,
+          "m_flNoiseTurbulenceScale": 1.0,
+          "m_flNotchedOutputInside": 1.0,
+          "m_flNotchedOutputOutside": 0.0,
+          "m_flNotchedRangeMax": 1.0,
+          "m_flNotchedRangeMin": 0.0,
+          "m_flOutput0": 0.0,
+          "m_flOutput1": 1.0,
+          "m_flRandomMax": 1.0,
+          "m_flRandomMin": 0.0,
+          "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+          "m_nControlPoint": 0,
+          "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+          "m_nMapType": "PF_MAP_TYPE_DIRECT",
+          "m_nNoiseInputVectorAttribute": 0,
+          "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+          "m_nNoiseOctaves": 1,
+          "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+          "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+          "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+          "m_nRandomSeed": 0,
+          "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+          "m_nScalarAttribute": 3,
+          "m_nType": "PF_TYPE_LITERAL",
+          "m_nVectorAttribute": 6,
+          "m_nVectorComponent": 0,
+          "m_strSnapshotSubset": "",
+          "m_vecNoiseOffsetRate": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "m_FloatComponentZ": {
+          "m_Curve": {
+            "m_spline": [],
+            "m_tangents": [],
+            "m_vDomainMaxs": [
+              0.0,
+              0.0
+            ],
+            "m_vDomainMins": [
+              0.0,
+              0.0
+            ]
+          },
+          "m_NamedValue": "",
+          "m_bHasRandomSignFlip": false,
+          "m_bNoiseImgPreviewLive": true,
+          "m_bReverseOrder": false,
+          "m_bUseBoundsCenter": false,
+          "m_flBiasParameter": 0.0,
+          "m_flCompareValue": 0.0,
+          "m_flInput0": 0.0,
+          "m_flInput1": 1.0,
+          "m_flLOD0": 0.0,
+          "m_flLOD1": 0.0,
+          "m_flLOD2": 0.0,
+          "m_flLOD3": 0.0,
+          "m_flLiteralValue": 0.0,
+          "m_flMultFactor": 1.0,
+          "m_flNoCameraFallback": 0.0,
+          "m_flNoiseImgPreviewScale": 1.0,
+          "m_flNoiseOffset": 0.0,
+          "m_flNoiseOutputMax": 1.0,
+          "m_flNoiseOutputMin": 0.0,
+          "m_flNoiseScale": 0.1,
+          "m_flNoiseTurbulenceMix": 0.5,
+          "m_flNoiseTurbulenceScale": 1.0,
+          "m_flNotchedOutputInside": 1.0,
+          "m_flNotchedOutputOutside": 0.0,
+          "m_flNotchedRangeMax": 1.0,
+          "m_flNotchedRangeMin": 0.0,
+          "m_flOutput0": 0.0,
+          "m_flOutput1": 1.0,
+          "m_flRandomMax": 1.0,
+          "m_flRandomMin": 0.0,
+          "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+          "m_nControlPoint": 0,
+          "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+          "m_nMapType": "PF_MAP_TYPE_DIRECT",
+          "m_nNoiseInputVectorAttribute": 0,
+          "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+          "m_nNoiseOctaves": 1,
+          "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+          "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+          "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+          "m_nRandomSeed": 0,
+          "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+          "m_nScalarAttribute": 3,
+          "m_nType": "PF_TYPE_LITERAL",
+          "m_nVectorAttribute": 6,
+          "m_nVectorComponent": 0,
+          "m_strSnapshotSubset": "",
+          "m_vecNoiseOffsetRate": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "m_FloatInterp": {
+          "m_Curve": {
+            "m_spline": [],
+            "m_tangents": [],
+            "m_vDomainMaxs": [
+              0.0,
+              0.0
+            ],
+            "m_vDomainMins": [
+              0.0,
+              0.0
+            ]
+          },
+          "m_NamedValue": "",
+          "m_bHasRandomSignFlip": false,
+          "m_bNoiseImgPreviewLive": true,
+          "m_bReverseOrder": false,
+          "m_bUseBoundsCenter": false,
+          "m_flBiasParameter": 0.0,
+          "m_flCompareValue": 0.0,
+          "m_flInput0": 0.0,
+          "m_flInput1": 1.0,
+          "m_flLOD0": 0.0,
+          "m_flLOD1": 0.0,
+          "m_flLOD2": 0.0,
+          "m_flLOD3": 0.0,
+          "m_flLiteralValue": 0.0,
+          "m_flMultFactor": 1.0,
+          "m_flNoCameraFallback": 0.0,
+          "m_flNoiseImgPreviewScale": 1.0,
+          "m_flNoiseOffset": 0.0,
+          "m_flNoiseOutputMax": 1.0,
+          "m_flNoiseOutputMin": 0.0,
+          "m_flNoiseScale": 0.1,
+          "m_flNoiseTurbulenceMix": 0.5,
+          "m_flNoiseTurbulenceScale": 1.0,
+          "m_flNotchedOutputInside": 1.0,
+          "m_flNotchedOutputOutside": 0.0,
+          "m_flNotchedRangeMax": 1.0,
+          "m_flNotchedRangeMin": 0.0,
+          "m_flOutput0": 0.0,
+          "m_flOutput1": 1.0,
+          "m_flRandomMax": 1.0,
+          "m_flRandomMin": 0.0,
+          "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+          "m_nControlPoint": 0,
+          "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+          "m_nMapType": "PF_MAP_TYPE_DIRECT",
+          "m_nNoiseInputVectorAttribute": 0,
+          "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+          "m_nNoiseOctaves": 1,
+          "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+          "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+          "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+          "m_nRandomSeed": 0,
+          "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+          "m_nScalarAttribute": 3,
+          "m_nType": "PF_TYPE_LITERAL",
+          "m_nVectorAttribute": 6,
+          "m_nVectorComponent": 0,
+          "m_strSnapshotSubset": "",
+          "m_vecNoiseOffsetRate": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "m_Gradient": {
+          "m_Stops": []
+        },
+        "m_LiteralColor": [
+          255,
+          255,
+          255
+        ],
+        "m_NamedValue": "",
+        "m_bFollowNamedValue": false,
+        "m_flInterpInput0": 0.0,
+        "m_flInterpInput1": 1.0,
+        "m_nControlPoint": 0,
+        "m_nDeltaControlPoint": 0,
+        "m_nType": "PVEC_TYPE_LITERAL_COLOR",
+        "m_nVectorAttribute": 6,
+        "m_vCPRelativeDir": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "m_vCPRelativePosition": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_vCPValueScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "m_vInterpOutput0": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_vInterpOutput1": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "m_vLiteralValue": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_vRandomMax": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_vRandomMin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_vVectorAttributeScale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "m_vecProjectedMaterials": []
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator strength\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStrength",
+        "offset": 8,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end cap state\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpEndCapState",
+        "offset": 384,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleEndcapMode_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator enabled in tools or game only\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nToolsState",
+        "offset": 388,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleToolsState_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator start fadein\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStartFadeInTime",
+        "offset": 392,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end fadein\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpEndFadeInTime",
+        "offset": 396,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator start fadeout\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStartFadeOutTime",
+        "offset": 400,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end fadeout\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpEndFadeOutTime",
+        "offset": 404,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade oscillate\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpFadeOscillatePeriod",
+        "offset": 408,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"normalize fade times to endcap\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_bNormalizeToStopTime",
+        "offset": 412,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade Time Offset\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset min\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeOffsetMin",
+        "offset": 416,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset max\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeOffsetMax",
+        "offset": 420,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset seed\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpTimeOffsetSeed",
+        "offset": 424,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade Timescale Modifiers\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale seed\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpTimeScaleSeed",
+        "offset": 428,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale min\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeScaleMin",
+        "offset": 432,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale max\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeScaleMax",
+        "offset": 436,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"\""
+          },
+          {
+            "name": "MPropertySuppressField"
+          }
+        ],
+        "name": "m_bDisableOperator",
+        "offset": 442,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator help and notes\""
+          },
+          {
+            "name": "MParticleHelpField"
+          },
+          {
+            "name": "MPropertyAttributeEditor",
+            "value": "\"TextBlock()\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_Notes",
+        "offset": 448,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunctionRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertySortPriority",
+            "value": "-1"
+          }
+        ],
+        "name": "VisibilityInputs",
+        "offset": 480,
+        "type": {
+          "category": "declared_class",
+          "module": "particles",
+          "name": "CParticleVisibilityInputs"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunctionRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Rendering filter\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"I cannot be refracted through refracting objects like water\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-1"
+          }
+        ],
+        "name": "m_bCannotBeRefracted",
+        "offset": 552,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"project on characters\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != dota\""
+          }
+        ],
+        "name": "m_bProjectCharacter",
+        "offset": 560,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"project on world\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != dota\""
+          }
+        ],
+        "name": "m_bProjectWorld",
+        "offset": 561,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"project on water\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != dota\""
+          }
+        ],
+        "name": "m_bProjectWater",
+        "offset": 562,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"flip horizontal\""
+          }
+        ],
+        "name": "m_bFlipHorizontal",
+        "offset": 563,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"enable projected depth controls\""
+          }
+        ],
+        "name": "m_bEnableProjectedDepthControls",
+        "offset": 564,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"min projection depth\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"!m_bEnableProjectedDepthControls\""
+          }
+        ],
+        "name": "m_flMinProjectionDepth",
+        "offset": 568,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"max projection depth\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"!m_bEnableProjectedDepthControls\""
+          }
+        ],
+        "name": "m_flMaxProjectionDepth",
+        "offset": 572,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"materials\""
+          },
+          {
+            "name": "MParticleRequireDefaultArrayEntry"
+          },
+          {
+            "name": "MPropertyAutoExpandSelf"
+          }
+        ],
+        "name": "m_vecProjectedMaterials",
+        "offset": 576,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "RenderProjectedMaterial_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"material selection\""
+          }
+        ],
+        "name": "m_flMaterialSelection",
+        "offset": 600,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CPerParticleFloatInput"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"sheet animation time scale\""
+          }
+        ],
+        "name": "m_flAnimationTimeScale",
+        "offset": 976,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"orient to normal\""
+          }
+        ],
+        "name": "m_bOrientToNormal",
+        "offset": 980,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"material variables\""
+          },
+          {
+            "name": "MPropertyAutoExpandSelf"
+          }
+        ],
+        "name": "m_MaterialVars",
+        "offset": 984,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "MaterialVariable_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"+Renderer Modifiers\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Radius Scale\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_flRadiusScale",
+        "offset": 1008,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionFloatInput"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"alpha scale\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_flAlphaScale",
+        "offset": 1384,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionFloatInput"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"rotation roll scale\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_flRollScale",
+        "offset": 1760,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionFloatInput"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"per-particle alpha scale attribute\""
+          },
+          {
+            "name": "MPropertyAttributeChoiceName",
+            "value": "\"particlefield_scalar\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_nAlpha2Field",
+        "offset": 2136,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"color blend\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_vecColorScale",
+        "offset": 2144,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionVecInput"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RenderProjected"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"color blend type\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_nColorBlendType",
+        "offset": 3896,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleColorBlendType_t"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "C_OP_RenderProjected"
+  },
+  "inheritance": [
+    {
+      "module": "particles",
+      "name": "CParticleFunction"
+    },
+    {
+      "module": "particles",
+      "name": "CParticleFunctionRenderer"
+    }
+  ],
+  "references": [
+    {
+      "kind": "classes",
+      "module": "particles",
+      "name": "CParticleVisibilityInputs",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particles",
+      "name": "MaterialVariable_t",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particles",
+      "name": "RenderProjectedMaterial_t",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CParticleCollectionFloatInput",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CParticleCollectionVecInput",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CPerParticleFloatInput",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "ParticleAttributeIndex_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleEndcapMode_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleToolsState_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleColorBlendType_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "011c3736220290a33573e4185fd792afbff584b2ec714d6e7c9c88510f1b5102",
+    "json_pointer": "/classes/2036",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

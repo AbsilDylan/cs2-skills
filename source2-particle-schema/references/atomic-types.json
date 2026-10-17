@@ -1,0 +1,2755 @@
+{
+  "evidence": "opaque type names and usages; no fabricated declarations or behavior",
+  "format": "source2-particle-atomic-types/1",
+  "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+  "types": [
+    {
+      "name": "CColorGradient",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CColorGradient",
+          "size": 24
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "TextureGroup_t"
+          },
+          "field": "m_Gradient"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_Gradient"
+        }
+      ]
+    },
+    {
+      "name": "CGlobalSymbol",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CGlobalSymbol",
+          "size": 8
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_GameDecalRenderer"
+          },
+          "field": "m_sDecalGroupName"
+        }
+      ]
+    },
+    {
+      "name": "CKV3MemberNameWithStorage",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CKV3MemberNameWithStorage",
+          "size": 56
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVariableRef"
+          },
+          "field": "m_variableName"
+        }
+      ]
+    },
+    {
+      "name": "CParticleNamedValueRef",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CParticleNamedValueRef",
+          "size": 64
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleFloatInput"
+          },
+          "field": "m_NamedValue"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleModelInput"
+          },
+          "field": "m_NamedValue"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleTransformInput"
+          },
+          "field": "m_NamedValue"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_NamedValue"
+        }
+      ]
+    },
+    {
+      "name": "CPiecewiseCurve",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CPiecewiseCurve",
+          "size": 64
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleFloatInput"
+          },
+          "field": "m_Curve"
+        }
+      ]
+    },
+    {
+      "name": "CPulseValueFullType",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CPulseValueFullType",
+          "size": 24
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVariableRef"
+          },
+          "field": "m_variableType"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "ParticleNamedValueSource_t"
+          },
+          "field": "m_ValueType"
+        }
+      ]
+    },
+    {
+      "name": "CSplitScreenSlot",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "CSplitScreenSlot",
+          "size": 4
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CNewParticleEffect"
+          },
+          "field": "m_nSplitScreenUser"
+        }
+      ]
+    },
+    {
+      "name": "CStrongHandle",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "resourcesystem",
+            "name": "InfoForResourceTypeCModel"
+          },
+          "name": "CStrongHandle",
+          "size": 8
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "resourcesystem",
+            "name": "InfoForResourceTypeCPostProcessingResource"
+          },
+          "name": "CStrongHandle",
+          "size": 8
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "resourcesystem",
+            "name": "InfoForResourceTypeCTextureBase"
+          },
+          "name": "CStrongHandle",
+          "size": 8
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "resourcesystem",
+            "name": "InfoForResourceTypeIMaterial2"
+          },
+          "name": "CStrongHandle",
+          "size": 8
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "resourcesystem",
+            "name": "InfoForResourceTypeIParticleSnapshot"
+          },
+          "name": "CStrongHandle",
+          "size": 8
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "resourcesystem",
+            "name": "InfoForResourceTypeIParticleSystemDefinition"
+          },
+          "name": "CStrongHandle",
+          "size": 8
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_hSnapshot"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_pszCullReplacementName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_hFallback"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_hLowViolenceDef"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_hReferenceReplacement"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomModelSequence"
+          },
+          "field": "m_hModel"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomNamedModelElement"
+          },
+          "field": "m_hModel"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapNamedModelElementToScalar"
+          },
+          "field": "m_hModel"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapParticleCountToNamedModelElementScalar"
+          },
+          "field": "m_hModel"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_CreateParticleSystemRenderer"
+          },
+          "field": "m_hEffect"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementEndCap"
+          },
+          "field": "m_hModel"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementOnceTimed"
+          },
+          "field": "m_hModel"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderBlobs"
+          },
+          "field": "m_hMaterial"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderCables"
+          },
+          "field": "m_hMaterial"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderDeferredLight"
+          },
+          "field": "m_hTexture"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderGpuImplicit"
+          },
+          "field": "m_hMaterial"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderMaterialProxy"
+          },
+          "field": "m_hOverrideMaterial"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderModels"
+          },
+          "field": "m_hOverrideMaterial"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderOmni2Light"
+          },
+          "field": "m_hLightCookie"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderPoints"
+          },
+          "field": "m_hMaterial"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderPostProcessing"
+          },
+          "field": "m_hPostTexture"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderSimpleModelCollection"
+          },
+          "field": "m_hModel"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffect"
+          },
+          "field": "m_pTextureColorWarp"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffect"
+          },
+          "field": "m_pTextureDetail2"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffect"
+          },
+          "field": "m_pTextureDiffuseWarp"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffect"
+          },
+          "field": "m_pTextureFresnelColorWarp"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffect"
+          },
+          "field": "m_pTextureFresnelWarp"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffect"
+          },
+          "field": "m_pTextureSpecularWarp"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffect"
+          },
+          "field": "m_pTextureEnvMap"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectCitadel"
+          },
+          "field": "m_pTextureColorWarp"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectCitadel"
+          },
+          "field": "m_pTextureNormal"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectCitadel"
+          },
+          "field": "m_pTextureMetalness"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectCitadel"
+          },
+          "field": "m_pTextureRoughness"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectCitadel"
+          },
+          "field": "m_pTextureSelfIllum"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectCitadel"
+          },
+          "field": "m_pTextureDetail"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectTf"
+          },
+          "field": "m_pTextureColorWarp"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectTf"
+          },
+          "field": "m_pTextureNormal"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectTf"
+          },
+          "field": "m_pTextureMetalness"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectTf"
+          },
+          "field": "m_pTextureRoughness"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectTf"
+          },
+          "field": "m_pTextureSelfIllum"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectTf"
+          },
+          "field": "m_pTextureDetail"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStatusEffectTf"
+          },
+          "field": "m_pTextureEnvMap"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ModelReference_t"
+          },
+          "field": "m_model"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticleChildrenInfo_t"
+          },
+          "field": "m_ChildRef"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "RenderProjectedMaterial_t"
+          },
+          "field": "m_hMaterial"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "TextureGroup_t"
+          },
+          "field": "m_hTexture"
+        }
+      ]
+    },
+    {
+      "name": "CUtlLeanVector",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "CPAssignment_t"
+          },
+          "name": "CUtlLeanVector",
+          "size": 16
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "FloatInputMaterialVariable_t"
+          },
+          "name": "CUtlLeanVector",
+          "size": 16
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "TextureGroup_t"
+          },
+          "name": "CUtlLeanVector",
+          "size": 16
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "VecInputMaterialVariable_t"
+          },
+          "name": "CUtlLeanVector",
+          "size": 16
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "CBaseRendererSource2"
+          },
+          "field": "m_vecTexturesInput"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_CreateParticleSystemRenderer"
+          },
+          "field": "m_vecCPs"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderCables"
+          },
+          "field": "m_MaterialFloatVars"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderCables"
+          },
+          "field": "m_MaterialVecVars"
+        }
+      ]
+    },
+    {
+      "name": "CUtlString",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "CBaseRendererSource2"
+          },
+          "field": "m_strShaderOverride"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleFunction"
+          },
+          "field": "m_Notes"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_NamedValueDomain"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_InitFromCPSnapshot"
+          },
+          "field": "m_strSnapshotSubset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomNamedModelElement"
+          },
+          "field": "m_names"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapNamedModelElementToScalar"
+          },
+          "field": "m_names"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapParticleCountToNamedModelElementScalar"
+          },
+          "field": "m_outputMinName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapParticleCountToNamedModelElementScalar"
+          },
+          "field": "m_outputMaxName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ClientPhysics"
+          },
+          "field": "m_strPhysicsType"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ContinuousEmitter"
+          },
+          "field": "m_strSnapshotSubset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_CreateParticleSystemRenderer"
+          },
+          "field": "m_szParticleConfig"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_DecayMaintainCount"
+          },
+          "field": "m_strSnapshotSubset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_DriveCPFromGlobalSoundFloat"
+          },
+          "field": "m_StackName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_DriveCPFromGlobalSoundFloat"
+          },
+          "field": "m_OperatorName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_DriveCPFromGlobalSoundFloat"
+          },
+          "field": "m_FieldName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_InstantaneousEmitter"
+          },
+          "field": "m_strSnapshotSubset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_MaintainEmitter"
+          },
+          "field": "m_strSnapshotSubset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_MultiSegmentDisplaySnapshotGenerator"
+          },
+          "field": "m_strDefaultString"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementEndCap"
+          },
+          "field": "m_inNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementEndCap"
+          },
+          "field": "m_outNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementEndCap"
+          },
+          "field": "m_fallbackNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementOnceTimed"
+          },
+          "field": "m_inNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementOnceTimed"
+          },
+          "field": "m_outNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementOnceTimed"
+          },
+          "field": "m_fallbackNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderLightBeam"
+          },
+          "field": "m_strLightStyle"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderModels"
+          },
+          "field": "m_strLightStyle"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderOmni2Light"
+          },
+          "field": "m_strLightStyle"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStandardLight"
+          },
+          "field": "m_strLightStyle"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderStandardLight"
+          },
+          "field": "m_lightCookie"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderText"
+          },
+          "field": "m_DefaultText"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderVolumetricEmitter"
+          },
+          "field": "m_strChannelType"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetFromCPSnapshot"
+          },
+          "field": "m_strSnapshotSubset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "FloatInputMaterialVariable_t"
+          },
+          "field": "m_strVariable"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "MaterialVariable_t"
+          },
+          "field": "m_strVariable"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticleControlPointConfiguration_t"
+          },
+          "field": "m_name"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticleControlPointDriver_t"
+          },
+          "field": "m_attachmentName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticleControlPointDriver_t"
+          },
+          "field": "m_entityName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticlePreviewBodyGroup_t"
+          },
+          "field": "m_bodyGroupName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticlePreviewState_t"
+          },
+          "field": "m_previewModel"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticlePreviewState_t"
+          },
+          "field": "m_sequenceName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticlePreviewState_t"
+          },
+          "field": "m_hitboxSetName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticlePreviewState_t"
+          },
+          "field": "m_materialGroupName"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "VecInputMaterialVariable_t"
+          },
+          "field": "m_strVariable"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleFloatInput"
+          },
+          "field": "m_strSnapshotSubset"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "ParticleNamedValueConfiguration_t"
+          },
+          "field": "m_ConfigName"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "ParticleNamedValueConfiguration_t"
+          },
+          "field": "m_BoundValuePath"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "ParticleNamedValueConfiguration_t"
+          },
+          "field": "m_strEntityScope"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "ParticleNamedValueConfiguration_t"
+          },
+          "field": "m_strAttachmentName"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "ParticleNamedValueSource_t"
+          },
+          "field": "m_Name"
+        }
+      ]
+    },
+    {
+      "name": "CUtlSymbolLarge",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlSymbolLarge",
+          "size": 8
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_pszTargetLayerID"
+        }
+      ]
+    },
+    {
+      "name": "CUtlVector",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "alignment": 8,
+            "category": "atomic",
+            "name": "CUtlString",
+            "size": 8
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "builtin",
+            "name": "float32"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "MaterialVariable_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "ModelReference_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "ParticleChildrenInfo_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "ParticleControlPointConfiguration_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "ParticleControlPointDriver_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "ParticlePreviewBodyGroup_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "PointDefinitionWithTimeValues_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "PointDefinition_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "RenderProjectedMaterial_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "SequenceWeightedList_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_enum",
+            "module": "particles",
+            "name": "ParticleMultiSegmentSpecialCharacter_t"
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "ptr",
+            "inner": {
+              "category": "declared_class",
+              "module": "particles",
+              "name": "CParticleFunctionConstraint"
+            }
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "ptr",
+            "inner": {
+              "category": "declared_class",
+              "module": "particles",
+              "name": "CParticleFunctionEmitter"
+            }
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "ptr",
+            "inner": {
+              "category": "declared_class",
+              "module": "particles",
+              "name": "CParticleFunctionForce"
+            }
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "ptr",
+            "inner": {
+              "category": "declared_class",
+              "module": "particles",
+              "name": "CParticleFunctionInitializer"
+            }
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "ptr",
+            "inner": {
+              "category": "declared_class",
+              "module": "particles",
+              "name": "CParticleFunctionOperator"
+            }
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "ptr",
+            "inner": {
+              "category": "declared_class",
+              "module": "particles",
+              "name": "CParticleFunctionPreEmission"
+            }
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "ptr",
+            "inner": {
+              "category": "declared_class",
+              "module": "particles",
+              "name": "CParticleFunctionRenderer"
+            }
+          },
+          "name": "CUtlVector",
+          "size": 24
+        },
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "ptr",
+            "inner": {
+              "category": "declared_class",
+              "module": "particleslib",
+              "name": "ParticleNamedValueSource_t"
+            }
+          },
+          "name": "CUtlVector",
+          "size": 24
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_PreEmissionOperators"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_Emitters"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_Initializers"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_Operators"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_ForceGenerators"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_Constraints"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_Renderers"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_Children"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_NamedValueLocals"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_controlPointConfigurations"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_PointList"
+          },
+          "field": "m_pointList"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomNamedModelElement"
+          },
+          "field": "m_names"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomSequence"
+          },
+          "field": "m_WeightedList"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapNamedModelElementToScalar"
+          },
+          "field": "m_names"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapNamedModelElementToScalar"
+          },
+          "field": "m_values"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ConstrainDistanceToUserSpecifiedPath"
+          },
+          "field": "m_pointList"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_LockToPointList"
+          },
+          "field": "m_pointList"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_MultiSegmentDisplaySnapshotGenerator"
+          },
+          "field": "m_SpecialCharList"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementEndCap"
+          },
+          "field": "m_inNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementEndCap"
+          },
+          "field": "m_outNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementEndCap"
+          },
+          "field": "m_fallbackNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementOnceTimed"
+          },
+          "field": "m_inNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementOnceTimed"
+          },
+          "field": "m_outNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapNamedModelElementOnceTimed"
+          },
+          "field": "m_fallbackNames"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderAsModels"
+          },
+          "field": "m_ModelList"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderBlobs"
+          },
+          "field": "m_MaterialVars"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderMaterialProxy"
+          },
+          "field": "m_MaterialVars"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderModels"
+          },
+          "field": "m_ModelList"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderModels"
+          },
+          "field": "m_MaterialVars"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderProjected"
+          },
+          "field": "m_vecProjectedMaterials"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderProjected"
+          },
+          "field": "m_MaterialVars"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticleControlPointConfiguration_t"
+          },
+          "field": "m_drivers"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticlePreviewState_t"
+          },
+          "field": "m_vecBodyGroups"
+        }
+      ]
+    },
+    {
+      "name": "Color",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Color",
+          "size": 4
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_ConstantColor"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_ColorLitPerParticle"
+          },
+          "field": "m_ColorMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_ColorLitPerParticle"
+          },
+          "field": "m_ColorMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_ColorLitPerParticle"
+          },
+          "field": "m_TintMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_ColorLitPerParticle"
+          },
+          "field": "m_TintMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomColor"
+          },
+          "field": "m_ColorMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomColor"
+          },
+          "field": "m_ColorMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomColor"
+          },
+          "field": "m_TintMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomColor"
+          },
+          "field": "m_TintMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_StatusEffect"
+          },
+          "field": "m_specularColor"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_StatusEffect"
+          },
+          "field": "m_rimLightColor"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ColorInterpolate"
+          },
+          "field": "m_ColorFade"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ColorInterpolateRandom"
+          },
+          "field": "m_ColorFadeMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ColorInterpolateRandom"
+          },
+          "field": "m_ColorFadeMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlpointLight"
+          },
+          "field": "m_LightColor1"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlpointLight"
+          },
+          "field": "m_LightColor2"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlpointLight"
+          },
+          "field": "m_LightColor3"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlpointLight"
+          },
+          "field": "m_LightColor4"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_HSVShiftToCP"
+          },
+          "field": "m_DefaultHSVColor"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderSprites"
+          },
+          "field": "m_OutlineColor"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RenderText"
+          },
+          "field": "m_OutlineColor"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_UpdateLightSource"
+          },
+          "field": "m_vColorTint"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_LiteralColor"
+        }
+      ]
+    },
+    {
+      "name": "KeyValues3",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "KeyValues3",
+          "size": 16
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "ParticleNamedValueConfiguration_t"
+          },
+          "field": "m_ConfigValue"
+        }
+      ]
+    },
+    {
+      "name": "ParticleParamID_t",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "ParticleParamID_t",
+          "size": 16
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticleControlPointDriver_t"
+          },
+          "field": "m_iControlPoint"
+        }
+      ]
+    },
+    {
+      "name": "QAngle",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "QAngle",
+          "size": 12
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointOrientation"
+          },
+          "field": "m_vecRotation"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointOrientation"
+          },
+          "field": "m_vecRotationB"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetVariable"
+          },
+          "field": "m_rotationOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticleControlPointDriver_t"
+          },
+          "field": "m_angOffset"
+        }
+      ]
+    },
+    {
+      "name": "Vector",
+      "status": "opaque-atomic-type",
+      "type_variants": [
+        {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      ],
+      "uses": [
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_BoundingBoxMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_BoundingBoxMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CParticleSystemDefinition"
+          },
+          "field": "m_ConstantNormal"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CPathParameters"
+          },
+          "field": "m_vStartPointOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CPathParameters"
+          },
+          "field": "m_vMidPointOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "CPathParameters"
+          },
+          "field": "m_vEndOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_AddVectorToVector"
+          },
+          "field": "m_vecScale"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_AddVectorToVector"
+          },
+          "field": "m_vOffsetMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_AddVectorToVector"
+          },
+          "field": "m_vOffsetMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_AgeNoise"
+          },
+          "field": "m_vecOffsetLoc"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_CreateAlongPath"
+          },
+          "field": "m_vEndOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_CreateFromPlaneCache"
+          },
+          "field": "m_vecOffsetMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_CreateFromPlaneCache"
+          },
+          "field": "m_vecOffsetMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_CreateWithinSphereTransform"
+          },
+          "field": "m_vecDistanceBiasAbs"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_CreationNoise"
+          },
+          "field": "m_vecOffsetLoc"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_DistanceToCPInit"
+          },
+          "field": "m_vecDistanceScale"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_InitialRepulsionVelocity"
+          },
+          "field": "m_vecOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_InitialRepulsionVelocity"
+          },
+          "field": "m_vecOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_InitialVelocityNoise"
+          },
+          "field": "m_vecAbsVal"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_InitialVelocityNoise"
+          },
+          "field": "m_vecAbsValInv"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_LifespanFromVelocity"
+          },
+          "field": "m_vecComponentScale"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_NormalOffset"
+          },
+          "field": "m_OffsetMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_NormalOffset"
+          },
+          "field": "m_OffsetMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_OffsetVectorToVector"
+          },
+          "field": "m_vecOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_OffsetVectorToVector"
+          },
+          "field": "m_vecOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_PositionWarpScalar"
+          },
+          "field": "m_vecWarpMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_PositionWarpScalar"
+          },
+          "field": "m_vecWarpMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomVector"
+          },
+          "field": "m_vecMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RandomVector"
+          },
+          "field": "m_vecMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapInitialDirectionToTransformToVector"
+          },
+          "field": "m_vecOffsetAxis"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapScalarToVector"
+          },
+          "field": "m_vecOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapScalarToVector"
+          },
+          "field": "m_vecOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapTransformOrientationToRotations"
+          },
+          "field": "m_vecRotation"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapTransformToVector"
+          },
+          "field": "m_vInputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapTransformToVector"
+          },
+          "field": "m_vInputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapTransformToVector"
+          },
+          "field": "m_vOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RemapTransformToVector"
+          },
+          "field": "m_vOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RtEnvCull"
+          },
+          "field": "m_vecTestDir"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_RtEnvCull"
+          },
+          "field": "m_vecTestNormal"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_SequenceFromCP"
+          },
+          "field": "m_vecOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_SetHitboxToModel"
+          },
+          "field": "m_vecDirectionBias"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_INIT_VelocityRadialRandom"
+          },
+          "field": "m_vecLocalCoordinateSystemSpeedScale"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_AttractToControlPoint"
+          },
+          "field": "m_vecComponentScale"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_CPOffsetToPercentageBetweenCPs"
+          },
+          "field": "m_vecOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_CalculateVectorAttribute"
+          },
+          "field": "m_vStartValue"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_CalculateVectorAttribute"
+          },
+          "field": "m_vFinalOutputScale"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlPointToRadialScreenSpace"
+          },
+          "field": "m_vecCP1Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlpointLight"
+          },
+          "field": "m_vecCPOffset1"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlpointLight"
+          },
+          "field": "m_vecCPOffset2"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlpointLight"
+          },
+          "field": "m_vecCPOffset3"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ControlpointLight"
+          },
+          "field": "m_vecCPOffset4"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_DistanceCull"
+          },
+          "field": "m_vecPointOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ForceBasedOnDistanceToPlane"
+          },
+          "field": "m_vecForceAtMinDist"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ForceBasedOnDistanceToPlane"
+          },
+          "field": "m_vecForceAtMaxDist"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ForceBasedOnDistanceToPlane"
+          },
+          "field": "m_vecPlaneNormal"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_LerpEndCapVector"
+          },
+          "field": "m_vecOutput"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_LerpVector"
+          },
+          "field": "m_vecOutput"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_MovementMaintainOffset"
+          },
+          "field": "m_vecOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_NoiseEmitter"
+          },
+          "field": "m_vecOffsetLoc"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_OscillateVector"
+          },
+          "field": "m_RateMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_OscillateVector"
+          },
+          "field": "m_RateMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_OscillateVector"
+          },
+          "field": "m_FrequencyMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_OscillateVector"
+          },
+          "field": "m_FrequencyMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_OscillateVectorSimple"
+          },
+          "field": "m_Rate"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_OscillateVectorSimple"
+          },
+          "field": "m_Frequency"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_ParentVortices"
+          },
+          "field": "m_vecTwistAxis"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_PercentageBetweenTransformsVector"
+          },
+          "field": "m_vecOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_PercentageBetweenTransformsVector"
+          },
+          "field": "m_vecOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_PlanarConstraint"
+          },
+          "field": "m_PointOnPlane"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_PlanarConstraint"
+          },
+          "field": "m_PlaneNormal"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RampCPLinearRandom"
+          },
+          "field": "m_vecRateMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RampCPLinearRandom"
+          },
+          "field": "m_vecRateMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RandomForce"
+          },
+          "field": "m_MinForce"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RandomForce"
+          },
+          "field": "m_MaxForce"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapCPtoVector"
+          },
+          "field": "m_vInputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapCPtoVector"
+          },
+          "field": "m_vInputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapCPtoVector"
+          },
+          "field": "m_vOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapCPtoVector"
+          },
+          "field": "m_vOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapDensityToVector"
+          },
+          "field": "m_vecOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapDensityToVector"
+          },
+          "field": "m_vecOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapDirectionToCPToVector"
+          },
+          "field": "m_vecOffsetAxis"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapDistanceToLineSegmentToVector"
+          },
+          "field": "m_vMinOutputValue"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapDistanceToLineSegmentToVector"
+          },
+          "field": "m_vMaxOutputValue"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapTransformOrientationToRotations"
+          },
+          "field": "m_vecRotation"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapTransformVisibilityToVector"
+          },
+          "field": "m_vecOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RemapTransformVisibilityToVector"
+          },
+          "field": "m_vecOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RotateVector"
+          },
+          "field": "m_vecRotAxisMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RotateVector"
+          },
+          "field": "m_vecRotAxisMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RtEnvCull"
+          },
+          "field": "m_vecTestDir"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_RtEnvCull"
+          },
+          "field": "m_vecTestNormal"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointPositionToTimeOfDayValue"
+          },
+          "field": "m_vecDefaultValue"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointPositions"
+          },
+          "field": "m_vecCP1Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointPositions"
+          },
+          "field": "m_vecCP2Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointPositions"
+          },
+          "field": "m_vecCP3Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointPositions"
+          },
+          "field": "m_vecCP4Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointToCenter"
+          },
+          "field": "m_vecCP1Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointToHMD"
+          },
+          "field": "m_vecCP1Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointToHand"
+          },
+          "field": "m_vecCP1Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointToImpactPoint"
+          },
+          "field": "m_vecTraceDir"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetControlPointToPlayer"
+          },
+          "field": "m_vecCP1Pos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetRandomControlPointPosition"
+          },
+          "field": "m_vecCPMinPos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetRandomControlPointPosition"
+          },
+          "field": "m_vecCPMaxPos"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetToCP"
+          },
+          "field": "m_vecOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_SetVariable"
+          },
+          "field": "m_positionOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_TeleportBeam"
+          },
+          "field": "m_vGravity"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_TimeVaryingForce"
+          },
+          "field": "m_StartingForce"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_TimeVaryingForce"
+          },
+          "field": "m_EndingForce"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_TurbulenceForce"
+          },
+          "field": "m_vecNoiseAmount0"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_TurbulenceForce"
+          },
+          "field": "m_vecNoiseAmount1"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_TurbulenceForce"
+          },
+          "field": "m_vecNoiseAmount2"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_TurbulenceForce"
+          },
+          "field": "m_vecNoiseAmount3"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_TwistAroundAxis"
+          },
+          "field": "m_TwistAxis"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_VectorNoise"
+          },
+          "field": "m_vecOutputMin"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_VectorNoise"
+          },
+          "field": "m_vecOutputMax"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_WindForce"
+          },
+          "field": "m_vForce"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "C_OP_WorldTraceConstraint"
+          },
+          "field": "m_vecCpOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ControlPointReference_t"
+          },
+          "field": "m_vOffsetFromControlPoint"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticleControlPointDriver_t"
+          },
+          "field": "m_vecOffset"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticlePreviewState_t"
+          },
+          "field": "m_vecPreviewGravity"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "ParticlePreviewState_t"
+          },
+          "field": "m_vecPreviewWind"
+        },
+        {
+          "class": {
+            "module": "particles",
+            "name": "PointDefinition_t"
+          },
+          "field": "m_vOffset"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CNewParticleEffect"
+          },
+          "field": "m_vSortOrigin"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CNewParticleEffect"
+          },
+          "field": "m_LastMin"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CNewParticleEffect"
+          },
+          "field": "m_LastMax"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CNewParticleEffect"
+          },
+          "field": "m_vecAggregationCenter"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleFloatInput"
+          },
+          "field": "m_vecNoiseOffsetRate"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vLiteralValue"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vVectorAttributeScale"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vCPValueScale"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vCPRelativePosition"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vCPRelativeDir"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vInterpOutput0"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vInterpOutput1"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vRandomMin"
+        },
+        {
+          "class": {
+            "module": "particleslib",
+            "name": "CParticleVecInput"
+          },
+          "field": "m_vRandomMax"
+        }
+      ]
+    }
+  ]
+}

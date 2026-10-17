@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Don't Set\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_SET_NONE",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set From Velocity\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_SET_FROM_VELOCITY",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set From Normal\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_SET_FROM_NORMAL",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Set From Rotations\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_SET_FROM_ROTATIONS",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleOrientationSetMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleOrientationSetMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "26dea4a3e2519f96cd6c0646614496cd4a3cb8418c8acfdabe79278fee11c267",
+    "json_pointer": "/enums/426",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

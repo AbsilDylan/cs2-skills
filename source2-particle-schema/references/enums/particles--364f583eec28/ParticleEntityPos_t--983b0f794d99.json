@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Abs Origin\""
+          }
+        ],
+        "name": "PARTICLE_ABS_ORIGIN",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Worldspace Center\""
+          }
+        ],
+        "name": "PARTICLE_WORLDSPACE_CENTER",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Eyes\""
+          }
+        ],
+        "name": "PARTICLE_EYES",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Flashlight\""
+          }
+        ],
+        "name": "PARTICLE_FLASHLIGHT",
+        "value": 3
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleEntityPos_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleEntityPos_t"
+  },
+  "source": {
+    "canonical_record_sha256": "bd81549361a5cb4938067a95b98cec3656b873af8dbc435c314c58ce31621a0e",
+    "json_pointer": "/enums/405",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

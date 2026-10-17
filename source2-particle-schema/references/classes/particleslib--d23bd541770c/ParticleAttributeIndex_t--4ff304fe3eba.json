@@ -1,0 +1,69 @@
+{
+  "declaration": {
+    "flags": [
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MIsBoxedIntegerType"
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleAttributeIndex_t",
+    "size": 4
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "ParticleAttributeIndex_t"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        },
+        "code": "defaults-absent"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "ParticleAttributeIndex_t"
+      },
+      "field": {
+        "name": "m_Value",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleAttributeIndex_t"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "177c118a57db9a1ae139c80025e63f2fccf84e02f872a313738e80827e7bc51b",
+    "json_pointer": "/classes/2163",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

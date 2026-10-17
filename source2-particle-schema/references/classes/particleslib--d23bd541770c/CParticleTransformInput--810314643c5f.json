@@ -1,0 +1,249 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_NamedValue": "",
+          "m_bFollowNamedValue": false,
+          "m_bSupportsDisabled": false,
+          "m_bUseOrientation": true,
+          "m_flEndCPGrowthTime": 0.0,
+          "m_nControlPoint": 0,
+          "m_nControlPointRangeMax": 0,
+          "m_nType": "PT_TYPE_CONTROL_POINT"
+        }
+      },
+      {
+        "name": "MPropertyCustomEditor",
+        "value": "\"TransformInput()\""
+      },
+      {
+        "name": "MCustomFGDMetadata",
+        "value": "\"{ SkipImprintFGDClassOnKV3 = true SkipRemoveKeysInKV3AtFGDDefault = true KV3DefaultTestFnName = 'CParticleTransformInputDefaultTestFunc' }\""
+      }
+    ],
+    "module": "particleslib",
+    "name": "CParticleTransformInput",
+    "parents": [
+      {
+        "module": "particleslib",
+        "name": "CParticleInput"
+      }
+    ],
+    "size": 104
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "CParticleInput"
+      },
+      {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_NamedValue": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "m_bFollowNamedValue": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "m_bSupportsDisabled": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "m_bUseOrientation": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "m_flEndCPGrowthTime": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "m_nControlPoint": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "m_nControlPointRangeMax": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "m_nType": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_NamedValue": "",
+      "m_bFollowNamedValue": false,
+      "m_bSupportsDisabled": false,
+      "m_bUseOrientation": true,
+      "m_flEndCPGrowthTime": 0.0,
+      "m_nControlPoint": 0,
+      "m_nControlPointRangeMax": 0,
+      "m_nType": "PT_TYPE_CONTROL_POINT"
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "field": {
+        "name": "m_nType",
+        "offset": 16,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleTransformType_t"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "field": {
+        "name": "m_NamedValue",
+        "offset": 24,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CParticleNamedValueRef",
+          "size": 64
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "field": {
+        "name": "m_bFollowNamedValue",
+        "offset": 88,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "field": {
+        "name": "m_bSupportsDisabled",
+        "offset": 89,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "field": {
+        "name": "m_bUseOrientation",
+        "offset": 90,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "field": {
+        "name": "m_nControlPoint",
+        "offset": 92,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "field": {
+        "name": "m_nControlPointRangeMax",
+        "offset": 96,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleTransformInput"
+      },
+      "field": {
+        "name": "m_flEndCPGrowthTime",
+        "offset": 100,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "CParticleTransformInput"
+  },
+  "inheritance": [
+    {
+      "module": "particleslib",
+      "name": "CParticleInput"
+    }
+  ],
+  "references": [
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleTransformType_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "88aa51accf8618106bbe2e2264266035470b7e7219ad1207672c6f26614eb5ec",
+    "json_pointer": "/classes/2156",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

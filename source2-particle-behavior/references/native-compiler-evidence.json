@@ -1,0 +1,2644 @@
+{
+  "schema": "source2.native-particle-compiler-evidence.portable.v1",
+  "performedUtc": "2026-10-15T16:53:26.4141141Z",
+  "game": {
+    "name": "Counter-Strike 2",
+    "steamAppId": 730,
+    "steamBuildId": "25640462",
+    "patchVersion": "1.41.8.8",
+    "sourceRevision": "11064488",
+    "versionDate": "2026-09-30"
+  },
+  "compiler": {
+    "relativePath": "game/bin/win64/resourcecompiler.exe",
+    "sha256": "00db3daca0e733601bf3fcc1d1bf9df1b2ade805629098c48bd6c51af3d96f51",
+    "arguments": [
+      "-i",
+      "<new-addon-content>/<fixture>.vpcf",
+      "-game",
+      "<cs2-root>/game/csgo",
+      "-nop4",
+      "-fshallow"
+    ],
+    "observedInstalledModules": [
+      {
+        "name": "resourcecompiler.dll",
+        "sha256": "3b4fa1887be100551160188f7f2cf70ae9fbe51598a07e5d33302b53a40382a6",
+        "bytes": 56315544
+      },
+      {
+        "name": "particles.dll",
+        "sha256": "2cf870d86cddc8326534f37fce39735b5f2937755bf538e50d9b1932c79ddd2b",
+        "bytes": 6460568
+      },
+      {
+        "name": "resourcesystem.dll",
+        "sha256": "91fefb1a36111c34e380a8ec2c74c584f29ef66332a0ddba01123dd0adec778d",
+        "bytes": 532632
+      }
+    ]
+  },
+  "execution": {
+    "fixtureCount": 13,
+    "successfulCompiles": 13,
+    "successfulReadbacks": 13,
+    "nativeDiagnosticCount": 0,
+    "launchedGame": false,
+    "renderedPixels": false
+  },
+  "qualifications": [
+    "These are observed compiler/serialization results for the installed September 30 build, not a runtime or pixel-parity certification.",
+    "The public October 14 schema snapshot has a different SourceRevision; it was not used to declare September 30 engine semantics.",
+    "Native compiler strips default-valued fields. Their absence is not itself evidence of ignored input.",
+    "Two intentionally unknown fields were silently dropped while native compilation succeeded. Compile exit code alone does not prove field support.",
+    "Model fixture references the installed base-game models/particle/flecks3.vmdl; no model/texture dependency closure or game rendering was certified.",
+    "Sprite/trail fixtures author no material or texture resource; no production appearance was certified."
+  ],
+  "fixtures": [
+    {
+      "name": "minimal_burst",
+      "sourceSha256": "2c6afb58753ee5cfc47438ca2213c0430efc134d3325f9cda51bbd722c6112de",
+      "compiledSha256": "a1f87e44024cb641a2e7591163fb2c5135fdfff3dbb0413d03b32b39fa93549a",
+      "compiledBytes": 2021,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "minimal_burst",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "screen-z",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "continuous_cp63",
+      "sourceSha256": "ca83d5171e492e76c1dfef45232b9eec1b52b92e4d3fa520a38ae76e15064621",
+      "compiledSha256": "fce26967f3a32117a7e995dfd91873f3dc1b9c9d68e23dc189448fbb0b194b93",
+      "compiledBytes": 2191,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -6,
+          -5,
+          -4
+        ],
+        "m_BoundingBoxMax": [
+          10,
+          11,
+          12
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_ContinuousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.2
+            },
+            "m_flEmissionDuration": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 2.5
+            },
+            "m_flEmitRate": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 36
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform",
+            "m_TransformInput": {
+              "m_nControlPoint": 63
+            },
+            "m_fSpeedMin": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 1
+            },
+            "m_fSpeedMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 2
+            }
+          },
+          {
+            "_class": "C_INIT_PositionOffset",
+            "m_OffsetMin": [
+              2,
+              3,
+              4
+            ],
+            "m_OffsetMax": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "continuous_cp63",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "continuous",
+          "rate": 36,
+          "startTime": 0.2,
+          "duration": 2.5
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 63,
+          "offset": [
+            2,
+            3,
+            4
+          ],
+          "speed": {
+            "min": 1,
+            "max": 2
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "screen-z",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "full_sphere_cp1",
+      "sourceSha256": "cdd1c27f70026d6fe5f74ae1b7480bd63526adf78258101ff5a2ba4dcec25f93",
+      "compiledSha256": "e7b67136595af12b5acc2104b820dec891771a1720323299779cb6e9fae885f3",
+      "compiledBytes": 2977,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -114.5,
+          -114.75,
+          -125.25
+        ],
+        "m_BoundingBoxMax": [
+          120.5,
+          124.75,
+          141.25
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform",
+            "m_TransformInput": {
+              "m_nControlPoint": 1
+            },
+            "m_fRadiusMin": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 2
+            },
+            "m_fRadiusMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 18
+            },
+            "m_fSpeedMin": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 12
+            },
+            "m_fSpeedMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 54
+            }
+          },
+          {
+            "_class": "C_INIT_PositionOffset",
+            "m_OffsetMin": [
+              3,
+              5,
+              8
+            ],
+            "m_OffsetMax": [
+              3,
+              5,
+              8
+            ]
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          },
+          {
+            "_class": "C_INIT_NormalAlignToCP",
+            "m_transformInput": {
+              "m_nControlPoint": 1
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 10,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.1,
+              "m_flRandomMax": 0.3,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 4,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 10,
+              "m_flRandomMax": 80,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 5,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": -90,
+              "m_flRandomMax": 90,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomSequence",
+            "m_nSequenceMax": 3,
+            "m_bShuffle": true
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement",
+            "m_Gravity": [
+              0,
+              -2,
+              10
+            ],
+            "m_fDrag": 0.08
+          },
+          {
+            "_class": "C_OP_InterpolateRadius",
+            "m_flStartScale": 0.8,
+            "m_flEndScale": 0.1,
+            "m_flBias": 0.2,
+            "m_bEaseInAndOut": true
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.08
+          },
+          {
+            "_class": "C_OP_FadeOutSimple",
+            "m_flFadeOutTime": 0.3
+          },
+          {
+            "_class": "C_OP_SpinUpdate"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_ForceGenerators": [
+          {
+            "_class": "C_OP_RandomForce",
+            "m_MinForce": [
+              -4,
+              -4,
+              0
+            ],
+            "m_MaxForce": [
+              4,
+              4,
+              8
+            ]
+          },
+          {
+            "_class": "C_OP_AttractToControlPoint",
+            "m_TransformInput": {
+              "m_nControlPoint": 63
+            },
+            "m_fForceAmount": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 8
+            },
+            "m_fForceAmountMin": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 2
+            },
+            "m_bApplyMinForce": true,
+            "m_fMinimumDistance": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 3
+            },
+            "m_vecComponentScale": [
+              1,
+              0.5,
+              0.25
+            ]
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL",
+            "m_flOverbrightFactor": 1.8,
+            "m_flAddSelfAmount": 0.7
+          },
+          {
+            "_class": "C_OP_RenderTrails",
+            "m_bEnableFadingAndClamping": true,
+            "m_flMaxLength": 144
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "full_sphere_cp1",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "sphere",
+          "controlPoint": 1,
+          "radius": {
+            "min": 2,
+            "max": 18
+          },
+          "speed": {
+            "min": 12,
+            "max": 54
+          },
+          "offset": [
+            3,
+            5,
+            8
+          ]
+        },
+        "motion": {
+          "gravity": [
+            0,
+            -2,
+            10
+          ],
+          "drag": 0.08,
+          "randomForce": {
+            "min": [
+              -4,
+              -4,
+              0
+            ],
+            "max": [
+              4,
+              4,
+              8
+            ]
+          },
+          "attraction": {
+            "controlPoint": 63,
+            "force": 8,
+            "minimumForce": 2,
+            "applyMinimumForce": true,
+            "falloffPower": 2,
+            "minimumDistance": 3,
+            "componentScale": [
+              1,
+              0.5,
+              0.25
+            ]
+          }
+        },
+        "appearance": {
+          "renderers": [
+            "sprite",
+            "trail"
+          ],
+          "spriteOrientation": "normal-aligned",
+          "fadeIn": 0.08,
+          "fadeOut": 0.3,
+          "radiusOverLife": {
+            "startScale": 0.8,
+            "endScale": 0.1,
+            "startTime": 0,
+            "endTime": 1,
+            "bias": 0.2,
+            "smooth": true
+          },
+          "trailLength": {
+            "min": 0.1,
+            "max": 0.3
+          },
+          "trailMaxLength": 144,
+          "overbright": 1.8,
+          "addSelf": 0.7
+        },
+        "rotation": {
+          "degrees": {
+            "min": 10,
+            "max": 80
+          },
+          "speedDegreesPerSecond": {
+            "min": -90,
+            "max": 90
+          }
+        },
+        "sequence": {
+          "min": 0,
+          "max": 3,
+          "mode": "shuffle"
+        }
+      }
+    },
+    {
+      "name": "box_cp1",
+      "sourceSha256": "21526dcb3c1f54e65bddc73bf638ff4a5c5bc6bf715ce7df458999e70713bee7",
+      "compiledSha256": "c8f59e49e92efd8ef256d76616ba9565fb8ec46607e156208142117855c0f989",
+      "compiledBytes": 2088,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -6,
+          -6,
+          -6
+        ],
+        "m_BoundingBoxMax": [
+          10,
+          12,
+          14
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinBox",
+            "m_nControlPointNumber": 1,
+            "m_vecMin": [
+              -3,
+              -4,
+              -5
+            ],
+            "m_vecMax": [
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "_class": "C_INIT_PositionOffset",
+            "m_OffsetMin": [
+              2,
+              3,
+              4
+            ],
+            "m_OffsetMax": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "box_cp1",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "box",
+          "controlPoint": 1,
+          "min": [
+            -3,
+            -4,
+            -5
+          ],
+          "max": [
+            3,
+            4,
+            5
+          ],
+          "offset": [
+            2,
+            3,
+            4
+          ]
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "screen",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "orientation_screen",
+      "sourceSha256": "35308e728126622276a9213a01990ead3c219a499ba5660babe6cff30adc87a5",
+      "compiledSha256": "91450e8e32f9476e48e434e08e417e24b03427b84f0a8048ccc477523e0e95ad",
+      "compiledBytes": 1962,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "orientation_screen",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "screen",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "orientation_screen-z",
+      "sourceSha256": "2c6afb58753ee5cfc47438ca2213c0430efc134d3325f9cda51bbd722c6112de",
+      "compiledSha256": "cd51dc714f863d741bb18cf40f05d6e2d02b9bfc5497e9b4dad1d16f79125dbd",
+      "compiledBytes": 2021,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "orientation_screen-z",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "screen-z",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "orientation_world-z",
+      "sourceSha256": "d103ab9dd92d9e5abb7c76caea4abe21e99f22b696497349dd42ea4db23f6015",
+      "compiledSha256": "bd6311f3a49bea1cefd6ce4b9826be5afceaf2fa34ab380d97eb68d1ca14d76e",
+      "compiledBytes": 2021,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_WORLD_Z_ALIGNED"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "orientation_world-z",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "world-z",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "orientation_normal-aligned",
+      "sourceSha256": "a089c21cbe358d4512f1b9e92f66858e1805cc15c2ae8843175c553ed3f431f1",
+      "compiledSha256": "392a7eec2736e42f6934591ab442dfd3dc843ff23ba6839b1a23ff9e03fc0fae",
+      "compiledBytes": 2069,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          },
+          {
+            "_class": "C_INIT_NormalAlignToCP"
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "orientation_normal-aligned",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "normal-aligned",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "trail_only",
+      "sourceSha256": "4581f9d9d29880b6dd26d6b1e03f0b21d725e1400b1e02fc83a296ccdaee42a3",
+      "compiledSha256": "9164157071269440f03b08b55f6996ffaa47bb9141049a69893d8849e781349f",
+      "compiledBytes": 2018,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 10,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.1,
+              "m_flRandomMax": 0.3,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderTrails",
+            "m_bEnableFadingAndClamping": true,
+            "m_flMaxLength": 144
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "trail_only",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "trail"
+          ],
+          "spriteOrientation": "screen-z",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.1,
+            "max": 0.3
+          },
+          "trailMaxLength": 144,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "model_flecks",
+      "sourceSha256": "5fc0c4caa6dae0d5bf8f930c488d0d6108b1a28641a7b788d72e472dc2b126da",
+      "compiledSha256": "5b27dadbd730deff44383747608580f3b77c223de30535b19e6fab85c4f862ad",
+      "compiledBytes": 2182,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          },
+          {
+            "_class": "C_INIT_RemapTransformOrientationToRotations",
+            "m_bWriteNormal": true
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderModels",
+            "m_ModelList": [
+              {
+                "m_model": "resource:models/particle/flecks3.vmdl"
+              }
+            ],
+            "m_bOrientZ": true,
+            "m_modelInput": {}
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "model_flecks",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "model"
+          ],
+          "spriteOrientation": "screen-z",
+          "model": {
+            "resource": "models/particle/flecks3.vmdl",
+            "orientZ": true
+          },
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      }
+    },
+    {
+      "name": "native_nondefaults",
+      "sourceSha256": "10ba54bc00e53ba746c2836ff8c8d62cf23f93f2de7ce6412e382ec70d52e396",
+      "compiledSha256": "9db06464f88843e1d360e87479c77f8376873c5ad0d5ad2887baf11a6a662ab0",
+      "compiledBytes": 2388,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_flConstantRadius": 7,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -17.125,
+          -17.125,
+          -17.125
+        ],
+        "m_BoundingBoxMax": [
+          17.125,
+          17.125,
+          17.125
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 3,
+              "m_flRandomMax": 7,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          },
+          {
+            "_class": "C_INIT_RandomSequence",
+            "m_nSequenceMin": 1,
+            "m_nSequenceMax": 5,
+            "m_bLinear": true
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_InterpolateRadius",
+            "m_flStartScale": 0.9,
+            "m_flEndScale": 0.2,
+            "m_flStartTime": 0.2,
+            "m_flEndTime": 0.8,
+            "m_flBias": 0.35
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.21
+          },
+          {
+            "_class": "C_OP_FadeOutSimple",
+            "m_flFadeOutTime": 0.37
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_ForceGenerators": [
+          {
+            "_class": "C_OP_AttractToControlPoint",
+            "m_TransformInput": {
+              "m_nControlPoint": 1
+            },
+            "m_fForceAmount": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 9
+            },
+            "m_fFalloffPower": 1.25,
+            "m_fMinimumDistance": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 1
+            }
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "native_nondefaults",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 3,
+          "max": 7
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0,
+          "attraction": {
+            "controlPoint": 1,
+            "force": 9,
+            "minimumForce": 0,
+            "applyMinimumForce": false,
+            "falloffPower": 1.25,
+            "minimumDistance": 1,
+            "componentScale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "screen-z",
+          "fadeIn": 0.21,
+          "fadeOut": 0.37,
+          "radiusOverLife": {
+            "startScale": 0.9,
+            "endScale": 0.2,
+            "startTime": 0.2,
+            "endTime": 0.8,
+            "bias": 0.35,
+            "smooth": false
+          },
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        },
+        "sequence": {
+          "min": 1,
+          "max": 5,
+          "mode": "linear"
+        }
+      }
+    },
+    {
+      "name": "native_infinite_bounds_probe",
+      "sourceSha256": "06179c0e09659f7a75484ee35e5370fe12b05a19cf8e610d432abc6f8842448f",
+      "compiledSha256": "f5efc86589311b36404cdba29c54c8c7dc58ba8d6489f92e773a9b438d3862db",
+      "compiledBytes": 2041,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_bInfiniteBounds": true,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "native_infinite_bounds_probe",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "screen-z",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      },
+      "unknownSentinelProbe": [
+        {
+          "location": "system-root",
+          "authoredValue": true,
+          "presentInCompiledReadback": false
+        }
+      ]
+    },
+    {
+      "name": "native_unknown_field_probe",
+      "sourceSha256": "f2c22d9137ad2d3a7dcaa2e897c54096c8a04553c2a986aee13c1157ad411981",
+      "compiledSha256": "fac8a5ff936e986fccff036013f4f7329c3b4ba126da6274c010475fdd5298d1",
+      "compiledBytes": 2021,
+      "exitCode": 0,
+      "diagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 128,
+        "m_ConstantColor": [
+          200,
+          220,
+          255,
+          240
+        ],
+        "m_BoundingBoxMin": [
+          -5,
+          -5,
+          -5
+        ],
+        "m_BoundingBoxMax": [
+          5,
+          5,
+          5
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_flStartTime": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.125
+            },
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform"
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.75,
+              "m_flRandomMax": 1.5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 2,
+              "m_flRandomMax": 5,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              80,
+              140,
+              100
+            ],
+            "m_ColorMax": [
+              200,
+              220,
+              255,
+              240
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement"
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.1
+          },
+          {
+            "_class": "C_OP_FadeOutSimple"
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED"
+          }
+        ]
+      },
+      "authoredTestIntent": {
+        "version": "1.0",
+        "name": "native_unknown_field_probe",
+        "tags": [],
+        "maxParticles": 128,
+        "emitter": {
+          "type": "burst",
+          "count": 24,
+          "startTime": 0.125
+        },
+        "lifetime": {
+          "min": 0.75,
+          "max": 1.5
+        },
+        "radius": {
+          "min": 2,
+          "max": 5
+        },
+        "color": {
+          "min": [
+            20,
+            80,
+            140,
+            100
+          ],
+          "max": [
+            200,
+            220,
+            255,
+            240
+          ]
+        },
+        "spawn": {
+          "type": "point",
+          "controlPoint": 0,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "speed": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "motion": {
+          "gravity": [
+            0,
+            0,
+            0
+          ],
+          "drag": 0
+        },
+        "appearance": {
+          "renderers": [
+            "sprite"
+          ],
+          "spriteOrientation": "screen-z",
+          "fadeIn": 0.1,
+          "fadeOut": 0.25,
+          "trailLength": {
+            "min": 0.08,
+            "max": 0.24
+          },
+          "trailMaxLength": 128,
+          "overbright": 1,
+          "addSelf": 0
+        }
+      },
+      "unknownSentinelProbe": [
+        {
+          "location": "system-root",
+          "authoredValue": 123.456,
+          "presentInCompiledReadback": false
+        },
+        {
+          "location": "renderer[0]",
+          "authoredValue": 789.25,
+          "presentInCompiledReadback": false
+        }
+      ]
+    }
+  ],
+  "derivation": {
+    "sourceEvidenceSha256": "6b631b097ac4f8b3952775309800691b03172c5c124841b5de7f4eb9458d9f80",
+    "portableAdaptations": [
+      "Abstract fixture intents are labelled authoredTestIntent and are not a native file format.",
+      "Unknown-sentinel property names are omitted; their locations, values, absence after compilation, and original input/output hashes are retained."
+    ],
+    "nativeRuntimeObserved": false,
+    "nativePixelsObserved": false
+  }
+}

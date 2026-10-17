@@ -1,0 +1,131 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"None\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_NONE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Water\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_WATER",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"On Fire\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_ON_FIRE",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Electrified\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_ELECTRIFIED",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Asleep\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_ASLEEP",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Frozen\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_FROZEN",
+        "value": 16
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Timed Decay\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_TIMED_DECAY",
+        "value": 32
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Disable Non-Static Collision\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_DISABLE_NONSTATIC_COLLISION",
+        "value": 64
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Decay From Wake\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_WAKE_DECAY",
+        "value": 128
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Motion Disabled\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_MOTION_DISABLED",
+        "value": 256
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Zero Gravity\""
+          }
+        ],
+        "name": "PARTICLE_ATTR_BOX_FLAGS_ZERO_GRAVITY",
+        "value": 512
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleAttrBoxFlags_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleAttrBoxFlags_t"
+  },
+  "source": {
+    "canonical_record_sha256": "a79b0d8bdf3126f54488afe904a1a730f2c84e9638c23dff89c9239034ade74e",
+    "json_pointer": "/enums/397",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

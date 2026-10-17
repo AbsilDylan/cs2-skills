@@ -1,0 +1,105 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PVEC_TYPE_INVALID",
+        "value": -1
+      },
+      {
+        "name": "PVEC_TYPE_LITERAL",
+        "value": 0
+      },
+      {
+        "name": "PVEC_TYPE_LITERAL_COLOR",
+        "value": 1
+      },
+      {
+        "name": "PVEC_TYPE_NAMED_VALUE",
+        "value": 2
+      },
+      {
+        "name": "PVEC_TYPE_PARTICLE_VECTOR",
+        "value": 3
+      },
+      {
+        "name": "PVEC_TYPE_PARTICLE_INITIAL_VECTOR",
+        "value": 4
+      },
+      {
+        "name": "PVEC_TYPE_PARTICLE_VELOCITY",
+        "value": 5
+      },
+      {
+        "name": "PVEC_TYPE_PARTICLE_GRAVITY",
+        "value": 6
+      },
+      {
+        "name": "PVEC_TYPE_CP_VALUE",
+        "value": 7
+      },
+      {
+        "name": "PVEC_TYPE_CP_RELATIVE_POSITION",
+        "value": 8
+      },
+      {
+        "name": "PVEC_TYPE_CP_RELATIVE_DIR",
+        "value": 9
+      },
+      {
+        "name": "PVEC_TYPE_CP_RELATIVE_RANDOM_DIR",
+        "value": 10
+      },
+      {
+        "name": "PVEC_TYPE_FLOAT_COMPONENTS",
+        "value": 11
+      },
+      {
+        "name": "PVEC_TYPE_FLOAT_INTERP_CLAMPED",
+        "value": 12
+      },
+      {
+        "name": "PVEC_TYPE_FLOAT_INTERP_OPEN",
+        "value": 13
+      },
+      {
+        "name": "PVEC_TYPE_FLOAT_INTERP_GRADIENT",
+        "value": 14
+      },
+      {
+        "name": "PVEC_TYPE_RANDOM_UNIFORM",
+        "value": 15
+      },
+      {
+        "name": "PVEC_TYPE_RANDOM_UNIFORM_OFFSET",
+        "value": 16
+      },
+      {
+        "name": "PVEC_TYPE_CP_DELTA",
+        "value": 17
+      },
+      {
+        "name": "PVEC_TYPE_CLOSEST_CAMERA_POSITION",
+        "value": 18
+      },
+      {
+        "name": "PVEC_TYPE_COUNT",
+        "value": 19
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleVecType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleVecType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "f58ddf5d447627dd5a42cd58d1d3713e6ae7f85b60784df976289bd92959ef09",
+    "json_pointer": "/enums/474",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

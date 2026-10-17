@@ -1,0 +1,41 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PF_BIAS_TYPE_INVALID",
+        "value": -1
+      },
+      {
+        "name": "PF_BIAS_TYPE_STANDARD",
+        "value": 0
+      },
+      {
+        "name": "PF_BIAS_TYPE_GAIN",
+        "value": 1
+      },
+      {
+        "name": "PF_BIAS_TYPE_EXPONENTIAL",
+        "value": 2
+      },
+      {
+        "name": "PF_BIAS_TYPE_COUNT",
+        "value": 3
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleFloatBiasType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleFloatBiasType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "152f034cfafb97efed6ffc976be11bdf06f7084a77e5a6feff29d39fb602aa34",
+    "json_pointer": "/enums/465",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

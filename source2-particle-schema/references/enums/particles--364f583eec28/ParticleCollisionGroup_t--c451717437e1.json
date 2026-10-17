@@ -1,0 +1,91 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Default\""
+          }
+        ],
+        "name": "PARTICLE_COLLISION_GROUP_DEFAULT",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Debris\""
+          }
+        ],
+        "name": "PARTICLE_COLLISION_GROUP_DEBRIS",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Interactive\""
+          }
+        ],
+        "name": "PARTICLE_COLLISION_GROUP_INTERACTIVE",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Player\""
+          }
+        ],
+        "name": "PARTICLE_COLLISION_GROUP_PLAYER",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Vehicle\""
+          }
+        ],
+        "name": "PARTICLE_COLLISION_GROUP_VEHICLE",
+        "value": 10
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"NPC\""
+          }
+        ],
+        "name": "PARTICLE_COLLISION_GROUP_NPC",
+        "value": 12
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Props\""
+          }
+        ],
+        "name": "PARTICLE_COLLISION_GROUP_PROPS",
+        "value": 24
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleCollisionGroup_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleCollisionGroup_t"
+  },
+  "source": {
+    "canonical_record_sha256": "98405672cdd779ce7b580fd3dfb6147a61e876fc581bdbe2943c60bac5cf308d",
+    "json_pointer": "/enums/398",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

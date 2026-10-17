@@ -1,0 +1,17 @@
+{
+  "name": "Original cyan layered impact example",
+  "target": "CS2 text VPCF; native compile evidence is recorded separately",
+  "root": "particles/skill_examples/layered_impact/root.vpcf",
+  "intent": "A compact cyan burst with a bright core and a faster scattering detail layer",
+  "systems": [
+    { "path": "particles/skill_examples/layered_impact/root.vpcf", "role": "Composition: start two children" },
+    { "path": "particles/skill_examples/layered_impact/core.vpcf", "role": "Short-lived large soft core sprites" },
+    { "path": "particles/skill_examples/layered_impact/sparks.vpcf", "role": "Smaller faster sprites with outward movement" }
+  ],
+  "controlPoints": [
+    { "index": 0, "meaning": "Effect placement transform", "testPosition": [0, 0, 0], "owner": "Editor or game caller", "update": "Set before starting; this example does not establish moving-owner behavior" }
+  ],
+  "resources": [],
+  "resourceNote": "No external resource path is authored. Native renderer defaults may still resolve engine assets; intended material appearance has not been visually verified.",
+  "visualValidation": "not-run"
+}

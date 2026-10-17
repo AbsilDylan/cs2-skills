@@ -1,0 +1,47 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "flags": [
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {}
+      }
+    ],
+    "module": "particleslib",
+    "name": "CParticleInput",
+    "size": 16
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "CParticleInput"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "available",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "CParticleInput"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "8cc489e763f7144c52d55a5f2436702a781519fc6bce160cf51c36aeb8c779ff",
+    "json_pointer": "/classes/2152",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

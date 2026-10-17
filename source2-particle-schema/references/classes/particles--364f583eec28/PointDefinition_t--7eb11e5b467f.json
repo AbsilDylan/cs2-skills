@@ -1,0 +1,142 @@
+{
+  "declaration": {
+    "alignment": 4,
+    "flags": [
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_bLocalCoords": false,
+          "m_nControlPoint": 0,
+          "m_vOffset": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "PointDefinition_t",
+    "size": 20
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_bLocalCoords": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "m_nControlPoint": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "m_vOffset": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_bLocalCoords": false,
+      "m_nControlPoint": 0,
+      "m_vOffset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Control point\""
+          }
+        ],
+        "name": "m_nControlPoint",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Use local coordinates for offset\""
+          }
+        ],
+        "name": "m_bLocalCoords",
+        "offset": 4,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Offset from control point\""
+          }
+        ],
+        "name": "m_vOffset",
+        "offset": 8,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "PointDefinition_t"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "0a30dd8e87c473894398ef8bc3ed4b675b93b565d9fcc8803eb4c3e6366dc924",
+    "json_pointer": "/classes/2138",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

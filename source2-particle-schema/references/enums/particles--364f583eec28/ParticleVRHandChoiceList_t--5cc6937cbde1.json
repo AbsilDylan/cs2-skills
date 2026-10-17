@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Left Hand\""
+          }
+        ],
+        "name": "PARTICLE_VRHAND_LEFT",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Right Hand\""
+          }
+        ],
+        "name": "PARTICLE_VRHAND_RIGHT",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Specified Via Control Point\""
+          }
+        ],
+        "name": "PARTICLE_VRHAND_CP",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Detect from CP's Object\""
+          }
+        ],
+        "name": "PARTICLE_VRHAND_CP_OBJECT",
+        "value": 3
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleVRHandChoiceList_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleVRHandChoiceList_t"
+  },
+  "source": {
+    "canonical_record_sha256": "e1f9cc112820b805a817eb9078c35b9b7e4ec99781c551ef86c434dd60cc3466",
+    "json_pointer": "/enums/441",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

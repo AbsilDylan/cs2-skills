@@ -9,7 +9,7 @@
     {
       "name": "cs2-skills",
       "displayName": "CS2 Agent Skills",
-      "description": "Build server NPC gameplay, inspect AG2 presentation, author weapon/item animation pipelines, and port player-character assets.",
+      "description": "Build server NPC gameplay, inspect AG2 presentation, author weapon/item animation and native particle effects, and port player-character assets.",
       "source": "./",
       "repository": "https://github.com/AbsilDylan/cs2-skills",
       "strict": false,
@@ -17,7 +17,14 @@
         "./cs2-server-npc-runtime",
         "./cs2-ag2-npc-runtime",
         "./cs2-animgraph2-authoring",
-        "./cs2-player-model-porting"
+        "./cs2-player-model-porting",
+        "./source2-particle-authoring",
+        "./source2-particle-schema",
+        "./source2-particle-behavior",
+        "./source2-particle-control-points",
+        "./source2-particle-materials",
+        "./source2-particle-validation",
+        "./source2-particle-reference-research"
       ]
     }
   ]

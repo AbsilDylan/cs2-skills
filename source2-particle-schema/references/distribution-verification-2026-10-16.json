@@ -1,0 +1,152 @@
+{
+  "boundaries": [
+    "This verifies a distribution and unchanged reflected schema data, not native compilation, KV3 editability, runtime behavior or rendering.",
+    "Historical run hashes remain original; current index and generator identities are separate.",
+    "The public schema snapshot and locally observed help/game version remain separate provenance observations."
+  ],
+  "current_distribution": {
+    "generated_document": {
+      "bytes": 73565,
+      "path": "references/catalogue.md",
+      "sha256": "47f245bea294bec5a7734b44160c00053ac9ac628da9a197203b0017046d39f8"
+    },
+    "generator": {
+      "bytes": 30129,
+      "path": "scripts/schema_catalog.py",
+      "sha256": "1760c8b4006efc9d58d49353ce86919cdf573954660e9acaa6374fda91211e02"
+    },
+    "index": {
+      "bytes": 336508,
+      "index_content_sha256": "a8dda5da07d807d1d43d9f2c92b2e8194a1563c9aaf2cf851a7c246def7b68bb",
+      "path": "references/catalog-index.json",
+      "records_tree_sha256": "35d2c3b4c8860dda6917a6f464085488cb26ad9d8bcb434600d281a625f4ceee",
+      "sha256": "d8ed12f600cb7ce4ff87738245d071823442eaa0be010980e1bd66447fd65da9",
+      "tree_scope": "All generated index files, including catalogue.md; this is not a schema-data-only digest."
+    },
+    "native_help_coverage": {
+      "bytes": 1681720,
+      "path": "references/native-help-coverage.json",
+      "sha256": "b5ed0c9b4dcbb7ff4ed7f7008647be0ecb73fbcf5134c36f9d9857397d1b19ca",
+      "unannotated_fresh_audit_output_sha256": "d33956f606931fb2df45dd8437a7c3dbc0d0b71cbd86c7cdb19a07a1c44e3622",
+      "verified_on": "2026-10-16"
+    },
+    "source": {
+      "data_url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz",
+      "explorer_url": "https://github.com/ValveResourceFormat/SchemaExplorer",
+      "game": "Counter-Strike 2",
+      "game_identity": "explicit source selection; not independently encoded/attested by schema format",
+      "generator": "https://github.com/ValveResourceFormat/DumpSource2",
+      "input_bytes": 766991,
+      "input_encoding": "gzip",
+      "input_name": "cs2-schema-11131657.json.gz",
+      "input_sha256": "740fc2c2b962f233a00534f19087207aca321af720314f1e68c17913734a3009",
+      "manifest_url": "https://s2v.app/SchemaExplorer/llms.txt",
+      "raw_json_bytes": 8247839,
+      "raw_json_sha256": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+      "revision": 11131657,
+      "version_date": "Oct 14 2026",
+      "version_time": "16:57:53"
+    }
+  },
+  "data_preservation": {
+    "atomic_type_files": 1,
+    "classes": 464,
+    "compared_payload_files": 557,
+    "current_payload_tree_sha256": "0c8bf488ecd809e8c5bebcde63653870be878daa37f559e65e6ed086e072fb63",
+    "differing_payload_files": [],
+    "enums": 92,
+    "fresh_help_coverage_data_and_provenance_equal_to_previous_except_catalogue_binding": true,
+    "generator_change": "Only the catalogue.md rendering gained a Contents section linking Classes and Enums. Schema selection, types, defaults, metadata and payload rendering are unchanged.",
+    "historical_completeness_file_byte_identical": true,
+    "historical_payload_tree_sha256": "0c8bf488ecd809e8c5bebcde63653870be878daa37f559e65e6ed086e072fb63",
+    "method": "Byte-for-byte comparison of every class, enum and atomic-type file with the historical reference payloads and their recorded SHA-256; exact generated-document and generator substitutions checked separately.",
+    "opaque_atomic_types": 17,
+    "payload_tree_framing": "Sorted relative path + NUL + file SHA-256 + LF, UTF-8; class/enum/atomic files only.",
+    "source_counts_selection_record_metadata_unchanged": true
+  },
+  "format": "source2-particle-schema-distribution-verification/1",
+  "historical_evidence": {
+    "completeness": {
+      "bytes": 8260,
+      "catalogue": {
+        "generator_script": "scripts/schema_catalog.py",
+        "generator_sha256": "39bd3ed5f9004b6f93375ac7e3dfe5738b5aff11c28244cd0a2596f5834e185e",
+        "index_content_sha256": "63b0614d31ad6a26218e07ab765e0833155a412a4e9c29f1da5a90727a1aaf9d",
+        "index_file_bytes": 336508,
+        "index_file_sha256": "a8a2afdfbd7de37572e51f728f0d3ce36341dac028888220ea7ff25c9c8f7446",
+        "index_path": "references/catalog-index.json",
+        "records_tree_sha256": "10032d3a52bf48af7e238ac14f3e6e9aea0f8910e9890777e0cb3a5bdb3c68a1",
+        "verified_class_files": 464,
+        "verified_enum_files": 92
+      },
+      "path": "references/schema-completeness-2026-10-15.json",
+      "scope": "Original 15 October independent completeness run; its generator/index identities are historical and have not been rewritten.",
+      "sha256": "519844c2e3e89ff060c2160daa30e9045643bc1b11432767d503b1338f6f9fa4",
+      "verified_on": "2026-10-15"
+    },
+    "native_help_coverage": {
+      "bytes": 1681346,
+      "catalogue": {
+        "index_content_sha256": "63b0614d31ad6a26218e07ab765e0833155a412a4e9c29f1da5a90727a1aaf9d",
+        "index_sha256": "a8a2afdfbd7de37572e51f728f0d3ce36341dac028888220ea7ff25c9c8f7446",
+        "records_tree_sha256": "10032d3a52bf48af7e238ac14f3e6e9aea0f8910e9890777e0cb3a5bdb3c68a1",
+        "source": {
+          "data_url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz",
+          "explorer_url": "https://github.com/ValveResourceFormat/SchemaExplorer",
+          "game": "Counter-Strike 2",
+          "game_identity": "explicit source selection; not independently encoded/attested by schema format",
+          "generator": "https://github.com/ValveResourceFormat/DumpSource2",
+          "input_bytes": 766991,
+          "input_encoding": "gzip",
+          "input_name": "cs2-schema-11131657.json.gz",
+          "input_sha256": "740fc2c2b962f233a00534f19087207aca321af720314f1e68c17913734a3009",
+          "manifest_url": "https://s2v.app/SchemaExplorer/llms.txt",
+          "raw_json_bytes": 8247839,
+          "raw_json_sha256": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+          "revision": 11131657,
+          "version_date": "Oct 14 2026",
+          "version_time": "16:57:53"
+        },
+        "verification": "index content and every class reference SHA-256 verified; enums outside help audit scope"
+      },
+      "method": {
+        "dependencies": "Python 3 standard library only",
+        "script": "scripts/particle_help.py",
+        "sha256": "e88449ba8ffa31cba8f313145dbc59720b2e8ab6ce5a07521e81c874dc5a1aba"
+      },
+      "scope": "Previous report identity and original bindings retained here; the large prior report is not duplicated in this distribution.",
+      "sha256": "3ce9acccdc2da94d85a412d20cf064f8f1d7f6632784bf5b0a2f6a754c2e38e3"
+    }
+  },
+  "status": "pass",
+  "validation": {
+    "exact_snapshot_rebuild": {
+      "command": "python -B scripts/schema_catalog.py build --check --input <local cs2-schema-11131657.json.gz> --game \"Counter-Strike 2\" --source-url https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz",
+      "input_sha256": "740fc2c2b962f233a00534f19087207aca321af720314f1e68c17913734a3009",
+      "status": "pass"
+    },
+    "schema_catalogue_verify": {
+      "command": "python -B scripts/schema_catalog.py verify",
+      "status": "pass"
+    },
+    "target_skill_validator": {
+      "errors": [],
+      "status": "pass",
+      "validator": "tools/validate_skills.py:validate_skill",
+      "validator_sha256": "42a4048807e8f6de5955ed637cd64996806ac3c9d4123b9452a052da09bf1214"
+    },
+    "tests": [
+      {
+        "command": "python -B scripts/test_schema_catalog.py",
+        "status": "pass",
+        "tests": 6
+      },
+      {
+        "command": "python -B scripts/test_particle_help.py",
+        "status": "pass",
+        "tests": 14
+      }
+    ]
+  },
+  "verified_on": "2026-10-16"
+}

@@ -25,6 +25,13 @@ resources, compiled game assets, or third-party work without permission.
 | `cs2-ag2-npc-runtime` | Existing AG2 NPC presentation: compiled graph inspection, controller materialization, typed parameters, fallback classification, Linux signature recovery, and Workshop closure |
 | `cs2-animgraph2-authoring` | Weapon/item presentation: VNMClip/VNMGraph authoring, private first/third-person roots, proxy routing, prediction, and item Workshop delivery |
 | `cs2-player-model-porting` | Player-character assets: skeleton retargeting, skinning, geometry, materials, ModelDoc, first-person body geometry, hitboxes, ragdolls, and player-model Workshop closure |
+| `source2-particle-authoring` | Native CS2 particle creation and revision: layered VPCF systems, art direction, typed inputs, dependencies, and validation handoff |
+| `source2-particle-schema` | Provenance-pinned particle classes, inherited fields, providers, enums, metadata, and defaults |
+| `source2-particle-behavior` | Particle emission, motion, lifetime, providers, children, and rendering with explicit evidence boundaries |
+| `source2-particle-control-points` | Typed control-point contracts, endpoint beams, attachment drivers, distance parameters, and child-system bindings |
+| `source2-particle-materials` | Particle textures, flipbooks, trails, VTEX/MKS/VMAT sources, material bindings, and dependency closure |
+| `source2-particle-validation` | Native compilation, compiled-property readback, dependency checks, and official-tool visual acceptance |
+| `source2-particle-reference-research` | Bounded local VPK discovery, targeted extraction and inspection, and separate CS2/Deadlock observations |
 
 Use `cs2-server-npc-runtime` for NPC gameplay and lifecycle independently of
 its animation backend. Add `cs2-ag2-npc-runtime` when an existing model entity
@@ -32,6 +39,27 @@ such as `prop_dynamic_override` needs AG2 materialization or typed animation
 control. Use `cs2-animgraph2-authoring` for weapon or item first/third-person
 graph roots, and `cs2-player-model-porting` for player geometry, rigs, and
 physics.
+
+Use `source2-particle-authoring` for a new effect or a practical VPCF revision.
+Use the particle specialists for exact schema lookup, behavior diagnosis,
+control-point contracts, appearance assets, native acceptance, or local
+reference research. Install the particle skills together when a workflow spans
+these areas; a skill installation does not fetch its companion skills.
+
+## Bundled Particle Tooling
+
+The particle skills include offline schema and control-point catalogues,
+bounded observation and VPK query helpers, original texture generators, and a
+native compiler orchestration helper. Their portable Python tests use synthetic
+inputs and do not require a game installation or VRF. Native compilation and
+visual acceptance require the user's installed tools and separate evidence.
+
+Start with the [authoring workflow](source2-particle-authoring/SKILL.md), use the
+[schema catalogue](source2-particle-schema/SKILL.md) for exact typed inputs,
+and record each acceptance layer with the
+[validation workflow](source2-particle-validation/SKILL.md). Reflected defaults,
+local archive observations, compilation, and runtime appearance establish
+different claims; preserve their game/build provenance and limits.
 
 ## Bundled NPC Runtime Blueprint
 
@@ -112,10 +140,17 @@ $skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/cs2-
 $skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/cs2-ag2-npc-runtime
 $skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/cs2-animgraph2-authoring
 $skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/cs2-player-model-porting
+$skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/source2-particle-authoring
+$skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/source2-particle-schema
+$skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/source2-particle-behavior
+$skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/source2-particle-control-points
+$skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/source2-particle-materials
+$skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/source2-particle-validation
+$skill-installer install https://github.com/AbsilDylan/cs2-skills/tree/main/source2-particle-reference-research
 ```
 
-Install every folder when a workflow can span player assets, item graphs, and
-NPC runtime control. Individual installations do not resolve cross-skill
+Install every folder when a workflow can span player assets, item graphs,
+NPC runtime control, and native particle effects. Individual installations do not resolve cross-skill
 handoffs automatically.
 
 Manual installation also works: copy each skill directory into
@@ -139,6 +174,13 @@ Claude Code namespaces plugin skills. They can be invoked explicitly as:
 /cs2-skills:cs2-ag2-npc-runtime
 /cs2-skills:cs2-animgraph2-authoring
 /cs2-skills:cs2-player-model-porting
+/cs2-skills:source2-particle-authoring
+/cs2-skills:source2-particle-schema
+/cs2-skills:source2-particle-behavior
+/cs2-skills:source2-particle-control-points
+/cs2-skills:source2-particle-materials
+/cs2-skills:source2-particle-validation
+/cs2-skills:source2-particle-reference-research
 ```
 
 Alternatively, copy individual skill folders into `.claude/skills/` for one
@@ -156,6 +198,12 @@ python -B tools/validate_skills.py
 python -B -m unittest discover -s tools/tests -v
 python -B -m unittest discover -s cs2-ag2-npc-runtime/tests -v
 python -B -m unittest discover -s cs2-animgraph2-authoring/tests -v
+python -B -m unittest discover -s source2-particle-control-points/scripts -p "test_*.py" -v
+python -B -m unittest discover -s source2-particle-reference-research/scripts -p "test_*.py" -v
+python -B -m unittest discover -s source2-particle-schema/scripts -p "test_*.py" -v
+python -B -m unittest discover -s source2-particle-validation/scripts -p "test_*.py" -v
+python -B source2-particle-schema/scripts/schema_catalog.py verify
+python -B source2-particle-control-points/scripts/cp_contracts.py --verify
 python -B tools/validate_skills.py
 dotnet run --project cs2-server-npc-runtime/tests/ServerNpcRuntimeSkeleton.Tests.csproj -c Release --artifacts-path <temporary-directory-outside-this-repository> --disable-build-servers
 npx --yes --package=@anthropic-ai/claude-code@2.1.197 -- claude plugin validate . --strict
@@ -182,6 +230,7 @@ are build-scoped evidence rather than permanent APIs.
 | Player-owned weapon presentation | Build-scoped M249/M134 evidence covers private agent selection, separate scene/DMX parents, unified held/holster placement, charge tokens, muzzle VData and sound ownership | Historical native hashes and validation limits are recorded in the presentation reference; revalidate on another build/proxy. No exhaustive clean-client matrix is claimed |
 | Weapon identity | `weapon_type` = VData `m_szAnimClass` else `m_szName` (shared graph controller code, build 2000899) | Subclass resolution on a clean client still to be observed |
 | Player-model porting | Contract-driven guidance without a bundled dated runtime receipt | Must derive and record a current official target before each port |
+| Native particle workflows | Provenance-pinned schema and control-point catalogues, portable helper tests, and separately recorded compiler/readback observations | Match the installed game's schema and tools; offline lookup and compilation do not prove runtime behavior or visual fidelity |
 
 Do not label an output `current`, `packaged`, or `runtime-proven` unless its
 machine-readable report records the exact inputs, tools, artifact hashes, and

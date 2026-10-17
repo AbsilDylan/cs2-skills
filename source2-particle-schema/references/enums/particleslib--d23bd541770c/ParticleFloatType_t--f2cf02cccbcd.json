@@ -1,0 +1,157 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PF_TYPE_INVALID",
+        "value": -1
+      },
+      {
+        "name": "PF_TYPE_LITERAL",
+        "value": 0
+      },
+      {
+        "name": "PF_TYPE_NAMED_VALUE",
+        "value": 1
+      },
+      {
+        "name": "PF_TYPE_RANDOM_UNIFORM",
+        "value": 2
+      },
+      {
+        "name": "PF_TYPE_RANDOM_BIASED",
+        "value": 3
+      },
+      {
+        "name": "PF_TYPE_COLLECTION_AGE",
+        "value": 4
+      },
+      {
+        "name": "PF_TYPE_ENDCAP_AGE",
+        "value": 5
+      },
+      {
+        "name": "PF_TYPE_CONTROL_POINT_COMPONENT",
+        "value": 6
+      },
+      {
+        "name": "PF_TYPE_CONTROL_POINT_CHANGE_AGE",
+        "value": 7
+      },
+      {
+        "name": "PF_TYPE_CONTROL_POINT_SPEED",
+        "value": 8
+      },
+      {
+        "name": "PF_TYPE_CONTROL_POINT_DISTANCE",
+        "value": 9
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_DETAIL_LEVEL",
+        "value": 10
+      },
+      {
+        "name": "PF_TYPE_CONCURRENT_DEF_COUNT",
+        "value": 11
+      },
+      {
+        "name": "PF_TYPE_CLOSEST_CAMERA_DISTANCE",
+        "value": 12
+      },
+      {
+        "name": "PF_TYPE_SNAPSHOT_COUNT",
+        "value": 13
+      },
+      {
+        "name": "PF_TYPE_SNAPSHOT_CHANGED",
+        "value": 14
+      },
+      {
+        "name": "PF_TYPE_CONTROL_POINT_IS_SET",
+        "value": 15
+      },
+      {
+        "name": "PF_TYPE_RENDERER_CAMERA_DISTANCE",
+        "value": 16
+      },
+      {
+        "name": "PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT",
+        "value": 17
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_NOISE",
+        "value": 18
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_AGE",
+        "value": 19
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_AGE_NORMALIZED",
+        "value": 20
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_FLOAT",
+        "value": 21
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_INITIAL_FLOAT",
+        "value": 22
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_VECTOR_COMPONENT",
+        "value": 23
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT",
+        "value": 24
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_SPEED",
+        "value": 25
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_NUMBER",
+        "value": 26
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_NUMBER_NORMALIZED",
+        "value": 27
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_ROPE_SEGMENT",
+        "value": 28
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED",
+        "value": 29
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE",
+        "value": 30
+      },
+      {
+        "name": "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT",
+        "value": 31
+      },
+      {
+        "name": "PF_TYPE_COUNT",
+        "value": 32
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleFloatType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleFloatType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "0f4ebd6d2a3696dfb536e789feac4f08926757d12f936c8aa25030b861f1c25b",
+    "json_pointer": "/enums/470",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

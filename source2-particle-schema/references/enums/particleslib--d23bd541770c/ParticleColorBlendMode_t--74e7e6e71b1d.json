@@ -1,0 +1,71 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Replace\""
+          }
+        ],
+        "name": "PARTICLEBLEND_DEFAULT",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Overlay\""
+          }
+        ],
+        "name": "PARTICLEBLEND_OVERLAY",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Darken\""
+          }
+        ],
+        "name": "PARTICLEBLEND_DARKEN",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Lighten\""
+          }
+        ],
+        "name": "PARTICLEBLEND_LIGHTEN",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Multiply\""
+          }
+        ],
+        "name": "PARTICLEBLEND_MULTIPLY",
+        "value": 4
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleColorBlendMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleColorBlendMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "cfa1684898985afc556a4d4512de9f80afc81d92a9a8d4d02b2bec8c47630c3e",
+    "json_pointer": "/enums/462",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

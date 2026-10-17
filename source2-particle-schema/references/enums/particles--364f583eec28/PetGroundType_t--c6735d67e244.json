@@ -1,0 +1,33 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PET_GROUND_NONE",
+        "value": 0
+      },
+      {
+        "name": "PET_GROUND_GRID",
+        "value": 1
+      },
+      {
+        "name": "PET_GROUND_PLANE",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "PetGroundType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "PetGroundType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "133ccda8d07e490c8b65a48d023741dda95b40741f4eea4291848b56156e7bd6",
+    "json_pointer": "/enums/444",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

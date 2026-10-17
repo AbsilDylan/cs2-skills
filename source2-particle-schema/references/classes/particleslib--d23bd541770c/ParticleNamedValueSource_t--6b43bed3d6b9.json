@@ -1,0 +1,168 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_DefaultConfig": {
+            "m_BoundValuePath": "",
+            "m_ConfigName": "",
+            "m_ConfigValue": null,
+            "m_iAttachType": "PATTACH_INVALID",
+            "m_strAttachmentName": "",
+            "m_strEntityScope": ""
+          },
+          "m_IsPublic": true,
+          "m_Name": "",
+          "m_ValueType": "PVAL_VOID"
+        }
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleNamedValueSource_t",
+    "size": 96
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_DefaultConfig": {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      },
+      "m_IsPublic": {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      },
+      "m_Name": {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      },
+      "m_ValueType": {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_DefaultConfig": {
+        "m_BoundValuePath": "",
+        "m_ConfigName": "",
+        "m_ConfigValue": null,
+        "m_iAttachType": "PATTACH_INVALID",
+        "m_strAttachmentName": "",
+        "m_strEntityScope": ""
+      },
+      "m_IsPublic": true,
+      "m_Name": "",
+      "m_ValueType": "PVAL_VOID"
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      },
+      "field": {
+        "name": "m_Name",
+        "offset": 0,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      },
+      "field": {
+        "name": "m_IsPublic",
+        "offset": 8,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MFgdFromSchemaCompletelySkipField"
+          }
+        ],
+        "name": "m_ValueType",
+        "offset": 16,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CPulseValueFullType",
+          "size": 24
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "ParticleNamedValueSource_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MFgdFromSchemaCompletelySkipField"
+          }
+        ],
+        "name": "m_DefaultConfig",
+        "offset": 40,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleNamedValueConfiguration_t"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleNamedValueSource_t"
+  },
+  "inheritance": [],
+  "references": [
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "ParticleNamedValueConfiguration_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "c294c3b25df85b26171999139968e21e3309930714f341175e0263b108e0aa2d",
+    "json_pointer": "/classes/2165",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

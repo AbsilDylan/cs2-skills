@@ -1,0 +1,230 @@
+{
+  "format": "cyan-tether-cs2-source-plan/1",
+  "root": "particles/skill_eval/cyan_tether/root.vpcf",
+  "timing": {
+    "oneShot": true,
+    "childStartSeconds": 0,
+    "particleLifetimeSeconds": 2,
+    "fadeOutProportion": 1,
+    "meaning": "intended continuous decay over a two-second total life; no separate hold phase",
+    "nativeTimingObserved": false
+  },
+  "layers": [
+    {
+      "asset": "ring.vpcf",
+      "intent": "horizontal annulus centered at spawn-time CP0",
+      "particles": 1,
+      "radius": 48,
+      "texture": "ring.vtex",
+      "geometry": "normal-aligned quad; not a mesh or volume",
+      "CP0Read": "initializer",
+      "followsCP0AfterBirth": "not authored; keep CP0 fixed for baseline"
+    },
+    {
+      "asset": "beam.vpcf",
+      "intent": "straight luminous CP0 to CP1 ribbon",
+      "particles": 24,
+      "radius": 1.8,
+      "texture": "beam.vtex",
+      "CPReads": [
+        0,
+        1
+      ],
+      "CPReadStages": [
+        "CreateSequentialPath initializer",
+        "MaintainSequentialPath operator"
+      ],
+      "unverified": [
+        "endpoint inclusion/count mapping",
+        "particle order and rope topology",
+        "per-frame CP updates",
+        "U/V orientation and stretching"
+      ]
+    },
+    {
+      "asset": "shards.vpcf",
+      "intent": "eight small luminous diamond sprites emitted near CP0 and attracted to CP1",
+      "particles": 8,
+      "radius": 3,
+      "texture": "shard.vtex",
+      "CP0Read": "sphere initializer",
+      "CP1Read": "AttractToControlPoint force",
+      "forceAmount": 90,
+      "falloffPower": 0,
+      "minimumDistance": 4,
+      "drag": 0.08,
+      "unverified": [
+        "native force units/equation",
+        "integration and capture behavior near target"
+      ]
+    }
+  ],
+  "controlPoints": [
+    {
+      "index": 0,
+      "role": "effect origin",
+      "kind": "position",
+      "space": "world",
+      "externalWriter": "spawning game/editor driver before first emission; keep fixed for baseline",
+      "internalWriter": null,
+      "readers": [
+        "ring sphere initializer",
+        "beam path initializer/operator",
+        "shards sphere initializer"
+      ],
+      "initial": [
+        0,
+        0,
+        8
+      ]
+    },
+    {
+      "index": 1,
+      "role": "target endpoint and attraction point",
+      "kind": "position",
+      "space": "world",
+      "externalWriter": "spawning game/editor driver before first emission; may update per simulation tick once validated",
+      "internalWriter": null,
+      "readers": [
+        "beam path initializer/operator",
+        "shards attraction force"
+      ],
+      "initial": [
+        160,
+        0,
+        24
+      ]
+    }
+  ],
+  "ownership": {
+    "root": "game/editor spawns the root with CP0/CP1 set",
+    "children": "root references three owned children; all use the same CP indices; native inheritance/driver propagation pending",
+    "targetRemoval": "retain last valid CP1 pose until the one shot ends; stop/release owner after decay",
+    "restart": "spawn/reset whole root and all children with new CP inputs; clear stale driver poses"
+  },
+  "bounds": {
+    "authoredBloatMin": [
+      -512,
+      -512,
+      -512
+    ],
+    "authoredBloatMax": [
+      512,
+      512,
+      512
+    ],
+    "baselineCPSeparationAtMost": 256,
+    "qualification": "catalogue calls these bounding-box bloat, not a guaranteed world envelope; observe native culling after movement/extent changes"
+  },
+  "testScenariosPending": [
+    {
+      "name": "baseline",
+      "cp0": [
+        0,
+        0,
+        8
+      ],
+      "cp1": [
+        160,
+        0,
+        24
+      ]
+    },
+    {
+      "name": "translated-and-rotated-driver",
+      "cp0": [
+        100,
+        -70,
+        40
+      ],
+      "cp1": [
+        100,
+        90,
+        40
+      ],
+      "cp0OrientationDescription": "nonidentity 90-degree world Z basis in the native spawning driver",
+      "expectedIntent": "translate origin once; annulus remains world-horizontal; beam connects updated endpoints"
+    },
+    {
+      "name": "coincident",
+      "cp0": [
+        10,
+        20,
+        30
+      ],
+      "cp1": [
+        10,
+        20,
+        30
+      ],
+      "expectedIntent": "no NaN, enormous beam or unstable attraction"
+    },
+    {
+      "name": "long-diagonal",
+      "cp0": [
+        0,
+        0,
+        8
+      ],
+      "cp1": [
+        180,
+        140,
+        80
+      ]
+    },
+    {
+      "name": "swapped",
+      "cp0": [
+        160,
+        0,
+        24
+      ],
+      "cp1": [
+        0,
+        0,
+        8
+      ]
+    },
+    {
+      "name": "moving-target-and-replay",
+      "cp0": [
+        0,
+        0,
+        8
+      ],
+      "cp1Timeline": [
+        {
+          "t": 0,
+          "position": [
+            160,
+            0,
+            24
+          ]
+        },
+        {
+          "t": 1,
+          "position": [
+            100,
+            100,
+            50
+          ]
+        },
+        {
+          "t": 2,
+          "position": [
+            80,
+            140,
+            24
+          ]
+        }
+      ],
+      "expectedIntent": "beam and attraction consume CP1 updates; reset/replay and target removal do not retain stale poses"
+    }
+  ],
+  "acceptancePending": [
+    "observe CP children propagation, endpoint inclusion, moving CPs, fade/decay at 0/0.5/1/1.5/2/2.2 seconds, restart and target removal",
+    "observe occlusion, ring plane, alpha/additive behavior, rope UVs and distant culling"
+  ],
+  "validationStatus": "Source checks, native compilation and selected readback completed; behavioral and visual scenarios remain pending",
+  "nativeFollowUp": "native-evidence.json: 3 VTEX and 4 VPCF compiled/read back without repairs; runtime and pixels not observed"
+}

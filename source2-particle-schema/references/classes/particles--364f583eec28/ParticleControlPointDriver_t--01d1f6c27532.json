@@ -1,0 +1,208 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_angOffset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "m_attachmentName": "",
+          "m_entityName": "",
+          "m_iAttachType": "PATTACH_ABSORIGIN_FOLLOW",
+          "m_iControlPoint": 0,
+          "m_vecOffset": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleControlPointDriver_t",
+    "size": 64
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_angOffset": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "m_attachmentName": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "m_entityName": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "m_iAttachType": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "m_iControlPoint": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "m_vecOffset": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_angOffset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "m_attachmentName": "",
+      "m_entityName": "",
+      "m_iAttachType": "PATTACH_ABSORIGIN_FOLLOW",
+      "m_iControlPoint": 0,
+      "m_vecOffset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "field": {
+        "name": "m_iControlPoint",
+        "offset": 0,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "ParticleParamID_t",
+          "size": 16
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "field": {
+        "name": "m_iAttachType",
+        "offset": 16,
+        "type": {
+          "category": "declared_enum",
+          "module": "animationsystem",
+          "name": "ParticleAttachment_t"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "field": {
+        "name": "m_attachmentName",
+        "offset": 24,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "field": {
+        "name": "m_vecOffset",
+        "offset": 32,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "field": {
+        "name": "m_angOffset",
+        "offset": 44,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "QAngle",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ParticleControlPointDriver_t"
+      },
+      "field": {
+        "name": "m_entityName",
+        "offset": 56,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleControlPointDriver_t"
+  },
+  "inheritance": [],
+  "references": [
+    {
+      "kind": "enums",
+      "module": "animationsystem",
+      "name": "ParticleAttachment_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "cb4d5e9a59a4e0e390b8e1cd1c2e47e38880438b92d297fbf02afa9bab0b26ea",
+    "json_pointer": "/classes/2134",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

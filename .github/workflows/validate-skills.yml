@@ -22,6 +22,12 @@ jobs:
       - run: python -m unittest discover -s tools/tests -v
       - run: python -m unittest discover -s cs2-ag2-npc-runtime/tests -v
       - run: python -m unittest discover -s cs2-animgraph2-authoring/tests -v
+      - run: python -m unittest discover -s source2-particle-control-points/scripts -p 'test_*.py' -v
+      - run: python -m unittest discover -s source2-particle-reference-research/scripts -p 'test_*.py' -v
+      - run: python -m unittest discover -s source2-particle-schema/scripts -p 'test_*.py' -v
+      - run: python -m unittest discover -s source2-particle-validation/scripts -p 'test_*.py' -v
+      - run: python source2-particle-schema/scripts/schema_catalog.py verify
+      - run: python source2-particle-control-points/scripts/cp_contracts.py --verify
       - run: python tools/validate_skills.py
       - uses: actions/setup-dotnet@v5
         with:

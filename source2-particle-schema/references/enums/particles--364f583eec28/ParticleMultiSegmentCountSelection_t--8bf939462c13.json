@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"7 Segment\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SEG_COUNT_7",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"14 Segment\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SEG_COUNT_14",
+        "value": 14
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"16 Segment\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SEG_COUNT_16",
+        "value": 16
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleMultiSegmentCountSelection_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleMultiSegmentCountSelection_t"
+  },
+  "source": {
+    "canonical_record_sha256": "84724155785537bd7f99eab39d4974112ca0297a30091fb43d7634697341121f",
+    "json_pointer": "/enums/420",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

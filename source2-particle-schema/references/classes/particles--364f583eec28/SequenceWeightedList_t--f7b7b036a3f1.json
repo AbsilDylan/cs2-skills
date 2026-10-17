@@ -1,0 +1,109 @@
+{
+  "declaration": {
+    "alignment": 4,
+    "flags": [
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_flRelativeWeight": 1.0,
+          "m_nSequence": 0
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "SequenceWeightedList_t",
+    "size": 8
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "SequenceWeightedList_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_flRelativeWeight": {
+        "module": "particles",
+        "name": "SequenceWeightedList_t"
+      },
+      "m_nSequence": {
+        "module": "particles",
+        "name": "SequenceWeightedList_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_flRelativeWeight": 1.0,
+      "m_nSequence": 0
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "SequenceWeightedList_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"sequence\""
+          },
+          {
+            "name": "MPropertyAttributeEditor",
+            "value": "\"SequencePicker( 1 )\""
+          }
+        ],
+        "name": "m_nSequence",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "SequenceWeightedList_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"weight\""
+          }
+        ],
+        "name": "m_flRelativeWeight",
+        "offset": 4,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "SequenceWeightedList_t"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "737eb419cc88e1c5c6ad89789e373e5b21dc2536bf5f3c1656bbea311a1d22b9",
+    "json_pointer": "/classes/2140",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

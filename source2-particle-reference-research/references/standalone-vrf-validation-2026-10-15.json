@@ -1,0 +1,204 @@
+{
+  "schema": "source2-standalone-vrf-validation.v1",
+  "date": "2026-10-15",
+  "scope": "Two selected witnesses; no complete corpus rescan",
+  "isolatedPythonOptions": [
+    "-E",
+    "-S"
+  ],
+  "testsPassed": 39,
+  "processPlatforms": {
+    "Windows": "executed",
+    "Unix": "statically reviewed, not executed"
+  },
+  "snapshots": [
+    {
+      "game": "cs2",
+      "archive": {
+        "directoryFile": "pak01_dir.vpk",
+        "version": 2,
+        "directoryFileBytes": 7698168,
+        "directoryIndexBytes": 6267162,
+        "directoryIndexSha256": "0211aadcf8875d4fb9d548aaf2556a30590687a9dcda76e7c0a75292c9d3c0d7",
+        "hashScope": "header and directory tree; excludes payload and checksum/signature sections",
+        "entryCount": 137440,
+        "signatureVerified": false
+      },
+      "steam": {
+        "file": "appmanifest_730.acf",
+        "steamAppId": "730",
+        "steamBuildId": "25640462",
+        "sha256": "a76f2cdf8bab99a3bf53179bb621b0b15d0d8cf440795b3913ac6e80ede96da2",
+        "binding": "local metadata, not a cryptographic binding to the VPK"
+      },
+      "tool": {
+        "file": "Source2Viewer-CLI.exe",
+        "bytes": 284160,
+        "sha256": "63183e53604ee003c4957842757dfd86ea48e9f7367a6b6fe5149694719d3ade",
+        "companionAssembly": {
+          "file": "Source2Viewer-CLI.dll",
+          "bytes": 262144,
+          "sha256": "a474668e8443f314dfa24a04c2a81902047b82bfc83544aaf4fd1882294dc7f9"
+        },
+        "versionOutput": "Version: 19.2.0+f86ea981fc37b9f8f23c4eb84e058de2083b6761\r\nOS: Microsoft Windows 10.0.26300 (X64)\r\nWebsite: https://valveresourceformat.github.io\r\nGitHub: https://github.com/ValveResourceFormat/ValveResourceFormat",
+        "helpSha256": "8e3b6c78735ee09650b02a73695f165a0a06ae4277e0977d7ea6d0e56efda981",
+        "argumentsVerifiedFromHelp": [
+          "--input",
+          "--block"
+        ]
+      },
+      "method": {
+        "scriptSha256": "781c562ce77ac17342b59e64071c7a3b73916d37df8c31c121264e38431ed878",
+        "bundledScriptSha256": {
+          "inspect_vpk_with_vrf.py": "781c562ce77ac17342b59e64071c7a3b73916d37df8c31c121264e38431ed878",
+          "vpk_reference.py": "09916c49df3468ee499302ee8123f743b096e32209614a6c87abe38aadc2f243",
+          "process_limits.py": "0f14b4051ae84517254aa183aee44b991761d35c8d0c227526e4157c54074496"
+        },
+        "arguments": [
+          "--input",
+          "LOCAL_TEMPORARY_PARTICLE",
+          "--block",
+          "DATA"
+        ],
+        "payloadCrc32Required": true,
+        "payloadsRetained": false,
+        "textIsVrfTranscript": true,
+        "historicalCatalogReproduction": false
+      },
+      "coverage": {
+        "matching": 1,
+        "selected": 1,
+        "attempted": 1,
+        "decoded": 1,
+        "failed": 0,
+        "payloadBytesRead": 4016,
+        "payloadBytesBudgeted": 4016,
+        "textBytesWritten": 21973,
+        "selectionTruncated": false,
+        "complete": true
+      },
+      "entries": [
+        {
+          "path": "particles/ambient/ambient_water_stream.vpcf_c",
+          "crc32": "4d4a5a32",
+          "archiveIndex": 187,
+          "offset": 52132144,
+          "archiveBytes": 4016,
+          "preloadBytes": 0,
+          "totalBytes": 4016,
+          "status": "decoded",
+          "sha256": "ccdf38955316e83c9a48ec6f23b821b75485d07c9a486a7aa74b4f0f6e0b835b",
+          "crc32Verified": true,
+          "process": {
+            "exitCode": 0,
+            "timedOut": false,
+            "outputLimitExceeded": false
+          },
+          "stdoutSha256": "c593a7a7e78eedbd80db1c2832d29fd63a7c166028eddafce29eedff875b2c93",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "dataFormat": "vpcf54",
+          "transcriptBytes": 21973
+        }
+      ]
+    },
+    {
+      "game": "deadlock",
+      "archive": {
+        "directoryFile": "pak01_dir.vpk",
+        "version": 2,
+        "directoryFileBytes": 7426877,
+        "directoryIndexBytes": 6508635,
+        "directoryIndexSha256": "a205cd25bd124bf810a501d2bc5663a7246a7547f1a445bc07d6e6d3b5769d2d",
+        "hashScope": "header and directory tree; excludes payload and checksum/signature sections",
+        "entryCount": 137966,
+        "signatureVerified": false
+      },
+      "steam": {
+        "file": "appmanifest_1422450.acf",
+        "steamAppId": "1422450",
+        "steamBuildId": "25660886",
+        "sha256": "c0632c4d9e4535bf7293ae6e1bde19321433a09edb10a2d1c5c3db86b3101b2a",
+        "binding": "local metadata, not a cryptographic binding to the VPK"
+      },
+      "tool": {
+        "file": "Source2Viewer-CLI.exe",
+        "bytes": 284160,
+        "sha256": "63183e53604ee003c4957842757dfd86ea48e9f7367a6b6fe5149694719d3ade",
+        "companionAssembly": {
+          "file": "Source2Viewer-CLI.dll",
+          "bytes": 262144,
+          "sha256": "a474668e8443f314dfa24a04c2a81902047b82bfc83544aaf4fd1882294dc7f9"
+        },
+        "versionOutput": "Version: 19.2.0+f86ea981fc37b9f8f23c4eb84e058de2083b6761\r\nOS: Microsoft Windows 10.0.26300 (X64)\r\nWebsite: https://valveresourceformat.github.io\r\nGitHub: https://github.com/ValveResourceFormat/ValveResourceFormat",
+        "helpSha256": "8e3b6c78735ee09650b02a73695f165a0a06ae4277e0977d7ea6d0e56efda981",
+        "argumentsVerifiedFromHelp": [
+          "--input",
+          "--block"
+        ]
+      },
+      "method": {
+        "scriptSha256": "781c562ce77ac17342b59e64071c7a3b73916d37df8c31c121264e38431ed878",
+        "bundledScriptSha256": {
+          "inspect_vpk_with_vrf.py": "781c562ce77ac17342b59e64071c7a3b73916d37df8c31c121264e38431ed878",
+          "vpk_reference.py": "09916c49df3468ee499302ee8123f743b096e32209614a6c87abe38aadc2f243",
+          "process_limits.py": "0f14b4051ae84517254aa183aee44b991761d35c8d0c227526e4157c54074496"
+        },
+        "arguments": [
+          "--input",
+          "LOCAL_TEMPORARY_PARTICLE",
+          "--block",
+          "DATA"
+        ],
+        "payloadCrc32Required": true,
+        "payloadsRetained": false,
+        "textIsVrfTranscript": true,
+        "historicalCatalogReproduction": false
+      },
+      "coverage": {
+        "matching": 1,
+        "selected": 1,
+        "attempted": 1,
+        "decoded": 1,
+        "failed": 0,
+        "payloadBytesRead": 3207,
+        "payloadBytesBudgeted": 3207,
+        "textBytesWritten": 18815,
+        "selectionTruncated": false,
+        "complete": true
+      },
+      "entries": [
+        {
+          "path": "materials/dev/steam_test.vpcf_c",
+          "crc32": "b0abd3e3",
+          "archiveIndex": 173,
+          "offset": 58040288,
+          "archiveBytes": 3207,
+          "preloadBytes": 0,
+          "totalBytes": 3207,
+          "status": "decoded",
+          "sha256": "dcb4fbda9f6708c0913c1052c7a6826e01ec616028b2abd3b5637186f647227e",
+          "crc32Verified": true,
+          "process": {
+            "exitCode": 0,
+            "timedOut": false,
+            "outputLimitExceeded": false
+          },
+          "stdoutSha256": "e070642d2cf629062ed0f7985d4443dcee16550148d2485a0ad8a532eed57d1c",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "dataFormat": "vpcf61",
+          "transcriptBytes": 18815
+        }
+      ]
+    }
+  ],
+  "payloadsIncluded": false,
+  "transcriptsIncluded": false,
+  "distributionAdaptations": [
+    {
+      "path": "scripts/process_limits.py",
+      "capturedVersionSha256": "0f14b4051ae84517254aa183aee44b991761d35c8d0c227526e4157c54074496",
+      "distributedVersionSha256": "7adcf5eca9f28206720818914c4d6d0cf6123caba038b75ca76ef704c2d1da3f",
+      "change": "Added a python3 shebang for distribution conventions; executable statements unchanged. Historical native evidence retains the captured tool identities."
+    }
+  ]
+}

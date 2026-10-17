@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Do Nothing\""
+          }
+        ],
+        "name": "PARTICLE_TRACE_MISS_BEHAVIOR_NONE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Kill Particle\""
+          }
+        ],
+        "name": "PARTICLE_TRACE_MISS_BEHAVIOR_KILL",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Place Particle at Trace End\""
+          }
+        ],
+        "name": "PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleTraceMissBehavior_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleTraceMissBehavior_t"
+  },
+  "source": {
+    "canonical_record_sha256": "a0d64c36de56e5db20825f061c8805433d130ff8d3971b9ca87f2f7a6237bade",
+    "json_pointer": "/enums/439",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

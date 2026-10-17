@@ -1,0 +1,81 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"X Axis\""
+          }
+        ],
+        "name": "PARTICLE_CP_AXIS_X",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Y Axis\""
+          }
+        ],
+        "name": "PARTICLE_CP_AXIS_Y",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Z Axis\""
+          }
+        ],
+        "name": "PARTICLE_CP_AXIS_Z",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Negative X Axis\""
+          }
+        ],
+        "name": "PARTICLE_CP_AXIS_NEGATIVE_X",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Negative Y Axis\""
+          }
+        ],
+        "name": "PARTICLE_CP_AXIS_NEGATIVE_Y",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Negative Z Axis\""
+          }
+        ],
+        "name": "PARTICLE_CP_AXIS_NEGATIVE_Z",
+        "value": 5
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleControlPointAxis_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleControlPointAxis_t"
+  },
+  "source": {
+    "canonical_record_sha256": "7f0af87591497b898135fd10d0c314b615b2aabd5a6c3fa36b27cc312c9f9f2f",
+    "json_pointer": "/enums/401",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

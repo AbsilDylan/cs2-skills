@@ -1,0 +1,48 @@
+{
+  "declaration": {
+    "flags": [
+      "abstract"
+    ],
+    "module": "particles",
+    "name": "IParticleCollection",
+    "size": 16
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "IParticleCollection"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "particles",
+          "name": "IParticleCollection"
+        },
+        "code": "defaults-absent"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "IParticleCollection"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "b19f91cf51bb3e59401ab301ca4ede35dcd7a13eda94e9f4242ec4b619172368",
+    "json_pointer": "/classes/2128",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

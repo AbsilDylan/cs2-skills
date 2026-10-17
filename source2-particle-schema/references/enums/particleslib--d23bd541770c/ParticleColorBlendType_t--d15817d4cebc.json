@@ -1,0 +1,151 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Multiply\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_MULTIPLY",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Multiply x2\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_MULTIPLY2X",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Divide\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_DIVIDE",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_ADD",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Subtract\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_SUBTRACT",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mod2X\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_MOD2X",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Screen\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_SCREEN",
+        "value": 6
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Lighten\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_MAX",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Darken\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_MIN",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Replace\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_REPLACE",
+        "value": 9
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Average\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_AVERAGE",
+        "value": 10
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Negate\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_NEGATE",
+        "value": 11
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Luminance\""
+          }
+        ],
+        "name": "PARTICLE_COLOR_BLEND_LUMINANCE",
+        "value": 12
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleColorBlendType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleColorBlendType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "7b003b4978c3b860e6f84781d53c699e3998b0628cf51284cb48103c943f6b2f",
+    "json_pointer": "/enums/463",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

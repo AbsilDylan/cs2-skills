@@ -1,0 +1,983 @@
+{
+  "format": "source2-control-point-vocabulary/1",
+  "game": "cs2",
+  "scope": "All compiled particle entries in the explicitly selected pak01_dir.vpk; no siblings, addons or authored loose files",
+  "directorySha256": "fac8ff988ab9a20c3175c33fd4c5196da3798a0ddcea9fe0a5565ab33cffb5a9",
+  "resourcePlanSha256": "80556aeb1965a4817284300ae9464611fe884432e78c9afc31828519e27b9e20",
+  "resources": 2622,
+  "decoded": 2622,
+  "failed": 0,
+  "failures": {},
+  "classes": {
+    "C_INIT_CreateAlongPath": {
+      "instances": 26,
+      "effects": 26,
+      "fields": {
+        "m_bSaveOffset": 1,
+        "m_fT": 1,
+        "m_PathParams": 26
+      },
+      "nestedFields": {
+        "m_PathParams.m_nStartControlPointNumber": 25,
+        "m_PathParams.m_nEndControlPointNumber": 25,
+        "m_PathParams.m_vStartPointOffset": 6,
+        "m_PathParams.m_vEndOffset": 5
+      },
+      "example": {
+        "resource": "particles/impact_fx/chamber_cube_spark.vpcf_c",
+        "stage": "initializer",
+        "fields": {},
+        "nested": {
+          "m_PathParams": {
+            "m_nStartControlPointNumber": 1,
+            "m_nEndControlPointNumber": 2
+          }
+        }
+      }
+    },
+    "C_INIT_CreateOnModel": {
+      "instances": 6,
+      "effects": 6,
+      "fields": {
+        "m_nControlPointNumber": 6,
+        "m_nForceInModel": 6,
+        "m_vecDirectionBias": 4
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/ambient_fx/ghost_player_whisps_b.vpcf_c",
+        "stage": "initializer",
+        "fields": {
+          "m_nForceInModel": 1,
+          "m_vecDirectionBias": [
+            0,
+            0,
+            0.8
+          ],
+          "m_nControlPointNumber": 1
+        }
+      }
+    },
+    "C_INIT_CreateWithinBox": {
+      "instances": 147,
+      "effects": 147,
+      "fields": {
+        "m_bLocalSpace": 14,
+        "m_nControlPointNumber": 7,
+        "m_vecMax": 103,
+        "m_vecMin": 96
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/barrel_burning_engine_smoke_cheap.vpcf_c",
+        "stage": "initializer",
+        "fields": {}
+      }
+    },
+    "C_INIT_PositionWarp": {
+      "instances": 99,
+      "effects": 99,
+      "fields": {
+        "m_flOpTimeOffsetMax": 1,
+        "m_flWarpStartTime": 18,
+        "m_flWarpTime": 27,
+        "m_nControlPointNumber": 2,
+        "m_vecWarpMax": 98,
+        "m_vecWarpMin": 82
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/blood_impact/blood_impact_high_ground_decal.vpcf_c",
+        "stage": "initializer",
+        "fields": {}
+      }
+    },
+    "C_INIT_RemapTransformOrientationToRotations": {
+      "instances": 32,
+      "effects": 31,
+      "fields": {
+        "m_bUseQuat": 1,
+        "m_bWriteNormal": 6,
+        "m_TransformInput": 3,
+        "m_vecRotation": 6
+      },
+      "nestedFields": {
+        "m_TransformInput.m_nControlPoint": 3
+      },
+      "example": {
+        "resource": "models/gameplay/cash_stack/cash_stack_pickup.vpcf_c",
+        "stage": "initializer",
+        "fields": {}
+      }
+    },
+    "C_OP_AttractToControlPoint": {
+      "instances": 62,
+      "effects": 57,
+      "fields": {
+        "m_fFalloffPower": 62,
+        "m_fForceAmount": 62,
+        "m_flOpEndFadeOutTime": 5,
+        "m_flOpStartFadeOutTime": 5,
+        "m_flOpTimeOffsetMax": 1,
+        "m_TransformInput": 14,
+        "m_vecComponentScale": 5
+      },
+      "nestedFields": {
+        "m_TransformInput.m_nControlPoint": 14,
+        "m_TransformInput.m_bUseOrientation": 14
+      },
+      "example": {
+        "resource": "particles/ambient_fx/copter_land_loop_1_dust_low.vpcf_c",
+        "stage": "force",
+        "fields": {
+          "m_fFalloffPower": 0,
+          "m_flOpStartFadeOutTime": 2
+        }
+      }
+    },
+    "C_OP_ControlpointLight": {
+      "instances": 11,
+      "effects": 6,
+      "fields": {
+        "m_bClampLowerRange": 11,
+        "m_bLightDynamic1": 4,
+        "m_bLightType1": 1,
+        "m_bUseNormal": 7,
+        "m_flOpEndFadeInTime": 1,
+        "m_flOpEndFadeOutTime": 7,
+        "m_flOpFadeOscillatePeriod": 6,
+        "m_flOpStartFadeOutTime": 7,
+        "m_flScale": 6,
+        "m_LightColor1": 11,
+        "m_LightColor2": 1,
+        "m_LightFiftyDist1": 10,
+        "m_LightFiftyDist2": 1,
+        "m_LightZeroDist1": 11,
+        "m_LightZeroDist2": 1,
+        "m_nControlPoint1": 10,
+        "m_nControlPoint2": 1,
+        "m_vecCPOffset1": 7,
+        "m_vecCPOffset2": 1
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/maps/cs_italy/italy_paper_blow_horizontal.vpcf_c",
+        "stage": "operator",
+        "fields": {
+          "m_bClampLowerRange": true,
+          "m_LightZeroDist1": 1500,
+          "m_LightFiftyDist1": 500,
+          "m_bLightDynamic1": true,
+          "m_nControlPoint1": 1
+        }
+      }
+    },
+    "C_OP_DistanceBetweenCPsToCP": {
+      "instances": 51,
+      "effects": 47,
+      "fields": {
+        "m_bRunOnce": 1,
+        "m_bSetOnce": 45,
+        "m_flInputMax": 51,
+        "m_flInputMin": 43,
+        "m_flOutputMax": 42,
+        "m_flOutputMin": 45,
+        "m_nEndCP": 34,
+        "m_Notes": 1,
+        "m_nOutputCP": 43
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/blood_impact/blood_impact_friendly.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_nOutputCP": 4,
+          "m_flInputMin": 128,
+          "m_flInputMax": 1024,
+          "m_flOutputMin": 0.2,
+          "m_flOutputMax": 0.85
+        }
+      }
+    },
+    "C_OP_MaintainEmitter": {
+      "instances": 62,
+      "effects": 62,
+      "fields": {
+        "m_bEmitInstantaneously": 3,
+        "m_flEmissionDuration": 2,
+        "m_flEmissionRate": 7,
+        "m_flOpEndFadeOutTime": 5,
+        "m_flOpStartFadeOutTime": 3,
+        "m_flOpStrength": 4,
+        "m_flScale": 15,
+        "m_flStartTime": 1,
+        "m_nParticlesToMaintain": 59,
+        "m_nSnapshotControlPoint": 27
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/burning_fx/barrel_fire_scortch.vpcf_c",
+        "stage": "emitter",
+        "fields": {}
+      }
+    },
+    "C_OP_RemapCPtoScalar": {
+      "instances": 11,
+      "effects": 11,
+      "fields": {
+        "m_flOutputMax": 4,
+        "m_nCPInput": 11,
+        "m_nField": 2,
+        "m_nFieldOutput": 3,
+        "m_nSetMethod": 7
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/burning_fx/gas_cannister_trail_embers.vpcf_c",
+        "stage": "operator",
+        "fields": {
+          "m_nCPInput": 1,
+          "m_nSetMethod": "PARTICLE_SET_SCALE_CURRENT_VALUE"
+        }
+      }
+    },
+    "C_OP_RemapCPtoVector": {
+      "instances": 78,
+      "effects": 78,
+      "fields": {
+        "m_flOpStrength": 1,
+        "m_nCPInput": 78,
+        "m_nFieldOutput": 78,
+        "m_nSetMethod": 28,
+        "m_vInputMax": 78,
+        "m_vOutputMax": 78
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/environment/directional_glow01_flare.vpcf_c",
+        "stage": "operator",
+        "fields": {
+          "m_nCPInput": 16,
+          "m_nFieldOutput": 6,
+          "m_vInputMax": [
+            255,
+            255,
+            255
+          ],
+          "m_vOutputMax": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "C_OP_RenderRopes": {
+      "instances": 168,
+      "effects": 109,
+      "fields": {
+        "m_bCannotBeRefracted": 1,
+        "m_bClosedLoop": 14,
+        "m_bDisableOperator": 5,
+        "m_bDisableZBuffering": 4,
+        "m_bDrawAsOpaque": 1,
+        "m_bEnableFadingAndClamping": 11,
+        "m_bGammaCorrectVertexColors": 12,
+        "m_bGenerateNormals": 1,
+        "m_bOnlyRenderInEffecsGameOverlay": 2,
+        "m_bOnlyRenderInEffectsBloomPass": 19,
+        "m_bOnlyRenderInEffectsWaterPass": 4,
+        "m_bReverseZBuffering": 1,
+        "m_bSaturateColorPreAlphaBlend": 33,
+        "m_bUseMixedResolutionRendering": 3,
+        "m_bUseScalarForTextureCoordinate": 31,
+        "m_flAddSelfAmount": 25,
+        "m_flAlphaScale": 64,
+        "m_flAnimationRate": 8,
+        "m_flDepthBias": 1,
+        "m_flDiffuseAmount": 59,
+        "m_flEndFadeDot": 9,
+        "m_flEndFadeSize": 12,
+        "m_flFeatheringMaxDist": 25,
+        "m_flMaxSize": 7,
+        "m_flMinSize": 1,
+        "m_flOverbrightFactor": 122,
+        "m_flRadiusScale": 79,
+        "m_flRadiusTaper": 38,
+        "m_flScalarAttributeTextureCoordScale": 15,
+        "m_flSelfIllumAmount": 104,
+        "m_flStartFadeDot": 9,
+        "m_flStartFadeSize": 12,
+        "m_flTessScale": 23,
+        "m_flTextureVOffset": 14,
+        "m_flTextureVScrollRate": 86,
+        "m_flTextureVWorldSize": 105,
+        "m_nAlpha2Field": 6,
+        "m_nAnimationType": 5,
+        "m_nColorBlendType": 1,
+        "m_nFeatheringMode": 29,
+        "m_nHSVShiftControlPoint": 1,
+        "m_nLightingControlPoint": 5,
+        "m_nMaxTesselation": 87,
+        "m_nMinTesselation": 57,
+        "m_nOrientationType": 37,
+        "m_nOutputBlendMode": 117,
+        "m_nScalarFieldForTextureCoordinate": 36,
+        "m_nSelfIllumPerParticle": 11,
+        "m_vecColorScale": 45,
+        "m_vecTexturesInput": 168,
+        "VisibilityInputs": 16
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/blood_impact/impact_taser_bodyfx.vpcf_c",
+        "stage": "renderer",
+        "fields": {
+          "m_bSaturateColorPreAlphaBlend": false
+        }
+      }
+    },
+    "C_OP_SetControlPointOrientation": {
+      "instances": 95,
+      "effects": 95,
+      "fields": {
+        "m_bRunOnce": 3,
+        "m_bSetOnce": 6,
+        "m_bUseWorldLocation": 2,
+        "m_nCP": 16,
+        "m_nHeadLocation": 1,
+        "m_vecRotation": 90,
+        "m_vecRotationB": 90
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/dev/materials_test_cam_dot_01.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_bSetOnce": true,
+          "m_nCP": 11,
+          "m_vecRotation": [
+            -90,
+            0,
+            0
+          ],
+          "m_vecRotationB": [
+            -90,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "C_OP_SetControlPointPositions": {
+      "instances": 82,
+      "effects": 82,
+      "fields": {
+        "m_bOrient": 4,
+        "m_bUseWorldLocation": 2,
+        "m_nCP1": 27,
+        "m_nCP2": 29,
+        "m_nCP3": 29,
+        "m_nCP4": 27,
+        "m_nHeadLocation": 5,
+        "m_vecCP1Pos": 80,
+        "m_vecCP2Pos": 39,
+        "m_vecCP3Pos": 31,
+        "m_vecCP4Pos": 31
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/ambient_fx/ambient_leaf_blow_e.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_vecCP1Pos": [
+            320,
+            16,
+            8
+          ]
+        }
+      }
+    },
+    "C_OP_SetControlPointToCenter": {
+      "instances": 18,
+      "effects": 18,
+      "fields": {
+        "m_nCP1": 2
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/survival_fx/danger_trail_spores.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_nCP1": 10
+        }
+      }
+    },
+    "C_OP_SetControlPointToPlayer": {
+      "instances": 57,
+      "effects": 57,
+      "fields": {
+        "m_bOrientToEyes": 23,
+        "m_nCP1": 46
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/dev/materials_test_cam_dot_01.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_nCP1": 12,
+          "m_bOrientToEyes": true
+        }
+      }
+    },
+    "C_OP_SetPerChildControlPoint": {
+      "instances": 14,
+      "effects": 13,
+      "fields": {
+        "m_bNumBasedOnParticleCount": 6,
+        "m_bSetOrientation": 2,
+        "m_nFirstControlPoint": 12,
+        "m_nFirstSourcePoint": 1,
+        "m_nNumControlPoints": 10,
+        "m_nOrientationField": 2
+      },
+      "nestedFields": {},
+      "example": {
+        "resource": "particles/breakable_fx/breakable_mail_debris_01.vpcf_c",
+        "stage": "operator",
+        "fields": {
+          "m_nNumControlPoints": 5,
+          "m_nFirstControlPoint": 3,
+          "m_nOrientationField": 21
+        }
+      }
+    },
+    "C_OP_SetSingleControlPointPosition": {
+      "instances": 540,
+      "effects": 284,
+      "fields": {
+        "m_bRunOnce": 29,
+        "m_bSetOnce": 51,
+        "m_bUseWorldLocation": 8,
+        "m_nCP1": 371,
+        "m_nHeadLocation": 12,
+        "m_Notes": 1,
+        "m_transformInput": 88,
+        "m_vecCP1Pos": 540
+      },
+      "nestedFields": {
+        "m_transformInput.m_nControlPoint": 38,
+        "m_transformInput.m_nType": 52,
+        "m_transformInput.m_bUseOrientation": 9
+      },
+      "example": {
+        "resource": "particles/blood_impact/blood_impact_high_ground_decal.vpcf_c",
+        "stage": "preEmission",
+        "fields": {
+          "m_bRunOnce": true
+        }
+      }
+    }
+  },
+  "providers": {
+    "PF_TYPE_CONTROL_POINT_CHANGE_AGE": {
+      "occurrences": 41,
+      "fields": {
+        "m_bHasRandomSignFlip": 41,
+        "m_bNoiseImgPreviewLive": 41,
+        "m_bUseBoundsCenter": 20,
+        "m_Curve": 41,
+        "m_flBiasParameter": 41,
+        "m_flInput0": 41,
+        "m_flInput1": 41,
+        "m_flLiteralValue": 41,
+        "m_flLOD0": 41,
+        "m_flLOD1": 41,
+        "m_flLOD2": 41,
+        "m_flLOD3": 41,
+        "m_flMultFactor": 41,
+        "m_flNoCameraFallback": 16,
+        "m_flNoiseImgPreviewScale": 41,
+        "m_flNoiseOffset": 41,
+        "m_flNoiseOutputMax": 41,
+        "m_flNoiseOutputMin": 41,
+        "m_flNoiseScale": 41,
+        "m_flNoiseTurbulenceMix": 41,
+        "m_flNoiseTurbulenceScale": 41,
+        "m_flNotchedOutputInside": 41,
+        "m_flNotchedOutputOutside": 41,
+        "m_flNotchedRangeMax": 41,
+        "m_flNotchedRangeMin": 41,
+        "m_flOutput0": 41,
+        "m_flOutput1": 41,
+        "m_flRandomMax": 41,
+        "m_flRandomMin": 41,
+        "m_NamedValue": 41,
+        "m_nBiasType": 41,
+        "m_nControlPoint": 41,
+        "m_nInputMode": 41,
+        "m_nMapType": 41,
+        "m_nNoiseInputVectorAttribute": 41,
+        "m_nNoiseModifier": 41,
+        "m_nNoiseOctaves": 41,
+        "m_nNoiseTurbulence": 41,
+        "m_nNoiseType": 41,
+        "m_nRandomMode": 41,
+        "m_nRandomSeed": 14,
+        "m_nScalarAttribute": 41,
+        "m_nType": 41,
+        "m_nVectorAttribute": 41,
+        "m_nVectorComponent": 41,
+        "m_vecNoiseOffsetRate": 41
+      },
+      "example": {
+        "resource": "particles/inferno_fx/incendiary_groundfire_snapshot_child_base.vpcf_c",
+        "property": "$.m_Operators[].m_InputValue",
+        "fields": {
+          "m_nType": "PF_TYPE_CONTROL_POINT_CHANGE_AGE",
+          "m_nMapType": "PF_MAP_TYPE_CURVE",
+          "m_flLiteralValue": 0,
+          "m_NamedValue": "",
+          "m_nControlPoint": 12,
+          "m_nScalarAttribute": 3,
+          "m_nVectorAttribute": 6,
+          "m_nVectorComponent": 0,
+          "m_flRandomMin": 0,
+          "m_flRandomMax": 1,
+          "m_bHasRandomSignFlip": false,
+          "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+        }
+      }
+    },
+    "PF_TYPE_CONTROL_POINT_COMPONENT": {
+      "occurrences": 1102,
+      "fields": {
+        "m_bHasRandomSignFlip": 600,
+        "m_bNoiseImgPreviewLive": 1037,
+        "m_bReverseOrder": 25,
+        "m_bUseBoundsCenter": 347,
+        "m_Curve": 1057,
+        "m_flBiasParameter": 1057,
+        "m_flCompareValue": 11,
+        "m_flInput0": 1074,
+        "m_flInput1": 1074,
+        "m_flLiteralValue": 1057,
+        "m_flLOD0": 1037,
+        "m_flLOD1": 1037,
+        "m_flLOD2": 1037,
+        "m_flLOD3": 1037,
+        "m_flMultFactor": 1081,
+        "m_flNoCameraFallback": 295,
+        "m_flNoiseImgPreviewScale": 1037,
+        "m_flNoiseOffset": 1037,
+        "m_flNoiseOutputMax": 1037,
+        "m_flNoiseOutputMin": 1037,
+        "m_flNoiseScale": 1037,
+        "m_flNoiseTurbulenceMix": 1037,
+        "m_flNoiseTurbulenceScale": 1037,
+        "m_flNotchedOutputInside": 581,
+        "m_flNotchedOutputOutside": 581,
+        "m_flNotchedRangeMax": 581,
+        "m_flNotchedRangeMin": 581,
+        "m_flOutput0": 1074,
+        "m_flOutput1": 1074,
+        "m_flRandomMax": 1057,
+        "m_flRandomMin": 1057,
+        "m_NamedValue": 571,
+        "m_nBiasType": 1057,
+        "m_nControlPoint": 1102,
+        "m_nInputMode": 1037,
+        "m_nMapType": 1098,
+        "m_nNoiseInputVectorAttribute": 571,
+        "m_nNoiseModifier": 1037,
+        "m_nNoiseOctaves": 1037,
+        "m_nNoiseTurbulence": 1037,
+        "m_nNoiseType": 1037,
+        "m_nRandomMode": 1057,
+        "m_nRandomSeed": 225,
+        "m_nRoundType": 53,
+        "m_nScalarAttribute": 1057,
+        "m_nType": 1102,
+        "m_nVectorAttribute": 1057,
+        "m_nVectorComponent": 1102,
+        "m_strSnapshotSubset": 25,
+        "m_vecNoiseOffsetRate": 1037
+      },
+      "example": {
+        "resource": "particles/ambient_fx/env_sparks_directional_e.vpcf_c",
+        "property": "$.m_Initializers[].m_InputValue",
+        "fields": {
+          "m_flInput0": 0,
+          "m_flInput1": 3,
+          "m_flOutput0": 0.5,
+          "m_flOutput1": 1.5,
+          "m_nMapType": "PF_MAP_TYPE_REMAP",
+          "m_nType": "PF_TYPE_CONTROL_POINT_COMPONENT",
+          "m_nControlPoint": 1,
+          "m_nVectorComponent": 1
+        }
+      }
+    },
+    "PF_TYPE_CONTROL_POINT_SPEED": {
+      "occurrences": 5,
+      "fields": {
+        "m_bHasRandomSignFlip": 5,
+        "m_bNoiseImgPreviewLive": 5,
+        "m_bUseBoundsCenter": 2,
+        "m_Curve": 5,
+        "m_flBiasParameter": 5,
+        "m_flInput0": 5,
+        "m_flInput1": 5,
+        "m_flLiteralValue": 5,
+        "m_flLOD0": 5,
+        "m_flLOD1": 5,
+        "m_flLOD2": 5,
+        "m_flLOD3": 5,
+        "m_flMultFactor": 5,
+        "m_flNoiseImgPreviewScale": 5,
+        "m_flNoiseOffset": 5,
+        "m_flNoiseOutputMax": 5,
+        "m_flNoiseOutputMin": 5,
+        "m_flNoiseScale": 5,
+        "m_flNoiseTurbulenceMix": 5,
+        "m_flNoiseTurbulenceScale": 5,
+        "m_flNotchedOutputInside": 5,
+        "m_flNotchedOutputOutside": 5,
+        "m_flNotchedRangeMax": 5,
+        "m_flNotchedRangeMin": 5,
+        "m_flOutput0": 5,
+        "m_flOutput1": 5,
+        "m_flRandomMax": 5,
+        "m_flRandomMin": 5,
+        "m_NamedValue": 5,
+        "m_nBiasType": 5,
+        "m_nControlPoint": 5,
+        "m_nInputMode": 5,
+        "m_nMapType": 5,
+        "m_nNoiseInputVectorAttribute": 5,
+        "m_nNoiseModifier": 5,
+        "m_nNoiseOctaves": 5,
+        "m_nNoiseTurbulence": 5,
+        "m_nNoiseType": 5,
+        "m_nRandomMode": 5,
+        "m_nScalarAttribute": 5,
+        "m_nType": 5,
+        "m_nVectorAttribute": 5,
+        "m_nVectorComponent": 5,
+        "m_vecNoiseOffsetRate": 5
+      },
+      "example": {
+        "resource": "particles/characters/smokegrenade_body_fx_trails.vpcf_c",
+        "property": "$.m_Initializers[].m_InputValue",
+        "fields": {
+          "m_nType": "PF_TYPE_CONTROL_POINT_SPEED",
+          "m_nMapType": "PF_MAP_TYPE_REMAP",
+          "m_flLiteralValue": 0,
+          "m_NamedValue": "",
+          "m_nControlPoint": 3,
+          "m_nScalarAttribute": 3,
+          "m_nVectorAttribute": 6,
+          "m_nVectorComponent": 0,
+          "m_flRandomMin": 0,
+          "m_flRandomMax": 1,
+          "m_bHasRandomSignFlip": false,
+          "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+        }
+      }
+    },
+    "PM_TYPE_CONTROL_POINT": {
+      "occurrences": 6,
+      "fields": {
+        "m_nControlPoint": 6,
+        "m_nType": 6
+      },
+      "example": {
+        "resource": "particles/breakable_fx/bottles_liquid_break_particles.vpcf_c",
+        "property": "$.m_Renderers[].m_modelInput",
+        "fields": {
+          "m_nType": "PM_TYPE_CONTROL_POINT",
+          "m_nControlPoint": 0
+        }
+      }
+    },
+    "PT_TYPE_CONTROL_POINT": {
+      "occurrences": 3,
+      "fields": {
+        "m_bFollowNamedValue": 3,
+        "m_bSupportsDisabled": 3,
+        "m_bUseOrientation": 3,
+        "m_flEndCPGrowthTime": 3,
+        "m_NamedValue": 3,
+        "m_nControlPoint": 3,
+        "m_nControlPointRangeMax": 3,
+        "m_nType": 3
+      },
+      "example": {
+        "resource": "particles/pet_photo/feathers/photo_solo_feathers_feathers.vpcf_c",
+        "property": "$.m_Initializers[].m_TransformInput",
+        "fields": {
+          "m_nType": "PT_TYPE_CONTROL_POINT",
+          "m_NamedValue": "",
+          "m_bFollowNamedValue": false,
+          "m_bSupportsDisabled": false,
+          "m_bUseOrientation": true,
+          "m_nControlPoint": 2,
+          "m_nControlPointRangeMax": 0,
+          "m_flEndCPGrowthTime": 0
+        }
+      }
+    },
+    "PT_TYPE_CONTROL_POINT_RANGE": {
+      "occurrences": 2,
+      "fields": {
+        "m_nControlPointRangeMax": 2,
+        "m_nType": 2
+      },
+      "example": {
+        "resource": "particles/inferno_fx/firework_crate_ground_sparks_01.vpcf_c",
+        "property": "$.m_Initializers[].m_TransformInput",
+        "fields": {
+          "m_nType": "PT_TYPE_CONTROL_POINT_RANGE",
+          "m_nControlPointRangeMax": 63
+        }
+      }
+    },
+    "PVEC_TYPE_CP_RELATIVE_DIR": {
+      "occurrences": 6,
+      "fields": {
+        "m_bFollowNamedValue": 2,
+        "m_flInterpInput0": 6,
+        "m_flInterpInput1": 6,
+        "m_FloatComponentX": 6,
+        "m_FloatComponentY": 6,
+        "m_FloatComponentZ": 6,
+        "m_FloatInterp": 6,
+        "m_Gradient": 6,
+        "m_LiteralColor": 6,
+        "m_NamedValue": 2,
+        "m_nControlPoint": 6,
+        "m_nDeltaControlPoint": 2,
+        "m_nType": 6,
+        "m_nVectorAttribute": 6,
+        "m_vCPRelativeDir": 6,
+        "m_vCPRelativePosition": 6,
+        "m_vCPValueScale": 6,
+        "m_vInterpOutput0": 6,
+        "m_vInterpOutput1": 6,
+        "m_vLiteralValue": 6,
+        "m_vRandomMax": 2,
+        "m_vRandomMin": 2,
+        "m_vVectorAttributeScale": 6
+      },
+      "example": {
+        "resource": "particles/dev/oit_trans_test_line.vpcf_c",
+        "property": "$.m_Initializers[].m_InputValue",
+        "fields": {
+          "m_nType": "PVEC_TYPE_CP_RELATIVE_DIR",
+          "m_vLiteralValue": [
+            0,
+            0,
+            0
+          ],
+          "m_LiteralColor": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "m_nVectorAttribute": 6,
+          "m_vVectorAttributeScale": [
+            1,
+            1,
+            1
+          ],
+          "m_nControlPoint": 0,
+          "m_vCPValueScale": [
+            1,
+            1,
+            1
+          ],
+          "m_vCPRelativePosition": [
+            0,
+            0,
+            0
+          ],
+          "m_vCPRelativeDir": [
+            0,
+            1,
+            0
+          ],
+          "m_flInterpInput0": 0,
+          "m_flInterpInput1": 1,
+          "m_vInterpOutput0": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "PVEC_TYPE_CP_RELATIVE_POSITION": {
+      "occurrences": 10,
+      "fields": {
+        "m_bFollowNamedValue": 10,
+        "m_flInterpInput0": 10,
+        "m_flInterpInput1": 10,
+        "m_FloatComponentX": 10,
+        "m_FloatComponentY": 10,
+        "m_FloatComponentZ": 10,
+        "m_FloatInterp": 10,
+        "m_Gradient": 10,
+        "m_LiteralColor": 10,
+        "m_NamedValue": 10,
+        "m_nControlPoint": 10,
+        "m_nDeltaControlPoint": 10,
+        "m_nType": 10,
+        "m_nVectorAttribute": 10,
+        "m_vCPRelativeDir": 10,
+        "m_vCPRelativePosition": 10,
+        "m_vCPValueScale": 10,
+        "m_vInterpOutput0": 10,
+        "m_vInterpOutput1": 10,
+        "m_vLiteralValue": 10,
+        "m_vRandomMax": 10,
+        "m_vRandomMin": 10,
+        "m_vVectorAttributeScale": 10
+      },
+      "example": {
+        "resource": "particles/ui/ui_item_present_bokeh.vpcf_c",
+        "property": "$.m_Initializers[].m_InputValue",
+        "fields": {
+          "m_nType": "PVEC_TYPE_CP_RELATIVE_POSITION",
+          "m_vLiteralValue": [
+            0,
+            0,
+            0
+          ],
+          "m_LiteralColor": [
+            0,
+            0,
+            0
+          ],
+          "m_NamedValue": "",
+          "m_bFollowNamedValue": false,
+          "m_nVectorAttribute": 6,
+          "m_vVectorAttributeScale": [
+            1,
+            1,
+            1
+          ],
+          "m_nControlPoint": 0,
+          "m_nDeltaControlPoint": 0,
+          "m_vCPValueScale": [
+            1,
+            1,
+            1
+          ],
+          "m_vCPRelativePosition": [
+            0,
+            0,
+            0
+          ],
+          "m_vCPRelativeDir": [
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "PVEC_TYPE_CP_VALUE": {
+      "occurrences": 119,
+      "fields": {
+        "m_bFollowNamedValue": 85,
+        "m_flInterpInput0": 115,
+        "m_flInterpInput1": 115,
+        "m_FloatComponentX": 115,
+        "m_FloatComponentY": 115,
+        "m_FloatComponentZ": 115,
+        "m_FloatInterp": 115,
+        "m_Gradient": 115,
+        "m_LiteralColor": 115,
+        "m_NamedValue": 85,
+        "m_nControlPoint": 119,
+        "m_nDeltaControlPoint": 34,
+        "m_nType": 119,
+        "m_nVectorAttribute": 115,
+        "m_vCPRelativeDir": 115,
+        "m_vCPRelativePosition": 115,
+        "m_vCPValueScale": 115,
+        "m_vInterpOutput0": 115,
+        "m_vInterpOutput1": 115,
+        "m_vLiteralValue": 115,
+        "m_vRandomMax": 85,
+        "m_vRandomMin": 85,
+        "m_vVectorAttributeScale": 115
+      },
+      "example": {
+        "resource": "particles/breakable_fx/bottles_liquid_break_particles.vpcf_c",
+        "property": "$.m_Initializers[].m_velocityInput",
+        "fields": {
+          "m_nType": "PVEC_TYPE_CP_VALUE",
+          "m_nControlPoint": 5
+        }
+      }
+    }
+  },
+  "children": {
+    "effects": 796,
+    "instances": 2619,
+    "fields": {
+      "m_bEndCap": 2,
+      "m_ChildRef": 2619,
+      "m_flDelay": 246,
+      "m_nDetailLevel": 51
+    }
+  },
+  "rootCPFields": {
+    "m_controlPointConfigurations": 1868,
+    "m_nAllowRenderControlPoint": 21,
+    "m_nCullControlPoint": 2,
+    "m_nMinCPULevel": 6,
+    "m_nSkipRenderControlPoint": 4,
+    "m_nSnapshotControlPoint": 142
+  },
+  "configurationFields": {
+    "[].m_drivers": 1558,
+    "[].m_drivers[].m_angOffset": 8,
+    "[].m_drivers[].m_attachmentName": 134,
+    "[].m_drivers[].m_entityName": 2811,
+    "[].m_drivers[].m_iAttachType": 2809,
+    "[].m_drivers[].m_iControlPoint": 1260,
+    "[].m_drivers[].m_vecOffset": 361,
+    "[].m_name": 1972,
+    "[].m_previewState": 192,
+    "[].m_previewState.m_bAnimationNonLooping": 26,
+    "[].m_previewState.m_flParticleSimulationRate": 6,
+    "[].m_previewState.m_groundType": 22,
+    "[].m_previewState.m_hitboxSetName": 182,
+    "[].m_previewState.m_previewModel": 190,
+    "[].m_previewState.m_sequenceName": 188
+  },
+  "configurationEnums": {
+    "[].m_drivers[].m_iAttachType": {
+      "PATTACH_WORLDORIGIN": 2675,
+      "PATTACH_POINT_FOLLOW": 128,
+      "PATTACH_POINT": 6
+    }
+  },
+  "limitations": [
+    "Deadlock observations never establish a CS2 schema",
+    "Examples contain bounded primitive field fragments, not complete assets",
+    "Serialized field occurrences are not a complete schema. A field absent from examples can still be declared by the target-game schema.",
+    "These historical frequencies use a finite-number-only projection. Deadlock excludes one otherwise decoded resource containing four NaN scalars."
+  ],
+  "provenance": {
+    "observedOn": "2026-10-15",
+    "steamAppId": "730",
+    "steamBuildId": "25640462",
+    "steamManifestSha256": "a76f2cdf8bab99a3bf53179bb621b0b15d0d8cf440795b3913ac6e80ede96da2",
+    "identityCaveat": "Local manifest metadata is not cryptographically bound to the inspected package bytes.",
+    "method": "CRC-checked resource ranges; Binary KV3 decoding followed by a finite-number-only projection for these historical CP frequencies."
+  }
+}

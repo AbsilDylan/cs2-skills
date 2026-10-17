@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Constant - No Falloff\""
+          }
+        ],
+        "name": "PARTICLE_FALLOFF_CONSTANT",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Linear Falloff\""
+          }
+        ],
+        "name": "PARTICLE_FALLOFF_LINEAR",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Exponential Falloff\""
+          }
+        ],
+        "name": "PARTICLE_FALLOFF_EXPONENTIAL",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleFalloffFunction_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleFalloffFunction_t"
+  },
+  "source": {
+    "canonical_record_sha256": "2ecacf97a4b9d55ec37d13e29f9914f6250f19e031895f5c86079f8bce28f9be",
+    "json_pointer": "/enums/406",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

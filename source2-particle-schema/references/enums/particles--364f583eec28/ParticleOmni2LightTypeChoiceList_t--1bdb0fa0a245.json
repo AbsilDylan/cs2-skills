@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Point\""
+          }
+        ],
+        "name": "PARTICLE_OMNI2_LIGHT_TYPE_POINT",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Sphere\""
+          }
+        ],
+        "name": "PARTICLE_OMNI2_LIGHT_TYPE_SPHERE",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Barn\""
+          }
+        ],
+        "name": "PARTICLE_OMNI2_LIGHT_TYPE_BARN",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleOmni2LightTypeChoiceList_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleOmni2LightTypeChoiceList_t"
+  },
+  "source": {
+    "canonical_record_sha256": "3b5cdf08475fd0e0735b20ce8175dc42bcd52de8324a10133b66da3434403ff1",
+    "json_pointer": "/enums/424",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

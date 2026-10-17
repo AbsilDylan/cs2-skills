@@ -1,0 +1,1051 @@
+{
+  "schema": "source2.skill-integration-native-evidence.v1",
+  "performedUtc": "2026-10-15T17:35:16.867023+00:00",
+  "game": {
+    "steamAppId": 730,
+    "steamBuildId": "25640462",
+    "ClientVersion": "2000922",
+    "ServerVersion": "2000922",
+    "PatchVersion": "1.41.8.8",
+    "ProductName": "cs2",
+    "appID": "730",
+    "ServerAppID": "2347773",
+    "SourceRevision": "11064488",
+    "VersionDate": "Sep 30 2026",
+    "VersionTime": "16:29:50"
+  },
+  "compilerSha256": "00db3daca0e733601bf3fcc1d1bf9df1b2ade805629098c48bd6c51af3d96f51",
+  "arguments": [
+    "-i",
+    "<new-addon-source>",
+    "-game",
+    "<cs2>/game/csgo",
+    "-nop4",
+    "-fshallow"
+  ],
+  "sourceSnapshot": "Original authored source files without repair",
+  "sourceInventory": [
+    {
+      "path": "materials/skill_eval/cyan_tether/beam.tga",
+      "bytes": 16402,
+      "sha256": "f8a203cb51ef3050c2a2d93091bab6425a5f911d4550e5af5b578d9fed04aa1f"
+    },
+    {
+      "path": "materials/skill_eval/cyan_tether/beam.vtex",
+      "bytes": 720,
+      "sha256": "2e61565d9729b83f1aa7cabeecc1e704de5dc85892eae849e89ff4b8e5aa589d"
+    },
+    {
+      "path": "materials/skill_eval/cyan_tether/ring.tga",
+      "bytes": 65554,
+      "sha256": "8780a24fa233240be110c512ec056bf8c7332ace6241b3ddfbf2daf1b8eed1fd"
+    },
+    {
+      "path": "materials/skill_eval/cyan_tether/ring.vtex",
+      "bytes": 720,
+      "sha256": "ac2a1cfefc670c7b1ef9f8f29a6198271e0347f2aaa77ae63db9965ee74bcaa5"
+    },
+    {
+      "path": "materials/skill_eval/cyan_tether/shard.tga",
+      "bytes": 16402,
+      "sha256": "d20892cb220e2b18bfb25dc7c57cf854fa8e22df8faae871eaf2aebbac71fffc"
+    },
+    {
+      "path": "materials/skill_eval/cyan_tether/shard.vtex",
+      "bytes": 721,
+      "sha256": "09b0686e9c141ef7bc02ce66b2a19795256c8e938e9a8d4d2da06a8b74e721bc"
+    },
+    {
+      "path": "particles/skill_eval/cyan_tether/beam.vpcf",
+      "bytes": 2179,
+      "sha256": "35c860c9d328ed758d221a5b4851f25ab641bfa5ca9855503b75124812b3c50f"
+    },
+    {
+      "path": "particles/skill_eval/cyan_tether/ring.vpcf",
+      "bytes": 1878,
+      "sha256": "7664559ebf1d6829aac79fd9cd293e6bb24d6b2b77fe73326ae885fc58bc9803"
+    },
+    {
+      "path": "particles/skill_eval/cyan_tether/root.vpcf",
+      "bytes": 530,
+      "sha256": "dd5c49a5f6144dbca9a34464abb9f01c0126c5762ba9ad2adceee4ec034825fb"
+    },
+    {
+      "path": "particles/skill_eval/cyan_tether/shards.vpcf",
+      "bytes": 2481,
+      "sha256": "ba3e24b8df6a974829948f38da8288153bc43206ab834e5844f6488dfb702351"
+    }
+  ],
+  "sourceInventorySha256": "6496d865c691f3e00fc6029f3b1c4ed0bf31d21aa58254af0adeb21932bcf6d4",
+  "repairs": [],
+  "attempts": 1,
+  "execution": {
+    "compiledTextures": 3,
+    "compiledParticleSystems": 4,
+    "nativeAcceptance": "passed",
+    "propertyRetention": "selected-readback-assertions-only",
+    "nativeRuntimeBehavior": "not-run",
+    "nativeVisualValidation": "not-run"
+  },
+  "assertions": [
+    {
+      "claim": "parent contains exactly three child systems",
+      "passed": true,
+      "actual": [
+        "resource:particles/skill_eval/cyan_tether/ring.vpcf",
+        "resource:particles/skill_eval/cyan_tether/beam.vpcf",
+        "resource:particles/skill_eval/cyan_tether/shards.vpcf"
+      ]
+    },
+    {
+      "claim": "beam native constant lifespan 2 retained",
+      "passed": true,
+      "actual": 2
+    },
+    {
+      "claim": "ring native constant lifespan 2 retained",
+      "passed": true,
+      "actual": 2
+    },
+    {
+      "claim": "shards native constant lifespan 2 retained",
+      "passed": true,
+      "actual": 2
+    },
+    {
+      "claim": "sequential path initializer retained",
+      "passed": true
+    },
+    {
+      "claim": "maintain sequential path operator retained",
+      "passed": true
+    },
+    {
+      "claim": "rope renderer retained",
+      "passed": true
+    },
+    {
+      "claim": "path initializer target CP1 retained",
+      "passed": true,
+      "actual": {
+        "m_nEndControlPointNumber": 1
+      }
+    },
+    {
+      "claim": "path maintenance target CP1 retained",
+      "passed": true,
+      "actual": {
+        "m_nEndControlPointNumber": 1
+      }
+    },
+    {
+      "claim": "rope tessellation maximum8 retained",
+      "passed": true,
+      "actual": 8
+    },
+    {
+      "claim": "attraction target CP1 retained",
+      "passed": true,
+      "actual": 1
+    },
+    {
+      "claim": "attraction force literal90 retained",
+      "passed": true,
+      "actual": {
+        "m_nType": "PF_TYPE_LITERAL",
+        "m_flLiteralValue": 90
+      }
+    },
+    {
+      "claim": "all six decoded authored references name locally compiled owned resources",
+      "passed": true,
+      "actual": [
+        "materials/skill_eval/cyan_tether/beam.vtex",
+        "materials/skill_eval/cyan_tether/ring.vtex",
+        "materials/skill_eval/cyan_tether/shard.vtex",
+        "particles/skill_eval/cyan_tether/beam.vpcf",
+        "particles/skill_eval/cyan_tether/ring.vpcf",
+        "particles/skill_eval/cyan_tether/shards.vpcf"
+      ]
+    },
+    {
+      "claim": "all three texture base-mips match original artwork RGBA",
+      "passed": true
+    }
+  ],
+  "warnings": [
+    "Compilation and selected-property readback do not prove all properties, native visual appearance, CP/path/rope/force runtime semantics, or in-game Workshop delivery.",
+    "Missing readback fields remain unresolved between native default elision and ignored input unless a controlled nondefault probe establishes the reason.",
+    "Texture decoder preserves trailing-stream-size warnings and RED2 info; no diagnostics were suppressed.",
+    "Authoring schema revision11131657 differs from installed compiler revision11064488. Only this exact source snapshot was compiled."
+  ],
+  "outputs": [
+    {
+      "path": "materials/skill_eval/cyan_tether/beam.vtex",
+      "sourceSha256": "2e61565d9729b83f1aa7cabeecc1e704de5dc85892eae849e89ff4b8e5aa589d",
+      "compiledSha256": "51091ceae88d1f30ed479873e7f9b8a66d396ad628a2a658b987378a5c85316b",
+      "compiledBytes": 18560,
+      "exitCode": 0,
+      "freshOutput": true,
+      "externalResourceReferences": [],
+      "kind": "texture",
+      "decoded": true,
+      "decoderDiagnostics": [
+        {
+          "code": "invalid-block",
+          "message": "declared non-streaming size 2176 differs from input length 18560",
+          "severity": "warning",
+          "offset": 0
+        },
+        {
+          "code": "unknown-section",
+          "message": "Preserved unrecognized Resource2 section RED2.",
+          "severity": "info",
+          "offset": 48
+        }
+      ],
+      "metadata": {
+        "width": 32,
+        "height": 128,
+        "format": "RGBA8888",
+        "mipCount": 1
+      },
+      "sourceTexelComparison": {
+        "changedComponents": 0,
+        "maxAbsoluteDifference": 0,
+        "alphaMin": 0,
+        "alphaMax": 1
+      }
+    },
+    {
+      "path": "materials/skill_eval/cyan_tether/ring.vtex",
+      "sourceSha256": "ac2a1cfefc670c7b1ef9f8f29a6198271e0347f2aaa77ae63db9965ee74bcaa5",
+      "compiledSha256": "13ca01943b2fe638fd2254a21566b9ed2e33813ed6b3edd6784facba2b7fe198",
+      "compiledBytes": 6751,
+      "exitCode": 0,
+      "freshOutput": true,
+      "externalResourceReferences": [],
+      "kind": "texture",
+      "decoded": true,
+      "decoderDiagnostics": [
+        {
+          "code": "invalid-block",
+          "message": "declared non-streaming size 2176 differs from input length 6751",
+          "severity": "warning",
+          "offset": 0
+        },
+        {
+          "code": "unknown-section",
+          "message": "Preserved unrecognized Resource2 section RED2.",
+          "severity": "info",
+          "offset": 48
+        }
+      ],
+      "metadata": {
+        "width": 128,
+        "height": 128,
+        "format": "RGBA8888",
+        "mipCount": 1
+      },
+      "sourceTexelComparison": {
+        "changedComponents": 0,
+        "maxAbsoluteDifference": 0,
+        "alphaMin": 0,
+        "alphaMax": 1
+      }
+    },
+    {
+      "path": "materials/skill_eval/cyan_tether/shard.vtex",
+      "sourceSha256": "09b0686e9c141ef7bc02ce66b2a19795256c8e938e9a8d4d2da06a8b74e721bc",
+      "compiledSha256": "ec3cf88104a9a7ee7e2bb45d533ce9784f4931b78029fcb2ba7ad168c1f7ca1f",
+      "compiledBytes": 18560,
+      "exitCode": 0,
+      "freshOutput": true,
+      "externalResourceReferences": [],
+      "kind": "texture",
+      "decoded": true,
+      "decoderDiagnostics": [
+        {
+          "code": "invalid-block",
+          "message": "declared non-streaming size 2176 differs from input length 18560",
+          "severity": "warning",
+          "offset": 0
+        },
+        {
+          "code": "unknown-section",
+          "message": "Preserved unrecognized Resource2 section RED2.",
+          "severity": "info",
+          "offset": 48
+        }
+      ],
+      "metadata": {
+        "width": 64,
+        "height": 64,
+        "format": "RGBA8888",
+        "mipCount": 1
+      },
+      "sourceTexelComparison": {
+        "changedComponents": 0,
+        "maxAbsoluteDifference": 0,
+        "alphaMin": 0,
+        "alphaMax": 1
+      }
+    },
+    {
+      "path": "particles/skill_eval/cyan_tether/beam.vpcf",
+      "sourceSha256": "35c860c9d328ed758d221a5b4851f25ab641bfa5ca9855503b75124812b3c50f",
+      "compiledSha256": "4367177159cbb272ada333a6ec39950cd860b7cb7af595f155a57bea5c6c4471",
+      "compiledBytes": 2120,
+      "exitCode": 0,
+      "freshOutput": true,
+      "externalResourceReferences": [
+        "materials/skill_eval/cyan_tether/beam.vtex"
+      ],
+      "kind": "particle",
+      "decoded": true,
+      "decoderDiagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 24,
+        "m_flConstantLifespan": 2,
+        "m_flConstantRadius": 1.8,
+        "m_ConstantColor": [
+          35,
+          220,
+          255
+        ],
+        "m_BoundingBoxMin": [
+          -512,
+          -512,
+          -512
+        ],
+        "m_BoundingBoxMax": [
+          512,
+          512,
+          512
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateSequentialPath",
+            "m_flNumToAssign": 24,
+            "m_bLoop": false,
+            "m_PathParams": {
+              "m_nEndControlPointNumber": 1
+            }
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_MaintainSequentialPath",
+            "m_bUseParticleCount": true,
+            "m_flNumToAssign": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 24
+            },
+            "m_bLoop": false,
+            "m_PathParams": {
+              "m_nEndControlPointNumber": 1
+            }
+          },
+          {
+            "_class": "C_OP_FadeOutSimple",
+            "m_flFadeOutTime": 1
+          },
+          {
+            "_class": "C_OP_Decay",
+            "m_bRopeDecay": true,
+            "m_bForcePreserveParticleOrder": true
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderRopes",
+            "m_vecTexturesInput": [
+              {
+                "m_hTexture": "resource:materials/skill_eval/cyan_tether/beam.vtex"
+              }
+            ],
+            "m_nOutputBlendMode": "PARTICLE_OUTPUT_BLEND_MODE_ADD",
+            "m_flOverbrightFactor": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 1.5
+            },
+            "m_bClampV": true,
+            "m_nMaxTesselation": 8
+          }
+        ]
+      },
+      "omittedOrNormalized": [
+        {
+          "path": "$.m_Emitters.0.m_flStartTime.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Emitters.0.m_flStartTime.m_flLiteralValue",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_PathParams.m_nStartControlPointNumber",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_PathParams.m_flBulge",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_PathParams.m_vStartPointOffset.0",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_PathParams.m_vStartPointOffset.1",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_PathParams.m_vStartPointOffset.2",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_PathParams.m_vEndOffset.0",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_PathParams.m_vEndOffset.1",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_PathParams.m_vEndOffset.2",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_flCohesionStrength.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_flCohesionStrength.m_flLiteralValue",
+          "authored": 1,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_flTolerance",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_PathParams.m_nStartControlPointNumber",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_PathParams.m_flBulge",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_PathParams.m_vStartPointOffset.0",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_PathParams.m_vStartPointOffset.1",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_PathParams.m_vStartPointOffset.2",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_PathParams.m_vEndOffset.0",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_PathParams.m_vEndOffset.1",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_PathParams.m_vEndOffset.2",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_bEnabled",
+          "authored": true,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_nTextureType",
+          "authored": "SPRITECARD_TEXTURE_DIFFUSE",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_nTextureChannels",
+          "authored": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_bDisableZBuffering",
+          "authored": false,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_bClosedLoop",
+          "authored": false,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_nMinTesselation",
+          "authored": 1,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        }
+      ]
+    },
+    {
+      "path": "particles/skill_eval/cyan_tether/ring.vpcf",
+      "sourceSha256": "7664559ebf1d6829aac79fd9cd293e6bb24d6b2b77fe73326ae885fc58bc9803",
+      "compiledSha256": "7bc3b307db6b5625627d046b25f72a5a98b5fe5b77c2ece3a3fb7596da1f3a02",
+      "compiledBytes": 2037,
+      "exitCode": 0,
+      "freshOutput": true,
+      "externalResourceReferences": [
+        "materials/skill_eval/cyan_tether/ring.vtex"
+      ],
+      "kind": "particle",
+      "decoded": true,
+      "decoderDiagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 1,
+        "m_flConstantLifespan": 2,
+        "m_flConstantRadius": 48,
+        "m_ConstantColor": [
+          35,
+          220,
+          255
+        ],
+        "m_BoundingBoxMin": [
+          -512,
+          -512,
+          -512
+        ],
+        "m_BoundingBoxMax": [
+          512,
+          512,
+          512
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 1
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform",
+            "m_TransformInput": {
+              "m_nType": "PT_TYPE_CONTROL_POINT",
+              "m_nControlPoint": 0,
+              "m_bUseOrientation": false
+            }
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_FadeOutSimple",
+            "m_flFadeOutTime": 1
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_vecTexturesInput": [
+              {
+                "m_hTexture": "resource:materials/skill_eval/cyan_tether/ring.vtex"
+              }
+            ],
+            "m_nOutputBlendMode": "PARTICLE_OUTPUT_BLEND_MODE_ADD",
+            "m_flOverbrightFactor": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 1.5
+            },
+            "m_nOrientationType": "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+          }
+        ]
+      },
+      "omittedOrNormalized": [
+        {
+          "path": "$.m_Emitters.0.m_flStartTime.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Emitters.0.m_flStartTime.m_flLiteralValue",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_ConstantNormal.0",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_ConstantNormal.1",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_ConstantNormal.2",
+          "authored": 1,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fRadiusMin.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fRadiusMin.m_flLiteralValue",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fRadiusMax.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fRadiusMax.m_flLiteralValue",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fSpeedMin.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fSpeedMin.m_flLiteralValue",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fSpeedMax.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fSpeedMax.m_flLiteralValue",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_bEnabled",
+          "authored": true,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_nTextureType",
+          "authored": "SPRITECARD_TEXTURE_DIFFUSE",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_nTextureChannels",
+          "authored": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_bDisableZBuffering",
+          "authored": false,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        }
+      ]
+    },
+    {
+      "path": "particles/skill_eval/cyan_tether/shards.vpcf",
+      "sourceSha256": "ba3e24b8df6a974829948f38da8288153bc43206ab834e5844f6488dfb702351",
+      "compiledSha256": "f1ee15436f8c905e8c59331fdd194292a18bc5cff7a416c91286da4e5f04ce94",
+      "compiledBytes": 2238,
+      "exitCode": 0,
+      "freshOutput": true,
+      "externalResourceReferences": [
+        "materials/skill_eval/cyan_tether/shard.vtex"
+      ],
+      "kind": "particle",
+      "decoded": true,
+      "decoderDiagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 8,
+        "m_flConstantLifespan": 2,
+        "m_flConstantRadius": 3,
+        "m_ConstantColor": [
+          35,
+          220,
+          255
+        ],
+        "m_BoundingBoxMin": [
+          -512,
+          -512,
+          -512
+        ],
+        "m_BoundingBoxMax": [
+          512,
+          512,
+          512
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 8
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform",
+            "m_TransformInput": {
+              "m_nType": "PT_TYPE_CONTROL_POINT",
+              "m_nControlPoint": 0,
+              "m_bUseOrientation": false
+            },
+            "m_fRadiusMin": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 18
+            },
+            "m_fRadiusMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 38
+            },
+            "m_fSpeedMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 12
+            }
+          }
+        ],
+        "m_ForceGenerators": [
+          {
+            "_class": "C_OP_AttractToControlPoint",
+            "m_TransformInput": {
+              "m_nType": "PT_TYPE_CONTROL_POINT",
+              "m_nControlPoint": 1,
+              "m_bUseOrientation": false
+            },
+            "m_fForceAmount": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 90
+            },
+            "m_fFalloffPower": 0,
+            "m_fMinimumDistance": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 4
+            }
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement",
+            "m_fDrag": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 0.08
+            }
+          },
+          {
+            "_class": "C_OP_FadeOutSimple",
+            "m_flFadeOutTime": 1
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_vecTexturesInput": [
+              {
+                "m_hTexture": "resource:materials/skill_eval/cyan_tether/shard.vtex"
+              }
+            ],
+            "m_nOutputBlendMode": "PARTICLE_OUTPUT_BLEND_MODE_ADD",
+            "m_flOverbrightFactor": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 1.5
+            }
+          }
+        ]
+      },
+      "omittedOrNormalized": [
+        {
+          "path": "$.m_Emitters.0.m_flStartTime.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Emitters.0.m_flStartTime.m_flLiteralValue",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fSpeedMin.m_nType",
+          "authored": "PF_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Initializers.0.m_fSpeedMin.m_flLiteralValue",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_ForceGenerators.0.m_vecComponentScale.0",
+          "authored": 1,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_ForceGenerators.0.m_vecComponentScale.1",
+          "authored": 1,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_ForceGenerators.0.m_vecComponentScale.2",
+          "authored": 1,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_Gravity.m_nType",
+          "authored": "PVEC_TYPE_LITERAL",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_Gravity.m_vLiteralValue.0",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_Gravity.m_vLiteralValue.1",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Operators.0.m_Gravity.m_vLiteralValue.2",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_bEnabled",
+          "authored": true,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_nTextureType",
+          "authored": "SPRITECARD_TEXTURE_DIFFUSE",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_vecTexturesInput.0.m_nTextureChannels",
+          "authored": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_bDisableZBuffering",
+          "authored": false,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Renderers.0.m_nOrientationType",
+          "authored": "PARTICLE_ORIENTATION_SCREEN_ALIGNED",
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        }
+      ]
+    },
+    {
+      "path": "particles/skill_eval/cyan_tether/root.vpcf",
+      "sourceSha256": "dd5c49a5f6144dbca9a34464abb9f01c0126c5762ba9ad2adceee4ec034825fb",
+      "compiledSha256": "07ff412417ad4dcb3a86d133bfb49977dca354ecffc43a7f9718e3df194fccdb",
+      "compiledBytes": 1428,
+      "exitCode": 0,
+      "freshOutput": true,
+      "externalResourceReferences": [
+        "particles/skill_eval/cyan_tether/beam.vpcf",
+        "particles/skill_eval/cyan_tether/ring.vpcf",
+        "particles/skill_eval/cyan_tether/shards.vpcf"
+      ],
+      "kind": "particle",
+      "decoded": true,
+      "decoderDiagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 1,
+        "m_Children": [
+          {
+            "m_ChildRef": "resource:particles/skill_eval/cyan_tether/ring.vpcf"
+          },
+          {
+            "m_ChildRef": "resource:particles/skill_eval/cyan_tether/beam.vpcf"
+          },
+          {
+            "m_ChildRef": "resource:particles/skill_eval/cyan_tether/shards.vpcf"
+          }
+        ]
+      },
+      "omittedOrNormalized": [
+        {
+          "path": "$.m_Children.0.m_flDelay",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Children.1.m_flDelay",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        },
+        {
+          "path": "$.m_Children.2.m_flDelay",
+          "authored": 0,
+          "compiled": null,
+          "status": "absent-in-readback-default-or-ignored-unresolved"
+        }
+      ]
+    }
+  ],
+  "controlPointContract": {
+    "contractType": "authored-intent-with-selected-serialization-evidence",
+    "writer": "External game/editor driver supplies CP0 and CP1 before the first emission; no authored component writes either CP.",
+    "points": [
+      {
+        "index": 0,
+        "role": "Effect origin",
+        "space": "world",
+        "baselinePosition": [
+          0,
+          0,
+          8
+        ],
+        "baselineOrientation": "identity",
+        "readers": [
+          "ring sphere initializer",
+          "beam path initializer and maintenance operator",
+          "shards sphere initializer"
+        ],
+        "baselinePolicy": "Keep fixed for the first native visual test; the ring has no authored position-lock operator."
+      },
+      {
+        "index": 1,
+        "role": "Beam endpoint and shards attraction target",
+        "space": "world",
+        "baselinePosition": [
+          160,
+          0,
+          24
+        ],
+        "baselineOrientation": "identity",
+        "readers": [
+          "beam path initializer and maintenance operator",
+          "shards attraction force"
+        ],
+        "serialization": "Endpoint1 retained in both path components; attraction transform CP1 retained."
+      }
+    ],
+    "additionalCPsAuthored": [],
+    "orientation": "Use identity orientations for the baseline. Sphere/attraction transforms author m_bUseOrientation=false; the ring authors constant normal [0,0,1]. Native normal-aligned appearance was not observed.",
+    "childOwnership": "The root owns three children with the same CP indices. Actual parent-to-child CP inheritance/updates must be checked in the native driver; no mapping or propagation proof was inferred from compiled references.",
+    "lifetime": "Each child retains m_flConstantLifespan=2 and authored fadeOutTime=1; two-second motion/fade timing was not observed.",
+    "targetRemoval": "Authoring plan retains the last valid CP1 pose until the one shot finishes, then releases/resets the root and all children.",
+    "nativeRuntimeVerified": false
+  },
+  "hostLogNote": "Machine-specific compiler logs omitted; compiler identity, exit codes, source/output hashes and decoded records are retained."
+}

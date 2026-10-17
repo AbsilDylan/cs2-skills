@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source 2 Particle Materials"
+  short_description: "Author particle textures, flipbooks and materials"
+  default_prompt: "Use $source2-particle-materials to prepare this effect’s source textures, flipbooks and renderer bindings, then verify resource closure."

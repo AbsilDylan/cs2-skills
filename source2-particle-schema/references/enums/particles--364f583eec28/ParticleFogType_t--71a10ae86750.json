@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Use Game Default\""
+          }
+        ],
+        "name": "PARTICLE_FOG_GAME_DEFAULT",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Enabled\""
+          }
+        ],
+        "name": "PARTICLE_FOG_ENABLED",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Disabled\""
+          }
+        ],
+        "name": "PARTICLE_FOG_DISABLED",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleFogType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleFogType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "739c6981ace47b7be8c83091f950533d509c9de0599149f7090c0539fa2bbd53",
+    "json_pointer": "/enums/408",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

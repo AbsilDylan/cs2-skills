@@ -1,0 +1,91 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Visualization Sphere Wireframe\""
+          }
+        ],
+        "name": "PFUNC_VISUALIZATION_SPHERE_WIREFRAME",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Visualization Sphere Solid\""
+          }
+        ],
+        "name": "PFUNC_VISUALIZATION_SPHERE_SOLID",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Visualization Box\""
+          }
+        ],
+        "name": "PFUNC_VISUALIZATION_BOX",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Visualization Ring\""
+          }
+        ],
+        "name": "PFUNC_VISUALIZATION_RING",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Visualization Plane\""
+          }
+        ],
+        "name": "PFUNC_VISUALIZATION_PLANE",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Visualization Line\""
+          }
+        ],
+        "name": "PFUNC_VISUALIZATION_LINE",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Visualization Cylinder\""
+          }
+        ],
+        "name": "PFUNC_VISUALIZATION_CYLINDER",
+        "value": 6
+      }
+    ],
+    "module": "particles",
+    "name": "PFuncVisualizationType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "PFuncVisualizationType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "402630158f72b186ac3bede380f9d34ec3c1f959b7fd7ae386757ca8dea1f77e",
+    "json_pointer": "/enums/395",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

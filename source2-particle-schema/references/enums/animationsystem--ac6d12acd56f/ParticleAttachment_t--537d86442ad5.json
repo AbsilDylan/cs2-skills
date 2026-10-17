@@ -1,0 +1,93 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PATTACH_INVALID",
+        "value": -1
+      },
+      {
+        "name": "PATTACH_ABSORIGIN",
+        "value": 0
+      },
+      {
+        "name": "PATTACH_ABSORIGIN_FOLLOW",
+        "value": 1
+      },
+      {
+        "name": "PATTACH_CUSTOMORIGIN",
+        "value": 2
+      },
+      {
+        "name": "PATTACH_CUSTOMORIGIN_FOLLOW",
+        "value": 3
+      },
+      {
+        "name": "PATTACH_POINT",
+        "value": 4
+      },
+      {
+        "name": "PATTACH_POINT_FOLLOW",
+        "value": 5
+      },
+      {
+        "name": "PATTACH_EYES_FOLLOW",
+        "value": 6
+      },
+      {
+        "name": "PATTACH_OVERHEAD_FOLLOW",
+        "value": 7
+      },
+      {
+        "name": "PATTACH_WORLDORIGIN",
+        "value": 8
+      },
+      {
+        "name": "PATTACH_ROOTBONE_FOLLOW",
+        "value": 9
+      },
+      {
+        "name": "PATTACH_RENDERORIGIN_FOLLOW",
+        "value": 10
+      },
+      {
+        "name": "PATTACH_MAIN_VIEW",
+        "value": 11
+      },
+      {
+        "name": "PATTACH_WATERWAKE",
+        "value": 12
+      },
+      {
+        "name": "PATTACH_CENTER_FOLLOW",
+        "value": 13
+      },
+      {
+        "name": "PATTACH_CUSTOM_GAME_STATE_1",
+        "value": 14
+      },
+      {
+        "name": "PATTACH_HEALTHBAR",
+        "value": 15
+      },
+      {
+        "name": "MAX_PATTACH_TYPES",
+        "value": 16
+      }
+    ],
+    "module": "animationsystem",
+    "name": "ParticleAttachment_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "animationsystem",
+    "name": "ParticleAttachment_t"
+  },
+  "source": {
+    "canonical_record_sha256": "2327615e65e64ff037ec849f58adf7b492e1f1ce55a960960b2320a27471e432",
+    "json_pointer": "/enums/4",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

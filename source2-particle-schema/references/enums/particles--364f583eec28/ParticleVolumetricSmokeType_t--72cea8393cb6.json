@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Emission\""
+          }
+        ],
+        "name": "PARTICLE_VOLUMETRIC_SMOKE_TYPE_EMISSION",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Sink\""
+          }
+        ],
+        "name": "PARTICLE_VOLUMETRIC_SMOKE_TYPE_SINK",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Repel\""
+          }
+        ],
+        "name": "PARTICLE_VOLUMETRIC_SMOKE_TYPE_REPEL",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Trace\""
+          }
+        ],
+        "name": "PARTICLE_VOLUMETRIC_SMOKE_TYPE_TRACE",
+        "value": 3
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleVolumetricSmokeType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleVolumetricSmokeType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "6cf80610be54d0d30cc2d8d166858cbaddb3639c2c2daf1858e777058c03228c",
+    "json_pointer": "/enums/443",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

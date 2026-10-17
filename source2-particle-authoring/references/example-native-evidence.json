@@ -1,0 +1,290 @@
+{
+  "schema": "source2.native-skill-example-evidence.v1",
+  "performedUtc": "2026-10-15T17:19:46.349Z",
+  "installation": {
+    "steamAppId": 730,
+    "steamBuildId": "25640462",
+    "ClientVersion": "2000922",
+    "ServerVersion": "2000922",
+    "PatchVersion": "1.41.8.8",
+    "ProductName": "cs2",
+    "appID": "730",
+    "ServerAppID": "2347773",
+    "SourceRevision": "11064488",
+    "VersionDate": "Sep 30 2026",
+    "VersionTime": "16:29:50"
+  },
+  "compilerSha256": "00db3daca0e733601bf3fcc1d1bf9df1b2ade805629098c48bd6c51af3d96f51",
+  "arguments": [
+    "-i",
+    "<new-addon-source>",
+    "-game",
+    "<cs2>/game/csgo",
+    "-nop4",
+    "-fshallow",
+    "-skiptype",
+    "vmat,vmdl,vtex"
+  ],
+  "execution": {
+    "status": "compiled",
+    "nativeAcceptance": "passed",
+    "propertyRetention": "unverified",
+    "visualValidation": "not-run",
+    "inGameValidation": "not-run",
+    "nativeExitCodes": [
+      0,
+      0,
+      0
+    ]
+  },
+  "outputs": [
+    {
+      "resource": "particles/skill_examples/layered_impact/root.vpcf",
+      "sourceSha256": "5624bad1f596767081542d0738381dc88dcd49fdb0681e6d8c7e0518a3ce1173",
+      "compiledSha256": "b0ac5719adfd5152c2c4a40230d335896eabfedc570d6e99e09014cfaf912c60",
+      "compiledBytes": 1373,
+      "readbackStatus": "decoded",
+      "readbackDiagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 1,
+        "m_Children": [
+          {
+            "m_ChildRef": "resource:particles/skill_examples/layered_impact/core.vpcf"
+          },
+          {
+            "m_ChildRef": "resource:particles/skill_examples/layered_impact/sparks.vpcf"
+          }
+        ]
+      }
+    },
+    {
+      "resource": "particles/skill_examples/layered_impact/core.vpcf",
+      "sourceSha256": "7ea8db5aed6702e4a5707ee3beaa6881c10074888997e07084a1a0281403f634",
+      "compiledSha256": "d0c8c1f703c4c8061c453e04d640c7dc6eccaf7109ff631ab40232a86070ef64",
+      "compiledBytes": 2181,
+      "readbackStatus": "decoded",
+      "readbackDiagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 16,
+        "m_flConstantRadius": 12,
+        "m_ConstantColor": [
+          120,
+          220,
+          255,
+          220
+        ],
+        "m_BoundingBoxMin": [
+          -80,
+          -80,
+          -80
+        ],
+        "m_BoundingBoxMax": [
+          80,
+          80,
+          80
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 5
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform",
+            "m_fRadiusMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 4
+            },
+            "m_fSpeedMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 6
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.25,
+              "m_flRandomMax": 0.45,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 9,
+              "m_flRandomMax": 14,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              40,
+              150,
+              240,
+              160
+            ],
+            "m_ColorMax": [
+              140,
+              240,
+              255,
+              220
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement",
+            "m_fDrag": 0.06
+          },
+          {
+            "_class": "C_OP_FadeInSimple",
+            "m_flFadeInTime": 0.05
+          },
+          {
+            "_class": "C_OP_FadeOutSimple",
+            "m_flFadeOutTime": 0.55
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED",
+            "m_flOverbrightFactor": 1.5,
+            "m_flAddSelfAmount": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "resource": "particles/skill_examples/layered_impact/sparks.vpcf",
+      "sourceSha256": "011ad477a09df4f43c9aa5fd6c07d1e4ef9b1fa88fb8de5c18f67d3207a0b1f4",
+      "compiledSha256": "6b319383e039e5432b741cbbb19a8ba6d8b38daebc612cd5dbe83c776cb4ff8b",
+      "compiledBytes": 2168,
+      "readbackStatus": "decoded",
+      "readbackDiagnostics": [],
+      "compiledReadback": {
+        "_class": "CParticleSystemDefinition",
+        "m_nBehaviorVersion": 12,
+        "m_nMaxParticles": 64,
+        "m_flConstantRadius": 1.5,
+        "m_ConstantColor": [
+          80,
+          200,
+          255,
+          255
+        ],
+        "m_BoundingBoxMin": [
+          -160,
+          -160,
+          -160
+        ],
+        "m_BoundingBoxMax": [
+          160,
+          160,
+          160
+        ],
+        "m_Emitters": [
+          {
+            "_class": "C_OP_InstantaneousEmitter",
+            "m_nParticlesToEmit": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 32
+            }
+          }
+        ],
+        "m_Initializers": [
+          {
+            "_class": "C_INIT_CreateWithinSphereTransform",
+            "m_fRadiusMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 8
+            },
+            "m_fSpeedMin": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 40
+            },
+            "m_fSpeedMax": {
+              "m_nType": "PF_TYPE_LITERAL",
+              "m_flLiteralValue": 110
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_nOutputField": 1,
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.45,
+              "m_flRandomMax": 0.8,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_InitFloat",
+            "m_InputValue": {
+              "m_nType": "PF_TYPE_RANDOM_UNIFORM",
+              "m_flRandomMin": 0.8,
+              "m_flRandomMax": 2,
+              "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT"
+            }
+          },
+          {
+            "_class": "C_INIT_RandomColor",
+            "m_ColorMin": [
+              20,
+              130,
+              230,
+              200
+            ],
+            "m_ColorMax": [
+              140,
+              230,
+              255,
+              255
+            ]
+          }
+        ],
+        "m_Operators": [
+          {
+            "_class": "C_OP_BasicMovement",
+            "m_Gravity": [
+              0,
+              0,
+              -30
+            ],
+            "m_fDrag": 0.03
+          },
+          {
+            "_class": "C_OP_FadeOutSimple",
+            "m_flFadeOutTime": 0.35
+          },
+          {
+            "_class": "C_OP_Decay"
+          }
+        ],
+        "m_Renderers": [
+          {
+            "_class": "C_OP_RenderSprites",
+            "m_nOrientationType": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED",
+            "m_flOverbrightFactor": 2,
+            "m_flAddSelfAmount": 0.65
+          }
+        ]
+      }
+    }
+  ]
+}

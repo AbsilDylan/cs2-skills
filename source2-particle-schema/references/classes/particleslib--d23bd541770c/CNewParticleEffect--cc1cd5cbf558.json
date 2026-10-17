@@ -1,0 +1,621 @@
+{
+  "declaration": {
+    "module": "particleslib",
+    "name": "CNewParticleEffect",
+    "parents": [
+      {
+        "module": "particleslib",
+        "name": "IParticleEffect"
+      }
+    ],
+    "size": 216
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "IParticleEffect"
+      },
+      {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "particleslib",
+          "name": "IParticleEffect"
+        },
+        "code": "defaults-absent"
+      },
+      {
+        "class": {
+          "module": "particleslib",
+          "name": "CNewParticleEffect"
+        },
+        "code": "defaults-absent"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_pNext",
+        "offset": 16,
+        "type": {
+          "category": "ptr",
+          "inner": {
+            "category": "declared_class",
+            "module": "particleslib",
+            "name": "CNewParticleEffect"
+          }
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_pPrev",
+        "offset": 24,
+        "type": {
+          "category": "ptr",
+          "inner": {
+            "category": "declared_class",
+            "module": "particleslib",
+            "name": "CNewParticleEffect"
+          }
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_pParticles",
+        "offset": 32,
+        "type": {
+          "category": "ptr",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "IParticleCollection"
+          }
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_pDebugName",
+        "offset": 40,
+        "type": {
+          "category": "ptr",
+          "inner": {
+            "category": "builtin",
+            "name": "char"
+          }
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bDontRemove",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bRemove",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bNeedsBBoxUpdate",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bIsFirstFrame",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bAutoUpdateBBox",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bAllocated",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bSimulate",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bShouldPerformCullCheck",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bForceNoDraw",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bSuppressScreenSpaceEffect",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bShouldSave",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bShouldSimulateDuringGamePaused",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bShouldCheckFoW",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bIsAsyncCreate",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bFreezeTransitionActive",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bFreezeTargetState",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_bCanFreeze",
+        "offset": 0,
+        "type": {
+          "category": "bitfield",
+          "count": 1
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_vSortOrigin",
+        "offset": 64,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_flScale",
+        "offset": 76,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_hOwner",
+        "offset": 80,
+        "type": {
+          "category": "ptr",
+          "inner": {
+            "category": "declared_class",
+            "module": "particleslib",
+            "name": "PARTICLE_EHANDLE__"
+          }
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_pOwningParticleProperty",
+        "offset": 88,
+        "type": {
+          "category": "ptr",
+          "inner": {
+            "category": "declared_class",
+            "module": "particleslib",
+            "name": "CParticleProperty"
+          }
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_flFreezeTransitionStart",
+        "offset": 112,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_flFreezeTransitionDuration",
+        "offset": 116,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_flFreezeTransitionOverride",
+        "offset": 120,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_LastMin",
+        "offset": 124,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_LastMax",
+        "offset": 136,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_nSplitScreenUser",
+        "offset": 148,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "CSplitScreenSlot",
+          "size": 4
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_vecAggregationCenter",
+        "offset": 152,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CNewParticleEffect"
+      },
+      "field": {
+        "name": "m_RefCount",
+        "offset": 208,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "CNewParticleEffect"
+  },
+  "inheritance": [
+    {
+      "module": "particleslib",
+      "name": "IParticleEffect"
+    }
+  ],
+  "references": [
+    {
+      "kind": "classes",
+      "module": "particles",
+      "name": "IParticleCollection",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CNewParticleEffect",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CParticleProperty",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "PARTICLE_EHANDLE__",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "d42deafb77ded9e20e4290e83d9fc986a55904a61db3518abdaa8e8b223c7db9",
+    "json_pointer": "/classes/2144",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

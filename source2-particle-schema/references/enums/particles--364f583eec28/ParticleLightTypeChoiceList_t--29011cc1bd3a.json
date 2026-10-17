@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Omni Light\""
+          }
+        ],
+        "name": "PARTICLE_LIGHT_TYPE_POINT",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Spot Light\""
+          }
+        ],
+        "name": "PARTICLE_LIGHT_TYPE_SPOT",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"FX Light\""
+          }
+        ],
+        "name": "PARTICLE_LIGHT_TYPE_FX",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Capsule Light\""
+          }
+        ],
+        "name": "PARTICLE_LIGHT_TYPE_CAPSULE",
+        "value": 3
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleLightTypeChoiceList_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleLightTypeChoiceList_t"
+  },
+  "source": {
+    "canonical_record_sha256": "0c80acb265b5c62d18da6e93711acfb18a42f166157ca0864b1ad7c4a67f0947",
+    "json_pointer": "/enums/414",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

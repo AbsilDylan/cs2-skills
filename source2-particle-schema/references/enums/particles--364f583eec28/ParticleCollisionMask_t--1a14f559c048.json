@@ -1,0 +1,121 @@
+{
+  "declaration": {
+    "alignment": "uint64_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask All\""
+          }
+        ],
+        "name": "PARTICLE_MASK_ALL",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask Solid\""
+          }
+        ],
+        "name": "PARTICLE_MASK_SOLID",
+        "value": 798721
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask Water\""
+          }
+        ],
+        "name": "PARTICLE_MASK_WATER",
+        "value": 98304
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask Solid and Water\""
+          }
+        ],
+        "name": "PARTICLE_MASK_SOLID_WATER",
+        "value": 897025
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask Shot (raycasted bullets)\""
+          }
+        ],
+        "name": "PARTICLE_MASK_SHOT",
+        "value": 1839107
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask Shot Brush Only\""
+          }
+        ],
+        "name": "PARTICLE_MASK_SHOT_BRUSHONLY",
+        "value": 1052673
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask Shot Hull (non-raycasted)\""
+          }
+        ],
+        "name": "PARTICLE_MASK_SHOT_HULL",
+        "value": 1847297
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask Opaque\""
+          }
+        ],
+        "name": "PARTICLE_MASK_OPAQUE",
+        "value": 128
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask Player Solid\""
+          }
+        ],
+        "name": "PARTICLE_MASK_DEFAULTPLAYERSOLID",
+        "value": 798737
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mask NPC Solid\""
+          }
+        ],
+        "name": "PARTICLE_MASK_NPCSOLID",
+        "value": 798753
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleCollisionMask_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleCollisionMask_t"
+  },
+  "source": {
+    "canonical_record_sha256": "18899995bfdbd559bab30aad740106f7a01a479f6e0dc9a6dce5d107ce25d72a",
+    "json_pointer": "/enums/399",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

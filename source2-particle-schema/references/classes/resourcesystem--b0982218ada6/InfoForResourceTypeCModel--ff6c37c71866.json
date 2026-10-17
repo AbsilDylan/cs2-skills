@@ -1,0 +1,55 @@
+{
+  "declaration": {
+    "flags": [
+      "trivial_constructor",
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MResourceTypeForInfoType",
+        "value": "\"vmdl\""
+      }
+    ],
+    "module": "resourcesystem",
+    "name": "InfoForResourceTypeCModel",
+    "size": 1
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "resourcesystem",
+        "name": "InfoForResourceTypeCModel"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "resourcesystem",
+          "name": "InfoForResourceTypeCModel"
+        },
+        "code": "defaults-absent"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "resourcesystem",
+    "name": "InfoForResourceTypeCModel"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "declared-type-or-parent-dependency",
+  "source": {
+    "canonical_record_sha256": "14e69418842a9debb517da7b18f3052f523e14d2b4f9076fefb6049f6c3d1e6a",
+    "json_pointer": "/classes/2439",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

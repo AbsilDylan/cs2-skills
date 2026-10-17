@@ -1,0 +1,41 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Average Hitbox Speed\""
+          }
+        ],
+        "name": "PARTICLE_HITBOX_AVERAGE_SPEED",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Hitbox Count\""
+          }
+        ],
+        "name": "PARTICLE_HITBOX_COUNT",
+        "value": 1
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleHitboxDataSelection_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleHitboxDataSelection_t"
+  },
+  "source": {
+    "canonical_record_sha256": "49c18dd2ea9f4619f1905f221e62495f5ae004f8052326cc8628c4eafd9cf5c7",
+    "json_pointer": "/enums/410",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

@@ -1,0 +1,50 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf63:version{a6e6a69e-52d3-4527-8b9c-ff3bb91aca3e} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nBehaviorVersion = 12
+	m_nMaxParticles = 16
+	m_flConstantRadius = 12
+	m_ConstantColor = [ 120, 220, 255, 220 ]
+	m_BoundingBoxMin = [ -80, -80, -80 ]
+	m_BoundingBoxMax = [ 80, 80, 80 ]
+	m_Emitters =
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = { m_nType = "PF_TYPE_LITERAL" m_flLiteralValue = 5 }
+		},
+	]
+	m_Initializers =
+	[
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_TransformInput = { m_nControlPoint = 0 }
+			m_fRadiusMin = { m_nType = "PF_TYPE_LITERAL" m_flLiteralValue = 0 }
+			m_fRadiusMax = { m_nType = "PF_TYPE_LITERAL" m_flLiteralValue = 4 }
+			m_fSpeedMin = { m_nType = "PF_TYPE_LITERAL" m_flLiteralValue = 0 }
+			m_fSpeedMax = { m_nType = "PF_TYPE_LITERAL" m_flLiteralValue = 6 }
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_nOutputField = 1
+			m_InputValue = { m_nType = "PF_TYPE_RANDOM_UNIFORM" m_flRandomMin = 0.25 m_flRandomMax = 0.45 m_nRandomMode = "PF_RANDOM_MODE_CONSTANT" }
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_nOutputField = 3
+			m_InputValue = { m_nType = "PF_TYPE_RANDOM_UNIFORM" m_flRandomMin = 9 m_flRandomMax = 14 m_nRandomMode = "PF_RANDOM_MODE_CONSTANT" }
+		},
+		{ _class = "C_INIT_RandomColor" m_ColorMin = [ 40, 150, 240, 160 ] m_ColorMax = [ 140, 240, 255, 220 ] },
+	]
+	m_Operators =
+	[
+		{ _class = "C_OP_BasicMovement" m_Gravity = [ 0, 0, 0 ] m_fDrag = 0.06 },
+		{ _class = "C_OP_FadeInSimple" m_flFadeInTime = 0.05 },
+		{ _class = "C_OP_FadeOutSimple" m_flFadeOutTime = 0.55 },
+		{ _class = "C_OP_Decay" },
+	]
+	m_Renderers =
+	[
+		{ _class = "C_OP_RenderSprites" m_nOrientationType = "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED" m_flOverbrightFactor = 1.5 m_flAddSelfAmount = 0.4 },
+	]
+}

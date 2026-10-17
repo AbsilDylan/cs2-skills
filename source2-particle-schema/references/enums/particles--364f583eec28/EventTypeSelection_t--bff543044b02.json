@@ -1,0 +1,151 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"None\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_NONE",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Spawned\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_SPAWNED",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Killed\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_KILLED",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Collision\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_COLLISION",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"First Collision\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_FIRST_COLLISION",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Stopped on Collision\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED",
+        "value": 16
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Killed on Collision\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION",
+        "value": 32
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Killed by Cull\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_KILLED_ON_CULL",
+        "value": 1024
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Culled on Spawn\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_CULLED_ON_SPAWN",
+        "value": 2048
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"User Event 1\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_USER_1",
+        "value": 64
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"User Event 2\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_USER_2",
+        "value": 128
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"User Event 3\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_USER_3",
+        "value": 256
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"User Event 4\""
+          }
+        ],
+        "name": "PARTICLE_EVENT_TYPE_MASK_USER_4",
+        "value": 512
+      }
+    ],
+    "module": "particles",
+    "name": "EventTypeSelection_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "EventTypeSelection_t"
+  },
+  "source": {
+    "canonical_record_sha256": "a8562f48bfcab5520c00c026f25b7238a3cc344292cf55e173b79167b69aef2e",
+    "json_pointer": "/enums/389",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

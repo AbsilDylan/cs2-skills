@@ -1,0 +1,141 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Uninitialized\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_UNINITIALIZED",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_ADD",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Subtract\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_SUBTRACT",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Multiply\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_MUL",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Divide\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_DIVIDE",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Input 1\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_INPUT_1",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Min\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_MIN",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Max\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_MAX",
+        "value": 6
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mod\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_MOD",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Equal\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_EQUAL",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Greater Than\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_GT",
+        "value": 9
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Less Than\""
+          }
+        ],
+        "name": "SCALAR_EXPRESSION_LT",
+        "value": 10
+      }
+    ],
+    "module": "particles",
+    "name": "ScalarExpressionType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ScalarExpressionType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "099f64fd361633d57dc8ea356e0283935744c8eba25fa7c5a22f589bbdaf0520",
+    "json_pointer": "/enums/446",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

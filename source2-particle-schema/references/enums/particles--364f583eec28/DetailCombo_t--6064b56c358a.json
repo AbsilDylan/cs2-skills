@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Off\""
+          }
+        ],
+        "name": "DETAIL_COMBO_OFF",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add\""
+          }
+        ],
+        "name": "DETAIL_COMBO_ADD",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add + Self Illum\""
+          }
+        ],
+        "name": "DETAIL_COMBO_ADD_SELF_ILLUM",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mod2X\""
+          }
+        ],
+        "name": "DETAIL_COMBO_MOD2X",
+        "value": 3
+      }
+    ],
+    "module": "particles",
+    "name": "DetailCombo_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "DetailCombo_t"
+  },
+  "source": {
+    "canonical_record_sha256": "6211c7787346a2b5c7fb456b9f37532f1bd12c74a17790b4a485bfef99fc3511",
+    "json_pointer": "/enums/388",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

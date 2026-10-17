@@ -1,0 +1,795 @@
+{
+  "declaration": {
+    "flags": [
+      "abstract"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": "Could not parse KV3 Defaults"
+      },
+      {
+        "name": "MHasKV3TransferPolymorphicClassname"
+      }
+    ],
+    "module": "particles",
+    "name": "C_OP_RemapNamedModelElementEndCap",
+    "parents": [
+      {
+        "module": "particles",
+        "name": "CParticleFunctionOperator"
+      }
+    ],
+    "size": 576
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      {
+        "module": "particles",
+        "name": "CParticleFunctionOperator"
+      },
+      {
+        "module": "particles",
+        "name": "C_OP_RemapNamedModelElementEndCap"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "particles",
+          "name": "CParticleFunction"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      },
+      {
+        "class": {
+          "module": "particles",
+          "name": "CParticleFunctionOperator"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      },
+      {
+        "class": {
+          "module": "particles",
+          "name": "C_OP_RemapNamedModelElementEndCap"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator strength\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStrength",
+        "offset": 8,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end cap state\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpEndCapState",
+        "offset": 384,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleEndcapMode_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator enabled in tools or game only\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nToolsState",
+        "offset": 388,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleToolsState_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator start fadein\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStartFadeInTime",
+        "offset": 392,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end fadein\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpEndFadeInTime",
+        "offset": 396,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator start fadeout\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStartFadeOutTime",
+        "offset": 400,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end fadeout\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpEndFadeOutTime",
+        "offset": 404,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade oscillate\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpFadeOscillatePeriod",
+        "offset": 408,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"normalize fade times to endcap\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_bNormalizeToStopTime",
+        "offset": 412,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade Time Offset\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset min\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeOffsetMin",
+        "offset": 416,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset max\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeOffsetMax",
+        "offset": 420,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset seed\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpTimeOffsetSeed",
+        "offset": 424,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade Timescale Modifiers\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale seed\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpTimeScaleSeed",
+        "offset": 428,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale min\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeScaleMin",
+        "offset": 432,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale max\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeScaleMax",
+        "offset": 436,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"\""
+          },
+          {
+            "name": "MPropertySuppressField"
+          }
+        ],
+        "name": "m_bDisableOperator",
+        "offset": 442,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator help and notes\""
+          },
+          {
+            "name": "MParticleHelpField"
+          },
+          {
+            "name": "MPropertyAttributeEditor",
+            "value": "\"TextBlock()\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_Notes",
+        "offset": 448,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RemapNamedModelElementEndCap"
+      },
+      "field": {
+        "name": "m_hModel",
+        "offset": 480,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "resourcesystem",
+            "name": "InfoForResourceTypeCModel"
+          },
+          "name": "CStrongHandle",
+          "size": 8
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RemapNamedModelElementEndCap"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input names\""
+          }
+        ],
+        "name": "m_inNames",
+        "offset": 488,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "alignment": 8,
+            "category": "atomic",
+            "name": "CUtlString",
+            "size": 8
+          },
+          "name": "CUtlVector",
+          "size": 24
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RemapNamedModelElementEndCap"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"output names\""
+          }
+        ],
+        "name": "m_outNames",
+        "offset": 512,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "alignment": 8,
+            "category": "atomic",
+            "name": "CUtlString",
+            "size": 8
+          },
+          "name": "CUtlVector",
+          "size": 24
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RemapNamedModelElementEndCap"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"fallback names when the input doesn't match\""
+          }
+        ],
+        "name": "m_fallbackNames",
+        "offset": 536,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "alignment": 8,
+            "category": "atomic",
+            "name": "CUtlString",
+            "size": 8
+          },
+          "name": "CUtlVector",
+          "size": 24
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RemapNamedModelElementEndCap"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"model from renderer\""
+          }
+        ],
+        "name": "m_bModelFromRenderer",
+        "offset": 560,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RemapNamedModelElementEndCap"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"input field\""
+          },
+          {
+            "name": "MPropertyAttributeChoiceName",
+            "value": "\"particlefield_scalar\""
+          }
+        ],
+        "name": "m_nFieldInput",
+        "offset": 564,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "C_OP_RemapNamedModelElementEndCap"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"output field\""
+          },
+          {
+            "name": "MPropertyAttributeChoiceName",
+            "value": "\"particlefield_scalar\""
+          }
+        ],
+        "name": "m_nFieldOutput",
+        "offset": 568,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "C_OP_RemapNamedModelElementEndCap"
+  },
+  "inheritance": [
+    {
+      "module": "particles",
+      "name": "CParticleFunction"
+    },
+    {
+      "module": "particles",
+      "name": "CParticleFunctionOperator"
+    }
+  ],
+  "references": [
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CParticleCollectionFloatInput",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "ParticleAttributeIndex_t",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "resourcesystem",
+      "name": "InfoForResourceTypeCModel",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleEndcapMode_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleToolsState_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "84a255c4f563e3a5469795c21de644280928ef625594c2260a5c2f3a4ddcf28c",
+    "json_pointer": "/classes/1998",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

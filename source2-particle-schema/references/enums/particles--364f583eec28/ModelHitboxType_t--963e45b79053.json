@@ -1,0 +1,37 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "MODEL_HITBOX_TYPE_STANDARD",
+        "value": 0
+      },
+      {
+        "name": "MODEL_HITBOX_TYPE_RAW_BONES",
+        "value": 1
+      },
+      {
+        "name": "MODEL_HITBOX_TYPE_RENDERBOUNDS",
+        "value": 2
+      },
+      {
+        "name": "MODEL_HITBOX_TYPE_SNAPSHOT",
+        "value": 3
+      }
+    ],
+    "module": "particles",
+    "name": "ModelHitboxType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ModelHitboxType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "ada4ddbe346b60d760cffbe5c3c5d60534fad6d60dcc5a3c890f76c210d4dfab",
+    "json_pointer": "/enums/394",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

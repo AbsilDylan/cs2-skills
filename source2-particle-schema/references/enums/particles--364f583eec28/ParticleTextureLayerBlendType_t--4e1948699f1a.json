@@ -1,0 +1,91 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Multiply\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_BLEND_MULTIPLY",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mod2X\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_BLEND_MOD2X",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Replace\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_BLEND_REPLACE",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Add\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_BLEND_ADD",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Subtract\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_BLEND_SUBTRACT",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Average\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_BLEND_AVERAGE",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Luminance\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_BLEND_LUMINANCE",
+        "value": 6
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleTextureLayerBlendType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleTextureLayerBlendType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "1f88cb532d5b252a5b22245a8086efbdf55b1eb3a39795e9f4caa72052c1e734",
+    "json_pointer": "/enums/436",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

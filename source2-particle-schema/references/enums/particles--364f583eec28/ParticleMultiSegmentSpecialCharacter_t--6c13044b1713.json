@@ -1,0 +1,61 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"None\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SPECIAL_NONE",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Decimal Point\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SPECIAL_DECIMAL",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Colon\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SPECIAL_COLON",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Degrees\""
+          }
+        ],
+        "name": "PARTICLE_MULTISEGMENT_SPECIAL_DEGREES",
+        "value": 2
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleMultiSegmentSpecialCharacter_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleMultiSegmentSpecialCharacter_t"
+  },
+  "source": {
+    "canonical_record_sha256": "c879d41fd002af8df63ce07012ea9cbefc6eb2b81e4cc0709c290c1285682e94",
+    "json_pointer": "/enums/422",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

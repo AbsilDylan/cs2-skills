@@ -1,0 +1,65 @@
+{
+  "declaration": {
+    "flags": [
+      "trivial_constructor",
+      "trivial_destructor"
+    ],
+    "module": "particleslib",
+    "name": "PARTICLE_EHANDLE__",
+    "size": 4
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "PARTICLE_EHANDLE__"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "particleslib",
+          "name": "PARTICLE_EHANDLE__"
+        },
+        "code": "defaults-absent"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "PARTICLE_EHANDLE__"
+      },
+      "field": {
+        "name": "unused",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "PARTICLE_EHANDLE__"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "fcbf1bb81987e41a2fc1080cd78e5c4e383ae0fd1ab6402000cbfe4239142aa1",
+    "json_pointer": "/classes/2162",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

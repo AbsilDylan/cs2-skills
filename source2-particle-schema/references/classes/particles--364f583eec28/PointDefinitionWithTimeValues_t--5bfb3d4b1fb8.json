@@ -1,0 +1,177 @@
+{
+  "declaration": {
+    "alignment": 4,
+    "flags": [
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_flTimeDuration": 0.1
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "PointDefinitionWithTimeValues_t",
+    "parents": [
+      {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      }
+    ],
+    "size": 24
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      {
+        "module": "particles",
+        "name": "PointDefinitionWithTimeValues_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_bLocalCoords": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "m_flTimeDuration": {
+        "module": "particles",
+        "name": "PointDefinitionWithTimeValues_t"
+      },
+      "m_nControlPoint": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "m_vOffset": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_bLocalCoords": false,
+      "m_flTimeDuration": 0.1,
+      "m_nControlPoint": 0,
+      "m_vOffset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Control point\""
+          }
+        ],
+        "name": "m_nControlPoint",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Use local coordinates for offset\""
+          }
+        ],
+        "name": "m_bLocalCoords",
+        "offset": 4,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "PointDefinition_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Offset from control point\""
+          }
+        ],
+        "name": "m_vOffset",
+        "offset": 8,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "PointDefinitionWithTimeValues_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Duration value for path point\""
+          }
+        ],
+        "name": "m_flTimeDuration",
+        "offset": 20,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "PointDefinitionWithTimeValues_t"
+  },
+  "inheritance": [
+    {
+      "module": "particles",
+      "name": "PointDefinition_t"
+    }
+  ],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "1da7cb17a7997f49fda1cf8a6949d69fc06fd9a81e11c0e1c8c089ca15100f6d",
+    "json_pointer": "/classes/2137",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

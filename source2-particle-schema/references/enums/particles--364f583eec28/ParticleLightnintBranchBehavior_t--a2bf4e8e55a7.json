@@ -1,0 +1,41 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Branch Towards Current Direction\""
+          }
+        ],
+        "name": "PARTICLE_LIGHTNING_BRANCH_CURRENT_DIR",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Branch Towards Endpoint\""
+          }
+        ],
+        "name": "PARTICLE_LIGHTNING_BRANCH_ENDPOINT_DIR",
+        "value": 1
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleLightnintBranchBehavior_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleLightnintBranchBehavior_t"
+  },
+  "source": {
+    "canonical_record_sha256": "f5eee14b3ffb877f0e4ac3eab7abd4f29e5d6b1107a997f213254068d04924e0",
+    "json_pointer": "/enums/417",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

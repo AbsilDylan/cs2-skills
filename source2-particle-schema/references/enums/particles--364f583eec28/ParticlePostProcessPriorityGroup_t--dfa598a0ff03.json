@@ -1,0 +1,81 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Level Volume\""
+          }
+        ],
+        "name": "PARTICLE_POST_PROCESS_PRIORITY_LEVEL_VOLUME",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Level Override\""
+          }
+        ],
+        "name": "PARTICLE_POST_PROCESS_PRIORITY_LEVEL_OVERRIDE",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Gameplay Effect\""
+          }
+        ],
+        "name": "PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_EFFECT",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Gameplay State Low\""
+          }
+        ],
+        "name": "PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_LOW",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Gameplay State High\""
+          }
+        ],
+        "name": "PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_HIGH",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Global UI\""
+          }
+        ],
+        "name": "PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI",
+        "value": 5
+      }
+    ],
+    "module": "particles",
+    "name": "ParticlePostProcessPriorityGroup_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticlePostProcessPriorityGroup_t"
+  },
+  "source": {
+    "canonical_record_sha256": "6dce58b42a2f3cc7868aa733a3bac9a8454d4d689f1820bb08d5d28e9cb6b21c",
+    "json_pointer": "/enums/431",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

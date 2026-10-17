@@ -1,0 +1,48 @@
+{
+  "declaration": {
+    "flags": [
+      "abstract"
+    ],
+    "module": "pulse_runtime_lib",
+    "name": "CBasePulseGraphInstance",
+    "size": 136
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "pulse_runtime_lib",
+        "name": "CBasePulseGraphInstance"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "pulse_runtime_lib",
+          "name": "CBasePulseGraphInstance"
+        },
+        "code": "defaults-absent"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "pulse_runtime_lib",
+    "name": "CBasePulseGraphInstance"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "declared-type-or-parent-dependency",
+  "source": {
+    "canonical_record_sha256": "940f7bc46846d4252618540fac425187457d45c878ec1d512b30dfeb919513ee",
+    "json_pointer": "/classes/2267",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

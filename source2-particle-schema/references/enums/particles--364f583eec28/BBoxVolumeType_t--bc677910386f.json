@@ -1,0 +1,71 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Bounding Box Volume\""
+          }
+        ],
+        "name": "BBOX_VOLUME",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Bounding Box Dimensions\""
+          }
+        ],
+        "name": "BBOX_DIMENSIONS",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Bounding Box Mins/Maxs\""
+          }
+        ],
+        "name": "BBOX_MINS_MAXS",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Bounding Box Radius\""
+          }
+        ],
+        "name": "BBOX_RADIUS",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Bounding Surface Area\""
+          }
+        ],
+        "name": "BBOX_SURFACE_AREA",
+        "value": 4
+      }
+    ],
+    "module": "particles",
+    "name": "BBoxVolumeType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "BBoxVolumeType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "903e724c68986fe5a5b926421e118d7a5deb2ed5f2015fd04ef05fd4db563dd5",
+    "json_pointer": "/enums/384",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

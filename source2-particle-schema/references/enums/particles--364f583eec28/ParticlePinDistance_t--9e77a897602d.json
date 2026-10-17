@@ -1,0 +1,141 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Don't Break\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_NONE",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance to Neighboring Particle\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_NEIGHBOR",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance to Farthest Particle\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_FARTHEST",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance to First Particle\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_FIRST",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance to Last Particle\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_LAST",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance to Particle System Center\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_CENTER",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance to Control Point\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_CP",
+        "value": 6
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance to Either of Two Control Points\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_CP_PAIR_EITHER",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Distance to Both of Two Control Points\""
+          }
+        ],
+        "name": "PARTICLE_PIN_DISTANCE_CP_PAIR_BOTH",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Particle Speed\""
+          }
+        ],
+        "name": "PARTICLE_PIN_SPEED",
+        "value": 9
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Collection Age\""
+          }
+        ],
+        "name": "PARTICLE_PIN_COLLECTION_AGE",
+        "value": 10
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Break Value of >= 1\""
+          }
+        ],
+        "name": "PARTICLE_PIN_FLOAT_VALUE",
+        "value": 11
+      }
+    ],
+    "module": "particles",
+    "name": "ParticlePinDistance_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticlePinDistance_t"
+  },
+  "source": {
+    "canonical_record_sha256": "6132b22dcf0bf8a84cc0d492bb2bd496614b3b3badbb605653cbaf61c6921202",
+    "json_pointer": "/enums/430",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Use Default Cropping Behavior\""
+          }
+        ],
+        "name": "PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT",
+        "value": -1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Force Cropping Off\""
+          }
+        ],
+        "name": "PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Force Cropping On\""
+          }
+        ],
+        "name": "PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON",
+        "value": 1
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleSequenceCropOverride_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleSequenceCropOverride_t"
+  },
+  "source": {
+    "canonical_record_sha256": "70aba5053772126378f56a24c209c64bb628558a047f25a6ef6bf1ee3c81be80",
+    "json_pointer": "/enums/434",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

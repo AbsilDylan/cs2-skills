@@ -1,0 +1,81 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Screen Align\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_SCREEN_ALIGNED",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Screen-Z Align\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"World-Z Align\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_WORLD_Z_ALIGNED",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Particle Normal Align\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Screen & Particle Normal Align\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Full 3-Axis Rotation\""
+          }
+        ],
+        "name": "PARTICLE_ORIENTATION_FULL_3AXIS_ROTATION",
+        "value": 5
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleOrientationChoiceList_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleOrientationChoiceList_t"
+  },
+  "source": {
+    "canonical_record_sha256": "273636cbef2eb8eeb273cce999890cb3a9f3b063a39ac95b7d0bf4b9707ade0a",
+    "json_pointer": "/enums/425",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

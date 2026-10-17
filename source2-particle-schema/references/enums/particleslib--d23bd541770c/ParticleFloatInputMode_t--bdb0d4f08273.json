@@ -1,0 +1,37 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PF_INPUT_MODE_INVALID",
+        "value": -1
+      },
+      {
+        "name": "PF_INPUT_MODE_CLAMPED",
+        "value": 0
+      },
+      {
+        "name": "PF_INPUT_MODE_LOOPED",
+        "value": 1
+      },
+      {
+        "name": "PF_INPUT_MODE_COUNT",
+        "value": 2
+      }
+    ],
+    "module": "particleslib",
+    "name": "ParticleFloatInputMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "ParticleFloatInputMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "cc6cd8cfc72c545f8c17dd91ff996027dac4bc27a33705d1259ca026c427f5b1",
+    "json_pointer": "/enums/466",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

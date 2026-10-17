@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source 2 Particle Reference Research"
+  short_description: "Inspect local CS2 and Deadlock particle references"
+  default_prompt: "Use $source2-particle-reference-research to find relevant examples in the target game’s local VPKs and record their build, fields, hashes and evidence limits."

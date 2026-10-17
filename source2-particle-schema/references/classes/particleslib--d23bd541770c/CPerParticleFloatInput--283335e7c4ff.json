@@ -1,0 +1,1170 @@
+{
+  "declaration": {
+    "alignment": 8,
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {}
+      },
+      {
+        "name": "MPropertyCustomEditor",
+        "value": "\"PerParticleFloatInput()\""
+      }
+    ],
+    "module": "particleslib",
+    "name": "CPerParticleFloatInput",
+    "parents": [
+      {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      }
+    ],
+    "size": 376
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particleslib",
+        "name": "CParticleInput"
+      },
+      {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      {
+        "module": "particleslib",
+        "name": "CPerParticleFloatInput"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_Curve": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_NamedValue": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_bHasRandomSignFlip": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_bNoiseImgPreviewLive": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_bReverseOrder": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_bUseBoundsCenter": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flBiasParameter": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flCompareValue": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flInput0": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flInput1": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flLOD0": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flLOD1": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flLOD2": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flLOD3": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flLiteralValue": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flMultFactor": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNoCameraFallback": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNoiseImgPreviewScale": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNoiseOffset": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNoiseOutputMax": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNoiseOutputMin": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNoiseScale": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNoiseTurbulenceMix": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNoiseTurbulenceScale": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNotchedOutputInside": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNotchedOutputOutside": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNotchedRangeMax": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flNotchedRangeMin": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flOutput0": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flOutput1": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flRandomMax": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_flRandomMin": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nBiasType": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nControlPoint": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nInputMode": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nMapType": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nNoiseInputVectorAttribute": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nNoiseModifier": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nNoiseOctaves": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nNoiseTurbulence": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nNoiseType": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nRandomMode": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nRandomSeed": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nRoundType": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nScalarAttribute": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nType": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nVectorAttribute": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_nVectorComponent": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_strSnapshotSubset": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "m_vecNoiseOffsetRate": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_Curve": {
+        "m_spline": [],
+        "m_tangents": [],
+        "m_vDomainMaxs": [
+          0.0,
+          0.0
+        ],
+        "m_vDomainMins": [
+          0.0,
+          0.0
+        ]
+      },
+      "m_NamedValue": "",
+      "m_bHasRandomSignFlip": false,
+      "m_bNoiseImgPreviewLive": true,
+      "m_bReverseOrder": false,
+      "m_bUseBoundsCenter": false,
+      "m_flBiasParameter": 0.0,
+      "m_flCompareValue": 0.0,
+      "m_flInput0": 0.0,
+      "m_flInput1": 1.0,
+      "m_flLOD0": 0.0,
+      "m_flLOD1": 0.0,
+      "m_flLOD2": 0.0,
+      "m_flLOD3": 0.0,
+      "m_flLiteralValue": 0.0,
+      "m_flMultFactor": 1.0,
+      "m_flNoCameraFallback": 0.0,
+      "m_flNoiseImgPreviewScale": 1.0,
+      "m_flNoiseOffset": 0.0,
+      "m_flNoiseOutputMax": 1.0,
+      "m_flNoiseOutputMin": 0.0,
+      "m_flNoiseScale": 0.1,
+      "m_flNoiseTurbulenceMix": 0.5,
+      "m_flNoiseTurbulenceScale": 1.0,
+      "m_flNotchedOutputInside": 1.0,
+      "m_flNotchedOutputOutside": 0.0,
+      "m_flNotchedRangeMax": 1.0,
+      "m_flNotchedRangeMin": 0.0,
+      "m_flOutput0": 0.0,
+      "m_flOutput1": 1.0,
+      "m_flRandomMax": 1.0,
+      "m_flRandomMin": 0.0,
+      "m_nBiasType": "PF_BIAS_TYPE_STANDARD",
+      "m_nControlPoint": 0,
+      "m_nInputMode": "PF_INPUT_MODE_CLAMPED",
+      "m_nMapType": "PF_MAP_TYPE_DIRECT",
+      "m_nNoiseInputVectorAttribute": 0,
+      "m_nNoiseModifier": "PF_NOISE_MODIFIER_NONE",
+      "m_nNoiseOctaves": 1,
+      "m_nNoiseTurbulence": "PF_NOISE_TURB_NONE",
+      "m_nNoiseType": "PF_NOISE_TYPE_PERLIN",
+      "m_nRandomMode": "PF_RANDOM_MODE_CONSTANT",
+      "m_nRandomSeed": 0,
+      "m_nRoundType": "PF_ROUND_TYPE_NEAREST",
+      "m_nScalarAttribute": 3,
+      "m_nType": "PF_TYPE_LITERAL",
+      "m_nVectorAttribute": 6,
+      "m_nVectorComponent": 0,
+      "m_strSnapshotSubset": "",
+      "m_vecNoiseOffsetRate": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nType",
+        "offset": 16,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleFloatType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nMapType",
+        "offset": 20,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleFloatMapType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flLiteralValue",
+        "offset": 24,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_NamedValue",
+        "offset": 32,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CParticleNamedValueRef",
+          "size": 64
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nControlPoint",
+        "offset": 96,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nScalarAttribute",
+        "offset": 100,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nVectorAttribute",
+        "offset": 104,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nVectorComponent",
+        "offset": 108,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_bReverseOrder",
+        "offset": 112,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flRandomMin",
+        "offset": 116,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flRandomMax",
+        "offset": 120,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_bHasRandomSignFlip",
+        "offset": 124,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nRandomSeed",
+        "offset": 128,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nRandomMode",
+        "offset": 132,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleFloatRandomMode_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_strSnapshotSubset",
+        "offset": 144,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flLOD0",
+        "offset": 152,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flLOD1",
+        "offset": 156,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flLOD2",
+        "offset": 160,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flLOD3",
+        "offset": 164,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nNoiseInputVectorAttribute",
+        "offset": 168,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNoiseOutputMin",
+        "offset": 172,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNoiseOutputMax",
+        "offset": 176,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNoiseScale",
+        "offset": 180,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_vecNoiseOffsetRate",
+        "offset": 184,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNoiseOffset",
+        "offset": 196,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nNoiseOctaves",
+        "offset": 200,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nNoiseTurbulence",
+        "offset": 204,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "PFNoiseTurbulence_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nNoiseType",
+        "offset": 208,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "PFNoiseType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nNoiseModifier",
+        "offset": 212,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "PFNoiseModifier_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNoiseTurbulenceScale",
+        "offset": 216,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNoiseTurbulenceMix",
+        "offset": 220,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNoiseImgPreviewScale",
+        "offset": 224,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_bNoiseImgPreviewLive",
+        "offset": 228,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNoCameraFallback",
+        "offset": 240,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_bUseBoundsCenter",
+        "offset": 244,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nInputMode",
+        "offset": 248,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleFloatInputMode_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flMultFactor",
+        "offset": 252,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flInput0",
+        "offset": 256,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flInput1",
+        "offset": 260,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flOutput0",
+        "offset": 264,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flOutput1",
+        "offset": 268,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNotchedRangeMin",
+        "offset": 272,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNotchedRangeMax",
+        "offset": 276,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNotchedOutputOutside",
+        "offset": 280,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flNotchedOutputInside",
+        "offset": 284,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nRoundType",
+        "offset": 288,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleFloatRoundType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_nBiasType",
+        "offset": 292,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleFloatBiasType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flBiasParameter",
+        "offset": 296,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_Curve",
+        "offset": 304,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CPiecewiseCurve",
+          "size": 64
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particleslib",
+        "name": "CParticleFloatInput"
+      },
+      "field": {
+        "name": "m_flCompareValue",
+        "offset": 368,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "CPerParticleFloatInput"
+  },
+  "inheritance": [
+    {
+      "module": "particleslib",
+      "name": "CParticleInput"
+    },
+    {
+      "module": "particleslib",
+      "name": "CParticleFloatInput"
+    }
+  ],
+  "references": [
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "ParticleAttributeIndex_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "PFNoiseModifier_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "PFNoiseTurbulence_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "PFNoiseType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleFloatBiasType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleFloatInputMode_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleFloatMapType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleFloatRandomMode_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleFloatRoundType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleFloatType_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "e02a8d0d107ce62a1b775d43b0ceb3ce5fce8a1d4ac8fd3660c128e120dfba99",
+    "json_pointer": "/classes/2159",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

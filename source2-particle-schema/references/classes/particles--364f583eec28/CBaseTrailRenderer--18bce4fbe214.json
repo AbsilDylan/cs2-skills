@@ -1,0 +1,2823 @@
+{
+  "declaration": {
+    "flags": [
+      "abstract"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": "Could not parse KV3 Defaults"
+      },
+      {
+        "name": "MHasKV3TransferPolymorphicClassname"
+      }
+    ],
+    "module": "particles",
+    "name": "CBaseTrailRenderer",
+    "parents": [
+      {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      }
+    ],
+    "size": 13144
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      {
+        "module": "particles",
+        "name": "CParticleFunctionRenderer"
+      },
+      {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      }
+    ],
+    "issues": [
+      {
+        "class": {
+          "module": "particles",
+          "name": "CParticleFunction"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      },
+      {
+        "class": {
+          "module": "particles",
+          "name": "CParticleFunctionRenderer"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      },
+      {
+        "class": {
+          "module": "particles",
+          "name": "CBaseRendererSource2"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      },
+      {
+        "class": {
+          "module": "particles",
+          "name": "CBaseTrailRenderer"
+        },
+        "code": "defaults-unreadable",
+        "value": "Could not parse KV3 Defaults"
+      }
+    ],
+    "merge": "first-parent-top-level",
+    "sources": {},
+    "status": "unavailable",
+    "values": {}
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator strength\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStrength",
+        "offset": 8,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end cap state\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpEndCapState",
+        "offset": 384,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleEndcapMode_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator enabled in tools or game only\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nToolsState",
+        "offset": 388,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleToolsState_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator start fadein\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStartFadeInTime",
+        "offset": 392,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end fadein\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpEndFadeInTime",
+        "offset": 396,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator start fadeout\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpStartFadeOutTime",
+        "offset": 400,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator end fadeout\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpEndFadeOutTime",
+        "offset": 404,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade oscillate\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpFadeOscillatePeriod",
+        "offset": 408,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"normalize fade times to endcap\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_bNormalizeToStopTime",
+        "offset": 412,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade Time Offset\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset min\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeOffsetMin",
+        "offset": 416,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset max\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeOffsetMax",
+        "offset": 420,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time offset seed\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpTimeOffsetSeed",
+        "offset": 424,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Operator Fade Timescale Modifiers\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale seed\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_nOpTimeScaleSeed",
+        "offset": 428,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale min\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeScaleMin",
+        "offset": 432,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator fade time scale max\""
+          },
+          {
+            "name": "MParticleAdvancedField"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_flOpTimeScaleMax",
+        "offset": 436,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"\""
+          },
+          {
+            "name": "MPropertySuppressField"
+          }
+        ],
+        "name": "m_bDisableOperator",
+        "offset": 442,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunction"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"operator help and notes\""
+          },
+          {
+            "name": "MParticleHelpField"
+          },
+          {
+            "name": "MPropertyAttributeEditor",
+            "value": "\"TextBlock()\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-100"
+          }
+        ],
+        "name": "m_Notes",
+        "offset": 448,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunctionRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertySortPriority",
+            "value": "-1"
+          }
+        ],
+        "name": "VisibilityInputs",
+        "offset": 480,
+        "type": {
+          "category": "declared_class",
+          "module": "particles",
+          "name": "CParticleVisibilityInputs"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CParticleFunctionRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Rendering filter\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"I cannot be refracted through refracting objects like water\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "-1"
+          }
+        ],
+        "name": "m_bCannotBeRefracted",
+        "offset": 552,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"+Renderer Modifiers\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"radius scale\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_flRadiusScale",
+        "offset": 560,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"alpha scale\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_flAlphaScale",
+        "offset": 936,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"rotation roll scale\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_flRollScale",
+        "offset": 1312,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"per-particle alpha scale attribute\""
+          },
+          {
+            "name": "MPropertyAttributeChoiceName",
+            "value": "\"particlefield_scalar\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_nAlpha2Field",
+        "offset": 1688,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "ParticleAttributeIndex_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"color blend\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_vecColorScale",
+        "offset": 1696,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererVecInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"color blend type\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "700"
+          }
+        ],
+        "name": "m_nColorBlendType",
+        "offset": 3448,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "ParticleColorBlendType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"+Material\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Shader\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "600"
+          }
+        ],
+        "name": "m_nShaderType",
+        "offset": 3452,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "SpriteCardShaderType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Custom Shader\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nShaderType != SPRITECARD_SHADER_CUSTOM\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "600"
+          }
+        ],
+        "name": "m_strShaderOverride",
+        "offset": 3456,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "name": "CUtlString",
+          "size": 8
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"X offset of center point\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "600"
+          }
+        ],
+        "name": "m_flCenterXOffset",
+        "offset": 3464,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Y offset of center point\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "600"
+          }
+        ],
+        "name": "m_flCenterYOffset",
+        "offset": 3840,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Bump Strength\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "600"
+          }
+        ],
+        "name": "m_flBumpStrength",
+        "offset": 4216,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Sheet Crop Behavior\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "600"
+          }
+        ],
+        "name": "m_nCropTextureOverride",
+        "offset": 4220,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleSequenceCropOverride_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Textures\""
+          },
+          {
+            "name": "MParticleRequireDefaultArrayEntry"
+          },
+          {
+            "name": "MPropertyAutoExpandSelf"
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "600"
+          }
+        ],
+        "name": "m_vecTexturesInput",
+        "offset": 4224,
+        "type": {
+          "alignment": 8,
+          "category": "atomic",
+          "inner": {
+            "category": "declared_class",
+            "module": "particles",
+            "name": "TextureGroup_t"
+          },
+          "name": "CUtlLeanVector",
+          "size": 16
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Animation\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"animation rate\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"0 5\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "500"
+          }
+        ],
+        "name": "m_flAnimationRate",
+        "offset": 4240,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"animation type\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "500"
+          }
+        ],
+        "name": "m_nAnimationType",
+        "offset": 4244,
+        "type": {
+          "category": "declared_enum",
+          "module": "particleslib",
+          "name": "AnimationType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"set animation value in FPS\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "500"
+          }
+        ],
+        "name": "m_bAnimateInFPS",
+        "offset": 4248,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"motion vector scale U\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "500"
+          }
+        ],
+        "name": "m_flMotionVectorScaleU",
+        "offset": 4256,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"motion vector scale V\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "500"
+          }
+        ],
+        "name": "m_flMotionVectorScaleV",
+        "offset": 4632,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Lighting and Shadows\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"self illum amount\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"0 2\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "400"
+          }
+        ],
+        "name": "m_flSelfIllumAmount",
+        "offset": 5008,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"diffuse lighting amount\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"0 1\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "400"
+          }
+        ],
+        "name": "m_flDiffuseAmount",
+        "offset": 5384,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"diffuse max contribution clamp\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"0 1\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "400"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != hlx\""
+          }
+        ],
+        "name": "m_flDiffuseClamp",
+        "offset": 5760,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"diffuse lighting origin Control Point\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "400"
+          }
+        ],
+        "name": "m_nLightingControlPoint",
+        "offset": 6136,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"+Color and alpha adjustments\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"output blend mode\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_nOutputBlendMode",
+        "offset": 6140,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleOutputBlendMode_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Gamma-correct vertex colors\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_bGammaCorrectVertexColors",
+        "offset": 6144,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Saturate color pre alphablend\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != dota && mod != hlx\""
+          }
+        ],
+        "name": "m_bSaturateColorPreAlphaBlend",
+        "offset": 6145,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"add self amount over alphablend\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_flAddSelfAmount",
+        "offset": 6152,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"desaturation amount\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"0 1\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_flDesaturation",
+        "offset": 6528,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"overbright factor\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_flOverbrightFactor",
+        "offset": 6904,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"HSV Shift Control Point\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_nHSVShiftControlPoint",
+        "offset": 7280,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Apply fog to particle\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_nFogType",
+        "offset": 7284,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleFogType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Fog Scale\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != hlx\""
+          }
+        ],
+        "name": "m_flFogAmount",
+        "offset": 7288,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Apply fog of war to color\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != dota\""
+          }
+        ],
+        "name": "m_bTintByFOW",
+        "offset": 7664,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Apply global light to color\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != dota\""
+          }
+        ],
+        "name": "m_bTintByGlobalLight",
+        "offset": 7665,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Color and alpha adjustments/Alpha Reference\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"alpha reference\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_nPerParticleAlphaReference",
+        "offset": 7668,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "SpriteCardPerParticleScale_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"alpha reference window size\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_nPerParticleAlphaRefWindow",
+        "offset": 7672,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "SpriteCardPerParticleScale_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"alpha reference type\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_nAlphaReferenceType",
+        "offset": 7676,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleAlphaReferenceType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"alpha reference softness\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"0 1\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_flAlphaReferenceSoftness",
+        "offset": 7680,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"source alpha value to map to alpha of zero\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"0 1\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_flSourceAlphaValueToMapToZero",
+        "offset": 8056,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"source alpha value to map to alpha of 1\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"0 1\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "300"
+          }
+        ],
+        "name": "m_flSourceAlphaValueToMapToOne",
+        "offset": 8432,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Refraction\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"refract background\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "200"
+          }
+        ],
+        "name": "m_bRefract",
+        "offset": 8808,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"refract draws opaque - alpha scales refraction\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "200"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"!m_bRefract\""
+          }
+        ],
+        "name": "m_bRefractSolid",
+        "offset": 8809,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"refract in 2 passes - can refract particles behind, requires (MBOIT!)\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "200"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != hlx || !m_bRefract\""
+          }
+        ],
+        "name": "m_bRefract2Passes",
+        "offset": 8810,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"refract amount\""
+          },
+          {
+            "name": "MPropertyAttributeRange",
+            "value": "\"-2 2\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "200"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"!m_bRefract\""
+          }
+        ],
+        "name": "m_flRefractAmount",
+        "offset": 8816,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"refract blur radius\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "200"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"!m_bRefract\""
+          }
+        ],
+        "name": "m_nRefractBlurRadius",
+        "offset": 9192,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"refract blur type\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "200"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"!m_bRefract\""
+          }
+        ],
+        "name": "m_nRefractBlurType",
+        "offset": 9196,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "BlurFilterType_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Only Render in effects bloom pass\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "1100"
+          }
+        ],
+        "name": "m_bOnlyRenderInEffectsBloomPass",
+        "offset": 9200,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Only Render in effects water pass\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "1050"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != csgo && mod != hlx\""
+          }
+        ],
+        "name": "m_bOnlyRenderInEffectsWaterPass",
+        "offset": 9201,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Use Mixed Resolution Rendering\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "1200"
+          }
+        ],
+        "name": "m_bUseMixedResolutionRendering",
+        "offset": 9202,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Only Render in effects game overlay pass\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "1210"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != csgo\""
+          }
+        ],
+        "name": "m_bOnlyRenderInEffecsGameOverlay",
+        "offset": 9203,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Stencil\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"stencil test ID\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "0"
+          }
+        ],
+        "name": "m_stencilTestID",
+        "offset": 9204,
+        "type": {
+          "category": "fixed_array",
+          "count": 128,
+          "inner": {
+            "category": "builtin",
+            "name": "char"
+          }
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"only write where stencil is NOT stencil test ID\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "0"
+          }
+        ],
+        "name": "m_bStencilTestExclude",
+        "offset": 9332,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"stencil write ID\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "0"
+          }
+        ],
+        "name": "m_stencilWriteID",
+        "offset": 9333,
+        "type": {
+          "category": "fixed_array",
+          "count": 128,
+          "inner": {
+            "category": "builtin",
+            "name": "char"
+          }
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"write stencil on z-buffer test success\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "0"
+          }
+        ],
+        "name": "m_bWriteStencilOnDepthPass",
+        "offset": 9461,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"write stencil on z-buffer test failure\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "0"
+          }
+        ],
+        "name": "m_bWriteStencilOnDepthFail",
+        "offset": 9462,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Depth buffer control and effects\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"reverse z-buffer test\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_bReverseZBuffering",
+        "offset": 9463,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"disable z-buffer test\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_bDisableZBuffering",
+        "offset": 9464,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Depth feathering mode\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_nFeatheringMode",
+        "offset": 9468,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleDepthFeatheringMode_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"particle feathering closest distance to surface\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_flFeatheringMinDist",
+        "offset": 9472,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"particle feathering farthest distance to surface\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_flFeatheringMaxDist",
+        "offset": 9848,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"particle feathering alpha filter\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_flFeatheringFilter",
+        "offset": 10224,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"particle feathering depthmap layer filter\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != hlx\""
+          }
+        ],
+        "name": "m_flFeatheringDepthMapFilter",
+        "offset": 10600,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"depth comparison bias\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_flDepthBias",
+        "offset": 10976,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Sort Method\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_nSortMethod",
+        "offset": 11352,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleSortingChoiceList_t"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Animation\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"blend sequence animation frames\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "500"
+          }
+        ],
+        "name": "m_bBlendFramesSeq0",
+        "offset": 11356,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseRendererSource2"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"use max-luminance blending for sequence\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "500"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"!m_bBlendFramesSeq0\""
+          }
+        ],
+        "name": "m_bMaxLuminanceBlendingSequence0",
+        "offset": 11357,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": true
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Orientation\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"orientation type\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "750"
+          }
+        ],
+        "name": "m_nOrientationType",
+        "offset": 11992,
+        "type": {
+          "category": "declared_enum",
+          "module": "particles",
+          "name": "ParticleOrientationChoiceList_t"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"orientation control point\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "750"
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"m_nOrientationType != PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL && m_nOrientationType != PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL\""
+          }
+        ],
+        "name": "m_nOrientationControlPoint",
+        "offset": 11996,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Screenspace Fading and culling\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"minimum visual screen-size\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_flMinSize",
+        "offset": 12000,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"maximum visual screen-size\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_flMaxSize",
+        "offset": 12004,
+        "type": {
+          "category": "builtin",
+          "name": "float32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"start fade screen-size\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_flStartFadeSize",
+        "offset": 12008,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"end fade and cull screen-size\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "900"
+          }
+        ],
+        "name": "m_flEndFadeSize",
+        "offset": 12384,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"sub-pixel AA scale\""
+          },
+          {
+            "name": "MPropertySuppressExpr",
+            "value": "\"mod != hlx\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "1000"
+          }
+        ],
+        "name": "m_flSubPixelAAScale",
+        "offset": 12760,
+        "type": {
+          "category": "declared_class",
+          "module": "particleslib",
+          "name": "CParticleCollectionRendererFloatInput"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "CBaseTrailRenderer"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyStartGroup",
+            "value": "\"Trail UV Controls\""
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Clamp Non-Sheet texture V coords\""
+          },
+          {
+            "name": "MPropertySortPriority",
+            "value": "800"
+          }
+        ],
+        "name": "m_bClampV",
+        "offset": 13136,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "CBaseTrailRenderer"
+  },
+  "inheritance": [
+    {
+      "module": "particles",
+      "name": "CParticleFunction"
+    },
+    {
+      "module": "particles",
+      "name": "CParticleFunctionRenderer"
+    },
+    {
+      "module": "particles",
+      "name": "CBaseRendererSource2"
+    }
+  ],
+  "references": [
+    {
+      "kind": "classes",
+      "module": "particles",
+      "name": "CParticleVisibilityInputs",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particles",
+      "name": "TextureGroup_t",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CParticleCollectionFloatInput",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CParticleCollectionRendererFloatInput",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "CParticleCollectionRendererVecInput",
+      "status": "present"
+    },
+    {
+      "kind": "classes",
+      "module": "particleslib",
+      "name": "ParticleAttributeIndex_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "BlurFilterType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleAlphaReferenceType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleDepthFeatheringMode_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleEndcapMode_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleFogType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleOrientationChoiceList_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleOutputBlendMode_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleSequenceCropOverride_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleSortingChoiceList_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "ParticleToolsState_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "SpriteCardPerParticleScale_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particles",
+      "name": "SpriteCardShaderType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "AnimationType_t",
+      "status": "present"
+    },
+    {
+      "kind": "enums",
+      "module": "particleslib",
+      "name": "ParticleColorBlendType_t",
+      "status": "present"
+    }
+  ],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "cb1e176d702d5f2db16f979e4941f30821fdc5641b94e752e497d20266579ab7",
+    "json_pointer": "/classes/1710",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

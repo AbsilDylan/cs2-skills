@@ -1,0 +1,145 @@
+{
+  "format": "standalone-cs2-native-helper-check/1",
+  "performedUtc": "2026-10-15T18:10:43.728336+00:00",
+  "helper": "scripts/compile_native.py",
+  "helperSha256": "7fe7ed0cbfe3687ed72b9c87599cd1766327cce37c2d1df616eb8a73c4d01af1",
+  "python": "3.11.0",
+  "syntheticTests": {
+    "tests": 11,
+    "passed": 11,
+    "skipped": 0,
+    "realDirectorySymlink": "passed with the OS account permitted to create the test link",
+    "dependencyOutputBudget": "passed; unselected dependency output counted"
+  },
+  "native": {
+    "game": {
+      "ClientVersion": "2000922",
+      "ServerVersion": "2000922",
+      "PatchVersion": "1.41.8.8",
+      "ProductName": "cs2",
+      "appID": "730",
+      "ServerAppID": "2347773",
+      "SourceRevision": "11064488",
+      "VersionDate": "Sep 30 2026",
+      "VersionTime": "16:29:50",
+      "steamBuildId": "25640462"
+    },
+    "compiler": {
+      "path": "game/bin/win64/resourcecompiler.exe",
+      "sha256": "00db3daca0e733601bf3fcc1d1bf9df1b2ade805629098c48bd6c51af3d96f51",
+      "authenticode": "not-checked",
+      "installedModules": [
+        {
+          "path": "game/bin/win64/resourcecompiler.dll",
+          "sha256": "3b4fa1887be100551160188f7f2cf70ae9fbe51598a07e5d33302b53a40382a6",
+          "bytes": 56315544
+        },
+        {
+          "path": "game/bin/win64/particles.dll",
+          "sha256": "2cf870d86cddc8326534f37fce39735b5f2937755bf538e50d9b1932c79ddd2b",
+          "bytes": 6460568
+        },
+        {
+          "path": "game/bin/win64/resourcesystem.dll",
+          "sha256": "91fefb1a36111c34e380a8ec2c74c584f29ef66332a0ddba01123dd0adec778d",
+          "bytes": 532632
+        }
+      ]
+    },
+    "sourceInventory": [
+      {
+        "path": "particles/skill_examples/layered_impact/core.vpcf",
+        "bytes": 1841,
+        "sha256": "7ea8db5aed6702e4a5707ee3beaa6881c10074888997e07084a1a0281403f634"
+      },
+      {
+        "path": "particles/skill_examples/layered_impact/root.vpcf",
+        "bytes": 405,
+        "sha256": "5624bad1f596767081542d0738381dc88dcd49fdb0681e6d8c7e0518a3ce1173"
+      },
+      {
+        "path": "particles/skill_examples/layered_impact/sparks.vpcf",
+        "bytes": 1794,
+        "sha256": "011ad477a09df4f43c9aa5fd6c07d1e4ef9b1fa88fb8de5c18f67d3207a0b1f4"
+      }
+    ],
+    "selectedInputs": [
+      "particles/skill_examples/layered_impact/core.vpcf",
+      "particles/skill_examples/layered_impact/root.vpcf",
+      "particles/skill_examples/layered_impact/sparks.vpcf"
+    ],
+    "runs": [
+      {
+        "input": "particles/skill_examples/layered_impact/core.vpcf",
+        "exitCode": 0,
+        "timedOut": false,
+        "outputTruncated": false,
+        "readerIncomplete": false
+      },
+      {
+        "input": "particles/skill_examples/layered_impact/root.vpcf",
+        "exitCode": 0,
+        "timedOut": false,
+        "outputTruncated": false,
+        "readerIncomplete": false
+      },
+      {
+        "input": "particles/skill_examples/layered_impact/sparks.vpcf",
+        "exitCode": 0,
+        "timedOut": false,
+        "outputTruncated": false,
+        "readerIncomplete": false
+      }
+    ],
+    "outputs": [
+      {
+        "source": "particles/skill_examples/layered_impact/core.vpcf",
+        "bytes": 2181,
+        "sha256": "73e5d6063a5eb8c7565148a1820a28212b4bc7b4eecf6286eff4689f6c98fc88",
+        "fresh": true
+      },
+      {
+        "source": "particles/skill_examples/layered_impact/root.vpcf",
+        "bytes": 1389,
+        "sha256": "257c8c109a6d9dbccf09846e76cf4668e1bcc2e2c6312cbff2f57e2c5ab82190",
+        "fresh": true
+      },
+      {
+        "source": "particles/skill_examples/layered_impact/sparks.vpcf",
+        "bytes": 2184,
+        "sha256": "dd6973223489ee50e20320ae193cba8acfb6a7e928f444308b8ab01b1a946349",
+        "fresh": true
+      }
+    ],
+    "outputTreeAudit": {
+      "scope": "fresh-game-addon-only",
+      "files": [
+        {
+          "path": "particles/skill_examples/layered_impact/core.vpcf_c",
+          "bytes": 2181
+        },
+        {
+          "path": "particles/skill_examples/layered_impact/root.vpcf_c",
+          "bytes": 1389
+        },
+        {
+          "path": "particles/skill_examples/layered_impact/sparks.vpcf_c",
+          "bytes": 2184
+        }
+      ],
+      "totalBytes": 5754
+    },
+    "execution": {
+      "nativeCompilation": "passed",
+      "propertyRetention": "not-run",
+      "nativeRuntimeBehavior": "not-run",
+      "nativeVisualValidation": "not-run"
+    }
+  },
+  "limits": [
+    "The injected-runner tests verify helper behavior, not native semantics.",
+    "The native check used three original authored VPCF sources; no native visual, temporal or property-retention result is inferred.",
+    "Optional viewer capture was tested with an injected runner, not an installed viewer in this check.",
+    "Compiled bytes and native source assets are not included; hashes identify this one run."
+  ]
+}

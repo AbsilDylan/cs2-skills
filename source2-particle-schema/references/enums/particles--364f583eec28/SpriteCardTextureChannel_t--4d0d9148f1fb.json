@@ -1,0 +1,171 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"RGB\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"RGBA\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Alpha\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_A",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"RGB with Alpha Passthrough\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"RGB with Alpha Mask\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_ALPHAMASK",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"RGB with RGB as Alpha Mask\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_RGBMASK",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"RGBA with RGB as Alpha\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA_RGBALPHA",
+        "value": 6
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Alpha with RGB as Alpha\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_A_RGBALPHA",
+        "value": 7
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"RGB with RGB as Alpha Passthrough\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A_RGBALPHA",
+        "value": 8
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Red Channel\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_R",
+        "value": 9
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Green Channel\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_G",
+        "value": 10
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Blue Channel\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_B",
+        "value": 11
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Red with Red as Alpha\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_RALPHA",
+        "value": 12
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Green with Green as Alpha\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_GALPHA",
+        "value": 13
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Blue with Blue as Alpha\""
+          }
+        ],
+        "name": "SPRITECARD_TEXTURE_CHANNEL_MIX_BALPHA",
+        "value": 14
+      }
+    ],
+    "module": "particles",
+    "name": "SpriteCardTextureChannel_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "SpriteCardTextureChannel_t"
+  },
+  "source": {
+    "canonical_record_sha256": "5bc37f1bfcaf4d15f8cefb655476e9e6f75b8607fcad3b31579b9ba60653486c",
+    "json_pointer": "/enums/451",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

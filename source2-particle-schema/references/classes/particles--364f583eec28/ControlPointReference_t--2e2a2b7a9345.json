@@ -1,0 +1,142 @@
+{
+  "declaration": {
+    "alignment": 4,
+    "flags": [
+      "trivial_destructor"
+    ],
+    "metadata": [
+      {
+        "name": "MGetKV3ClassDefaults",
+        "value": {
+          "m_bOffsetInLocalSpace": false,
+          "m_controlPointNameString": 0,
+          "m_vOffsetFromControlPoint": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "module": "particles",
+    "name": "ControlPointReference_t",
+    "size": 20
+  },
+  "defaults": {
+    "chain": [
+      {
+        "module": "particles",
+        "name": "ControlPointReference_t"
+      }
+    ],
+    "issues": [],
+    "merge": "first-parent-top-level",
+    "sources": {
+      "m_bOffsetInLocalSpace": {
+        "module": "particles",
+        "name": "ControlPointReference_t"
+      },
+      "m_controlPointNameString": {
+        "module": "particles",
+        "name": "ControlPointReference_t"
+      },
+      "m_vOffsetFromControlPoint": {
+        "module": "particles",
+        "name": "ControlPointReference_t"
+      }
+    },
+    "status": "available",
+    "values": {
+      "m_bOffsetInLocalSpace": false,
+      "m_controlPointNameString": 0,
+      "m_vOffsetFromControlPoint": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "evidence": "reflection-and-editor-metadata; behavior-unverified",
+  "field_name_collisions": [],
+  "fields": [
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ControlPointReference_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Control point\""
+          }
+        ],
+        "name": "m_controlPointNameString",
+        "offset": 0,
+        "type": {
+          "category": "builtin",
+          "name": "int32"
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ControlPointReference_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Offset from control point\""
+          }
+        ],
+        "name": "m_vOffsetFromControlPoint",
+        "offset": 4,
+        "type": {
+          "alignment": 4,
+          "category": "atomic",
+          "name": "Vector",
+          "size": 12
+        }
+      },
+      "inherited": false
+    },
+    {
+      "declared_in": {
+        "module": "particles",
+        "name": "ControlPointReference_t"
+      },
+      "field": {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Use local space offset\""
+          }
+        ],
+        "name": "m_bOffsetInLocalSpace",
+        "offset": 16,
+        "type": {
+          "category": "builtin",
+          "name": "bool"
+        }
+      },
+      "inherited": false
+    }
+  ],
+  "format": "source2-particle-class-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ControlPointReference_t"
+  },
+  "inheritance": [],
+  "references": [],
+  "role": "particle-module-class",
+  "source": {
+    "canonical_record_sha256": "3f427495823d1cce7fb6ad626d10f440380f48c8a57de34b948658bfd9d9b12c",
+    "json_pointer": "/classes/2126",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

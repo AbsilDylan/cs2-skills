@@ -1,0 +1,37 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "name": "PF_NOISE_TYPE_PERLIN",
+        "value": 0
+      },
+      {
+        "name": "PF_NOISE_TYPE_SIMPLEX",
+        "value": 1
+      },
+      {
+        "name": "PF_NOISE_TYPE_WORLEY",
+        "value": 2
+      },
+      {
+        "name": "PF_NOISE_TYPE_CURL",
+        "value": 3
+      }
+    ],
+    "module": "particleslib",
+    "name": "PFNoiseType_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particleslib",
+    "name": "PFNoiseType_t"
+  },
+  "source": {
+    "canonical_record_sha256": "59012a4a9c23fcbeb2436862b4d78c0749b9d1c878e0513d32724bcc14eeb9a3",
+    "json_pointer": "/enums/461",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "declaration": {
+    "alignment": "uint32_t",
+    "members": [
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Alpha Blend\""
+          }
+        ],
+        "name": "PARTICLE_OUTPUT_BLEND_MODE_ALPHA",
+        "value": 0
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Additive\""
+          }
+        ],
+        "name": "PARTICLE_OUTPUT_BLEND_MODE_ADD",
+        "value": 1
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Blend Add (Pre-Mult Alpha)\""
+          }
+        ],
+        "name": "PARTICLE_OUTPUT_BLEND_MODE_BLEND_ADD",
+        "value": 2
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Half Blend Add\""
+          }
+        ],
+        "name": "PARTICLE_OUTPUT_BLEND_MODE_HALF_BLEND_ADD",
+        "value": 3
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Negative Half Blend Add\""
+          }
+        ],
+        "name": "PARTICLE_OUTPUT_BLEND_MODE_NEG_HALF_BLEND_ADD",
+        "value": 4
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Mod2X\""
+          }
+        ],
+        "name": "PARTICLE_OUTPUT_BLEND_MODE_MOD2X",
+        "value": 5
+      },
+      {
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "value": "\"Lighten\""
+          }
+        ],
+        "name": "PARTICLE_OUTPUT_BLEND_MODE_LIGHTEN",
+        "value": 6
+      }
+    ],
+    "module": "particles",
+    "name": "ParticleOutputBlendMode_t"
+  },
+  "evidence": "reflected-enum-values-and-editor-metadata; behavior-unverified",
+  "format": "source2-particle-enum-reference/1",
+  "identity": {
+    "module": "particles",
+    "name": "ParticleOutputBlendMode_t"
+  },
+  "source": {
+    "canonical_record_sha256": "4c225063afa0385157b2b2429ce8555047a317076a957366807fdb0dc2453b7c",
+    "json_pointer": "/enums/428",
+    "snapshot_id": "ec246132f9edd04b191a06f2e2e0171febf6614021f8e35e0ffd82a3443975d4",
+    "url": "https://s2v.app/SchemaExplorer/assets/cs2.json-DZ4XVvE1.gz"
+  }
+}
