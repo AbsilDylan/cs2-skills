@@ -1,49 +1,49 @@
-# Ingestion locale vérifiée le 15 octobre 2026
+# Local ingestion verified on October 15, 2026
 
-Les comptes proviennent des index réellement installés, pas d’un dépôt décompilé ancien. Le JSON associé contient les identifiants d’index et les hashes des deux extractions de contrôle : [vpk-ingestion-2026-10-15.json](vpk-ingestion-2026-10-15.json).
+The counts come from the indexes actually installed, not an old decompiled repository. The associated JSON contains the index identifiers and hashes of the two verification extractions: [vpk-ingestion-2026-10-15.json](vpk-ingestion-2026-10-15.json).
 
-| Jeu | Build Steam installé observé | Entrées totales dans `pak01_dir.vpk` | `.vpcf_c` | `.vmat_c` | `.vtex_c` |
+| Game | Observed installed Steam build | Total entries in `pak01_dir.vpk` | `.vpcf_c` | `.vmat_c` | `.vtex_c` |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Counter-Strike 2 | 25640462 | 137440 | 2622 | 22008 | 71714 |
 | Deadlock | 25660886 | 137966 | 16310 | 4412 | 14191 |
 
-Un inventaire du VPK ne couvre pas automatiquement les autres archives, addons, ressources séparées ou fonctionnalités possibles du moteur. Les builds ont été lus dans `appmanifest_730.acf` et `appmanifest_1422450.acf` de l’installation locale ; l’identité reproductible de l’index est son SHA-256, dont le périmètre est explicitement limité à l’en-tête et l’arbre.
+A VPK inventory does not automatically cover other archives, addons, separate resources, or possible engine features. The builds were read from `appmanifest_730.acf` and `appmanifest_1422450.acf` in the local installation; the reproducible identity of the index is its SHA-256, whose scope is explicitly limited to the header and tree.
 
-## Contrôles réalisés
+## Checks performed
 
-Le helper standard library a lu les deux index v2 et extrait exactement une particule dans chacun, dans des dossiers de travail nouveaux, avec CRC32 correct. Les originaux extraits restent dans des dossiers locaux de recherche ; ils ne font pas partie du skill.
+The standard-library helper read both v2 indexes and extracted exactly one particle from each into new working directories, with correct CRC32 values. The extracted originals remain in local research directories; they are not part of the skill.
 
-VRF installé : `19.2.0+f86ea981fc37b9f8f23c4eb84e058de2083b6761`. Les flags `--input`, `--block`, `--help` et `--version` ont été confirmés par l’aide de cet exécutable, puis `--block DATA` exécuté sur les deux extractions.
+Installed VRF: `19.2.0+f86ea981fc37b9f8f23c4eb84e058de2083b6761`. The `--input`, `--block`, `--help`, and `--version` flags were confirmed by this executable's help, then `--block DATA` was run on both extractions.
 
-| Contrôle | CS2 | Deadlock |
+| Check | CS2 | Deadlock |
 | --- | --- | --- |
-| Chemin exact | `particles/ambient/ambient_water_stream.vpcf_c` | `materials/dev/steam_test.vpcf_c` |
-| Octets du payload | 4016 | 3207 |
+| Exact path | `particles/ambient/ambient_water_stream.vpcf_c` | `materials/dev/steam_test.vpcf_c` |
+| Payload bytes | 4016 | 3207 |
 | Resource Type / Header | Particle v1 / header 12 | Particle v1 / header 12 |
-| Format DATA affiché par VRF | `vpcf54` | `vpcf61` |
-| Classes de rendu présentes | `C_OP_RenderTrails` | `C_OP_RenderSprites` |
-| Références externes affichées | Une texture et cinq enfants particules | Une texture |
+| DATA format displayed by VRF | `vpcf54` | `vpcf61` |
+| Renderer classes present | `C_OP_RenderTrails` | `C_OP_RenderSprites` |
+| External references displayed | One texture and five particle children | One texture |
 
-Deux enseignements utiles à la recherche :
+Two useful findings for research:
 
-- Les particules ne sont pas toutes rangées sous `particles/` : le contrôle Deadlock est sous `materials/dev/` et l’inventaire CS2 contient notamment une particule sous `models/gameplay/`.
-- Ces deux exemples utilisent des formats VPCF distincts malgré un même header de ressource. Cela suffit pour exiger une vérification du décodage et du jeu cible ; cela ne prouve pas l’incompatibilité de toutes les propriétés entre les jeux.
+- Particles are not all stored under `particles/`: the Deadlock verification sample is under `materials/dev/`, and the CS2 inventory includes, among others, a particle under `models/gameplay/`.
+- These two examples use different VPCF formats despite sharing the same resource header. This is enough to require verification of decoding and of the target game; it does not prove that all properties are incompatible between the games.
 
-Ces observations démontrent l’accès reproductible aux références et l’inspection de leur structure. Elles ne prouvent ni la sémantique exacte des propriétés, ni une équivalence visuelle, ni la disponibilité d’une fonctionnalité Deadlock dans CS2.
+These observations demonstrate reproducible access to references and inspection of their structure. They prove neither the exact semantics of the properties, nor visual equivalence, nor the availability of a Deadlock feature in CS2.
 
-## Reproduire
+## Reproduce
 
-Depuis le dossier du skill, remplacer les chemins d’installation et de travail :
+From the skill directory, replace the installation and working paths:
 
 ```text
 python scripts/vpk_reference.py inventory --vpk "CS2/game/csgo/pak01_dir.vpk" --extension vpcf_c --limit 0
 python scripts/vpk_reference.py inventory --vpk "Deadlock/game/citadel/pak01_dir.vpk" --extension vpcf_c --limit 0
-python scripts/vpk_reference.py extract --vpk "CS2/game/csgo/pak01_dir.vpk" --entry particles/ambient/ambient_water_stream.vpcf_c --output "TRAVAIL/cs2-sample-neuf"
-python scripts/vpk_reference.py extract --vpk "Deadlock/game/citadel/pak01_dir.vpk" --entry materials/dev/steam_test.vpcf_c --output "TRAVAIL/deadlock-sample-neuf"
+python scripts/vpk_reference.py extract --vpk "CS2/game/csgo/pak01_dir.vpk" --entry particles/ambient/ambient_water_stream.vpcf_c --output "WORK/new-cs2-sample"
+python scripts/vpk_reference.py extract --vpk "Deadlock/game/citadel/pak01_dir.vpk" --entry materials/dev/steam_test.vpcf_c --output "WORK/new-deadlock-sample"
 Source2Viewer-CLI --help
 Source2Viewer-CLI --version
-Source2Viewer-CLI --input "TRAVAIL/cs2-sample-neuf/particles/ambient/ambient_water_stream.vpcf_c" --block DATA
-Source2Viewer-CLI --input "TRAVAIL/deadlock-sample-neuf/materials/dev/steam_test.vpcf_c" --block DATA
+Source2Viewer-CLI --input "WORK/new-cs2-sample/particles/ambient/ambient_water_stream.vpcf_c" --block DATA
+Source2Viewer-CLI --input "WORK/new-deadlock-sample/materials/dev/steam_test.vpcf_c" --block DATA
 ```
 
-Références d’outillage : [ValvePak](https://github.com/ValveResourceFormat/ValvePak), [VRF CLI](https://github.com/ValveResourceFormat/ValveResourceFormat/blob/master/docs/guides/command-line.md). Le helper ne dépend pas de ces projets ; VRF est utilisé ici séparément pour inspecter DATA.
+Tooling references: [ValvePak](https://github.com/ValveResourceFormat/ValvePak), [VRF CLI](https://github.com/ValveResourceFormat/ValveResourceFormat/blob/master/docs/guides/command-line.md). The helper does not depend on these projects; VRF is used separately here to inspect DATA.

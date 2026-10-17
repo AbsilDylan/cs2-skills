@@ -3,13 +3,13 @@ name: source2-particle-reference-research
 description: "Research native particle, material and texture examples in local CS2 or Deadlock VPKs using bounded extraction, provenance and offline observations."
 ---
 
-# Rechercher des références Source 2
+# Research Source 2 references
 
-Transformer des ressources locales en faits vérifiables utiles à l’écriture de nouvelles particules. Une ressource observée dans Deadlock est une piste pour CS2 ; sa présence ne prouve ni l’existence de la classe, ni les mêmes propriétés ou valeurs par défaut dans CS2.
+Turn local resources into verifiable facts useful for writing new particles. A resource observed in Deadlock is a lead for CS2; its presence proves neither that the class exists in CS2 nor that it has the same properties or default values there.
 
-## Consulter les observations déjà livrées
+## Consult the bundled observations
 
-Lire [la couverture et les limites des observations CS2/Deadlock](references/native-vpk-observations.md), puis interroger uniquement la classe utile avec le helper portable. Il ne nécessite ni jeu installé, ni Node, ni connexion réseau :
+Read [the coverage and limits of the CS2/Deadlock observations](references/native-vpk-observations.md), then query only the relevant class with the portable helper. It requires no installed game, Node, or network connection:
 
 ```text
 python scripts/query_observations.py --game cs2 --search Render --limit 20
@@ -18,69 +18,69 @@ python scripts/query_observations.py --game cs2 --class C_OP_RenderSprites --fie
 python scripts/query_observations.py --game deadlock --class C_OP_RenderLightBeam --stage m_Renderers
 ```
 
-`--search` porte sur les noms de classe/étape de l’index, sans lire toutes les fiches ni rechercher leurs champs. `--class` renvoie par défaut un résumé et au plus `--limit` noms de champs, pas leurs milliers de valeurs. `--field` sélectionne un chemin exact, avec `[]` pour les tableaux, et donne son témoin avec hash du payload. Chaque fiche lue est vérifiée contre sa taille et son SHA-256 déclarés dans l’index. Un snapshot local peut être sélectionné explicitement par `--references`. Lectures bornées à 4 MiB par fichier et sortie JSON à 128 KiB ; si la sortie est trop grande, demander un champ précis ou réduire `--limit`.
+`--search` searches the class/stage names in the index, without reading every record or searching their fields. By default, `--class` returns a summary and at most `--limit` field names, rather than their thousands of values. `--field` selects an exact path, with `[]` for arrays, and returns its supporting example with the payload hash. Every record read is checked against its size and SHA-256 declared in the index. A local snapshot can be selected explicitly with `--references`. Reads are limited to 4 MiB per file and JSON output to 128 KiB; if the output is too large, request a specific field or reduce `--limit`.
 
-Les fiches intégrées contiennent des observations, pas toutes les propriétés déclarées par le moteur. Utiliser la recherche locale dans les VPK ci-dessous pour compléter un cas absent, puis croiser le résultat avec le schéma du jeu cible.
+The bundled records contain observations, not every property declared by the engine. Use the local VPK search below to fill in a missing case, then cross-check the result against the target game's schema.
 
-## Trouver et sélectionner
+## Find and select
 
-Partir du jeu cible, de son build et du chemin du VPK fournis ou découverts dans une installation locale. Lire les archives en place ; écrire les extractions dans un nouveau dossier de travail explicite. Ne pas supposer qu’un corpus déjà décompilé est à jour.
+Start with the target game, its build, and the VPK path supplied or discovered in a local installation. Read the archives in place; write extractions to an explicit new working directory. Do not assume that an already decompiled corpus is up to date.
 
-Le helper inclus exige Python 3.10+ sans dépendance. Depuis ce dossier de skill :
-
-```text
-python scripts/vpk_reference.py inventory --vpk "CHEMIN/pak01_dir.vpk" --extension vpcf_c --limit 20
-python scripts/vpk_reference.py inventory --vpk "CHEMIN/pak01_dir.vpk" --extension vpcf_c --prefix particles/ --limit 100
-python scripts/vpk_reference.py inventory --vpk "CHEMIN/pak01_dir.vpk" --extension vpcf_c --contains smoke --limit 20
-python scripts/vpk_reference.py inventory --vpk "CHEMIN/pak01_dir.vpk" --extension vmat_c --extension vtex_c --prefix materials/particle/ --limit 20
-```
-
-L’inventaire compte toutes les extensions du VPK, puis applique les filtres à la liste. `--contains` recherche un fragment littéral de chemin sans regex. `--limit 0` produit seulement les comptes et la provenance. À ce stade, les CRC32 sont déclarés par l’index, sans vérification des payloads ; un nom de fichier donne un candidat, pas son apparence réelle. Ne pas limiter systématiquement les particules au dossier `particles/` : les deux jeux étudiés ont aussi des `.vpcf_c` ailleurs.
-
-Choisir quelques effets correspondant au besoin visuel, puis suivre leurs enfants, textures, matériaux, modèles et autres ressources référencées. Pour une recherche exhaustive, conserver les agrégats et les erreurs par fichier plutôt que charger toutes les ressources dans le contexte.
-
-## Extraire et inspecter
+The included helper requires Python 3.10+ with no dependencies. From this skill directory:
 
 ```text
-python scripts/vpk_reference.py extract --vpk "CHEMIN/pak01_dir.vpk" --entry particles/exemple.vpcf_c --output "TRAVAIL/nouvelle-extraction"
+python scripts/vpk_reference.py inventory --vpk "PATH/pak01_dir.vpk" --extension vpcf_c --limit 20
+python scripts/vpk_reference.py inventory --vpk "PATH/pak01_dir.vpk" --extension vpcf_c --prefix particles/ --limit 100
+python scripts/vpk_reference.py inventory --vpk "PATH/pak01_dir.vpk" --extension vpcf_c --contains smoke --limit 20
+python scripts/vpk_reference.py inventory --vpk "PATH/pak01_dir.vpk" --extension vmat_c --extension vtex_c --prefix materials/particle/ --limit 20
 ```
 
-Répéter `--entry` pour sélectionner plusieurs chemins exacts issus de l’inventaire. Le dossier parent doit exister ; le dossier de sortie doit être nouveau. L’extraction associe preload et données, vérifie le CRC32 et produit `vpk-reference-manifest.json` avec SHA-256 par ressource. Bornes : index 64 MiB, un million d’entrées, chaîne 4096 octets ; extraction 64 fichiers, 64 MiB par fichier, 256 MiB au total. Aucun contenu de VPK n’est exécuté, téléchargé ou décompilé par ce script. Il ne vérifie pas les signatures ou sections MD5 du VPK.
+The inventory counts all extensions in the VPK, then applies the filters to the list. `--contains` searches for a literal path fragment without regex. `--limit 0` produces only counts and provenance. At this stage, CRC32 values are declared by the index, without payload verification; a filename identifies a candidate, not its actual appearance. Do not routinely restrict particles to the `particles/` directory: both games studied also have `.vpcf_c` files elsewhere.
 
-Les fichiers `*_c` sont compilés. Utiliser un **Source2Viewer-CLI/ValveResourceFormat déjà installé**, compatible avec leur version. Vérifier d’abord son aide et sa version ; les interfaces changent :
+Choose a few effects that match the visual need, then follow their children, textures, materials, models, and other referenced resources. For an exhaustive search, retain aggregates and errors per file instead of loading every resource into context.
+
+## Extract and inspect
+
+```text
+python scripts/vpk_reference.py extract --vpk "PATH/pak01_dir.vpk" --entry particles/example.vpcf_c --output "WORK/new-extraction"
+```
+
+Repeat `--entry` to select multiple exact paths from the inventory. The parent directory must exist; the output directory must be new. Extraction combines preload and data, verifies CRC32, and produces `vpk-reference-manifest.json` with a SHA-256 for each resource. Limits: 64 MiB index, one million entries, 4096-byte strings; extraction of 64 files, 64 MiB per file, 256 MiB total. This script does not execute, download, or decompile any VPK content. It does not verify VPK signatures or MD5 sections.
+
+The `*_c` files are compiled. Use an **already installed Source2Viewer-CLI/ValveResourceFormat**, compatible with their version. Check its help and version first; interfaces change:
 
 ```text
 Source2Viewer-CLI --help
 Source2Viewer-CLI --version
-Source2Viewer-CLI --input "TRAVAIL/nouvelle-extraction/particles/exemple.vpcf_c" --block DATA
+Source2Viewer-CLI --input "WORK/new-extraction/particles/example.vpcf_c" --block DATA
 ```
 
-La dernière commande a été vérifiée avec VRF 19.2.0. Son résultat contient aussi le résumé et les références externes : ne pas traiter toute sa sortie comme du KV3 brut. Pour produire un fichier source ou résoudre des dépendances, suivre l’aide de **la version installée** et garder toutes les sorties dans le dossier de travail. Une copie extraite hors du jeu peut perdre la résolution des dépendances ; ne pas interpréter cela comme une absence dans le VPK. Voir le [guide officiel VRF](https://github.com/ValveResourceFormat/ValveResourceFormat/blob/master/docs/guides/command-line.md).
+The last command was verified with VRF 19.2.0. Its result also contains the summary and external references: do not treat all of its output as raw KV3. To produce a source file or resolve dependencies, follow the help for **the installed version** and keep all outputs in the working directory. A copy extracted outside the game may lose dependency resolution; do not interpret this as absence from the VPK. See the [official VRF guide](https://github.com/ValveResourceFormat/ValveResourceFormat/blob/master/docs/guides/command-line.md).
 
-Pour une recherche reproductible, le helper autonome `scripts/inspect_vpk_with_vrf.py` effectue ces contrôles, lit les payloads avec CRC32 et produit un snapshot local de transcriptions DATA, hashes, formats et couverture. Il nécessite seulement les scripts de ce skill, Python standard library et VRF déjà installé :
+For reproducible research, the standalone helper `scripts/inspect_vpk_with_vrf.py` performs these checks, reads payloads with CRC32 verification, and produces a local snapshot of DATA transcriptions, hashes, formats, and coverage. It requires only this skill's scripts, the Python standard library, and an already installed VRF:
 
 ```text
-python scripts/inspect_vpk_with_vrf.py --vpk "CHEMIN/pak01_dir.vpk" --vrf "OUTILS/Source2Viewer-CLI.exe" --game cs2 --entry particles/exemple.vpcf_c --output "TRAVAIL/inspection-neuve"
+python scripts/inspect_vpk_with_vrf.py --vpk "PATH/pak01_dir.vpk" --vrf "TOOLS/Source2Viewer-CLI.exe" --game cs2 --entry particles/example.vpcf_c --output "WORK/new-inspection"
 ```
 
-Pour sélectionner toutes les particules d’un index, utiliser `--all-particles --max-files 20000` à la place de `--entry`. Les limites cumulatives et erreurs restent explicites ; seul `coverage.complete = true` confirme que toute la sélection demandée a été inspectée. Le code de sortie 2 signale une couverture incomplète. Lire [la procédure autonome et ses limites](references/native-vpk-observations.md#independent-reproduction-with-the-bundled-tools) avant un scan complet. Cette méthode VRF indépendante fournit de nouvelles preuves textuelles ; elle ne recrée pas à l’identique les agrégats historiques issus du décodage binaire.
+To select all particles in an index, use `--all-particles --max-files 20000` in place of `--entry`. Cumulative limits and errors remain explicit; only `coverage.complete = true` confirms that the entire requested selection has been inspected. Exit code 2 indicates incomplete coverage. Read [the standalone procedure and its limits](references/native-vpk-observations.md#independent-reproduction-with-the-bundled-tools) before a full scan. This independent VRF method provides new textual evidence; it does not exactly recreate the historical aggregates obtained through binary decoding.
 
-## Convertir l’observation en connaissance
+## Turn observations into knowledge
 
-Pour un candidat trouvé seulement dans l’index, conserver jeu/build, chemin, hash de l’index et CRC déclaré non vérifié. Pour une ressource réellement lue, ajouter SHA-256 du payload et contrôle CRC ; pour une propriété inspectée, noter aussi décodeur/version, classe et étape, chemin exact de propriété, type observé, contexte et limites. Distinguer :
+For a candidate found only in the index, retain the game/build, path, index hash, and declared but unverified CRC. For a resource actually read, add the payload SHA-256 and CRC check; for an inspected property, also record the decoder/version, class and stage, exact property path, observed type, context, and limits. Distinguish between:
 
-- **observé dans une ressource** : nom, type et valeur présents dans ce fichier ;
-- **déclaré par le schéma** : type, enum et défaut du schéma de cette version ;
-- **accepté par le compilateur cible** : sortie fraîche relue ;
-- **vérifié visuellement dans le moteur cible** : protocole, capture et résultat.
+- **observed in a resource**: the name, type, and value present in that file;
+- **declared by the schema**: the type, enum, and default from that version's schema;
+- **accepted by the target compiler**: freshly generated output that has been read back;
+- **visually verified in the target engine**: protocol, capture, and result.
 
-Une propriété absente peut être supprimée par le compilateur. Une valeur observée ne devient pas un défaut global. Un exit code 0 peut accompagner une propriété inconnue supprimée silencieusement. Un nom commun à deux jeux ne prouve pas la même sémantique. Conserver les faits inconnus comme inconnus.
+An absent property may have been removed by the compiler. An observed value does not become a global default. Exit code 0 may accompany an unknown property that was silently removed. A name shared by two games does not prove identical semantics. Keep unknown facts unknown.
 
-Pour reproduire le principe d’un effet, décrire ses couches, chronologie, CP, providers, rendus et dépendances ; écrire ensuite ses propres sources et assets. Garder les ressources originales localement. Le dépôt de skills contient la méthode, des métadonnées et des exemples originaux, sans recopier les assets du jeu.
+To reproduce the principle behind an effect, describe its layers, timeline, CPs, providers, renderers, and dependencies; then write your own sources and assets. Keep the original resources locally. The skill repository contains the method, metadata, and original examples, without copying the game's assets.
 
-Lire [les observations d’ingestion vérifiées](references/vpk-ingestion-2026-10-15.md) pour les builds et preuves utilisés pendant la création de ce skill. Ces observations ne constituent pas un catalogue exhaustif des propriétés.
+Read [the verified ingestion observations](references/vpk-ingestion-2026-10-15.md) for the builds and evidence used while creating this skill. These observations are not an exhaustive property catalog.
 
-## Vérifier le helper
+## Verify the helper
 
 ```text
 python -m unittest discover -s scripts -p "test_*.py" -v

@@ -86,12 +86,12 @@ class HelpTests(unittest.TestCase):
         self.assertEqual(index.provenance["statistics"]["objects"], 2)
 
     def test_utf16_boms_and_utf8_no_bom(self):
-        text = '"Element.CExample" "éclair"'
+        text = '"Element.CExample" "lightning \u26a1"'
         for encoding in ("utf-8", "utf-8-sig", "utf-16"):
             with self.subTest(encoding=encoding):
-                self.assertEqual(self.source(text, encoding).tokens["Element.CExample"]["text"], "éclair")
+                self.assertEqual(self.source(text, encoding).tokens["Element.CExample"]["text"], "lightning \u26a1")
         self.path.write_bytes(b"\xfe\xff" + ('lang { Tokens { ' + text + ' } }').encode("utf-16-be"))
-        self.assertEqual(helpmod.load_help(self.path).tokens["Element.CExample"]["text"], "éclair")
+        self.assertEqual(helpmod.load_help(self.path).tokens["Element.CExample"]["text"], "lightning \u26a1")
 
     def test_malformed_and_duplicate_kv1_rejected(self):
         values = [

@@ -120,7 +120,7 @@ class ObservationQueryTests(unittest.TestCase):
 
     def test_oversized_output_errors_instead_of_truncating_json(self):
         with self.assertRaisesRegex(QueryError, "128 KiB"):
-            encode_report({"text": "é" * (128 * 1024)})
+            encode_report({"text": "\u00e9" * (128 * 1024)})
 
 
 if __name__ == "__main__":

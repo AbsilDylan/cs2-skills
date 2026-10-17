@@ -2,7 +2,7 @@
 
 ## Two-endpoint beam or tether
 
-For “un rayon entre la main et la cible”, assign independently driven endpoint poses after inspecting the chosen graph. CP0/CP1 is one possible contract; CP1/CP2 is equally legitimate. Keep the real hand/weapon attachment and target driver separate from any derived distance/tint data channels.
+For “a beam between the hand and the target”, assign independently driven endpoint poses after inspecting the chosen graph. CP0/CP1 is one possible contract; CP1/CP2 is equally legitimate. Keep the real hand/weapon attachment and target driver separate from any derived distance/tint data channels.
 
 The CS2 compiled corpus contains `C_INIT_CreateAlongPath` in 26 effects. A bounded observed fragment from `particles/impact_fx/chamber_cube_spark.vpcf_c` selects:
 
@@ -57,13 +57,13 @@ Put it in the appropriate pre-emission list and use a scalar provider with `PF_T
 
 The friendly metadata describes distance/output bounds, but exact clamping, degenerate ranges, selected component, trace failure and parent propagation need native tests. Establish expected outputs for the intended mapping at below-minimum, midpoint and above-maximum distances, then compare observed values; do not present a guessed linear formula as a measured native oracle. Test `m_bSetOnce` separately from inherited `m_bRunOnce`.
 
-For “plus lumineux”, select the actual appearance control: alpha/transparency, RGB and emissive/HDR material/renderer intensity are different. A correct distance scalar does not prove any of them. Inspect and validate the real consuming property/material; a change in alpha alone must not be reported as emissive brightness. If LOS is requested, add occluded/unoccluded native cases and the intended trace set/collision group.
+For “brighter”, select the actual appearance control: alpha/transparency, RGB and emissive/HDR material/renderer intensity are different. A correct distance scalar does not prove any of them. Inspect and validate the real consuming property/material; a change in alpha alone must not be reported as emissive brightness. If LOS is requested, add occluded/unoccluded native cases and the intended trace set/collision group.
 
 ## Vector data and orientation
 
 For CP-driven tint, declare the input range. A real CS2 `C_OP_RemapCPtoVector` example uses `m_nCPInput=16`, `m_nFieldOutput=6`, `m_vInputMax=[255,255,255]`, `m_vOutputMax=[1,1,1]`. This is an observed scaling pattern, not a rule that all CP colors use bytes. Inspect `m_nSetMethod` and `ParticleSetMethod_t`: replacing, scaling an initial value and scaling the current value can accumulate differently over successive updates.
 
-For “éjecter dans la direction du canon”, position alone is insufficient. Establish the real model attachment basis, transform selection and relative-direction consumer. Compare an asymmetric direction before/after rotating the attachment, with a translated origin to expose accidental position addition. Do not substitute subtraction of two endpoints for an orientation contract unless the requested effect is explicitly aim-derived.
+For “eject in the barrel's direction”, position alone is insufficient. Establish the real model attachment basis, transform selection and relative-direction consumer. Compare an asymmetric direction before/after rotating the attachment, with a translated origin to expose accidental position addition. Do not substitute subtraction of two endpoints for an orientation contract unless the requested effect is explicitly aim-derived.
 
 ## Native writers and ownership
 
