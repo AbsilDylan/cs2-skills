@@ -81,6 +81,8 @@ Treat these as independent authoring decisions:
 
 For planning, a constant rate of 40 with a one-second lifetime suggests a steady population on the order of 40. This is a dimensional estimate, not an exact engine formula: caps, random lifetimes, initial particles, other emitters, death operators, events and children change the result. Start testing with a capacity comfortably above that estimate, then lower it while watching population and visual continuity.
 
+For a strict visible-duration brief, budget every layer's last birth plus maximum remaining life, including child delays. A root lifespan alone does not set every child's duration. Keep normalized fade time, model-clip timing and PET playback speed distinct; see the [short-event pattern](observed-patterns.md#short-events-and-their-visible-tail).
+
 A cap is not a rate control. Valve's help warns that delayed burst batches may share an end time; the population ceiling can reject births. [Valve-authored CS2 tool help](https://raw.githubusercontent.com/SteamTracking/GameTracking-CS2/master/game/core/pak01_dir/resource/toolhelp_particles_english.txt). Verify both behaviors before relying on them for precisely timed layers.
 
 Do not guess whether overflow is queued, discarded, retried, or redistributed, or whether the engine's update corresponds to a displayed frame under all conditions. Those choices materially affect sparks, tracer spacing and low-frame-rate bursts. Measure them with the cap probe below.

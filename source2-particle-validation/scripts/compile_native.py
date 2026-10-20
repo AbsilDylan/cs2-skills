@@ -422,8 +422,12 @@ def compile_assets(config: Config, runner: Runner = run_process,
                                  session, min(config.timeout, remaining), config.max_output_bytes)
                 log_name = f'logs/readback-{index:03d}.txt'
                 fresh_write(session / log_name, capture.output[:config.max_output_bytes])
-                item['readback'] = {'status': 'text-captured' if capture.exit_code == 0 and not capture.timed_out and not capture.reader_incomplete else 'failed',
+                readback_status = 'failed'
+                if capture.exit_code == 0 and not capture.timed_out and not capture.reader_incomplete:
+                    readback_status = 'text-captured' if capture.output.strip() else 'empty'
+                item['readback'] = {'status': readback_status,
                                     'exitCode': capture.exit_code, 'timedOut': capture.timed_out,
+                                    'outputBytesSeen': capture.output_bytes_seen,
                                     'outputTruncated': capture.truncated, 'readerIncomplete': capture.reader_incomplete, 'log': log_name,
                                     'propertyRetention': 'manual-inspection-required'}
     except Exception as error:

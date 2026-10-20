@@ -4,6 +4,15 @@ This is a factual inventory of installed VPK contents observed on **2026-10-15**
 
 Start with [the inventory index](native-vpk-observations.json), then load the single class file named in `games[].classFiles`. Avoid reading all class files into the model context. For example, sprite renderer observations are [CS2](observations/cs2/m_renderers-c_op_rendersprites.json) and [Deadlock](observations/deadlock/m_renderers-c_op_rendersprites.json).
 
+## Contents
+
+- [Coverage](#coverage)
+- [Interpret the files correctly](#interpret-the-files-correctly)
+- [Binary decoding and runtime projection are separate stages](#binary-decoding-and-runtime-projection-are-separate-stages)
+- [Provenance](#provenance)
+- [October 20 review and metadata correction](#october-20-review-and-metadata-correction)
+- [Independent reproduction with the bundled tools](#independent-reproduction-with-the-bundled-tools)
+
 ## Coverage
 
 | Local installation | Steam app/build metadata | Indexed VPCF_C | Resource2 + binary KV3 decoded | Distinct classes, including system root | Class-local property paths |
@@ -21,7 +30,7 @@ The union contains **254 distinct class names**. There are **55 names observed o
 - Field paths are local to the nearest object with `_class`; array indexes collapse to `[]`. The root system is recorded as `system:CParticleSystemDefinition`. Nested provider structures remain under their owning class.
 - `occurrences` counts explicitly stored field occurrences. `kinds` records the binary KV3 IR kinds encountered. It is not the complete declared type contract.
 - `examples` contains at most **one short observed value**. The field's `witness` identifies the resource containing that example, or a field-presence witness when there is no scalar example. The index's `games[].witnesses` supplies its payload byte size, SHA-256 and VPK CRC32.
-- `observedMin` and `observedMax` are extrema in this corpus for finite scalar values. They are **not valid-input limits**, defaults, recommended values, or runtime clamps.
+- Numeric extrema are unavailable. The historical exporter omitted integer scalar representations from `observedMin` and `observedMax`; these incomplete statistics were removed in the [October 20 metadata correction](observation-correction-2026-10-20.json). Short examples cannot reconstruct the missing extrema. Examples and frequencies are **not valid-input limits**, defaults, recommended values, or runtime clamps.
 - A field absent from an asset can be defaulted, stripped, conditionally unused, or unsupported. Presence alone does not show that the runtime uses it.
 - `resourceReferences` combines direct binary KV3 resource values and RERL reference names. Counts can include the same reference through both representations. The recorded top paths are bounded examples, not a complete dependency graph.
 
@@ -47,6 +56,20 @@ The index labels the SHA-256 domains separately:
 Archive chunks were read by bounded ranges, not fully hashed. The report also records an aggregate SHA-256 of the ordered `(resource path, payload bytes, payload SHA-256)` tuples. Steam app/build IDs come from local `appmanifest_*.acf` files; the report hashes those files but does not cryptographically bind their metadata to Valve's VPK content. These are installed builds, not a claim about the latest available releases.
 
 No Valve asset payload, decompiled complete particle source, absolute installation path, texture pixels, or game binary is included here. Reference names, class/property names, short values and hashes are factual evidence metadata.
+
+## October 20 review and metadata correction
+
+The review verified the size and SHA-256 of all **427** indexed class files and their identity, stage, field counts and witness links. It found a real aggregation error: the historical exporter accumulated extrema only from JavaScript `number` values while binary KV3 integer encodings could produce `bigint` values. **400** field examples lay outside their reported extrema. For example, `C_OP_ContinuousEmitter.m_flEmitRate.m_nControlPoint` showed a stored `0` but reported a minimum of `2`; an independent VRF inspection of the hash-matching original confirmed `0`.
+
+[The review evidence](observation-review-2026-10-20.json) records the checks, hashes, changed witness identities and limits. The independent witness inspection used VRF **20.0.6980** and passed the bundled helper's help/version checks. The corrected portable helpers pass **48 tests** in an isolated skill copy with Python `-E -S -B`.
+
+The correction removes `observedMin` and `observedMax` from **30,592** field records across **408** class files. Every other byte of each class record is preserved. The index retains its original observation date, historical generator identity and game/payload identities, and adds a separately dated correction with the prior index hash and all prior class-file hashes. This does not claim that the original generator produced the corrected bytes. The full historical Deadlock payload set is no longer available locally, so replacement extrema were not guessed from the surviving examples.
+
+A fresh native-payload check verified **57,962 of 58,113** field witnesses against CRC-checked, SHA-identical original resources: all **26,306 CS2** fields and **31,656 Deadlock** fields. Their exact field paths, decoded kinds and short examples match. Five Deadlock witness resources changed after the historical scan; **151** field witnesses depend on four of those resources and remain unverified by the new check. This establishes stored-field evidence, not property semantics.
+
+CS2's installed build had changed to **25966348**, but all **2,622** particle payloads still produced the historical ordered payload-manifest hash. Reaggregating them reproduced all **199** historical class records exactly, including the flawed numeric statistics subsequently withdrawn. The VPK index itself had changed. Build IDs therefore identify evidence snapshots rather than impose a runtime compatibility gate.
+
+Run `python scripts/audit_observations.py` for the standalone metadata check. The query helper also suppresses the known incomplete extrema when an older `--references` snapshot identifies the same historical exporter.
 
 ## Independent reproduction with the bundled tools
 

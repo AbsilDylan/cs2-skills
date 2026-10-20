@@ -19,6 +19,7 @@ MAX_OUTPUT_BYTES = 128 * 1024
 INDEX_SCHEMA = "source2-particle-native-vpk-observations.v1"
 CLASS_SCHEMA = "source2-particle-native-class-observation.v1"
 DEFAULT_REFERENCES = Path(__file__).resolve().parent.parent / "references"
+INCOMPLETE_EXTREMA_GENERATOR_SHA256 = "fe76359cdca2d96e6de0c99186338441694db19a27d8c3bd76267a302cf0a38e"
 
 
 class QueryError(ValueError):
@@ -101,6 +102,11 @@ def query(references: Path, game: str, class_name: str | None = None, stage: str
     if len(selected_games) != 1:
         raise QueryError(f"Game {game} is absent or duplicated in the observations index")
     selected = selected_games[0]
+    # The historical binary-IR exporter omitted int64/uint64 values from its
+    # extrema. Suppress those statistics even when reading an older explicit
+    # --references snapshot that predates the published metadata correction.
+    method = index.get("method")
+    incomplete_extrema = isinstance(method, dict) and method.get("scriptSha256") == INCOMPLETE_EXTREMA_GENERATOR_SHA256
     class_files = selected.get("classFiles")
     witnesses = selected.get("witnesses")
     if not isinstance(class_files, dict) or not isinstance(witnesses, dict):
@@ -126,8 +132,12 @@ def query(references: Path, game: str, class_name: str | None = None, stage: str
         "coverage": selected.get("coverage"), "query": {"class": class_name, "stage": stage, "field": field, "search": search, "limit": limit},
         "matchedClasses": len(matches), "returnedClasses": min(len(matches), limit), "truncated": len(matches) > limit,
         "limitations": ["Stored observations do not establish defaults, valid ranges, behavior, visual fidelity or cross-game support."],
+        "metadataCorrections": index.get("metadataCorrections", []),
         "results": [],
     }
+    if incomplete_extrema:
+        report["numericExtremaStatus"] = "unavailable: historical exporter omitted integer scalar representations"
+        report["limitations"].append("Historical observedMin/observedMax are incomplete and are not returned; a short example cannot reconstruct the full extrema.")
     # Search intentionally consults class/stage names only: no 427-file scan.
     if search is not None:
         report["searchScope"] = "indexed class/stage names only; field names are not searched"
@@ -154,7 +164,11 @@ def query(references: Path, game: str, class_name: str | None = None, stage: str
             field_found = True
             if not isinstance(fields[field], dict):
                 raise QueryError("Selected field observation must be an object")
-            result["field"] = {"path": field, "observation": fields[field]}
+            field_observation = dict(fields[field])
+            if incomplete_extrema:
+                field_observation.pop("observedMin", None)
+                field_observation.pop("observedMax", None)
+            result["field"] = {"path": field, "observation": field_observation}
             paths = [fields[field].get("witness")]
         else:
             result["field"] = None

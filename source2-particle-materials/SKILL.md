@@ -23,9 +23,9 @@ Read only the relevant references:
 - [Texture and flipbook authoring](references/textures.md): sprite, trail, image
   generation, alpha, MKS, VTEX and sampling choices.
 - [Renderer and material bindings](references/materials.md): native spritecard
-  versus VMAT, blend/depth/feathering controls and shader-specific properties.
+  versus VMAT, model opacity masks, refraction data, and shader-specific controls.
 - [Compilation and resource closure](references/compile-and-closure.md): native
-  tools, source/compiled trees, verification and delivery.
+  tools, model/animation imports, generated textures, and source/runtime delivery.
 - [Evidence and provenance](references/evidence.md): inspected game builds,
   exact resource identities, primary sources and owned native controls.
 

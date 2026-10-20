@@ -5,6 +5,8 @@
 - [Start at the binding that the effect uses](#start-at-the-binding-that-the-effect-uses)
 - [Decide the behavior before the spelling](#decide-the-behavior-before-the-spelling)
 - [Author VMAT only when required](#author-vmat-only-when-required)
+- [Model cutouts and compiled alpha](#model-cutouts-and-compiled-alpha)
+- [Refraction textures carry displacement data](#refraction-textures-carry-displacement-data)
 - [Separate rotation, flipbook and material animation](#separate-rotation-flipbook-and-material-animation)
 - [Diagnose appearance in a useful order](#diagnose-appearance-in-a-useful-order)
 
@@ -116,6 +118,47 @@ Avoid a bundled universal VMAT template: the skill's local VPK observations prov
 specific compiled material identities, not a portable authoring contract for all
 shader keys. Use [the evidence ledger](evidence.md) to find a relevant local
 example, then prove the resulting authored material with the selected compiler.
+
+## Model cutouts and compiled alpha
+
+For the inspected CS2 `csgo_complex.vfx` alpha-test path, an RGBA
+`TextureColor` source alone did not preserve the intended cutout: the generated
+color texture's alpha was effectively opaque. The working authored material
+supplied a separate `TextureTranslucency` image and enabled `F_ALPHA_TEST`.
+The opacity image copied the desired coverage into RGB with image alpha 255.
+The compiler packed the result into the generated `g_tColor` texture; there
+was no separate native translucency texture parameter to copy.
+
+This is a shader-specific starting point, not a rule for all VMATs or direct
+sprite VTEX bindings. Confirm the installed shader's input declarations.
+For an opaque rectangle despite a transparent source image, inspect the
+generated texture actually bound by the material before retuning particle
+alpha. Check its alpha range and transparent corners, then preview the
+cutout and its threshold on the intended geometry.
+
+The owned control retained `F_RENDER_BACKFACES` for open surfaces and
+`g_flAlphaTestReference` for its threshold. Neither is a substitute for opacity
+data. Alpha testing cuts out pixels; it does not certify smooth per-particle
+model fading. The observed control and its exact limits are recorded in
+[the material evidence](evidence.md#owned-model-material-and-refraction-checks).
+
+## Refraction textures carry displacement data
+
+The observed CS2 sprite/rope refraction examples use a texture containing packed
+normal directions in RGB and coverage in alpha, supplied through the verified
+renderer texture input. A painted white band is not the same input. The owned
+control used linear channels and mapped unit XYZ normals to RGB with
+`0.5 * normal + 0.5`; a flat normal is approximately `(128, 128, 255)` in
+8-bit storage. Preserve the coverage mask when generating the texture.
+
+Inspect the selected renderer's native shape for `m_bRefract`,
+`m_flRefractAmount` and related options. Do not infer that an extra arbitrary
+texture slot supplies normals, or promote one tested refraction amount into a
+default for every scale. Compare enabled and disabled refraction over a fixed
+grid or detailed surface, then test the intended scene. Localized background
+displacement is the useful evidence. A luminous or blurred strip alone is not.
+The recorded rope control distorted the PET grid but remained too bright on
+the white Plane background, so it did not certify appearance on a game map.
 
 ## Separate rotation, flipbook and material animation
 

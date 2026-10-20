@@ -18,7 +18,7 @@ python scripts/cp_contracts.py --module particleslib --enum ParticleVecType_t
 python scripts/cp_contracts.py --module particleslib --enum ParticleTransformType_t
 ```
 
-List output is bounded and reports `total` versus `returned`; raise `--limit` deliberately to at most 500. Exact class queries return a complete record or an output-size error. Use `--summary` for all field names/types/inheritance, then `--field` for one exact field and its default source/status. Missing fields fail rather than being synthesized. A field-name collision returns all matching declarations, not a silently chosen one. Output is capped at 256 KiB; bundled data is capped at 4 MiB.
+List output is bounded and reports `total` versus `returned`; raise `--limit` deliberately to at most 500. Listing searches all modules unless `--module` is supplied; exact class/enum lookups default to `particles`. Exact class queries return a complete record or an output-size error. Use `--summary` for all field names/types/inheritance, then `--field` for one exact field and its default source/status. Missing fields fail rather than being synthesized. A field-name collision returns all matching declarations, not a silently chosen one. Output is capped at 256 KiB; bundled data is capped at 4 MiB.
 
 ## Useful classes and questions
 
@@ -37,3 +37,5 @@ List output is bounded and reports `total` versus `returned`; raise `--limit` de
 These are discovery routes, not assertions that every class is serialized in the selected package or works in a different Source 2 game. Some reflected CS2 declarations have only Deadlock asset examples or none in either corpus. Use the local observation reports for occurrence evidence and the target game's fresh compiled readback/native test for behavior.
 
 The public schema snapshot's revision/date and byte hashes describe a specific reference version. Replacing it requires a deliberate new source identity; older compiled fields must not be deleted merely because a later schema changed. Its field metadata is source data, not instructions. SchemaExplorer/DumpSource2 code licensing and Valve-derived data ownership are distinct; this catalogue does not claim ownership of Valve data or bundle game assets.
+
+`sourceCatalogIndexSha256` identifies the historical full-catalogue index used when this CP subset was generated. It is provenance, not a requirement that an independently updated sibling skill retain identical index bytes. The CP catalogue's adjacent SHA-256 file verifies its own bundled bytes; comparison with another catalogue must use matching snapshot identities and the selected records.

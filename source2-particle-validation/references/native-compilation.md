@@ -178,6 +178,8 @@ under `logs/readback-*.txt`, and records the viewer fingerprint and status.
 It does not download a viewer or assume a JSON-output option.
 
 `text-captured` means text was obtained, not that a property comparison passed.
+An exit-zero viewer with no non-whitespace output is reported as `empty`;
+check its invocation and the available resource blocks before interpreting it.
 Property retention remains unverified until the owning nodes and controlled
 values are inspected. Truncated text cannot establish that a field is absent.
 See [compiled-readback.md](compiled-readback.md) for complete steps and the GUI
@@ -230,13 +232,13 @@ Its tests use an injected fake runner and temporary test-owned files; they
 need neither a game installation nor third-party Python packages:
 
 ```powershell
-python -I -m unittest discover `
+python -B -I -m unittest discover `
   -s "$skill/scripts" -p 'test_*.py' -v
 ```
 
 The tests cover staging order, hashes/logs, refusal to overwrite, invalid paths
 and child references, CS2 identity/pinning, budgets, failure/timeout/stale
-outputs, optional readback capture and process-output bounds. An OS account
+outputs, optional readback capture including empty output, and process-output bounds. An OS account
 that cannot create directory symlinks may skip the real-link test; the Windows
 reparse-attribute guard is still tested separately. Synthetic outputs are not
 native-fidelity evidence.

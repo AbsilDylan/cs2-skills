@@ -58,7 +58,9 @@ The optional [native helper](../scripts/compile_native.py) accepts an explicit
 before opting in. It captures bounded `DATA` text in `logs/readback-NNN.txt`;
 `text-captured` and `propertyRetention: manual-inspection-required` mean that
 the text still needs the controlled inspection below. They are not a property
-retention pass. Check truncation, timeout, and decoder diagnostics before
+retention pass. `empty` means the viewer returned zero but captured no usable
+text; it does not establish an absent field or empty resource.
+Check truncation, timeout, and decoder diagnostics before
 interpreting missing fields; an incomplete dump cannot prove omission.
 
 After confirming `--input` and `--block`, use a fresh evidence directory. The

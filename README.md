@@ -61,6 +61,22 @@ and record each acceptance layer with the
 local archive observations, compilation, and runtime appearance establish
 different claims; preserve their game/build provenance and limits.
 
+After installing the particle skills, start with `source2-particle-authoring`
+and describe the result in ordinary language. For example:
+
+```text
+Use $source2-particle-authoring to create a CS2 shockwave beneath a character's
+feet. It should expand into a broken icy ring with outward shards and fade
+completely within 0.8 seconds. Make its size adjustable and explain how the
+game caller supplies position and facing. Deliver editable assets and verify
+them with the available native tools.
+```
+
+The authoring workflow selects the relevant specialist references. The JSON
+catalogues are queried on demand; they do not need to be loaded in full.
+[The particle evidence map](source2-particle-authoring/references/evidence-map.md)
+explains what the bundled data and native checks actually establish.
+
 ## Bundled NPC Runtime Blueprint
 
 `cs2-server-npc-runtime/examples/ServerNpcRuntimeSkeleton.cs` is a compilable,
@@ -202,8 +218,10 @@ python -B -m unittest discover -s source2-particle-control-points/scripts -p "te
 python -B -m unittest discover -s source2-particle-reference-research/scripts -p "test_*.py" -v
 python -B -m unittest discover -s source2-particle-schema/scripts -p "test_*.py" -v
 python -B -m unittest discover -s source2-particle-validation/scripts -p "test_*.py" -v
+python -B -m unittest discover -s source2-particle-materials/scripts -p "test_*.py" -v
 python -B source2-particle-schema/scripts/schema_catalog.py verify
 python -B source2-particle-control-points/scripts/cp_contracts.py --verify
+python -B source2-particle-reference-research/scripts/audit_observations.py
 python -B tools/validate_skills.py
 dotnet run --project cs2-server-npc-runtime/tests/ServerNpcRuntimeSkeleton.Tests.csproj -c Release --artifacts-path <temporary-directory-outside-this-repository> --disable-build-servers
 npx --yes --package=@anthropic-ai/claude-code@2.1.197 -- claude plugin validate . --strict

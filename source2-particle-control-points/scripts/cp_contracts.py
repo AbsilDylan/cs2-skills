@@ -65,7 +65,7 @@ def main(argv=None):
     operation.add_argument("--class", dest="class_name")
     operation.add_argument("--enum", dest="enum_name")
     operation.add_argument("--verify", action="store_true")
-    parser.add_argument("--module", default="particles")
+    parser.add_argument("--module", help="Filter a listing by module; exact lookups default to particles")
     parser.add_argument("--field")
     parser.add_argument("--summary", action="store_true")
     parser.add_argument("--contains", default="")
@@ -80,13 +80,14 @@ def main(argv=None):
         result = {"valid": True, "counts": catalogue["counts"], "selection": catalogue["selection"],
                   "provenance": catalogue["provenance"]}
     elif args.list:
-        records = [record for record in catalogue["records"] if args.contains.casefold()
-                   in record["identity"]["name"].casefold()]
+        records = [record for record in catalogue["records"]
+                   if (args.module is None or record["identity"]["module"] == args.module)
+                   and args.contains.casefold() in record["identity"]["name"].casefold()]
         result = {"total": len(records), "returned": min(len(records), args.limit),
                   "records": [{"kind": record["kind"], **record["identity"],
                                "selection": record["selection"]} for record in records[:args.limit]]}
     else:
-        result = query(catalogue, args.module, args.class_name or args.enum_name,
+        result = query(catalogue, args.module or "particles", args.class_name or args.enum_name,
                        "class" if args.class_name else "enum", args.field, args.summary)
     result = {"provenance": catalogue["provenance"], "result": result,
               "limitations": "Reflected CS2 declaration/defaults only; compiler retention, runtime math and visuals require separate native verification."}

@@ -73,6 +73,7 @@ chains distinct:
 Source artwork -> optional MKS -> VTEX source -> VTEX_C + optional sheet metadata
 VPcf renderer -> VTEX resource(s) [or a model/material path]
 VMAT source -> source images/VTEX -> VMAT_C -> compiled texture references
+VMDL source -> geometry imports + animation imports + material remaps
 Model particle -> VMDL_C -> material(s) -> texture(s)
 Parent VPcf -> child VPcf -> its own dependencies
 ```
@@ -83,6 +84,29 @@ hash and status: authored and included, provided by the target base game, or
 missing. Two same-named files from different mounts are not automatically the
 same resource. Preserve engine-relative paths and avoid absolute machine paths
 inside deliverables.
+
+Start from the approved runtime effect roots. A preview parent that adds an
+actor or drives CP0 is a separate root; sharing a delivery folder does not make
+it a gameplay dependency. Traverse each runtime root's children and resource
+references, then reconcile source imports and native dependencies. Do not select
+the highest filename suffix: an approved graph can intentionally reference
+resources authored in different iterations.
+
+For an editable model effect, preserve ModelDoc geometry imports such as
+`RenderMeshFile.filename`, animation imports such as `AnimFile.source_filename`,
+and material remaps, including their SMD/DMX/FBX sources as applicable. Compile
+the owning VMDL; an SMD import is not a top-level native resource. The compiled
+model may embed mesh, animation and sequence blocks. Only add separate VMESH
+or VANIM files when the actual compiled dependency graph requires them; do not
+invent missing external files from an embedded block name.
+
+VMAT texture processing can produce hashed VTEX names and pack several source
+inputs into one output. Copy the exact generated texture references from native
+material readback/RERL, recursively, even when no corresponding source `.vtex`
+definition exists. Preserve all raw source ingredients for editing. Reconcile
+this graph with emitted files: the compiler's selected-input list, output
+inventory, and successful exit status each answer a different question from
+whether the delivered runtime closure is complete.
 
 Compiled sheet data can be embedded in the VTEX. Do not demand that `.mks` must
 ship as a runtime file when the compiler embedded it, or omit it from the source

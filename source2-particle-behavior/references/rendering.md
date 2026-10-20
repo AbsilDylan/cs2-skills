@@ -25,7 +25,7 @@ Use this guide to choose a Source 2 renderer, connect its inputs and design a na
 
 The bundled typed catalogue (`$source2-particle-schema`) describes CS2 SourceRevision **11131657**, snapshot **14 October 2026**. Its evidence notes (`$source2-particle-schema`) explain inherited fields, partial defaults and game separation. Live SchemaExplorer pages can expose another class snapshot; use the bundled record's provenance when reproducing a fact.
 
-The [native compiler checkpoint](native-compiler-evidence.json) records 13 compilation/readback fixtures for installed CS2 SourceRevision **11064488**, from **30 September 2026**. Sprite orientation tokens, a trail renderer and a model reference were exercised. It records **no native rendered pixels**. Unknown sentinel fields were silently discarded despite successful compilation; inspect the intended field, not just the exit code. A compiled default's omission does not mean the property is ignored.
+The [native compiler checkpoint](native-compiler-evidence.json) records 13 compilation/readback fixtures run on **15 October 2026**, using installed CS2 SourceRevision **11064488** with version date **30 September 2026**. Sprite orientation tokens, a trail renderer and a model reference were exercised. It records **no native rendered pixels**. Unknown sentinel fields were silently discarded despite successful compilation; inspect the intended field, not just the exit code. A compiled default's omission does not mean the property is ignored.
 
 [Valve-authored particle tool help](https://raw.githubusercontent.com/SteamTracking/GameTracking-CS2/master/game/core/pak01_dir/resource/toolhelp_particles_english.txt) is mirrored publicly. Match its keys to the installed build; historical class names and changing upstream content require care.
 
@@ -99,6 +99,8 @@ Import resources as resources. VRF documents distinct VPCF extraction, material 
 `C_OP_RenderModels.m_ModelList` contains `ModelReference_t`: a typed model handle and relative spawn probability. `m_flManualModelSelection` and optional `m_modelInput` also exist. Start with one model, then test selection deliberately; do not assume that only the first entry can be used.
 
 Metadata separates local offset/rotation, component scale, radius influence (`m_bIgnoreRadius`), CP scaling, local-space scaling, normal influence and alignment of model Z to normal (`m_bOrientZ`). Model animation has its own sequence/rate/manual-frame controls; it is distinct from texture-sheet animation. Exact transform order, angle units and scale combination need a measured native case. [Native model metadata](https://s2v.app/SchemaExplorer/cs2/particles/C_OP_RenderModels)
+
+When the normal comes from CP velocity, test the stationary and restart phases as well as flight. A moving-model case aligned in flight but stood vertically at zero speed after its initialized normal was overwritten; see [observed production patterns](observed-patterns.md#moving-projectile-and-zero-speed-facing). For model opacity or refractive texture packing, use `source2-particle-materials` when available: particle alpha and a texture's RGBA alpha do not establish the selected shader's channel contract.
 
 `m_hOverrideMaterial` is a typed material handle, with separate `m_bOverrideTranslucentMaterials`. Test opaque and translucent model materials independently. The presence of the field is neither a failed feature nor proof of its visual result.
 

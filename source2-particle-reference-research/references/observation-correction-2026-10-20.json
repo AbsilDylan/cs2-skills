@@ -1,0 +1,3440 @@
+{
+  "schema": "source2-particle-observation-metadata-correction.v1",
+  "id": "remove-incomplete-numeric-extrema-2026-10-20",
+  "correctedOn": "2026-10-20",
+  "sourceIndexSha256": "7a6b38e41631d807d40b1560fc16a99a5541ade2830bb5112d3225a0b77d17e8",
+  "historicalGeneratorScriptSha256": "fe76359cdca2d96e6de0c99186338441694db19a27d8c3bd76267a302cf0a38e",
+  "correctionScriptSha256": "2edfa424fa9fb6712f1f84355146ef8c5fd0200ab5004a91daccbcc6be83e6ef",
+  "operation": "Delete observedMin and observedMax members from every classObservation.fields entry; preserve every other class-record byte and regenerate index byte sizes and hashes.",
+  "reason": "Historical aggregation admitted JavaScript number values only and omitted bigint scalar representations. At least 400 field witnesses contradict the reported extrema.",
+  "numericExtremaStatus": "withdrawn-incomplete",
+  "removedExtremaFields": 30592,
+  "recordsChecked": 427,
+  "allOtherClassRecordBytesPreserved": true,
+  "historicalPayloadIdentityPreserved": true,
+  "historicalCoveragePreserved": true,
+  "recomputedFromOriginalPayloads": false,
+  "limitations": [
+    "This is a metadata correction, not a new game corpus scan or a claim that the historical generator produced the corrected bytes.",
+    "The original full Deadlock payload set is unavailable after an installed-game update. Remaining examples cannot establish complete numeric extrema.",
+    "No replacement minimum or maximum was inferred from examples. Occurrences, kinds, examples and witnesses remain historical compiled-asset observations."
+  ],
+  "previousClassFiles": [
+    {
+      "classStage": "m_Constraints:C_OP_BoxConstraint",
+      "game": "cs2",
+      "path": "observations/cs2/m_constraints-c_op_boxconstraint.json",
+      "previousBytes": 78285,
+      "previousSha256": "af5cfa06c7ed18416ad30e0509436efd5e0b316045107272a215a7788cc238b2",
+      "removedExtremaFields": 230
+    },
+    {
+      "classStage": "m_Constraints:C_OP_CollideWithSelf",
+      "game": "cs2",
+      "path": "observations/cs2/m_constraints-c_op_collidewithself.json",
+      "previousBytes": 19437,
+      "previousSha256": "500ca7a8f61cf43a55048b74c1fe2748efb80fb6d295a18b8bad540ad5e38ddd",
+      "removedExtremaFields": 55
+    },
+    {
+      "classStage": "m_Constraints:C_OP_ConstrainDistance",
+      "game": "cs2",
+      "path": "observations/cs2/m_constraints-c_op_constraindistance.json",
+      "previousBytes": 20922,
+      "previousSha256": "0676047c8f8cd2b41ac67158282b3dc45a63a0dad0bd299f1c124b4d5d6cba30",
+      "removedExtremaFields": 61
+    },
+    {
+      "classStage": "m_Constraints:C_OP_ConstrainDistanceToPath",
+      "game": "cs2",
+      "path": "observations/cs2/m_constraints-c_op_constraindistancetopath.json",
+      "previousBytes": 1843,
+      "previousSha256": "5d5b0e388be218b5b76a7cb50013dde586abbca740f340701718ac40817ca8ee",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Constraints:C_OP_PlanarConstraint",
+      "game": "cs2",
+      "path": "observations/cs2/m_constraints-c_op_planarconstraint.json",
+      "previousBytes": 852,
+      "previousSha256": "eb6a90618af0d255e3dac360decd8b80e2a8bf7034c7bc88d199c86a8a2bf87b",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Constraints:C_OP_RopeSpringConstraint",
+      "game": "cs2",
+      "path": "observations/cs2/m_constraints-c_op_ropespringconstraint.json",
+      "previousBytes": 18925,
+      "previousSha256": "b5757b0c7b57c0a88cf6a6802dca914a726af07bf1832582e8d08bd3f3f2d2af",
+      "removedExtremaFields": 56
+    },
+    {
+      "classStage": "m_Constraints:C_OP_WorldTraceConstraint",
+      "game": "cs2",
+      "path": "observations/cs2/m_constraints-c_op_worldtraceconstraint.json",
+      "previousBytes": 50291,
+      "previousSha256": "1c486aa2b9da26085f8bbfd27a147b52c2412f9d6fc041e5d7646d4e41bc764f",
+      "removedExtremaFields": 153
+    },
+    {
+      "classStage": "m_Emitters:C_OP_ContinuousEmitter",
+      "game": "cs2",
+      "path": "observations/cs2/m_emitters-c_op_continuousemitter.json",
+      "previousBytes": 43417,
+      "previousSha256": "be5078b6fbacbe9e51ff4cf0e63af0ca5c9eb68918f39dd5186033bf86cf475b",
+      "removedExtremaFields": 139
+    },
+    {
+      "classStage": "m_Emitters:C_OP_InstantaneousEmitter",
+      "game": "cs2",
+      "path": "observations/cs2/m_emitters-c_op_instantaneousemitter.json",
+      "previousBytes": 40613,
+      "previousSha256": "f4a4a6163aae4778c1ed459407a2df1efa5151f2a08b3843c63d85d8ab72c68b",
+      "removedExtremaFields": 126
+    },
+    {
+      "classStage": "m_Emitters:C_OP_MaintainEmitter",
+      "game": "cs2",
+      "path": "observations/cs2/m_emitters-c_op_maintainemitter.json",
+      "previousBytes": 40474,
+      "previousSha256": "b7030fdffd4e5660380b210a69452799a426723e7e386eba996ee6e43ee46933",
+      "removedExtremaFields": 127
+    },
+    {
+      "classStage": "m_Emitters:C_OP_NoiseEmitter",
+      "game": "cs2",
+      "path": "observations/cs2/m_emitters-c_op_noiseemitter.json",
+      "previousBytes": 10104,
+      "previousSha256": "8ebe2ddb5a239786ee269d16bbc2d9d0130d91b983825da50b873348028ae41f",
+      "removedExtremaFields": 35
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_AttractToControlPoint",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_attracttocontrolpoint.json",
+      "previousBytes": 12692,
+      "previousSha256": "2702330fac3d74b5b365667654719d446c646682d6233ff568b6b197313302bf",
+      "removedExtremaFields": 38
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_CPVelocityForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_cpvelocityforce.json",
+      "previousBytes": 16981,
+      "previousSha256": "6b7668cd8ea39aad39dd3a0940d609ac6fff0cc53eef3f23a67114748b178bbd",
+      "removedExtremaFields": 52
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_CurlNoiseForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_curlnoiseforce.json",
+      "previousBytes": 166381,
+      "previousSha256": "123c5ff094c0f42351cae0cb84d5679951307fe400e38fbfb44da743b27821d4",
+      "removedExtremaFields": 445
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_ExternalGameImpulseForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_externalgameimpulseforce.json",
+      "previousBytes": 4582,
+      "previousSha256": "d9f16716b54761f026a6ca78180db0ed7c75c2c5a28bf93d9555d1a3a16cffbb",
+      "removedExtremaFields": 11
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_ExternalWindForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_externalwindforce.json",
+      "previousBytes": 42255,
+      "previousSha256": "2e3a74635867066ee6912bdb304a95d8ee7f6243a8d0c84e82a89d7ede11db0c",
+      "removedExtremaFields": 115
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_ForceBasedOnDistanceToPlane",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_forcebasedondistancetoplane.json",
+      "previousBytes": 1414,
+      "previousSha256": "c305a7ee273cea64e5dde1d3f0e38d53cc9ce571ec350ceda5c860beb368b666",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_LocalAccelerationForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_localaccelerationforce.json",
+      "previousBytes": 43973,
+      "previousSha256": "1b1ca9ed98bf77f8b03a09415c3d15bde3e5cf6f4ff40b34b41ccb6cfe37d47d",
+      "removedExtremaFields": 119
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_PerParticleForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_perparticleforce.json",
+      "previousBytes": 55940,
+      "previousSha256": "8b9507be97a9266dc1d74087aebbcba139af8936f565b8cab359db9f49461a9d",
+      "removedExtremaFields": 159
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_RandomForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_randomforce.json",
+      "previousBytes": 11407,
+      "previousSha256": "ca768b0d8ef2e75f6c45428ff65420d52c5342197ed614745dd63c00c1c88cda",
+      "removedExtremaFields": 37
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_TimeVaryingForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_timevaryingforce.json",
+      "previousBytes": 1042,
+      "previousSha256": "a2be776f8a6be79fa37c1d49199f82d441dd6f1afcdf45efce1bb4b26aa4c610",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_TurbulenceForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_turbulenceforce.json",
+      "previousBytes": 11461,
+      "previousSha256": "c3c1ea8d6b69dbb2252241b21ac99421eb3a17ef1c096e1f9c4ab6aaa86454c6",
+      "removedExtremaFields": 34
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_TwistAroundAxis",
+      "game": "cs2",
+      "path": "observations/cs2/m_forcegenerators-c_op_twistaroundaxis.json",
+      "previousBytes": 1571,
+      "previousSha256": "d4c1508edf1f6d3f3b4f0c3d9bec6f13b6cf01a93ae2704773cfcb6793d05605",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_AgeNoise",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_agenoise.json",
+      "previousBytes": 1493,
+      "previousSha256": "02dc8ede8db867a5943461788bdadb023c52fc39ee8e1ec7c2aae7509ffc3e59",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_ColorLitPerParticle",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_colorlitperparticle.json",
+      "previousBytes": 1253,
+      "previousSha256": "23c319a280184b83ff65765ca4e2b7be26a12cf34994ba485212d9e734398938",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateAlongPath",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createalongpath.json",
+      "previousBytes": 10744,
+      "previousSha256": "d34a38d1cbbd993c62e97593f85289c5ad5453f8b848b6f575c455694604272e",
+      "removedExtremaFields": 31
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateFromCPs",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createfromcps.json",
+      "previousBytes": 728,
+      "previousSha256": "18cd9652ef94adfb89d9dd1d5763bbd2e12039441826f75148fbb9e2262752d2",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateFromParentParticles",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createfromparentparticles.json",
+      "previousBytes": 1277,
+      "previousSha256": "c60abd29ea43114b8fc5f47103637c81e7e7715838ddaaa5544344cc9e9deba2",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateFromPlaneCache",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createfromplanecache.json",
+      "previousBytes": 720,
+      "previousSha256": "82f84d44a23c1edc2832055e0e9f8cb0c82f4844c22916a6589c532db721bda5",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateInEpitrochoid",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createinepitrochoid.json",
+      "previousBytes": 36940,
+      "previousSha256": "07acfb2794efbbc370107d3015c079b662747540e05c5344e86f593033dbeebf",
+      "removedExtremaFields": 112
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateOnGrid",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createongrid.json",
+      "previousBytes": 35682,
+      "previousSha256": "4e60f176d49e9a9fea360bf021e789a82288f2a7d1d8d72ccca8f64ccbb40a38",
+      "removedExtremaFields": 114
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateOnModel",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createonmodel.json",
+      "previousBytes": 892,
+      "previousSha256": "2e37a0bdbcb8dd9ce6d0741c65bab9e9fcf86062404aae7353f14d348b3141c3",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateOnModelAtHeight",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createonmodelatheight.json",
+      "previousBytes": 68983,
+      "previousSha256": "b5236bae51815b4c5ee35325f92754fb33c249c85ddbf77f5ec0b3dc1f181eae",
+      "removedExtremaFields": 186
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateSequentialPath",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createsequentialpath.json",
+      "previousBytes": 1496,
+      "previousSha256": "194d048b3f7b1c60e0137b2eea3995a9c3f384862d1a413bf560dd96a39dfb79",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateSequentialPathV2",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createsequentialpathv2.json",
+      "previousBytes": 12858,
+      "previousSha256": "1546cd175614b877640e18089f675b8646d50cb8c972f4e4c34e2af57aaf2d53",
+      "removedExtremaFields": 35
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateSpiralSphere",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createspiralsphere.json",
+      "previousBytes": 1182,
+      "previousSha256": "df194200652b02570d9bb36a3063a1fe4ecdb81cdaf886b58ba0a0699e515a5f",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateWithinBox",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createwithinbox.json",
+      "previousBytes": 84588,
+      "previousSha256": "221aa591a5c330d8db7c87938b8d4172aa29215e4d894a1e501e8137f9c56a97",
+      "removedExtremaFields": 231
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateWithinSphereTransform",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_createwithinspheretransform.json",
+      "previousBytes": 182736,
+      "previousSha256": "b8e0034e5098780915a43bb6611408be83eb80461ce6b3efbaa09913d7c9bf9c",
+      "removedExtremaFields": 488
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreationNoise",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_creationnoise.json",
+      "previousBytes": 1759,
+      "previousSha256": "63f631e26d2bbccbca09c2134db82e978bffe6fd2f8fdbef624f443cb7d07928",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_DistanceToCPInit",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_distancetocpinit.json",
+      "previousBytes": 39885,
+      "previousSha256": "56b063c151e07c56db10b71bcb7e978e12be7dce7089aed8fb6cfa5d3504bd9e",
+      "removedExtremaFields": 119
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_GlobalScale",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_globalscale.json",
+      "previousBytes": 1424,
+      "previousSha256": "0c674fd0ba72c6872c5250d48fb8a164d0e76606aab17586a075848f0a8e9daa",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InheritFromParentParticles",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_inheritfromparentparticles.json",
+      "previousBytes": 1317,
+      "previousSha256": "2fa0b66b0a2895e2e9b33dab88c9115cfa191562fae635efd087eeb5c899408b",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InheritVelocity",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_inheritvelocity.json",
+      "previousBytes": 10145,
+      "previousSha256": "8a354fcb533831b04dec0697eab9e21db56b585bd195bbaf6f815c464ec8ecd2",
+      "removedExtremaFields": 29
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitFloat",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initfloat.json",
+      "previousBytes": 30479,
+      "previousSha256": "61efff8429911722ca312f622756608774bff136763db307931db2b646dc6a24",
+      "removedExtremaFields": 92
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitFloatCollection",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initfloatcollection.json",
+      "previousBytes": 10617,
+      "previousSha256": "c5df02eaee10b7d66d6bebab08a5a3cbe78ab06324d32991938d51f809ddd3ee",
+      "removedExtremaFields": 30
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitFromCPSnapshot",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initfromcpsnapshot.json",
+      "previousBytes": 11159,
+      "previousSha256": "f9d49a51b5411d8d5f5a00b9588161403632580c70c87260fec671e05c61e40f",
+      "removedExtremaFields": 30
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitFromParentKilled",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initfromparentkilled.json",
+      "previousBytes": 647,
+      "previousSha256": "a9d7c74cfe4f2b16b4e7cd480c9168d2527993eb267b467d0f98e5b6ff61c6bc",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitialRepulsionVelocity",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initialrepulsionvelocity.json",
+      "previousBytes": 1358,
+      "previousSha256": "801a2aa608272b3e5d9f9c3f214a00db54362a09cab1e4faf08232d7494e9571",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitialSequenceFromModel",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initialsequencefrommodel.json",
+      "previousBytes": 1099,
+      "previousSha256": "cf11a3f8819499c75d18c4beb338b1399528cbdcb2c4cd709c811fa38a738aab",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitialVelocityNoise",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initialvelocitynoise.json",
+      "previousBytes": 125549,
+      "previousSha256": "8e8912ed652c08f131ffcd22a83611a37826f3f868a25ceabdf62f6344f910e3",
+      "removedExtremaFields": 340
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitSkinnedPositionFromCPSnapshot",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initskinnedpositionfromcpsnapshot.json",
+      "previousBytes": 11155,
+      "previousSha256": "9a2a25cdba3ee43f7e758844690150488c743f53108e2b7992b9843626442761",
+      "removedExtremaFields": 35
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitVec",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initvec.json",
+      "previousBytes": 48591,
+      "previousSha256": "ad938eba094f3ebdc8f81490e376e9523566feb0d4d26e3ebacf39ac29f8291a",
+      "removedExtremaFields": 133
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitVecCollection",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_initveccollection.json",
+      "previousBytes": 47661,
+      "previousSha256": "5914166ab2acbce5d7ae2205d078afe1fa4e5e67897e668e8a664e0dc5c69cf0",
+      "removedExtremaFields": 120
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_LifespanFromVelocity",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_lifespanfromvelocity.json",
+      "previousBytes": 1361,
+      "previousSha256": "6116b216ee35a606084f668b8829c7ea0eb8d5642a0f01a28b982f0348f00596",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_MoveBetweenPoints",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_movebetweenpoints.json",
+      "previousBytes": 26708,
+      "previousSha256": "bda40925043341e76f657c0d6f2ec0a1c6a1191dc6c5886ac2ff415ac90456fa",
+      "removedExtremaFields": 89
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_NormalAlignToCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_normalaligntocp.json",
+      "previousBytes": 608,
+      "previousSha256": "224c53dc243e730403528a353f886928eed7a76a3e62abd34f1f45f4f5b1d578",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_NormalOffset",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_normaloffset.json",
+      "previousBytes": 1157,
+      "previousSha256": "73c1b25a03380be92cfbf3cc80065f6edbf9bd5a5dc720e3d067ec9f8546fe7f",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_Orient2DRelToCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_orient2dreltocp.json",
+      "previousBytes": 977,
+      "previousSha256": "f71ac7935e46d0d14e08453d369a93c59c87f7c71b26be57b2ca88f34dc9a1fa",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_PositionOffset",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_positionoffset.json",
+      "previousBytes": 90392,
+      "previousSha256": "a213b0aeabe800bc37af552ab5c5f7ab5eb871d4bd4d438d7502a0f0103a473a",
+      "removedExtremaFields": 244
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_PositionPlaceOnGround",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_positionplaceonground.json",
+      "previousBytes": 20482,
+      "previousSha256": "baded2bad4b1c5db712ea52a34c71f0cb2a69efa71256f8e74f448b3c03ad2f2",
+      "removedExtremaFields": 61
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_PositionWarp",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_positionwarp.json",
+      "previousBytes": 89550,
+      "previousSha256": "76e52649cae1e6d9f8efe5970c87a0520563ca460aa71d93342661584e9af62a",
+      "removedExtremaFields": 234
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_PositionWarpScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_positionwarpscalar.json",
+      "previousBytes": 12379,
+      "previousSha256": "b20b9e8f16ff387b734ffc92b53b30c850f1c1dacd7f7e578de7f766462f9029",
+      "removedExtremaFields": 34
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RadiusFromCPObject",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_radiusfromcpobject.json",
+      "previousBytes": 9505,
+      "previousSha256": "9e9497ad79a2cded09fef5396fada9b8582d5513ab1cde6b524f60ab93d4bba0",
+      "removedExtremaFields": 28
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomColor",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_randomcolor.json",
+      "previousBytes": 2105,
+      "previousSha256": "df2b547ed56a675b1de1792e2c022ed221f81f87d7ba7c80a8be32eba6121d3b",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomSecondSequence",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_randomsecondsequence.json",
+      "previousBytes": 752,
+      "previousSha256": "49417d14269fb6b52472f8d6813119746d20d9e673323820fcd9433fe0f20f07",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomSequence",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_randomsequence.json",
+      "previousBytes": 1721,
+      "previousSha256": "0eebc4e9569a59b48093db774f7728e79cedce73403b4cba36b746ef147d1495",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomYawFlip",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_randomyawflip.json",
+      "previousBytes": 752,
+      "previousSha256": "c738cb6e28cefbc65a731c4c3f5e3ee7f5caad4a92646e4830a3cdc6561aac32",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapInitialDirectionToTransformToVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_remapinitialdirectiontotransformtovector.json",
+      "previousBytes": 787,
+      "previousSha256": "44360e08222de3c4fe0cabeed8e1468efe5d639024e46019065e5112f8f864a2",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapParticleCountToScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_remapparticlecounttoscalar.json",
+      "previousBytes": 1479,
+      "previousSha256": "bff000a4417844068b3ae909b7e1bec75b0cfb85cc9084d7cadbe0b008b664a7",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapScalarToVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_remapscalartovector.json",
+      "previousBytes": 1806,
+      "previousSha256": "a660cfcd45974b8611ee6be1cabb0770acb7b93b87aec777b2d2d6aa7466939d",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapTransformOrientationToRotations",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_remaptransformorientationtorotations.json",
+      "previousBytes": 1199,
+      "previousSha256": "6af404231a94e87b8dc26032e210ed9252a1baddbe56799d18835fd646830f10",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapTransformToVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_remaptransformtovector.json",
+      "previousBytes": 1655,
+      "previousSha256": "0a1b5bdc01cb69f90d65f614f265ea3c8a365b9f63fd879f66c9e2f037a8073a",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RingWave",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_ringwave.json",
+      "previousBytes": 82127,
+      "previousSha256": "7446112f7890ce3cd2ae5c2aad041a547c54756fd8bc6d3b45ece55950be1c7c",
+      "removedExtremaFields": 245
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RtEnvCull",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_rtenvcull.json",
+      "previousBytes": 1077,
+      "previousSha256": "3795437275502bd84f012ccfdf0610bb5ce93c91053b188d38ada3a163f2e14e",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_ScaleVelocity",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_scalevelocity.json",
+      "previousBytes": 40586,
+      "previousSha256": "bf2d6cad1b1c21e690f976342978d9fc092d33244862fe90b34da29cc23b9c99",
+      "removedExtremaFields": 115
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SequenceLifeTime",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_sequencelifetime.json",
+      "previousBytes": 776,
+      "previousSha256": "8ea9641d55be874b4fb84f5c4d126aa41e7cc06804f3afb21a7e78e0f9e614e0",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SetAttributeToScalarExpression",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_setattributetoscalarexpression.json",
+      "previousBytes": 28605,
+      "previousSha256": "8612d03ad3912673fbe074de704ff484f7e95b674954af856b2963ba455f48af",
+      "removedExtremaFields": 90
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SetVectorAttributeToVectorExpression",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_setvectorattributetovectorexpression.json",
+      "previousBytes": 85232,
+      "previousSha256": "86d99369b75c2aa852c54a1a334f95f8d981602055e8724b8c3667c5cd5812df",
+      "removedExtremaFields": 231
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_VelocityFromCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_velocityfromcp.json",
+      "previousBytes": 43990,
+      "previousSha256": "f3bdc8f71a770df73a993084f1bd309f3dcded08d1fa95a70ec4029e52f20740",
+      "removedExtremaFields": 115
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_VelocityFromNormal",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_velocityfromnormal.json",
+      "previousBytes": 802,
+      "previousSha256": "c94f1660215770594eb3666c18b14b9b2204de6ffb5b9b135a86987f6931d44b",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_VelocityRadialRandom",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_velocityradialrandom.json",
+      "previousBytes": 961,
+      "previousSha256": "4500100aed9956a9783ea4faa1188c871d778b02a262876b1b7e137065cad9a4",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_VelocityRandom",
+      "game": "cs2",
+      "path": "observations/cs2/m_initializers-c_init_velocityrandom.json",
+      "previousBytes": 122742,
+      "previousSha256": "4889991362829c6cb3a36bd49cc4c29e7c78d5435bcc35b429f35be9740bcc6f",
+      "removedExtremaFields": 299
+    },
+    {
+      "classStage": "m_Operators:C_OP_AlphaDecay",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_alphadecay.json",
+      "previousBytes": 551,
+      "previousSha256": "5ee3dcefb6fe5d96cc33d4c8fc082b8155f2b76f1045b0bc0cea30e843f8f8d5",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_BasicMovement",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_basicmovement.json",
+      "previousBytes": 67127,
+      "previousSha256": "49e1e7fa88ed7388b3e42e20774803042b765c44db7d90cea67e70ee7ff7e356",
+      "removedExtremaFields": 193
+    },
+    {
+      "classStage": "m_Operators:C_OP_CalculateVectorAttribute",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_calculatevectorattribute.json",
+      "previousBytes": 2443,
+      "previousSha256": "3c3be889b3e67d053185b2e93a57e04d134e19bad5013950dd89e52564fce148",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_ClampScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_clampscalar.json",
+      "previousBytes": 19761,
+      "previousSha256": "2bd56dda77e50a0c3d9ef2593dece97833f7ef493e0016aab9f4793f0442add2",
+      "removedExtremaFields": 59
+    },
+    {
+      "classStage": "m_Operators:C_OP_ColorInterpolate",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_colorinterpolate.json",
+      "previousBytes": 1435,
+      "previousSha256": "6a57dc7b5b26b1ca38f87a893baf584028725130bdda93b7dd13d7756cc396ed",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_ColorInterpolateRandom",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_colorinterpolaterandom.json",
+      "previousBytes": 1030,
+      "previousSha256": "a65f39d042179d711cade725fda97c80ca22ce98bba8c03f341865b07ccc3785",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_ConnectParentParticleToNearest",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_connectparentparticletonearest.json",
+      "previousBytes": 818,
+      "previousSha256": "912b9005f84a34215d21acf048a399c28d6fa9f652007bbc290910b58f9f5501",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_ControlpointLight",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_controlpointlight.json",
+      "previousBytes": 3509,
+      "previousSha256": "11692755934ef86db73da68dacebc845938696a6eda12c18568f6236a8ef09a1",
+      "removedExtremaFields": 11
+    },
+    {
+      "classStage": "m_Operators:C_OP_Cull",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_cull.json",
+      "previousBytes": 925,
+      "previousSha256": "00f7ef7620b35107ce449a1e863fa141fa234b3a69a4b88ba03e2b25d2852b95",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_DampenToCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_dampentocp.json",
+      "previousBytes": 1321,
+      "previousSha256": "bea1254c2921805e8c1209eeb23d7699a8c32fbfba601e7625eb375a94511667",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_Decay",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_decay.json",
+      "previousBytes": 10213,
+      "previousSha256": "5b6a88d6fd504e52261c0a986701125665ed22d033f02184e82a4c7f08501013",
+      "removedExtremaFields": 32
+    },
+    {
+      "classStage": "m_Operators:C_OP_DecayMaintainCount",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_decaymaintaincount.json",
+      "previousBytes": 361,
+      "previousSha256": "121b4e4b227479664f6f7be7c1aba6bf0458ef5adabf6c53559f47cfd98c7470",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_DecayOffscreen",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_decayoffscreen.json",
+      "previousBytes": 425,
+      "previousSha256": "720e2f2deff82d490cf6bdb8ba636ac6e26c456258acbab3f83e4ac8fc889806",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_DifferencePreviousParticle",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_differencepreviousparticle.json",
+      "previousBytes": 865,
+      "previousSha256": "b8d09adc01d56f4efd233ac60a0a730c0d145224365e54be9d29c3e9645e5ddc",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_DistanceBetweenTransforms",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_distancebetweentransforms.json",
+      "previousBytes": 38129,
+      "previousSha256": "0bdc4a13fc9fe6c6bd1fb293e8df93e503208b882c36cc59c83a4556a73d2a1f",
+      "removedExtremaFields": 117
+    },
+    {
+      "classStage": "m_Operators:C_OP_DistanceBetweenVecs",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_distancebetweenvecs.json",
+      "previousBytes": 109323,
+      "previousSha256": "1992ae68544178572d4396538bfe1b1cbee0e9226d7ebb57e760a079a11fb5af",
+      "removedExtremaFields": 316
+    },
+    {
+      "classStage": "m_Operators:C_OP_DistanceCull",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_distancecull.json",
+      "previousBytes": 1781,
+      "previousSha256": "048b4017d58f03702bcf7d59bebc931c8346b16c0111b092de76a913b6cbfe7f",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Operators:C_OP_DistanceToTransform",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_distancetotransform.json",
+      "previousBytes": 84114,
+      "previousSha256": "a203553a446757078e5bb04211264997368a85733b0bb267b5dd5d0e8e6b6a1a",
+      "removedExtremaFields": 234
+    },
+    {
+      "classStage": "m_Operators:C_OP_EndCapDecay",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_endcapdecay.json",
+      "previousBytes": 739,
+      "previousSha256": "d8b4636e04e3be21a1bd95a701c18e4ed72075d6a4ec12d36958d13b5326a75f",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_EndCapTimedDecay",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_endcaptimeddecay.json",
+      "previousBytes": 734,
+      "previousSha256": "c1cb72a94b263371908ebceb343aaf46ee213be22c44d589d5fac760ded3c6c7",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeAndKill",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_fadeandkill.json",
+      "previousBytes": 1473,
+      "previousSha256": "5460385b81f2031ac976e6bd4939158e5a3dfb86517fb3a0418aeb1e8d543209",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeAndKillForTracers",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_fadeandkillfortracers.json",
+      "previousBytes": 1355,
+      "previousSha256": "51b0bc9e93b93cc698865c76a5dd4488a57b8ddc97980eb4b956edeae67bb9e1",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeIn",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_fadein.json",
+      "previousBytes": 883,
+      "previousSha256": "3dc158a6d6bd7a6721ed3db2cbc5ed7a10b48b396dab221b506892432059991b",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeInSimple",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_fadeinsimple.json",
+      "previousBytes": 579,
+      "previousSha256": "7ec4e29e7ba6bf15858ded42b1926eaac0a82b311a97fd4fdd1de5a866de200d",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeOut",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_fadeout.json",
+      "previousBytes": 1534,
+      "previousSha256": "9fb759142192fe2569c2171bc40f95b6f33de894ac39de6dc57d7e3881d167aa",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeOutSimple",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_fadeoutsimple.json",
+      "previousBytes": 765,
+      "previousSha256": "3be0db95b22d36ef00e061a2019f3edb3f0d6794e2565e1be9df2f681bad4c31",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_InheritFromParentParticlesV2",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_inheritfromparentparticlesv2.json",
+      "previousBytes": 849,
+      "previousSha256": "6f701474ff5032eb064b7597c1710f38499ad63836ea300edef05b24fdcb6a5f",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_InterpolateRadius",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_interpolateradius.json",
+      "previousBytes": 2157,
+      "previousSha256": "e0928a43e75e8ef18afe1999d219ffa357c6ae53ce92b6e6aa0a65395d521e7d",
+      "removedExtremaFields": 8
+    },
+    {
+      "classStage": "m_Operators:C_OP_LerpEndCapScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_lerpendcapscalar.json",
+      "previousBytes": 920,
+      "previousSha256": "29db2822e990cc11614487e9933f74f03e9857da4bdbbece413c792242f87961",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_LerpScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_lerpscalar.json",
+      "previousBytes": 10744,
+      "previousSha256": "44660f841053a79a57b76d25a9a70dedeaffc121df64ad39b8a258fe6f20a1e2",
+      "removedExtremaFields": 32
+    },
+    {
+      "classStage": "m_Operators:C_OP_LerpToOtherAttribute",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_lerptootherattribute.json",
+      "previousBytes": 20028,
+      "previousSha256": "9f086163f7035279cc74161723cc2b7007e8411a404ac5f06d2425ec844bd1af",
+      "removedExtremaFields": 63
+    },
+    {
+      "classStage": "m_Operators:C_OP_LockToBone",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_locktobone.json",
+      "previousBytes": 1525,
+      "previousSha256": "a8a6af27950d59109a0800aa71842d5e5766bbb4a5856a72728377e49f87340d",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_MaintainSequentialPath",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_maintainsequentialpath.json",
+      "previousBytes": 1983,
+      "previousSha256": "44bec2700c80f0a1fb62576c7a2c0a47eea692ac35c58c9aa981e122e4779cf4",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Operators:C_OP_MaxVelocity",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_maxvelocity.json",
+      "previousBytes": 9557,
+      "previousSha256": "45a49b4d5c38cfe10979e53b8e0af2d4948c299951dc91fb18b2c769ae8572d0",
+      "removedExtremaFields": 28
+    },
+    {
+      "classStage": "m_Operators:C_OP_MovementLoopInsideSphere",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_movementloopinsidesphere.json",
+      "previousBytes": 7042,
+      "previousSha256": "103fe2a4f039b053dfaa1aa17eb79aaecb4a61435634d7ad660a03134cc6969e",
+      "removedExtremaFields": 22
+    },
+    {
+      "classStage": "m_Operators:C_OP_MovementPlaceOnGround",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_movementplaceonground.json",
+      "previousBytes": 1820,
+      "previousSha256": "5118b5643bb88c7026a98dd38acd8b1b2d154663a136955ef5f81f57ac9ec4ea",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_MovementRotateParticleAroundAxis",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_movementrotateparticlearoundaxis.json",
+      "previousBytes": 64165,
+      "previousSha256": "fa4ef85b40d20f6fdf48982706d9c10a4492b6c80d14eda6c0f0ef43601f479e",
+      "removedExtremaFields": 177
+    },
+    {
+      "classStage": "m_Operators:C_OP_MovementSkinnedPositionFromCPSnapshot",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_movementskinnedpositionfromcpsnapshot.json",
+      "previousBytes": 28154,
+      "previousSha256": "3fb81b16c8ef613e3cb8be6557e5ec9212f16e94bf93f5eded4c899524894def",
+      "removedExtremaFields": 87
+    },
+    {
+      "classStage": "m_Operators:C_OP_Noise",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_noise.json",
+      "previousBytes": 1452,
+      "previousSha256": "32778f3b93c19696b3c09dea69eff44ac4a7cab30d3c1da60dcbd2c9b9791c3e",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_NormalizeVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_normalizevector.json",
+      "previousBytes": 631,
+      "previousSha256": "b662dda27eaa96796cf54d11f7d954f4f0a0e40d74ebb528810e3946528ed81f",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_Orient2DRelToCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_orient2dreltocp.json",
+      "previousBytes": 610,
+      "previousSha256": "e1481cbe117f10e31a51d843fdb98c57ca6b59680e335485d51c302f531d93ab",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_OrientTo2dDirection",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_orientto2ddirection.json",
+      "previousBytes": 592,
+      "previousSha256": "94b6b625286845f9e82b2e08b8646296f0ac8e07de1ea675c34f93f2aa123654",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_OscillateScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_oscillatescalar.json",
+      "previousBytes": 2728,
+      "previousSha256": "5017638e79b95b0885040b806ecb792a037f020d9ea677e3dcac1216270e1ca9",
+      "removedExtremaFields": 12
+    },
+    {
+      "classStage": "m_Operators:C_OP_OscillateVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_oscillatevector.json",
+      "previousBytes": 21581,
+      "previousSha256": "9ffe053cfa79d39aae5bc4d351ed078536dab90397133dcf15b01095990f74a9",
+      "removedExtremaFields": 68
+    },
+    {
+      "classStage": "m_Operators:C_OP_OscillateVectorSimple",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_oscillatevectorsimple.json",
+      "previousBytes": 11064,
+      "previousSha256": "be4e490e32eebc8409d3b4a34b0de8f838733da3c9707c7d756293d1d1f04103",
+      "removedExtremaFields": 33
+    },
+    {
+      "classStage": "m_Operators:C_OP_PlaneCull",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_planecull.json",
+      "previousBytes": 741,
+      "previousSha256": "ddad39706e3fc109d229e7893e7b669e0e3f304c8ec6bb5b82908b76d089fb3a",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_PointVectorAtNextParticle",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_pointvectoratnextparticle.json",
+      "previousBytes": 450,
+      "previousSha256": "9d6352fe9a9527a77592b4567e6bfac0c913ff0d4bd50ee1d63e89bc55591685",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_PositionLock",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_positionlock.json",
+      "previousBytes": 19760,
+      "previousSha256": "415ba0116a54ca823615cd19cf5578442d60cf9a8643248c7d76d6f342f97814",
+      "removedExtremaFields": 64
+    },
+    {
+      "classStage": "m_Operators:C_OP_RadiusDecay",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_radiusdecay.json",
+      "previousBytes": 613,
+      "previousSha256": "83f193b7856caa68ab2d66c5cede1333b32987b35c6cd490aa8ce35faf78f0a5",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_RampScalarLinear",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_rampscalarlinear.json",
+      "previousBytes": 1830,
+      "previousSha256": "ca14578bf0a5b7dfbe999eb83750e343467a6c5fbb1340815fdc6afeac050968",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Operators:C_OP_RampScalarLinearSimple",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_rampscalarlinearsimple.json",
+      "previousBytes": 1036,
+      "previousSha256": "e944ad7604b319aae94ca58cc2721754899edda04885caa4febc02c8a7a18f87",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapControlPointOrientationToRotation",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapcontrolpointorientationtorotation.json",
+      "previousBytes": 448,
+      "previousSha256": "ee98a49ad9ecd2ca87316c117ebc051f9a66b2002ce299228d7f908128994e03",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapCPtoScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapcptoscalar.json",
+      "previousBytes": 1293,
+      "previousSha256": "01e162160c669800f697eecb792dc58eed3180a1498b1b17b6ed40ce5d2d8bc1",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapCPtoVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapcptovector.json",
+      "previousBytes": 9482,
+      "previousSha256": "9eb58e5356c4d555820fba8f02f6b24e18f4d142598a1c10db1709d0f90b8928",
+      "removedExtremaFields": 30
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapCPVelocityToVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapcpvelocitytovector.json",
+      "previousBytes": 546,
+      "previousSha256": "a79fbbfac63e877369f5163da0d2e325fe895364401bd09c24e1f4869764d2af",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapCrossProductOfTwoVectorsToVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapcrossproductoftwovectorstovector.json",
+      "previousBytes": 89162,
+      "previousSha256": "8fe01703e6879bd0817c6b244d0408aa7ef6c6d86d21bd02b9741a753630b10d",
+      "removedExtremaFields": 231
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapDirectionToCPToVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapdirectiontocptovector.json",
+      "previousBytes": 938,
+      "previousSha256": "ca10a33bb27b688ca238e3ddd98f93059870ecf733908950b50971734a6cd259",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapDotProductToScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapdotproducttoscalar.json",
+      "previousBytes": 2051,
+      "previousSha256": "189a68667a420676788709e8b19485a762aa91b8f04d26006a84ea4836176e3d",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapscalar.json",
+      "previousBytes": 1113,
+      "previousSha256": "7caaf4d798c9e9b8189b36c748f82ccb498b201b358e9caee51907b064f43ff3",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapSpeed",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapspeed.json",
+      "previousBytes": 1423,
+      "previousSha256": "de2c085f69bfc8fa421c242b481942c2f7906916f8bb8e7a50ec99ec10e44aed",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapTransformOrientationToRotations",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remaptransformorientationtorotations.json",
+      "previousBytes": 9545,
+      "previousSha256": "b9ea140cc586742a4808d9f78609bda7bf2e58aac88e8357e753a60c661c9a37",
+      "removedExtremaFields": 29
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapTransformOrientationToYaw",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remaptransformorientationtoyaw.json",
+      "previousBytes": 734,
+      "previousSha256": "a78a516371f458518c5ff7e8ee51bcb386e4fcb6bcbcac377f0aba659f49c5c7",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapTransformVisibilityToScalar",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remaptransformvisibilitytoscalar.json",
+      "previousBytes": 884,
+      "previousSha256": "d1c1a38c402ce49950b4dc8e61e09b92eb0cf2d9d644228a19959d9926a5a84b",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapVelocityToVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_remapvelocitytovector.json",
+      "previousBytes": 768,
+      "previousSha256": "a2723c93a2cec7e7d76eed47a3ac77513f453360ad8259a9c67a0d0c36145da7",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_RestartAfterDuration",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_restartafterduration.json",
+      "previousBytes": 964,
+      "previousSha256": "62f804ff55b1e532525830d2a68c1b4575dcad83cda6d066ee4f639ec5a34110",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_RotateVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_rotatevector.json",
+      "previousBytes": 11042,
+      "previousSha256": "c957e0fecc74709c377684587154bd74b366af8963b3b186de13993a102b4104",
+      "removedExtremaFields": 34
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetAttributeToScalarExpression",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setattributetoscalarexpression.json",
+      "previousBytes": 17922,
+      "previousSha256": "3a4488db60ae1c67ab7753b2053297c03411775e9e111f792baa7b4bb35f99b8",
+      "removedExtremaFields": 55
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetChildControlPoints",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setchildcontrolpoints.json",
+      "previousBytes": 988,
+      "previousSha256": "df533a689530c97fb6caa910c1043be279402cc7d9344f188e03dae0ae6d9961",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetControlPointsToModelParticles",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setcontrolpointstomodelparticles.json",
+      "previousBytes": 1031,
+      "previousSha256": "554097534bdfd4093e1f8dfcf2ae84bc4408b04944988e89f1a9fa9bec5748f5",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetCPtoVector",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setcptovector.json",
+      "previousBytes": 514,
+      "previousSha256": "3848f2906bafef3ee931c8ea6b837049d21f4ccec58c80e4e290c04888909e33",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetFloat",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setfloat.json",
+      "previousBytes": 30929,
+      "previousSha256": "fb26a889afce33633c85d48c6dd9f3991f59fe0ce3975dc885cfdc728b6c1e1e",
+      "removedExtremaFields": 92
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetFloatAttributeToVectorExpression",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setfloatattributetovectorexpression.json",
+      "previousBytes": 99400,
+      "previousSha256": "abe75b59593ee530228431d32b031df706dc585e91c05eb9ed1a76740a881031",
+      "removedExtremaFields": 259
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetFloatCollection",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setfloatcollection.json",
+      "previousBytes": 9237,
+      "previousSha256": "119963c80fa7cf6febd023564fed77abcf40fb80f7920fac2d1e0963b672a627",
+      "removedExtremaFields": 27
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetFromCPSnapshot",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setfromcpsnapshot.json",
+      "previousBytes": 10324,
+      "previousSha256": "1fa0312be1a29a6bebe4dfc8c096e5bafbc268850387c0cdeda7bb24875c0041",
+      "removedExtremaFields": 29
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetPerChildControlPoint",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setperchildcontrolpoint.json",
+      "previousBytes": 10874,
+      "previousSha256": "bb4daf8875716b4a1ac80559edad95b5188c96e18f9c295bd7910de0907284fe",
+      "removedExtremaFields": 31
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetPerChildControlPointFromAttribute",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setperchildcontrolpointfromattribute.json",
+      "previousBytes": 1306,
+      "previousSha256": "98df5171e0735249411d4756d5fbec36476bfb28cb1f52f67f1e5675e87f9f07",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetToCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_settocp.json",
+      "previousBytes": 514,
+      "previousSha256": "08f37f99a75598636949b1d39e9187c6048f15cf5570df5166351f3cf8b9c174",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetVec",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setvec.json",
+      "previousBytes": 67051,
+      "previousSha256": "9ed79a828d163449b0e82d7ad3ebcd3c3a95a08ff8c0afa8f82f3a938d47d4f6",
+      "removedExtremaFields": 173
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetVectorAttributeToVectorExpression",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_setvectorattributetovectorexpression.json",
+      "previousBytes": 83693,
+      "previousSha256": "b81205da571fd0a7254dc4ed689c52e5f30f13dad8b20052566045aa3150d3c2",
+      "removedExtremaFields": 231
+    },
+    {
+      "classStage": "m_Operators:C_OP_SnapshotSkinToBones",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_snapshotskintobones.json",
+      "previousBytes": 893,
+      "previousSha256": "ba65e0d0ba374fa102cfa6c349d3fdf4affd8d484f330cbcbb0b6b65e139d227",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_Spin",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_spin.json",
+      "previousBytes": 1675,
+      "previousSha256": "63b2a22693ec3f2cfd1e2113cf054953774ca2c47b7f3f0a98f55f5f00e74278",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Operators:C_OP_SpinUpdate",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_spinupdate.json",
+      "previousBytes": 8502,
+      "previousSha256": "9f743addd9f6dd9cd5b21b281926a647e246acc737436ea8adb596c0a678733e",
+      "removedExtremaFields": 26
+    },
+    {
+      "classStage": "m_Operators:C_OP_SpinYaw",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_spinyaw.json",
+      "previousBytes": 780,
+      "previousSha256": "b14e9ec788f12fcd9ab4ad4f91eb201f667da0b06c056271d53e902ba7ac595b",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_VectorNoise",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_vectornoise.json",
+      "previousBytes": 11209,
+      "previousSha256": "f21cbb9d88eafbcfdae029871729e92ef8ce5ecf855a8e0010015ece9c19ba50",
+      "removedExtremaFields": 33
+    },
+    {
+      "classStage": "m_Operators:C_OP_VelocityDecay",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_velocitydecay.json",
+      "previousBytes": 567,
+      "previousSha256": "ef436bd61627adf1c702ff0c691401dac3ba2ba1a132c846e79e323279d29809",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_VelocityMatchingForce",
+      "game": "cs2",
+      "path": "observations/cs2/m_operators-c_op_velocitymatchingforce.json",
+      "previousBytes": 781,
+      "previousSha256": "cb642a9a5136a20fdedd17989ea4a2514ff4c1979cf058aa145d1a3b8dedd3ea",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_ChooseRandomChildrenInGroup",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_chooserandomchildreningroup.json",
+      "previousBytes": 8361,
+      "previousSha256": "a1b20842b23e53f0487fa1a0c6aeb7bba152cd0dcce7929aa6980762bac65e77",
+      "removedExtremaFields": 23
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_ControlPointToRadialScreenSpace",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_controlpointtoradialscreenspace.json",
+      "previousBytes": 721,
+      "previousSha256": "c5b7563cd17640c21171283f57833f515de1a1cadfdc52aa796db5d2a543ec64",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_DistanceBetweenCPsToCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_distancebetweencpstocp.json",
+      "previousBytes": 1895,
+      "previousSha256": "258a6378ba0f7f55cb379bf9765fd0d9e222317cc316825008cd4f4d53eac302",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_EnableChildrenFromParentParticleCount",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_enablechildrenfromparentparticlecount.json",
+      "previousBytes": 9468,
+      "previousSha256": "0cca1e90649094dfa7715c3afc1b1cf65f334cb0ce8eeb5c585a5adfd8a89490",
+      "removedExtremaFields": 27
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_LightningSnapshotGenerator",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_lightningsnapshotgenerator.json",
+      "previousBytes": 68585,
+      "previousSha256": "bfaf05e3f54122be484a4d73186e36ca7f1e9036e65822b9e7cd32bc3b816a0f",
+      "removedExtremaFields": 197
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_RemapCPtoCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_remapcptocp.json",
+      "previousBytes": 1324,
+      "previousSha256": "c7f50fc228e4301d71ad8219ccb39abd7b43a27e5f5e3da9b2573d0d6ee9617d",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_RemapModelVolumetoCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_remapmodelvolumetocp.json",
+      "previousBytes": 531,
+      "previousSha256": "f6a11f0af15f70828b063d1d1b056979f5de1ea17876e73463f376c8f429d327",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_RemapSpeedtoCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_remapspeedtocp.json",
+      "previousBytes": 947,
+      "previousSha256": "573f1157ee6278a8448dee208853100cf9613ef4e30f9b9278fc5879b36170df",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SelectivelyEnableChildren",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_selectivelyenablechildren.json",
+      "previousBytes": 9807,
+      "previousSha256": "e644b9d3eb3b2084f3cc2a3dcd16391f7f61a38ac1c8f04d2acefebbc4e24e96",
+      "removedExtremaFields": 29
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointOrientation",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointorientation.json",
+      "previousBytes": 1400,
+      "previousSha256": "81bb0b1a1b24902aef32f45780f0e623a0b963ce6f9042910dfdaadf0625d58a",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointPositions",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointpositions.json",
+      "previousBytes": 2082,
+      "previousSha256": "4bb3cc1814425d801eb01877acd2edc48839ba78438f2fa4625953564bc6fc3d",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToCenter",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtocenter.json",
+      "previousBytes": 603,
+      "previousSha256": "f78c2f13af03f286280f733ef9e94e0e3eb130e5d336f9987a20075ea45b6b68",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToHMD",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtohmd.json",
+      "previousBytes": 635,
+      "previousSha256": "652763d74b8b14fb70f807fe3a4d8a22d6f7736c6236b244dbd83e2f015e3a93",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToImpactPoint",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtoimpactpoint.json",
+      "previousBytes": 1569,
+      "previousSha256": "efb97412f09800916146e56d7866823103cc310536b347d2e41502dd30782d0b",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToPlayer",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtoplayer.json",
+      "previousBytes": 730,
+      "previousSha256": "09a4c1b4245eda851918d4af7b5c3a770b7340934e5b01df011b359574c4e8f7",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToVectorExpression",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtovectorexpression.json",
+      "previousBytes": 81054,
+      "previousSha256": "95143923bb8458b611e9b2effaaeb76e173d8d1ab47b920f1ff51ee13c1883db",
+      "removedExtremaFields": 232
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetCPOrientationToPointAtCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setcporientationtopointatcp.json",
+      "previousBytes": 751,
+      "previousSha256": "d2db00d8b57edf08e22051b260c689f6ebb2a2ad6a59894820c0854830a269f3",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetGravityToCP",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setgravitytocp.json",
+      "previousBytes": 702,
+      "previousSha256": "7ad3d1ac8b782273e0b90881006cfb84c65445053173a4f79676452f62debcc2",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetSingleControlPointPosition",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_setsinglecontrolpointposition.json",
+      "previousBytes": 51039,
+      "previousSha256": "18701aa896b018a1e89c7c1449b9d1985eefc24ad982e0dc14f4930bf2ecffbd",
+      "removedExtremaFields": 132
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_StopAfterCPDuration",
+      "game": "cs2",
+      "path": "observations/cs2/m_preemissionoperators-c_op_stopaftercpduration.json",
+      "previousBytes": 10938,
+      "previousSha256": "f6b38bb1f082aa9e1267a1e826294c143541f4333be56d4d761d857ab8add3eb",
+      "removedExtremaFields": 29
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderCables",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_rendercables.json",
+      "previousBytes": 22321,
+      "previousSha256": "3a73bd5bb2d25249da65d0b5edd2b6efebdf2fe75b117f6aad689dedfbf6bf59",
+      "removedExtremaFields": 60
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderGpuImplicit",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_rendergpuimplicit.json",
+      "previousBytes": 20294,
+      "previousSha256": "784a462079a9d4a18acba9404643111ae34c67edb2416e4d7b30f319a45829d3",
+      "removedExtremaFields": 58
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderModels",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_rendermodels.json",
+      "previousBytes": 233653,
+      "previousSha256": "95024e42fd0fbb13fa0fee379b1e303364277b5065dfaf869a2d29cf29cc4d2a",
+      "removedExtremaFields": 605
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderOmni2Light",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_renderomni2light.json",
+      "previousBytes": 73293,
+      "previousSha256": "052875d822d08a703861b12b2be967c6677b33502a08788373c17158c2032b65",
+      "removedExtremaFields": 201
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderProjected",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_renderprojected.json",
+      "previousBytes": 2195,
+      "previousSha256": "b056ada5c1bbc6ea4d596445a413d018ab014bc7f0e9b3ec9bbccf1fd4084aee",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderRopes",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_renderropes.json",
+      "previousBytes": 243387,
+      "previousSha256": "461bbdedcdb27d62bb9fee281bb5d92a350865c7d23c772a741693ef4e4e8ada",
+      "removedExtremaFields": 666
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderSound",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_rendersound.json",
+      "previousBytes": 566,
+      "previousSha256": "0488f20108c4603f8903ef45d1a6569104fbe0786b5b272befc67be1ed9db63b",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderSprites",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_rendersprites.json",
+      "previousBytes": 446894,
+      "previousSha256": "e057ee65e24ebe29ae4ff9d818119fa31ea7df9f9ddc457bec8a18d69e090200",
+      "removedExtremaFields": 1219
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderStandardLight",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_renderstandardlight.json",
+      "previousBytes": 69067,
+      "previousSha256": "fa265cc1a3c9534ef53fbd935d09020f79ddefe87cae204ffafd4c9a8aa6fdde",
+      "removedExtremaFields": 179
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderTrails",
+      "game": "cs2",
+      "path": "observations/cs2/m_renderers-c_op_rendertrails.json",
+      "previousBytes": 434357,
+      "previousSha256": "eaf5ef40b35855011ad7e502b556cafef667798533f298b9434dcf6e9e1a7904",
+      "removedExtremaFields": 1170
+    },
+    {
+      "classStage": "system:CParticleSystemDefinition",
+      "game": "cs2",
+      "path": "observations/cs2/system-cparticlesystemdefinition.json",
+      "previousBytes": 13017,
+      "previousSha256": "03b1b9785265a0fb13d6ae0f6de2b8f43bec07171800ca4f685fd25381881785",
+      "removedExtremaFields": 33
+    },
+    {
+      "classStage": "m_Constraints:C_OP_BoxConstraint",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_constraints-c_op_boxconstraint.json",
+      "previousBytes": 95886,
+      "previousSha256": "1fac4c74946b74347cc4855b18a75a4f4c0c319bbe16d72546a5c0aed57a86ae",
+      "removedExtremaFields": 238
+    },
+    {
+      "classStage": "m_Constraints:C_OP_CollideWithSelf",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_constraints-c_op_collidewithself.json",
+      "previousBytes": 8839,
+      "previousSha256": "a13a802c7a3938bb0850e92bd5cebf9fe111f4035637b2aaebf6e3d02069ad7b",
+      "removedExtremaFields": 27
+    },
+    {
+      "classStage": "m_Constraints:C_OP_ConstrainDistance",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_constraints-c_op_constraindistance.json",
+      "previousBytes": 74050,
+      "previousSha256": "c05700d6f4362ef6e175bba67b0fb02283587c9c1cd3acbc07ddc72ae81079f6",
+      "removedExtremaFields": 192
+    },
+    {
+      "classStage": "m_Constraints:C_OP_ConstrainDistanceToPath",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_constraints-c_op_constraindistancetopath.json",
+      "previousBytes": 3597,
+      "previousSha256": "301335a861183db124fdfd88a7803b3903351245c775a1a44016c0e5070917b0",
+      "removedExtremaFields": 11
+    },
+    {
+      "classStage": "m_Constraints:C_OP_ConstrainDistanceToUserSpecifiedPath",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_constraints-c_op_constraindistancetouserspecifiedpath.json",
+      "previousBytes": 1533,
+      "previousSha256": "67f60de5f4dcb9b7283666ebfdf5ee657f4fa29c47b8b99d1db8475e2a7b5e22",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Constraints:C_OP_PlanarConstraint",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_constraints-c_op_planarconstraint.json",
+      "previousBytes": 8273,
+      "previousSha256": "c3a61fe8a46aec365c4880e82b4a4bf826defdeb6614b95466834acbfd9ad09c",
+      "removedExtremaFields": 24
+    },
+    {
+      "classStage": "m_Constraints:C_OP_RopeSpringConstraint",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_constraints-c_op_ropespringconstraint.json",
+      "previousBytes": 44536,
+      "previousSha256": "b073f0cbfac67ad562225f533be32f37e12e5a2cf0eda5f02b78fc2a8f3caa39",
+      "removedExtremaFields": 122
+    },
+    {
+      "classStage": "m_Constraints:C_OP_WorldTraceConstraint",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_constraints-c_op_worldtraceconstraint.json",
+      "previousBytes": 62961,
+      "previousSha256": "c420519031793ace12e83e3f2fe0bc14f4aea4c4ade46863f540d32b31bb580e",
+      "removedExtremaFields": 182
+    },
+    {
+      "classStage": "m_Emitters:C_OP_ContinuousEmitter",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_emitters-c_op_continuousemitter.json",
+      "previousBytes": 35757,
+      "previousSha256": "031910c0b502d9157964e8ebe2e2518e74cf81e8d54129e5412728f5eab58550",
+      "removedExtremaFields": 110
+    },
+    {
+      "classStage": "m_Emitters:C_OP_InstantaneousEmitter",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_emitters-c_op_instantaneousemitter.json",
+      "previousBytes": 38043,
+      "previousSha256": "4bf016627c3e40673fd28d7698dbe58b632aebbc17cd97399223267697bc6e7d",
+      "removedExtremaFields": 101
+    },
+    {
+      "classStage": "m_Emitters:C_OP_MaintainEmitter",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_emitters-c_op_maintainemitter.json",
+      "previousBytes": 11629,
+      "previousSha256": "f4e62a04fc64fcd967f74f6870678218fe020c6352bbb8d816dfcf08ecc7e74c",
+      "removedExtremaFields": 30
+    },
+    {
+      "classStage": "m_Emitters:C_OP_NoiseEmitter",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_emitters-c_op_noiseemitter.json",
+      "previousBytes": 1974,
+      "previousSha256": "1ca14b28a1728f70eab0de2645fd154f94bfe8cf7b5befc86f9b5ad200a2f520",
+      "removedExtremaFields": 8
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_AttractToControlPoint",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_attracttocontrolpoint.json",
+      "previousBytes": 38600,
+      "previousSha256": "1dcf9432b332f182ef9d9f940ffff1241822701fa2a6db14ab5505d7faa24ea6",
+      "removedExtremaFields": 104
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_CurlNoiseForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_curlnoiseforce.json",
+      "previousBytes": 220060,
+      "previousSha256": "a886a6fad265b8744d88ddd75295a782ce78e1c3c56e2743ce7205828b0ae7ec",
+      "removedExtremaFields": 570
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_ExternalGameImpulseForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_externalgameimpulseforce.json",
+      "previousBytes": 4337,
+      "previousSha256": "7b9d7eb50c6cf6fdacd471344d5fee634421b3ad4743af666f63f2278bac9ce5",
+      "removedExtremaFields": 11
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_ExternalWindForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_externalwindforce.json",
+      "previousBytes": 428,
+      "previousSha256": "d05bd2b84106093fd7c47ce1809e32f41dc87f6d20e68d9d43adf4bcc44e3851",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_IntraParticleForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_intraparticleforce.json",
+      "previousBytes": 1429,
+      "previousSha256": "700df41d9875b69d9d25ca24c51d218834a8d12574e7fb16a3129559832a6a03",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_LocalAccelerationForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_localaccelerationforce.json",
+      "previousBytes": 48138,
+      "previousSha256": "1bd16ff46223ad214990281cfc7b1b3cd42a9f2b7e3603506456ff6137d2571a",
+      "removedExtremaFields": 119
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_PerParticleForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_perparticleforce.json",
+      "previousBytes": 51654,
+      "previousSha256": "5c0a7d91942b59c4597e8824f16680a5575ef94c4ee93c40b71970de3b6ab7a0",
+      "removedExtremaFields": 147
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_RandomForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_randomforce.json",
+      "previousBytes": 10094,
+      "previousSha256": "2280dcd46462c3b718c79307e731d26f4f14ffc0107b0598c410a8879267045a",
+      "removedExtremaFields": 32
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_TimeVaryingForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_timevaryingforce.json",
+      "previousBytes": 735,
+      "previousSha256": "6011cdfcea985a0496c3077be2b35756ce7db7259a37e7ee8478fa1babefe0ab",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_TurbulenceForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_turbulenceforce.json",
+      "previousBytes": 1813,
+      "previousSha256": "d1c31432e3650c96de0e6f6b058074b1107f086849ffcaa3a33bc41d3be30bbc",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_ForceGenerators:C_OP_TwistAroundAxis",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_forcegenerators-c_op_twistaroundaxis.json",
+      "previousBytes": 12203,
+      "previousSha256": "aa01d0a8d9fc1f65122c95396cccc0477874a3c537dbba92d685dc549d63a9ff",
+      "removedExtremaFields": 34
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_AgeNoise",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_agenoise.json",
+      "previousBytes": 1595,
+      "previousSha256": "3a9d49a8d4468d8b586929cb16c593f0d1a13b7f961d2bf9a5a10e630de34132",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateAlongPath",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createalongpath.json",
+      "previousBytes": 1530,
+      "previousSha256": "5e8fcb9377bda2bae9feb9743011bb41bbc65b096fffde418551dd5d8ea8d3ea",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateFromParentParticles",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createfromparentparticles.json",
+      "previousBytes": 1451,
+      "previousSha256": "0f0f640cf7ddce0514f51147795c4686c9addb00ab17e36621ec6789a24eda51",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateInEpitrochoid",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createinepitrochoid.json",
+      "previousBytes": 45027,
+      "previousSha256": "d61c197eccf26515f40ed74cffbb3dec688f7b8fd9f19b1638679c22b5610f11",
+      "removedExtremaFields": 123
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateOnGrid",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createongrid.json",
+      "previousBytes": 54765,
+      "previousSha256": "d454578f0f751e2e39505248038d3fa4f5f5f97733043fe757793e5c814379f7",
+      "removedExtremaFields": 161
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateOnModel",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createonmodel.json",
+      "previousBytes": 98527,
+      "previousSha256": "76ae4cb37f733e427982e5df6d7962958047c3915f3949143655ee1f21bc165f",
+      "removedExtremaFields": 237
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateOnModelAtHeight",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createonmodelatheight.json",
+      "previousBytes": 10137,
+      "previousSha256": "02250ff060eaea4020c72a934060cf48505003d7a55c36585a164eb098951c56",
+      "removedExtremaFields": 29
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreatePhyllotaxis",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createphyllotaxis.json",
+      "previousBytes": 1948,
+      "previousSha256": "226d675539244a3e0bb35625211bab4e8dd348cd9e98ea58001b1adbacc295b6",
+      "removedExtremaFields": 8
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateSequentialPath",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createsequentialpath.json",
+      "previousBytes": 1215,
+      "previousSha256": "cf567fdcb0adaea19681b20f3ab344de7c220c9ff6512009717f972f362fa47f",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateSequentialPathV2",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createsequentialpathv2.json",
+      "previousBytes": 23432,
+      "previousSha256": "051828b4efb8b83ba674515feb7c5177499b848ca15c17694340d66cd63ae005",
+      "removedExtremaFields": 65
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateSpiralSphere",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createspiralsphere.json",
+      "previousBytes": 14684,
+      "previousSha256": "9db9e7c57b100e988c33e2611f13692b6c4a607a0a9a0480e09be60e5aaced76",
+      "removedExtremaFields": 40
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateWithinBox",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createwithinbox.json",
+      "previousBytes": 82881,
+      "previousSha256": "fa8ef5fc7f6733afc68003562fc61fd57314bf9f5b71b7d7d62c0e9076542baf",
+      "removedExtremaFields": 247
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreateWithinSphereTransform",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_createwithinspheretransform.json",
+      "previousBytes": 210160,
+      "previousSha256": "ecf158fbe7fcdbefe5a405d6279cc53b06d2719dfc3b4129e106bad2395d22f2",
+      "removedExtremaFields": 521
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_CreationNoise",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_creationnoise.json",
+      "previousBytes": 1667,
+      "previousSha256": "eeff72165d1147cf5f62c9a71ec22661c67440f69cda192fb1699026a4b31074",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_DistanceToCPInit",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_distancetocpinit.json",
+      "previousBytes": 40346,
+      "previousSha256": "a214aaae37bd56045c423cd714a6fc904ea7be8e4077e9168ed601ce0aeaed1f",
+      "removedExtremaFields": 119
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InheritFromParentParticles",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_inheritfromparentparticles.json",
+      "previousBytes": 1126,
+      "previousSha256": "71449b2f1d4e617304dc6cf52e6c2514830936f85bc5f5ad01cefc9c1571e80c",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InheritVelocity",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_inheritvelocity.json",
+      "previousBytes": 808,
+      "previousSha256": "f14d343510389c5eec961d8da98f32e03073255df39a19a4d0fbb279956a7461",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitFloat",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_initfloat.json",
+      "previousBytes": 32524,
+      "previousSha256": "a2321adc2623c9ffe1d121656036326b761cbb5f6c674dbe48fd3bc91030a07b",
+      "removedExtremaFields": 98
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitFloatCollection",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_initfloatcollection.json",
+      "previousBytes": 7466,
+      "previousSha256": "745581427f3056c85a20d77c192099cfee874889eda6bc79ca033fae842522f2",
+      "removedExtremaFields": 22
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitFromCPSnapshot",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_initfromcpsnapshot.json",
+      "previousBytes": 1495,
+      "previousSha256": "56b604ec98444b3db7d6414c37c394a972b226feb183ce7ba418ad0872ece437",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitFromParentKilled",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_initfromparentkilled.json",
+      "previousBytes": 689,
+      "previousSha256": "669e1076a5efbaa6639c49101ff09eaeadfbafb213db8c7badb0bfa6ac917b70",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitialRepulsionVelocity",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_initialrepulsionvelocity.json",
+      "previousBytes": 1372,
+      "previousSha256": "77c1195f15fb1c8e8b3d241e18df7204337f32cd1956a1e9a4fa845c026445c1",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitialVelocityNoise",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_initialvelocitynoise.json",
+      "previousBytes": 169836,
+      "previousSha256": "54baea6407be929a0ffbdc3addbc3bc9403c9c7d9c91ea6cca8afaba1be74310",
+      "removedExtremaFields": 472
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitSkinnedPositionFromCPSnapshot",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_initskinnedpositionfromcpsnapshot.json",
+      "previousBytes": 2002,
+      "previousSha256": "ab4a4ac22631c5ae97b412c31994e66fac38d84f42e5b8a3f24b784c24642832",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_InitVec",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_initvec.json",
+      "previousBytes": 63794,
+      "previousSha256": "42fa801fca15140c02d8982ccc32acd9d90649fcc60748f47f4d391188bcb235",
+      "removedExtremaFields": 175
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_MoveBetweenPoints",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_movebetweenpoints.json",
+      "previousBytes": 30047,
+      "previousSha256": "e656c9e55774084b9712afafdbbcab80d80812af2c39ef3bcb8033479a50c971",
+      "removedExtremaFields": 89
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_NormalAlignToCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_normalaligntocp.json",
+      "previousBytes": 1047,
+      "previousSha256": "cca6ac419e268c376044a1b243a5c69a37fb133fea85360a203403805f9cc370",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_NormalOffset",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_normaloffset.json",
+      "previousBytes": 995,
+      "previousSha256": "1bded2bc9f7eabdfd5e1f9b90ac792ff8fe45c19694f501e86df23c562cb5d2b",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_Orient2DRelToCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_orient2dreltocp.json",
+      "previousBytes": 1044,
+      "previousSha256": "98ea08edeb51128a6148ddaf18303e64911bd9475581eff634c5b135d08732ef",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_PositionOffset",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_positionoffset.json",
+      "previousBytes": 120216,
+      "previousSha256": "1299d4fcbb453f4b358611f52a5205a77ed81ff09276e65ae8bb443b1230e8e5",
+      "removedExtremaFields": 306
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_PositionPlaceOnGround",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_positionplaceonground.json",
+      "previousBytes": 23300,
+      "previousSha256": "048c99564f01ae2d982bd905793f18cda5bfaf2fb8d18f8230221d5daa2d7d3f",
+      "removedExtremaFields": 60
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_PositionWarp",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_positionwarp.json",
+      "previousBytes": 93440,
+      "previousSha256": "51d0fc1f0f86155ae3f0d73b3b855737b0ab7c611b191f26cf2079d348d077a5",
+      "removedExtremaFields": 237
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_PositionWarpScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_positionwarpscalar.json",
+      "previousBytes": 12986,
+      "previousSha256": "eb236522af8d9609eb7e825cdaa13884da9cb219544fd9f8bdbf808bba3c48c5",
+      "removedExtremaFields": 34
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_QuantizeFloat",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_quantizefloat.json",
+      "previousBytes": 8929,
+      "previousSha256": "26d2da9ec0d577b8ba9185dbe64d32a97e89c886d77787f8d6e7803d24592b19",
+      "removedExtremaFields": 27
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RadiusFromCPObject",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_radiusfromcpobject.json",
+      "previousBytes": 575,
+      "previousSha256": "7ad72547accca42665b2ef6bcc20db3f08e9f1b0f78b3ff7629885eadeef2239",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomColor",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_randomcolor.json",
+      "previousBytes": 11881,
+      "previousSha256": "5df34636241bab73f42c4712ac360e0fe99a65f6ec28bb9366dbc4447a35a671",
+      "removedExtremaFields": 34
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomNamedModelSequence",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_randomnamedmodelsequence.json",
+      "previousBytes": 1353,
+      "previousSha256": "efc67a6abcc06cb04cc40be67c8887aa5e7d06b3f3838f2da05c55dbf7f98376",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomSecondSequence",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_randomsecondsequence.json",
+      "previousBytes": 817,
+      "previousSha256": "8a24551c25b3d37fa8ba1788c5f6cd2bb4dd76dea9d7da07b2d171dcd42badfd",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomSequence",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_randomsequence.json",
+      "previousBytes": 1310,
+      "previousSha256": "ab1eeab5f15631ba494504e1cdcb2ff6cfa7a9031134d63daed9bbdb0f9b136d",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RandomYawFlip",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_randomyawflip.json",
+      "previousBytes": 788,
+      "previousSha256": "b8039e1a72d16a3def85fad2f1a172587c33069d55edacf8c939bb1e34eece3e",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapInitialDirectionToTransformToVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_remapinitialdirectiontotransformtovector.json",
+      "previousBytes": 1902,
+      "previousSha256": "f172726a5c14fc35eb74fb030733913dbabdb2018a8c984f6ec468c130f7192f",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapInitialTransformDirectionToRotation",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_remapinitialtransformdirectiontorotation.json",
+      "previousBytes": 1227,
+      "previousSha256": "24d4bbdf9c1c122c21188a3bc318cba41feadd3ebf56ece989aca490a6bdfd8c",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapParticleCountToScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_remapparticlecounttoscalar.json",
+      "previousBytes": 1911,
+      "previousSha256": "80ac155e49d925d3a0c01216df573094b121e8603933fc969b855d187e6ae319",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapScalarToVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_remapscalartovector.json",
+      "previousBytes": 2061,
+      "previousSha256": "d215f26edbb493342898f15a2698ddd5938fa7dff78a9788cd4f7cc7400c0433",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapTransformOrientationToRotations",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_remaptransformorientationtorotations.json",
+      "previousBytes": 1648,
+      "previousSha256": "18b38cc5d13fca98c5d26c28294e44f703cafcd25f3c569f26c86fb30839cf69",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RemapTransformToVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_remaptransformtovector.json",
+      "previousBytes": 6910,
+      "previousSha256": "30bcc08c11aae288b8157509803240ca55ce00d25fa9cd4d34d0d4e17d0d5708",
+      "removedExtremaFields": 18
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_RingWave",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_ringwave.json",
+      "previousBytes": 104168,
+      "previousSha256": "b8bff67fbd6816e5a6750cd5964a0aa3946b11f9e8fed6e48804027ac9fdbf0d",
+      "removedExtremaFields": 296
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SequenceFromCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_sequencefromcp.json",
+      "previousBytes": 738,
+      "previousSha256": "74e64f64272b6ce52a3b61629aa581cb56868e6a4051344a8cc9162a3f807851",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SequenceLifeTime",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_sequencelifetime.json",
+      "previousBytes": 799,
+      "previousSha256": "dbeb9d98c69cd5d56aa44cf2ab4ed4b205910b8bbe46f2011719eab2a213d2a7",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SetAttributeToScalarExpression",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_setattributetoscalarexpression.json",
+      "previousBytes": 36075,
+      "previousSha256": "b81220c811ad3576cdc70146886ca01a6ae21289383de7897af1306e31ec2136",
+      "removedExtremaFields": 102
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SetHitboxToClosest",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_sethitboxtoclosest.json",
+      "previousBytes": 47962,
+      "previousSha256": "b87e580ad08397cf9a5e506e3342a2f5a1509471d084184c9e622606fb14aaa3",
+      "removedExtremaFields": 115
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SetHitboxToModel",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_sethitboxtomodel.json",
+      "previousBytes": 46031,
+      "previousSha256": "642067fdadc1b01c6aaf488fc838d07de0af614153bb1747061beb0696016583",
+      "removedExtremaFields": 115
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_SetVectorAttributeToVectorExpression",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_setvectorattributetovectorexpression.json",
+      "previousBytes": 118466,
+      "previousSha256": "9a8fe6f5fd734662c9a328276df22ed02ac503f0244fb3b29e08f7d5c4501c79",
+      "removedExtremaFields": 295
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_StatusEffectCitadel",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_statuseffectcitadel.json",
+      "previousBytes": 3452,
+      "previousSha256": "c6632f27f3ffeddd2c71357ef2d50954615c91f76875053c07a5646019656245",
+      "removedExtremaFields": 15
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_VelocityFromCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_velocityfromcp.json",
+      "previousBytes": 1945,
+      "previousSha256": "7922e6c377d01f9b9721310554f8dae43c03dc47472ea08cbd59f27667f0c3db",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_VelocityFromNormal",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_velocityfromnormal.json",
+      "previousBytes": 965,
+      "previousSha256": "2eac2afa0e2ebc8ae5d45b21d9cf4eb30d13b001cc14a427ef2f65944a50899c",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_VelocityRadialRandom",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_velocityradialrandom.json",
+      "previousBytes": 20792,
+      "previousSha256": "8823d178e30548b1ff699cc75bc72b144eee5187a36629c52c307dbd6211edb4",
+      "removedExtremaFields": 57
+    },
+    {
+      "classStage": "m_Initializers:C_INIT_VelocityRandom",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_initializers-c_init_velocityrandom.json",
+      "previousBytes": 111086,
+      "previousSha256": "7476a78f7eaa10167242d61e1a4ca5948ad2b95ff7ab705ff974d68362c355af",
+      "removedExtremaFields": 263
+    },
+    {
+      "classStage": "m_Operators:C_OP_AlphaDecay",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_alphadecay.json",
+      "previousBytes": 1173,
+      "previousSha256": "990cbb2b207b4777881dde061bacdaf154d226a4b5a14f23f21a6a489eb067af",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_BasicMovement",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_basicmovement.json",
+      "previousBytes": 68770,
+      "previousSha256": "34ce76a040a87a7880dfccfebc493a5a6bb48a987a182e1c340369f053be8298",
+      "removedExtremaFields": 195
+    },
+    {
+      "classStage": "m_Operators:C_OP_CalculateVectorAttribute",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_calculatevectorattribute.json",
+      "previousBytes": 1877,
+      "previousSha256": "d7b75ed0e444f9ae647b18ff84cbae33b418a8f1ed5737b84405f9d51e8cee91",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_ClampScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_clampscalar.json",
+      "previousBytes": 20527,
+      "previousSha256": "249a083a1c25afc6cd0ee48d54a1512335e65407a9e34058c406fd6950c263bc",
+      "removedExtremaFields": 62
+    },
+    {
+      "classStage": "m_Operators:C_OP_ClampVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_clampvector.json",
+      "previousBytes": 47851,
+      "previousSha256": "c8606629c4a2b87f0a9e94a1f10744d23b3c7587dd727cc07cfa6125e91aef41",
+      "removedExtremaFields": 116
+    },
+    {
+      "classStage": "m_Operators:C_OP_ColorInterpolate",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_colorinterpolate.json",
+      "previousBytes": 2926,
+      "previousSha256": "021861efefd98f8cc72ec8f9e031bf737a3cccce35511ab7d5b4db3c896986d3",
+      "removedExtremaFields": 8
+    },
+    {
+      "classStage": "m_Operators:C_OP_ColorInterpolateRandom",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_colorinterpolaterandom.json",
+      "previousBytes": 690,
+      "previousSha256": "b342d7014e0bd78c4394aef35de936400c171edcb23f2dddbd3eeeeb2973acf7",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_ControlpointLight",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_controlpointlight.json",
+      "previousBytes": 1139,
+      "previousSha256": "4649e6eda94740ca2dbf392d3c03b48d125ba225e23cb92ff5f9740ef69bd45c",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_CPOffsetToPercentageBetweenCPs",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_cpoffsettopercentagebetweencps.json",
+      "previousBytes": 971,
+      "previousSha256": "78b63dc6705e4ed5a2d8ded6913e19926817338ef4286034cf670498e5ad3b5a",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_CycleScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_cyclescalar.json",
+      "previousBytes": 1372,
+      "previousSha256": "f02387e2e9ce0eecb1e233106308700a88f82dcbff1eb34ac39a4c369ca854fe",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_DampenToCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_dampentocp.json",
+      "previousBytes": 1453,
+      "previousSha256": "d3d138f4217db6d30b25533aa48e7b92191ad2b133a32487e94053df0b3c83ed",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_Decay",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_decay.json",
+      "previousBytes": 11682,
+      "previousSha256": "57b4007618785f20afdcbfd97dca08431baea40bcbf64e4a6b3564c6d4a02a81",
+      "removedExtremaFields": 31
+    },
+    {
+      "classStage": "m_Operators:C_OP_DecayOffscreen",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_decayoffscreen.json",
+      "previousBytes": 9099,
+      "previousSha256": "92076a4cdbf85e98cdd9a73ea5e4631b484175e8529cbcbaec42e84b68b6b53f",
+      "removedExtremaFields": 28
+    },
+    {
+      "classStage": "m_Operators:C_OP_DistanceBetweenTransforms",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_distancebetweentransforms.json",
+      "previousBytes": 40727,
+      "previousSha256": "1f909ed931c4903997cf7fbc600884288d94530b631a0fe151ef1cdc14b6c626",
+      "removedExtremaFields": 119
+    },
+    {
+      "classStage": "m_Operators:C_OP_DistanceCull",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_distancecull.json",
+      "previousBytes": 12996,
+      "previousSha256": "8689fc2737305842809b0c0dad4eec7741c3ceb9d38321f1de06f2f52eed1a53",
+      "removedExtremaFields": 31
+    },
+    {
+      "classStage": "m_Operators:C_OP_DistanceToTransform",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_distancetotransform.json",
+      "previousBytes": 41762,
+      "previousSha256": "04cced114638a3866656bc4d7ac45610450547b9e3a6850871949d4765986b3c",
+      "removedExtremaFields": 118
+    },
+    {
+      "classStage": "m_Operators:C_OP_EndCapDecay",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_endcapdecay.json",
+      "previousBytes": 410,
+      "previousSha256": "908a5ffeb7774df3f014713443030cc8539817029a39b51f35422e4024a35f5e",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_EndCapTimedDecay",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_endcaptimeddecay.json",
+      "previousBytes": 22832,
+      "previousSha256": "b9b391e64dad4063d84c92398c1c0234b3741ea0880ae30d4da5631d47af6e9f",
+      "removedExtremaFields": 58
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeAndKill",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_fadeandkill.json",
+      "previousBytes": 1951,
+      "previousSha256": "0852b75f9f8899cd64da7fc43370db4b70e0ce51fdb43644052ce4040de1b923",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeAndKillForTracers",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_fadeandkillfortracers.json",
+      "previousBytes": 1187,
+      "previousSha256": "93a5d25d05d004eb47e4a17d2d971ca9233fe423c3fff4c566d0fb69b0ee0644",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeIn",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_fadein.json",
+      "previousBytes": 1072,
+      "previousSha256": "d585fdd797a3cee9809812630a7af400b7055cb3a44e9981926cce1020586464",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeInSimple",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_fadeinsimple.json",
+      "previousBytes": 984,
+      "previousSha256": "297dd0c3b41776d2e02786ec0fb2507b96aa19cd429767eae4ad848c2dbd7fe1",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeOut",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_fadeout.json",
+      "previousBytes": 1417,
+      "previousSha256": "ca11772f38dd98c00c36e56022d91f09df84705500e2cf8c3a47cf17edb2ee14",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_FadeOutSimple",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_fadeoutsimple.json",
+      "previousBytes": 975,
+      "previousSha256": "54d680be392c225e380618a6d22c604702e794a6d9fafbbc41e8a5065111c545",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_InheritFromParentParticles",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_inheritfromparentparticles.json",
+      "previousBytes": 592,
+      "previousSha256": "c21956a1adb2dbc286fda15d589bbcb61bcb132672424386670233ec6ce0ca43",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_InheritFromParentParticlesV2",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_inheritfromparentparticlesv2.json",
+      "previousBytes": 19606,
+      "previousSha256": "080ca403409f827ede6f29923bac54e964cd2e9ed17f7e0ceb7dfe3b56be390e",
+      "removedExtremaFields": 59
+    },
+    {
+      "classStage": "m_Operators:C_OP_InterpolateRadius",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_interpolateradius.json",
+      "previousBytes": 11766,
+      "previousSha256": "688a0953db85560fd1cbd98cf03085d0349d10c19456237081528db04a46b3dc",
+      "removedExtremaFields": 39
+    },
+    {
+      "classStage": "m_Operators:C_OP_LagCompensation",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_lagcompensation.json",
+      "previousBytes": 391,
+      "previousSha256": "c087161c7dfbf169abb420fa1c84df0c2b5fa7d420ced4a574c606dc2ba2ef63",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_LerpEndCapScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_lerpendcapscalar.json",
+      "previousBytes": 1160,
+      "previousSha256": "4e36bd62d07728a6735aa05c95ea7a896b4936d9c5ad75c497c66cc13e6bcc8f",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_LerpEndCapVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_lerpendcapvector.json",
+      "previousBytes": 1183,
+      "previousSha256": "27512299bfa4ec17e85bafa997d684be560f986f245e0eca4fb74cc912500d3e",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_LerpScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_lerpscalar.json",
+      "previousBytes": 11600,
+      "previousSha256": "6e784e3e879eec006b7747194be658f3f7cb62d62fc483dcb58f864f624bf0a8",
+      "removedExtremaFields": 32
+    },
+    {
+      "classStage": "m_Operators:C_OP_LerpToInitialPosition",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_lerptoinitialposition.json",
+      "previousBytes": 10899,
+      "previousSha256": "b4eebea226199534b3a6d06da14090569eb95034a48076c178096f2fa35565e1",
+      "removedExtremaFields": 33
+    },
+    {
+      "classStage": "m_Operators:C_OP_LerpVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_lerpvector.json",
+      "previousBytes": 11702,
+      "previousSha256": "739901b687eb4c037d4f131521015e3ab3ae189cc306ffecaca55f54652091b9",
+      "removedExtremaFields": 37
+    },
+    {
+      "classStage": "m_Operators:C_OP_LockToBone",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_locktobone.json",
+      "previousBytes": 38246,
+      "previousSha256": "10496470a3875a7df0076273001c9d3abd8a724be09cc966446dfe5dc2f500c1",
+      "removedExtremaFields": 97
+    },
+    {
+      "classStage": "m_Operators:C_OP_LockToSavedSequentialPathV2",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_locktosavedsequentialpathv2.json",
+      "previousBytes": 2275,
+      "previousSha256": "c045ef23ed12c1e91d5a90a2b721a9b8f3f76e0e3a3cc48da96dbc64cbccfb1b",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_MaintainSequentialPath",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_maintainsequentialpath.json",
+      "previousBytes": 13256,
+      "previousSha256": "85e2aea96bfc88893067c8529e55f1a9a3341ec6458de79b313fa9da805c2634",
+      "removedExtremaFields": 36
+    },
+    {
+      "classStage": "m_Operators:C_OP_MaxVelocity",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_maxvelocity.json",
+      "previousBytes": 31142,
+      "previousSha256": "3303b73f383ac16c1d3b98c25b85362468c056b648e6b48125acb27071785ac8",
+      "removedExtremaFields": 92
+    },
+    {
+      "classStage": "m_Operators:C_OP_ModelCull",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_modelcull.json",
+      "previousBytes": 555,
+      "previousSha256": "d0fefdd8dc711e28ecb77c3371867d88e732460107f6085b48f64378b8949271",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_MovementMaintainOffset",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_movementmaintainoffset.json",
+      "previousBytes": 876,
+      "previousSha256": "3b9a96adadf59cc689c4dd2eb57e1f7d71c3df6454c4dbc44189dbc5983122f5",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_MovementPlaceOnGround",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_movementplaceonground.json",
+      "previousBytes": 13262,
+      "previousSha256": "30606c9c4e83a34b6412a301c462a9a4895f1f16ca83246b5f9862d840291c2c",
+      "removedExtremaFields": 35
+    },
+    {
+      "classStage": "m_Operators:C_OP_MovementRotateParticleAroundAxis",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_movementrotateparticlearoundaxis.json",
+      "previousBytes": 79510,
+      "previousSha256": "674046cb8c72e304fa451cb89a7b95f26828e30eaeedf9cbf4feacf0f72ef75c",
+      "removedExtremaFields": 196
+    },
+    {
+      "classStage": "m_Operators:C_OP_MovementSkinnedPositionFromCPSnapshot",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_movementskinnedpositionfromcpsnapshot.json",
+      "previousBytes": 937,
+      "previousSha256": "dc73f5b2f3f1f3fc551dd4c91f28ecdbe87725ccae9f251ffb27d26d0bce9679",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_MoveToHitbox",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_movetohitbox.json",
+      "previousBytes": 1916,
+      "previousSha256": "81a274742ecff9b6f86ab0a2e58418f920d53dfb4f3694486b2aca0d214dcd15",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_Noise",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_noise.json",
+      "previousBytes": 1608,
+      "previousSha256": "9f26e929dc5eae0fac2f3f48ee482392869359f935ea117591183303041b0a6b",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_NormalizeVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_normalizevector.json",
+      "previousBytes": 601,
+      "previousSha256": "2821d81100e0369d37ae89910361c006b2fd8b252109d6b34764316d788ddffe",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_NormalLock",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_normallock.json",
+      "previousBytes": 648,
+      "previousSha256": "50734f0699132df954bcb2d3096296594b230657f99a3c0b8cae56716c316664",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_Orient2DRelToCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_orient2dreltocp.json",
+      "previousBytes": 1891,
+      "previousSha256": "fd964f027f1fc2b1c013191f8e0000530ff26d7eab86d77f4af2418ff67f717d",
+      "removedExtremaFields": 8
+    },
+    {
+      "classStage": "m_Operators:C_OP_OrientTo2dDirection",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_orientto2ddirection.json",
+      "previousBytes": 836,
+      "previousSha256": "835b8f13f22c2559d27061bd523918001912e8082d0d46f34588f234c481487b",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_OscillateScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_oscillatescalar.json",
+      "previousBytes": 3225,
+      "previousSha256": "02882788789c026c27c2fe84d56f67f61ed8debce1667fead5880ffe52e9ddd0",
+      "removedExtremaFields": 13
+    },
+    {
+      "classStage": "m_Operators:C_OP_OscillateScalarSimple",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_oscillatescalarsimple.json",
+      "previousBytes": 1308,
+      "previousSha256": "e996aa1de14a58b445e053e53f684150ca1d9d800451fed8f9e43d27b3009be8",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_OscillateVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_oscillatevector.json",
+      "previousBytes": 23927,
+      "previousSha256": "44ea6da5d98af8700d169a8a4a3263c2181ea354b271774680d4c4408ba259b0",
+      "removedExtremaFields": 69
+    },
+    {
+      "classStage": "m_Operators:C_OP_OscillateVectorSimple",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_oscillatevectorsimple.json",
+      "previousBytes": 1510,
+      "previousSha256": "a9e317b425443bdefa88452212c82c29ec1408247b3d35184184d0ced02c0896",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_PercentageBetweenTransforms",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_percentagebetweentransforms.json",
+      "previousBytes": 2164,
+      "previousSha256": "c084bbca793593c3a4f7bdd922fbcdf1322bb786e558f6fb84c639b877f1ceec",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_PinParticleToCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_pinparticletocp.json",
+      "previousBytes": 53971,
+      "previousSha256": "43361a68eafb2fe073fc5b362b7abe56365b56c365420a19d2a6ed2cd01da918",
+      "removedExtremaFields": 145
+    },
+    {
+      "classStage": "m_Operators:C_OP_PlaneCull",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_planecull.json",
+      "previousBytes": 1103,
+      "previousSha256": "f0b649d1d97256ece02e2da9cc2fb66a95c332cc28995a96ddc6042832de2462",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_PositionLock",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_positionlock.json",
+      "previousBytes": 45325,
+      "previousSha256": "1abd0dc0e1423b2f881c3e02482f5569d24a640eef3a12b05764290335cee90f",
+      "removedExtremaFields": 121
+    },
+    {
+      "classStage": "m_Operators:C_OP_RadiusDecay",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_radiusdecay.json",
+      "previousBytes": 809,
+      "previousSha256": "974e4b5a35e2fd518100ccd28f502ebfbd919b9faf202d981709fb88412a1367",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_RampScalarLinear",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_rampscalarlinear.json",
+      "previousBytes": 1836,
+      "previousSha256": "7e3049edd842c57f5695f7ae7fc38efa09be3795e382b0853ed41be6f89c7052",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Operators:C_OP_RampScalarLinearSimple",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_rampscalarlinearsimple.json",
+      "previousBytes": 11374,
+      "previousSha256": "0692913954d6a2a14befd2340e062cc01f3574b83271fa7e34991e75c55edd92",
+      "removedExtremaFields": 35
+    },
+    {
+      "classStage": "m_Operators:C_OP_RampScalarSpline",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_rampscalarspline.json",
+      "previousBytes": 10778,
+      "previousSha256": "470ae699b939510814ed2d3d957b99cf55ea4c21af16f9157c62afdfa01786cc",
+      "removedExtremaFields": 34
+    },
+    {
+      "classStage": "m_Operators:C_OP_RampScalarSplineSimple",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_rampscalarsplinesimple.json",
+      "previousBytes": 1080,
+      "previousSha256": "78350df5a65efac432230d0d5d7fc8e54658286fda6414dd0b4f9fffc8b01b44",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_ReinitializeScalarEndCap",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_reinitializescalarendcap.json",
+      "previousBytes": 851,
+      "previousSha256": "5fe35b5230ec920d71a7165d42c35cd19c74a50c12183f47eb3554819692821f",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapControlPointDirectionToVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapcontrolpointdirectiontovector.json",
+      "previousBytes": 386,
+      "previousSha256": "9b82d17aacd4daed9ffa936697f72058d1863512711dbc1cfc6dd4dfd4d95465",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapControlPointOrientationToRotation",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapcontrolpointorientationtorotation.json",
+      "previousBytes": 1181,
+      "previousSha256": "a7e7b6549bc9955eb39722d37352c856072a11a5cc2c6eb4a95e421e7e06dbef",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapCPtoScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapcptoscalar.json",
+      "previousBytes": 1893,
+      "previousSha256": "f4fe43265aedb6a508be2484a50e7e6218165bb0d8582f4daded0f928b3e82f2",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapCPtoVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapcptovector.json",
+      "previousBytes": 2776,
+      "previousSha256": "4f406ae9749770c7010d4226549b8201770372c85db7f5323032ca86c3e759ca",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapCPVelocityToVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapcpvelocitytovector.json",
+      "previousBytes": 711,
+      "previousSha256": "356b7fb8995e0bb232a3ae9cc6f396e933ee1d60cc64e9438c4d01df2e0d7564",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapCrossProductOfTwoVectorsToVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapcrossproductoftwovectorstovector.json",
+      "previousBytes": 81054,
+      "previousSha256": "c04fe559144765b059ca7e1bbfa12965d11b12aea1d869bfc09de90bb7d8d78d",
+      "removedExtremaFields": 217
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapDirectionToCPToVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapdirectiontocptovector.json",
+      "previousBytes": 1470,
+      "previousSha256": "24ad139240f5603aa43415a9bb9827ea7e330df6853ee607e9dad595a2a8e7c4",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapDistanceToLineSegmentToScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapdistancetolinesegmenttoscalar.json",
+      "previousBytes": 1034,
+      "previousSha256": "ebcf2ac4632b2abe5d7c3e6894aac5c7e311d2db574600d4a9d323dd8dce1b8d",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapParticleCountOnScalarEndCap",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapparticlecountonscalarendcap.json",
+      "previousBytes": 1081,
+      "previousSha256": "ca664b92c5e8a1dba15054f462095c4a9c37740e64c2f99101b4991870575d76",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapscalar.json",
+      "previousBytes": 1381,
+      "previousSha256": "65ed03e464e08b70a6a30a3353bb2de7a07d91631b6b60c0a2586d8d17d51934",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapSpeed",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapspeed.json",
+      "previousBytes": 1827,
+      "previousSha256": "eeb6081757c195032e8356ef6d5d026575f650fb16eea9c48fa7f1584be2f325",
+      "removedExtremaFields": 5
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapTransformOrientationToRotations",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remaptransformorientationtorotations.json",
+      "previousBytes": 1509,
+      "previousSha256": "8a702ee2de70480844942ba28ecb43dccb4aee85f415076611ab02d841081828",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapTransformOrientationToYaw",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remaptransformorientationtoyaw.json",
+      "previousBytes": 1239,
+      "previousSha256": "d026f2eba437d6ac85899181ef0d56c2c60b15e6a9def430e588972830472069",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapTransformToVelocity",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remaptransformtovelocity.json",
+      "previousBytes": 848,
+      "previousSha256": "fe4375c6c0829d4b1974da9e131990b9ebe579656774286413d69f48a8772651",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapVectorComponentToScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapvectorcomponenttoscalar.json",
+      "previousBytes": 727,
+      "previousSha256": "5f6c71fc75aa85a0f6d2db2211d6ddfa859e75be43fa15a69feec597da442719",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapVectortoCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapvectortocp.json",
+      "previousBytes": 1180,
+      "previousSha256": "f6c9c623d1f26f0390baa4dfdc9bab55d41bcd2f4c4582d0498c7d13a2f81a3f",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapVelocityToVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapvelocitytovector.json",
+      "previousBytes": 968,
+      "previousSha256": "1d8eff50c86871c07258b71070de40d9dc600fb105bf6cf27765214c18c8e3f7",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_RemapVisibilityScalar",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_remapvisibilityscalar.json",
+      "previousBytes": 1013,
+      "previousSha256": "d3fea24bb698121a0c4bbf911a0d1128eb518e77ecb844e63ce7e59c5a106535",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_RestartAfterDuration",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_restartafterduration.json",
+      "previousBytes": 1024,
+      "previousSha256": "76c90479eab27708ee0d7c4e73001f15ede8c81b7ff002b495d7a26b99ed8c17",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_RotateVector",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_rotatevector.json",
+      "previousBytes": 12018,
+      "previousSha256": "07262eff4322a3de119624905825f49e8c268030233b6a276196d855417db4e1",
+      "removedExtremaFields": 35
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetAttributeToScalarExpression",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setattributetoscalarexpression.json",
+      "previousBytes": 46755,
+      "previousSha256": "09767e2e30c502d04bb947846727ca867e6e8f8edceb2aec23d6ec26f56c482b",
+      "removedExtremaFields": 132
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetChildControlPoints",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setchildcontrolpoints.json",
+      "previousBytes": 11152,
+      "previousSha256": "e916cd173f9afb31e98b77ec3c5dffcf53f4d6973d43bd2a1bec98df2cd4fcab",
+      "removedExtremaFields": 30
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetControlPointsToModelParticles",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setcontrolpointstomodelparticles.json",
+      "previousBytes": 1074,
+      "previousSha256": "a20cd26e94e71c1b70a27a3aff33304e4c1c5e114e4006eef5129824bc7c6a9c",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetControlPointsToParticle",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setcontrolpointstoparticle.json",
+      "previousBytes": 780,
+      "previousSha256": "fd3061ea7adccb7e855026611ecb49a8657e4f093fb5e12eaaa28699a196ef1d",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetCPOrientationToDirection",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setcporientationtodirection.json",
+      "previousBytes": 810,
+      "previousSha256": "ecbfcb09eb55676180cda33ba656317c1772f9bb6c97a96f242e689047cd6382",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetFloat",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setfloat.json",
+      "previousBytes": 34044,
+      "previousSha256": "a46aba2bd91fe0dd0efb474aa35bd85f917f4bfe4a0efffa454d978106e5537f",
+      "removedExtremaFields": 105
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetFloatAttributeToVectorExpression",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setfloatattributetovectorexpression.json",
+      "previousBytes": 99919,
+      "previousSha256": "0deebaef522b0fe9f4c93502b1fa05e178783bf95de0ce66d964d9105c1c1472",
+      "removedExtremaFields": 240
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetFloatCollection",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setfloatcollection.json",
+      "previousBytes": 12956,
+      "previousSha256": "04d658ef9051f7384648374c79e1f199b6c5605d2978e472047322538b1d43ea",
+      "removedExtremaFields": 33
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetFromCPSnapshot",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setfromcpsnapshot.json",
+      "previousBytes": 1002,
+      "previousSha256": "0dfbffb223d6bc56b86e058749ff0061e5c150d54cd0a3c438ffc049737f41c5",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetPerChildControlPoint",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setperchildcontrolpoint.json",
+      "previousBytes": 10155,
+      "previousSha256": "85f6c024d45dc667ac7c2080adf05f0fefaa214b6eeb15c9b9af0a9eab58cfa5",
+      "removedExtremaFields": 29
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetPerChildControlPointFromAttribute",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setperchildcontrolpointfromattribute.json",
+      "previousBytes": 1192,
+      "previousSha256": "f4642110ede3e987b8296351371c3b6c5e9b956f5c1e9e9668a299cabc5b75a9",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetToCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_settocp.json",
+      "previousBytes": 963,
+      "previousSha256": "3dd816b8867cb2c58f168f7c0788358ceed16808ecd05ae05fb2f270ec13ab40",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetUserEvent",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setuserevent.json",
+      "previousBytes": 36974,
+      "previousSha256": "473d65bcf6036a3bc741680dc3896292599afd475af9da054a0d0a136d6432c7",
+      "removedExtremaFields": 87
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetVec",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setvec.json",
+      "previousBytes": 74747,
+      "previousSha256": "1ace9a3c7ad72068db7f5d8d87276acc38a9eac5de537434a96b8944c93c81bd",
+      "removedExtremaFields": 206
+    },
+    {
+      "classStage": "m_Operators:C_OP_SetVectorAttributeToVectorExpression",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_setvectorattributetovectorexpression.json",
+      "previousBytes": 115144,
+      "previousSha256": "b7ca72a84f59f4c208d022d869af4d2e4a0a843c68748c0f9a1af861f0f07cc1",
+      "removedExtremaFields": 292
+    },
+    {
+      "classStage": "m_Operators:C_OP_SnapshotRigidSkinToBones",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_snapshotrigidskintobones.json",
+      "previousBytes": 622,
+      "previousSha256": "2014d14cd321f2dadd47eb5befe4987a5d71adfaf4f588232c119484facc8dbc",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_Operators:C_OP_Spin",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_spin.json",
+      "previousBytes": 11896,
+      "previousSha256": "b2bc6de9b5521b55521c4521f26966f2156baa53b52294d8f7c98a4d1d25ce97",
+      "removedExtremaFields": 34
+    },
+    {
+      "classStage": "m_Operators:C_OP_SpinUpdate",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_spinupdate.json",
+      "previousBytes": 10775,
+      "previousSha256": "f09677b484d3596cc9c0ecac7e5525ecc794dc24f318bc603a0e542f77357e1e",
+      "removedExtremaFields": 35
+    },
+    {
+      "classStage": "m_Operators:C_OP_SpinYaw",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_spinyaw.json",
+      "previousBytes": 10895,
+      "previousSha256": "e67d7c6c6c1b3790740d95beaf010defb13de2a0371cf026a0b6c50c594a54b7",
+      "removedExtremaFields": 31
+    },
+    {
+      "classStage": "m_Operators:C_OP_VectorNoise",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_vectornoise.json",
+      "previousBytes": 13673,
+      "previousSha256": "fdd984a444b0613b0d07a8cfd16c1d58aa73c25f06300e0e490ff3bc209cfc14",
+      "removedExtremaFields": 39
+    },
+    {
+      "classStage": "m_Operators:C_OP_VelocityDecay",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_velocitydecay.json",
+      "previousBytes": 569,
+      "previousSha256": "95f28e00e4dbc50526120b356c226a935b378bd5223c414b22a4801974ce39c4",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Operators:C_OP_VelocityMatchingForce",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_operators-c_op_velocitymatchingforce.json",
+      "previousBytes": 766,
+      "previousSha256": "6c935d9dbe9d147060b04b72fcae5c6b8f76e9c2c47f435f993e6e79a63a5d01",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_ChooseRandomChildrenInGroup",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_chooserandomchildreningroup.json",
+      "previousBytes": 11164,
+      "previousSha256": "bdc71803b70b4f1cfb384d4f9742bb4ab48d1c92fb0d9f109457ef39ba71243f",
+      "removedExtremaFields": 28
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_ControlPointToRadialScreenSpace",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_controlpointtoradialscreenspace.json",
+      "previousBytes": 393,
+      "previousSha256": "bb73f8399df807b9ab9c14c5ccd7fafb3c6faa16ee750c9ed196e0682c415c35",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_DistanceBetweenCPsToCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_distancebetweencpstocp.json",
+      "previousBytes": 1659,
+      "previousSha256": "06f407c277de7d7c21de256b7bda2fbd3a9d83ab5307ba03a131754dbb68b2ed",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_EnableChildrenFromParentParticleCount",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_enablechildrenfromparentparticlecount.json",
+      "previousBytes": 635,
+      "previousSha256": "6cfaed2634f379197137ffd3f963b76b5f566fbfc7be3ff2a1663d2428ff638c",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_ForceControlPointStub",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_forcecontrolpointstub.json",
+      "previousBytes": 607,
+      "previousSha256": "1999c575bc519214873d911fa10907c0ddb85805349f4a3da32a31396adbd1dd",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_HSVShiftToCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_hsvshifttocp.json",
+      "previousBytes": 1072,
+      "previousSha256": "27e809348a3f179983745942e1dec1e876f0df57023b7ae842fcb76a58081c72",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_LightningSnapshotGenerator",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_lightningsnapshotgenerator.json",
+      "previousBytes": 68755,
+      "previousSha256": "501c53fc8d19061052fd6aa9b6198bc86bf25f2d837a0d7909d3793577ca1bca",
+      "removedExtremaFields": 199
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_RemapCPtoCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_remapcptocp.json",
+      "previousBytes": 1766,
+      "previousSha256": "4ef5ca5053da4d55235ae79f5e870294585d66bda8a9287b3ae2286b1538f6d1",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_RemapSpeedtoCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_remapspeedtocp.json",
+      "previousBytes": 1849,
+      "previousSha256": "356b1d663088e1abd034c0abc1fe84fdbc344b6c36893f46536159dcb512bfe1",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_RepeatedTriggerChildGroup",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_repeatedtriggerchildgroup.json",
+      "previousBytes": 29740,
+      "previousSha256": "7688123a77fee1da3a45293e82b57e4d8161a7c4b2e8df9bf9696ba11e82170f",
+      "removedExtremaFields": 85
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SelectivelyEnableChildren",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_selectivelyenablechildren.json",
+      "previousBytes": 31932,
+      "previousSha256": "f2b03f8b0be8793ef28e0d4c852908db50f9b8a306d6a247050fe1f6214eb109",
+      "removedExtremaFields": 87
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointFieldToScalarExpression",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointfieldtoscalarexpression.json",
+      "previousBytes": 44561,
+      "previousSha256": "e756d53eb877743a9658c06d93c50acee667d676d84c9dfc9cfe9571f02560cc",
+      "removedExtremaFields": 134
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointOrientation",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointorientation.json",
+      "previousBytes": 1891,
+      "previousSha256": "d6154bd231bd90f846f007f5af65ef0ae20d74b96621c3ee3e6c46993178a200",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointOrientationToCPVelocity",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointorientationtocpvelocity.json",
+      "previousBytes": 835,
+      "previousSha256": "65016c3d7fc81475212591c50f05e6f53e02938e40966b246f37dfaab3aaf99d",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointPositions",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointpositions.json",
+      "previousBytes": 3048,
+      "previousSha256": "749f1b1c74f2abcc10c99169d992630e100c1cb01353e4708deb94ff1ecdbbca",
+      "removedExtremaFields": 7
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointPositionToRandomActiveCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointpositiontorandomactivecp.json",
+      "previousBytes": 958,
+      "previousSha256": "b7ea1f787c39086923bd9c1759a82cd2690bdb7df2f3b1c4a29c671db20e73ea",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointRotation",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointrotation.json",
+      "previousBytes": 58576,
+      "previousSha256": "4f59deb46cd14a7c6827316765489f50d5a85c515f0d5da34bc3f3df44108da1",
+      "removedExtremaFields": 159
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToCenter",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtocenter.json",
+      "previousBytes": 674,
+      "previousSha256": "0425ab0bf4781b2184a8fb9c87118f53834778ef5b017e44d008ed58f78b4d9d",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToHMD",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtohmd.json",
+      "previousBytes": 435,
+      "previousSha256": "2f82227a7da80b84607a6d19e0738e2ea5cb4664c7cfc50152036e0cc444264e",
+      "removedExtremaFields": 0
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToImpactPoint",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtoimpactpoint.json",
+      "previousBytes": 1298,
+      "previousSha256": "d2bfd8eda8b6a4c07c4aef6c5240522ad8d6c6feab52a1e7fdd0ce67c254542c",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToPlayer",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtoplayer.json",
+      "previousBytes": 725,
+      "previousSha256": "cbb06bc06e803f6afb54070fb58e62da781544dc14926f2bec766afbef16353b",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetControlPointToVectorExpression",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtovectorexpression.json",
+      "previousBytes": 113366,
+      "previousSha256": "3a926cc73586e6b632b9a1d3244e874c0cbafac2f74e8f85597f7b6a45f6a57b",
+      "removedExtremaFields": 292
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetCPOrientationToPointAtCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setcporientationtopointatcp.json",
+      "previousBytes": 1585,
+      "previousSha256": "7771782cd1ba31d98eefbe292192b5dc52a2a6435d59631948f76b49c96b930f",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetParentControlPointsToChildCP",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setparentcontrolpointstochildcp.json",
+      "previousBytes": 1160,
+      "previousSha256": "50070df9797b10fdc57f368cd28c79da7a1d810d4f43a125a77fb8f0d5d23de4",
+      "removedExtremaFields": 3
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetRandomControlPointPosition",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setrandomcontrolpointposition.json",
+      "previousBytes": 1364,
+      "previousSha256": "56c64d53429a78162f2c99da3a04cb221c66db6aa83d28e39c6980599019fb53",
+      "removedExtremaFields": 2
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_SetSingleControlPointPosition",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_setsinglecontrolpointposition.json",
+      "previousBytes": 55167,
+      "previousSha256": "733315f482023e704fad3136713f8b16ee5d78dd97db7968fae7e993cb7b1be9",
+      "removedExtremaFields": 147
+    },
+    {
+      "classStage": "m_PreEmissionOperators:C_OP_StopAfterCPDuration",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_preemissionoperators-c_op_stopaftercpduration.json",
+      "previousBytes": 10842,
+      "previousSha256": "c227b92634ee4b5ac737f3c2fa861adc375498b2f21b1358125ef07f73f9f2f1",
+      "removedExtremaFields": 31
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderBlobs",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderblobs.json",
+      "previousBytes": 34111,
+      "previousSha256": "f7827d0f07480d9d8c1bd0b245fc4ccd3cb8e0f8c8b10f18a16c0dc0337c9b4b",
+      "removedExtremaFields": 101
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderCables",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_rendercables.json",
+      "previousBytes": 37515,
+      "previousSha256": "b935b464ba5d709740c43b70befb376352f3fbe86d0bc0c2b00498879396dc3c",
+      "removedExtremaFields": 95
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderDeferredLight",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderdeferredlight.json",
+      "previousBytes": 37038,
+      "previousSha256": "fe7e91a0cb7a21a980ccbcf4953a8fcba980f9ab8a1a5440cd8201f99f724f12",
+      "removedExtremaFields": 94
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderLightBeam",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderlightbeam.json",
+      "previousBytes": 77384,
+      "previousSha256": "f220df1bbbdde98a8c0bff47404bf32ff211e8748c8a967e095deb7af296747e",
+      "removedExtremaFields": 200
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderModels",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_rendermodels.json",
+      "previousBytes": 274613,
+      "previousSha256": "c768e4b382b7a1800d075d5182c4774224b1f7d317dc7852418aade1e03a9058",
+      "removedExtremaFields": 691
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderOmni2Light",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderomni2light.json",
+      "previousBytes": 107976,
+      "previousSha256": "770bee4e8cd548b97c6122206dd93bc09a99148441381b8f9770c409371f739f",
+      "removedExtremaFields": 295
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderProjected",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderprojected.json",
+      "previousBytes": 82416,
+      "previousSha256": "d5399cca580b3d38c9333831b7b71120ac884f8be7adfb59a18a7d1e1a2789bc",
+      "removedExtremaFields": 206
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderRopes",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderropes.json",
+      "previousBytes": 369869,
+      "previousSha256": "995c715a7a03e12c0057cd131320afad4fc0674ce55c513dd1ffbe19c05568e6",
+      "removedExtremaFields": 954
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderScreenShake",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderscreenshake.json",
+      "previousBytes": 1519,
+      "previousSha256": "94df881f48d682c2a81eb2bfc4183352f652049c0a257502523e104ce04fa20c",
+      "removedExtremaFields": 6
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderScreenVelocityRotate",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderscreenvelocityrotate.json",
+      "previousBytes": 653,
+      "previousSha256": "045fbd184a7e08ac214a02563ffdf4c93f0f44da7117dd9a5b6f6b5bf3065582",
+      "removedExtremaFields": 1
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderSound",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_rendersound.json",
+      "previousBytes": 1495,
+      "previousSha256": "37d65e6f8c61eb1102c1cc416727db97dcc71be7e73c5250790051f0bdf5ed6b",
+      "removedExtremaFields": 4
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderSprites",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_rendersprites.json",
+      "previousBytes": 429277,
+      "previousSha256": "6626ea4005a746ad8d5e85195b41495e6d058198fcf18b62a9c1432a7b0bda46",
+      "removedExtremaFields": 1136
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderStandardLight",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderstandardlight.json",
+      "previousBytes": 129816,
+      "previousSha256": "7e40b1f927af7c6f18d3ae4a03f3c7e7507c7d8aecc15d2921de518385937ee8",
+      "removedExtremaFields": 351
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderStatusEffectCitadel",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_renderstatuseffectcitadel.json",
+      "previousBytes": 10702,
+      "previousSha256": "e605b9b3e45e97aec6b4dec498c909587717f01f65913b8a4dca8cc77fbb11e0",
+      "removedExtremaFields": 29
+    },
+    {
+      "classStage": "m_Renderers:C_OP_RenderTrails",
+      "game": "deadlock",
+      "path": "observations/deadlock/m_renderers-c_op_rendertrails.json",
+      "previousBytes": 479484,
+      "previousSha256": "8a48060551589c5fc23a75645426b57087d39916f772da857ecee8f1c03101c5",
+      "removedExtremaFields": 1208
+    },
+    {
+      "classStage": "system:CParticleSystemDefinition",
+      "game": "deadlock",
+      "path": "observations/deadlock/system-cparticlesystemdefinition.json",
+      "previousBytes": 17905,
+      "previousSha256": "146e9cc5ae5f698ecd58da96e6b7eeccef8e000abb5d6d03574aa71836e2dc56",
+      "removedExtremaFields": 36
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "schema": "source2-particle-observation-review.v1",
+  "reviewedOn": "2026-10-20",
+  "historicalObservedOn": "2026-10-15",
+  "historicalIndexSha256": "7a6b38e41631d807d40b1560fc16a99a5541ade2830bb5112d3225a0b77d17e8",
+  "historicalGeneratorHashMatched": true,
+  "historicalGeneratorScriptSha256": "fe76359cdca2d96e6de0c99186338441694db19a27d8c3bd76267a302cf0a38e",
+  "methodBoundary": "The historical exporter uses CRC-verified VPK reads, Resource2 and binary KV3 decoding. Its aggregation does not use particle simulation or rendering approximations. Historical exporter code was located and its exact recorded SHA-256 verified; the binary-IR witness replay used the same decoder family. Independent VRF corroboration is limited to the scalar witness below.",
+  "metadataChecks": {
+    "recordFiles": 427,
+    "classFieldPaths": 58113,
+    "hashSizeIdentityStageWitnessAndCountErrors": 0
+  },
+  "historicalExtremaDefect": {
+    "witnessExamplesOutsideRange": 400,
+    "cs2Contradictions": 136,
+    "deadlockContradictions": 264,
+    "reason": "bigint scalar representations were excluded from extrema",
+    "correction": "All historical observedMin/observedMax pairs withdrawn; no replacement extrema inferred."
+  },
+  "freshPayloadWitnessCheck": {
+    "witnessPayloadsMatchingHistoricalSha256": 1718,
+    "witnessPayloadsChanged": 5,
+    "allCurrentWitnessReadsCrc32Verified": true,
+    "historicalFieldsVerified": 57962,
+    "historicalFieldsNotReverified": 151,
+    "verification": "exact historical payload SHA-256, decoded class/stage/field path, stored kind and short example",
+    "games": [
+      {
+        "game": "cs2",
+        "witnesses": 551,
+        "verifiedWitnesses": 551,
+        "verifiedFields": 26306,
+        "unverifiedFields": 0,
+        "changedWitnesses": [],
+        "failures": []
+      },
+      {
+        "game": "deadlock",
+        "witnesses": 1172,
+        "verifiedWitnesses": 1167,
+        "verifiedFields": 31656,
+        "unverifiedFields": 151,
+        "changedWitnesses": [
+          {
+            "name": "particles/abilities/airheart/airheart_jetpack_ambient_thrust_constant_refract.vpcf_c",
+            "expectedSha256": "807538cdb975f13146756d1ce576a43563effd48f8977101ee3be319e22d8f3a",
+            "actualSha256": "0a8b613a57a67116ab0206caa61575edd1cbc42bc5de84d29ea2d5af31ff6dff",
+            "fields": 51
+          },
+          {
+            "name": "particles/abilities/airheart/airheart_jetpack_ambient_thrust_constant.vpcf_c",
+            "expectedSha256": "f5f9a5c6f1a226a71e2b5865921dd3f0964142500b5f45db3e662b8f43356f8a",
+            "actualSha256": "02b5f1cff06751adead6d1131817561a607703c2ee3c5bb542538fe2233d3111",
+            "fields": 86
+          },
+          {
+            "name": "particles/abilities/airheart/airheart_jetpack_ambient.vpcf_c",
+            "expectedSha256": "53da3e688fe8f5a2ef5fa2c6e63aa1e96dd97fc4d89541e48b7b0fe28cb9e9c2",
+            "actualSha256": "bc8bdb531fab70245b6ef17601acfd232b00e1fa9bebdee75e12556990dcfb5a",
+            "fields": 0
+          },
+          {
+            "name": "particles/environment/crows_circling_tower.vpcf_c",
+            "expectedSha256": "886ca2cd6103d89f4ac9d31b1bab2ed2f364e59588420e0c2343922c04676d13",
+            "actualSha256": "66f0fffdcfc729660db76cc3ca515c8d657794013bf519cd894839a26cfbe906",
+            "fields": 13
+          },
+          {
+            "name": "particles/environment/floating_apple_pickup.vpcf_c",
+            "expectedSha256": "8911ea562234f0f4990ae56e87c8b7dd7203174e79172efd0792bf971b92c473",
+            "actualSha256": "6fbb0f17d78409539a230da749ec4c15710ee3fd000d74847b4bd3b6d38053d5",
+            "fields": 1
+          }
+        ],
+        "failures": []
+      }
+    ]
+  },
+  "cs2CompleteHistoricalReaggregation": {
+    "identity": {
+      "steamAppId": "730",
+      "steamBuildId": "25966348",
+      "steamManifestSha256": "321edd912891a4343c693a1f8e13a59f1d5439f43cc1d53465e5611c1972e2ab",
+      "vpkDirectory": {
+        "relativePath": "csgo/pak01_dir.vpk",
+        "bytes": 7706697,
+        "sha256": "f0943b4d5a86fe8f4891ab98983b9d132b4450b9b7401a03a530bcd63f293f99",
+        "diagnostics": [
+          {
+            "code": "trailing-data",
+            "severity": "warning"
+          }
+        ],
+        "headerAndTreeBytes": 6277931,
+        "headerAndTreeSha256": "557c3b73395ab22565fbfee99553cb3d583444fbd5b2026334ba0697fa109a31"
+      },
+      "steamIdentityEvidence": "local installed appmanifest metadata; not a cryptographic Valve signature"
+    },
+    "coverage": {
+      "indexedEntries": 137695,
+      "indexedParticles": 2622,
+      "selectedParticles": 2622,
+      "attemptedParticles": 2622,
+      "decodedParticles": 2622,
+      "readBytes": 8634396,
+      "componentInstances": 40912,
+      "nonFiniteStoredScalars": 0,
+      "nonFiniteExamples": [],
+      "classStagePairs": 199,
+      "uniqueClasses": 199,
+      "classFieldPaths": 26306,
+      "allEligibleParticlesDecoded": true,
+      "ordering": "lexicographic VPK path (en locale)",
+      "readPayloadManifestSha256": "c8ab422631b73f91405a44acc2383cbb8bdaee76a5b56a87624c9e5a8d002280",
+      "diagnostics": {},
+      "failures": []
+    },
+    "all199HistoricalClassRecordsSemanticallyIdentical": true,
+    "orderedPayloadManifestHashUnchanged": true,
+    "limitations": "Reproduces the historical binary-IR aggregation, including its known incomplete extrema; not a runtime or independent decoder proof."
+  },
+  "independentVrfScalarWitness": {
+    "tool": {
+      "file": "Source2Viewer-CLI.exe",
+      "bytes": 113190632,
+      "sha256": "a4bb4f9945db985efb2cad90a90d06867de5ba7e0447a2a4a69a07dace781028",
+      "versionOutput": "Version: 20.0.6980+a06886f7d06049052d32a7381ec05523064a2ca0\r\nOS: Microsoft Windows 10.0.26300 (X64)\r\nWebsite: https://valveresourceformat.github.io\r\nGitHub: https://github.com/ValveResourceFormat/ValveResourceFormat",
+      "helpSha256": "f9beb1fa504e4417ba696373f295c7188efbb950c72b06ad4ddb982af6486969",
+      "argumentsVerifiedFromHelp": [
+        "--input",
+        "--block"
+      ]
+    },
+    "method": {
+      "scriptSha256": "781c562ce77ac17342b59e64071c7a3b73916d37df8c31c121264e38431ed878",
+      "bundledScriptSha256": {
+        "inspect_vpk_with_vrf.py": "781c562ce77ac17342b59e64071c7a3b73916d37df8c31c121264e38431ed878",
+        "vpk_reference.py": "09916c49df3468ee499302ee8123f743b096e32209614a6c87abe38aadc2f243",
+        "process_limits.py": "7adcf5eca9f28206720818914c4d6d0cf6123caba038b75ca76ef704c2d1da3f"
+      },
+      "arguments": [
+        "--input",
+        "LOCAL_TEMPORARY_PARTICLE",
+        "--block",
+        "DATA"
+      ],
+      "payloadCrc32Required": true,
+      "payloadsRetained": false,
+      "textIsVrfTranscript": true,
+      "historicalCatalogReproduction": false
+    },
+    "entry": {
+      "path": "particles/ambient_fx/ambient_ground_dust.vpcf_c",
+      "crc32": "63ab0829",
+      "archiveIndex": 187,
+      "offset": 52158336,
+      "archiveBytes": 5688,
+      "preloadBytes": 0,
+      "totalBytes": 5688,
+      "status": "decoded",
+      "sha256": "f75424936d6285a036a6ecaddbc7af21950fb11acb3c231ad93c8c01020d9205",
+      "crc32Verified": true,
+      "process": {
+        "exitCode": 0,
+        "timedOut": false,
+        "outputLimitExceeded": false
+      },
+      "stdoutSha256": "ad85407d4bf0d0b7d064585d4d8e2ffe32859a97dbe12626fabe2d83962a27ed",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataFormat": "vpcf54",
+      "transcript": "data/000001.vrf-data.txt",
+      "transcriptBytes": 98419
+    },
+    "class": "C_OP_ContinuousEmitter",
+    "stage": "m_Emitters",
+    "field": "m_flEmitRate.m_nControlPoint",
+    "observedValue": 0,
+    "withdrawnHistoricalMinimum": 2,
+    "withdrawnHistoricalMaximum": 17,
+    "transcriptLine": 60,
+    "transcriptIncluded": false
+  },
+  "portableValidation": {
+    "pythonFlags": [
+      "-E",
+      "-S",
+      "-B"
+    ],
+    "isolatedSkillCopy": true,
+    "allTestsPassed": 48,
+    "finalChangedModuleTestsRechecked": 19,
+    "metadataAuditIssueCount": 0,
+    "scriptSha256": {
+      "audit_observations.py": "032387314b1c907bc1fecc91e946790c3bda30d767b10d784c4ed302004547ed",
+      "inspect_vpk_with_vrf.py": "781c562ce77ac17342b59e64071c7a3b73916d37df8c31c121264e38431ed878",
+      "process_limits.py": "7adcf5eca9f28206720818914c4d6d0cf6123caba038b75ca76ef704c2d1da3f",
+      "query_observations.py": "2799f461fe0d4a139ed56e0e4274cfd71d1db27e1addb298afdebe3694e98f1d",
+      "test_audit_observations.py": "7f571b019f51938d651439b937150cd355e8b90140491d9c9c057588b1cec9b0",
+      "test_inspect_vpk_with_vrf.py": "54ce1e2f8bec9dbeb3afdc7d489f622357b3f8911f87b50c76dff6bd1dde1f0f",
+      "test_process_limits.py": "9cd5f1804fe73f81f6732a083d046ff2be686e117354e168b90c721d56075cb1",
+      "test_query_observations.py": "b237e47a1ef65e4a11c31f0464924050b2af2fe325fad7fa1b637f3bbf087d14",
+      "test_vpk_reference.py": "58242fb070b1be985b082db1b0772395fce4d7fb9cba63dd3502bd16231f47ce",
+      "vpk_reference.py": "09916c49df3468ee499302ee8123f743b096e32209614a6c87abe38aadc2f243"
+    }
+  },
+  "limitations": [
+    "The 151 fields backed by changed Deadlock payloads retain their original provenance but were not freshly reverified against historical bytes.",
+    "This review does not establish property meanings, defaults, supported value ranges, visual behavior or cross-game compatibility.",
+    "Build IDs and tool identities describe evidence; these helpers accept changed builds and inspect explicit inputs without a fixed-build gate."
+  ]
+}

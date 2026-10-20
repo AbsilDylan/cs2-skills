@@ -19,6 +19,7 @@ A resource viewer's implementation and API documentation are primary evidence of
 - CS2 Steam build `25640462`, patch `1.41.8.8`, SourceRevision `11064488`, version date 30 September 2026.
 - Compiler SHA256 `00db3daca0e733601bf3fcc1d1bf9df1b2ade805629098c48bd6c51af3d96f51`.
 - All thirteen compilations and readbacks succeeded; no native game runtime or pixels were observed.
+- The decoded fixtures contain 21 distinct component classes plus `CParticleSystemDefinition`, across 12 unique source payloads. This is selected serialization coverage, not behavioral validation of those classes or the complete schema catalogue.
 - Each fixture retains input/output hashes, diagnostics and actual decoded native KV3. `authoredTestIntent` is a descriptive test record, not a native format.
 - The portable derivation records its source evidence hash. Unknown-sentinel names are omitted while their locations/values, absence after compilation and original hashes remain explicit.
 
@@ -63,3 +64,5 @@ Use observations that discriminate possible implementations. Examples:
 A picture alone may hide a wrong attribute or an overridden input. Conversely, a correct scalar trace does not establish a shader/material result. Record both when needed. Skipped, unavailable or unrun tests remain unverified.
 
 Use [composition cases](composition-cases.md) as concrete starting points. Report exact observed results, not just “looks correct”, and retain **Unknown** for unmeasured native behavior.
+
+For practical lessons from later native PET work, read [observed production patterns](observed-patterns.md). Those case notes distinguish visible observations from source contracts and from game integration still to be tested. They do not upgrade the thirteen compiler fixtures to runtime evidence.

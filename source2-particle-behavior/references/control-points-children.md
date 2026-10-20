@@ -27,6 +27,8 @@ Exact transform multiplication, normalization, parent-scale effects and source p
 
 A particle created at a CP need not remain attached to it. Separate initial position from an operator intended to follow/lock to a transform. Move the CP after particles have been emitted and record whether old particles, new particles, or both respond.
 
+For a moving projectile with a trailing wake, assign those behaviors separately: the hero can follow CP0 while previously emitted wake particles remain behind. [Observed production patterns](observed-patterns.md) covers that composition and the zero-speed failure of a velocity-derived model normal.
+
 Similarly, a saved particle-editor control configuration is not proof of an in-game entity/attachment binding. Establish who supplies that CP at runtime and when it becomes available. A pre-emission writer can overwrite a game-provided value; check writer order and allocate derived CP outputs deliberately.
 
 Valve's public particle-manager API distinguishes CP data, entity binding and orientation operations. Its [Half-Life: Alyx API documentation](https://developer.valvesoftware.com/wiki/Half-Life:_Alyx_Workshop_Tools/Scripting_API) also distinguishes orientation basis conventions. That documents the named game's API; it does not make those exact symbols a CS2 integration API. Use the actual target integration and test its handedness/basis.

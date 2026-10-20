@@ -44,6 +44,7 @@
     "Facts are concise original interpretations; the complete Valve help asset is not redistributed.",
     "Exact case-sensitive tokens are retained. No historical class-name aliases are inferred.",
     "Source text hashes and line spans identify the native help passages; requery the original asset to audit the full wording.",
+    "Each sourceTextSha256 hashes the unquoted, KeyValues-unescaped string value encoded as UTF-8, preserving the original CRLF characters. Normalizing newlines changes multiline passage hashes.",
     "These facts do not establish compilation, retained KV3 properties, algorithms, runtime outputs or rendered pixels."
   ],
   "facts": [

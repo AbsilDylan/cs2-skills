@@ -8,17 +8,22 @@ description: "Look up CS2 particle classes, inherited fields, types, enums, meta
 
 Use the bundled Python 3.10+ standard-library helpers for offline catalogue lookup. An optional user-supplied native-help file adds editor descriptions from the target game.
 
+The complete selection has been independently reconciled against its original upstream schema input: declarations, type trees, metadata, inheritance and defaults match. This verifies reference fidelity; it does not certify every property's native behavior. The [verification record](references/review-verification-2026-10-20.json) states the measured scope and remaining limits.
+
 ```sh
 python scripts/schema_catalog.py search --module particles --kind class --contains Render --limit 20
 python scripts/schema_discover.py --module particles --class C_OP_RenderSprites --contains texture --limit 20
 python scripts/schema_discover.py --module particles --class C_OP_RenderSprites --limit 20 --offset 20
 python scripts/schema_catalog.py query --module particles --class C_OP_RenderSprites --field m_nSequenceOverride
+python scripts/schema_catalog.py query --module particles --class C_OP_ContinuousEmitter --field m_flStartTime --field m_flEmissionDuration
 python scripts/schema_catalog.py query --module particles --class C_OP_ContinuousEmitter --field m_flStartTime --help-file "/local/toolhelp_particles_english.txt"
 python scripts/schema_catalog.py query --module particles --enum ParticleOrientationChoiceList_t
 python scripts/schema_catalog.py verify
 ```
 
 Run commands from this skill directory, or use the script's absolute path. Look up exact `(module, name)` identities. Start with class search, then a filtered field-discovery page; follow `next_offset` for more results. Discovery defaults to 20 fields and permits at most 100 per page. It reports compact native type labels, declaring identities and inherited flags, with provenance once per response. Its explicitly partial output omits complete type trees, metadata and defaults; use exact `schema_catalog.py query --field` requests before authoring.
+
+Batch up to 16 exact `--field` selections from one class in a single query. This shares the provenance and defaults chain across the requested fields. Read only the relevant records rather than the entire reference tree.
 
 Reserve [the full catalogue](references/catalogue.md) and whole-class `query --summary` for reviews that need them, with a deliberate context/output budget; `--max-output-bytes` bounds query output and fails explicitly when too small. Full class and enum queries remain available. Read [local native help](references/native-help.md) for optional descriptions from the target game's user-supplied resource, and [evidence boundaries and rebuilding](references/evidence-boundaries.md) when interpreting or updating the snapshot. The machine index is [catalog-index.json](references/catalog-index.json).
 

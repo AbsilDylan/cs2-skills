@@ -6,9 +6,11 @@
 - [Primary references and what they establish](#primary-references-and-what-they-establish)
 - [Standalone authoring checks](#standalone-authoring-checks)
 - [Positive native controls on owned artwork](#positive-native-controls-on-owned-artwork)
+- [Owned model material and refraction checks](#owned-model-material-and-refraction-checks)
 
 This skill contains instructions and owned code, not extracted Valve assets.
-The local observations below were made on 2026-10-15. They identify inspected
+The archive and procedural controls were recorded on 2026-10-15; later owned
+model/material and PET observations are dated separately below. They identify inspected
 installations rather than claiming to be the latest available builds.
 
 ## Local examples: high confidence for structure, no rendered-pixel claim
@@ -117,6 +119,13 @@ The `--resource-path` mode was then checked against the native controls: every
 TGA, MKS and VTEX input reproduced the recorded SHA-256 byte-for-byte. Invalid
 and nonportable resource paths were rejected before output creation.
 
+The portable regression suite can be run from this skill folder with
+`python -B -I -m unittest discover -s scripts -p 'test_*.py' -v`.
+It checks those historical source hashes, independently decodes TGA pixels,
+checks MKS timing and trail dimensions, and verifies refusal of invalid inputs
+or existing output directories. These are authoring checks, not new native
+compiler or rendering results.
+
 ## Positive native controls on owned artwork
 
 [Compact machine-readable evidence](../assets/native-texture-evidence.json)
@@ -142,3 +151,40 @@ serializes sequence total time as `m_flTotalTime`. In this control it agrees
 with the sum of the eight frame display times. Read it as total time, not as a
 measured frame rate. No native rendering, VMAT compilation or Deadlock compiler
 compatibility was certified by these tests.
+
+## Owned model material and refraction checks
+
+These later checks were reviewed against preserved source/native identities
+and observation records on 2026-10-20. They extend the evidence for specific
+owned effects; they are not a fresh whole-game compatibility certification.
+
+The October 17 CS2 model/material pass used build **25966348**, patch
+**1.41.9.1**, SourceRevision **11133601**. The owned alpha-tested
+`materials/zombie_mobility/leap/r2f_organic.vmat` retained
+`csgo_complex.vfx`, its authored alpha-test/backface flags and numeric controls.
+Its separate RGB opacity input was `TextureTranslucency`; native material
+readback referenced four generated textures and had no separate translucency
+parameter. The exact bound `g_tColor` texture's decoded alpha ranged from
+0 to 255, including transparent corners.
+
+| Recorded object | SHA-256 |
+| --- | --- |
+| VMAT source | `b340f40578aed78bd201146cbc95bc43282fceea81c5b6ca1bbc8811fd854daf` |
+| Native VMAT | `35389e34456c1cb6ab404800cbf492c5fbaefccff425669325b9e58f7c1d4670` |
+| Bound native color texture | `ec925a3817899e4b54d82b0d5ab3c9638ff2c38b626498e5f4f4ba91b178a830` |
+
+The associated original animated model used separate geometry and animation
+SMD imports. Its compiled CTRL resolved embedded ANIM/ASEQ/AGRP blocks, with
+no external animation/sequence-group reference. This supports retaining the
+imports in editable delivery while following actual native references for
+runtime delivery. It does not establish every animation codec, all-angle
+appearance, smooth model fading, or roughness-channel equivalence.
+
+An October 16 owned rope-refraction control used one linear packed-normal
+VTEX, alpha scale 0.7 and refraction amount -0.06. The production VPCF source
+SHA-256 was `5534fd571e1cebd3483e00231c0488ed8681d9c50ebc55021f0bcff8e783cb29`.
+PET observations recorded visible grid displacement after correcting the normal
+texture, and an unresolved overly bright band on the white Plane background.
+The later owned ground-patch control also used packed RGB normals and alpha
+coverage. Neither observation certifies appearance on a real game map or a
+universal texture-slot/blend contract for other renderers.
