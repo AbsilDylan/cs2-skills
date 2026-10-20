@@ -10,6 +10,12 @@ children, required resources and a concise CP/validation contract. Use CS2 by
 default. If the user names another Source 2 game, retain that target and verify
 its own schema/toolchain before reusing CS2-specific fields.
 
+Start from this workflow and open only the references needed by the effect.
+The large JSON catalogues are queryable data, not instructions to load into
+context. [What the bundled evidence proves](references/evidence-map.md)
+explains their provenance and the difference between a known field and a tested
+behavior.
+
 ## Decide the effect, then author it
 
 Establish the intended in-game use and installed CS2 toolchain from available
@@ -48,6 +54,12 @@ python scripts/schema_discover.py --module particles --class C_OP_RenderSprites 
 python scripts/schema_catalog.py query --module particles --class C_OP_RenderSprites --field m_vecTexturesInput
 ```
 
+Batch exact fields from one class by repeating `--field`; the response shares
+provenance rather than repeating a whole record for each lookup. Keep full
+field contracts for the chosen properties and use discovery pages to choose
+the next ones. Do not read all class JSONs or all specialist references for an
+ordinary effect.
+
 Follow declared class/enum dependencies returned by exact field queries.
 Class search and field discovery are pages: continue with `--offset` when
 `next_offset` is present. Discovery defaults to 20 fields (maximum 100), showing
@@ -75,6 +87,12 @@ paths rather than inventing a plausible game asset name. If new materials or
 textures are needed, author them or retain an explicit unresolved dependency
 and explain its effect. The sibling `source2-particle-materials` skill is useful
 when installed, but is not a prerequisite to writing VPCF.
+
+Keep the production root separate from any PET demonstration driver. A helper
+that moves CP0, supplies test parameter values or adds a scale actor is an
+editor test fixture; the game caller must supply the production contract.
+Select shipping files from the production root's dependency graph, including
+source imports and native compiled references.
 
 ## Iterate against the actual target
 

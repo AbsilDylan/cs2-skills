@@ -157,13 +157,44 @@ class CatalogueTests(unittest.TestCase):
             with self.assertRaisesRegex(catalog.CatalogError, "hash/length mismatch"):
                 catalog.verify(destination, SCRIPT)
 
+    def test_cli_batches_exact_fields_with_one_provenance_and_no_partial_output(self):
+        with tempfile.TemporaryDirectory(prefix="schema batch lookup ") as temporary:
+            directory = Path(temporary)
+            files, _ = self.generate()
+            for relative, data in files.items():
+                destination = directory / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes(data)
+            query = [sys.executable, "-I", "-S", "-B", str(SCRIPT), "query",
+                     "--catalogue", str(directory), "--module", "particles",
+                     "--class", "Wanted", "--field", "m_Base", "--field", "m_Left"]
+            result = subprocess.run(query, cwd=temporary, capture_output=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            report = json.loads(result.stdout)
+            self.assertEqual(result.stdout.count(b'"provenance"'), 1)
+            self.assertEqual(len(report["records"]), 1)
+            selected = report["records"][0]
+            self.assertEqual(selected["selection"]["exact_requested_fields"], ["m_Base", "m_Left"])
+            self.assertEqual([item["field"]["name"] for item in selected["fields"]], ["m_Base", "m_Left"])
+            self.assertEqual(selected["defaults"]["values"], {"m_Base": {"x": 9}, "m_Left": 2})
+            self.assertEqual(selected["defaults"]["sources"]["m_Base"]["name"], "Wanted")
+            self.assertEqual(selected["defaults"]["sources"]["m_Left"]["name"], "Left")
+            self.assertTrue(all(item["inherited"] for item in selected["fields"]))
+            self.assertEqual(selected["fields"][0]["field"], document()["classes"][0]["fields"][0])
+            self.assertEqual(selected["fields"][1]["field"], document()["classes"][1]["fields"][0])
+            for extra in [["--field", "m_Absent"], ["--max-output-bytes", "1024"]]:
+                failed = subprocess.run(query + extra, cwd=temporary, capture_output=True)
+                self.assertEqual(failed.returncode, 2)
+                self.assertEqual(failed.stdout, b"")
+                self.assertNotIn(b"Traceback", failed.stderr)
+
     def test_combined_native_help_is_portable_exact_and_keeps_separate_provenance(self):
         with tempfile.TemporaryDirectory(prefix="native help isolated ") as temporary:
             directory = Path(temporary)
             filename = directory / "fixture.json"
             filename.write_text(json.dumps(document()), encoding="utf-8")
             destination = directory / "references"
-            command = [sys.executable, "-I", "-S", str(SCRIPT)]
+            command = [sys.executable, "-I", "-S", "-B", str(SCRIPT)]
             built = subprocess.run(command + ["build", "--input", str(filename), "--game", "Fixture game", "--source-url", "https://example.invalid/fixture", "--output", str(destination)], capture_output=True, check=False)
             self.assertEqual(built.returncode, 0, built.stderr)
             help_file = directory / "native-help.txt"

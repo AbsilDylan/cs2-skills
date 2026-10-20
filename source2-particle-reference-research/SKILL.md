@@ -20,6 +20,8 @@ python scripts/query_observations.py --game deadlock --class C_OP_RenderLightBea
 
 `--search` searches the class/stage names in the index, without reading every record or searching their fields. By default, `--class` returns a summary and at most `--limit` field names, rather than their thousands of values. `--field` selects an exact path, with `[]` for arrays, and returns its supporting example with the payload hash. Every record read is checked against its size and SHA-256 declared in the index. A local snapshot can be selected explicitly with `--references`. Reads are limited to 4 MiB per file and JSON output to 128 KiB; if the output is too large, request a specific field or reduce `--limit`.
 
+The historical numeric minima and maxima were withdrawn after a review found that the exporter excluded integer scalar representations. Query output records this correction and also suppresses those statistics when reading an older snapshot from that exporter. Retained examples and frequencies describe stored observations; they do not define allowed values, defaults or recommended settings.
+
 The bundled records contain observations, not every property declared by the engine. Use the local VPK search below to fill in a missing case, then cross-check the result against the target game's schema.
 
 ## Find and select
@@ -83,5 +85,8 @@ Read [the verified ingestion observations](references/vpk-ingestion-2026-10-15.m
 ## Verify the helper
 
 ```text
+python scripts/audit_observations.py
 python -m unittest discover -s scripts -p "test_*.py" -v
 ```
+
+The audit reads every indexed class record and checks hashes, identities, aggregate counts, witnesses and correction provenance. It requires no game installation. Passing it establishes metadata consistency only; original payload and runtime validation are separate checks.

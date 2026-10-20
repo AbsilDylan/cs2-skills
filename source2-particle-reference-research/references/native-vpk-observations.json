@@ -3312,143 +3312,143 @@
       "classFiles": {
         "m_Constraints:C_OP_BoxConstraint": {
           "path": "observations/cs2/m_constraints-c_op_boxconstraint.json",
-          "bytes": 78285,
-          "sha256": "af5cfa06c7ed18416ad30e0509436efd5e0b316045107272a215a7788cc238b2"
+          "bytes": 70845,
+          "sha256": "1cda0dca97cf4f6610e13128ff828084818fbb5b4ebac2a9608b05f51b770571"
         },
         "m_Constraints:C_OP_CollideWithSelf": {
           "path": "observations/cs2/m_constraints-c_op_collidewithself.json",
-          "bytes": 19437,
-          "sha256": "500ca7a8f61cf43a55048b74c1fe2748efb80fb6d295a18b8bad540ad5e38ddd"
+          "bytes": 17655,
+          "sha256": "ba0c08c2f0f1440f52b25f6f1c7e60239cb68f34d8e925fa61276890c6dbefb0"
         },
         "m_Constraints:C_OP_ConstrainDistance": {
           "path": "observations/cs2/m_constraints-c_op_constraindistance.json",
-          "bytes": 20922,
-          "sha256": "0676047c8f8cd2b41ac67158282b3dc45a63a0dad0bd299f1c124b4d5d6cba30"
+          "bytes": 18894,
+          "sha256": "9c4d698692618936e0d630d3899e884a9c02245bb7133837d7ef08567da28976"
         },
         "m_Constraints:C_OP_ConstrainDistanceToPath": {
           "path": "observations/cs2/m_constraints-c_op_constraindistancetopath.json",
-          "bytes": 1843,
-          "sha256": "5d5b0e388be218b5b76a7cb50013dde586abbca740f340701718ac40817ca8ee"
+          "bytes": 1613,
+          "sha256": "de4a587bf8c7e37e78487311838fa12ffcc8e1e96c0720b4575e7b17b72edaa0"
         },
         "m_Constraints:C_OP_PlanarConstraint": {
           "path": "observations/cs2/m_constraints-c_op_planarconstraint.json",
-          "bytes": 852,
-          "sha256": "eb6a90618af0d255e3dac360decd8b80e2a8bf7034c7bc88d199c86a8a2bf87b"
+          "bytes": 819,
+          "sha256": "4386fd7a7abf0fd6332e9405ec5c221f9b7686719eca16471cf2ca985249f0f2"
         },
         "m_Constraints:C_OP_RopeSpringConstraint": {
           "path": "observations/cs2/m_constraints-c_op_ropespringconstraint.json",
-          "bytes": 18925,
-          "sha256": "b5757b0c7b57c0a88cf6a6802dca914a726af07bf1832582e8d08bd3f3f2d2af"
+          "bytes": 17087,
+          "sha256": "c83025c952c19c97df3a55951ecc5efe4cd493dc7cc4cc5eaedad2fe1cf56f2f"
         },
         "m_Constraints:C_OP_WorldTraceConstraint": {
           "path": "observations/cs2/m_constraints-c_op_worldtraceconstraint.json",
-          "bytes": 50291,
-          "sha256": "1c486aa2b9da26085f8bbfd27a147b52c2412f9d6fc041e5d7646d4e41bc764f"
+          "bytes": 45272,
+          "sha256": "a9a580e8645794453ec3257fa21dfa21984b025662077f31ea2d2fa69a7f801e"
         },
         "m_Emitters:C_OP_ContinuousEmitter": {
           "path": "observations/cs2/m_emitters-c_op_continuousemitter.json",
-          "bytes": 43417,
-          "sha256": "be5078b6fbacbe9e51ff4cf0e63af0ca5c9eb68918f39dd5186033bf86cf475b"
+          "bytes": 38748,
+          "sha256": "42a35076d15d8f18dca3740837f5ed431ab205f770eef2acf73612996e9d127e"
         },
         "m_Emitters:C_OP_InstantaneousEmitter": {
           "path": "observations/cs2/m_emitters-c_op_instantaneousemitter.json",
-          "bytes": 40613,
-          "sha256": "f4a4a6163aae4778c1ed459407a2df1efa5151f2a08b3843c63d85d8ab72c68b"
+          "bytes": 36448,
+          "sha256": "308d5d4e1e9986838b7c2119dcae468b110c428d8f7d8b8d51466e0390dfd848"
         },
         "m_Emitters:C_OP_MaintainEmitter": {
           "path": "observations/cs2/m_emitters-c_op_maintainemitter.json",
-          "bytes": 40474,
-          "sha256": "b7030fdffd4e5660380b210a69452799a426723e7e386eba996ee6e43ee46933"
+          "bytes": 36281,
+          "sha256": "c82b542cfe30fda07edb46abc0e0c63236a6bced44ed8b5f1c4b1c6fa7fbd888"
         },
         "m_Emitters:C_OP_NoiseEmitter": {
           "path": "observations/cs2/m_emitters-c_op_noiseemitter.json",
-          "bytes": 10104,
-          "sha256": "8ebe2ddb5a239786ee269d16bbc2d9d0130d91b983825da50b873348028ae41f"
+          "bytes": 8964,
+          "sha256": "47a35c80149a485116d31449aa9a51e04e90ae60f9bba2826780b8611bb6b5e0"
         },
         "m_ForceGenerators:C_OP_AttractToControlPoint": {
           "path": "observations/cs2/m_forcegenerators-c_op_attracttocontrolpoint.json",
-          "bytes": 12692,
-          "sha256": "2702330fac3d74b5b365667654719d446c646682d6233ff568b6b197313302bf"
+          "bytes": 11386,
+          "sha256": "e115b53339fa276c3cdb16b98bb9fed607bb9ceb6be3377414776e73766c083d"
         },
         "m_ForceGenerators:C_OP_CPVelocityForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_cpvelocityforce.json",
-          "bytes": 16981,
-          "sha256": "6b7668cd8ea39aad39dd3a0940d609ac6fff0cc53eef3f23a67114748b178bbd"
+          "bytes": 15292,
+          "sha256": "8d14924f2d4a9720818c95dd82891193111120f49f5289eec9fb16a35b043d5b"
         },
         "m_ForceGenerators:C_OP_CurlNoiseForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_curlnoiseforce.json",
-          "bytes": 166381,
-          "sha256": "123c5ff094c0f42351cae0cb84d5679951307fe400e38fbfb44da743b27821d4"
+          "bytes": 151830,
+          "sha256": "c5d45140b58a5dd33156701f80efe5afd8b7086aefe8b7b742cc656558a32bb9"
         },
         "m_ForceGenerators:C_OP_ExternalGameImpulseForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_externalgameimpulseforce.json",
-          "bytes": 4582,
-          "sha256": "d9f16716b54761f026a6ca78180db0ed7c75c2c5a28bf93d9555d1a3a16cffbb"
+          "bytes": 4229,
+          "sha256": "f9567eaad887fdc996aec959bab55858db64c4311870d7681cc428191d9ba2c0"
         },
         "m_ForceGenerators:C_OP_ExternalWindForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_externalwindforce.json",
-          "bytes": 42255,
-          "sha256": "2e3a74635867066ee6912bdb304a95d8ee7f6243a8d0c84e82a89d7ede11db0c"
+          "bytes": 38535,
+          "sha256": "c635fc5b4ee616fe8965d895a97c3cf6f12bfd40b8a9395b08a224eef6d3f9dc"
         },
         "m_ForceGenerators:C_OP_ForceBasedOnDistanceToPlane": {
           "path": "observations/cs2/m_forcegenerators-c_op_forcebasedondistancetoplane.json",
-          "bytes": 1414,
-          "sha256": "c305a7ee273cea64e5dde1d3f0e38d53cc9ce571ec350ceda5c860beb368b666"
+          "bytes": 1313,
+          "sha256": "10a48b7588ae24d3d02712e422c057476441e994f971a10692f363017aece431"
         },
         "m_ForceGenerators:C_OP_LocalAccelerationForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_localaccelerationforce.json",
-          "bytes": 43973,
-          "sha256": "1b1ca9ed98bf77f8b03a09415c3d15bde3e5cf6f4ff40b34b41ccb6cfe37d47d"
+          "bytes": 40068,
+          "sha256": "3617da16b10304f92f4f2b5557a9531857f81b8893e1ec069f919e10c2bb524c"
         },
         "m_ForceGenerators:C_OP_PerParticleForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_perparticleforce.json",
-          "bytes": 55940,
-          "sha256": "8b9507be97a9266dc1d74087aebbcba139af8936f565b8cab359db9f49461a9d"
+          "bytes": 50675,
+          "sha256": "2c02dda54658ce7251431408b54b841328daba5209d50d4016bb4671b40b7bb8"
         },
         "m_ForceGenerators:C_OP_RandomForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_randomforce.json",
-          "bytes": 11407,
-          "sha256": "ca768b0d8ef2e75f6c45428ff65420d52c5342197ed614745dd63c00c1c88cda"
+          "bytes": 10154,
+          "sha256": "8d8c04166cfd93a0793925b83bb763de89b658111129113fb3c25164dda39df5"
         },
         "m_ForceGenerators:C_OP_TimeVaryingForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_timevaryingforce.json",
-          "bytes": 1042,
-          "sha256": "a2be776f8a6be79fa37c1d49199f82d441dd6f1afcdf45efce1bb4b26aa4c610"
+          "bytes": 974,
+          "sha256": "1a6875be21e72dfdf70a0b6f668de363901492d1d0e56e5bd3e3b4b526bb0b43"
         },
         "m_ForceGenerators:C_OP_TurbulenceForce": {
           "path": "observations/cs2/m_forcegenerators-c_op_turbulenceforce.json",
-          "bytes": 11461,
-          "sha256": "c3c1ea8d6b69dbb2252241b21ac99421eb3a17ef1c096e1f9c4ab6aaa86454c6"
+          "bytes": 10310,
+          "sha256": "bf8022b97ae46f5397eaa0671e4952f15526821eb369c19d7986a5360aac393f"
         },
         "m_ForceGenerators:C_OP_TwistAroundAxis": {
           "path": "observations/cs2/m_forcegenerators-c_op_twistaroundaxis.json",
-          "bytes": 1571,
-          "sha256": "d4c1508edf1f6d3f3b4f0c3d9bec6f13b6cf01a93ae2704773cfcb6793d05605"
+          "bytes": 1396,
+          "sha256": "9d956aa8eaf4cc99a82ce0fd1a970f23aae10bbb2ec69b8c1d8b31d4b4627200"
         },
         "m_Initializers:C_INIT_AgeNoise": {
           "path": "observations/cs2/m_initializers-c_init_agenoise.json",
-          "bytes": 1493,
-          "sha256": "02dc8ede8db867a5943461788bdadb023c52fc39ee8e1ec7c2aae7509ffc3e59"
+          "bytes": 1272,
+          "sha256": "e670a142111e173cc68ecd7d1f4c4721441040f789482283b9ecf57d2bfef1b2"
         },
         "m_Initializers:C_INIT_ColorLitPerParticle": {
           "path": "observations/cs2/m_initializers-c_init_colorlitperparticle.json",
-          "bytes": 1253,
-          "sha256": "23c319a280184b83ff65765ca4e2b7be26a12cf34994ba485212d9e734398938"
+          "bytes": 1179,
+          "sha256": "bd8bef755c973bae5b89b64b7d1a20e061264a7157636a8177a8e3e85cc8cd97"
         },
         "m_Initializers:C_INIT_CreateAlongPath": {
           "path": "observations/cs2/m_initializers-c_init_createalongpath.json",
-          "bytes": 10744,
-          "sha256": "d34a38d1cbbd993c62e97593f85289c5ad5453f8b848b6f575c455694604272e"
+          "bytes": 9737,
+          "sha256": "2b6288c6eb750b3e4ca940581cd4dabe3d8c0fed9d7154827086944b17301c66"
         },
         "m_Initializers:C_INIT_CreateFromCPs": {
           "path": "observations/cs2/m_initializers-c_init_createfromcps.json",
-          "bytes": 728,
-          "sha256": "18cd9652ef94adfb89d9dd1d5763bbd2e12039441826f75148fbb9e2262752d2"
+          "bytes": 696,
+          "sha256": "18d46257d9539327486a424bc49756cc5f85ff3d5fa673dc572f750da259421e"
         },
         "m_Initializers:C_INIT_CreateFromParentParticles": {
           "path": "observations/cs2/m_initializers-c_init_createfromparentparticles.json",
-          "bytes": 1277,
-          "sha256": "c60abd29ea43114b8fc5f47103637c81e7e7715838ddaaa5544344cc9e9deba2"
+          "bytes": 1210,
+          "sha256": "4f1a6e3213187627cc909500fd1e507a48ea7245a4816d4d4a4dbb7f36a59a55"
         },
         "m_Initializers:C_INIT_CreateFromPlaneCache": {
           "path": "observations/cs2/m_initializers-c_init_createfromplanecache.json",
@@ -3457,133 +3457,133 @@
         },
         "m_Initializers:C_INIT_CreateInEpitrochoid": {
           "path": "observations/cs2/m_initializers-c_init_createinepitrochoid.json",
-          "bytes": 36940,
-          "sha256": "07acfb2794efbbc370107d3015c079b662747540e05c5344e86f593033dbeebf"
+          "bytes": 33302,
+          "sha256": "17ba934d8bf2642ed9a3753aafa3e5a0acbf73145ec3d78db384a2d8995753e1"
         },
         "m_Initializers:C_INIT_CreateOnGrid": {
           "path": "observations/cs2/m_initializers-c_init_createongrid.json",
-          "bytes": 35682,
-          "sha256": "4e60f176d49e9a9fea360bf021e789a82288f2a7d1d8d72ccca8f64ccbb40a38"
+          "bytes": 31981,
+          "sha256": "03431c8df26337082dc961c77f97415eab217e39ede17864121315350c2e8d57"
         },
         "m_Initializers:C_INIT_CreateOnModel": {
           "path": "observations/cs2/m_initializers-c_init_createonmodel.json",
-          "bytes": 892,
-          "sha256": "2e37a0bdbcb8dd9ce6d0741c65bab9e9fcf86062404aae7353f14d348b3141c3"
+          "bytes": 860,
+          "sha256": "b3d9e8a79cbbad5e1130044167979f4ac9800fee9b5fc51c86e965d9ee32a08d"
         },
         "m_Initializers:C_INIT_CreateOnModelAtHeight": {
           "path": "observations/cs2/m_initializers-c_init_createonmodelatheight.json",
-          "bytes": 68983,
-          "sha256": "b5236bae51815b4c5ee35325f92754fb33c249c85ddbf77f5ec0b3dc1f181eae"
+          "bytes": 62969,
+          "sha256": "1868296897db0c27c27ac0dc1c0227e85b47dda0109d4ac0bd35669651dabce3"
         },
         "m_Initializers:C_INIT_CreateSequentialPath": {
           "path": "observations/cs2/m_initializers-c_init_createsequentialpath.json",
-          "bytes": 1496,
-          "sha256": "194d048b3f7b1c60e0137b2eea3995a9c3f384862d1a413bf560dd96a39dfb79"
+          "bytes": 1331,
+          "sha256": "e40b4ac8ba36e6afff9d443ab925eedb3248d1ed71cd73bd774abb8c15a94a6d"
         },
         "m_Initializers:C_INIT_CreateSequentialPathV2": {
           "path": "observations/cs2/m_initializers-c_init_createsequentialpathv2.json",
-          "bytes": 12858,
-          "sha256": "1546cd175614b877640e18089f675b8646d50cb8c972f4e4c34e2af57aaf2d53"
+          "bytes": 11712,
+          "sha256": "f07a44d35017c3eee653ac7c41a91c7592eb1112dcb360225c3fd6f832fd3340"
         },
         "m_Initializers:C_INIT_CreateSpiralSphere": {
           "path": "observations/cs2/m_initializers-c_init_createspiralsphere.json",
-          "bytes": 1182,
-          "sha256": "df194200652b02570d9bb36a3063a1fe4ecdb81cdaf886b58ba0a0699e515a5f"
+          "bytes": 1045,
+          "sha256": "dfe3e8095255844a07ad8329690934648a567338c795724d512016a111bd4bc9"
         },
         "m_Initializers:C_INIT_CreateWithinBox": {
           "path": "observations/cs2/m_initializers-c_init_createwithinbox.json",
-          "bytes": 84588,
-          "sha256": "221aa591a5c330d8db7c87938b8d4172aa29215e4d894a1e501e8137f9c56a97"
+          "bytes": 77115,
+          "sha256": "d6e5b1c499f10e90bbe27746a618a96a4c4fd13f7405bd9e98ca57f0e442e406"
         },
         "m_Initializers:C_INIT_CreateWithinSphereTransform": {
           "path": "observations/cs2/m_initializers-c_init_createwithinspheretransform.json",
-          "bytes": 182736,
-          "sha256": "b8e0034e5098780915a43bb6611408be83eb80461ce6b3efbaa09913d7c9bf9c"
+          "bytes": 166817,
+          "sha256": "a3271eab9d8b114ff5ddc575e395c024624126ffc2052afae045c3ef8a572887"
         },
         "m_Initializers:C_INIT_CreationNoise": {
           "path": "observations/cs2/m_initializers-c_init_creationnoise.json",
-          "bytes": 1759,
-          "sha256": "63f631e26d2bbccbca09c2134db82e978bffe6fd2f8fdbef624f443cb7d07928"
+          "bytes": 1514,
+          "sha256": "4c0e5affdcf43e211758d5c45ea3840bb6466793c00fba9b421666d700b7b2ba"
         },
         "m_Initializers:C_INIT_DistanceToCPInit": {
           "path": "observations/cs2/m_initializers-c_init_distancetocpinit.json",
-          "bytes": 39885,
-          "sha256": "56b063c151e07c56db10b71bcb7e978e12be7dce7089aed8fb6cfa5d3504bd9e"
+          "bytes": 36009,
+          "sha256": "2a847478e063d2356b624e00be4b5b58910e6a22a1d69c81298571d41a47f625"
         },
         "m_Initializers:C_INIT_GlobalScale": {
           "path": "observations/cs2/m_initializers-c_init_globalscale.json",
-          "bytes": 1424,
-          "sha256": "0c674fd0ba72c6872c5250d48fb8a164d0e76606aab17586a075848f0a8e9daa"
+          "bytes": 1322,
+          "sha256": "df832bc9c97bb77fe6b16c592d1e86ef43f74d658412b31b3c34701cceba439b"
         },
         "m_Initializers:C_INIT_InheritFromParentParticles": {
           "path": "observations/cs2/m_initializers-c_init_inheritfromparentparticles.json",
-          "bytes": 1317,
-          "sha256": "2fa0b66b0a2895e2e9b33dab88c9115cfa191562fae635efd087eeb5c899408b"
+          "bytes": 1179,
+          "sha256": "7fde22b35eb53164bb37c0a20d38efe00e9fe1dc338d670103844f38159925ad"
         },
         "m_Initializers:C_INIT_InheritVelocity": {
           "path": "observations/cs2/m_initializers-c_init_inheritvelocity.json",
-          "bytes": 10145,
-          "sha256": "8a354fcb533831b04dec0697eab9e21db56b585bd195bbaf6f815c464ec8ecd2"
+          "bytes": 9188,
+          "sha256": "c0012231468e70e5f22e9373a1acc7bf91b7e2a5d848632f32ca1ed7b7095963"
         },
         "m_Initializers:C_INIT_InitFloat": {
           "path": "observations/cs2/m_initializers-c_init_initfloat.json",
-          "bytes": 30479,
-          "sha256": "61efff8429911722ca312f622756608774bff136763db307931db2b646dc6a24"
+          "bytes": 27275,
+          "sha256": "45bde15744257ff29bddbd3a90e4d549b9fe41c0ce6829a5d288401ade266655"
         },
         "m_Initializers:C_INIT_InitFloatCollection": {
           "path": "observations/cs2/m_initializers-c_init_initfloatcollection.json",
-          "bytes": 10617,
-          "sha256": "c5df02eaee10b7d66d6bebab08a5a3cbe78ab06324d32991938d51f809ddd3ee"
+          "bytes": 9612,
+          "sha256": "d5be54d68cb3c702b8159d71a6db38cd2fe2973771d81812e2af647b8bc61ff9"
         },
         "m_Initializers:C_INIT_InitFromCPSnapshot": {
           "path": "observations/cs2/m_initializers-c_init_initfromcpsnapshot.json",
-          "bytes": 11159,
-          "sha256": "f9d49a51b5411d8d5f5a00b9588161403632580c70c87260fec671e05c61e40f"
+          "bytes": 10186,
+          "sha256": "9dbc6bf77ea5d510f94d1d1a3182e5252b1e1d6dcdf6302416b20e5af09ef70b"
         },
         "m_Initializers:C_INIT_InitFromParentKilled": {
           "path": "observations/cs2/m_initializers-c_init_initfromparentkilled.json",
-          "bytes": 647,
-          "sha256": "a9d7c74cfe4f2b16b4e7cd480c9168d2527993eb267b467d0f98e5b6ff61c6bc"
+          "bytes": 614,
+          "sha256": "0ca0fc17aa27f7409154f82b4d055d6a30846fa2b6ee5f37ef98e8048687c805"
         },
         "m_Initializers:C_INIT_InitialRepulsionVelocity": {
           "path": "observations/cs2/m_initializers-c_init_initialrepulsionvelocity.json",
-          "bytes": 1358,
-          "sha256": "801a2aa608272b3e5d9f9c3f214a00db54362a09cab1e4faf08232d7494e9571"
+          "bytes": 1290,
+          "sha256": "780bf224cd6beb78177429d3a3fcae949ddc8b7e40e0a8497828485672522da8"
         },
         "m_Initializers:C_INIT_InitialSequenceFromModel": {
           "path": "observations/cs2/m_initializers-c_init_initialsequencefrommodel.json",
-          "bytes": 1099,
-          "sha256": "cf11a3f8819499c75d18c4beb338b1399528cbdcb2c4cd709c811fa38a738aab"
+          "bytes": 953,
+          "sha256": "efb9a74ee1a050e7f7b48116f39836d7341d89989eac209cdcc98492266129d0"
         },
         "m_Initializers:C_INIT_InitialVelocityNoise": {
           "path": "observations/cs2/m_initializers-c_init_initialvelocitynoise.json",
-          "bytes": 125549,
-          "sha256": "8e8912ed652c08f131ffcd22a83611a37826f3f868a25ceabdf62f6344f910e3"
+          "bytes": 114468,
+          "sha256": "9e7ba3e2be3e2feb3e268ffd4b3ce836117a6ca9a454490a7f8c3b0fd52abda0"
         },
         "m_Initializers:C_INIT_InitSkinnedPositionFromCPSnapshot": {
           "path": "observations/cs2/m_initializers-c_init_initskinnedpositionfromcpsnapshot.json",
-          "bytes": 11155,
-          "sha256": "9a2a25cdba3ee43f7e758844690150488c743f53108e2b7992b9843626442761"
+          "bytes": 10005,
+          "sha256": "b687be4e99e5f18adc29218534d8d346aef8e633451ca9861d27f8e0e27d432a"
         },
         "m_Initializers:C_INIT_InitVec": {
           "path": "observations/cs2/m_initializers-c_init_initvec.json",
-          "bytes": 48591,
-          "sha256": "ad938eba094f3ebdc8f81490e376e9523566feb0d4d26e3ebacf39ac29f8291a"
+          "bytes": 44200,
+          "sha256": "ef22b63ff672535c693264443ed75425de578859a7a3ac2d3e2bcf5ede76f59c"
         },
         "m_Initializers:C_INIT_InitVecCollection": {
           "path": "observations/cs2/m_initializers-c_init_initveccollection.json",
-          "bytes": 47661,
-          "sha256": "5914166ab2acbce5d7ae2205d078afe1fa4e5e67897e668e8a664e0dc5c69cf0"
+          "bytes": 43779,
+          "sha256": "57a0ba86f64bce505d5d65e8f4835c75a80ed01e3164ab77b2803f0a890dfabf"
         },
         "m_Initializers:C_INIT_LifespanFromVelocity": {
           "path": "observations/cs2/m_initializers-c_init_lifespanfromvelocity.json",
-          "bytes": 1361,
-          "sha256": "6116b216ee35a606084f668b8829c7ea0eb8d5642a0f01a28b982f0348f00596"
+          "bytes": 1218,
+          "sha256": "61f1c8a224adeaea2f398cacfb103fa414c3042285f76aae519cc2c0af187f55"
         },
         "m_Initializers:C_INIT_MoveBetweenPoints": {
           "path": "observations/cs2/m_initializers-c_init_movebetweenpoints.json",
-          "bytes": 26708,
-          "sha256": "bda40925043341e76f657c0d6f2ec0a1c6a1191dc6c5886ac2ff415ac90456fa"
+          "bytes": 23794,
+          "sha256": "e0897703fdd75420c0523c94648ce25a44da0a8e2c9a72d5ef4c3ec5589d95d0"
         },
         "m_Initializers:C_INIT_NormalAlignToCP": {
           "path": "observations/cs2/m_initializers-c_init_normalaligntocp.json",
@@ -3592,88 +3592,88 @@
         },
         "m_Initializers:C_INIT_NormalOffset": {
           "path": "observations/cs2/m_initializers-c_init_normaloffset.json",
-          "bytes": 1157,
-          "sha256": "73c1b25a03380be92cfbf3cc80065f6edbf9bd5a5dc720e3d067ec9f8546fe7f"
+          "bytes": 1125,
+          "sha256": "5c82a572e15dfc253be54e6bf674cf0fc1fd318126767bdea62b802fb8b6f4cc"
         },
         "m_Initializers:C_INIT_Orient2DRelToCP": {
           "path": "observations/cs2/m_initializers-c_init_orient2dreltocp.json",
-          "bytes": 977,
-          "sha256": "f71ac7935e46d0d14e08453d369a93c59c87f7c71b26be57b2ca88f34dc9a1fa"
+          "bytes": 875,
+          "sha256": "dd1b8b635be06faabf67bcc83f6dcd83d34bdf299c1096a6910836b2c2804cc8"
         },
         "m_Initializers:C_INIT_PositionOffset": {
           "path": "observations/cs2/m_initializers-c_init_positionoffset.json",
-          "bytes": 90392,
-          "sha256": "a213b0aeabe800bc37af552ab5c5f7ab5eb871d4bd4d438d7502a0f0103a473a"
+          "bytes": 82420,
+          "sha256": "1d60392efa8086c5d899a3212b2cbac5e26bd45b078e7a3560278089100bbf49"
         },
         "m_Initializers:C_INIT_PositionPlaceOnGround": {
           "path": "observations/cs2/m_initializers-c_init_positionplaceonground.json",
-          "bytes": 20482,
-          "sha256": "baded2bad4b1c5db712ea52a34c71f0cb2a69efa71256f8e74f448b3c03ad2f2"
+          "bytes": 18489,
+          "sha256": "5fc8631414c13454e78e264255f631bbff3b20ff6f7a90a5ef3cb70feaa74dce"
         },
         "m_Initializers:C_INIT_PositionWarp": {
           "path": "observations/cs2/m_initializers-c_init_positionwarp.json",
-          "bytes": 89550,
-          "sha256": "76e52649cae1e6d9f8efe5970c87a0520563ca460aa71d93342661584e9af62a"
+          "bytes": 81966,
+          "sha256": "5b5de23c8937d5e57d76a6e5d2b04eb3c7d9e517454c990f14b276c2ae2faaf4"
         },
         "m_Initializers:C_INIT_PositionWarpScalar": {
           "path": "observations/cs2/m_initializers-c_init_positionwarpscalar.json",
-          "bytes": 12379,
-          "sha256": "b20b9e8f16ff387b734ffc92b53b30c850f1c1dacd7f7e578de7f766462f9029"
+          "bytes": 11245,
+          "sha256": "a4c5f22192e72659d036f05857711087981c03a931d291efbd4698ccadd54250"
         },
         "m_Initializers:C_INIT_RadiusFromCPObject": {
           "path": "observations/cs2/m_initializers-c_init_radiusfromcpobject.json",
-          "bytes": 9505,
-          "sha256": "9e9497ad79a2cded09fef5396fada9b8582d5513ab1cde6b524f60ab93d4bba0"
+          "bytes": 8599,
+          "sha256": "1aaef5dd733cbc2d59d3022199a9b43925b54fad2957ea9f574d79c05816ef03"
         },
         "m_Initializers:C_INIT_RandomColor": {
           "path": "observations/cs2/m_initializers-c_init_randomcolor.json",
-          "bytes": 2105,
-          "sha256": "df2b547ed56a675b1de1792e2c022ed221f81f87d7ba7c80a8be32eba6121d3b"
+          "bytes": 1902,
+          "sha256": "7644eb954aed5eed6a494492e74566f50699ce5d4d5de03f1459a73bec1c798c"
         },
         "m_Initializers:C_INIT_RandomSecondSequence": {
           "path": "observations/cs2/m_initializers-c_init_randomsecondsequence.json",
-          "bytes": 752,
-          "sha256": "49417d14269fb6b52472f8d6813119746d20d9e673323820fcd9433fe0f20f07"
+          "bytes": 686,
+          "sha256": "5505c19bafaec32540740826d41a26734130bdd11c3d43c440251b916d9fa69f"
         },
         "m_Initializers:C_INIT_RandomSequence": {
           "path": "observations/cs2/m_initializers-c_init_randomsequence.json",
-          "bytes": 1721,
-          "sha256": "0eebc4e9569a59b48093db774f7728e79cedce73403b4cba36b746ef147d1495"
+          "bytes": 1555,
+          "sha256": "307aa6f8c66468ca2a3fdbe40dbd965ff176dc6c2f908f7340f03160d105d1ac"
         },
         "m_Initializers:C_INIT_RandomYawFlip": {
           "path": "observations/cs2/m_initializers-c_init_randomyawflip.json",
-          "bytes": 752,
-          "sha256": "c738cb6e28cefbc65a731c4c3f5e3ee7f5caad4a92646e4830a3cdc6561aac32"
+          "bytes": 687,
+          "sha256": "30e71f1c9a4a8a0852efedc466d0ed8733dfca59e5ef74c754c0bc8ee0015ac9"
         },
         "m_Initializers:C_INIT_RemapInitialDirectionToTransformToVector": {
           "path": "observations/cs2/m_initializers-c_init_remapinitialdirectiontotransformtovector.json",
-          "bytes": 787,
-          "sha256": "44360e08222de3c4fe0cabeed8e1468efe5d639024e46019065e5112f8f864a2"
+          "bytes": 753,
+          "sha256": "f74563a341820a9a212b80fe4fc242a6865afce4032fb6d97e2e465ee65d4f88"
         },
         "m_Initializers:C_INIT_RemapParticleCountToScalar": {
           "path": "observations/cs2/m_initializers-c_init_remapparticlecounttoscalar.json",
-          "bytes": 1479,
-          "sha256": "bff000a4417844068b3ae909b7e1bec75b0cfb85cc9084d7cadbe0b008b664a7"
+          "bytes": 1316,
+          "sha256": "12267a25c421dc647ba73c57449bf2a7530d916f46f51e8415ae8088cf67b1db"
         },
         "m_Initializers:C_INIT_RemapScalarToVector": {
           "path": "observations/cs2/m_initializers-c_init_remapscalartovector.json",
-          "bytes": 1806,
-          "sha256": "a660cfcd45974b8611ee6be1cabb0770acb7b93b87aec777b2d2d6aa7466939d"
+          "bytes": 1667,
+          "sha256": "9c0d2d33326d78d37456ff935004891ebe5df9e272082198f72eb1fe0701ec99"
         },
         "m_Initializers:C_INIT_RemapTransformOrientationToRotations": {
           "path": "observations/cs2/m_initializers-c_init_remaptransformorientationtorotations.json",
-          "bytes": 1199,
-          "sha256": "6af404231a94e87b8dc26032e210ed9252a1baddbe56799d18835fd646830f10"
+          "bytes": 1166,
+          "sha256": "703d75a90ad146941aa4bd2e57c3ecb387e7905c54dfa5867b41dde19790ee5d"
         },
         "m_Initializers:C_INIT_RemapTransformToVector": {
           "path": "observations/cs2/m_initializers-c_init_remaptransformtovector.json",
-          "bytes": 1655,
-          "sha256": "0a1b5bdc01cb69f90d65f614f265ea3c8a365b9f63fd879f66c9e2f037a8073a"
+          "bytes": 1588,
+          "sha256": "735ae7c38c0d304f74b98fffd4b10f633501385be7e4bc18716eaf6528ff8244"
         },
         "m_Initializers:C_INIT_RingWave": {
           "path": "observations/cs2/m_initializers-c_init_ringwave.json",
-          "bytes": 82127,
-          "sha256": "7446112f7890ce3cd2ae5c2aad041a547c54756fd8bc6d3b45ece55950be1c7c"
+          "bytes": 74080,
+          "sha256": "f86129881e1dd185233ee68876504db81dce0d5dc828d62fe0216873ba7f4910"
         },
         "m_Initializers:C_INIT_RtEnvCull": {
           "path": "observations/cs2/m_initializers-c_init_rtenvcull.json",
@@ -3682,98 +3682,98 @@
         },
         "m_Initializers:C_INIT_ScaleVelocity": {
           "path": "observations/cs2/m_initializers-c_init_scalevelocity.json",
-          "bytes": 40586,
-          "sha256": "bf2d6cad1b1c21e690f976342978d9fc092d33244862fe90b34da29cc23b9c99"
+          "bytes": 36862,
+          "sha256": "b51af8b2341749f841e39ed11242fde01b70c8e89b550f9ddbd52cf65a166e85"
         },
         "m_Initializers:C_INIT_SequenceLifeTime": {
           "path": "observations/cs2/m_initializers-c_init_sequencelifetime.json",
-          "bytes": 776,
-          "sha256": "8ea9641d55be874b4fb84f5c4d126aa41e7cc06804f3afb21a7e78e0f9e614e0"
+          "bytes": 710,
+          "sha256": "78ea2763c194fe46a33ac64cead714d03cea352fdf8074e074c99c759086168d"
         },
         "m_Initializers:C_INIT_SetAttributeToScalarExpression": {
           "path": "observations/cs2/m_initializers-c_init_setattributetoscalarexpression.json",
-          "bytes": 28605,
-          "sha256": "8612d03ad3912673fbe074de704ff484f7e95b674954af856b2963ba455f48af"
+          "bytes": 25649,
+          "sha256": "7a128b5220fd8a62d0e451f0afacded6f01e2206ab1b8b16b7a1ad5671ab9f51"
         },
         "m_Initializers:C_INIT_SetVectorAttributeToVectorExpression": {
           "path": "observations/cs2/m_initializers-c_init_setvectorattributetovectorexpression.json",
-          "bytes": 85232,
-          "sha256": "86d99369b75c2aa852c54a1a334f95f8d981602055e8724b8c3667c5cd5812df"
+          "bytes": 77759,
+          "sha256": "a4c54200d4c7f183d772aec2974a3389e44704c1b20f329605634dad0c643b39"
         },
         "m_Initializers:C_INIT_VelocityFromCP": {
           "path": "observations/cs2/m_initializers-c_init_velocityfromcp.json",
-          "bytes": 43990,
-          "sha256": "f3bdc8f71a770df73a993084f1bd309f3dcded08d1fa95a70ec4029e52f20740"
+          "bytes": 40274,
+          "sha256": "ca5440c71c0aaddbd7e95d77492f70c254b37ccad7b7c3fe0f22037486288cb4"
         },
         "m_Initializers:C_INIT_VelocityFromNormal": {
           "path": "observations/cs2/m_initializers-c_init_velocityfromnormal.json",
-          "bytes": 802,
-          "sha256": "c94f1660215770594eb3666c18b14b9b2204de6ffb5b9b135a86987f6931d44b"
+          "bytes": 728,
+          "sha256": "f53c7267f4e72dab92fef29a8fce2be84516d4a698202c64c53495781952560a"
         },
         "m_Initializers:C_INIT_VelocityRadialRandom": {
           "path": "observations/cs2/m_initializers-c_init_velocityradialrandom.json",
-          "bytes": 961,
-          "sha256": "4500100aed9956a9783ea4faa1188c871d778b02a262876b1b7e137065cad9a4"
+          "bytes": 885,
+          "sha256": "3afdad919b9ec6fb74c89b32d47b7da16a7437872cd15adffb200155f8fbd9c5"
         },
         "m_Initializers:C_INIT_VelocityRandom": {
           "path": "observations/cs2/m_initializers-c_init_velocityrandom.json",
-          "bytes": 122742,
-          "sha256": "4889991362829c6cb3a36bd49cc4c29e7c78d5435bcc35b429f35be9740bcc6f"
+          "bytes": 112963,
+          "sha256": "eb95165acd326ff78a00d0854b477323b19884c5014003c4baed9cc5c444d764"
         },
         "m_Operators:C_OP_AlphaDecay": {
           "path": "observations/cs2/m_operators-c_op_alphadecay.json",
-          "bytes": 551,
-          "sha256": "5ee3dcefb6fe5d96cc33d4c8fc082b8155f2b76f1045b0bc0cea30e843f8f8d5"
+          "bytes": 513,
+          "sha256": "21f29ea874da6580e91faec0fd289b9be3e005b21728ad7575711248a1b51fc5"
         },
         "m_Operators:C_OP_BasicMovement": {
           "path": "observations/cs2/m_operators-c_op_basicmovement.json",
-          "bytes": 67127,
-          "sha256": "49e1e7fa88ed7388b3e42e20774803042b765c44db7d90cea67e70ee7ff7e356"
+          "bytes": 60782,
+          "sha256": "2411fdcb41baf486ce6d29b98f19133532d34444088a9412a11e9b653a9e2a6e"
         },
         "m_Operators:C_OP_CalculateVectorAttribute": {
           "path": "observations/cs2/m_operators-c_op_calculatevectorattribute.json",
-          "bytes": 2443,
-          "sha256": "3c3be889b3e67d053185b2e93a57e04d134e19bad5013950dd89e52564fce148"
+          "bytes": 2281,
+          "sha256": "c52616564906caa50c74b1dd561c77ed1e2059b7c7f3855094d11f9b5710bc02"
         },
         "m_Operators:C_OP_ClampScalar": {
           "path": "observations/cs2/m_operators-c_op_clampscalar.json",
-          "bytes": 19761,
-          "sha256": "2bd56dda77e50a0c3d9ef2593dece97833f7ef493e0016aab9f4793f0442add2"
+          "bytes": 17840,
+          "sha256": "c5391adb3b3a86bd74c29f02be424ae49a1c703b695404b39207838819ebbc0a"
         },
         "m_Operators:C_OP_ColorInterpolate": {
           "path": "observations/cs2/m_operators-c_op_colorinterpolate.json",
-          "bytes": 1435,
-          "sha256": "6a57dc7b5b26b1ca38f87a893baf584028725130bdda93b7dd13d7756cc396ed"
+          "bytes": 1295,
+          "sha256": "52ebc1afb9e71587d31cf75f2b347da596fb74322568961d2c0280aaa7c3573e"
         },
         "m_Operators:C_OP_ColorInterpolateRandom": {
           "path": "observations/cs2/m_operators-c_op_colorinterpolaterandom.json",
-          "bytes": 1030,
-          "sha256": "a65f39d042179d711cade725fda97c80ca22ce98bba8c03f341865b07ccc3785"
+          "bytes": 956,
+          "sha256": "3fb8db27e65b427e4b7e1a7c2f89eef9aba5eeda102f4e0e896e75977b2478e4"
         },
         "m_Operators:C_OP_ConnectParentParticleToNearest": {
           "path": "observations/cs2/m_operators-c_op_connectparentparticletonearest.json",
-          "bytes": 818,
-          "sha256": "912b9005f84a34215d21acf048a399c28d6fa9f652007bbc290910b58f9f5501"
+          "bytes": 754,
+          "sha256": "52fd75f67b20836b8b2fcdcb405a73b565511b3108e175f9127d157a9af9c318"
         },
         "m_Operators:C_OP_ControlpointLight": {
           "path": "observations/cs2/m_operators-c_op_controlpointlight.json",
-          "bytes": 3509,
-          "sha256": "11692755934ef86db73da68dacebc845938696a6eda12c18568f6236a8ef09a1"
+          "bytes": 3111,
+          "sha256": "90d0bd73e769bcd1b9e0f18a75b31d70bd40d5bbff8edbb6fa172017716f23f8"
         },
         "m_Operators:C_OP_Cull": {
           "path": "observations/cs2/m_operators-c_op_cull.json",
-          "bytes": 925,
-          "sha256": "00f7ef7620b35107ce449a1e863fa141fa234b3a69a4b88ba03e2b25d2852b95"
+          "bytes": 817,
+          "sha256": "b260aa6ff8985ce0b524e78918b0ac68e49d592037f35220633a6ad2eed1232b"
         },
         "m_Operators:C_OP_DampenToCP": {
           "path": "observations/cs2/m_operators-c_op_dampentocp.json",
-          "bytes": 1321,
-          "sha256": "bea1254c2921805e8c1209eeb23d7699a8c32fbfba601e7625eb375a94511667"
+          "bytes": 1178,
+          "sha256": "4772f2773c9f5e2aebc3d4ecb7c9d5fd28c91b6fd5c513a99947142da829cfd0"
         },
         "m_Operators:C_OP_Decay": {
           "path": "observations/cs2/m_operators-c_op_decay.json",
-          "bytes": 10213,
-          "sha256": "5b6a88d6fd504e52261c0a986701125665ed22d033f02184e82a4c7f08501013"
+          "bytes": 9174,
+          "sha256": "aacf5c0b8ea4f656472a063b6e5d68f98d568f552d46f255bfc61c1d59fe2fe7"
         },
         "m_Operators:C_OP_DecayMaintainCount": {
           "path": "observations/cs2/m_operators-c_op_decaymaintaincount.json",
@@ -3787,168 +3787,168 @@
         },
         "m_Operators:C_OP_DifferencePreviousParticle": {
           "path": "observations/cs2/m_operators-c_op_differencepreviousparticle.json",
-          "bytes": 865,
-          "sha256": "b8d09adc01d56f4efd233ac60a0a730c0d145224365e54be9d29c3e9645e5ddc"
+          "bytes": 795,
+          "sha256": "926652dbcb6cf95d16aca83bf7ecc6dac68251f4c86440b692ab35de57f02e09"
         },
         "m_Operators:C_OP_DistanceBetweenTransforms": {
           "path": "observations/cs2/m_operators-c_op_distancebetweentransforms.json",
-          "bytes": 38129,
-          "sha256": "0bdc4a13fc9fe6c6bd1fb293e8df93e503208b882c36cc59c83a4556a73d2a1f"
+          "bytes": 34327,
+          "sha256": "43e404eb62e3f27f4ec707d37d5b93454c8703feeb6fe642eb11544a55f93eb6"
         },
         "m_Operators:C_OP_DistanceBetweenVecs": {
           "path": "observations/cs2/m_operators-c_op_distancebetweenvecs.json",
-          "bytes": 109323,
-          "sha256": "1992ae68544178572d4396538bfe1b1cbee0e9226d7ebb57e760a079a11fb5af"
+          "bytes": 99094,
+          "sha256": "014841f4ee503db33ba4ae3d330f102224f84d5dab76167398b3a7500ef6fe80"
         },
         "m_Operators:C_OP_DistanceCull": {
           "path": "observations/cs2/m_operators-c_op_distancecull.json",
-          "bytes": 1781,
-          "sha256": "048b4017d58f03702bcf7d59bebc931c8346b16c0111b092de76a913b6cbfe7f"
+          "bytes": 1573,
+          "sha256": "dde7f8983f2fd456856049478c45bd759c192e269a14fad79025c21174347123"
         },
         "m_Operators:C_OP_DistanceToTransform": {
           "path": "observations/cs2/m_operators-c_op_distancetotransform.json",
-          "bytes": 84114,
-          "sha256": "a203553a446757078e5bb04211264997368a85733b0bb267b5dd5d0e8e6b6a1a"
+          "bytes": 76458,
+          "sha256": "c4ca804f93713dfbc49ae8b890130972d10d0ed2f5073b1c331c6d2547819fc0"
         },
         "m_Operators:C_OP_EndCapDecay": {
           "path": "observations/cs2/m_operators-c_op_endcapdecay.json",
-          "bytes": 739,
-          "sha256": "d8b4636e04e3be21a1bd95a701c18e4ed72075d6a4ec12d36958d13b5326a75f"
+          "bytes": 675,
+          "sha256": "8d64e3737dbe2c7152ba3d3868db433b8f7631f61c7aeedfaf88d29cd7186295"
         },
         "m_Operators:C_OP_EndCapTimedDecay": {
           "path": "observations/cs2/m_operators-c_op_endcaptimeddecay.json",
-          "bytes": 734,
-          "sha256": "c1cb72a94b263371908ebceb343aaf46ee213be22c44d589d5fac760ded3c6c7"
+          "bytes": 701,
+          "sha256": "d051d00558662625e1baf2fc0f06c5f12a98ba85b6bc9cc52027beaf7c28f8ea"
         },
         "m_Operators:C_OP_FadeAndKill": {
           "path": "observations/cs2/m_operators-c_op_fadeandkill.json",
-          "bytes": 1473,
-          "sha256": "5460385b81f2031ac976e6bd4939158e5a3dfb86517fb3a0418aeb1e8d543209"
+          "bytes": 1269,
+          "sha256": "f0ec526ed5b8382a2ad1c13c31b48ddf76ce2f4bd7a62dda5cf1653bad9ba9dc"
         },
         "m_Operators:C_OP_FadeAndKillForTracers": {
           "path": "observations/cs2/m_operators-c_op_fadeandkillfortracers.json",
-          "bytes": 1355,
-          "sha256": "51b0bc9e93b93cc698865c76a5dd4488a57b8ddc97980eb4b956edeae67bb9e1"
+          "bytes": 1184,
+          "sha256": "222be53fa9686f9341b1fe9e4a532ae8602b8cb98bfec275711bc1ecc5d6f9aa"
         },
         "m_Operators:C_OP_FadeIn": {
           "path": "observations/cs2/m_operators-c_op_fadein.json",
-          "bytes": 883,
-          "sha256": "3dc158a6d6bd7a6721ed3db2cbc5ed7a10b48b396dab221b506892432059991b"
+          "bytes": 819,
+          "sha256": "a61f594525103e4b641cc7fa675659c12bd089e852df9d08a5e484b60f6f462a"
         },
         "m_Operators:C_OP_FadeInSimple": {
           "path": "observations/cs2/m_operators-c_op_fadeinsimple.json",
-          "bytes": 579,
-          "sha256": "7ec4e29e7ba6bf15858ded42b1926eaac0a82b311a97fd4fdd1de5a866de200d"
+          "bytes": 544,
+          "sha256": "521c95da737d06ad46647ff12b820a53d92a871a54caff0d1dacc576f7f6b6a2"
         },
         "m_Operators:C_OP_FadeOut": {
           "path": "observations/cs2/m_operators-c_op_fadeout.json",
-          "bytes": 1534,
-          "sha256": "9fb759142192fe2569c2171bc40f95b6f33de894ac39de6dc57d7e3881d167aa"
+          "bytes": 1397,
+          "sha256": "0614ec233ef89402df80ff09b4715d8f220c8abe73fe5cb45fd22f4cbcf58178"
         },
         "m_Operators:C_OP_FadeOutSimple": {
           "path": "observations/cs2/m_operators-c_op_fadeoutsimple.json",
-          "bytes": 765,
-          "sha256": "3be0db95b22d36ef00e061a2019f3edb3f0d6794e2565e1be9df2f681bad4c31"
+          "bytes": 696,
+          "sha256": "f85f19824bf5ecdf9c7ea7607dc49f13c20bd8ee19beba773a971fb1a056f805"
         },
         "m_Operators:C_OP_InheritFromParentParticlesV2": {
           "path": "observations/cs2/m_operators-c_op_inheritfromparentparticlesv2.json",
-          "bytes": 849,
-          "sha256": "6f701474ff5032eb064b7597c1710f38499ad63836ea300edef05b24fdcb6a5f"
+          "bytes": 816,
+          "sha256": "8a7a5087367ac228c42316d62ad201fe7228f6d4ffcb50cfec6745e8c934f4d1"
         },
         "m_Operators:C_OP_InterpolateRadius": {
           "path": "observations/cs2/m_operators-c_op_interpolateradius.json",
-          "bytes": 2157,
-          "sha256": "e0928a43e75e8ef18afe1999d219ffa357c6ae53ce92b6e6aa0a65395d521e7d"
+          "bytes": 1886,
+          "sha256": "b83e900b4eab5cca38f02f7680e066e228d95777fdbcc0d6495df67947d28d61"
         },
         "m_Operators:C_OP_LerpEndCapScalar": {
           "path": "observations/cs2/m_operators-c_op_lerpendcapscalar.json",
-          "bytes": 920,
-          "sha256": "29db2822e990cc11614487e9933f74f03e9857da4bdbbece413c792242f87961"
+          "bytes": 821,
+          "sha256": "ba1c8211f3f53cbc82789c176355c9e9bbeb8e4ec0d5023a4f147a5fb792b9a9"
         },
         "m_Operators:C_OP_LerpScalar": {
           "path": "observations/cs2/m_operators-c_op_lerpscalar.json",
-          "bytes": 10744,
-          "sha256": "44660f841053a79a57b76d25a9a70dedeaffc121df64ad39b8a258fe6f20a1e2"
+          "bytes": 9691,
+          "sha256": "bc06d7dcee8f21dc2809eb8b38482abe3cb8e8c85b1daf82b28b945a3b7fb13e"
         },
         "m_Operators:C_OP_LerpToOtherAttribute": {
           "path": "observations/cs2/m_operators-c_op_lerptootherattribute.json",
-          "bytes": 20028,
-          "sha256": "9f086163f7035279cc74161723cc2b7007e8411a404ac5f06d2425ec844bd1af"
+          "bytes": 17936,
+          "sha256": "8183c7725fb90a4ed507db153271867cdfb5f31b1962c14a66dea2efb3fdfb13"
         },
         "m_Operators:C_OP_LockToBone": {
           "path": "observations/cs2/m_operators-c_op_locktobone.json",
-          "bytes": 1525,
-          "sha256": "a8a6af27950d59109a0800aa71842d5e5766bbb4a5856a72728377e49f87340d"
+          "bytes": 1417,
+          "sha256": "05ffa36ffcb4fe75d5defee612f75d0fa7a3214c49c02e82612f005bb5769f2f"
         },
         "m_Operators:C_OP_MaintainSequentialPath": {
           "path": "observations/cs2/m_operators-c_op_maintainsequentialpath.json",
-          "bytes": 1983,
-          "sha256": "44bec2700c80f0a1fb62576c7a2c0a47eea692ac35c58c9aa981e122e4779cf4"
+          "bytes": 1776,
+          "sha256": "c578093ec12e38a45d6ca9495fc0e9c3b4271ec8696662ce3c8c799aac5f532c"
         },
         "m_Operators:C_OP_MaxVelocity": {
           "path": "observations/cs2/m_operators-c_op_maxvelocity.json",
-          "bytes": 9557,
-          "sha256": "45a49b4d5c38cfe10979e53b8e0af2d4948c299951dc91fb18b2c769ae8572d0"
+          "bytes": 8646,
+          "sha256": "1c57657946e0aa066171918289829fac77842ebd01fd173daf0137c838f30c53"
         },
         "m_Operators:C_OP_MovementLoopInsideSphere": {
           "path": "observations/cs2/m_operators-c_op_movementloopinsidesphere.json",
-          "bytes": 7042,
-          "sha256": "103fe2a4f039b053dfaa1aa17eb79aaecb4a61435634d7ad660a03134cc6969e"
+          "bytes": 6326,
+          "sha256": "13e43a44a8d013c4f816f638e250db8a1ec54c59bd7e057b6d18eb50117316ce"
         },
         "m_Operators:C_OP_MovementPlaceOnGround": {
           "path": "observations/cs2/m_operators-c_op_movementplaceonground.json",
-          "bytes": 1820,
-          "sha256": "5118b5643bb88c7026a98dd38acd8b1b2d154663a136955ef5f81f57ac9ec4ea"
+          "bytes": 1653,
+          "sha256": "f5a92ec2eec5f0d0646f4ce83b91900316ded3aca93c87c58809ea2c84cdb3d1"
         },
         "m_Operators:C_OP_MovementRotateParticleAroundAxis": {
           "path": "observations/cs2/m_operators-c_op_movementrotateparticlearoundaxis.json",
-          "bytes": 64165,
-          "sha256": "fa4ef85b40d20f6fdf48982706d9c10a4492b6c80d14eda6c0f0ef43601f479e"
+          "bytes": 58388,
+          "sha256": "68dfdae99032f100ab555dc834a390c304afdbed0261593f7214997b30e6bfd8"
         },
         "m_Operators:C_OP_MovementSkinnedPositionFromCPSnapshot": {
           "path": "observations/cs2/m_operators-c_op_movementskinnedpositionfromcpsnapshot.json",
-          "bytes": 28154,
-          "sha256": "3fb81b16c8ef613e3cb8be6557e5ec9212f16e94bf93f5eded4c899524894def"
+          "bytes": 25304,
+          "sha256": "da430c6aee2bc49fc1adb3f232b5b3a0420947c0044fb74d1a8a864878b64dae"
         },
         "m_Operators:C_OP_Noise": {
           "path": "observations/cs2/m_operators-c_op_noise.json",
-          "bytes": 1452,
-          "sha256": "32778f3b93c19696b3c09dea69eff44ac4a7cab30d3c1da60dcbd2c9b9791c3e"
+          "bytes": 1281,
+          "sha256": "239ff66825db04d27cb0311017b5e458524266d8d0c37e83803fa8b17baff381"
         },
         "m_Operators:C_OP_NormalizeVector": {
           "path": "observations/cs2/m_operators-c_op_normalizevector.json",
-          "bytes": 631,
-          "sha256": "b662dda27eaa96796cf54d11f7d954f4f0a0e40d74ebb528810e3946528ed81f"
+          "bytes": 597,
+          "sha256": "6cf017786ae8b89e6bc206e0aceec65033f39058f5b2f063f1d6a2c2f3adcb75"
         },
         "m_Operators:C_OP_Orient2DRelToCP": {
           "path": "observations/cs2/m_operators-c_op_orient2dreltocp.json",
-          "bytes": 610,
-          "sha256": "e1481cbe117f10e31a51d843fdb98c57ca6b59680e335485d51c302f531d93ab"
+          "bytes": 576,
+          "sha256": "dd4f80df6cce6fa8ea5fae320ee56724f53457f7f19f0db564a9559cf2579e36"
         },
         "m_Operators:C_OP_OrientTo2dDirection": {
           "path": "observations/cs2/m_operators-c_op_orientto2ddirection.json",
-          "bytes": 592,
-          "sha256": "94b6b625286845f9e82b2e08b8646296f0ac8e07de1ea675c34f93f2aa123654"
+          "bytes": 556,
+          "sha256": "0220edb743986d7f3129b4fc2fda4021f6dffba297e19c1736ccb224ae9ec9f0"
         },
         "m_Operators:C_OP_OscillateScalar": {
           "path": "observations/cs2/m_operators-c_op_oscillatescalar.json",
-          "bytes": 2728,
-          "sha256": "5017638e79b95b0885040b806ecb792a037f020d9ea677e3dcac1216270e1ca9"
+          "bytes": 2291,
+          "sha256": "191fd06ee6fd9d3aee6071b060f47b308c1143cd36b939160342c514f37a62b6"
         },
         "m_Operators:C_OP_OscillateVector": {
           "path": "observations/cs2/m_operators-c_op_oscillatevector.json",
-          "bytes": 21581,
-          "sha256": "9ffe053cfa79d39aae5bc4d351ed078536dab90397133dcf15b01095990f74a9"
+          "bytes": 19358,
+          "sha256": "2a507df572ba5e72f89dd6955b94cbe4743db1a43af6c667e4a8efe67036fd7b"
         },
         "m_Operators:C_OP_OscillateVectorSimple": {
           "path": "observations/cs2/m_operators-c_op_oscillatevectorsimple.json",
-          "bytes": 11064,
-          "sha256": "be4e490e32eebc8409d3b4a34b0de8f838733da3c9707c7d756293d1d1f04103"
+          "bytes": 9982,
+          "sha256": "7af33bd3cc87d2ee90c5f3d940fd18391b270b6418c9478040b041f3473bec02"
         },
         "m_Operators:C_OP_PlaneCull": {
           "path": "observations/cs2/m_operators-c_op_planecull.json",
-          "bytes": 741,
-          "sha256": "ddad39706e3fc109d229e7893e7b669e0e3f304c8ec6bb5b82908b76d089fb3a"
+          "bytes": 707,
+          "sha256": "0eb967c34756e9187397378b5bd9ebe01cb2b833c718ef727468961f399a73c4"
         },
         "m_Operators:C_OP_PointVectorAtNextParticle": {
           "path": "observations/cs2/m_operators-c_op_pointvectoratnextparticle.json",
@@ -3957,23 +3957,23 @@
         },
         "m_Operators:C_OP_PositionLock": {
           "path": "observations/cs2/m_operators-c_op_positionlock.json",
-          "bytes": 19760,
-          "sha256": "415ba0116a54ca823615cd19cf5578442d60cf9a8643248c7d76d6f342f97814"
+          "bytes": 17680,
+          "sha256": "8250acf40a23e06570a3041364b11d4b65576e121a38197c42c63d03a5531153"
         },
         "m_Operators:C_OP_RadiusDecay": {
           "path": "observations/cs2/m_operators-c_op_radiusdecay.json",
-          "bytes": 613,
-          "sha256": "83f193b7856caa68ab2d66c5cede1333b32987b35c6cd490aa8ce35faf78f0a5"
+          "bytes": 580,
+          "sha256": "aea82cb5491a675b97b5724198aae69de3bec89ce0ee400efab750ff213a99a1"
         },
         "m_Operators:C_OP_RampScalarLinear": {
           "path": "observations/cs2/m_operators-c_op_rampscalarlinear.json",
-          "bytes": 1830,
-          "sha256": "ca14578bf0a5b7dfbe999eb83750e343467a6c5fbb1340815fdc6afeac050968"
+          "bytes": 1569,
+          "sha256": "0669edd0b732f20d024f6e328a17b85916851e188e7c567b78251eed86326f4b"
         },
         "m_Operators:C_OP_RampScalarLinearSimple": {
           "path": "observations/cs2/m_operators-c_op_rampscalarlinearsimple.json",
-          "bytes": 1036,
-          "sha256": "e944ad7604b319aae94ca58cc2721754899edda04885caa4febc02c8a7a18f87"
+          "bytes": 926,
+          "sha256": "2e777a2b583099a67f2018430f9584c8ed0c64331f7eb4c216aacb5cf5825565"
         },
         "m_Operators:C_OP_RemapControlPointOrientationToRotation": {
           "path": "observations/cs2/m_operators-c_op_remapcontrolpointorientationtorotation.json",
@@ -3982,48 +3982,48 @@
         },
         "m_Operators:C_OP_RemapCPtoScalar": {
           "path": "observations/cs2/m_operators-c_op_remapcptoscalar.json",
-          "bytes": 1293,
-          "sha256": "01e162160c669800f697eecb792dc58eed3180a1498b1b17b6ed40ce5d2d8bc1"
+          "bytes": 1159,
+          "sha256": "d8dbb7694c36a4eeea8c45ee5b7c547917f8c9426971c52c66b9ad0fb5a20f37"
         },
         "m_Operators:C_OP_RemapCPtoVector": {
           "path": "observations/cs2/m_operators-c_op_remapcptovector.json",
-          "bytes": 9482,
-          "sha256": "9eb58e5356c4d555820fba8f02f6b24e18f4d142598a1c10db1709d0f90b8928"
+          "bytes": 8506,
+          "sha256": "6ef46f8d1fb2b1a06ee91b520538d03a37dcd2010c1aed70b66df10b215e12bc"
         },
         "m_Operators:C_OP_RemapCPVelocityToVector": {
           "path": "observations/cs2/m_operators-c_op_remapcpvelocitytovector.json",
-          "bytes": 546,
-          "sha256": "a79fbbfac63e877369f5163da0d2e325fe895364401bd09c24e1f4869764d2af"
+          "bytes": 512,
+          "sha256": "52672ccc04997fecb953eafdba3c0a186d038beaa5d2e850cc4fa229ee6b905a"
         },
         "m_Operators:C_OP_RemapCrossProductOfTwoVectorsToVector": {
           "path": "observations/cs2/m_operators-c_op_remapcrossproductoftwovectorstovector.json",
-          "bytes": 89162,
-          "sha256": "8fe01703e6879bd0817c6b244d0408aa7ef6c6d86d21bd02b9741a753630b10d"
+          "bytes": 81686,
+          "sha256": "6d95938f06963f76aae53bb3bc3087c101a29a8df606e65bf441b1ade03d3fa7"
         },
         "m_Operators:C_OP_RemapDirectionToCPToVector": {
           "path": "observations/cs2/m_operators-c_op_remapdirectiontocptovector.json",
-          "bytes": 938,
-          "sha256": "ca10a33bb27b688ca238e3ddd98f93059870ecf733908950b50971734a6cd259"
+          "bytes": 872,
+          "sha256": "db09f2da10d3f9d70b84b792a8e781f7222e9fa458353f9256d6c529f9049f5c"
         },
         "m_Operators:C_OP_RemapDotProductToScalar": {
           "path": "observations/cs2/m_operators-c_op_remapdotproducttoscalar.json",
-          "bytes": 2051,
-          "sha256": "189a68667a420676788709e8b19485a762aa91b8f04d26006a84ea4836176e3d"
+          "bytes": 1813,
+          "sha256": "41c9fe6b0786479e6f61709c3414215cb4fbe0678344dea2d0a12f4f2b7db052"
         },
         "m_Operators:C_OP_RemapScalar": {
           "path": "observations/cs2/m_operators-c_op_remapscalar.json",
-          "bytes": 1113,
-          "sha256": "7caaf4d798c9e9b8189b36c748f82ccb498b201b358e9caee51907b064f43ff3"
+          "bytes": 980,
+          "sha256": "cf0dab689c1d287f3df8a8bb714e72dabe584ed654a03b8706c0179096fc0af5"
         },
         "m_Operators:C_OP_RemapSpeed": {
           "path": "observations/cs2/m_operators-c_op_remapspeed.json",
-          "bytes": 1423,
-          "sha256": "de2c085f69bfc8fa421c242b481942c2f7906916f8bb8e7a50ec99ec10e44aed"
+          "bytes": 1254,
+          "sha256": "ce5f06427f84519f65b06745492d757164728c54ad8eef521c8dc9ba9eb15df0"
         },
         "m_Operators:C_OP_RemapTransformOrientationToRotations": {
           "path": "observations/cs2/m_operators-c_op_remaptransformorientationtorotations.json",
-          "bytes": 9545,
-          "sha256": "b9ea140cc586742a4808d9f78609bda7bf2e58aac88e8357e753a60c661c9a37"
+          "bytes": 8599,
+          "sha256": "d6572bd1ab30a64f80dae484f92505aeba501eedd3ede8ecd808a554a51eb107"
         },
         "m_Operators:C_OP_RemapTransformOrientationToYaw": {
           "path": "observations/cs2/m_operators-c_op_remaptransformorientationtoyaw.json",
@@ -4032,153 +4032,153 @@
         },
         "m_Operators:C_OP_RemapTransformVisibilityToScalar": {
           "path": "observations/cs2/m_operators-c_op_remaptransformvisibilitytoscalar.json",
-          "bytes": 884,
-          "sha256": "d1c1a38c402ce49950b4dc8e61e09b92eb0cf2d9d644228a19959d9926a5a84b"
+          "bytes": 818,
+          "sha256": "bf5cc59d5f6ccd01bce1511641d7f11942bcebb444f120a2cb7c09d3dfbf47f6"
         },
         "m_Operators:C_OP_RemapVelocityToVector": {
           "path": "observations/cs2/m_operators-c_op_remapvelocitytovector.json",
-          "bytes": 768,
-          "sha256": "a2723c93a2cec7e7d76eed47a3ac77513f453360ad8259a9c67a0d0c36145da7"
+          "bytes": 734,
+          "sha256": "aca56e30e4e0fc8b3a92f4f7089e809a90ef9494b481a0ac7062d7d37b418609"
         },
         "m_Operators:C_OP_RestartAfterDuration": {
           "path": "observations/cs2/m_operators-c_op_restartafterduration.json",
-          "bytes": 964,
-          "sha256": "62f804ff55b1e532525830d2a68c1b4575dcad83cda6d066ee4f639ec5a34110"
+          "bytes": 892,
+          "sha256": "0333bcca4235b49539f48438c347e6daf3261fa0454bfa5a8301622eb0ff3d7e"
         },
         "m_Operators:C_OP_RotateVector": {
           "path": "observations/cs2/m_operators-c_op_rotatevector.json",
-          "bytes": 11042,
-          "sha256": "c957e0fecc74709c377684587154bd74b366af8963b3b186de13993a102b4104"
+          "bytes": 9916,
+          "sha256": "144bed57921c36bdf007a2218ebc9249f8a6432dc4bc89f852e70431e5848e6d"
         },
         "m_Operators:C_OP_SetAttributeToScalarExpression": {
           "path": "observations/cs2/m_operators-c_op_setattributetoscalarexpression.json",
-          "bytes": 17922,
-          "sha256": "3a4488db60ae1c67ab7753b2053297c03411775e9e111f792baa7b4bb35f99b8"
+          "bytes": 16120,
+          "sha256": "3472b8d90aa7419855805289e34dafc1af0141a9f35a03b0530cb3b7b936d575"
         },
         "m_Operators:C_OP_SetChildControlPoints": {
           "path": "observations/cs2/m_operators-c_op_setchildcontrolpoints.json",
-          "bytes": 988,
-          "sha256": "df533a689530c97fb6caa910c1043be279402cc7d9344f188e03dae0ae6d9961"
+          "bytes": 923,
+          "sha256": "d3448c60b99a9ef3dd8f840d74bfac10c61bd69baf91fe062168501ebcd30859"
         },
         "m_Operators:C_OP_SetControlPointsToModelParticles": {
           "path": "observations/cs2/m_operators-c_op_setcontrolpointstomodelparticles.json",
-          "bytes": 1031,
-          "sha256": "554097534bdfd4093e1f8dfcf2ae84bc4408b04944988e89f1a9fa9bec5748f5"
+          "bytes": 997,
+          "sha256": "184c1601a4cf5939c0548eca53fb1893c965740d01d035f3d6c57b795c8623b2"
         },
         "m_Operators:C_OP_SetCPtoVector": {
           "path": "observations/cs2/m_operators-c_op_setcptovector.json",
-          "bytes": 514,
-          "sha256": "3848f2906bafef3ee931c8ea6b837049d21f4ccec58c80e4e290c04888909e33"
+          "bytes": 480,
+          "sha256": "e1351dfcb06ce78e54af2e1b7101fd2c4251c779432ea66981d17feae3c639d6"
         },
         "m_Operators:C_OP_SetFloat": {
           "path": "observations/cs2/m_operators-c_op_setfloat.json",
-          "bytes": 30929,
-          "sha256": "fb26a889afce33633c85d48c6dd9f3991f59fe0ce3975dc885cfdc728b6c1e1e"
+          "bytes": 27833,
+          "sha256": "b15d16e7784767b378aeb6f6a2a1b6be7dd12d3bfae7fd7e92264da0dd9f7887"
         },
         "m_Operators:C_OP_SetFloatAttributeToVectorExpression": {
           "path": "observations/cs2/m_operators-c_op_setfloatattributetovectorexpression.json",
-          "bytes": 99400,
-          "sha256": "abe75b59593ee530228431d32b031df706dc585e91c05eb9ed1a76740a881031"
+          "bytes": 91005,
+          "sha256": "64e791fd9a4692f78334e9d480d048e70b273f56284cd1bd0f0a70caa9b63bd3"
         },
         "m_Operators:C_OP_SetFloatCollection": {
           "path": "observations/cs2/m_operators-c_op_setfloatcollection.json",
-          "bytes": 9237,
-          "sha256": "119963c80fa7cf6febd023564fed77abcf40fb80f7920fac2d1e0963b672a627"
+          "bytes": 8361,
+          "sha256": "1ea650e3f0ffd8be7113aa4c772e4425e1f0b96225ae8de6d8e9da1347d01f53"
         },
         "m_Operators:C_OP_SetFromCPSnapshot": {
           "path": "observations/cs2/m_operators-c_op_setfromcpsnapshot.json",
-          "bytes": 10324,
-          "sha256": "1fa0312be1a29a6bebe4dfc8c096e5bafbc268850387c0cdeda7bb24875c0041"
+          "bytes": 9379,
+          "sha256": "a24d9b696c6d019909c0724d04c5251666613d33931a349c4600718af4f801f0"
         },
         "m_Operators:C_OP_SetPerChildControlPoint": {
           "path": "observations/cs2/m_operators-c_op_setperchildcontrolpoint.json",
-          "bytes": 10874,
-          "sha256": "bb4daf8875716b4a1ac80559edad95b5188c96e18f9c295bd7910de0907284fe"
+          "bytes": 9868,
+          "sha256": "0dcf96fbea68edfa4418c0cbdaf6c5ae0ce4e91a92f18630864b34141ca1898b"
         },
         "m_Operators:C_OP_SetPerChildControlPointFromAttribute": {
           "path": "observations/cs2/m_operators-c_op_setperchildcontrolpointfromattribute.json",
-          "bytes": 1306,
-          "sha256": "98df5171e0735249411d4756d5fbec36476bfb28cb1f52f67f1e5675e87f9f07"
+          "bytes": 1207,
+          "sha256": "ff6fa11426c0824ade98a6aafec3d08c1bdd9d99597d1b72e43351338de47947"
         },
         "m_Operators:C_OP_SetToCP": {
           "path": "observations/cs2/m_operators-c_op_settocp.json",
-          "bytes": 514,
-          "sha256": "08f37f99a75598636949b1d39e9187c6048f15cf5570df5166351f3cf8b9c174"
+          "bytes": 482,
+          "sha256": "91dedc0014a09d17d2d7e6d625eee1bf654d739d997309f42666f21a0beb1197"
         },
         "m_Operators:C_OP_SetVec": {
           "path": "observations/cs2/m_operators-c_op_setvec.json",
-          "bytes": 67051,
-          "sha256": "9ed79a828d163449b0e82d7ad3ebcd3c3a95a08ff8c0afa8f82f3a938d47d4f6"
+          "bytes": 61254,
+          "sha256": "0be9ae295e9604a91e8031b8c92503fb1b47c2dde46b2b4ef5dee5e6140c6bb5"
         },
         "m_Operators:C_OP_SetVectorAttributeToVectorExpression": {
           "path": "observations/cs2/m_operators-c_op_setvectorattributetovectorexpression.json",
-          "bytes": 83693,
-          "sha256": "b81205da571fd0a7254dc4ed689c52e5f30f13dad8b20052566045aa3150d3c2"
+          "bytes": 76208,
+          "sha256": "7b308fc88ecf60fea679161b52ad3e61fc1cad14d3f9707f4a9013f7d9073296"
         },
         "m_Operators:C_OP_SnapshotSkinToBones": {
           "path": "observations/cs2/m_operators-c_op_snapshotskintobones.json",
-          "bytes": 893,
-          "sha256": "ba65e0d0ba374fa102cfa6c349d3fdf4affd8d484f330cbcbb0b6b65e139d227"
+          "bytes": 783,
+          "sha256": "898dbe20bbc39c10482befe275cebecfdb043aa7904aab15d31aa8b87157ba0c"
         },
         "m_Operators:C_OP_Spin": {
           "path": "observations/cs2/m_operators-c_op_spin.json",
-          "bytes": 1675,
-          "sha256": "63b2a22693ec3f2cfd1e2113cf054953774ca2c47b7f3f0a98f55f5f00e74278"
+          "bytes": 1427,
+          "sha256": "5e19ecd0a5b0d8e8fe4d48200c87fbdf9ae6bf0b715a84f06da7ae2c423153b8"
         },
         "m_Operators:C_OP_SpinUpdate": {
           "path": "observations/cs2/m_operators-c_op_spinupdate.json",
-          "bytes": 8502,
-          "sha256": "9f743addd9f6dd9cd5b21b281926a647e246acc737436ea8adb596c0a678733e"
+          "bytes": 7662,
+          "sha256": "f0ab2037083cab7b1441d0f8222114dca0f28a8fd9aad198dfc3122c11c92e78"
         },
         "m_Operators:C_OP_SpinYaw": {
           "path": "observations/cs2/m_operators-c_op_spinyaw.json",
-          "bytes": 780,
-          "sha256": "b14e9ec788f12fcd9ab4ad4f91eb201f667da0b06c056271d53e902ba7ac595b"
+          "bytes": 710,
+          "sha256": "93aa03409b71b5f663e4cc42463ed370b10f151e281eb22a8572fd9ad90b883a"
         },
         "m_Operators:C_OP_VectorNoise": {
           "path": "observations/cs2/m_operators-c_op_vectornoise.json",
-          "bytes": 11209,
-          "sha256": "f21cbb9d88eafbcfdae029871729e92ef8ce5ecf855a8e0010015ece9c19ba50"
+          "bytes": 10098,
+          "sha256": "1067d6a9783f2b1d586bab608f4017efc7b12f4db8d28690644fa9f72c204a9d"
         },
         "m_Operators:C_OP_VelocityDecay": {
           "path": "observations/cs2/m_operators-c_op_velocitydecay.json",
-          "bytes": 567,
-          "sha256": "ef436bd61627adf1c702ff0c691401dac3ba2ba1a132c846e79e323279d29809"
+          "bytes": 531,
+          "sha256": "360b4e365972d11d0c004083cc2273857926e915cf2a01300792b61350e53ec1"
         },
         "m_Operators:C_OP_VelocityMatchingForce": {
           "path": "observations/cs2/m_operators-c_op_velocitymatchingforce.json",
-          "bytes": 781,
-          "sha256": "cb642a9a5136a20fdedd17989ea4a2514ff4c1979cf058aa145d1a3b8dedd3ea"
+          "bytes": 703,
+          "sha256": "308fd5a5f11e12b489e0e70a1e7d0d98b5a9d1da878df794e522d0498134f72c"
         },
         "m_PreEmissionOperators:C_OP_ChooseRandomChildrenInGroup": {
           "path": "observations/cs2/m_preemissionoperators-c_op_chooserandomchildreningroup.json",
-          "bytes": 8361,
-          "sha256": "a1b20842b23e53f0487fa1a0c6aeb7bba152cd0dcce7929aa6980762bac65e77"
+          "bytes": 7617,
+          "sha256": "f2e3f6affb9f4a64b342e173708f3b65b1784a95a1c938983eef40804c685c35"
         },
         "m_PreEmissionOperators:C_OP_ControlPointToRadialScreenSpace": {
           "path": "observations/cs2/m_preemissionoperators-c_op_controlpointtoradialscreenspace.json",
-          "bytes": 721,
-          "sha256": "c5b7563cd17640c21171283f57833f515de1a1cadfdc52aa796db5d2a543ec64"
+          "bytes": 657,
+          "sha256": "2c9ad6048cf201af6356296502e77ce6d4fda48f17b7ac7c8706cdd935a40950"
         },
         "m_PreEmissionOperators:C_OP_DistanceBetweenCPsToCP": {
           "path": "observations/cs2/m_preemissionoperators-c_op_distancebetweencpstocp.json",
-          "bytes": 1895,
-          "sha256": "258a6378ba0f7f55cb379bf9765fd0d9e222317cc316825008cd4f4d53eac302"
+          "bytes": 1689,
+          "sha256": "2aab8e81f4936a24bf440833c4b9ff382efdc0e92a99d60a795f8e5b846ff36f"
         },
         "m_PreEmissionOperators:C_OP_EnableChildrenFromParentParticleCount": {
           "path": "observations/cs2/m_preemissionoperators-c_op_enablechildrenfromparentparticlecount.json",
-          "bytes": 9468,
-          "sha256": "0cca1e90649094dfa7715c3afc1b1cf65f334cb0ce8eeb5c585a5adfd8a89490"
+          "bytes": 8594,
+          "sha256": "7d40ab34b9d2727e61bd2fe46837e3d96cd1ac8aeb15dde9e65060eabcd08754"
         },
         "m_PreEmissionOperators:C_OP_LightningSnapshotGenerator": {
           "path": "observations/cs2/m_preemissionoperators-c_op_lightningsnapshotgenerator.json",
-          "bytes": 68585,
-          "sha256": "bfaf05e3f54122be484a4d73186e36ca7f1e9036e65822b9e7cd32bc3b816a0f"
+          "bytes": 62165,
+          "sha256": "41bf647975567650fb013bee10aa9b2a10096360a1deb7f3a57adc3d8ef43d88"
         },
         "m_PreEmissionOperators:C_OP_RemapCPtoCP": {
           "path": "observations/cs2/m_preemissionoperators-c_op_remapcptocp.json",
-          "bytes": 1324,
-          "sha256": "c7f50fc228e4301d71ad8219ccb39abd7b43a27e5f5e3da9b2573d0d6ee9617d"
+          "bytes": 1192,
+          "sha256": "d3ed769285316b60a038eaeefe50fe3491ded28642b3e3a7c06f9b399e6417a6"
         },
         "m_PreEmissionOperators:C_OP_RemapModelVolumetoCP": {
           "path": "observations/cs2/m_preemissionoperators-c_op_remapmodelvolumetocp.json",
@@ -4187,98 +4187,98 @@
         },
         "m_PreEmissionOperators:C_OP_RemapSpeedtoCP": {
           "path": "observations/cs2/m_preemissionoperators-c_op_remapspeedtocp.json",
-          "bytes": 947,
-          "sha256": "573f1157ee6278a8448dee208853100cf9613ef4e30f9b9278fc5879b36170df"
+          "bytes": 849,
+          "sha256": "0f417df51a81e540fd55d2eebb8ef5f1f2b41003eb5c48b82a7206f3c5027590"
         },
         "m_PreEmissionOperators:C_OP_SelectivelyEnableChildren": {
           "path": "observations/cs2/m_preemissionoperators-c_op_selectivelyenablechildren.json",
-          "bytes": 9807,
-          "sha256": "e644b9d3eb3b2084f3cc2a3dcd16391f7f61a38ac1c8f04d2acefebbc4e24e96"
+          "bytes": 8859,
+          "sha256": "2d896de7b4ce7f6ff6f965999faeac7a6557e5a0c05c235a1ae8b3a745acc3e1"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointOrientation": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointorientation.json",
-          "bytes": 1400,
-          "sha256": "81bb0b1a1b24902aef32f45780f0e623a0b963ce6f9042910dfdaadf0625d58a"
+          "bytes": 1367,
+          "sha256": "239695dcac148dd10d3141fc27b5b8e13fa8e17f5f4e086cccb80694484c5922"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointPositions": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointpositions.json",
-          "bytes": 2082,
-          "sha256": "4bb3cc1814425d801eb01877acd2edc48839ba78438f2fa4625953564bc6fc3d"
+          "bytes": 1917,
+          "sha256": "cce42d214969c45727f4ded933bbcc82ffad57ed6446106e64ccdf6404996553"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToCenter": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtocenter.json",
-          "bytes": 603,
-          "sha256": "f78c2f13af03f286280f733ef9e94e0e3eb130e5d336f9987a20075ea45b6b68"
+          "bytes": 569,
+          "sha256": "ac3e5a979dc352cd23ffce87a8f4420a77c8bc47afa8a866e56d5a4ce5543a7a"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToHMD": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtohmd.json",
-          "bytes": 635,
-          "sha256": "652763d74b8b14fb70f807fe3a4d8a22d6f7736c6236b244dbd83e2f015e3a93"
+          "bytes": 603,
+          "sha256": "78511a5540c6ae44e7b4980f5a8d9e2b775b782f6a0a2ad64c767a93ada8f474"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToImpactPoint": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtoimpactpoint.json",
-          "bytes": 1569,
-          "sha256": "efb97412f09800916146e56d7866823103cc310536b347d2e41502dd30782d0b"
+          "bytes": 1467,
+          "sha256": "efd1537425ddd792ac70550fe197a3842437562f8162b9fdf3a10a68ac53b656"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToPlayer": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtoplayer.json",
-          "bytes": 730,
-          "sha256": "09a4c1b4245eda851918d4af7b5c3a770b7340934e5b01df011b359574c4e8f7"
+          "bytes": 697,
+          "sha256": "3321d3f72a0cec7f20d5712e2932537aafcac8f812ff3474aa67ef60c167cd6c"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToVectorExpression": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setcontrolpointtovectorexpression.json",
-          "bytes": 81054,
-          "sha256": "95143923bb8458b611e9b2effaaeb76e173d8d1ab47b920f1ff51ee13c1883db"
+          "bytes": 73548,
+          "sha256": "21d3734634cfd7869ff948e2596a45531d3fe71e15826345b37e231dadca7e7e"
         },
         "m_PreEmissionOperators:C_OP_SetCPOrientationToPointAtCP": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setcporientationtopointatcp.json",
-          "bytes": 751,
-          "sha256": "d2db00d8b57edf08e22051b260c689f6ebb2a2ad6a59894820c0854830a269f3"
+          "bytes": 686,
+          "sha256": "99f4fbf7753134e420f0961dc57bf5da3355e520efc8a12f5a870c2d9d7cf694"
         },
         "m_PreEmissionOperators:C_OP_SetGravityToCP": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setgravitytocp.json",
-          "bytes": 702,
-          "sha256": "7ad3d1ac8b782273e0b90881006cfb84c65445053173a4f79676452f62debcc2"
+          "bytes": 668,
+          "sha256": "b12d9c0cad0b104e6b961b093e31577bd2b1d4955d1335fbc875ad581b7b9a0a"
         },
         "m_PreEmissionOperators:C_OP_SetSingleControlPointPosition": {
           "path": "observations/cs2/m_preemissionoperators-c_op_setsinglecontrolpointposition.json",
-          "bytes": 51039,
-          "sha256": "18701aa896b018a1e89c7c1449b9d1985eefc24ad982e0dc14f4930bf2ecffbd"
+          "bytes": 46695,
+          "sha256": "75d2f6a3bfca6cb6e78391914ac433581e56a032d3256e665d157a7e3044753a"
         },
         "m_PreEmissionOperators:C_OP_StopAfterCPDuration": {
           "path": "observations/cs2/m_preemissionoperators-c_op_stopaftercpduration.json",
-          "bytes": 10938,
-          "sha256": "f6b38bb1f082aa9e1267a1e826294c143541f4333be56d4d761d857ab8add3eb"
+          "bytes": 9996,
+          "sha256": "48f12a3c4d72b03fefd19b76197e862b876ae409262edc69f23bb18dd38e0a13"
         },
         "m_Renderers:C_OP_RenderCables": {
           "path": "observations/cs2/m_renderers-c_op_rendercables.json",
-          "bytes": 22321,
-          "sha256": "3a73bd5bb2d25249da65d0b5edd2b6efebdf2fe75b117f6aad689dedfbf6bf59"
+          "bytes": 20370,
+          "sha256": "94970f8e0c23c559b42ba9e73ab361a9e7614411b6f73445c9b7139757a3129b"
         },
         "m_Renderers:C_OP_RenderGpuImplicit": {
           "path": "observations/cs2/m_renderers-c_op_rendergpuimplicit.json",
-          "bytes": 20294,
-          "sha256": "784a462079a9d4a18acba9404643111ae34c67edb2416e4d7b30f319a45829d3"
+          "bytes": 18406,
+          "sha256": "175355bc0bf58b796ce4ea2bd460f945b3632dbd6b0e473319f228971fdfe4d7"
         },
         "m_Renderers:C_OP_RenderModels": {
           "path": "observations/cs2/m_renderers-c_op_rendermodels.json",
-          "bytes": 233653,
-          "sha256": "95024e42fd0fbb13fa0fee379b1e303364277b5065dfaf869a2d29cf29cc4d2a"
+          "bytes": 214022,
+          "sha256": "8b8366649a4f3d09ddac2a3da2eb10a8788ce96294e6d5c622d4a8e8fea7bfa6"
         },
         "m_Renderers:C_OP_RenderOmni2Light": {
           "path": "observations/cs2/m_renderers-c_op_renderomni2light.json",
-          "bytes": 73293,
-          "sha256": "052875d822d08a703861b12b2be967c6677b33502a08788373c17158c2032b65"
+          "bytes": 66781,
+          "sha256": "452ae792cb6c6b5737da5af4bc0912cceea94fbdc5143a4bc503bebf6b411bc9"
         },
         "m_Renderers:C_OP_RenderProjected": {
           "path": "observations/cs2/m_renderers-c_op_renderprojected.json",
-          "bytes": 2195,
-          "sha256": "b056ada5c1bbc6ea4d596445a413d018ab014bc7f0e9b3ec9bbccf1fd4084aee"
+          "bytes": 2128,
+          "sha256": "f523d889f8556dd870dc25e081f20be5ba56d08cb1d7748922ae89dc9220a0f4"
         },
         "m_Renderers:C_OP_RenderRopes": {
           "path": "observations/cs2/m_renderers-c_op_renderropes.json",
-          "bytes": 243387,
-          "sha256": "461bbdedcdb27d62bb9fee281bb5d92a350865c7d23c772a741693ef4e4e8ada"
+          "bytes": 221524,
+          "sha256": "a7a8a10b12070104baacc42603ded11f2ddc55eec0cd7ac5cc6a452de4b022d6"
         },
         "m_Renderers:C_OP_RenderSound": {
           "path": "observations/cs2/m_renderers-c_op_rendersound.json",
@@ -4287,23 +4287,23 @@
         },
         "m_Renderers:C_OP_RenderSprites": {
           "path": "observations/cs2/m_renderers-c_op_rendersprites.json",
-          "bytes": 446894,
-          "sha256": "e057ee65e24ebe29ae4ff9d818119fa31ea7df9f9ddc457bec8a18d69e090200"
+          "bytes": 406736,
+          "sha256": "2480f6e084af7ac5e4814a85a0e5828f0ce69a75c3bab8d21480781f2dfaea62"
         },
         "m_Renderers:C_OP_RenderStandardLight": {
           "path": "observations/cs2/m_renderers-c_op_renderstandardlight.json",
-          "bytes": 69067,
-          "sha256": "fa265cc1a3c9534ef53fbd935d09020f79ddefe87cae204ffafd4c9a8aa6fdde"
+          "bytes": 63246,
+          "sha256": "56c410d9d0a92252d022ac236cce8578dfe3538a5c5e3063900eea21abe645e6"
         },
         "m_Renderers:C_OP_RenderTrails": {
           "path": "observations/cs2/m_renderers-c_op_rendertrails.json",
-          "bytes": 434357,
-          "sha256": "eaf5ef40b35855011ad7e502b556cafef667798533f298b9434dcf6e9e1a7904"
+          "bytes": 396169,
+          "sha256": "8a0d220bee19cb44860d22bce1b0c08525402af5db7d2f8a287995a212f1ad09"
         },
         "system:CParticleSystemDefinition": {
           "path": "observations/cs2/system-cparticlesystemdefinition.json",
-          "bytes": 13017,
-          "sha256": "03b1b9785265a0fb13d6ae0f6de2b8f43bec07171800ca4f685fd25381881785"
+          "bytes": 11865,
+          "sha256": "2db5cf8a6eeb5989f6e5f2d108f71b2a99951dfba7c51e7fb69e77689a86bd7d"
         }
       }
     },
@@ -10637,78 +10637,78 @@
       "classFiles": {
         "m_Constraints:C_OP_BoxConstraint": {
           "path": "observations/deadlock/m_constraints-c_op_boxconstraint.json",
-          "bytes": 95886,
-          "sha256": "1fac4c74946b74347cc4855b18a75a4f4c0c319bbe16d72546a5c0aed57a86ae"
+          "bytes": 88190,
+          "sha256": "b4589b81cdc24f27a04ea600b1fde035fb4404595ffb5ca3fd3f44a6ec45bbdd"
         },
         "m_Constraints:C_OP_CollideWithSelf": {
           "path": "observations/deadlock/m_constraints-c_op_collidewithself.json",
-          "bytes": 8839,
-          "sha256": "a13a802c7a3938bb0850e92bd5cebf9fe111f4035637b2aaebf6e3d02069ad7b"
+          "bytes": 7967,
+          "sha256": "35584f90153b359c51bb8c87e1392dc1d9725068e1e3e8c88c29cbb85f9f576e"
         },
         "m_Constraints:C_OP_ConstrainDistance": {
           "path": "observations/deadlock/m_constraints-c_op_constraindistance.json",
-          "bytes": 74050,
-          "sha256": "c05700d6f4362ef6e175bba67b0fb02283587c9c1cd3acbc07ddc72ae81079f6"
+          "bytes": 67760,
+          "sha256": "1bca96d0501513c1f1e0d4c0f138b0c0dd5388c25c4ccc1757fb6d7c8832e102"
         },
         "m_Constraints:C_OP_ConstrainDistanceToPath": {
           "path": "observations/deadlock/m_constraints-c_op_constraindistancetopath.json",
-          "bytes": 3597,
-          "sha256": "301335a861183db124fdfd88a7803b3903351245c775a1a44016c0e5070917b0"
+          "bytes": 3220,
+          "sha256": "4b6a4f2e82240b18c8ce0e493aeac63e410239b27bca73db85fdea61361d8afe"
         },
         "m_Constraints:C_OP_ConstrainDistanceToUserSpecifiedPath": {
           "path": "observations/deadlock/m_constraints-c_op_constraindistancetouserspecifiedpath.json",
-          "bytes": 1533,
-          "sha256": "67f60de5f4dcb9b7283666ebfdf5ee657f4fa29c47b8b99d1db8475e2a7b5e22"
+          "bytes": 1390,
+          "sha256": "85e4d28c8af1948ed3768bed2bbfe8186141e64033ad34faf616b91c2f9d1792"
         },
         "m_Constraints:C_OP_PlanarConstraint": {
           "path": "observations/deadlock/m_constraints-c_op_planarconstraint.json",
-          "bytes": 8273,
-          "sha256": "c3a61fe8a46aec365c4880e82b4a4bf826defdeb6614b95466834acbfd9ad09c"
+          "bytes": 7483,
+          "sha256": "6e8f7914bb45e321c37fe3c5f3ee3a02bec2de30619c716260cceb9d86f34c56"
         },
         "m_Constraints:C_OP_RopeSpringConstraint": {
           "path": "observations/deadlock/m_constraints-c_op_ropespringconstraint.json",
-          "bytes": 44536,
-          "sha256": "b073f0cbfac67ad562225f533be32f37e12e5a2cf0eda5f02b78fc2a8f3caa39"
+          "bytes": 40551,
+          "sha256": "3d893d6b943716ae6595e5e5e4ea1a60389a6b60e820ab8a0bd9f62c506e0de6"
         },
         "m_Constraints:C_OP_WorldTraceConstraint": {
           "path": "observations/deadlock/m_constraints-c_op_worldtraceconstraint.json",
-          "bytes": 62961,
-          "sha256": "c420519031793ace12e83e3f2fe0bc14f4aea4c4ade46863f540d32b31bb580e"
+          "bytes": 57015,
+          "sha256": "b8a35de07e35630f552ce6904412da1266065015c79931bf0b7ebc77126d19fd"
         },
         "m_Emitters:C_OP_ContinuousEmitter": {
           "path": "observations/deadlock/m_emitters-c_op_continuousemitter.json",
-          "bytes": 35757,
-          "sha256": "031910c0b502d9157964e8ebe2e2518e74cf81e8d54129e5412728f5eab58550"
+          "bytes": 32064,
+          "sha256": "a7794aa3695dbbda084f9eef5edc60bf0f1d93a8e730ac3df977f9d8ecfebd3f"
         },
         "m_Emitters:C_OP_InstantaneousEmitter": {
           "path": "observations/deadlock/m_emitters-c_op_instantaneousemitter.json",
-          "bytes": 38043,
-          "sha256": "4bf016627c3e40673fd28d7698dbe58b632aebbc17cd97399223267697bc6e7d"
+          "bytes": 34710,
+          "sha256": "8997bdd2fcbf17433501e2faf4d009b74b78ed8f42286aec59360bcf4a41b25f"
         },
         "m_Emitters:C_OP_MaintainEmitter": {
           "path": "observations/deadlock/m_emitters-c_op_maintainemitter.json",
-          "bytes": 11629,
-          "sha256": "f4e62a04fc64fcd967f74f6870678218fe020c6352bbb8d816dfcf08ecc7e74c"
+          "bytes": 10658,
+          "sha256": "416cf5625433415b53660a47a875292d4841341cc1395a87808952ad78b6689d"
         },
         "m_Emitters:C_OP_NoiseEmitter": {
           "path": "observations/deadlock/m_emitters-c_op_noiseemitter.json",
-          "bytes": 1974,
-          "sha256": "1ca14b28a1728f70eab0de2645fd154f94bfe8cf7b5befc86f9b5ad200a2f520"
+          "bytes": 1691,
+          "sha256": "3b812ea0abd30bbb8baf0b4b92ac3352b3fd9260187935ceadb7727722f08a64"
         },
         "m_ForceGenerators:C_OP_AttractToControlPoint": {
           "path": "observations/deadlock/m_forcegenerators-c_op_attracttocontrolpoint.json",
-          "bytes": 38600,
-          "sha256": "1dcf9432b332f182ef9d9f940ffff1241822701fa2a6db14ab5505d7faa24ea6"
+          "bytes": 35068,
+          "sha256": "65c2a10a7863d3a5bbeba6a94ff5a9f4b6cbabe5f0355fe4a9e1f9a36bb73092"
         },
         "m_ForceGenerators:C_OP_CurlNoiseForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_curlnoiseforce.json",
-          "bytes": 220060,
-          "sha256": "a886a6fad265b8744d88ddd75295a782ce78e1c3c56e2743ce7205828b0ae7ec"
+          "bytes": 201417,
+          "sha256": "8ee1a68985c25c602ae3de9bf6237c9cce21d8004c774010b0d6fd4a7c15c5b1"
         },
         "m_ForceGenerators:C_OP_ExternalGameImpulseForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_externalgameimpulseforce.json",
-          "bytes": 4337,
-          "sha256": "7b9d7eb50c6cf6fdacd471344d5fee634421b3ad4743af666f63f2278bac9ce5"
+          "bytes": 3983,
+          "sha256": "aa4e8cf8e2b8328f4c980fb9723842e8ddb5264f575f2323849ab74dcfeca14d"
         },
         "m_ForceGenerators:C_OP_ExternalWindForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_externalwindforce.json",
@@ -10717,173 +10717,173 @@
         },
         "m_ForceGenerators:C_OP_IntraParticleForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_intraparticleforce.json",
-          "bytes": 1429,
-          "sha256": "700df41d9875b69d9d25ca24c51d218834a8d12574e7fb16a3129559832a6a03"
+          "bytes": 1260,
+          "sha256": "f75312facece28f413a8e2c71bf7b3573379d0142b6ef495919927fec3e957cc"
         },
         "m_ForceGenerators:C_OP_LocalAccelerationForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_localaccelerationforce.json",
-          "bytes": 48138,
-          "sha256": "1bd16ff46223ad214990281cfc7b1b3cd42a9f2b7e3603506456ff6137d2571a"
+          "bytes": 44290,
+          "sha256": "8584495dc100de6cb568c61900b572cf0c2ba01da485d9406fbb6336ae2190f5"
         },
         "m_ForceGenerators:C_OP_PerParticleForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_perparticleforce.json",
-          "bytes": 51654,
-          "sha256": "5c0a7d91942b59c4597e8824f16680a5575ef94c4ee93c40b71970de3b6ab7a0"
+          "bytes": 46867,
+          "sha256": "5e032c5a671b7a52561ee632476d18abb068ddb1a08cd23eff86d3499946c858"
         },
         "m_ForceGenerators:C_OP_RandomForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_randomforce.json",
-          "bytes": 10094,
-          "sha256": "2280dcd46462c3b718c79307e731d26f4f14ffc0107b0598c410a8879267045a"
+          "bytes": 9038,
+          "sha256": "fe5d181052776def9e62b9bc256d3a0e28bc75911baf993d981d45b217ffc4af"
         },
         "m_ForceGenerators:C_OP_TimeVaryingForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_timevaryingforce.json",
-          "bytes": 735,
-          "sha256": "6011cdfcea985a0496c3077be2b35756ce7db7259a37e7ee8478fa1babefe0ab"
+          "bytes": 703,
+          "sha256": "4861294a2a8e67c09741c686a7ae432cfa3854f7118f3ec9a8c1846b91e488b6"
         },
         "m_ForceGenerators:C_OP_TurbulenceForce": {
           "path": "observations/deadlock/m_forcegenerators-c_op_turbulenceforce.json",
-          "bytes": 1813,
-          "sha256": "d1c31432e3650c96de0e6f6b058074b1107f086849ffcaa3a33bc41d3be30bbc"
+          "bytes": 1667,
+          "sha256": "642d1c18e7afc2b01bc0b8e76b7ffa852797338e7fc6444e9afdb1aeafe9833b"
         },
         "m_ForceGenerators:C_OP_TwistAroundAxis": {
           "path": "observations/deadlock/m_forcegenerators-c_op_twistaroundaxis.json",
-          "bytes": 12203,
-          "sha256": "aa01d0a8d9fc1f65122c95396cccc0477874a3c537dbba92d685dc549d63a9ff"
+          "bytes": 11082,
+          "sha256": "52da5595db07c3459a7068c840b9c9911c5d532d5b35ae1ab0c4ef79899a46cc"
         },
         "m_Initializers:C_INIT_AgeNoise": {
           "path": "observations/deadlock/m_initializers-c_init_agenoise.json",
-          "bytes": 1595,
-          "sha256": "3a9d49a8d4468d8b586929cb16c593f0d1a13b7f961d2bf9a5a10e630de34132"
+          "bytes": 1357,
+          "sha256": "a1fb54565e275d88bb0084ddf785f9ce5c0f16fc0370b15c38258a352a6c9cfe"
         },
         "m_Initializers:C_INIT_CreateAlongPath": {
           "path": "observations/deadlock/m_initializers-c_init_createalongpath.json",
-          "bytes": 1530,
-          "sha256": "5e8fcb9377bda2bae9feb9743011bb41bbc65b096fffde418551dd5d8ea8d3ea"
+          "bytes": 1430,
+          "sha256": "74bbf3fe49ab0778b4141a050d8204e14ece7504b7af43ca4cd747b9c989b169"
         },
         "m_Initializers:C_INIT_CreateFromParentParticles": {
           "path": "observations/deadlock/m_initializers-c_init_createfromparentparticles.json",
-          "bytes": 1451,
-          "sha256": "0f0f640cf7ddce0514f51147795c4686c9addb00ab17e36621ec6789a24eda51"
+          "bytes": 1347,
+          "sha256": "c400049aa94bfd047955e106c68a843a74d66b286f05a2efe55208e20ae5b66e"
         },
         "m_Initializers:C_INIT_CreateInEpitrochoid": {
           "path": "observations/deadlock/m_initializers-c_init_createinepitrochoid.json",
-          "bytes": 45027,
-          "sha256": "d61c197eccf26515f40ed74cffbb3dec688f7b8fd9f19b1638679c22b5610f11"
+          "bytes": 41024,
+          "sha256": "8684b0dcd82ea1fef97895171eec6ee03b4badacc9997ebf7687c68302b9c5c1"
         },
         "m_Initializers:C_INIT_CreateOnGrid": {
           "path": "observations/deadlock/m_initializers-c_init_createongrid.json",
-          "bytes": 54765,
-          "sha256": "d454578f0f751e2e39505248038d3fa4f5f5f97733043fe757793e5c814379f7"
+          "bytes": 49554,
+          "sha256": "d23bafa89b3094e4a5e917be13c8d07a6944350eb53b4f82cb7607a9fcb1880d"
         },
         "m_Initializers:C_INIT_CreateOnModel": {
           "path": "observations/deadlock/m_initializers-c_init_createonmodel.json",
-          "bytes": 98527,
-          "sha256": "76ae4cb37f733e427982e5df6d7962958047c3915f3949143655ee1f21bc165f"
+          "bytes": 90848,
+          "sha256": "0fb509b675282f9579d675be49c56f8b64107dfa2852c7fa635c4d31cff3e041"
         },
         "m_Initializers:C_INIT_CreateOnModelAtHeight": {
           "path": "observations/deadlock/m_initializers-c_init_createonmodelatheight.json",
-          "bytes": 10137,
-          "sha256": "02250ff060eaea4020c72a934060cf48505003d7a55c36585a164eb098951c56"
+          "bytes": 9195,
+          "sha256": "47b30ef0bf8efe93741bb321407257cffbeaddae2ffc7c09cf223ec0ba0e03b3"
         },
         "m_Initializers:C_INIT_CreatePhyllotaxis": {
           "path": "observations/deadlock/m_initializers-c_init_createphyllotaxis.json",
-          "bytes": 1948,
-          "sha256": "226d675539244a3e0bb35625211bab4e8dd348cd9e98ea58001b1adbacc295b6"
+          "bytes": 1666,
+          "sha256": "b54223497f775e2a378e5ee630c4f6ecd718af5a3ea3ca887ad3388c6759b168"
         },
         "m_Initializers:C_INIT_CreateSequentialPath": {
           "path": "observations/deadlock/m_initializers-c_init_createsequentialpath.json",
-          "bytes": 1215,
-          "sha256": "cf567fdcb0adaea19681b20f3ab344de7c220c9ff6512009717f972f362fa47f"
+          "bytes": 1114,
+          "sha256": "b9c5aae1f02cc6d434287e5875ff74013929427baaef63b989b5e1455afab2d0"
         },
         "m_Initializers:C_INIT_CreateSequentialPathV2": {
           "path": "observations/deadlock/m_initializers-c_init_createsequentialpathv2.json",
-          "bytes": 23432,
-          "sha256": "051828b4efb8b83ba674515feb7c5177499b848ca15c17694340d66cd63ae005"
+          "bytes": 21313,
+          "sha256": "f39827e63297abe5c24cb6f3a1a2f4e5faf0ff044963b6d66ee0ae9901291fa3"
         },
         "m_Initializers:C_INIT_CreateSpiralSphere": {
           "path": "observations/deadlock/m_initializers-c_init_createspiralsphere.json",
-          "bytes": 14684,
-          "sha256": "9db9e7c57b100e988c33e2611f13692b6c4a607a0a9a0480e09be60e5aaced76"
+          "bytes": 13375,
+          "sha256": "c9ba0861615cc0e77a708c2051e64bcba95ee6fbed5b51a40986d77892d3fa79"
         },
         "m_Initializers:C_INIT_CreateWithinBox": {
           "path": "observations/deadlock/m_initializers-c_init_createwithinbox.json",
-          "bytes": 82881,
-          "sha256": "fa8ef5fc7f6733afc68003562fc61fd57314bf9f5b71b7d7d62c0e9076542baf"
+          "bytes": 74852,
+          "sha256": "f1088d7f84f9e2a939116b3e211cefbd4191e80fc09e424ef92e069a7fc919f0"
         },
         "m_Initializers:C_INIT_CreateWithinSphereTransform": {
           "path": "observations/deadlock/m_initializers-c_init_createwithinspheretransform.json",
-          "bytes": 210160,
-          "sha256": "ecf158fbe7fcdbefe5a405d6279cc53b06d2719dfc3b4129e106bad2395d22f2"
+          "bytes": 193035,
+          "sha256": "878fa5efcbcddf8dcbf03e882593bbbdb033b3042eac91818761da821e3069df"
         },
         "m_Initializers:C_INIT_CreationNoise": {
           "path": "observations/deadlock/m_initializers-c_init_creationnoise.json",
-          "bytes": 1667,
-          "sha256": "eeff72165d1147cf5f62c9a71ec22661c67440f69cda192fb1699026a4b31074"
+          "bytes": 1460,
+          "sha256": "c7ca8ffc12e15733f7a39fcc69a95479ee014c52e1c22341864edb6ced47084d"
         },
         "m_Initializers:C_INIT_DistanceToCPInit": {
           "path": "observations/deadlock/m_initializers-c_init_distancetocpinit.json",
-          "bytes": 40346,
-          "sha256": "a214aaae37bd56045c423cd714a6fc904ea7be8e4077e9168ed601ce0aeaed1f"
+          "bytes": 36473,
+          "sha256": "4286283b76640059f6446bc54e5a54b9c6688deeafec0b23c025876a6dc95cab"
         },
         "m_Initializers:C_INIT_InheritFromParentParticles": {
           "path": "observations/deadlock/m_initializers-c_init_inheritfromparentparticles.json",
-          "bytes": 1126,
-          "sha256": "71449b2f1d4e617304dc6cf52e6c2514830936f85bc5f5ad01cefc9c1571e80c"
+          "bytes": 1024,
+          "sha256": "2e397b60c7e7aa1a390066a6c1a5047e78d3ff0ff96e0b7f95d5b16601d6253d"
         },
         "m_Initializers:C_INIT_InheritVelocity": {
           "path": "observations/deadlock/m_initializers-c_init_inheritvelocity.json",
-          "bytes": 808,
-          "sha256": "f14d343510389c5eec961d8da98f32e03073255df39a19a4d0fbb279956a7461"
+          "bytes": 741,
+          "sha256": "d4f2687f4d85c617804c55b7f9775c7c7ff13887850f99b04015c94d069e7b30"
         },
         "m_Initializers:C_INIT_InitFloat": {
           "path": "observations/deadlock/m_initializers-c_init_initfloat.json",
-          "bytes": 32524,
-          "sha256": "a2321adc2623c9ffe1d121656036326b761cbb5f6c674dbe48fd3bc91030a07b"
+          "bytes": 29205,
+          "sha256": "621b9c7e7f8ae5a3c5757642d964a9a6c429a83e89b6abeeec0a07e07950f2d7"
         },
         "m_Initializers:C_INIT_InitFloatCollection": {
           "path": "observations/deadlock/m_initializers-c_init_initfloatcollection.json",
-          "bytes": 7466,
-          "sha256": "745581427f3056c85a20d77c192099cfee874889eda6bc79ca033fae842522f2"
+          "bytes": 6748,
+          "sha256": "bcd1cc7a14cf00c567ebe25baabf43e7a98fda62232f5a28fe518052872b2ba0"
         },
         "m_Initializers:C_INIT_InitFromCPSnapshot": {
           "path": "observations/deadlock/m_initializers-c_init_initfromcpsnapshot.json",
-          "bytes": 1495,
-          "sha256": "56b604ec98444b3db7d6414c37c394a972b226feb183ce7ba418ad0872ece437"
+          "bytes": 1362,
+          "sha256": "4bc061251465d2d3d46502df87ce83dbd24266892f92e53588647be50166f5a0"
         },
         "m_Initializers:C_INIT_InitFromParentKilled": {
           "path": "observations/deadlock/m_initializers-c_init_initfromparentkilled.json",
-          "bytes": 689,
-          "sha256": "669e1076a5efbaa6639c49101ff09eaeadfbafb213db8c7badb0bfa6ac917b70"
+          "bytes": 657,
+          "sha256": "b3c4b7e6caeb4525e967c3c35f0a8b018c778ce4d82e87f611072c3590656de0"
         },
         "m_Initializers:C_INIT_InitialRepulsionVelocity": {
           "path": "observations/deadlock/m_initializers-c_init_initialrepulsionvelocity.json",
-          "bytes": 1372,
-          "sha256": "77c1195f15fb1c8e8b3d241e18df7204337f32cd1956a1e9a4fa845c026445c1"
+          "bytes": 1270,
+          "sha256": "407cf3adb4c8410fab31432ec50080943806818f1574556a9bed7f15c25501c2"
         },
         "m_Initializers:C_INIT_InitialVelocityNoise": {
           "path": "observations/deadlock/m_initializers-c_init_initialvelocitynoise.json",
-          "bytes": 169836,
-          "sha256": "54baea6407be929a0ffbdc3addbc3bc9403c9c7d9c91ea6cca8afaba1be74310"
+          "bytes": 154341,
+          "sha256": "d086e304ed6b27766c860a1ec55b924c1690c42295133445e948837d16400b3c"
         },
         "m_Initializers:C_INIT_InitSkinnedPositionFromCPSnapshot": {
           "path": "observations/deadlock/m_initializers-c_init_initskinnedpositionfromcpsnapshot.json",
-          "bytes": 2002,
-          "sha256": "ab4a4ac22631c5ae97b412c31994e66fac38d84f42e5b8a3f24b784c24642832"
+          "bytes": 1833,
+          "sha256": "0d1472582b8435610de0db34bd80a8ab7940c955e4cfa8e63ed39252e911af0e"
         },
         "m_Initializers:C_INIT_InitVec": {
           "path": "observations/deadlock/m_initializers-c_init_initvec.json",
-          "bytes": 63794,
-          "sha256": "42fa801fca15140c02d8982ccc32acd9d90649fcc60748f47f4d391188bcb235"
+          "bytes": 57946,
+          "sha256": "44a8a08d79201996e2cd32ac96462cbf6e800b9c0b65f6c9bb0ffe74e7364245"
         },
         "m_Initializers:C_INIT_MoveBetweenPoints": {
           "path": "observations/deadlock/m_initializers-c_init_movebetweenpoints.json",
-          "bytes": 30047,
-          "sha256": "e656c9e55774084b9712afafdbbcab80d80812af2c39ef3bcb8033479a50c971"
+          "bytes": 27127,
+          "sha256": "eba54807150622d02b610aa906ba6f31d45536f4de275cf3f1c90ebb89b03b80"
         },
         "m_Initializers:C_INIT_NormalAlignToCP": {
           "path": "observations/deadlock/m_initializers-c_init_normalaligntocp.json",
-          "bytes": 1047,
-          "sha256": "cca6ac419e268c376044a1b243a5c69a37fb133fea85360a203403805f9cc370"
+          "bytes": 1014,
+          "sha256": "9b14bc1a9100b4c1a8a10d9919a9f365ea0537fccd754d78b471c8f59d89ada0"
         },
         "m_Initializers:C_INIT_NormalOffset": {
           "path": "observations/deadlock/m_initializers-c_init_normaloffset.json",
@@ -10892,183 +10892,183 @@
         },
         "m_Initializers:C_INIT_Orient2DRelToCP": {
           "path": "observations/deadlock/m_initializers-c_init_orient2dreltocp.json",
-          "bytes": 1044,
-          "sha256": "98ea08edeb51128a6148ddaf18303e64911bd9475581eff634c5b135d08732ef"
+          "bytes": 942,
+          "sha256": "d032c9775815b796ccf9de80fbcaaf31afa7d6238cc2fcba1b162a80836e11d6"
         },
         "m_Initializers:C_INIT_PositionOffset": {
           "path": "observations/deadlock/m_initializers-c_init_positionoffset.json",
-          "bytes": 120216,
-          "sha256": "1299d4fcbb453f4b358611f52a5205a77ed81ff09276e65ae8bb443b1230e8e5"
+          "bytes": 110152,
+          "sha256": "da2742734ad9441a4aaf6c5ab984a09c35de29364d43a360ef35ce362494f01b"
         },
         "m_Initializers:C_INIT_PositionPlaceOnGround": {
           "path": "observations/deadlock/m_initializers-c_init_positionplaceonground.json",
-          "bytes": 23300,
-          "sha256": "048c99564f01ae2d982bd905793f18cda5bfaf2fb8d18f8230221d5daa2d7d3f"
+          "bytes": 21332,
+          "sha256": "167281c075c3e0cf7f1d23f6d6351c0cacc1dd31ec918c1053069d35e5c0c692"
         },
         "m_Initializers:C_INIT_PositionWarp": {
           "path": "observations/deadlock/m_initializers-c_init_positionwarp.json",
-          "bytes": 93440,
-          "sha256": "51d0fc1f0f86155ae3f0d73b3b855737b0ab7c611b191f26cf2079d348d077a5"
+          "bytes": 85768,
+          "sha256": "d282e4e422f5175c76aa9148878362b12511cff85f99a606db855045bee23080"
         },
         "m_Initializers:C_INIT_PositionWarpScalar": {
           "path": "observations/deadlock/m_initializers-c_init_positionwarpscalar.json",
-          "bytes": 12986,
-          "sha256": "eb236522af8d9609eb7e825cdaa13884da9cb219544fd9f8bdbf808bba3c48c5"
+          "bytes": 11847,
+          "sha256": "8a63534e5735e79cb21f3057bfb42fea1c3e92d8a1b81817c9476f8f9bf361e5"
         },
         "m_Initializers:C_INIT_QuantizeFloat": {
           "path": "observations/deadlock/m_initializers-c_init_quantizefloat.json",
-          "bytes": 8929,
-          "sha256": "26d2da9ec0d577b8ba9185dbe64d32a97e89c886d77787f8d6e7803d24592b19"
+          "bytes": 8055,
+          "sha256": "5946ba9abdf9554de1289362a195b1ae8c566da00ac21bbe64b94328a530f592"
         },
         "m_Initializers:C_INIT_RadiusFromCPObject": {
           "path": "observations/deadlock/m_initializers-c_init_radiusfromcpobject.json",
-          "bytes": 575,
-          "sha256": "7ad72547accca42665b2ef6bcc20db3f08e9f1b0f78b3ff7629885eadeef2239"
+          "bytes": 543,
+          "sha256": "9bece7beb543a15bc49f6e4b9c7ff989c92782353ec0e9ff8ae44ee96b724d3d"
         },
         "m_Initializers:C_INIT_RandomColor": {
           "path": "observations/deadlock/m_initializers-c_init_randomcolor.json",
-          "bytes": 11881,
-          "sha256": "5df34636241bab73f42c4712ac360e0fe99a65f6ec28bb9366dbc4447a35a671"
+          "bytes": 10771,
+          "sha256": "3768da633b7f2015bf6c14974d1885b43d375fb30ffb54a2a898fe2e91a9c33c"
         },
         "m_Initializers:C_INIT_RandomNamedModelSequence": {
           "path": "observations/deadlock/m_initializers-c_init_randomnamedmodelsequence.json",
-          "bytes": 1353,
-          "sha256": "efc67a6abcc06cb04cc40be67c8887aa5e7d06b3f3838f2da05c55dbf7f98376"
+          "bytes": 1319,
+          "sha256": "fad54c33b1b6e2573d3e8d04a6766407669465328d08761db675a1d2f8a4363b"
         },
         "m_Initializers:C_INIT_RandomSecondSequence": {
           "path": "observations/deadlock/m_initializers-c_init_randomsecondsequence.json",
-          "bytes": 817,
-          "sha256": "8a24551c25b3d37fa8ba1788c5f6cd2bb4dd76dea9d7da07b2d171dcd42badfd"
+          "bytes": 751,
+          "sha256": "93298731319d173b9f07fa7ce67c30e60641bfe60252104cd4e8e803831e3c81"
         },
         "m_Initializers:C_INIT_RandomSequence": {
           "path": "observations/deadlock/m_initializers-c_init_randomsequence.json",
-          "bytes": 1310,
-          "sha256": "ab1eeab5f15631ba494504e1cdcb2ff6cfa7a9031134d63daed9bbdb0f9b136d"
+          "bytes": 1212,
+          "sha256": "260593ce991c0926e5ffa49bc128e65cd69a657aab5469c1f8b858cccb9c2fcb"
         },
         "m_Initializers:C_INIT_RandomYawFlip": {
           "path": "observations/deadlock/m_initializers-c_init_randomyawflip.json",
-          "bytes": 788,
-          "sha256": "b8039e1a72d16a3def85fad2f1a172587c33069d55edacf8c939bb1e34eece3e"
+          "bytes": 724,
+          "sha256": "902df7acdd5c57015f7e0e424141d0bd9dfa2ec3423148663a64ddef366566db"
         },
         "m_Initializers:C_INIT_RemapInitialDirectionToTransformToVector": {
           "path": "observations/deadlock/m_initializers-c_init_remapinitialdirectiontotransformtovector.json",
-          "bytes": 1902,
-          "sha256": "f172726a5c14fc35eb74fb030733913dbabdb2018a8c984f6ec468c130f7192f"
+          "bytes": 1762,
+          "sha256": "7d3e6fa572449ba6b0779d53b9a39642996dc24bbf9f3ff77a7158488e84beb9"
         },
         "m_Initializers:C_INIT_RemapInitialTransformDirectionToRotation": {
           "path": "observations/deadlock/m_initializers-c_init_remapinitialtransformdirectiontorotation.json",
-          "bytes": 1227,
-          "sha256": "24d4bbdf9c1c122c21188a3bc318cba41feadd3ebf56ece989aca490a6bdfd8c"
+          "bytes": 1127,
+          "sha256": "0eaa97e22e7bd2d96c6b73dc8e3f28a7abd7eef0cab79fd635e011abbd93adfa"
         },
         "m_Initializers:C_INIT_RemapParticleCountToScalar": {
           "path": "observations/deadlock/m_initializers-c_init_remapparticlecounttoscalar.json",
-          "bytes": 1911,
-          "sha256": "80ac155e49d925d3a0c01216df573094b121e8603933fc969b855d187e6ae319"
+          "bytes": 1705,
+          "sha256": "f5e30f1c3bc72189243f090eea00acbe39a0db8ce790569dc11c32e33d3ad9a0"
         },
         "m_Initializers:C_INIT_RemapScalarToVector": {
           "path": "observations/deadlock/m_initializers-c_init_remapscalartovector.json",
-          "bytes": 2061,
-          "sha256": "d215f26edbb493342898f15a2698ddd5938fa7dff78a9788cd4f7cc7400c0433"
+          "bytes": 1861,
+          "sha256": "100820f94551d3306e9ef8da1b5470b759b2afc63679878bc675d487235f642c"
         },
         "m_Initializers:C_INIT_RemapTransformOrientationToRotations": {
           "path": "observations/deadlock/m_initializers-c_init_remaptransformorientationtorotations.json",
-          "bytes": 1648,
-          "sha256": "18b38cc5d13fca98c5d26c28294e44f703cafcd25f3c569f26c86fb30839cf69"
+          "bytes": 1615,
+          "sha256": "51d6e9a14675309855dbb735c2fe03d436e6255fc0f266a70ad78e7dc14c1cfd"
         },
         "m_Initializers:C_INIT_RemapTransformToVector": {
           "path": "observations/deadlock/m_initializers-c_init_remaptransformtovector.json",
-          "bytes": 6910,
-          "sha256": "30bcc08c11aae288b8157509803240ca55ce00d25fa9cd4d34d0d4e17d0d5708"
+          "bytes": 6330,
+          "sha256": "45d786c994523aba05b0e21abdb5362f1e20ced7ec6867f5c10228bee10cea91"
         },
         "m_Initializers:C_INIT_RingWave": {
           "path": "observations/deadlock/m_initializers-c_init_ringwave.json",
-          "bytes": 104168,
-          "sha256": "b8bff67fbd6816e5a6750cd5964a0aa3946b11f9e8fed6e48804027ac9fdbf0d"
+          "bytes": 94325,
+          "sha256": "ceaa1356da6975cc1cd712f55f4ace547252a4b8b16f0e651a138db408c3a625"
         },
         "m_Initializers:C_INIT_SequenceFromCP": {
           "path": "observations/deadlock/m_initializers-c_init_sequencefromcp.json",
-          "bytes": 738,
-          "sha256": "74e64f64272b6ce52a3b61629aa581cb56868e6a4051344a8cc9162a3f807851"
+          "bytes": 706,
+          "sha256": "765f40a83ebfd1d72119a22d58ea0440eca7c545c7bb93ecb10992b19194b086"
         },
         "m_Initializers:C_INIT_SequenceLifeTime": {
           "path": "observations/deadlock/m_initializers-c_init_sequencelifetime.json",
-          "bytes": 799,
-          "sha256": "dbeb9d98c69cd5d56aa44cf2ab4ed4b205910b8bbe46f2011719eab2a213d2a7"
+          "bytes": 734,
+          "sha256": "40d28f9e6831d028e63fc29ecfc3f2a1d60aa67f79d70686ba61bc89eb127bab"
         },
         "m_Initializers:C_INIT_SetAttributeToScalarExpression": {
           "path": "observations/deadlock/m_initializers-c_init_setattributetoscalarexpression.json",
-          "bytes": 36075,
-          "sha256": "b81220c811ad3576cdc70146886ca01a6ae21289383de7897af1306e31ec2136"
+          "bytes": 32675,
+          "sha256": "c9a1a679678c1155eab96362b3d5fb0211f1d949a2ee3e839aaf10bc7ce31dee"
         },
         "m_Initializers:C_INIT_SetHitboxToClosest": {
           "path": "observations/deadlock/m_initializers-c_init_sethitboxtoclosest.json",
-          "bytes": 47962,
-          "sha256": "b87e580ad08397cf9a5e506e3342a2f5a1509471d084184c9e622606fb14aaa3"
+          "bytes": 44242,
+          "sha256": "8ee00f49b37aa4682deb0e860faddbda36b24e17b37169ea84e9489c80f1d64e"
         },
         "m_Initializers:C_INIT_SetHitboxToModel": {
           "path": "observations/deadlock/m_initializers-c_init_sethitboxtomodel.json",
-          "bytes": 46031,
-          "sha256": "642067fdadc1b01c6aaf488fc838d07de0af614153bb1747061beb0696016583"
+          "bytes": 42311,
+          "sha256": "72094006a2af94ab1a640056de44e59b908ee258aad7fac7843a02c124829641"
         },
         "m_Initializers:C_INIT_SetVectorAttributeToVectorExpression": {
           "path": "observations/deadlock/m_initializers-c_init_setvectorattributetovectorexpression.json",
-          "bytes": 118466,
-          "sha256": "9a8fe6f5fd734662c9a328276df22ed02ac503f0244fb3b29e08f7d5c4501c79"
+          "bytes": 108637,
+          "sha256": "280b6968e48328dc419df0efab36a37317bdc863bda51d52f550496079883861"
         },
         "m_Initializers:C_INIT_StatusEffectCitadel": {
           "path": "observations/deadlock/m_initializers-c_init_statuseffectcitadel.json",
-          "bytes": 3452,
-          "sha256": "c6632f27f3ffeddd2c71357ef2d50954615c91f76875053c07a5646019656245"
+          "bytes": 2940,
+          "sha256": "070b2adca454ed67c2cede41fbcc7e90fe1d3ce3acb5d27a641d3f6a124c6a6c"
         },
         "m_Initializers:C_INIT_VelocityFromCP": {
           "path": "observations/deadlock/m_initializers-c_init_velocityfromcp.json",
-          "bytes": 1945,
-          "sha256": "7922e6c377d01f9b9721310554f8dae43c03dc47472ea08cbd59f27667f0c3db"
+          "bytes": 1843,
+          "sha256": "9685fa631d454b7dd89dc0fd39a8a0fb37be1761f0ac6436b6884e884e2caf75"
         },
         "m_Initializers:C_INIT_VelocityFromNormal": {
           "path": "observations/deadlock/m_initializers-c_init_velocityfromnormal.json",
-          "bytes": 965,
-          "sha256": "2eac2afa0e2ebc8ae5d45b21d9cf4eb30d13b001cc14a427ef2f65944a50899c"
+          "bytes": 892,
+          "sha256": "e174e678d2de51c858246d10b935f2ea54afadae5ca94d0f8ebc8180c2082d2e"
         },
         "m_Initializers:C_INIT_VelocityRadialRandom": {
           "path": "observations/deadlock/m_initializers-c_init_velocityradialrandom.json",
-          "bytes": 20792,
-          "sha256": "8823d178e30548b1ff699cc75bc72b144eee5187a36629c52c307dbd6211edb4"
+          "bytes": 18936,
+          "sha256": "7b8e965e06c983ee61ecf4633e2fc9f05c4cd380ff75ce42fed00d23ef81d255"
         },
         "m_Initializers:C_INIT_VelocityRandom": {
           "path": "observations/deadlock/m_initializers-c_init_velocityrandom.json",
-          "bytes": 111086,
-          "sha256": "7476a78f7eaa10167242d61e1a4ca5948ad2b95ff7ab705ff974d68362c355af"
+          "bytes": 102423,
+          "sha256": "411202990a2429a0331eaf0d646e9f1ef86e72e8c9f654514b53d68b4283d1a4"
         },
         "m_Operators:C_OP_AlphaDecay": {
           "path": "observations/deadlock/m_operators-c_op_alphadecay.json",
-          "bytes": 1173,
-          "sha256": "990cbb2b207b4777881dde061bacdaf154d226a4b5a14f23f21a6a489eb067af"
+          "bytes": 1071,
+          "sha256": "1f82bc57b7d0cde3d1ae49d9911cc53bd02b6c5eb24896a20572f6e04d802531"
         },
         "m_Operators:C_OP_BasicMovement": {
           "path": "observations/deadlock/m_operators-c_op_basicmovement.json",
-          "bytes": 68770,
-          "sha256": "34ce76a040a87a7880dfccfebc493a5a6bb48a987a182e1c340369f053be8298"
+          "bytes": 62305,
+          "sha256": "85ced471ccf3d209284791617bb2bfbe6a5dc5814f43da8fb4a0c428bcae0453"
         },
         "m_Operators:C_OP_CalculateVectorAttribute": {
           "path": "observations/deadlock/m_operators-c_op_calculatevectorattribute.json",
-          "bytes": 1877,
-          "sha256": "d7b75ed0e444f9ae647b18ff84cbae33b418a8f1ed5737b84405f9d51e8cee91"
+          "bytes": 1779,
+          "sha256": "761d4a9768ba36681026357037ff56ac9549ef3eee4d2f4466605c07f1474dbc"
         },
         "m_Operators:C_OP_ClampScalar": {
           "path": "observations/deadlock/m_operators-c_op_clampscalar.json",
-          "bytes": 20527,
-          "sha256": "249a083a1c25afc6cd0ee48d54a1512335e65407a9e34058c406fd6950c263bc"
+          "bytes": 18506,
+          "sha256": "987546dc3e9d576c6a2a38dc96cece0d219ed745c6843a801253254156efb30f"
         },
         "m_Operators:C_OP_ClampVector": {
           "path": "observations/deadlock/m_operators-c_op_clampvector.json",
-          "bytes": 47851,
-          "sha256": "c8606629c4a2b87f0a9e94a1f10744d23b3c7587dd727cc07cfa6125e91aef41"
+          "bytes": 44097,
+          "sha256": "a408c99ab9046e7ce90f7c2dd9306aba15c1b88c80d0bdfe875cd2be5fee0ac8"
         },
         "m_Operators:C_OP_ColorInterpolate": {
           "path": "observations/deadlock/m_operators-c_op_colorinterpolate.json",
-          "bytes": 2926,
-          "sha256": "021861efefd98f8cc72ec8f9e031bf737a3cccce35511ab7d5b4db3c896986d3"
+          "bytes": 2660,
+          "sha256": "a1026e5eec4f7f4ac33d9c921f89ca0bfc32a497ea8cfe7c1a23c197b1f8369d"
         },
         "m_Operators:C_OP_ColorInterpolateRandom": {
           "path": "observations/deadlock/m_operators-c_op_colorinterpolaterandom.json",
@@ -11077,48 +11077,48 @@
         },
         "m_Operators:C_OP_ControlpointLight": {
           "path": "observations/deadlock/m_operators-c_op_controlpointlight.json",
-          "bytes": 1139,
-          "sha256": "4649e6eda94740ca2dbf392d3c03b48d125ba225e23cb92ff5f9740ef69bd45c"
+          "bytes": 1065,
+          "sha256": "9f575edde4e2583c99ed7503c9e4dde06000ec9b78e93005dfb3203cf2e6a4e0"
         },
         "m_Operators:C_OP_CPOffsetToPercentageBetweenCPs": {
           "path": "observations/deadlock/m_operators-c_op_cpoffsettopercentagebetweencps.json",
-          "bytes": 971,
-          "sha256": "78b63dc6705e4ed5a2d8ded6913e19926817338ef4286034cf670498e5ad3b5a"
+          "bytes": 875,
+          "sha256": "3476a0402b9418c28f2416c520e3c33f4bb1a6c53f21f1d9fea956c2effe97e4"
         },
         "m_Operators:C_OP_CycleScalar": {
           "path": "observations/deadlock/m_operators-c_op_cyclescalar.json",
-          "bytes": 1372,
-          "sha256": "f02387e2e9ce0eecb1e233106308700a88f82dcbff1eb34ac39a4c369ca854fe"
+          "bytes": 1238,
+          "sha256": "5fa6f212742fc608fb65747b5dae7feee6b3cfca096cdb68ea929f43bbdca735"
         },
         "m_Operators:C_OP_DampenToCP": {
           "path": "observations/deadlock/m_operators-c_op_dampentocp.json",
-          "bytes": 1453,
-          "sha256": "d3d138f4217db6d30b25533aa48e7b92191ad2b133a32487e94053df0b3c83ed"
+          "bytes": 1279,
+          "sha256": "18f66df32857c97178f547a19f08d28e3bd2e7cfa3552705aaf214bb88acc139"
         },
         "m_Operators:C_OP_Decay": {
           "path": "observations/deadlock/m_operators-c_op_decay.json",
-          "bytes": 11682,
-          "sha256": "57b4007618785f20afdcbfd97dca08431baea40bcbf64e4a6b3564c6d4a02a81"
+          "bytes": 10674,
+          "sha256": "c55739b07e0a3ddd3eecbe67d64deda377720d62722f3faaa87134025517f9d3"
         },
         "m_Operators:C_OP_DecayOffscreen": {
           "path": "observations/deadlock/m_operators-c_op_decayoffscreen.json",
-          "bytes": 9099,
-          "sha256": "92076a4cdbf85e98cdd9a73ea5e4631b484175e8529cbcbaec42e84b68b6b53f"
+          "bytes": 8193,
+          "sha256": "1330a7deb4692fe18d900df4192fb7cf2d077fcfa32e5226b22dd2cd46d85caa"
         },
         "m_Operators:C_OP_DistanceBetweenTransforms": {
           "path": "observations/deadlock/m_operators-c_op_distancebetweentransforms.json",
-          "bytes": 40727,
-          "sha256": "1f909ed931c4903997cf7fbc600884288d94530b631a0fe151ef1cdc14b6c626"
+          "bytes": 36851,
+          "sha256": "0b3ee4c9829d66d2e703f4fb3d77d2afdf2b8d67f289226c3b3e569eb85f945f"
         },
         "m_Operators:C_OP_DistanceCull": {
           "path": "observations/deadlock/m_operators-c_op_distancecull.json",
-          "bytes": 12996,
-          "sha256": "8689fc2737305842809b0c0dad4eec7741c3ceb9d38321f1de06f2f52eed1a53"
+          "bytes": 11987,
+          "sha256": "55c31b200dee813d07afe0b3ab68bdea3105f3a7016baba744699e36e7a6e6c5"
         },
         "m_Operators:C_OP_DistanceToTransform": {
           "path": "observations/deadlock/m_operators-c_op_distancetotransform.json",
-          "bytes": 41762,
-          "sha256": "04cced114638a3866656bc4d7ac45610450547b9e3a6850871949d4765986b3c"
+          "bytes": 37919,
+          "sha256": "6401cae8394d2441233ca018d4fcf366d8c94e2aeaa85b9c704884bff4e8610e"
         },
         "m_Operators:C_OP_EndCapDecay": {
           "path": "observations/deadlock/m_operators-c_op_endcapdecay.json",
@@ -11127,53 +11127,53 @@
         },
         "m_Operators:C_OP_EndCapTimedDecay": {
           "path": "observations/deadlock/m_operators-c_op_endcaptimeddecay.json",
-          "bytes": 22832,
-          "sha256": "b9b391e64dad4063d84c92398c1c0234b3741ea0880ae30d4da5631d47af6e9f"
+          "bytes": 20944,
+          "sha256": "10d129fa82991296abcd4d6ce948471ae78e363c735523de2def1f76d3615f56"
         },
         "m_Operators:C_OP_FadeAndKill": {
           "path": "observations/deadlock/m_operators-c_op_fadeandkill.json",
-          "bytes": 1951,
-          "sha256": "0852b75f9f8899cd64da7fc43370db4b70e0ce51fdb43644052ce4040de1b923"
+          "bytes": 1713,
+          "sha256": "c25edb8542376dc57b8394cfd00105f1c87366d831e2c13ac9fad3d8bf475308"
         },
         "m_Operators:C_OP_FadeAndKillForTracers": {
           "path": "observations/deadlock/m_operators-c_op_fadeandkillfortracers.json",
-          "bytes": 1187,
-          "sha256": "93a5d25d05d004eb47e4a17d2d971ca9233fe423c3fff4c566d0fb69b0ee0644"
+          "bytes": 1042,
+          "sha256": "91169099ec8bab1a2a68806b8aed8d0246bffa7a55312e8be8ce267f7537cc61"
         },
         "m_Operators:C_OP_FadeIn": {
           "path": "observations/deadlock/m_operators-c_op_fadein.json",
-          "bytes": 1072,
-          "sha256": "d585fdd797a3cee9809812630a7af400b7055cb3a44e9981926cce1020586464"
+          "bytes": 973,
+          "sha256": "a9867e1f5145a7a2f8b4340ce3fdf98699a6135f19764011c24455e1ed6aeefc"
         },
         "m_Operators:C_OP_FadeInSimple": {
           "path": "observations/deadlock/m_operators-c_op_fadeinsimple.json",
-          "bytes": 984,
-          "sha256": "297dd0c3b41776d2e02786ec0fb2507b96aa19cd429767eae4ad848c2dbd7fe1"
+          "bytes": 918,
+          "sha256": "d0be1efab31bcaf30a44c36639e223976d2621bc5cf06138ad7bcec7d961bf25"
         },
         "m_Operators:C_OP_FadeOut": {
           "path": "observations/deadlock/m_operators-c_op_fadeout.json",
-          "bytes": 1417,
-          "sha256": "ca11772f38dd98c00c36e56022d91f09df84705500e2cf8c3a47cf17edb2ee14"
+          "bytes": 1278,
+          "sha256": "f36b35c4940ccb9c950eee97ec192547d085687a9ef6ea5bcf3cc36aaace364c"
         },
         "m_Operators:C_OP_FadeOutSimple": {
           "path": "observations/deadlock/m_operators-c_op_fadeoutsimple.json",
-          "bytes": 975,
-          "sha256": "54d680be392c225e380618a6d22c604702e794a6d9fafbbc41e8a5065111c545"
+          "bytes": 909,
+          "sha256": "a9740a83708830ad9ad11ebe59bc0a135da5524b62c67445e0685bdec10ec313"
         },
         "m_Operators:C_OP_InheritFromParentParticles": {
           "path": "observations/deadlock/m_operators-c_op_inheritfromparentparticles.json",
-          "bytes": 592,
-          "sha256": "c21956a1adb2dbc286fda15d589bbcb61bcb132672424386670233ec6ce0ca43"
+          "bytes": 560,
+          "sha256": "de0536f3b2ab7426dfd32896218a0d4091ae1e6b8664556a372d0b87bbeb99e7"
         },
         "m_Operators:C_OP_InheritFromParentParticlesV2": {
           "path": "observations/deadlock/m_operators-c_op_inheritfromparentparticlesv2.json",
-          "bytes": 19606,
-          "sha256": "080ca403409f827ede6f29923bac54e964cd2e9ed17f7e0ceb7dfe3b56be390e"
+          "bytes": 17691,
+          "sha256": "e9f29b890dac33d5f8c17ecf771cf1b731394da96f5eff088bf5197153052ef9"
         },
         "m_Operators:C_OP_InterpolateRadius": {
           "path": "observations/deadlock/m_operators-c_op_interpolateradius.json",
-          "bytes": 11766,
-          "sha256": "688a0953db85560fd1cbd98cf03085d0349d10c19456237081528db04a46b3dc"
+          "bytes": 10494,
+          "sha256": "afa8b78ca0b9a5284965e3835722247df598818d9c71fff9fb71dd2a0a6c7c86"
         },
         "m_Operators:C_OP_LagCompensation": {
           "path": "observations/deadlock/m_operators-c_op_lagcompensation.json",
@@ -11182,173 +11182,173 @@
         },
         "m_Operators:C_OP_LerpEndCapScalar": {
           "path": "observations/deadlock/m_operators-c_op_lerpendcapscalar.json",
-          "bytes": 1160,
-          "sha256": "4e36bd62d07728a6735aa05c95ea7a896b4936d9c5ad75c497c66cc13e6bcc8f"
+          "bytes": 1062,
+          "sha256": "e25863f42cdf779ee9f0134dd4dfd32b78db5cd5c9b655ab3d00826b595031f3"
         },
         "m_Operators:C_OP_LerpEndCapVector": {
           "path": "observations/deadlock/m_operators-c_op_lerpendcapvector.json",
-          "bytes": 1183,
-          "sha256": "27512299bfa4ec17e85bafa997d684be560f986f245e0eca4fb74cc912500d3e"
+          "bytes": 1115,
+          "sha256": "0d41067732192c78bc6188c51526b746b3da733467bb1a6bbbb13de6711c6ff8"
         },
         "m_Operators:C_OP_LerpScalar": {
           "path": "observations/deadlock/m_operators-c_op_lerpscalar.json",
-          "bytes": 11600,
-          "sha256": "6e784e3e879eec006b7747194be658f3f7cb62d62fc483dcb58f864f624bf0a8"
+          "bytes": 10551,
+          "sha256": "d5fadaeec36a0669b4080ef80ef5d798da80953b947dd41abf4fdadaaecddecf"
         },
         "m_Operators:C_OP_LerpToInitialPosition": {
           "path": "observations/deadlock/m_operators-c_op_lerptoinitialposition.json",
-          "bytes": 10899,
-          "sha256": "b4eebea226199534b3a6d06da14090569eb95034a48076c178096f2fa35565e1"
+          "bytes": 9784,
+          "sha256": "eba9f7fac1cf7ce41863530e9fd138ba9f32a96544cccea35901d7f952012548"
         },
         "m_Operators:C_OP_LerpVector": {
           "path": "observations/deadlock/m_operators-c_op_lerpvector.json",
-          "bytes": 11702,
-          "sha256": "739901b687eb4c037d4f131521015e3ab3ae189cc306ffecaca55f54652091b9"
+          "bytes": 10479,
+          "sha256": "105b424dde47c56192c01ce64867f2bb5fc864584f43c941b72028721927f798"
         },
         "m_Operators:C_OP_LockToBone": {
           "path": "observations/deadlock/m_operators-c_op_locktobone.json",
-          "bytes": 38246,
-          "sha256": "10496470a3875a7df0076273001c9d3abd8a724be09cc966446dfe5dc2f500c1"
+          "bytes": 35094,
+          "sha256": "b89e46bd3603869deae879b302e0b601b9b0e03fba7de961a61e1e8882e2ada2"
         },
         "m_Operators:C_OP_LockToSavedSequentialPathV2": {
           "path": "observations/deadlock/m_operators-c_op_locktosavedsequentialpathv2.json",
-          "bytes": 2275,
-          "sha256": "c045ef23ed12c1e91d5a90a2b721a9b8f3f76e0e3a3cc48da96dbc64cbccfb1b"
+          "bytes": 2102,
+          "sha256": "67396ce79b84276cb8219894219e7838bc20dd79c1a82c070f23ecd56c557172"
         },
         "m_Operators:C_OP_MaintainSequentialPath": {
           "path": "observations/deadlock/m_operators-c_op_maintainsequentialpath.json",
-          "bytes": 13256,
-          "sha256": "85e2aea96bfc88893067c8529e55f1a9a3341ec6458de79b313fa9da805c2634"
+          "bytes": 12071,
+          "sha256": "d222b32928c1d78dccc6b0ab495cb8e19528c5280a38fb8beb4f23cbee5c090c"
         },
         "m_Operators:C_OP_MaxVelocity": {
           "path": "observations/deadlock/m_operators-c_op_maxvelocity.json",
-          "bytes": 31142,
-          "sha256": "3303b73f383ac16c1d3b98c25b85362468c056b648e6b48125acb27071785ac8"
+          "bytes": 28124,
+          "sha256": "058b39b2a97108d242d3ccff63c0bfee8d06a00be196d6cfce519756f0389217"
         },
         "m_Operators:C_OP_ModelCull": {
           "path": "observations/deadlock/m_operators-c_op_modelcull.json",
-          "bytes": 555,
-          "sha256": "d0fefdd8dc711e28ecb77c3371867d88e732460107f6085b48f64378b8949271"
+          "bytes": 523,
+          "sha256": "819ca2f7fdb449339cb64b599da9e64fb8eaf6a0f47042a331626308b0996124"
         },
         "m_Operators:C_OP_MovementMaintainOffset": {
           "path": "observations/deadlock/m_operators-c_op_movementmaintainoffset.json",
-          "bytes": 876,
-          "sha256": "3b9a96adadf59cc689c4dd2eb57e1f7d71c3df6454c4dbc44189dbc5983122f5"
+          "bytes": 844,
+          "sha256": "d378481f6c307b5c94a3a1479ff82584c1f3c47852d7dc976c964aeacbdefa08"
         },
         "m_Operators:C_OP_MovementPlaceOnGround": {
           "path": "observations/deadlock/m_operators-c_op_movementplaceonground.json",
-          "bytes": 13262,
-          "sha256": "30606c9c4e83a34b6412a301c462a9a4895f1f16ca83246b5f9862d840291c2c"
+          "bytes": 12113,
+          "sha256": "f3e2a052d611955af79a7a78daaf73e0b992a1f9b582089259ab208b493ac4be"
         },
         "m_Operators:C_OP_MovementRotateParticleAroundAxis": {
           "path": "observations/deadlock/m_operators-c_op_movementrotateparticlearoundaxis.json",
-          "bytes": 79510,
-          "sha256": "674046cb8c72e304fa451cb89a7b95f26828e30eaeedf9cbf4feacf0f72ef75c"
+          "bytes": 73008,
+          "sha256": "c62f6d6b876d243541d08d3eb1777a5b4414701c58707376687763207acb9705"
         },
         "m_Operators:C_OP_MovementSkinnedPositionFromCPSnapshot": {
           "path": "observations/deadlock/m_operators-c_op_movementskinnedpositionfromcpsnapshot.json",
-          "bytes": 937,
-          "sha256": "dc73f5b2f3f1f3fc551dd4c91f28ecdbe87725ccae9f251ffb27d26d0bce9679"
+          "bytes": 873,
+          "sha256": "179aac183b25039fcf24eb723d3c91bf5a4fc1bf4bbfe9320e4a739b60ee4d5d"
         },
         "m_Operators:C_OP_MoveToHitbox": {
           "path": "observations/deadlock/m_operators-c_op_movetohitbox.json",
-          "bytes": 1916,
-          "sha256": "81a274742ecff9b6f86ab0a2e58418f920d53dfb4f3694486b2aca0d214dcd15"
+          "bytes": 1846,
+          "sha256": "5c0094981f3b853b8abf3fca9dc9eefe9cd3a606cc42a9486625e68d7516e47a"
         },
         "m_Operators:C_OP_Noise": {
           "path": "observations/deadlock/m_operators-c_op_noise.json",
-          "bytes": 1608,
-          "sha256": "9f26e929dc5eae0fac2f3f48ee482392869359f935ea117591183303041b0a6b"
+          "bytes": 1429,
+          "sha256": "3cd8a64eb842784e58ccc05a66fc8e6265f57f5604024382f233de501c2ce499"
         },
         "m_Operators:C_OP_NormalizeVector": {
           "path": "observations/deadlock/m_operators-c_op_normalizevector.json",
-          "bytes": 601,
-          "sha256": "2821d81100e0369d37ae89910361c006b2fd8b252109d6b34764316d788ddffe"
+          "bytes": 567,
+          "sha256": "711119a226b997803b10bb2ae26b5efbfda23c19db7c9ccebaead30ea815a32b"
         },
         "m_Operators:C_OP_NormalLock": {
           "path": "observations/deadlock/m_operators-c_op_normallock.json",
-          "bytes": 648,
-          "sha256": "50734f0699132df954bcb2d3096296594b230657f99a3c0b8cae56716c316664"
+          "bytes": 615,
+          "sha256": "b6cd9782f9869f6b6ff6822d61b95602d47a2772feb60c2366403845dbc8b3b1"
         },
         "m_Operators:C_OP_Orient2DRelToCP": {
           "path": "observations/deadlock/m_operators-c_op_orient2dreltocp.json",
-          "bytes": 1891,
-          "sha256": "fd964f027f1fc2b1c013191f8e0000530ff26d7eab86d77f4af2418ff67f717d"
+          "bytes": 1606,
+          "sha256": "12c52cbca8d33aa149b6d5a306dc103d3854d68c842b08dd7ba4f6541a9f8e48"
         },
         "m_Operators:C_OP_OrientTo2dDirection": {
           "path": "observations/deadlock/m_operators-c_op_orientto2ddirection.json",
-          "bytes": 836,
-          "sha256": "835b8f13f22c2559d27061bd523918001912e8082d0d46f34588f234c481487b"
+          "bytes": 766,
+          "sha256": "00fd521c290e2bbb4d55a6f37b21813546c3ce206cf72a857b35310a1cd44f3a"
         },
         "m_Operators:C_OP_OscillateScalar": {
           "path": "observations/deadlock/m_operators-c_op_oscillatescalar.json",
-          "bytes": 3225,
-          "sha256": "02882788789c026c27c2fe84d56f67f61ed8debce1667fead5880ffe52e9ddd0"
+          "bytes": 2738,
+          "sha256": "298e88ad7866cbdc6428ea947060da774203ba2058d50f997bbfe76644f2041d"
         },
         "m_Operators:C_OP_OscillateScalarSimple": {
           "path": "observations/deadlock/m_operators-c_op_oscillatescalarsimple.json",
-          "bytes": 1308,
-          "sha256": "e996aa1de14a58b445e053e53f684150ca1d9d800451fed8f9e43d27b3009be8"
+          "bytes": 1139,
+          "sha256": "cadb535e547f741229ce57c35e8741f8d8f9f0f11c7e3e5589f7489f1c4956cf"
         },
         "m_Operators:C_OP_OscillateVector": {
           "path": "observations/deadlock/m_operators-c_op_oscillatevector.json",
-          "bytes": 23927,
-          "sha256": "44ea6da5d98af8700d169a8a4a3263c2181ea354b271774680d4c4408ba259b0"
+          "bytes": 21627,
+          "sha256": "e302da584fb424a9d4ca58144c2cd96ae36c53aec43ba8cc0e3f6b20e751c210"
         },
         "m_Operators:C_OP_OscillateVectorSimple": {
           "path": "observations/deadlock/m_operators-c_op_oscillatevectorsimple.json",
-          "bytes": 1510,
-          "sha256": "a9e317b425443bdefa88452212c82c29ec1408247b3d35184184d0ced02c0896"
+          "bytes": 1410,
+          "sha256": "3c4ac1a30eed5372669af1481b84442ba7c7add75a30aef93ac9454af729e153"
         },
         "m_Operators:C_OP_PercentageBetweenTransforms": {
           "path": "observations/deadlock/m_operators-c_op_percentagebetweentransforms.json",
-          "bytes": 2164,
-          "sha256": "c084bbca793593c3a4f7bdd922fbcdf1322bb786e558f6fb84c639b877f1ceec"
+          "bytes": 1993,
+          "sha256": "a2add0fce5fe0ed7b0353251d1ea1716f1057ccbe9883b75587213ea2ae8656e"
         },
         "m_Operators:C_OP_PinParticleToCP": {
           "path": "observations/deadlock/m_operators-c_op_pinparticletocp.json",
-          "bytes": 53971,
-          "sha256": "43361a68eafb2fe073fc5b362b7abe56365b56c365420a19d2a6ed2cd01da918"
+          "bytes": 49277,
+          "sha256": "720067be2b4e3460b6646ae6e804a7093de1e5e4e7888e1cb86175204493b78c"
         },
         "m_Operators:C_OP_PlaneCull": {
           "path": "observations/deadlock/m_operators-c_op_planecull.json",
-          "bytes": 1103,
-          "sha256": "f0b649d1d97256ece02e2da9cc2fb66a95c332cc28995a96ddc6042832de2462"
+          "bytes": 1038,
+          "sha256": "925b4f43501da189744e6587d1f4b85165c68831f5981d2f753175f2d5374ffa"
         },
         "m_Operators:C_OP_PositionLock": {
           "path": "observations/deadlock/m_operators-c_op_positionlock.json",
-          "bytes": 45325,
-          "sha256": "1abd0dc0e1423b2f881c3e02482f5569d24a640eef3a12b05764290335cee90f"
+          "bytes": 41383,
+          "sha256": "96583dbd7c83b10a455230e0eca15b7f48cce35a5f6536897646673b74beb676"
         },
         "m_Operators:C_OP_RadiusDecay": {
           "path": "observations/deadlock/m_operators-c_op_radiusdecay.json",
-          "bytes": 809,
-          "sha256": "974e4b5a35e2fd518100ccd28f502ebfbd919b9faf202d981709fb88412a1367"
+          "bytes": 772,
+          "sha256": "aadbbc30aab9dde39dffc1671e02a630cf2ea81a8b6c90b00ea79ac09d60fc64"
         },
         "m_Operators:C_OP_RampScalarLinear": {
           "path": "observations/deadlock/m_operators-c_op_rampscalarlinear.json",
-          "bytes": 1836,
-          "sha256": "7e3049edd842c57f5695f7ae7fc38efa09be3795e382b0853ed41be6f89c7052"
+          "bytes": 1569,
+          "sha256": "19bfb79324fcf06ce2aa8856257da8280694498f732248e53190a5d06dd965af"
         },
         "m_Operators:C_OP_RampScalarLinearSimple": {
           "path": "observations/deadlock/m_operators-c_op_rampscalarlinearsimple.json",
-          "bytes": 11374,
-          "sha256": "0692913954d6a2a14befd2340e062cc01f3574b83271fa7e34991e75c55edd92"
+          "bytes": 10205,
+          "sha256": "cd601242d33fe23cf0876823ad493951b199b2376717b18cb5c29452c9c5f910"
         },
         "m_Operators:C_OP_RampScalarSpline": {
           "path": "observations/deadlock/m_operators-c_op_rampscalarspline.json",
-          "bytes": 10778,
-          "sha256": "470ae699b939510814ed2d3d957b99cf55ea4c21af16f9157c62afdfa01786cc"
+          "bytes": 9632,
+          "sha256": "fa767efdaf6b2547f3b2246369afa6fe48fbc4a4ea8768121bdae7c87329dd5f"
         },
         "m_Operators:C_OP_RampScalarSplineSimple": {
           "path": "observations/deadlock/m_operators-c_op_rampscalarsplinesimple.json",
-          "bytes": 1080,
-          "sha256": "78350df5a65efac432230d0d5d7fc8e54658286fda6414dd0b4f9fffc8b01b44"
+          "bytes": 946,
+          "sha256": "1c21bd113b8a99544c6ba5823d95735f4a2b36e0b5993d5fc338f866bdfa3f9e"
         },
         "m_Operators:C_OP_ReinitializeScalarEndCap": {
           "path": "observations/deadlock/m_operators-c_op_reinitializescalarendcap.json",
-          "bytes": 851,
-          "sha256": "5fe35b5230ec920d71a7165d42c35cd19c74a50c12183f47eb3554819692821f"
+          "bytes": 781,
+          "sha256": "a629c1241f9468908bac478000a1ccf943767498a1716ee105a61866f3e4fd46"
         },
         "m_Operators:C_OP_RemapControlPointDirectionToVector": {
           "path": "observations/deadlock/m_operators-c_op_remapcontrolpointdirectiontovector.json",
@@ -11357,173 +11357,173 @@
         },
         "m_Operators:C_OP_RemapControlPointOrientationToRotation": {
           "path": "observations/deadlock/m_operators-c_op_remapcontrolpointorientationtorotation.json",
-          "bytes": 1181,
-          "sha256": "a7e7b6549bc9955eb39722d37352c856072a11a5cc2c6eb4a95e421e7e06dbef"
+          "bytes": 1046,
+          "sha256": "eb9f7c24038ef59bb2217ac0bab686e9ab49ad34526d659074fccc2522a94736"
         },
         "m_Operators:C_OP_RemapCPtoScalar": {
           "path": "observations/deadlock/m_operators-c_op_remapcptoscalar.json",
-          "bytes": 1893,
-          "sha256": "f4fe43265aedb6a508be2484a50e7e6218165bb0d8582f4daded0f928b3e82f2"
+          "bytes": 1656,
+          "sha256": "7bdd2c3aed59c0e675f7650511ccc30e193d83b9bcfcfed04911897a08a55d10"
         },
         "m_Operators:C_OP_RemapCPtoVector": {
           "path": "observations/deadlock/m_operators-c_op_remapcptovector.json",
-          "bytes": 2776,
-          "sha256": "4f406ae9749770c7010d4226549b8201770372c85db7f5323032ca86c3e759ca"
+          "bytes": 2548,
+          "sha256": "bf3aa9b35a4f4cc3bb04c70220b54e1be7ce8018a1b9854074864b50339cae16"
         },
         "m_Operators:C_OP_RemapCPVelocityToVector": {
           "path": "observations/deadlock/m_operators-c_op_remapcpvelocitytovector.json",
-          "bytes": 711,
-          "sha256": "356b7fb8995e0bb232a3ae9cc6f396e933ee1d60cc64e9438c4d01df2e0d7564"
+          "bytes": 677,
+          "sha256": "410c387c397b0686094db17d9c713424517f1fca4913d3a662f964e007ed31c1"
         },
         "m_Operators:C_OP_RemapCrossProductOfTwoVectorsToVector": {
           "path": "observations/deadlock/m_operators-c_op_remapcrossproductoftwovectorstovector.json",
-          "bytes": 81054,
-          "sha256": "c04fe559144765b059ca7e1bbfa12965d11b12aea1d869bfc09de90bb7d8d78d"
+          "bytes": 74043,
+          "sha256": "b6f38280f79f2d5b9963fb916a45d642a7ba7582b7b52a5a56f4c831a7b848cb"
         },
         "m_Operators:C_OP_RemapDirectionToCPToVector": {
           "path": "observations/deadlock/m_operators-c_op_remapdirectiontocptovector.json",
-          "bytes": 1470,
-          "sha256": "24ad139240f5603aa43415a9bb9827ea7e330df6853ee607e9dad595a2a8e7c4"
+          "bytes": 1336,
+          "sha256": "2881400349b677042d2803e22459f81f6390ed710a26c53a93d151be25d53b4d"
         },
         "m_Operators:C_OP_RemapDistanceToLineSegmentToScalar": {
           "path": "observations/deadlock/m_operators-c_op_remapdistancetolinesegmenttoscalar.json",
-          "bytes": 1034,
-          "sha256": "ebcf2ac4632b2abe5d7c3e6894aac5c7e311d2db574600d4a9d323dd8dce1b8d"
+          "bytes": 906,
+          "sha256": "a2f6254cd49a8f9ef77d9e82845e22e5ee5300c0ee6a916d58c2da978306f617"
         },
         "m_Operators:C_OP_RemapParticleCountOnScalarEndCap": {
           "path": "observations/deadlock/m_operators-c_op_remapparticlecountonscalarendcap.json",
-          "bytes": 1081,
-          "sha256": "ca664b92c5e8a1dba15054f462095c4a9c37740e64c2f99101b4991870575d76"
+          "bytes": 1015,
+          "sha256": "745d59db62ab554ae8a565953d68a771430fc91a715abaa014e40e4a2a31fef0"
         },
         "m_Operators:C_OP_RemapScalar": {
           "path": "observations/deadlock/m_operators-c_op_remapscalar.json",
-          "bytes": 1381,
-          "sha256": "65ed03e464e08b70a6a30a3353bb2de7a07d91631b6b60c0a2586d8d17d51934"
+          "bytes": 1182,
+          "sha256": "12ed2b64a1227f9a7a929fefe745c31a4a56c4ee2a8c7358f947c618dd80a4d7"
         },
         "m_Operators:C_OP_RemapSpeed": {
           "path": "observations/deadlock/m_operators-c_op_remapspeed.json",
-          "bytes": 1827,
-          "sha256": "eeb6081757c195032e8356ef6d5d026575f650fb16eea9c48fa7f1584be2f325"
+          "bytes": 1657,
+          "sha256": "3016b5eeb870bc1587132421708acc479b26bb01a1e0c73df8a4446cd9f8240c"
         },
         "m_Operators:C_OP_RemapTransformOrientationToRotations": {
           "path": "observations/deadlock/m_operators-c_op_remaptransformorientationtorotations.json",
-          "bytes": 1509,
-          "sha256": "8a702ee2de70480844942ba28ecb43dccb4aee85f415076611ab02d841081828"
+          "bytes": 1476,
+          "sha256": "caf0d7f5adfebcf47d2d744e945ef6a81d250aaac97082a73ee21946359f5f1d"
         },
         "m_Operators:C_OP_RemapTransformOrientationToYaw": {
           "path": "observations/deadlock/m_operators-c_op_remaptransformorientationtoyaw.json",
-          "bytes": 1239,
-          "sha256": "d026f2eba437d6ac85899181ef0d56c2c60b15e6a9def430e588972830472069"
+          "bytes": 1138,
+          "sha256": "c4557dc9693f665ce67946be4464a2f647326bcaed8610d19517e92ac2c022ef"
         },
         "m_Operators:C_OP_RemapTransformToVelocity": {
           "path": "observations/deadlock/m_operators-c_op_remaptransformtovelocity.json",
-          "bytes": 848,
-          "sha256": "fe4375c6c0829d4b1974da9e131990b9ebe579656774286413d69f48a8772651"
+          "bytes": 816,
+          "sha256": "7a9559b315510ce62eff094c86126952097c635ddc2de4a7ed9a7d6ef57b9938"
         },
         "m_Operators:C_OP_RemapVectorComponentToScalar": {
           "path": "observations/deadlock/m_operators-c_op_remapvectorcomponenttoscalar.json",
-          "bytes": 727,
-          "sha256": "5f6c71fc75aa85a0f6d2db2211d6ddfa859e75be43fa15a69feec597da442719"
+          "bytes": 661,
+          "sha256": "443451b54d52eec4bfd64025e35bf0c362543f5e0c9665055e44ff60016499e7"
         },
         "m_Operators:C_OP_RemapVectortoCP": {
           "path": "observations/deadlock/m_operators-c_op_remapvectortocp.json",
-          "bytes": 1180,
-          "sha256": "f6c9c623d1f26f0390baa4dfdc9bab55d41bcd2f4c4582d0498c7d13a2f81a3f"
+          "bytes": 1033,
+          "sha256": "34537f85daa73bd4e780312cda644a9be2c871055c2094c4662407e3a09e797e"
         },
         "m_Operators:C_OP_RemapVelocityToVector": {
           "path": "observations/deadlock/m_operators-c_op_remapvelocitytovector.json",
-          "bytes": 968,
-          "sha256": "1d8eff50c86871c07258b71070de40d9dc600fb105bf6cf27765214c18c8e3f7"
+          "bytes": 900,
+          "sha256": "905d232b7baa11bbaed0e773350b1324d32a50c037e0447a3fe6668f7c2a82a0"
         },
         "m_Operators:C_OP_RemapVisibilityScalar": {
           "path": "observations/deadlock/m_operators-c_op_remapvisibilityscalar.json",
-          "bytes": 1013,
-          "sha256": "d3fea24bb698121a0c4bbf911a0d1128eb518e77ecb844e63ce7e59c5a106535"
+          "bytes": 901,
+          "sha256": "84118eeacf3e1d007ab925e5bf61e37abaf79e1a5a49f3fb17ac61a2278563b2"
         },
         "m_Operators:C_OP_RestartAfterDuration": {
           "path": "observations/deadlock/m_operators-c_op_restartafterduration.json",
-          "bytes": 1024,
-          "sha256": "76c90479eab27708ee0d7c4e73001f15ede8c81b7ff002b495d7a26b99ed8c17"
+          "bytes": 928,
+          "sha256": "56ba23d2623880b07a3667c483cd319882c29045dff02741bf9a62c66b15be11"
         },
         "m_Operators:C_OP_RotateVector": {
           "path": "observations/deadlock/m_operators-c_op_rotatevector.json",
-          "bytes": 12018,
-          "sha256": "07262eff4322a3de119624905825f49e8c268030233b6a276196d855417db4e1"
+          "bytes": 10861,
+          "sha256": "6f3c1fa0acc2dfcb94777e0708e9f21d94333382531f229d5f8d2f78f5682f14"
         },
         "m_Operators:C_OP_SetAttributeToScalarExpression": {
           "path": "observations/deadlock/m_operators-c_op_setattributetoscalarexpression.json",
-          "bytes": 46755,
-          "sha256": "09767e2e30c502d04bb947846727ca867e6e8f8edceb2aec23d6ec26f56c482b"
+          "bytes": 42385,
+          "sha256": "d99614044bbf9f38efbde786fe6f53a8ae68510fe0b5343b2ee8a8c4af38ba3c"
         },
         "m_Operators:C_OP_SetChildControlPoints": {
           "path": "observations/deadlock/m_operators-c_op_setchildcontrolpoints.json",
-          "bytes": 11152,
-          "sha256": "e916cd173f9afb31e98b77ec3c5dffcf53f4d6973d43bd2a1bec98df2cd4fcab"
+          "bytes": 10179,
+          "sha256": "4b71eeb3392d1904f03c443f2880008927c8c4029685ffb95ec9461ae1988790"
         },
         "m_Operators:C_OP_SetControlPointsToModelParticles": {
           "path": "observations/deadlock/m_operators-c_op_setcontrolpointstomodelparticles.json",
-          "bytes": 1074,
-          "sha256": "a20cd26e94e71c1b70a27a3aff33304e4c1c5e114e4006eef5129824bc7c6a9c"
+          "bytes": 1041,
+          "sha256": "05a12f1ceb048dee41ce82782b8c8c7ef270782493a278180e18c0f01192b396"
         },
         "m_Operators:C_OP_SetControlPointsToParticle": {
           "path": "observations/deadlock/m_operators-c_op_setcontrolpointstoparticle.json",
-          "bytes": 780,
-          "sha256": "fd3061ea7adccb7e855026611ecb49a8657e4f093fb5e12eaaa28699a196ef1d"
+          "bytes": 747,
+          "sha256": "e0c736c1279ede66ed0cc97ba002727246570f40cd57f0a71752d2c7c24794e0"
         },
         "m_Operators:C_OP_SetCPOrientationToDirection": {
           "path": "observations/deadlock/m_operators-c_op_setcporientationtodirection.json",
-          "bytes": 810,
-          "sha256": "ecbfcb09eb55676180cda33ba656317c1772f9bb6c97a96f242e689047cd6382"
+          "bytes": 746,
+          "sha256": "92c7e3ce06da88a6b9934f28529361c99c7bdea3bade277b1f2d4859c5bfdc0e"
         },
         "m_Operators:C_OP_SetFloat": {
           "path": "observations/deadlock/m_operators-c_op_setfloat.json",
-          "bytes": 34044,
-          "sha256": "a46aba2bd91fe0dd0efb474aa35bd85f917f4bfe4a0efffa454d978106e5537f"
+          "bytes": 30476,
+          "sha256": "371c9d25cedf7012c59f6e51b60a6302cba43531db46f327b42777f7c3565cd7"
         },
         "m_Operators:C_OP_SetFloatAttributeToVectorExpression": {
           "path": "observations/deadlock/m_operators-c_op_setfloatattributetovectorexpression.json",
-          "bytes": 99919,
-          "sha256": "0deebaef522b0fe9f4c93502b1fa05e178783bf95de0ce66d964d9105c1c1472"
+          "bytes": 92156,
+          "sha256": "f82c98832fb0b825bd442cd3225501f8e386a0a57fc58b759e09f9641c591a82"
         },
         "m_Operators:C_OP_SetFloatCollection": {
           "path": "observations/deadlock/m_operators-c_op_setfloatcollection.json",
-          "bytes": 12956,
-          "sha256": "04d658ef9051f7384648374c79e1f199b6c5605d2978e472047322538b1d43ea"
+          "bytes": 11856,
+          "sha256": "8dde17a4d5414858c0678b5f4fda634331133a4a853bf9e55497f088c9ec3ba0"
         },
         "m_Operators:C_OP_SetFromCPSnapshot": {
           "path": "observations/deadlock/m_operators-c_op_setfromcpsnapshot.json",
-          "bytes": 1002,
-          "sha256": "0dfbffb223d6bc56b86e058749ff0061e5c150d54cd0a3c438ffc049737f41c5"
+          "bytes": 902,
+          "sha256": "fa724e947008ea15017230d374fa95092f63b265ceb9ce0557a0e5eb4e417732"
         },
         "m_Operators:C_OP_SetPerChildControlPoint": {
           "path": "observations/deadlock/m_operators-c_op_setperchildcontrolpoint.json",
-          "bytes": 10155,
-          "sha256": "85f6c024d45dc667ac7c2080adf05f0fefaa214b6eeb15c9b9af0a9eab58cfa5"
+          "bytes": 9216,
+          "sha256": "6f4f4c9934d091c93a3ce31108bed7239536965f8a0b812963446b8b765dfcb9"
         },
         "m_Operators:C_OP_SetPerChildControlPointFromAttribute": {
           "path": "observations/deadlock/m_operators-c_op_setperchildcontrolpointfromattribute.json",
-          "bytes": 1192,
-          "sha256": "f4642110ede3e987b8296351371c3b6c5e9b956f5c1e9e9668a299cabc5b75a9"
+          "bytes": 1094,
+          "sha256": "836ce929bf7138afc99d1017e68b7fc6809a9270bdcaf1737b971befaf0214a7"
         },
         "m_Operators:C_OP_SetToCP": {
           "path": "observations/deadlock/m_operators-c_op_settocp.json",
-          "bytes": 963,
-          "sha256": "3dd816b8867cb2c58f168f7c0788358ceed16808ecd05ae05fb2f270ec13ab40"
+          "bytes": 930,
+          "sha256": "679536f5a575316c3aa4d5e1a53645abd46d31d07da7f520a029d1451b111bfb"
         },
         "m_Operators:C_OP_SetUserEvent": {
           "path": "observations/deadlock/m_operators-c_op_setuserevent.json",
-          "bytes": 36974,
-          "sha256": "473d65bcf6036a3bc741680dc3896292599afd475af9da054a0d0a136d6432c7"
+          "bytes": 34152,
+          "sha256": "af83ec2102aa5e6bc080812f465809ae3e2d5c9735502711e95583639adf0aa3"
         },
         "m_Operators:C_OP_SetVec": {
           "path": "observations/deadlock/m_operators-c_op_setvec.json",
-          "bytes": 74747,
-          "sha256": "1ace9a3c7ad72068db7f5d8d87276acc38a9eac5de537434a96b8944c93c81bd"
+          "bytes": 67936,
+          "sha256": "3b4ea908f247393045d91ae0326a6d2be714482bd26a41fb200d485f3e03835c"
         },
         "m_Operators:C_OP_SetVectorAttributeToVectorExpression": {
           "path": "observations/deadlock/m_operators-c_op_setvectorattributetovectorexpression.json",
-          "bytes": 115144,
-          "sha256": "b7ca72a84f59f4c208d022d869af4d2e4a0a843c68748c0f9a1af861f0f07cc1"
+          "bytes": 105596,
+          "sha256": "ac1bedbeb1b069e7817910c88004d6c6afda2414f029f43ba810dc109eb225fd"
         },
         "m_Operators:C_OP_SnapshotRigidSkinToBones": {
           "path": "observations/deadlock/m_operators-c_op_snapshotrigidskintobones.json",
@@ -11532,38 +11532,38 @@
         },
         "m_Operators:C_OP_Spin": {
           "path": "observations/deadlock/m_operators-c_op_spin.json",
-          "bytes": 11896,
-          "sha256": "b2bc6de9b5521b55521c4521f26966f2156baa53b52294d8f7c98a4d1d25ce97"
+          "bytes": 10768,
+          "sha256": "cb993102294cf16492b82f5d7937bddb519ae71cc189b04299c7689b575676db"
         },
         "m_Operators:C_OP_SpinUpdate": {
           "path": "observations/deadlock/m_operators-c_op_spinupdate.json",
-          "bytes": 10775,
-          "sha256": "f09677b484d3596cc9c0ecac7e5525ecc794dc24f318bc603a0e542f77357e1e"
+          "bytes": 9619,
+          "sha256": "26f94f588a0b422f2ea46564ef3a944f1edf13bd3b29a7d3d93513d23fe1d364"
         },
         "m_Operators:C_OP_SpinYaw": {
           "path": "observations/deadlock/m_operators-c_op_spinyaw.json",
-          "bytes": 10895,
-          "sha256": "e67d7c6c6c1b3790740d95beaf010defb13de2a0371cf026a0b6c50c594a54b7"
+          "bytes": 9880,
+          "sha256": "6dc21bd45b0e2eae0ef5b38a04b1158c500d7b01a33e0b6639d81535dd16a790"
         },
         "m_Operators:C_OP_VectorNoise": {
           "path": "observations/deadlock/m_operators-c_op_vectornoise.json",
-          "bytes": 13673,
-          "sha256": "fdd984a444b0613b0d07a8cfd16c1d58aa73c25f06300e0e490ff3bc209cfc14"
+          "bytes": 12370,
+          "sha256": "81a4424d9992b971ea19cd202c52af6491b9e0d3cf7fed6afa01e30067f08895"
         },
         "m_Operators:C_OP_VelocityDecay": {
           "path": "observations/deadlock/m_operators-c_op_velocitydecay.json",
-          "bytes": 569,
-          "sha256": "95f28e00e4dbc50526120b356c226a935b378bd5223c414b22a4801974ce39c4"
+          "bytes": 533,
+          "sha256": "d0850ea14bdf7bafa01edbf6801b6d6634f08e1be257b46033b6657a7717e73f"
         },
         "m_Operators:C_OP_VelocityMatchingForce": {
           "path": "observations/deadlock/m_operators-c_op_velocitymatchingforce.json",
-          "bytes": 766,
-          "sha256": "6c935d9dbe9d147060b04b72fcae5c6b8f76e9c2c47f435f993e6e79a63a5d01"
+          "bytes": 660,
+          "sha256": "e2cfc4d14f6e27b3420657281a5ff0e19d7c419d4c132f1adcb32707991bc715"
         },
         "m_PreEmissionOperators:C_OP_ChooseRandomChildrenInGroup": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_chooserandomchildreningroup.json",
-          "bytes": 11164,
-          "sha256": "bdc71803b70b4f1cfb384d4f9742bb4ab48d1c92fb0d9f109457ef39ba71243f"
+          "bytes": 10258,
+          "sha256": "746e79a791817f0729ae2e8e184887274e5e22f0aebe193c6e734bc963ff9f10"
         },
         "m_PreEmissionOperators:C_OP_ControlPointToRadialScreenSpace": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_controlpointtoradialscreenspace.json",
@@ -11572,83 +11572,83 @@
         },
         "m_PreEmissionOperators:C_OP_DistanceBetweenCPsToCP": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_distancebetweencpstocp.json",
-          "bytes": 1659,
-          "sha256": "06f407c277de7d7c21de256b7bda2fbd3a9d83ab5307ba03a131754dbb68b2ed"
+          "bytes": 1419,
+          "sha256": "07b357d39a374d5b6c08ea1a64bfcc8e6dcd37061177a27dfd2fdcade7447b7e"
         },
         "m_PreEmissionOperators:C_OP_EnableChildrenFromParentParticleCount": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_enablechildrenfromparentparticlecount.json",
-          "bytes": 635,
-          "sha256": "6cfaed2634f379197137ffd3f963b76b5f566fbfc7be3ff2a1663d2428ff638c"
+          "bytes": 601,
+          "sha256": "fe80e4d4935743e88e784dcdffce36b98c097fb99791e0200c7a2360af11e8e3"
         },
         "m_PreEmissionOperators:C_OP_ForceControlPointStub": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_forcecontrolpointstub.json",
-          "bytes": 607,
-          "sha256": "1999c575bc519214873d911fa10907c0ddb85805349f4a3da32a31396adbd1dd"
+          "bytes": 575,
+          "sha256": "ad8ee1babfa17be24b92b8da8ba5bf0efc7454cfb458efd3ab59e6c2559f2a10"
         },
         "m_PreEmissionOperators:C_OP_HSVShiftToCP": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_hsvshifttocp.json",
-          "bytes": 1072,
-          "sha256": "27e809348a3f179983745942e1dec1e876f0df57023b7ae842fcb76a58081c72"
+          "bytes": 970,
+          "sha256": "81a38d36cf3ca0de4805bc073daaf53072d213517271c3b37b96dbfa0dc3656c"
         },
         "m_PreEmissionOperators:C_OP_LightningSnapshotGenerator": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_lightningsnapshotgenerator.json",
-          "bytes": 68755,
-          "sha256": "501c53fc8d19061052fd6aa9b6198bc86bf25f2d837a0d7909d3793577ca1bca"
+          "bytes": 62265,
+          "sha256": "2cbfdbba6650c4181d96913115c13fccdab38e17eaee834f1a06666a250374ef"
         },
         "m_PreEmissionOperators:C_OP_RemapCPtoCP": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_remapcptocp.json",
-          "bytes": 1766,
-          "sha256": "4ef5ca5053da4d55235ae79f5e870294585d66bda8a9287b3ae2286b1538f6d1"
+          "bytes": 1531,
+          "sha256": "6881272f2e7d1a6a124c035beb58a8ed0d2e609698d379c49012d63569d2fbc8"
         },
         "m_PreEmissionOperators:C_OP_RemapSpeedtoCP": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_remapspeedtocp.json",
-          "bytes": 1849,
-          "sha256": "356b1d663088e1abd034c0abc1fe84fdbc344b6c36893f46536159dcb512bfe1"
+          "bytes": 1615,
+          "sha256": "52de451bbbcc4b933ff38b0519f9a587b22fe5039b31c9f1d44c41fb61bae0ba"
         },
         "m_PreEmissionOperators:C_OP_RepeatedTriggerChildGroup": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_repeatedtriggerchildgroup.json",
-          "bytes": 29740,
-          "sha256": "7688123a77fee1da3a45293e82b57e4d8161a7c4b2e8df9bf9696ba11e82170f"
+          "bytes": 26978,
+          "sha256": "89344231c43eca1b345bcb684cc1214519c13eb8c6703e1d0c2a5785062130ca"
         },
         "m_PreEmissionOperators:C_OP_SelectivelyEnableChildren": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_selectivelyenablechildren.json",
-          "bytes": 31932,
-          "sha256": "f2b03f8b0be8793ef28e0d4c852908db50f9b8a306d6a247050fe1f6214eb109"
+          "bytes": 29106,
+          "sha256": "13acd0182a790cdb484f0805243a03d7aa25bef0fd37870b1831ab0e2b630dbe"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointFieldToScalarExpression": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointfieldtoscalarexpression.json",
-          "bytes": 44561,
-          "sha256": "e756d53eb877743a9658c06d93c50acee667d676d84c9dfc9cfe9571f02560cc"
+          "bytes": 40085,
+          "sha256": "f81efc0167bdcbe110e0cd433856ceb9867a74ce20f09231ae751b2f29156570"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointOrientation": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointorientation.json",
-          "bytes": 1891,
-          "sha256": "d6154bd231bd90f846f007f5af65ef0ae20d74b96621c3ee3e6c46993178a200"
+          "bytes": 1825,
+          "sha256": "24cfa2880fee069b9479462ee77af4faac7a2627438136297bfb2381fedd5407"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointOrientationToCPVelocity": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointorientationtocpvelocity.json",
-          "bytes": 835,
-          "sha256": "65016c3d7fc81475212591c50f05e6f53e02938e40966b246f37dfaab3aaf99d"
+          "bytes": 803,
+          "sha256": "61d35d6a827696ea2f83f1d439e39f7db4ec27a6052476b6abdee8700619ea82"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointPositions": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointpositions.json",
-          "bytes": 3048,
-          "sha256": "749f1b1c74f2abcc10c99169d992630e100c1cb01353e4708deb94ff1ecdbbca"
+          "bytes": 2812,
+          "sha256": "ac32235725ae83d99486bbadfbb0238fff1d083101462c066e0dcada9f861879"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointPositionToRandomActiveCP": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointpositiontorandomactivecp.json",
-          "bytes": 958,
-          "sha256": "b7ea1f787c39086923bd9c1759a82cd2690bdb7df2f3b1c4a29c671db20e73ea"
+          "bytes": 856,
+          "sha256": "607d34fb13b4b56559e3ad5683cdaf1793abe940087979a5f58974cc078281b6"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointRotation": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointrotation.json",
-          "bytes": 58576,
-          "sha256": "4f59deb46cd14a7c6827316765489f50d5a85c515f0d5da34bc3f3df44108da1"
+          "bytes": 53308,
+          "sha256": "10811d78b87412a39272bcb7ebb98dd0ae2e16003edd07c4fb773261dfbf4d76"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToCenter": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtocenter.json",
-          "bytes": 674,
-          "sha256": "0425ab0bf4781b2184a8fb9c87118f53834778ef5b017e44d008ed58f78b4d9d"
+          "bytes": 642,
+          "sha256": "7450f1e2df684856bdc6a451a493e402f83a88a5575900e3b3cef032d1ba8513"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToHMD": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtohmd.json",
@@ -11657,126 +11657,141 @@
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToImpactPoint": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtoimpactpoint.json",
-          "bytes": 1298,
-          "sha256": "d2bfd8eda8b6a4c07c4aef6c5240522ad8d6c6feab52a1e7fdd0ce67c254542c"
+          "bytes": 1162,
+          "sha256": "ae929fa65e5280e03ad4c0668ae544f569f8085bed4466c631480215cdf9eb6d"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToPlayer": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtoplayer.json",
-          "bytes": 725,
-          "sha256": "cbb06bc06e803f6afb54070fb58e62da781544dc14926f2bec766afbef16353b"
+          "bytes": 692,
+          "sha256": "17b367ce1791724f565396190700a79c3144a6af37780d647f71e41cf4569d5c"
         },
         "m_PreEmissionOperators:C_OP_SetControlPointToVectorExpression": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcontrolpointtovectorexpression.json",
-          "bytes": 113366,
-          "sha256": "3a926cc73586e6b632b9a1d3244e874c0cbafac2f74e8f85597f7b6a45f6a57b"
+          "bytes": 103679,
+          "sha256": "81cc5c79f96fe4ac6852af17d07a9af11c6c53075e3b8d8eed3e512875e1f1de"
         },
         "m_PreEmissionOperators:C_OP_SetCPOrientationToPointAtCP": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setcporientationtopointatcp.json",
-          "bytes": 1585,
-          "sha256": "7771782cd1ba31d98eefbe292192b5dc52a2a6435d59631948f76b49c96b930f"
+          "bytes": 1519,
+          "sha256": "816c7c762e46d31e8e028cbdaf7e48e9aec15df7a18e693b1df0dac56f2b08da"
         },
         "m_PreEmissionOperators:C_OP_SetParentControlPointsToChildCP": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setparentcontrolpointstochildcp.json",
-          "bytes": 1160,
-          "sha256": "50070df9797b10fdc57f368cd28c79da7a1d810d4f43a125a77fb8f0d5d23de4"
+          "bytes": 1061,
+          "sha256": "1155c8cc3cadd53de6ad7694468763501cdfbc8842fd5794c3263622c904e9c6"
         },
         "m_PreEmissionOperators:C_OP_SetRandomControlPointPosition": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setrandomcontrolpointposition.json",
-          "bytes": 1364,
-          "sha256": "56c64d53429a78162f2c99da3a04cb221c66db6aa83d28e39c6980599019fb53"
+          "bytes": 1298,
+          "sha256": "a9a41e014e9e2e298b02aa3584fe75af35f0d608c41e169f3e62b2e0bc26c811"
         },
         "m_PreEmissionOperators:C_OP_SetSingleControlPointPosition": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_setsinglecontrolpointposition.json",
-          "bytes": 55167,
-          "sha256": "733315f482023e704fad3136713f8b16ee5d78dd97db7968fae7e993cb7b1be9"
+          "bytes": 50260,
+          "sha256": "75fe032207d2914673c885e2ce574dfcdf79c1bdca9235cd5e2af25655420a45"
         },
         "m_PreEmissionOperators:C_OP_StopAfterCPDuration": {
           "path": "observations/deadlock/m_preemissionoperators-c_op_stopaftercpduration.json",
-          "bytes": 10842,
-          "sha256": "c227b92634ee4b5ac737f3c2fa861adc375498b2f21b1358125ef07f73f9f2f1"
+          "bytes": 9828,
+          "sha256": "a42ebc3ad2797536721cf7da9da703846085eb626fcbc981767076df4d0eedc1"
         },
         "m_Renderers:C_OP_RenderBlobs": {
           "path": "observations/deadlock/m_renderers-c_op_renderblobs.json",
-          "bytes": 34111,
-          "sha256": "f7827d0f07480d9d8c1bd0b245fc4ccd3cb8e0f8c8b10f18a16c0dc0337c9b4b"
+          "bytes": 30771,
+          "sha256": "6b44f9a59314662111f92da389be708c32f6197949f54939f9afecb86824b0ea"
         },
         "m_Renderers:C_OP_RenderCables": {
           "path": "observations/deadlock/m_renderers-c_op_rendercables.json",
-          "bytes": 37515,
-          "sha256": "b935b464ba5d709740c43b70befb376352f3fbe86d0bc0c2b00498879396dc3c"
+          "bytes": 34392,
+          "sha256": "9bd34b83017b3f69960ff4cf39a722b56fadb5aba85ae312250ecbaa046c479b"
         },
         "m_Renderers:C_OP_RenderDeferredLight": {
           "path": "observations/deadlock/m_renderers-c_op_renderdeferredlight.json",
-          "bytes": 37038,
-          "sha256": "fe7e91a0cb7a21a980ccbcf4953a8fcba980f9ab8a1a5440cd8201f99f724f12"
+          "bytes": 33973,
+          "sha256": "b67349cfe71bad74a10e8a9822597e40f74cc0c11826b66eb0160ee6523b5762"
         },
         "m_Renderers:C_OP_RenderLightBeam": {
           "path": "observations/deadlock/m_renderers-c_op_renderlightbeam.json",
-          "bytes": 77384,
-          "sha256": "f220df1bbbdde98a8c0bff47404bf32ff211e8748c8a967e095deb7af296747e"
+          "bytes": 70904,
+          "sha256": "acba6322616f4f4d4d9b642bd67dc0e1cc7efaa20e0d4a05726c202e8926e3c8"
         },
         "m_Renderers:C_OP_RenderModels": {
           "path": "observations/deadlock/m_renderers-c_op_rendermodels.json",
-          "bytes": 274613,
-          "sha256": "c768e4b382b7a1800d075d5182c4774224b1f7d317dc7852418aade1e03a9058"
+          "bytes": 251861,
+          "sha256": "8b89166da9b1faa8ac8c31da105171ce0b2a3bc96eb3e2b903fdc3d3964e7a70"
         },
         "m_Renderers:C_OP_RenderOmni2Light": {
           "path": "observations/deadlock/m_renderers-c_op_renderomni2light.json",
-          "bytes": 107976,
-          "sha256": "770bee4e8cd548b97c6122206dd93bc09a99148441381b8f9770c409371f739f"
+          "bytes": 98363,
+          "sha256": "1b9ba4890da05274505e3ca5155edaf1f811e362554f84e79e50a2132590bc3c"
         },
         "m_Renderers:C_OP_RenderProjected": {
           "path": "observations/deadlock/m_renderers-c_op_renderprojected.json",
-          "bytes": 82416,
-          "sha256": "d5399cca580b3d38c9333831b7b71120ac884f8be7adfb59a18a7d1e1a2789bc"
+          "bytes": 75740,
+          "sha256": "16f576b3776274ed43a27e9e42e15b7d63facf0c21ffbc11b554b350a220e513"
         },
         "m_Renderers:C_OP_RenderRopes": {
           "path": "observations/deadlock/m_renderers-c_op_renderropes.json",
-          "bytes": 369869,
-          "sha256": "995c715a7a03e12c0057cd131320afad4fc0674ce55c513dd1ffbe19c05568e6"
+          "bytes": 338311,
+          "sha256": "57394fd9a531de7d0b0ae3900b8335ebc273ae65737365e014e2e2aa645b7312"
         },
         "m_Renderers:C_OP_RenderScreenShake": {
           "path": "observations/deadlock/m_renderers-c_op_renderscreenshake.json",
-          "bytes": 1519,
-          "sha256": "94df881f48d682c2a81eb2bfc4183352f652049c0a257502523e104ce04fa20c"
+          "bytes": 1308,
+          "sha256": "92ed3629bcf76f223b94fc8d98848fdfcc81f2cded08e721fbf1d70f7e7b1530"
         },
         "m_Renderers:C_OP_RenderScreenVelocityRotate": {
           "path": "observations/deadlock/m_renderers-c_op_renderscreenvelocityrotate.json",
-          "bytes": 653,
-          "sha256": "045fbd184a7e08ac214a02563ffdf4c93f0f44da7117dd9a5b6f6b5bf3065582"
+          "bytes": 619,
+          "sha256": "56d0ebd4b2410629b46d07ad9d23ca765aa0f6c0bd601ae0e1869d9829c20146"
         },
         "m_Renderers:C_OP_RenderSound": {
           "path": "observations/deadlock/m_renderers-c_op_rendersound.json",
-          "bytes": 1495,
-          "sha256": "37d65e6f8c61eb1102c1cc416727db97dcc71be7e73c5250790051f0bdf5ed6b"
+          "bytes": 1357,
+          "sha256": "16a4cc70f984a540e6baabb62fcdf5ef480bea6a80bfc88025007b7ca2b8dbd9"
         },
         "m_Renderers:C_OP_RenderSprites": {
           "path": "observations/deadlock/m_renderers-c_op_rendersprites.json",
-          "bytes": 429277,
-          "sha256": "6626ea4005a746ad8d5e85195b41495e6d058198fcf18b62a9c1432a7b0bda46"
+          "bytes": 391686,
+          "sha256": "8fb4a261e67c1a9e9fc771c9efb2127142b060cd44f883089583fe022084133b"
         },
         "m_Renderers:C_OP_RenderStandardLight": {
           "path": "observations/deadlock/m_renderers-c_op_renderstandardlight.json",
-          "bytes": 129816,
-          "sha256": "7e40b1f927af7c6f18d3ae4a03f3c7e7507c7d8aecc15d2921de518385937ee8"
+          "bytes": 118357,
+          "sha256": "4326d47e04df8203b17cb91888ed0249a78f34a7b624ed00a9b7bf81749f09bc"
         },
         "m_Renderers:C_OP_RenderStatusEffectCitadel": {
           "path": "observations/deadlock/m_renderers-c_op_renderstatuseffectcitadel.json",
-          "bytes": 10702,
-          "sha256": "e605b9b3e45e97aec6b4dec498c909587717f01f65913b8a4dca8cc77fbb11e0"
+          "bytes": 9764,
+          "sha256": "8c1f2c50e9a011f6f5acbfd2fdf079692fbfd72bc4f0941e0ee7305588f67b55"
         },
         "m_Renderers:C_OP_RenderTrails": {
           "path": "observations/deadlock/m_renderers-c_op_rendertrails.json",
-          "bytes": 479484,
-          "sha256": "8a48060551589c5fc23a75645426b57087d39916f772da857ecee8f1c03101c5"
+          "bytes": 439936,
+          "sha256": "80157c2d41b467dc77cf82efd974c3445f8b00e2c5f7c014498d7fcccbbf8e88"
         },
         "system:CParticleSystemDefinition": {
           "path": "observations/deadlock/system-cparticlesystemdefinition.json",
-          "bytes": 17905,
-          "sha256": "146e9cc5ae5f698ecd58da96e6b7eeccef8e000abb5d6d03574aa71836e2dc56"
+          "bytes": 16653,
+          "sha256": "a6584c569f4dd5b05d58d087c3e1bef0db52faa0b3e79b973cd482d5ad37afd5"
         }
       }
     }
   ],
-  "classesExportFormat": "separate-class-files.v1"
+  "classesExportFormat": "separate-class-files.v1",
+  "metadataCorrections": [
+    {
+      "id": "remove-incomplete-numeric-extrema-2026-10-20",
+      "correctedOn": "2026-10-20",
+      "numericExtremaStatus": "withdrawn-incomplete",
+      "sourceIndexSha256": "7a6b38e41631d807d40b1560fc16a99a5541ade2830bb5112d3225a0b77d17e8",
+      "removedExtremaFields": 30592,
+      "details": {
+        "path": "observation-correction-2026-10-20.json",
+        "bytes": 144606,
+        "sha256": "4dd36b250045ba7908e50f5949c1cc28d260dc88349676f1f1a8f9aeae7ab33b"
+      },
+      "reason": "Historical numeric extrema omitted bigint values. They were removed without inventing replacement bounds; all other field evidence and original payload provenance were preserved."
+    }
+  ]
 }

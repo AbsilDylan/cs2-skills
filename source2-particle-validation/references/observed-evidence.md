@@ -109,7 +109,7 @@ a clean readback.
 
 ## Standalone helper check
 
-The shipped Python standard-library helper was exercised with eleven synthetic
+The October 15 revision of the Python standard-library helper was exercised with eleven synthetic
 behavior tests: all eleven passed, including a real directory symlink and the
 Windows reparse-attribute guard. The aggregate-output test also counts an
 unselected dependency output. Accounts lacking permission to create a link may
@@ -126,5 +126,7 @@ runtime or visual pass was inferred.
 The [portable helper evidence](helper-evidence.json) records the tested script
 fingerprint, compiler/game identity, exact source fingerprints, process
 outcomes and compiled-output hashes. It contains no compiled binary or absolute
-user path. The optional viewer protocol was tested with an injected runner;
+user path. That fingerprint identifies the historical revision; subsequent
+helper fixes do not retroactively acquire a native test result.
+The optional viewer protocol was tested with an injected runner;
 use the actual viewer's help and inspect its diagnostics before real readback.

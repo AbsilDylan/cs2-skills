@@ -22,6 +22,31 @@ class NativeContractTests(unittest.TestCase):
     def field(self, name, field, module="particles"):
         return cp.query(self.catalogue, module, name, "class", field)
 
+    def cli(self, *args):
+        result = subprocess.run([sys.executable, str(SCRIPT), *args],
+                                capture_output=True, text=True, check=True)
+        return json.loads(result.stdout)["result"]
+
+    def test_list_respects_explicit_module_and_name_filters(self):
+        result = self.cli("--list", "--module", "animationsystem", "--limit", "500")
+        self.assertEqual(result["total"], 1)
+        self.assertEqual(result["records"][0]["name"], "ParticleAttachment_t")
+        self.assertTrue(all(record["module"] == "animationsystem" for record in result["records"]))
+        empty = self.cli("--list", "--module", "animationsystem", "--contains", "ControlPoint")
+        self.assertEqual(empty["total"], 0)
+        self.assertEqual(empty["records"], [])
+
+    def test_list_without_module_still_discovers_dependencies_across_modules(self):
+        result = self.cli("--list", "--limit", "500")
+        self.assertEqual(result["total"], len(self.catalogue["records"]))
+        self.assertEqual(result["returned"], result["total"])
+        self.assertGreater(len({record["module"] for record in result["records"]}), 1)
+
+    def test_cli_exact_lookup_still_defaults_to_particles(self):
+        result = self.cli("--class", "C_OP_DistanceBetweenCPsToCP", "--field", "m_nStartCP")
+        self.assertEqual(result["identity"]["module"], "particles")
+        self.assertEqual(result["defaults"]["value"], 0)
+
     def test_native_distance_has_start_and_output_component_fields(self):
         self.assertEqual(self.field("C_OP_DistanceBetweenCPsToCP", "m_nStartCP")["defaults"]["value"], 0)
         self.assertEqual(self.field("C_OP_DistanceBetweenCPsToCP", "m_nOutputCPField")["fields"][0]["type"]["name"], "int32")

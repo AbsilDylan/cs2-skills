@@ -176,6 +176,12 @@ before comparing observations.
 For a one-shot PET test, disable Auto-Restart if available, wait beyond
 the last child lifetime, and capture the completed empty state. Re-enable
 it for convenient preview only after recording the shutdown result.
+Keep playback at the recorded normal rate for a duration claim. A finite
+emitter test, pressing PET Stop, and invoking the game's emission-stop API are
+different tests: an empty viewport after an intervention does not prove a
+natural tail duration or the caller's shutdown behavior. If a preview actor
+shares the capture, distinguish the whole visible composition's duration from
+the production effect's own last-particle time.
 
 ## Verify artwork, blend, depth, and scene interaction
 

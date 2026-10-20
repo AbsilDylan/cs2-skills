@@ -169,6 +169,25 @@ class NativeCompileTests(unittest.TestCase):
         self.assertTrue(all(item['readback']['propertyRetention'] == 'manual-inspection-required' for item in report['outputs']))
         self.assertTrue(all(call[1][-2:] == ['--block', 'DATA'] for call in self.calls if '--block' in call[1]))
 
+    def test_empty_viewer_output_is_not_reported_as_captured_text(self):
+        viewer = self.root / 'viewer.exe'
+        viewer.write_bytes(b'MZ-fake-readback-runner-only')
+        for payload in (b'', b'\r\n \t'):
+            def empty_viewer(executable, arguments, cwd, timeout, max_output_bytes):
+                if '--block' in arguments:
+                    return ProcessResult(0, False, payload, len(payload), False)
+                return self.runner(executable, arguments, cwd, timeout, max_output_bytes)
+            with self.subTest(payload=payload):
+                outcome = compile_assets(dataclasses.replace(self.config, viewer_cli=viewer), empty_viewer)
+                report = outcome['report']
+                self.assertEqual(report['execution']['nativeCompilation'], 'passed')
+                self.assertEqual(report['execution']['propertyRetention'], 'not-run')
+                for item in report['outputs']:
+                    self.assertEqual(item['readback']['status'], 'empty')
+                    self.assertEqual(item['readback']['outputBytesSeen'], len(payload))
+                    self.assertEqual(
+                        (outcome['report_path'].parent / item['readback']['log']).read_bytes(), payload)
+
     def test_output_budget_counts_unselected_dependency_outputs(self):
         def extra_output(executable, arguments, cwd, timeout, max_output_bytes):
             result = self.runner(executable, arguments, cwd, timeout, max_output_bytes)

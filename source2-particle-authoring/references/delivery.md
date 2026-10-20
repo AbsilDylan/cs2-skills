@@ -77,6 +77,19 @@ native renderer and resource pipeline require them. Preserve their own dependent
 files. A declared path is not a delivered asset: identify unresolved or existing
 external dependencies in the adjacent plan, and verify their target location.
 
+Keep demonstration helpers outside the production dependency closure. A PET
+helper may animate a control point, set a numeric parameter, add a reference
+actor or repeat playback. The production root should accept the caller's real
+inputs without depending on that helper. Document required initial values;
+saved PET values do not initialize a game-created instance.
+
+Select the final roots explicitly and traverse both source imports and native
+compiled references. Include generated textures and model animation imports
+when required, even if their names differ from the root's namespace. A final
+effect can legitimately use resources with different revision suffixes; file
+names and timestamps cannot select the approved composition. Deduplicate
+identical shared resources and report differing same-path payloads.
+
 The final report should name the root to open, list authored files, describe CP
 setup and state the checks actually completed. Keep installation paths and
 machine-specific temporary directories out of reusable source contracts.
